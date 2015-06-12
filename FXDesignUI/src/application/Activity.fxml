@@ -9,9 +9,9 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXMLController">
    <children>
-      <VBox prefHeight="815.0" prefWidth="1200.0">
-         <children>
-            <MenuBar>
+      <BorderPane prefHeight="850.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
@@ -30,43 +30,72 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <GridPane alignment="CENTER" gridLinesVisible="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="815.0" prefWidth="1200.0">
+         </top>
+         <right>
+            <Pane prefHeight="300.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="19.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="30.0" prefWidth="120.0" text="ANT SCAN" />
+                  <Button layoutX="166.0" layoutY="29.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="RWY SELECT" />
+                  <Button layoutX="19.0" layoutY="64.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="LINEAR POL" />
+                  <Button layoutX="166.0" layoutY="64.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="CIRCULAR POL" />
+                  <Button layoutX="166.0" layoutY="127.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="TX STBY" />
+                  <Button layoutX="166.0" layoutY="163.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="RADAR SETUP" />
+                  <Button layoutX="19.0" layoutY="127.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="POWER" />
+                  <Button layoutX="19.0" layoutY="163.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="TX RADIATE" />
+                  <Separator layoutY="102.0" prefHeight="2.0" prefWidth="300.0" />
+                  <Separator layoutY="203.0" prefHeight="2.0" prefWidth="300.0" />
+                  <Separator layoutY="318.0" prefHeight="2.0" prefWidth="300.0" />
+                  <Button layoutX="19.0" layoutY="278.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="ROUTE SELECT" />
+                  <Button layoutX="19.0" layoutY="242.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="MASTER SLAVE" />
+                  <Button layoutX="166.0" layoutY="278.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="SYSTEM SETUP" />
+                  <Button layoutX="166.0" layoutY="242.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="SYSTEM TEST" />
+                  <Separator layoutY="470.0" prefHeight="2.0" prefWidth="300.0" />
+                  <Button layoutX="17.0" layoutY="388.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="LABEL" />
+                  <Button layoutX="17.0" layoutY="352.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="RAW" />
+                  <Button layoutX="166.0" layoutY="388.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="HISTORY" />
+                  <Button layoutX="166.0" layoutY="352.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="PLOT" />
+                  <Separator layoutY="583.0" prefHeight="2.0" prefWidth="300.0" />
+                  <Button layoutX="19.0" layoutY="543.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="20 NM" />
+                  <Button layoutX="19.0" layoutY="507.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="5 NM" />
+                  <Button layoutX="166.0" layoutY="543.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="40 NM" />
+                  <Button layoutX="166.0" layoutY="507.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="10 NM" />
+                  <Button layoutX="166.0" layoutY="424.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="DISPLAY SETUP" />
+                  <Button layoutX="17.0" layoutY="424.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="CHECK MARKS" />
+                  <Label layoutX="19.0" layoutY="6.0" text="Antenna Control" />
+                  <Label layoutX="19.0" layoutY="105.0" text="Radar Control" />
+                  <Label layoutX="19.0" layoutY="216.0" text="System Control" />
+                  <Label layoutX="19.0" layoutY="329.0" text="Display Control" />
+                  <Label layoutX="19.0" layoutY="479.0" text="Display Scale" />
+               </children>
+            </Pane>
+         </right>
+         <center>
+            <GridPane alignment="CENTER" gridLinesVisible="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="825.0" prefWidth="957.0" BorderPane.alignment="CENTER">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1008.0" minWidth="10.0" prefWidth="847.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="0.0" prefWidth="256.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1008.0" minWidth="10.0" prefWidth="896.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="379.0" minHeight="10.0" prefHeight="339.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="484.0" minHeight="10.0" prefHeight="372.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="138.0" vgrow="SOMETIMES" />
+                <RowConstraints percentHeight="45.0" vgrow="SOMETIMES" />
+                <RowConstraints percentHeight="45.0" vgrow="SOMETIMES" />
+                <RowConstraints percentHeight="10.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Canvas fx:id="chartTop" height="300.0" width="850.0">
+                  <Canvas fx:id="chartTop" height="350.0" width="890.0">
                      <GridPane.margin>
-                        <Insets left="20.0" />
+                        <Insets left="10.0" />
                      </GridPane.margin>
                   </Canvas>
-                  <Canvas fx:id="chartBottom" height="350.0" width="850.0" GridPane.rowIndex="1">
+                  <Canvas fx:id="chartBottom" height="350.0" width="890.0" GridPane.rowIndex="1">
                      <GridPane.margin>
-                        <Insets left="20.0" />
+                        <Insets left="10.0" />
                      </GridPane.margin>
                   </Canvas>
-                  <Label fx:id="actiontarget" prefHeight="119.0" prefWidth="312.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-                     <children>
-                        <Button layoutX="36.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="50.0" prefWidth="100.0" text="Sign In" />
-                        <Button layoutX="170.0" layoutY="33.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Text" />
-                        <Button layoutX="36.0" layoutY="97.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Text" />
-                        <Button layoutX="170.0" layoutY="97.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Text" />
-                        <Button layoutX="170.0" layoutY="181.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Text" />
-                        <Button layoutX="170.0" layoutY="245.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Text" />
-                        <Button layoutX="36.0" layoutY="181.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Text" />
-                        <Button layoutX="36.0" layoutY="245.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Text" />
-                     </children>
-                  </Pane>
                </children>
             </GridPane>
-         </children>
-      </VBox>
+         </center>
+         <bottom>
+            <Label fx:id="actiontarget" prefHeight="17.0" prefWidth="1200.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
    </children>
 </AnchorPane>
