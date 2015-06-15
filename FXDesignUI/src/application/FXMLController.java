@@ -1,15 +1,17 @@
 package application;
 
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 import utils.Constance;
+import utils.Test;
 import javafx.animation.AnimationTimer;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,15 +19,14 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.Light.Point;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.image.PixelWriter;
+import javafx.scene.image.WritableImage;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.ArcType;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.SVGPath;
 import javafx.scene.text.Font;
-import javafx.util.Duration;
 
 public class FXMLController implements Initializable{
 	
@@ -66,11 +67,21 @@ public class FXMLController implements Initializable{
         drawGraphTop(cTopL1);
         updateObjects(cTopL2);
         cTopL2.toFront();
-        
-        drawGraphBottom(cBtmL1);
-        updateObjects(cBtmL2);
-        cBtmL2.toFront();
-		
+
+//        drawGraphBottom(cBtmL1);
+//        updateObjects(cBtmL2);
+//        cBtmL2.toFront();
+
+        //TESTING
+//        long startTime = System.currentTimeMillis();
+//        //drawing all pixel with Rect size 1x1
+//        Test.gcDrawEveryPixelRect(cBtmL1);//470ms-528ms 
+//        Test.g2dImgDrawEveryPixelRect(cBtmL1);//about 201ms 
+//        //drawing/filling single Rect size 100x100
+//        Test.gcDrawSingleRect(cBtmL1);//about 5ms 
+//        Test.g2dImgDrawSingleRect(cBtmL1);//about 51ms 
+//        long endTime = System.currentTimeMillis();
+//        System.out.println("TotalTime: "+(endTime - startTime));        
 	}
 	
     @FXML 
@@ -443,14 +454,6 @@ public class FXMLController implements Initializable{
 		point.setY(y1+len*Math.sin(angle));
 		return point;
 	}
-//	
-//	private Point calcIntersectionPoint(double x1, double y1, double x2, double y2){
-//		Point point = new Point();
-//		double s = Math.tan(-20);
-//		point.setX(x2+s*(y1-y2));
-//		point.setY(y2+s*(x2-x1));
-//		return point;
-//	}
 
 	public void finish() {
 		if(mPlot !=null) {
@@ -463,4 +466,5 @@ public class FXMLController implements Initializable{
 			}
 		}
 	}
+	
 }

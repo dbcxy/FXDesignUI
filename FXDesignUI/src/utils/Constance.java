@@ -38,4 +38,13 @@ public class Constance {
 //                   new double[]{210, 210, 240, 240}, 4);
 //  gc.strokePolyline(new double[]{110, 140, 110, 140},
 //                    new double[]{210, 210, 240, 240}, 4);
+	
+//	
+//	private Point calcIntersectionPoint(double x1, double y1, double x2, double y2){
+//		Point point = new Point();
+//		double s = Math.tan(-20);
+//		point.setX(x2+s*(y1-y2));
+//		point.setY(y2+s*(x2-x1));
+//		return point;
+//	}
 }
