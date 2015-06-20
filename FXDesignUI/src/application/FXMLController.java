@@ -6,7 +6,15 @@ import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
 
+import model.drawable.Plot;
+import model.drawable.Track;
+import model.drawing.ElevationChart;
+import model.drawing.ILayoutParam;
+
+import org.apache.log4j.Logger;
+
 import utils.Constance;
+import utils.ModelDrawing;
 import utils.Test;
 import javafx.animation.AnimationTimer;
 import javafx.beans.property.DoubleProperty;
@@ -28,11 +36,10 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
-public class FXMLController implements Initializable{
+public class FXMLController implements Initializable,ILayoutParam{
 	
-	final int HGAP = 20;
-	final int OFFSET = 10;
-	final int TEXT_OFFSET = 3*OFFSET;
+	private static final Logger logger = Logger.getLogger(FXMLController.class);
+
 	//1Nautical Miles = 18.5KMs
 	//Graph Scale Since WIDTH_OFF = 880px
 	final int PX = 15;// Assuming 40NM in so many pixels
@@ -58,19 +65,21 @@ public class FXMLController implements Initializable{
 
 	volatile boolean running = true;
 	Runnable mTask;
-	Thread mPlot;
+	Thread mThread;
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		
+		logger.info("Top Chart initialization");
 		setNMparameter(10);
         drawGraphTop(cTopL1);
         updateObjects(cTopL2);
         cTopL2.toFront();
 
-//        drawGraphBottom(cBtmL1);
-//        updateObjects(cBtmL2);
-//        cBtmL2.toFront();
+        logger.info("Bottom Chart initialization");
+        drawGraphBottom(cBtmL1);
+        updateObjects(cBtmL2);
+        cBtmL2.toFront();
 
         //TESTING
 //        long startTime = System.currentTimeMillis();
@@ -157,178 +166,40 @@ public class FXMLController implements Initializable{
 		ADJUST = NM + index;
 	}
 	
-    private void drawGraphTop(Canvas canvas) {
-    	//init
-    	GraphicsContext gc = canvas.getGraphicsContext2D();
-    	//offset for drawing
-    	double width = canvas.getWidth();
-    	double height = canvas.getHeight();
-    	final double HEIGHT_OFF = height-OFFSET;
-    	final double WIDTH_OFF = width-OFFSET;
-    	
-    	
-        //set BG & boundary
-    	gc.clearRect(0, 0, width, height);
-    	gc.setFill(Color.BLACK);
-        gc.fillRect(0,0,width,height);
-        
-        //custom graph
-        gc.setStroke(Color.CYAN);
-        gc.setLineWidth(2);
-        gc.scale(1, 1);
-        gc.strokeLine(OFFSET,HEIGHT_OFF,WIDTH_OFF,HEIGHT_OFF);//flat line
-        lineAtAngle(gc, OFFSET, HEIGHT_OFF, WIDTH_OFF+2*OFFSET, -20);//cross line at 20degrees
-        
-        //landing strip
-        gc.setStroke(Color.AQUAMARINE);
-        lineAtAngle(gc, OFFSET+NM, HEIGHT_OFF, OFFSET+(OFFSET-1)*NM, -5);//below center line
-        lineAtAngle(gc, OFFSET+NM, HEIGHT_OFF, OFFSET+(OFFSET-1)*NM, -8);//above center line
-        gc.setStroke(Color.RED);
-        lineAtAngle(gc, OFFSET+NM, HEIGHT_OFF, OFFSET+OFFSET*NM, -6.5);//center red line
-        gc.setStroke(Color.CYAN);
-        gc.setLineWidth(1);
-        gc.setLineDashes(OFFSET/2);
-        lineAtAngle(gc, OFFSET+NM, HEIGHT_OFF, OFFSET+(OFFSET-1)*NM, -3);//imaginary below line
-//        lineAtAngle(gc, OFFSET+NM, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*NM, -5);//imaginary above line
-        gc.setLineDashes(0);
-        
-        //inside grid
-        gc.setFont(new Font("Sans Serif", 16));
-        gc.setLineWidth(1.5);       
-        Point p = getNextPoint(OFFSET, HEIGHT_OFF, ADJUST, -20);
-        for(int i=0;i<(WIDTH_OFF/NM)-1;i++){
-        	if(i==0) {
-        		//write text
-        		gc.setStroke(Color.YELLOW);
-        		gc.strokeText(" TD ", OFFSET+(i+1)*NM, HEIGHT_OFF+OFFSET);
-        		
-        		//dotted red line
-        		gc.setStroke(Color.RED);
-        		gc.setLineDashes(OFFSET/2);
-        		gc.strokeLine(OFFSET+NM+2*OFFSET,HEIGHT_OFF,p.getX()+2*OFFSET,p.getY()-OFFSET/2);
-        		gc.setLineDashes(0);
-        		
-        		//reset color
-        		gc.setStroke(Color.CHARTREUSE);
-        	} else if((i%5)==0) {
-        		//write text NM
-        		gc.setStroke(Color.YELLOW);
-        		gc.strokeText(i+"NM", OFFSET+(i+1)*NM, HEIGHT_OFF+OFFSET);
-        	} else
-        		gc.setStroke(Color.GREEN);
+    private void drawGraphTop(Canvas canvas) {    	
+    	ElevationChart mElevationChart = new ElevationChart(canvas);
+    	mElevationChart.drawBackground();
+    	mElevationChart.drawElevationLine(20);
+    	mElevationChart.drawLandingStrip(NM, 6.5);
+    	mElevationChart.drawDistancegrid(NM, ADJUST);
+    	mElevationChart.drawText();
 
-        	//draw green lines
-            gc.strokeLine(OFFSET+(i+1)*NM,HEIGHT_OFF,p.getX(),p.getY());
-            p = getNextPoint(p.getX(), p.getY(), ADJUST, -20);
-        }
-        
-        //Loading Text context
-        int count = 0;
-        gc.setFont(new Font("Sans Serif", 16));
-        gc.setStroke(Color.RED);
-        gc.strokeText("EL Ang     : "+Constance.EL_ANGLE, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.setStroke(Color.YELLOW);
-        gc.strokeText("AZ Tilt      : "+Constance.AZ_TILT, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;count++;
-        
-        gc.setFont(new Font("Sans Serif", 12));
-        gc.setStroke(Color.ALICEBLUE);
-        gc.strokeText("Glide Slope          : "+Constance.GLIDE_SLOPE, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText("Safety Slope        : "+Constance.SAFETY_SLOPE, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText("Safety Height      : "+Constance.SAFETY_HEIGHT, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;count++;
-        gc.setStroke(Color.AQUA);
-        gc.strokeText("Distance          : "+Constance.DISTANCE, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText("Height            : "+Constance.HEIGHT, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;
-        
-        gc.setFont(new Font("Sans Serif", 14));
-        gc.setStroke(Color.CADETBLUE);
-        count = 0;
-        gc.strokeText("Channel   : "+Constance.CHANNEL, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText("Control    : "+Constance.CONTROL, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText("Route      : "+Constance.ROUTE, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText("RWY        : "+Constance.RWY, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText("Scale       : "+Constance.SCALE, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        
-        gc.setFont(new Font("Sans Serif", 14));
-        gc.setStroke(Color.GREENYELLOW);
-        count = 0;
-        gc.strokeText("System Perform     : ", 2*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText("System Setting      : ", 2*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText("System Logbook    : ", 2*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.setStroke(Color.YELLOW);
-        count = 0;
-        gc.strokeText(Constance.NULL, 2.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText(Constance.NULL, 2.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText(Constance.NULL, 2.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count=0;
     }
     
     private void updateObjects(Canvas canvas) {
-    	//init
-    	GraphicsContext gc = canvas.getGraphicsContext2D();
-    	//offset for drawing
-    	double width = canvas.getWidth();
-    	double height = canvas.getHeight();
-    	final double HEIGHT_OFF = height-OFFSET;
-    	final double WIDTH_OFF = width-OFFSET;
+    	Track mTrack = new Track(canvas);
+    	Plot mPlot = new Plot(canvas);
+
+    	final double WIDTH_OFF = canvas.getWidth()-OFFSET;
     	
     	//update shape
         DoubleProperty x  = new SimpleDoubleProperty();
         DoubleProperty y  = new SimpleDoubleProperty();
-//        Timeline timeline = new Timeline(
-//            new KeyFrame(Duration.seconds(0),//Start X,Y at T
-//                    new KeyValue(x, OFFSET),//Start X
-//                    new KeyValue(y, OFFSET)//Start Y
-//            ),
-//            new KeyFrame(Duration.seconds(10),//End X,Y at T
-//                    new KeyValue(x, WIDTH_OFF),//End X
-//                    new KeyValue(y, HEIGHT_OFF)//End Y
-//            )
-//        );
-//        timeline.setCycleCount(Timeline.INDEFINITE);//Loops
-        
         AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-            	gc.clearRect(0, 0, width, height);
-            	double myX = x.doubleValue();
-            	double myY = y.doubleValue();
-            	gc.setFill(Color.BISQUE);
-            	gc.fillOval(myX-OFFSET, myY-OFFSET, HGAP, HGAP);
-            	gc.setStroke(Color.WHITE);
-            	gc.setLineWidth(2);
-            	gc.strokeOval(myX-OFFSET, myY-OFFSET, HGAP, HGAP);
-            	gc.strokeLine(myX,myY+HGAP,myX,myY-HGAP);
-            	gc.strokeLine(myX+HGAP, myY, myX-HGAP, myY);
-            	gc.setStroke(Color.CHOCOLATE);
-            	lineAtAngle(gc, myX, myY, HGAP, -45);
-            	Point p = getPointOfLineAtAngle(gc, myX, myY, HGAP, -45);
-            	gc.strokeLine(p.getX(), p.getY(), p.getX()+2*TEXT_OFFSET, p.getY());
-            	gc.setFont(new Font("Arial", 14));
-            	gc.setStroke(Color.WHITE);
-            	gc.strokeText("AA10", p.getX()+OFFSET, p.getY()-OFFSET);
-            	gc.setStroke(Color.YELLOW);
-            	gc.strokeText("3200/100", p.getX()+OFFSET, p.getY()+HGAP);
+            	canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+            	mTrack.setXY(x.doubleValue(), y.doubleValue());
+            	mTrack.setText("AA10", "3200/100");
+            	mTrack.drawTrack();
+            	
+            	mPlot.setXY(x.doubleValue()-50, y.doubleValue()+50);
+            	mPlot.setTitle("PLOT");
+            	mPlot.drawPlot();
+            	
             }
         };
         timer.start();
-//        timeline.play();
         
         mTask = new Runnable() {
 			        	
@@ -337,9 +208,8 @@ public class FXMLController implements Initializable{
 				for(int i=0;i<WIDTH_OFF/2 && running;i++){
 	                x.setValue(WIDTH_OFF-i);
 	                y.setValue(OFFSET+i);
-	                System.out.println("RUNNING");
 	                try {
-						Thread.sleep(500);
+						Thread.sleep(50);//Update or refresh rate
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 						running = false;
@@ -347,8 +217,8 @@ public class FXMLController implements Initializable{
         		}
 			}
 		};
-        mPlot = new Thread(mTask);
-        mPlot.start();
+		mThread = new Thread(mTask);
+		mThread.start();
     }
     
 	private void drawGraphBottom(Canvas canvas) {
@@ -369,8 +239,8 @@ public class FXMLController implements Initializable{
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(2);
         gc.scale(1, 1);
-        lineAtAngle(gc, OFFSET, HEIGHT_OFF/2, WIDTH_OFF, -10.5);//cross line at top 10degrees
-        lineAtAngle(gc, OFFSET, HEIGHT_OFF/2, WIDTH_OFF, 10.5);//cross line at bottom 10degrees
+        ModelDrawing.drawLineAtAngle(gc, OFFSET, HEIGHT_OFF/2, WIDTH_OFF, -10.5);//cross line at top 10degrees
+        ModelDrawing.drawLineAtAngle(gc, OFFSET, HEIGHT_OFF/2, WIDTH_OFF, 10.5);//cross line at bottom 10degrees
         
         //landing strip
         gc.setStroke(Color.AQUAMARINE);
@@ -381,14 +251,14 @@ public class FXMLController implements Initializable{
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(1);
         gc.setLineDashes(OFFSET/2);
-        lineAtAngle(gc, OFFSET+NM, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*NM, 5);//imaginary below line
-        lineAtAngle(gc, OFFSET+NM, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*NM, -5);//imaginary above line
+        ModelDrawing.drawLineAtAngle(gc, OFFSET+NM, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*NM, 5);//imaginary below line
+        ModelDrawing.drawLineAtAngle(gc, OFFSET+NM, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*NM, -5);//imaginary above line
         gc.setLineDashes(0);
         
         //inside grid
         gc.setLineWidth(1.5);    
-        Point pTop = getNextPoint(OFFSET, HEIGHT_OFF/2, ADJUST, -10);
-        Point pBtm = getNextPoint(OFFSET, HEIGHT_OFF/2, ADJUST, 10);
+        Point pTop = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF/2, ADJUST, -10);
+        Point pBtm = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF/2, ADJUST, 10);
         for(int i=0;i<(WIDTH_OFF/NM)-1;i++){
         	if(i==0) {
         		
@@ -405,8 +275,8 @@ public class FXMLController implements Initializable{
         	} else
         		gc.setStroke(Color.GREEN);
             gc.strokeLine(OFFSET+(i+1)*NM,pTop.getY(),OFFSET+(i+1)*NM,pBtm.getY());
-            pBtm = getNextPoint(pBtm.getX(), pBtm.getY(), ADJUST, 10);
-            pTop = getNextPoint(pTop.getX(), pTop.getY(), ADJUST, -10);
+            pBtm = ModelDrawing.getNextPointAtAngle(pBtm.getX(), pBtm.getY(), ADJUST, 10);
+            pTop = ModelDrawing.getNextPointAtAngle(pTop.getX(), pTop.getY(), ADJUST, -10);
         }
         
         //Loading Text context
@@ -433,33 +303,12 @@ public class FXMLController implements Initializable{
         gc.strokeText("+", OFFSET, HEIGHT_OFF/2-HGAP);
         
 	}
-	
-	private void lineAtAngle(GraphicsContext gc, double x1,double y1,double length,double angle) {
-		angle = angle * Math.PI / 180; 
-	    gc.strokeLine(x1,y1,x1 + length * Math.cos(angle),y1 + length * Math.sin(angle));
-	}
-	
-	private Point getPointOfLineAtAngle(GraphicsContext gc, double x1,double y1,double length,double angle) {
-		angle = angle * Math.PI / 180; 
-		double x2 = x1 + length * Math.cos(angle);
-		double y2 = y1 + length * Math.sin(angle);
-	    gc.strokeLine(x1,y1,x2,y2);
-	    return new Point(x2,y2,0,null);
-	}
-	
-	private Point getNextPoint(double x1, double y1, double len, double angle){
-		angle = angle * Math.PI / 180;
-		Point point = new Point();
-		point.setX(x1+len*Math.cos(angle));
-		point.setY(y1+len*Math.sin(angle));
-		return point;
-	}
 
 	public void finish() {
-		if(mPlot !=null) {
+		if(mThread !=null) {
 			try {
 				running = false;
-				mPlot.join();
+				mThread.join();
 				System.out.println("STOPPING");
 			} catch (InterruptedException e) {
 				e.printStackTrace();

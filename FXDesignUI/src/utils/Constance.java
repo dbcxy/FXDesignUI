@@ -1,7 +1,7 @@
 package utils;
 
 public class Constance {
-
+	
 	public static final String CHANNEL = null;
 	public static final String CONTROL = null;
 	public static final String ROUTE = null;
@@ -20,6 +20,15 @@ public class Constance {
 	public static String HEIGHT = null;
 	public static String EL_ANGLE = null;
 
+	
+	public static boolean TCPIP 			= false;
+	public static boolean UDPIP				= false;
+	public static boolean IS_CONNECTED		= false;
+	
+	public static int MY_TIMEOUT 			= 60*1000;
+	public static int PORT_NO 				= 30401;
+    public static final String GROUP_ADDR 	= "237.0.0.1";
+    public static final int DGRAM_LEN 		= 2048;
 	
 	
 //  gc.fillOval(10, 60, 30, 30);
