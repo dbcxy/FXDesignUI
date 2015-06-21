@@ -12,19 +12,14 @@ import javafx.scene.text.Font;
 public class Track extends OverlayItem implements ILayoutParam{
 
 	private String trackNumber;
-	
-	private Canvas mCanvas;
-	private GraphicsContext gc;
 	private boolean isTextShown = true;
 	
-	public Track(Canvas canvas) {
-		this(canvas,null,null);
+	public Track() {
+		this(null,null);
 	}
 	
-	public Track(Canvas canvas, final Double x, final Double y) {
+	public Track(final Double x, final Double y) {
 		super(x, y);
-		this.mCanvas = canvas;
-		this.gc = mCanvas.getGraphicsContext2D();
 	}
 
 	public boolean isTextShown() {
@@ -40,25 +35,13 @@ public class Track extends OverlayItem implements ILayoutParam{
 		super.setX(x);
 		super.setY(y);
 	}
-
-	public void drawTrack() {
-    	gc.setFill(Color.BISQUE);
-    	gc.fillOval(getX()-OFFSET, getY()-OFFSET, HGAP, HGAP);
-    	gc.setStroke(Color.WHITE);
-    	gc.setLineWidth(2);
-    	gc.strokeOval(getX()-OFFSET, getY()-OFFSET, HGAP, HGAP);
-    	gc.strokeLine(getX(),getY()+HGAP,getX(),getY()-HGAP);
-    	gc.strokeLine(getX()+HGAP, getY(), getX()-HGAP, getY());
-    	
-    	if(isTextShown)
-			displayText();
-	}
+	
 	
 	public void showText(boolean show) {		
 		isTextShown = show;
 	}
 	
-	private void displayText() {
+	private void displayText(GraphicsContext gc) {
     	gc.setStroke(Color.CHOCOLATE);
     	ModelDrawing.drawLineAtAngle(gc, getX(), getY(), HGAP, -45);
     	Point p = ModelDrawing.getPointOfLineAtAngle(gc, getX(), getY(), HGAP, -45);
@@ -68,6 +51,20 @@ public class Track extends OverlayItem implements ILayoutParam{
     	gc.strokeText(getTitle(), p.getX()+OFFSET, p.getY()-OFFSET);
     	gc.setStroke(Color.YELLOW);
     	gc.strokeText(trackNumber, p.getX()+OFFSET, p.getY()+HGAP);
+	}
+
+	@Override
+	public void draw(GraphicsContext gc) {
+		gc.setFill(Color.BISQUE);
+    	gc.fillOval(getX()-OFFSET, getY()-OFFSET, HGAP, HGAP);
+    	gc.setStroke(Color.WHITE);
+    	gc.setLineWidth(2);
+    	gc.strokeOval(getX()-OFFSET, getY()-OFFSET, HGAP, HGAP);
+    	gc.strokeLine(getX(),getY()+HGAP,getX(),getY()-HGAP);
+    	gc.strokeLine(getX()+HGAP, getY(), getX()-HGAP, getY());
+    	
+    	if(isTextShown)
+			displayText(gc);
 	}
 
 }

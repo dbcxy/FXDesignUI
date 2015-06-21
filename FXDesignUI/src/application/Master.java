@@ -1,5 +1,6 @@
 package application;
 	
+import model.DataObserver;
 import network.IControlManager;
 import network.TaskObserver;
 
@@ -50,7 +51,7 @@ public class Master extends Application {
 	        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 	            
 	        	public void handle(WindowEvent we) {
-	        		mFXMLController.finish();
+	        		
 	            }
 	        });	        
 			
@@ -63,8 +64,8 @@ public class Master extends Application {
 		mTask = new Thread(new TaskObserver(new IControlManager() {
 			
 			@Override
-			public void manageData() {
-				//Call FXML Controller public methods
+			public void manageData(DataObserver mDataObserver) {
+				mFXMLController.refresh(mDataObserver);
 			}
 		}));
 		mTask.start();

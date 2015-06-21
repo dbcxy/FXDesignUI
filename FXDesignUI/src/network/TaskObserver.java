@@ -9,6 +9,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 
+import model.DataObserver;
+
 import org.apache.log4j.Logger;
 
 import application.Master;
@@ -158,12 +160,14 @@ public class TaskObserver implements Runnable{
 	}
 	
 	private void makeData() {
-		
+		//separate class
+		DataObserver mDataObserver = new DataObserver();
+		iCManager.manageData(mDataObserver);
 		
 	}
 	
 	private void recordData() {
-		
+		//separate class
 		
 	}
 }

@@ -18,9 +18,7 @@ public class ElevationChart implements ILayoutParam{
 	private GraphicsContext gc;
 	
 	public ElevationChart(Canvas canvas) {
-		this.mCanvas = canvas;
-		
-    	//init
+		mCanvas = canvas;
     	gc = canvas.getGraphicsContext2D();    	
     	HEIGHT_OFF = mCanvas.getHeight()-OFFSET;
     	WIDTH_OFF = mCanvas.getWidth()-OFFSET;
@@ -33,7 +31,6 @@ public class ElevationChart implements ILayoutParam{
 	}
 	
 	public void drawElevationLine(double elAngle) {
-		//custom graph
 		this.elevationAngle = elAngle;
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(2);
@@ -43,7 +40,6 @@ public class ElevationChart implements ILayoutParam{
 	}
 	
 	public void drawLandingStrip(int dist, double elAngle) {
-		//landing strip
         gc.setStroke(Color.AQUAMARINE);
         ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(elAngle-1.5));//below center line
         ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(elAngle+1.5));//above center line
@@ -57,8 +53,7 @@ public class ElevationChart implements ILayoutParam{
         gc.setLineDashes(0);
 	}
 	
-	public void drawDistancegrid(int dist, int deltaDist) {
-		//inside grid
+	public void drawDistanceGrid(int dist, int deltaDist) {
         gc.setFont(new Font("Sans Serif", 16));
         gc.setLineWidth(1.5);       
         Point p = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF, deltaDist, -elevationAngle);
@@ -147,6 +142,11 @@ public class ElevationChart implements ILayoutParam{
 	}
 	
 	public void drawTrackElement() {
+		
+	}
+
+	@Override
+	public void draw(GraphicsContext gc) {
 		
 	}
 	

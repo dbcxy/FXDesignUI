@@ -12,19 +12,14 @@ import utils.ModelDrawing;
 public class Plot extends OverlayItem implements ILayoutParam{
 	
 	private String plotNumber;
-	
-	private Canvas mCanvas;
-	private GraphicsContext gc;
 	private boolean isTextShown = false;
 	
-	public Plot(Canvas canvas) {
-		this(canvas,null,null);
+	public Plot() {
+		this(null,null);
 	}
 	
-	public Plot(Canvas canvas, final Double x, final Double y) {
+	public Plot(final Double x, final Double y) {
 		super(x, y);
-		this.mCanvas = canvas;
-		this.gc = mCanvas.getGraphicsContext2D();
 	}
 	
 	public boolean isTextShown() {
@@ -40,23 +35,12 @@ public class Plot extends OverlayItem implements ILayoutParam{
 		super.setX(x);
 		super.setY(y);
 	}
-
-	public void drawPlot() {
-    	gc.setFill(Color.RED);
-    	gc.fillOval(getX()-OFFSET, getY()-OFFSET, OFFSET, OFFSET);
-    	gc.setStroke(Color.WHITE);
-    	gc.setLineWidth(1);
-    	gc.strokeOval(getX()-OFFSET, getY()-OFFSET, OFFSET, OFFSET);
-    	
-    	if(isTextShown)
-			displayText();
-	}
 	
 	public void showText(boolean show) {		
 		isTextShown = show;
 	}
 	
-	private void displayText() {
+	private void displayText(GraphicsContext gc) {
     	gc.setStroke(Color.CHOCOLATE);
     	ModelDrawing.drawLineAtAngle(gc, getX(), getY(), HGAP, -45);
     	Point p = ModelDrawing.getPointOfLineAtAngle(gc, getX(), getY(), HGAP, -45);
@@ -68,4 +52,16 @@ public class Plot extends OverlayItem implements ILayoutParam{
     	gc.strokeText(plotNumber, p.getX()+OFFSET, p.getY()+HGAP);
 	}
 
+	@Override
+	public void draw(GraphicsContext gc) {
+		gc.setFill(Color.RED);
+    	gc.fillOval(getX()-OFFSET, getY()-OFFSET, OFFSET, OFFSET);
+    	gc.setStroke(Color.WHITE);
+    	gc.setLineWidth(1);
+    	gc.strokeOval(getX()-OFFSET, getY()-OFFSET, OFFSET, OFFSET);
+    	
+    	if(isTextShown)
+			displayText(gc);
+		
+	}
 }

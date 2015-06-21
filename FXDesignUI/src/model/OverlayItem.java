@@ -1,6 +1,6 @@
 package model;
 
-public class OverlayItem {
+public abstract class OverlayItem {
 	
 	String Title;
 	double X;
@@ -41,9 +41,4 @@ public class OverlayItem {
 	public void setTitle(final String title) {
 		Title = title;
 	}
-	
-	
-	
-	
-
 }

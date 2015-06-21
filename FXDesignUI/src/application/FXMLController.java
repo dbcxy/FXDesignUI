@@ -6,8 +6,10 @@ import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
 
+import model.DataObserver;
 import model.drawable.Plot;
 import model.drawable.Track;
+import model.drawing.AzimuthChart;
 import model.drawing.ElevationChart;
 import model.drawing.ILayoutParam;
 
@@ -63,17 +65,13 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML Canvas cBtmL2;
 	
 
-	volatile boolean running = true;
-	Runnable mTask;
-	Thread mThread;
-
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		
 		logger.info("Top Chart initialization");
 		setNMparameter(10);
         drawGraphTop(cTopL1);
-        updateObjects(cTopL2);
+//        updateObjects(cTopL2)
         cTopL2.toFront();
 
         logger.info("Bottom Chart initialization");
@@ -171,15 +169,16 @@ public class FXMLController implements Initializable,ILayoutParam{
     	mElevationChart.drawBackground();
     	mElevationChart.drawElevationLine(20);
     	mElevationChart.drawLandingStrip(NM, 6.5);
-    	mElevationChart.drawDistancegrid(NM, ADJUST);
+    	mElevationChart.drawDistanceGrid(NM, ADJUST);
     	mElevationChart.drawText();
 
     }
     
     private void updateObjects(Canvas canvas) {
-    	Track mTrack = new Track(canvas);
-    	Plot mPlot = new Plot(canvas);
-
+    	Track mTrack = new Track();
+    	Plot mPlot = new Plot();
+    	GraphicsContext gc = canvas.getGraphicsContext2D();
+    	
     	final double WIDTH_OFF = canvas.getWidth()-OFFSET;
     	
     	//update shape
@@ -191,129 +190,62 @@ public class FXMLController implements Initializable,ILayoutParam{
             	canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
             	mTrack.setXY(x.doubleValue(), y.doubleValue());
             	mTrack.setText("AA10", "3200/100");
-            	mTrack.drawTrack();
+            	mTrack.draw(gc);
             	
             	mPlot.setXY(x.doubleValue()-50, y.doubleValue()+50);
             	mPlot.setTitle("PLOT");
-            	mPlot.drawPlot();
+            	mPlot.draw(gc);
             	
             }
         };
         timer.start();
         
-        mTask = new Runnable() {
+        Runnable mTask = new Runnable() {
 			        	
 			@Override
 			public void run() {
-				for(int i=0;i<WIDTH_OFF/2 && running;i++){
+				for(int i=0;i<WIDTH_OFF/2;i++){
 	                x.setValue(WIDTH_OFF-i);
 	                y.setValue(OFFSET+i);
 	                try {
 						Thread.sleep(50);//Update or refresh rate
 					} catch (InterruptedException e) {
 						e.printStackTrace();
-						running = false;
 					}
         		}
 			}
 		};
-		mThread = new Thread(mTask);
+		Thread mThread = new Thread(mTask);
 		mThread.start();
     }
     
 	private void drawGraphBottom(Canvas canvas) {
-		//init
-		GraphicsContext gc = canvas.getGraphicsContext2D();
-    	//offset for drawing
-    	double width = canvas.getWidth();
-    	double height = canvas.getHeight();
-    	final double HEIGHT_OFF = height-OFFSET;
-    	final double WIDTH_OFF = width-OFFSET;
-    	
-        //set BG
-    	gc.clearRect(0, 0, width, height);
-    	gc.setFill(Color.BLACK);
-        gc.fillRect(0,0,width,height);
-        
-        //custom graph
-        gc.setStroke(Color.CYAN);
-        gc.setLineWidth(2);
-        gc.scale(1, 1);
-        ModelDrawing.drawLineAtAngle(gc, OFFSET, HEIGHT_OFF/2, WIDTH_OFF, -10.5);//cross line at top 10degrees
-        ModelDrawing.drawLineAtAngle(gc, OFFSET, HEIGHT_OFF/2, WIDTH_OFF, 10.5);//cross line at bottom 10degrees
-        
-        //landing strip
-        gc.setStroke(Color.AQUAMARINE);
-        gc.strokeLine(OFFSET+NM,HEIGHT_OFF/2-OFFSET/2,OFFSET+OFFSET*NM,HEIGHT_OFF/2-OFFSET/2);//above center line
-        gc.strokeLine(OFFSET+NM,HEIGHT_OFF/2+OFFSET/2,OFFSET+OFFSET*NM,HEIGHT_OFF/2+OFFSET/2);//below center line
-        gc.setStroke(Color.RED);
-        gc.strokeLine(OFFSET+NM,HEIGHT_OFF/2,OFFSET+(1+OFFSET)*NM,HEIGHT_OFF/2);//center line
-        gc.setStroke(Color.CYAN);
-        gc.setLineWidth(1);
-        gc.setLineDashes(OFFSET/2);
-        ModelDrawing.drawLineAtAngle(gc, OFFSET+NM, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*NM, 5);//imaginary below line
-        ModelDrawing.drawLineAtAngle(gc, OFFSET+NM, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*NM, -5);//imaginary above line
-        gc.setLineDashes(0);
-        
-        //inside grid
-        gc.setLineWidth(1.5);    
-        Point pTop = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF/2, ADJUST, -10);
-        Point pBtm = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF/2, ADJUST, 10);
-        for(int i=0;i<(WIDTH_OFF/NM)-1;i++){
-        	if(i==0) {
-        		
-        		//dotted red line
-        		gc.setStroke(Color.RED);
-        		gc.setLineDashes(OFFSET/2);
-        		gc.strokeLine(OFFSET+NM+2*OFFSET,pTop.getY(),OFFSET+NM+2*OFFSET,pBtm.getY());
-        		gc.setLineDashes(0);
-        		
-        		//reset color
-        		gc.setStroke(Color.CHARTREUSE);
-        	} else if((i%5)==0) {
-        		gc.setStroke(Color.YELLOW);
-        	} else
-        		gc.setStroke(Color.GREEN);
-            gc.strokeLine(OFFSET+(i+1)*NM,pTop.getY(),OFFSET+(i+1)*NM,pBtm.getY());
-            pBtm = ModelDrawing.getNextPointAtAngle(pBtm.getX(), pBtm.getY(), ADJUST, 10);
-            pTop = ModelDrawing.getNextPointAtAngle(pTop.getX(), pTop.getY(), ADJUST, -10);
-        }
-        
-        //Loading Text context
-        int count = 0;
-        gc.setFont(new Font("Sans Serif", 16));
-        gc.setStroke(Color.RED);
-        gc.strokeText("AZ Ang    : "+Constance.AZ_ANGLE, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.setStroke(Color.YELLOW);
-        gc.strokeText("EL Tilt      : "+Constance.EL_TILT, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;count++;
-        
-        gc.setFont(new Font("Sans Serif", 12));
-        gc.setStroke(Color.ALICEBLUE);
-        gc.strokeText("Approach Angle   : "+Constance.APPROACH_ANGLE, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.setStroke(Color.AQUA);
-        gc.strokeText("Offset                   : "+Constance.OFFSET, OFFSET, TEXT_OFFSET+HGAP*count);
-        count = 0;
-        
-        gc.setFont(new Font("Sans Serif", 18));
-        gc.setStroke(Color.YELLOW);
-        gc.strokeText("-", OFFSET, HEIGHT_OFF/2+HGAP+OFFSET);
-        gc.strokeText("+", OFFSET, HEIGHT_OFF/2-HGAP);
+		AzimuthChart mAzimuthChart = new AzimuthChart(canvas);
+		mAzimuthChart.drawBackground();
+		mAzimuthChart.drawAzimuthLine(10.5);
+		mAzimuthChart.drawLandingStrip(NM);
+		mAzimuthChart.drawDistanceGrid(NM, ADJUST);
+		mAzimuthChart.drawText();
+	}
+	
+	public void refresh(DataObserver dataObserver) {
+		AnimationTimer timer = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+            	cTopL2.getGraphicsContext2D().clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
+            	GraphicsContext gc = cTopL2.getGraphicsContext2D();
+            	dataObserver.getTrackDataList().draw(gc);
+            	dataObserver.getPlotDataList().draw(gc);
+            	
+            }
+        };
+        timer.start();
         
 	}
 
-	public void finish() {
-		if(mThread !=null) {
-			try {
-				running = false;
-				mThread.join();
-				System.out.println("STOPPING");
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
+	@Override
+	public void draw(GraphicsContext gc) {
+		
 	}
 	
 }
