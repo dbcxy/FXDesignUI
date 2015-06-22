@@ -1,10 +1,13 @@
 package network;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
@@ -23,13 +26,15 @@ public class TaskObserver implements Runnable{
 	private IControlManager iCManager;
 	
 	private Socket mSocket = null;
-	private ServerSocket mServerSocket = null;
 	private BufferedReader mServerSocketInPacket = null;
+	private BufferedWriter mServerSocketOutPacket = null;
 	
 	private DatagramSocket mDatagramSocket = null;
 	private DatagramPacket mDatagramInPacket = null;
+	private DatagramPacket mDatagramOutPacket = null;
 	
 	private String mDataMsg = null;
+	private String mSendMsg = null;
 	
 	public TaskObserver(IControlManager iControlManager) {
 		this.iCManager = iControlManager;
@@ -46,14 +51,14 @@ public class TaskObserver implements Runnable{
 		//create sockets 
 		createSockets();
 		
-		//Wait for read
-		waitToRead();
+		//Init Read Write heads
+		initStreamHead();
 		
 		//Connection Status
 		notifyStatus();
 		
 		// Now loop forever, waiting to receive packets and printing them.
-		while (Constance.IS_CONNECTED) {
+		while (Constance.IS_CONNECTED && isDataReady()) {
 					
 			//Get Data
 			parseData();
@@ -69,45 +74,40 @@ public class TaskObserver implements Runnable{
 
 	private void createSockets() {
     	
-    	if(Constance.TCPIP) {
-			//Creation of TCPIP Sockets
-			try {
-				mServerSocket= new ServerSocket(Constance.PORT_NO);
-//				m_ssocket.setSoTimeout(Constance.MY_TIMEOUT);
+		try {
+			InetAddress serverAddr = InetAddress.getByName(Constance.SERVER_IP);
 
-			} catch (IOException e) {
-				e.printStackTrace();
-				logger.error("TCP socket creation failed for PORT: "+Constance.PORT_NO,e);
+			if(Constance.TCPIP) {
+				mSocket = new Socket(serverAddr, Constance.PORT_NO);
+//				m_ssocket.setSoTimeout(Constance.MY_TIMEOUT);
+				logger.info("TCP socket created at IP:"+mSocket.getInetAddress()+" PORT: "+mSocket.getPort());
+			} else if (Constance.UDPIP) {				
+				mDatagramSocket = new DatagramSocket(Constance.PORT_NO,serverAddr);
+				logger.info("UDP socket created at IP:"+mDatagramSocket.getLocalAddress()+" PORT: "+mDatagramSocket.getLocalPort());
 			}
-		}
-		else if (Constance.UDPIP) {				
-			//Creation of UDP Sockets
-			try {
-				mDatagramSocket = new DatagramSocket(Constance.PORT_NO);
-			} catch (SocketException e) {
-				e.printStackTrace();
-				logger.error("UDP socket creation failed for PORT: "+Constance.PORT_NO,e);
-			}
+	    	
+		} catch (IOException e) {
+			e.printStackTrace();
+			logger.error("Socket creation failed",e);
 		}
     }
 	
-	private void waitToRead() {
+	private void initStreamHead() {
     	
-		//Wait for read
 		if(Constance.TCPIP) {
 			try {
-				mSocket = mServerSocket.accept();
-				logger.info("Accepted: "+mSocket);
 				mServerSocketInPacket = new BufferedReader(new InputStreamReader(mSocket.getInputStream()));
+				mServerSocketOutPacket = new BufferedWriter(new OutputStreamWriter(mSocket.getOutputStream()));
+				logger.info("TCP socket input/ouput stream init: "+mSocket);
 			} catch (IOException e) {
 				e.printStackTrace();
 				logger.error("TCP socket read failed for PORT: "+Constance.PORT_NO,e);
 			}
-		} else {
-			// Create a buffer to read datagrams into.
+		} else if (Constance.UDPIP) {
 			byte[] mUDPSocketbuffer = new byte[Constance.DGRAM_LEN];
-			// Create a packet to receive data into the buffer
 			mDatagramInPacket = new DatagramPacket(mUDPSocketbuffer, mUDPSocketbuffer.length);
+			mDatagramOutPacket = new DatagramPacket(mUDPSocketbuffer, mUDPSocketbuffer.length);
+			logger.info("UDP socket input/output stream init: "+mSocket);
 		}		
 	}
 
@@ -119,10 +119,23 @@ public class TaskObserver implements Runnable{
 			Constance.IS_CONNECTED = true;
 	}
 	
+	private boolean isDataReady() {
+		if(Constance.TCPIP) {
+			try {
+				return (mServerSocketInPacket.readLine()!=null);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else if(Constance.UDPIP) {
+			return true;
+		}
+		return false;
+	}
+	
 	public void closeActiveConnection() {
         if(Constance.TCPIP) {
 				try {
-					mServerSocket.close();
+					mSocket.close();
 					logger.info("Network Task TCP socket Closed/Ended");
 				} catch (IOException e) {
 					e.printStackTrace();
@@ -139,18 +152,35 @@ public class TaskObserver implements Runnable{
 		}
 	}
 	
+	private void sendData() {
+		try {		
+			if(Constance.TCPIP) {
+				mServerSocketOutPacket.write(mSendMsg);
+				logger.info("TCP Server Data Sent: "+mSendMsg);
+			} else if(Constance.UDPIP) {
+				mDatagramSocket.send(mDatagramOutPacket);
+				logger.info("UDP Server Data sent: "+mSendMsg);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			logger.error("Parsing Data from Socket failed", e);
+		}
+	}
+	
 	private void parseData() {
 		
 		try {		
 			if(Constance.TCPIP) {
 				// Wait to receive a socket data
 				mDataMsg = mServerSocketInPacket.readLine();
+				logger.info("TCP Server Data received: "+mDataMsg);
 			} else if(Constance.UDPIP) {
 				// Wait to receive a datagram
 				mDatagramSocket.receive(mDatagramInPacket);
-				
 				// Convert the contents to a string, and display them
 				mDataMsg = new String(mDatagramInPacket.getData(), 0, mDatagramInPacket.getLength());
+				logger.info("UDP Server Data received: "+mDataMsg);
 			}
 			
 		} catch (Exception e) {
@@ -162,6 +192,8 @@ public class TaskObserver implements Runnable{
 	private void makeData() {
 		//separate class
 		DataObserver mDataObserver = new DataObserver();
+		mDataObserver.analyseData(mDataMsg);
+		logger.info("Server Data analyzed");
 		iCManager.manageData(mDataObserver);
 		
 	}

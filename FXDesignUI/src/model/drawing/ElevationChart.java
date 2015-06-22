@@ -2,6 +2,7 @@ package model.drawing;
 
 import utils.Constance;
 import utils.ModelDrawing;
+import views.ResizableCanvas;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
@@ -14,13 +15,13 @@ public class ElevationChart implements ILayoutParam{
 	double WIDTH_OFF;
 	double elevationAngle;
 	
-	private Canvas mCanvas;
+	private ResizableCanvas mCanvas;
 	private GraphicsContext gc;
 	
-	public ElevationChart(Canvas canvas) {
+	public ElevationChart(ResizableCanvas canvas) {
 		mCanvas = canvas;
     	gc = canvas.getGraphicsContext2D();    	
-    	HEIGHT_OFF = mCanvas.getHeight()-OFFSET;
+    	HEIGHT_OFF = mCanvas.getHeight()-TEXT_OFFSET;
     	WIDTH_OFF = mCanvas.getWidth()-OFFSET;
 	}
 	
@@ -61,7 +62,7 @@ public class ElevationChart implements ILayoutParam{
         	if(i==0) {
         		//write text
         		gc.setStroke(Color.YELLOW);
-        		gc.strokeText(" TD ", OFFSET+(i+1)*dist, HEIGHT_OFF+OFFSET);
+        		gc.strokeText(" TD ", OFFSET+(i+1)*dist, HEIGHT_OFF+HGAP);
         		
         		//dotted red line
         		gc.setStroke(Color.RED);
@@ -74,7 +75,7 @@ public class ElevationChart implements ILayoutParam{
         	} else if((i%5)==0) {
         		//write text NM
         		gc.setStroke(Color.YELLOW);
-        		gc.strokeText(i+"NM", OFFSET+(i+1)*dist, HEIGHT_OFF+OFFSET);
+        		gc.strokeText(i+"NM", OFFSET+(i+1)*dist, HEIGHT_OFF+HGAP);
         	} else
         		gc.setStroke(Color.GREEN);
 

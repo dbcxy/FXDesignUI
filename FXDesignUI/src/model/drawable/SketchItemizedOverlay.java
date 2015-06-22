@@ -1,5 +1,7 @@
 package model.drawable;
 
+import org.apache.log4j.Logger;
+
 import javafx.scene.canvas.GraphicsContext;
 import model.ItemizedOverlay;
 import model.OverlayItem;
@@ -7,6 +9,8 @@ import model.drawing.ILayoutParam;
 
 public class SketchItemizedOverlay extends ItemizedOverlay<OverlayItem> implements ILayoutParam{
 
+	static final Logger logger = Logger.getLogger(SketchItemizedOverlay.class);
+	
 	public static final int TRACK 	= 1;
 	public static final int PLOT 	= 2;
 	public static final int VIDEO 	= 3;

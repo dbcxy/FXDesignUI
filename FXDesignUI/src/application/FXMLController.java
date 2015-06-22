@@ -1,9 +1,6 @@
 package application;
 
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
 import java.net.URL;
-import java.util.Random;
 import java.util.ResourceBundle;
 
 import model.DataObserver;
@@ -15,13 +12,10 @@ import model.drawing.ILayoutParam;
 
 import org.apache.log4j.Logger;
 
-import utils.Constance;
-import utils.ModelDrawing;
-import utils.Test;
+import views.ResizableCanvas;
 import javafx.animation.AnimationTimer;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
-import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -29,14 +23,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.effect.Light.Point;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.image.PixelWriter;
-import javafx.scene.image.WritableImage;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 
 public class FXMLController implements Initializable,ILayoutParam{
 	
@@ -59,25 +46,34 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML private Pane chartTop;
 	@FXML private Pane chartBottom;
 	
-	@FXML Canvas cTopL1;
+	@FXML ResizableCanvas cTopL1;
 	@FXML Canvas cTopL2;
+	
 	@FXML Canvas cBtmL1;
 	@FXML Canvas cBtmL2;
 	
-
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		
-		logger.info("Top Chart initialization");
+		cTopL1.widthProperty().bind(chartTop.widthProperty());
+		cTopL1.heightProperty().bind(chartTop.heightProperty());		
+      
+	}
+	
+	@FXML 
+    protected void onStartAction(ActionEvent event) {
+        actiontarget.setText("Start Button Clicked");
+        logger.info("Top Chart initialization");
 		setNMparameter(10);
         drawGraphTop(cTopL1);
-//        updateObjects(cTopL2)
+        updateObjects(cTopL2);
         cTopL2.toFront();
 
         logger.info("Bottom Chart initialization");
         drawGraphBottom(cBtmL1);
         updateObjects(cBtmL2);
         cBtmL2.toFront();
+        
 
         //TESTING
 //        long startTime = System.currentTimeMillis();
@@ -88,8 +84,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 //        Test.gcDrawSingleRect(cBtmL1);//about 5ms 
 //        Test.g2dImgDrawSingleRect(cBtmL1);//about 51ms 
 //        long endTime = System.currentTimeMillis();
-//        System.out.println("TotalTime: "+(endTime - startTime));        
-	}
+//        System.out.println("TotalTime: "+(endTime - startTime));  
+    }
 	
     @FXML 
     protected void handleSubmitButtonAction(ActionEvent event) {
@@ -164,7 +160,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 		ADJUST = NM + index;
 	}
 	
-    private void drawGraphTop(Canvas canvas) {    	
+    private void drawGraphTop(ResizableCanvas canvas) {    	
     	ElevationChart mElevationChart = new ElevationChart(canvas);
     	mElevationChart.drawBackground();
     	mElevationChart.drawElevationLine(20);
@@ -175,8 +171,10 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
     
     private void updateObjects(Canvas canvas) {
-    	Track mTrack = new Track();
-    	Plot mPlot = new Plot();
+    	Track mTrack1 = new Track();
+    	Track mTrack2 = new Track();
+    	Plot mPlot1 = new Plot();
+    	Plot mPlot2 = new Plot();
     	GraphicsContext gc = canvas.getGraphicsContext2D();
     	
     	final double WIDTH_OFF = canvas.getWidth()-OFFSET;
@@ -188,13 +186,21 @@ public class FXMLController implements Initializable,ILayoutParam{
             @Override
             public void handle(long now) {
             	canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
-            	mTrack.setXY(x.doubleValue(), y.doubleValue());
-            	mTrack.setText("AA10", "3200/100");
-            	mTrack.draw(gc);
+            	mTrack1.setXY(x.doubleValue(), y.doubleValue());
+            	mTrack1.setText("AA10", "3200/100");
+            	mTrack1.draw(gc);
             	
-            	mPlot.setXY(x.doubleValue()-50, y.doubleValue()+50);
-            	mPlot.setTitle("PLOT");
-            	mPlot.draw(gc);
+            	mTrack2.setXY(x.doubleValue()-50, y.doubleValue()+50);
+            	mTrack2.setText("AA11", "32/10");
+            	mTrack2.draw(gc);
+            	
+            	mPlot1.setXY(x.doubleValue()-50, y.doubleValue()+50);
+            	mPlot1.setTitle("PLOT2");
+            	mPlot1.draw(gc);
+            	
+            	mPlot2.setXY(x.doubleValue()-30, y.doubleValue()+30);
+            	mPlot2.setTitle("PLOT2");
+            	mPlot2.draw(gc);
             	
             }
         };
@@ -228,19 +234,12 @@ public class FXMLController implements Initializable,ILayoutParam{
 		mAzimuthChart.drawText();
 	}
 	
-	public void refresh(DataObserver dataObserver) {
-		AnimationTimer timer = new AnimationTimer() {
-            @Override
-            public void handle(long now) {
-            	cTopL2.getGraphicsContext2D().clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
-            	GraphicsContext gc = cTopL2.getGraphicsContext2D();
-            	dataObserver.getTrackDataList().draw(gc);
-            	dataObserver.getPlotDataList().draw(gc);
-            	
-            }
-        };
-        timer.start();
-        
+	public void refreshCanvas(DataObserver dataObserver) {
+		GraphicsContext gc = cTopL2.getGraphicsContext2D();
+		gc.clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
+		dataObserver.getTrackDataList().draw(gc);
+		dataObserver.getPlotDataList().draw(gc);
+    	logger.info("Canvas Objects Redrawn");
 	}
 
 	@Override

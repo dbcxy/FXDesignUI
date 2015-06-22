@@ -1,77 +1,743 @@
-2015-06-20 19:37:12,263 INFO [application.Master] - Launch
-2015-06-20 19:37:12,756 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 19:37:13,279 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 19:38:02,418 INFO [application.Master] - Launch
-2015-06-20 19:38:02,871 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 19:38:02,972 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 20:21:48,602 INFO [application.Master] - Launch
-2015-06-20 20:21:49,213 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 20:21:49,358 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 21:02:47,723 INFO [application.Master] - Launch
-2015-06-20 21:02:48,148 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 21:02:48,238 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 21:05:15,010 INFO [application.Master] - Launch
-2015-06-20 21:05:15,474 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 21:05:15,557 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 21:05:57,245 INFO [application.Master] - Launch
-2015-06-20 21:05:57,852 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 21:05:57,967 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 21:09:14,229 INFO [application.Master] - Launch
-2015-06-20 21:09:14,694 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 21:09:14,786 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 21:10:32,751 INFO [application.Master] - Launch
-2015-06-20 21:10:33,307 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 21:10:33,408 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 21:10:55,701 INFO [application.Master] - Launch
-2015-06-20 21:10:56,136 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 21:10:56,233 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 21:11:29,630 INFO [application.Master] - Launch
-2015-06-20 21:11:30,063 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 21:11:30,161 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 21:12:10,939 INFO [application.Master] - Launch
-2015-06-20 21:12:11,404 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 21:12:11,527 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 21:19:51,257 INFO [application.Master] - Launch
-2015-06-20 21:19:51,718 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 21:19:51,829 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:06:27,078 INFO [application.Master] - Launch
-2015-06-20 22:06:27,621 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:08:28,788 INFO [application.Master] - Launch
-2015-06-20 22:08:29,231 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:08:29,314 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:12:49,258 INFO [application.Master] - Launch
-2015-06-20 22:12:49,712 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:12:49,804 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:24:41,441 INFO [application.Master] - Launch
-2015-06-20 22:24:41,891 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:24:41,984 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:25:46,258 INFO [application.Master] - Launch
-2015-06-20 22:25:46,745 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:25:46,827 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:28:24,886 INFO [application.Master] - Launch
-2015-06-20 22:28:25,357 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:28:25,450 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:29:16,526 INFO [application.Master] - Launch
-2015-06-20 22:29:17,083 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:29:17,197 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:30:21,187 INFO [application.Master] - Launch
-2015-06-20 22:30:21,672 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:30:21,770 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:31:46,713 INFO [application.Master] - Launch
-2015-06-20 22:31:47,181 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:31:47,266 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:34:19,250 INFO [application.Master] - Launch
-2015-06-20 22:34:19,708 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:34:19,802 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:35:37,368 INFO [application.Master] - Launch
-2015-06-20 22:35:37,850 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:35:37,937 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:36:12,154 INFO [application.Master] - Launch
-2015-06-20 22:36:12,631 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:36:12,725 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:37:42,233 INFO [application.Master] - Launch
-2015-06-20 22:37:42,691 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:37:42,781 INFO [application.FXMLController] - Bottom Chart initialization
-2015-06-20 22:38:44,015 INFO [application.Master] - Launch
-2015-06-20 22:38:44,433 INFO [application.FXMLController] - Top Chart initialization
-2015-06-20 22:38:44,530 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 17:37:45,308 INFO [application.Master] - Launch
+2015-06-22 17:37:45,672 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 17:37:45,732 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 17:37:47,179 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 17:44:24,215 INFO [application.Master] - Launch
+2015-06-22 17:44:24,511 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 17:44:24,562 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 17:44:25,943 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 17:47:44,337 INFO [application.Master] - Launch
+2015-06-22 17:47:44,637 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 17:47:44,694 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 17:47:46,092 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 17:49:15,826 INFO [application.Master] - Launch
+2015-06-22 17:49:17,144 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 17:51:25,094 INFO [application.Master] - Launch
+2015-06-22 17:51:25,390 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 17:51:25,438 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 17:51:26,825 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 17:58:34,457 INFO [application.Master] - Launch
+2015-06-22 17:58:34,759 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 17:58:34,808 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 17:58:36,194 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 17:59:12,532 INFO [application.Master] - Launch
+2015-06-22 17:59:12,820 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 17:59:12,864 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 17:59:14,468 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:01:42,641 INFO [application.Master] - Launch
+2015-06-22 18:01:42,963 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:01:42,993 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:01:44,561 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:03:03,380 INFO [application.Master] - Launch
+2015-06-22 18:03:03,770 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:03:03,800 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:03:05,392 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:03:14,946 INFO [application.Master] - Launch
+2015-06-22 18:03:15,268 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:03:15,299 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:03:16,910 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:03:46,803 INFO [application.Master] - Launch
+2015-06-22 18:03:47,127 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:03:47,155 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:03:48,862 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:05:01,147 INFO [application.Master] - Launch
+2015-06-22 18:05:01,447 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:05:01,474 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:05:03,107 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:05:29,321 INFO [application.Master] - Launch
+2015-06-22 18:05:29,626 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:05:29,655 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:05:31,289 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:05:57,979 INFO [application.Master] - Launch
+2015-06-22 18:05:58,312 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:05:58,345 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:05:59,943 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:08:40,016 INFO [application.Master] - Launch
+2015-06-22 18:08:40,339 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:08:40,368 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:08:41,988 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:10:17,622 INFO [application.Master] - Launch
+2015-06-22 18:10:17,927 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:10:17,954 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:10:19,586 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:11:21,679 INFO [application.Master] - Launch
+2015-06-22 18:11:22,000 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:11:22,032 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:11:23,703 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:12:29,785 INFO [application.Master] - Launch
+2015-06-22 18:12:30,104 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:12:30,138 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:12:31,765 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:12:45,724 INFO [application.Master] - Launch
+2015-06-22 18:12:46,041 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:12:46,069 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:12:47,662 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:13:23,346 INFO [application.Master] - Launch
+2015-06-22 18:13:23,648 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:13:23,697 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:13:25,315 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:15:01,766 INFO [application.Master] - Launch
+2015-06-22 18:15:02,063 INFO [application.FXMLController] - 0.0,350.0
+2015-06-22 18:15:02,064 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:15:02,109 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:15:03,779 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:15:51,799 INFO [application.Master] - Launch
+2015-06-22 18:15:52,100 INFO [application.FXMLController] - 0.0,350.0
+2015-06-22 18:15:52,100 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:15:52,128 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:15:53,732 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:16:27,254 INFO [application.Master] - Launch
+2015-06-22 18:16:27,564 INFO [application.FXMLController] - 0.0,350.0
+2015-06-22 18:16:27,564 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:16:27,592 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:16:29,235 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:19:39,397 INFO [application.Master] - Launch
+2015-06-22 18:19:39,723 INFO [application.FXMLController] - 0.0,350.0
+2015-06-22 18:19:39,723 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:19:39,754 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:19:41,372 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:21:46,630 INFO [application.Master] - Launch
+2015-06-22 18:21:46,929 INFO [application.FXMLController] - 0.0,350.0
+2015-06-22 18:21:46,929 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:21:46,980 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:21:48,598 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:22:19,539 INFO [application.Master] - Launch
+2015-06-22 18:22:19,867 INFO [application.FXMLController] - 0.0,350.0
+2015-06-22 18:22:19,867 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:22:19,898 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:22:21,536 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:22:40,537 INFO [application.Master] - Launch
+2015-06-22 18:22:40,841 INFO [application.FXMLController] - 0.0,350.0
+2015-06-22 18:22:40,841 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:22:40,870 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:22:42,499 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:24:03,583 INFO [application.Master] - Launch
+2015-06-22 18:24:03,887 INFO [application.FXMLController] - 0.0,350.0
+2015-06-22 18:24:03,887 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:24:03,917 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:24:05,602 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:25:00,876 INFO [application.Master] - Launch
+2015-06-22 18:25:02,183 INFO [application.FXMLController] - 0.0,350.0
+2015-06-22 18:25:02,183 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:25:02,230 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:25:03,873 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:30:07,937 INFO [application.Master] - Launch
+2015-06-22 18:30:09,867 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:30:44,956 INFO [application.Master] - Launch
+2015-06-22 18:30:46,848 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:30:47,519 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:30:47,554 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:32:01,440 INFO [application.Master] - Launch
+2015-06-22 18:32:02,726 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:32:40,315 INFO [application.Master] - Launch
+2015-06-22 18:32:42,198 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:32:43,110 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:32:43,135 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:35:00,923 INFO [application.Master] - Launch
+2015-06-22 18:35:02,677 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:35:02,700 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:35:02,862 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:35:25,516 INFO [application.Master] - Launch
+2015-06-22 18:35:27,413 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:35:27,678 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:35:27,702 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:35:49,461 INFO [application.Master] - Launch
+2015-06-22 18:35:51,358 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:35:51,893 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:35:51,922 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-22 18:36:19,418 INFO [application.Master] - Launch
+2015-06-22 18:36:21,356 ERROR [network.TaskObserver] - Socket creation failed
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:81)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:52)
+	at network.TaskObserver.run(TaskObserver.java:46)
+	at java.lang.Thread.run(Unknown Source)
+2015-06-22 18:36:21,616 INFO [application.FXMLController] - Top Chart initialization
+2015-06-22 18:36:21,643 INFO [application.FXMLController] - Bottom Chart initialization

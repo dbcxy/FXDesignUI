@@ -26,6 +26,7 @@ public class Master extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		initStage(primaryStage);
+		startNetworkTask();
 	}
 	
 	public static void main(String[] args) {
@@ -40,11 +41,14 @@ public class Master extends Application {
 	
 	private void initStage(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("Activity.fxml"));
-			mFXMLController = new FXMLController();
-	        Scene scene = new Scene(root);
+			FXMLLoader fxmlLoader = new FXMLLoader();
+			fxmlLoader.load(getClass().getResourceAsStream("Activity.fxml"));
+			Parent root = (Parent) fxmlLoader.getRoot();
+			mFXMLController = (FXMLController) fxmlLoader.getController();
+			Scene scene = new Scene(root);
 	        
 	        primaryStage.setTitle("FX Display Welcome");
+	        primaryStage.setMaximized(true);
 	        primaryStage.setResizable(false);
 	        primaryStage.setScene(scene);
 	        primaryStage.show();	        
@@ -65,7 +69,8 @@ public class Master extends Application {
 			
 			@Override
 			public void manageData(DataObserver mDataObserver) {
-				mFXMLController.refresh(mDataObserver);
+				mFXMLController.refreshCanvas(mDataObserver);
+				logger.info("Setting Data Observer");
 			}
 		}));
 		mTask.start();

@@ -43,13 +43,13 @@ public class DataObserver {
 		switch (id) {
 		case 1:
 			Track track = new Track();
-			track.setXY(500, 500);
+			track.setXY(200, 200);
 			track.setText("AA10", "3200/100");        	
 			mTrackList.addOverlayItem(track);
-			track = new Track();
-			track.setXY(300, 300);
-			track.setText("AA11", "32/10");
-			mTrackList.addOverlayItem(track);
+			Track track1 = new Track();
+			track1.setXY(300, 300);
+			track1.setText("AA11", "32/10");
+			mTrackList.addOverlayItem(track1);
 			break;
 			
 		case 2:
@@ -57,10 +57,10 @@ public class DataObserver {
 			plot.setXY(250, 250);
 			plot.setTitle("PLOT1"); 
 			mPlotList.addOverlayItem(plot);
-			plot = new Plot();
-			plot.setXY(650, 650);
-			plot.setTitle("PLOT2"); 
-			mPlotList.addOverlayItem(plot);
+			Plot plot1 = new Plot();
+			plot1.setXY(350, 350);
+			plot1.setTitle("PLOT2"); 
+			mPlotList.addOverlayItem(plot1);
 			break;
 			
 		case 3:
