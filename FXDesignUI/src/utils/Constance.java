@@ -30,6 +30,10 @@ public class Constance {
 	public static int PORT_NO 				= 30401;
     public static final String GROUP_ADDR 	= "237.0.0.1";
     public static final int DGRAM_LEN 		= 2048;
+	public static final int MILLI_SECOND 	= 1000;
+	public static final int UPDATE_RATE 	= MILLI_SECOND;
+	public static final String CURSOR 		= " > ";
+	public static final String CURSOR_DUB	= " >> ";
 	
 	
 //  gc.fillOval(10, 60, 30, 30);

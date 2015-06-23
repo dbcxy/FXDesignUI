@@ -1,7 +1,11 @@
 package application;
 
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
+import java.util.function.Consumer;
 
 import model.DataObserver;
 import model.drawable.Plot;
@@ -12,6 +16,8 @@ import model.drawing.ILayoutParam;
 
 import org.apache.log4j.Logger;
 
+import utils.Constance;
+import views.Console;
 import views.ResizableCanvas;
 import javafx.animation.AnimationTimer;
 import javafx.beans.property.DoubleProperty;
@@ -23,21 +29,26 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.scene.Node;
+import javafx.stage.Stage;
 
 public class FXMLController implements Initializable,ILayoutParam{
 	
 	private static final Logger logger = Logger.getLogger(FXMLController.class);
-
-	//1Nautical Miles = 18.5KMs
-	//Graph Scale Since WIDTH_OFF = 880px
-	final int PX = 15;// Assuming 40NM in so many pixels
-	int NM;
-	int ADJUST;
-	double HEIGHT_OFF;
-	double WIDTH_OFF;
+	
+	@FXML private MenuBar fxMenuBar;
 	
 	@FXML private Label actiontarget;
+	
+	@FXML private TextField textTime;
+	@FXML private TextField textDate;
+	@FXML private TextArea consoleOutput;
+	@FXML private TextField consoleInput;
+	
 	@FXML private Button btn_display5NM;
 	@FXML private Button btn_display10NM;
 	@FXML private Button btn_display20NM;
@@ -47,22 +58,35 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML private Pane chartBottom;
 	
 	@FXML ResizableCanvas cTopL1;
-	@FXML Canvas cTopL2;
+	@FXML ResizableCanvas cTopL2;
+	@FXML ResizableCanvas cTopL3;
 	
-	@FXML Canvas cBtmL1;
-	@FXML Canvas cBtmL2;
+	@FXML ResizableCanvas cBtmL1;
+	@FXML ResizableCanvas cBtmL2;
+	@FXML ResizableCanvas cBtmL3;
+	
+
+	//1Nautical Miles = 18.5KMs
+	//Graph Scale Since WIDTH_OFF = 880px
+	final int PX = 15;// Assuming 40NM in so many pixels
+	int NM;
+	int ADJUST;
+	double HEIGHT_OFF;
+	double WIDTH_OFF;
+	boolean isClose = false;
 	
 	@Override
-	public void initialize(URL url, ResourceBundle rb) {
-		
-		cTopL1.widthProperty().bind(chartTop.widthProperty());
-		cTopL1.heightProperty().bind(chartTop.heightProperty());		
-      
+	public void initialize(URL url, ResourceBundle rb) {		
+		initCanvasLayout();
+		initSystem();
 	}
 	
 	@FXML 
     protected void onStartAction(ActionEvent event) {
-        actiontarget.setText("Start Button Clicked");
+        actiontarget.setText("Starting System....");
+		initSystem();
+		actiontarget.setText("System Loaded!");
+		
         logger.info("Top Chart initialization");
 		setNMparameter(10);
         drawGraphTop(cTopL1);
@@ -118,6 +142,81 @@ public class FXMLController implements Initializable,ILayoutParam{
         actiontarget.setText("Display Scale set to 40NM");
         setNMparameter(40);
 		invalidate();
+    }
+    
+    @FXML
+    protected void menuCloseStage() {
+    	Stage stage = (Stage) fxMenuBar.getScene().getWindow();
+    	isClose = true;
+    	stage.close();
+    	logger.info("APPLICATION CLOSED");
+    }
+    
+    private void initCanvasLayout() {
+    	cTopL1.widthProperty().bind(chartTop.widthProperty());
+		cTopL1.heightProperty().bind(chartTop.heightProperty());
+		
+		cTopL2.widthProperty().bind(chartTop.widthProperty());
+		cTopL2.heightProperty().bind(chartTop.heightProperty());
+		
+//		cTopL3.widthProperty().bind(chartTop.widthProperty());
+//		cTopL3.heightProperty().bind(chartTop.heightProperty());
+		
+		cBtmL1.widthProperty().bind(chartBottom.widthProperty());
+		cBtmL1.heightProperty().bind(chartBottom.heightProperty());
+		
+		cBtmL2.widthProperty().bind(chartBottom.widthProperty());
+		cBtmL2.heightProperty().bind(chartBottom.heightProperty());
+		
+//		cBtmL3.widthProperty().bind(chartBottom.widthProperty());
+//		cBtmL3.heightProperty().bind(chartBottom.heightProperty());
+      
+    }
+    
+    private void initSystem() {
+    	
+    	initTimeDate();
+    	initConsole();
+    }
+    
+    private void initTimeDate() {
+    	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		
+    	textDate.setStyle("-fx-text-inner-color: brown;");
+    	textTime.setStyle("-fx-text-inner-color: brown;");
+    	Thread showTimeDate = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				logger.info("Started Time Date thread");
+				while(!isClose) {
+					Date date = new Date();
+					String cal[] = dateFormat.format(date).split(" ");
+					textDate.setText(cal[0]);//date
+					textTime.setText(cal[1]);//time
+					try {
+						Thread.sleep(Constance.MILLI_SECOND);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		});
+    	showTimeDate.start();
+    	
+    }
+    
+    private void initConsole() {
+    	Console mConsole = new Console(consoleOutput, consoleInput);
+    	mConsole.println("Enter Operator ID : ");
+    	mConsole.setOnMessageReceivedHandler(new Consumer<String>() {
+			
+			@Override
+			public void accept(String value) {
+				System.out.println(value);		
+			}
+		});
+//    	mConsole.println("Enter password : ");
     }
 	
 	private void invalidate() {		
@@ -225,7 +324,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 		mThread.start();
     }
     
-	private void drawGraphBottom(Canvas canvas) {
+	private void drawGraphBottom(ResizableCanvas canvas) {
 		AzimuthChart mAzimuthChart = new AzimuthChart(canvas);
 		mAzimuthChart.drawBackground();
 		mAzimuthChart.drawAzimuthLine(10.5);

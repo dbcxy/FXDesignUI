@@ -11,6 +11,7 @@ import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -26,7 +27,7 @@ public class Master extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		initStage(primaryStage);
-		startNetworkTask();
+//		startNetworkTask();
 	}
 	
 	public static void main(String[] args) {
@@ -47,7 +48,7 @@ public class Master extends Application {
 			mFXMLController = (FXMLController) fxmlLoader.getController();
 			Scene scene = new Scene(root);
 	        
-	        primaryStage.setTitle("FX Display Welcome");
+			primaryStage.initStyle(StageStyle.UNDECORATED);
 	        primaryStage.setMaximized(true);
 	        primaryStage.setResizable(false);
 	        primaryStage.setScene(scene);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.canvas.*?>
@@ -7,15 +8,15 @@
 <?import javafx.scene.layout.*?>
 <?import views.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXMLController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXMLController">
    <children>
       <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <MenuBar BorderPane.alignment="CENTER">
+            <MenuBar fx:id="fxMenuBar" BorderPane.alignment="CENTER">
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
+                    <MenuItem mnemonicParsing="false" onAction="#menuCloseStage" text="Close" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Edit">
@@ -31,46 +32,11 @@
               </menus>
             </MenuBar>
          </top>
-         <right>
-            <Pane BorderPane.alignment="CENTER">
-               <children>
-                  <Button layoutX="19.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="30.0" prefWidth="120.0" text="ANT SCAN" />
-                  <Button layoutX="166.0" layoutY="29.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="RWY SELECT" />
-                  <Button layoutX="19.0" layoutY="64.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="LINEAR POL" />
-                  <Button layoutX="166.0" layoutY="64.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="CIRCULAR POL" />
-                  <Button layoutX="166.0" layoutY="127.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="TX STBY" />
-                  <Button layoutX="166.0" layoutY="163.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="RADAR SETUP" />
-                  <Button layoutX="19.0" layoutY="127.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="POWER" />
-                  <Button layoutX="19.0" layoutY="163.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="TX RADIATE" />
-                  <Separator layoutY="102.0" prefHeight="2.0" prefWidth="300.0" />
-                  <Separator layoutY="203.0" prefHeight="2.0" prefWidth="300.0" />
-                  <Separator layoutY="318.0" prefHeight="2.0" prefWidth="300.0" />
-                  <Button layoutX="19.0" layoutY="278.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="ROUTE SELECT" />
-                  <Button layoutX="19.0" layoutY="242.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="MASTER SLAVE" />
-                  <Button layoutX="166.0" layoutY="278.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="SYSTEM SETUP" />
-                  <Button layoutX="166.0" layoutY="242.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="SYSTEM TEST" />
-                  <Separator layoutY="470.0" prefHeight="2.0" prefWidth="300.0" />
-                  <Button layoutX="17.0" layoutY="388.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="LABEL" />
-                  <Button layoutX="17.0" layoutY="352.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="RAW" />
-                  <Button layoutX="166.0" layoutY="388.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="HISTORY" />
-                  <Button layoutX="166.0" layoutY="352.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="PLOT" />
-                  <Separator layoutY="583.0" prefHeight="2.0" prefWidth="300.0" />
-                  <Button fx:id="btn_display20NM" layoutX="19.0" layoutY="543.0" mnemonicParsing="false" onAction="#handle20NMButtonAction" prefHeight="30.0" prefWidth="120.0" text="20 NM" />
-                  <Button fx:id="btn_display5NM" layoutX="19.0" layoutY="507.0" mnemonicParsing="false" onAction="#handle5NMButtonAction" prefHeight="30.0" prefWidth="120.0" text="5 NM" />
-                  <Button fx:id="btn_display40NM" layoutX="166.0" layoutY="543.0" mnemonicParsing="false" onAction="#handle40NMButtonAction" prefHeight="30.0" prefWidth="120.0" text="40 NM" />
-                  <Button fx:id="btn_display10NM" layoutX="166.0" layoutY="507.0" mnemonicParsing="false" onAction="#handle10NMButtonAction" prefHeight="30.0" prefWidth="120.0" text="10 NM" />
-                  <Button layoutX="166.0" layoutY="424.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="DISPLAY SETUP" />
-                  <Button layoutX="17.0" layoutY="424.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="CHECK MARKS" />
-                  <Label layoutX="19.0" layoutY="6.0" text="Antenna Control" />
-                  <Label layoutX="19.0" layoutY="105.0" text="Radar Control" />
-                  <Label layoutX="19.0" layoutY="216.0" text="System Control" />
-                  <Label layoutX="19.0" layoutY="329.0" text="Display Control" />
-                  <Label layoutX="19.0" layoutY="479.0" text="Display Scale" />
-               </children>
-            </Pane>
-         </right>
          <bottom>
-            <Label fx:id="actiontarget" BorderPane.alignment="CENTER" />
+            <Label fx:id="actiontarget" textFill="#28f026" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
          </bottom>
          <center>
             <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
@@ -82,7 +48,8 @@
                               <Pane fx:id="chartTop" GridPane.rowIndex="0">
                                  <children>
                                     <ResizableCanvas fx:id="cTopL1" />
-                                    <Canvas fx:id="cTopL2" height="350.0" width="890.0" />
+                                    <ResizableCanvas fx:id="cTopL2" />
+                                    <ResizableCanvas fx:id="cTopL3" />
                                  </children>
                                  <GridPane.margin>
                                     <Insets left="10.0" right="10.0" />
@@ -90,18 +57,97 @@
                               </Pane>
                               <Pane fx:id="chartBottom" GridPane.rowIndex="1">
                                  <children>
-                                    <Canvas fx:id="cBtmL1" height="350.0" width="890.0" />
-                                    <Canvas fx:id="cBtmL2" height="350.0" width="890.0" />
+                                    <ResizableCanvas fx:id="cBtmL1" />
+                                    <ResizableCanvas fx:id="cBtmL2" />
+                                    <ResizableCanvas fx:id="cBtmL3" />
                                  </children>
                                  <GridPane.margin>
                                     <Insets left="10.0" right="10.0" />
                                  </GridPane.margin>
                               </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                              <GridPane GridPane.rowIndex="2">
+                                <columnConstraints>
+                                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="-Infinity" percentWidth="50.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="50.0" percentHeight="100.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
                                  <children>
-                                    <Button mnemonicParsing="false" onAction="#onStartAction" prefHeight="30.0" prefWidth="120.0" text="Start" />
+                                    <Pane>
+                                       <children>
+                                          <VBox>
+                                             <children>
+                                                <TextArea fx:id="consoleOutput" prefHeight="70.0" prefWidth="800.0">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextArea>
+                                                <TextField fx:id="consoleInput" promptText="Enter here" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane GridPane.columnIndex="1">
+                                       <children>
+                                          <VBox>
+                                             <children>
+                                                <TextField fx:id="textTime" text="Date">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="15.0" />
+                                                   </font>
+                                                </TextField>
+                                                <TextField fx:id="textDate" text="Time">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="15.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane GridPane.columnIndex="2">
+                                       <children>
+                                          <HBox>
+                                             <children>
+                                                <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" text="Key">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" text="Histroy">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" text="Information">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" text="Help">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" onAction="#onStartAction" prefHeight="90.0" prefWidth="90.0" text="Start">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
                                  </children>
-                              </Pane>
+                              </GridPane>
                            </children>
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
@@ -117,6 +163,52 @@
               </content>
             </ScrollPane>
          </center>
+         <right>
+            <ScrollPane BorderPane.alignment="CENTER">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <Pane>
+                           <children>
+                              <Button layoutX="19.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="30.0" prefWidth="120.0" text="ANT SCAN" />
+                              <Button layoutX="166.0" layoutY="29.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="RWY SELECT" />
+                              <Button layoutX="19.0" layoutY="64.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="LINEAR POL" />
+                              <Button layoutX="166.0" layoutY="64.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="CIRCULAR POL" />
+                              <Button layoutX="166.0" layoutY="127.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="TX STBY" />
+                              <Button layoutX="166.0" layoutY="163.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="RADAR SETUP" />
+                              <Button layoutX="19.0" layoutY="127.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="POWER" />
+                              <Button layoutX="19.0" layoutY="163.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="TX RADIATE" />
+                              <Separator layoutY="102.0" prefHeight="2.0" prefWidth="300.0" />
+                              <Separator layoutY="203.0" prefHeight="2.0" prefWidth="300.0" />
+                              <Separator layoutY="318.0" prefHeight="2.0" prefWidth="300.0" />
+                              <Button layoutX="19.0" layoutY="278.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="ROUTE SELECT" />
+                              <Button layoutX="19.0" layoutY="242.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="MASTER SLAVE" />
+                              <Button layoutX="166.0" layoutY="278.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="SYSTEM SETUP" />
+                              <Button layoutX="166.0" layoutY="242.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="SYSTEM TEST" />
+                              <Separator layoutY="470.0" prefHeight="2.0" prefWidth="300.0" />
+                              <Button layoutX="17.0" layoutY="388.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="LABEL" />
+                              <Button layoutX="17.0" layoutY="352.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="RAW" />
+                              <Button layoutX="166.0" layoutY="388.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="HISTORY" />
+                              <Button layoutX="166.0" layoutY="352.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="PLOT" />
+                              <Separator layoutY="583.0" prefHeight="2.0" prefWidth="300.0" />
+                              <Button fx:id="btn_display20NM" layoutX="19.0" layoutY="543.0" mnemonicParsing="false" onAction="#handle20NMButtonAction" prefHeight="30.0" prefWidth="120.0" text="20 NM" />
+                              <Button fx:id="btn_display5NM" layoutX="19.0" layoutY="507.0" mnemonicParsing="false" onAction="#handle5NMButtonAction" prefHeight="30.0" prefWidth="120.0" text="5 NM" />
+                              <Button fx:id="btn_display40NM" layoutX="166.0" layoutY="543.0" mnemonicParsing="false" onAction="#handle40NMButtonAction" prefHeight="30.0" prefWidth="120.0" text="40 NM" />
+                              <Button fx:id="btn_display10NM" layoutX="166.0" layoutY="507.0" mnemonicParsing="false" onAction="#handle10NMButtonAction" prefHeight="30.0" prefWidth="120.0" text="10 NM" />
+                              <Button layoutX="166.0" layoutY="424.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="DISPLAY SETUP" />
+                              <Button layoutX="17.0" layoutY="424.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="CHECK MARKS" />
+                              <Label layoutX="19.0" layoutY="6.0" text="Antenna Control" />
+                              <Label layoutX="19.0" layoutY="105.0" text="Radar Control" />
+                              <Label layoutX="19.0" layoutY="216.0" text="System Control" />
+                              <Label layoutX="19.0" layoutY="329.0" text="Display Control" />
+                              <Label layoutX="19.0" layoutY="479.0" text="Display Scale" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </right>
       </BorderPane>
    </children>
 </AnchorPane>

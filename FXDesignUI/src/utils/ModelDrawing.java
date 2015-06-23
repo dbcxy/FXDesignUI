@@ -1,5 +1,8 @@
 package utils;
 
+import java.util.Objects;
+
+import javafx.application.Platform;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
 
@@ -25,4 +28,14 @@ public class ModelDrawing {
 		point.setY(y1+len*Math.sin(angle));
 		return point;
 	}
+	
+	public static void runSafe(final Runnable runnable) {
+        Objects.requireNonNull(runnable, "runnable");
+        if (Platform.isFxApplicationThread()) {
+            runnable.run();
+        }
+        else {
+            Platform.runLater(runnable);
+        }
+    }
 }

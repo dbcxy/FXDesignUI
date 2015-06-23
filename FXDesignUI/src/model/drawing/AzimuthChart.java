@@ -2,6 +2,7 @@ package model.drawing;
 
 import utils.Constance;
 import utils.ModelDrawing;
+import views.ResizableCanvas;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
@@ -17,7 +18,7 @@ public class AzimuthChart implements ILayoutParam {
 	private Canvas mCanvas;
 	private GraphicsContext gc;
 	
-	public AzimuthChart(Canvas canvas) {
+	public AzimuthChart(ResizableCanvas canvas) {
 		mCanvas = canvas;
     	gc = canvas.getGraphicsContext2D();    	
     	HEIGHT_OFF = mCanvas.getHeight()-OFFSET;
