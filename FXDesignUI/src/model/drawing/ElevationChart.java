@@ -48,10 +48,10 @@ public class ElevationChart implements ILayoutParam{
         ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+OFFSET*dist, -elAngle);//center red line
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(1);
-        gc.setLineDashes(OFFSET/2);
+//        gc.setLineDashes(OFFSET/2);
         ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(elAngle-3.5));//imaginary below line
 //        lineAtAngle(gc, OFFSET+NM, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*dist, -5);//imaginary above line
-        gc.setLineDashes(0);
+//        gc.setLineDashes(0);
 	}
 	
 	public void drawDistanceGrid(int dist, int deltaDist) {
@@ -66,9 +66,9 @@ public class ElevationChart implements ILayoutParam{
         		
         		//dotted red line
         		gc.setStroke(Color.RED);
-        		gc.setLineDashes(OFFSET/2);
+//        		gc.setLineDashes(OFFSET/2);
         		gc.strokeLine(OFFSET+dist+2*OFFSET,HEIGHT_OFF,p.getX()+2*OFFSET,p.getY()-OFFSET/2);
-        		gc.setLineDashes(0);
+//        		gc.setLineDashes(0);
         		
         		//reset color
         		gc.setStroke(Color.CHARTREUSE);

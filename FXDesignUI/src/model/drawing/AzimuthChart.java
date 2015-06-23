@@ -48,10 +48,10 @@ public class AzimuthChart implements ILayoutParam {
         gc.strokeLine(OFFSET+dist,HEIGHT_OFF/2,OFFSET+(1+OFFSET)*dist,HEIGHT_OFF/2);//center line
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(1);
-        gc.setLineDashes(OFFSET/2);
+//        gc.setLineDashes(OFFSET/2);
         ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*dist, (azimuthAngle-0.5)/2);//imaginary below line
         ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*dist, -(azimuthAngle-0.5)/2);//imaginary above line
-        gc.setLineDashes(0);
+//        gc.setLineDashes(0);
 	}
 	
 	public void drawDistanceGrid(int dist, int deltaDist) {
@@ -63,9 +63,9 @@ public class AzimuthChart implements ILayoutParam {
         		
         		//dotted red line
         		gc.setStroke(Color.RED);
-        		gc.setLineDashes(OFFSET/2);
+//        		gc.setLineDashes(OFFSET/2);
         		gc.strokeLine(OFFSET+dist+2*OFFSET,pTop.getY(),OFFSET+dist+2*OFFSET,pBtm.getY());
-        		gc.setLineDashes(0);
+//        		gc.setLineDashes(0);
         		
         		//reset color
         		gc.setStroke(Color.CHARTREUSE);

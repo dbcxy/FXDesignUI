@@ -20,8 +20,10 @@ import utils.Constance;
 import views.Console;
 import views.ResizableCanvas;
 import javafx.animation.AnimationTimer;
+import javafx.application.Platform;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -180,29 +182,32 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
     
     private void initTimeDate() {
-    	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+    	DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
 		
     	textDate.setStyle("-fx-text-inner-color: brown;");
     	textTime.setStyle("-fx-text-inner-color: brown;");
-    	Thread showTimeDate = new Thread(new Runnable() {
-			
+    	    	    	
+    	Task timedate = new Task<Void>() {
+
 			@Override
-			public void run() {
-				logger.info("Started Time Date thread");
+			protected Void call() throws Exception {
 				while(!isClose) {
 					Date date = new Date();
-					String cal[] = dateFormat.format(date).split(" ");
-					textDate.setText(cal[0]);//date
-					textTime.setText(cal[1]);//time
+					updateTitle(dateFormat.format(date));
+					updateMessage(timeFormat.format(date));
 					try {
 						Thread.sleep(Constance.MILLI_SECOND);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
 				}
-			}
-		});
-    	showTimeDate.start();
+				return null;
+			}    		
+		};
+		textDate.textProperty().bind(timedate.titleProperty());
+		textTime.textProperty().bind(timedate.messageProperty());
+		new Thread(timedate).start();
     	
     }
     

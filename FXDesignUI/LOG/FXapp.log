@@ -1,38 +1,64 @@
-2015-06-23 14:22:06,351 INFO [application.Master] - Launch
-2015-06-23 14:22:06,943 INFO [application.FXMLController] - Started Time Date thread
-2015-06-23 14:22:06,964 INFO [views.Console] -  > Enter Operator ID: 
-2015-06-23 14:22:10,591 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-06-23 14:23:52,515 INFO [application.Master] - Launch
-2015-06-23 14:23:52,896 INFO [application.FXMLController] - Started Time Date thread
-2015-06-23 14:23:52,910 INFO [views.Console] -  > Enter Operator ID : 
-2015-06-23 14:23:52,911 INFO [views.Console] -  > Enter password : 
-2015-06-23 14:23:57,753 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-06-23 14:24:14,918 INFO [application.Master] - Launch
-2015-06-23 14:24:15,306 INFO [application.FXMLController] - Started Time Date thread
-2015-06-23 14:24:15,320 INFO [views.Console] -  > Enter Operator ID : 
-2015-06-23 14:24:15,321 INFO [views.Console] -  > Enter password : 
-2015-06-23 14:24:17,996 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-06-23 14:24:36,852 INFO [application.Master] - Launch
-2015-06-23 14:24:37,219 INFO [application.FXMLController] - Started Time Date thread
-2015-06-23 14:24:37,232 INFO [views.Console] -  > Enter Operator ID : 
-2015-06-23 14:24:37,233 INFO [views.Console] -  > Enter password : 
-2015-06-23 14:24:41,508 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-06-23 14:24:57,998 INFO [application.Master] - Launch
-2015-06-23 14:24:58,391 INFO [application.FXMLController] - Started Time Date thread
-2015-06-23 14:24:58,405 INFO [views.Console] - Enter Operator ID : 
-2015-06-23 14:24:58,405 INFO [views.Console] - Enter password : 
-2015-06-23 14:25:01,409 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-06-23 14:27:06,730 INFO [application.Master] - Launch
-2015-06-23 14:27:07,095 INFO [application.FXMLController] - Started Time Date thread
-2015-06-23 14:27:07,108 INFO [views.Console] - Enter Operator ID : 
-2015-06-23 14:27:07,108 INFO [views.Console] - Enter password : 
-2015-06-23 14:27:11,215 INFO [views.Console] - Good
-2015-06-23 14:27:14,607 INFO [views.Console] - what
-2015-06-23 14:27:20,532 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-06-23 14:27:46,607 INFO [application.Master] - Launch
-2015-06-23 14:27:46,974 INFO [application.FXMLController] - Started Time Date thread
-2015-06-23 14:27:46,988 INFO [views.Console] - Enter Operator ID : 
-2015-06-23 14:27:46,988 INFO [views.Console] - Enter password : 
-2015-06-23 14:27:52,095 INFO [views.Console] - Good
-2015-06-23 14:27:54,135 INFO [views.Console] - what
-2015-06-23 14:27:56,124 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 15:55:30,049 INFO [server.AppServer] - AppServer Started
+2015-06-23 15:55:30,059 INFO [server.TCP] - SERVER TCP socket created
+2015-06-23 15:55:43,669 INFO [application.Master] - Launch
+2015-06-23 15:55:44,244 INFO [application.FXMLController] - Started Time Date thread
+2015-06-23 15:55:44,259 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 15:55:53,143 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 16:19:35,966 INFO [application.Master] - Launch
+2015-06-23 16:19:36,533 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 16:19:37,429 INFO [application.FXMLController] - Started Time Date thread
+2015-06-23 16:19:55,850 INFO [application.Master] - Launch
+2015-06-23 16:19:56,358 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 16:19:57,194 INFO [application.FXMLController] - Started Time Date thread
+2015-06-23 16:20:02,421 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 16:33:13,208 INFO [application.Master] - Launch
+2015-06-23 16:33:13,717 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 16:33:20,738 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 16:33:30,538 INFO [application.Master] - Launch
+2015-06-23 16:33:31,052 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 16:33:39,899 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 16:34:22,398 INFO [application.Master] - Launch
+2015-06-23 16:34:22,895 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 16:34:33,532 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 16:36:21,921 INFO [application.Master] - Launch
+2015-06-23 16:36:22,418 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 16:37:07,218 INFO [application.Master] - Launch
+2015-06-23 16:37:07,710 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 16:37:16,156 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 16:42:33,364 INFO [application.Master] - Launch
+2015-06-23 16:42:33,856 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 16:42:47,956 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 17:34:14,746 INFO [application.Master] - Launch
+2015-06-23 17:34:15,473 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 17:34:24,822 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 17:43:18,681 INFO [application.Master] - Launch
+2015-06-23 17:45:09,985 INFO [application.Master] - Launch
+2015-06-23 17:46:18,660 INFO [application.Master] - Launch
+2015-06-23 17:46:19,163 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 17:46:35,627 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 17:47:34,303 INFO [application.Master] - Launch
+2015-06-23 17:47:34,853 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 17:47:43,608 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 17:51:33,559 INFO [application.Master] - Launch
+2015-06-23 17:51:34,071 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 17:52:03,489 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 17:52:33,022 INFO [application.Master] - Launch
+2015-06-23 17:52:33,536 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 17:52:42,504 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 17:53:06,427 INFO [application.Master] - Launch
+2015-06-23 17:53:06,928 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 17:53:18,122 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 17:57:51,278 INFO [application.Master] - Launch
+2015-06-23 17:57:51,803 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 17:58:18,694 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 17:58:18,694 INFO [application.FXMLController] - Top Chart initialization
+2015-06-23 17:58:19,231 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-23 17:58:43,244 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 18:00:17,037 INFO [application.Master] - Launch
+2015-06-23 18:00:17,681 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 18:00:30,434 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-23 18:01:53,070 INFO [application.Master] - Launch
+2015-06-23 18:01:53,601 INFO [views.Console] - Enter Operator ID : 
+2015-06-23 18:02:10,451 INFO [views.Console] - Cool
+2015-06-23 18:02:15,727 INFO [views.Console] - I'm what I am
+2015-06-23 18:02:34,446 INFO [application.FXMLController] - APPLICATION CLOSED
