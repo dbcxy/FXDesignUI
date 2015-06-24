@@ -3,7 +3,6 @@ package model.drawing;
 import utils.Constance;
 import utils.ModelDrawing;
 import views.ResizableCanvas;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
 import javafx.scene.paint.Color;
@@ -11,50 +10,73 @@ import javafx.scene.text.Font;
 
 public class ElevationChart implements ILayoutParam{
 	
+	double actualWidth;
+	double actualHeight;
 	double HEIGHT_OFF;
 	double WIDTH_OFF;
 	double elevationAngle;
+	double distAngle;
+	int dist;
+	int deltaDist;
 	
 	private ResizableCanvas mCanvas;
 	private GraphicsContext gc;
 	
-	public ElevationChart(ResizableCanvas canvas) {
+	private static ElevationChart instance;
+
+    static {
+        instance = new ElevationChart();
+    }
+    
+    public static ElevationChart getInstance() {
+        return instance;
+    }
+	
+	public void init(ResizableCanvas canvas) {
 		mCanvas = canvas;
-    	gc = canvas.getGraphicsContext2D();    	
-    	HEIGHT_OFF = mCanvas.getHeight()-TEXT_OFFSET;
-    	WIDTH_OFF = mCanvas.getWidth()-OFFSET;
+    	gc = canvas.getGraphicsContext2D(); 
+    	initBounds();
+	}
+	
+	private void initBounds() {
+		actualWidth = mCanvas.getScaledWidth();
+    	actualHeight = mCanvas.getScaledHeight();
+    	HEIGHT_OFF = actualHeight-TEXT_OFFSET;
+    	WIDTH_OFF = actualWidth-OFFSET;
 	}
 	
 	public void drawBackground() {
-    	gc.clearRect(0, 0, mCanvas.getWidth(), mCanvas.getHeight());
+    	gc.clearRect(0, 0, actualWidth, actualHeight);
     	gc.setFill(Color.BLACK);
-        gc.fillRect(0,0,mCanvas.getWidth(), mCanvas.getHeight());
+        gc.fillRect(0,0,actualWidth, actualHeight);
 	}
 	
 	public void drawElevationLine(double elAngle) {
 		this.elevationAngle = elAngle;
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(2);
-        gc.scale(1, 1);
         gc.strokeLine(OFFSET,HEIGHT_OFF,WIDTH_OFF,HEIGHT_OFF);//flat line
         ModelDrawing.drawLineAtAngle(gc, OFFSET, HEIGHT_OFF, WIDTH_OFF+2*OFFSET, -elevationAngle);//cross line at 20 degrees
 	}
 	
-	public void drawLandingStrip(int dist, double elAngle) {
+	public void drawLandingStrip(int dist, double dAngle) {
+		this.distAngle = dAngle;
         gc.setStroke(Color.AQUAMARINE);
-        ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(elAngle-1.5));//below center line
-        ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(elAngle+1.5));//above center line
+        ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(distAngle-1.5));//below center line
+        ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(distAngle+1.5));//above center line
         gc.setStroke(Color.RED);
-        ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+OFFSET*dist, -elAngle);//center red line
+        ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+OFFSET*dist, -distAngle);//center red line
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(1);
 //        gc.setLineDashes(OFFSET/2);
-        ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(elAngle-3.5));//imaginary below line
-//        lineAtAngle(gc, OFFSET+NM, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*dist, -5);//imaginary above line
+        ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(distAngle-3.5));//imaginary below line
+        ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(distAngle-1.5));//imaginary above line
 //        gc.setLineDashes(0);
 	}
 	
-	public void drawDistanceGrid(int dist, int deltaDist) {
+	public void drawDistanceGrid(int distance, int deltaDistance) {
+		this.dist = distance;
+		this.deltaDist = deltaDistance;
         gc.setFont(new Font("Sans Serif", 16));
         gc.setLineWidth(1.5);       
         Point p = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF, deltaDist, -elevationAngle);
@@ -141,11 +163,17 @@ public class ElevationChart implements ILayoutParam{
         gc.strokeText(Constance.NULL, 2.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count=0;		
 	}
-	
-	public void drawTrackElement() {
-		
-	}
 
+	public void invalidate() {
+		initBounds();
+		drawBackground();
+		drawElevationLine(elevationAngle);
+		drawDistanceGrid(dist, deltaDist);
+		drawLandingStrip(dist, distAngle);
+		drawText();
+		System.out.println("Invalidate");
+	}
+	
 	@Override
 	public void draw(GraphicsContext gc) {
 		

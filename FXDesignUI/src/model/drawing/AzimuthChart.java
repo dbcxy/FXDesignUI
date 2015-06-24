@@ -11,31 +11,46 @@ import javafx.scene.text.Font;
 
 public class AzimuthChart implements ILayoutParam {
 	
+	double actualWidth;
+	double actualHeight;
 	double HEIGHT_OFF;
 	double WIDTH_OFF;
 	double azimuthAngle;
+	int dist;
+	int deltaDist;
 	
-	private Canvas mCanvas;
+	private ResizableCanvas mCanvas;
 	private GraphicsContext gc;
 	
-	public AzimuthChart(ResizableCanvas canvas) {
+	private static AzimuthChart instance;
+
+    static {
+        instance = new AzimuthChart();
+    }
+    
+    public static AzimuthChart getInstance() {
+        return instance;
+    }
+	
+	public void init(ResizableCanvas canvas) {
 		mCanvas = canvas;
     	gc = canvas.getGraphicsContext2D();    	
-    	HEIGHT_OFF = mCanvas.getHeight()-OFFSET;
-    	WIDTH_OFF = mCanvas.getWidth()-OFFSET;
+    	actualWidth = mCanvas.getScaledWidth();
+    	actualHeight = mCanvas.getScaledHeight();
+    	HEIGHT_OFF = actualHeight-TEXT_OFFSET;
+    	WIDTH_OFF = actualWidth-OFFSET;
 	}
 	
 	public void drawBackground() {
-    	gc.clearRect(0, 0, mCanvas.getWidth(), mCanvas.getHeight());
+    	gc.clearRect(0, 0, actualWidth, actualHeight);
     	gc.setFill(Color.BLACK);
-        gc.fillRect(0,0,mCanvas.getWidth(), mCanvas.getHeight());
+        gc.fillRect(0,0,actualWidth, actualHeight);
 	}
 	
 	public void drawAzimuthLine(double azAngle) {
 		azimuthAngle = azAngle;
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(2);
-        gc.scale(1, 1);
         ModelDrawing.drawLineAtAngle(gc, OFFSET, HEIGHT_OFF/2, WIDTH_OFF, -azAngle);//cross line at top az degrees
         ModelDrawing.drawLineAtAngle(gc, OFFSET, HEIGHT_OFF/2, WIDTH_OFF, azAngle);//cross line at bottom az degrees
 	}
@@ -54,7 +69,9 @@ public class AzimuthChart implements ILayoutParam {
 //        gc.setLineDashes(0);
 	}
 	
-	public void drawDistanceGrid(int dist, int deltaDist) {
+	public void drawDistanceGrid(int distance, int deltaDistance) {
+		dist = distance;
+		deltaDist = deltaDistance;
 		gc.setLineWidth(1.5);    
         Point pTop = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF/2, deltaDist, -Math.floor(azimuthAngle));
         Point pBtm = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF/2, deltaDist, Math.floor(azimuthAngle));
@@ -101,6 +118,14 @@ public class AzimuthChart implements ILayoutParam {
         gc.setStroke(Color.YELLOW);
         gc.strokeText("-", OFFSET, HEIGHT_OFF/2+HGAP+OFFSET);
         gc.strokeText("+", OFFSET, HEIGHT_OFF/2-HGAP);
+	}
+	
+	public void invalidate() {
+		drawBackground();
+		drawAzimuthLine(azimuthAngle);
+		drawDistanceGrid(dist, deltaDist);
+		drawLandingStrip(dist);
+		drawText();
 	}
 
 	@Override

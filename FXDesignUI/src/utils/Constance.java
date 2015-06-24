@@ -20,6 +20,7 @@ public class Constance {
 	public static String HEIGHT = null;
 	public static String EL_ANGLE = null;
 
+	public static long DISPLAY_HEIGHT = 10000;//7000ft
 	
 	public static boolean TCPIP 			= true;
 	public static boolean UDPIP				= false;

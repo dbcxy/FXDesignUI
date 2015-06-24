@@ -62,3 +62,570 @@
 2015-06-23 18:02:10,451 INFO [views.Console] - Cool
 2015-06-23 18:02:15,727 INFO [views.Console] - I'm what I am
 2015-06-23 18:02:34,446 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 10:42:20,620 INFO [application.Master] - Launch
+2015-06-24 10:42:21,943 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 10:42:46,261 INFO [views.Console] - Hello
+2015-06-24 10:42:48,091 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 10:42:48,091 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 10:42:48,537 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 10:43:38,500 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 10:47:25,004 INFO [application.Master] - Launch
+2015-06-24 10:48:09,711 INFO [application.Master] - Launch
+2015-06-24 10:48:10,185 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 10:48:13,932 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 10:48:13,932 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 10:48:14,034 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 10:49:12,532 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 10:51:32,153 INFO [application.Master] - Launch
+2015-06-24 10:51:32,607 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 10:51:35,360 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 10:51:35,360 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 10:51:35,394 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 10:51:40,620 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 11:14:22,339 INFO [application.Master] - Launch
+2015-06-24 11:14:22,819 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 11:14:27,614 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 11:14:32,024 INFO [application.Master] - Launch
+2015-06-24 11:14:32,521 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 11:17:32,394 INFO [application.Master] - Launch
+2015-06-24 11:17:32,854 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 11:17:39,857 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 11:18:40,256 INFO [application.Master] - Launch
+2015-06-24 11:18:40,722 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 11:19:03,263 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 11:20:04,351 INFO [application.Master] - Launch
+2015-06-24 11:20:04,807 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 11:20:11,500 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 11:20:23,784 INFO [application.Master] - Launch
+2015-06-24 11:20:24,281 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 11:20:58,187 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 11:21:42,635 INFO [application.Master] - Launch
+2015-06-24 11:21:54,138 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 11:21:54,139 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 11:21:54,186 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 11:22:15,589 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 11:40:02,591 INFO [application.Master] - Launch
+2015-06-24 11:40:11,254 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 11:40:11,387 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 11:40:11,387 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 11:41:06,703 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 11:55:04,979 INFO [application.Master] - Launch
+2015-06-24 11:55:10,713 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 11:55:10,776 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 11:55:10,777 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 11:56:14,990 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:02:24,353 INFO [application.Master] - Launch
+2015-06-24 12:02:30,169 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:02:30,203 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:02:30,205 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:03:14,063 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:03:20,263 INFO [application.Master] - Launch
+2015-06-24 12:03:23,118 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:03:23,148 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:03:23,150 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:03:53,957 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:16:16,298 INFO [application.Master] - Launch
+2015-06-24 12:16:19,471 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:16:19,502 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:16:19,503 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:16:39,594 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:22:19,219 INFO [application.Master] - Launch
+2015-06-24 12:22:24,385 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:22:24,415 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:22:24,416 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:22:29,277 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:23:10,652 INFO [application.Master] - Launch
+2015-06-24 12:23:13,675 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:23:13,709 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:23:13,711 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:23:16,272 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:23:57,499 INFO [application.Master] - Launch
+2015-06-24 12:24:00,865 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:24:00,893 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:24:00,895 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:24:02,821 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:25:07,940 INFO [application.Master] - Launch
+2015-06-24 12:25:11,351 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:25:11,380 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:25:11,381 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:25:56,115 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:26:32,689 INFO [application.Master] - Launch
+2015-06-24 12:26:35,813 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:26:35,848 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:26:35,849 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:26:38,978 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:26:53,129 INFO [application.Master] - Launch
+2015-06-24 12:26:56,297 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:26:56,326 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:26:56,328 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:27:01,530 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:32:43,796 INFO [application.Master] - Launch
+2015-06-24 12:32:47,279 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:32:47,315 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:32:47,317 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:33:43,656 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:40:39,882 INFO [application.Master] - Launch
+2015-06-24 12:40:45,713 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:40:45,749 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:40:45,750 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:41:11,933 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:47:14,149 INFO [application.Master] - Launch
+2015-06-24 12:47:17,308 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:47:17,341 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:47:17,343 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:47:42,136 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:54:49,248 INFO [application.Master] - Launch
+2015-06-24 12:54:52,870 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:54:52,897 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:54:52,898 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:54:55,049 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:56:09,782 INFO [application.Master] - Launch
+2015-06-24 12:56:18,146 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 12:56:18,179 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 12:56:18,181 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 12:56:21,286 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:56:27,701 INFO [application.Master] - Launch
+2015-06-24 12:56:34,623 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 12:57:06,226 INFO [application.Master] - Launch
+2015-06-24 12:57:09,951 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 13:00:52,020 INFO [application.Master] - Launch
+2015-06-24 13:00:59,668 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 13:00:59,696 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 13:00:59,697 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 13:01:02,837 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 13:02:20,203 INFO [application.Master] - Launch
+2015-06-24 13:02:27,868 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 13:40:34,143 INFO [application.Master] - Launch
+2015-06-24 13:40:38,947 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 13:40:38,978 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 13:40:38,980 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 13:40:57,554 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 13:43:12,283 INFO [application.Master] - Launch
+2015-06-24 13:43:18,616 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 13:43:18,644 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 13:43:18,646 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 13:43:33,621 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 13:45:44,105 INFO [application.Master] - Launch
+2015-06-24 13:45:47,934 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 13:45:47,965 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 13:45:47,967 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 13:46:48,495 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 13:47:10,872 INFO [application.Master] - Launch
+2015-06-24 13:47:13,987 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 13:47:14,016 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 13:47:14,018 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 13:47:40,969 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 13:58:57,909 INFO [application.Master] - Launch
+2015-06-24 13:59:03,428 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 13:59:03,464 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 13:59:03,465 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 13:59:40,443 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 14:04:40,445 INFO [application.Master] - Launch
+2015-06-24 14:04:50,239 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:04:50,276 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:04:50,278 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:05:02,598 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 14:06:01,393 INFO [application.Master] - Launch
+2015-06-24 14:06:08,361 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 14:10:13,578 INFO [application.Master] - Launch
+2015-06-24 14:10:18,833 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:10:18,863 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:10:18,865 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:10:34,072 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 14:26:28,627 INFO [application.Master] - Launch
+2015-06-24 14:26:34,096 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:26:34,128 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:26:34,129 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:27:06,807 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 14:27:45,621 INFO [application.Master] - Launch
+2015-06-24 14:27:49,328 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:27:49,355 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:27:49,356 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:28:00,555 INFO [application.Master] - Launch
+2015-06-24 14:28:03,493 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:28:03,531 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:28:03,532 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:28:41,111 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 14:29:23,126 INFO [application.Master] - Launch
+2015-06-24 14:29:26,111 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:29:26,143 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:29:26,145 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:30:20,898 INFO [application.Master] - Launch
+2015-06-24 14:30:23,683 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:30:23,709 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:30:23,710 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:32:28,591 INFO [application.Master] - Launch
+2015-06-24 14:32:32,260 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:32:32,290 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:32:32,291 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:38:02,989 INFO [application.Master] - Launch
+2015-06-24 14:38:06,098 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:38:06,134 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:38:06,135 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:38:38,062 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 14:51:06,156 INFO [application.Master] - Launch
+2015-06-24 14:51:09,324 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:51:09,349 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:51:09,350 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:52:08,973 INFO [application.Master] - Launch
+2015-06-24 14:52:11,918 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:52:11,947 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:52:11,968 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:52:30,833 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 14:53:16,790 INFO [application.Master] - Launch
+2015-06-24 14:53:19,662 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:53:19,696 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:53:19,697 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:53:40,646 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 14:55:33,007 INFO [application.Master] - Launch
+2015-06-24 14:55:35,880 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 14:55:35,914 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 14:55:35,915 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 14:56:20,819 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 15:01:39,809 INFO [application.Master] - Launch
+2015-06-24 15:01:43,270 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:01:43,304 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:01:43,304 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:02:21,714 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 15:04:02,205 INFO [application.Master] - Launch
+2015-06-24 15:04:04,916 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:04:04,944 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:04:04,945 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:04:08,861 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 15:04:37,437 INFO [application.Master] - Launch
+2015-06-24 15:04:40,391 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:04:40,420 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:04:40,421 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:04:48,800 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 15:05:23,388 INFO [application.Master] - Launch
+2015-06-24 15:05:26,391 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:05:26,422 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:05:26,423 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:05:34,980 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 15:05:42,094 INFO [application.Master] - Launch
+2015-06-24 15:05:44,989 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:05:45,021 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:05:45,022 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:05:59,376 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 15:09:01,413 INFO [application.Master] - Launch
+2015-06-24 15:09:04,190 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:09:04,220 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:09:04,221 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:09:44,555 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 15:10:45,103 INFO [application.Master] - Launch
+2015-06-24 15:10:53,365 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:10:53,392 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:10:53,393 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:12:44,346 INFO [application.Master] - Launch
+2015-06-24 15:12:49,092 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:12:49,127 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:12:49,128 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:13:32,635 INFO [application.Master] - Launch
+2015-06-24 15:13:35,645 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:13:35,673 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:13:35,674 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:13:42,023 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 15:14:51,577 INFO [application.Master] - Launch
+2015-06-24 15:14:54,528 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:14:54,555 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:14:54,556 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:17:49,425 INFO [application.Master] - Launch
+2015-06-24 15:17:51,698 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:17:51,729 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:17:51,730 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:33:24,383 INFO [application.Master] - Launch
+2015-06-24 15:33:27,396 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:33:27,426 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:33:27,427 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:36:33,332 INFO [application.Master] - Launch
+2015-06-24 15:36:36,263 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:36:36,297 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:36:36,298 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:38:09,884 INFO [application.Master] - Launch
+2015-06-24 15:38:12,360 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:38:12,392 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:38:12,393 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:41:02,791 INFO [application.Master] - Launch
+2015-06-24 15:41:05,394 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:41:05,430 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:41:05,431 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:42:45,281 INFO [application.Master] - Launch
+2015-06-24 15:42:48,228 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:42:48,270 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:42:48,271 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:44:29,522 INFO [application.Master] - Launch
+2015-06-24 15:44:32,281 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:44:32,308 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:44:32,308 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:51:29,853 INFO [application.Master] - Launch
+2015-06-24 15:51:33,170 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:51:33,200 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:51:33,201 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:53:07,681 INFO [application.Master] - Launch
+2015-06-24 15:53:10,580 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:53:10,614 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:53:10,615 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:53:48,554 INFO [application.Master] - Launch
+2015-06-24 15:53:51,709 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:53:51,743 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:53:51,744 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:57:40,806 INFO [application.Master] - Launch
+2015-06-24 15:57:44,079 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:57:44,127 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:57:44,135 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:58:13,183 INFO [application.Master] - Launch
+2015-06-24 15:58:15,408 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:58:15,443 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:58:15,444 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 15:59:37,274 INFO [application.Master] - Launch
+2015-06-24 15:59:40,028 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 15:59:40,065 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 15:59:40,066 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:05:13,276 INFO [application.Master] - Launch
+2015-06-24 16:05:21,481 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:05:21,508 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:05:21,509 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:09:46,068 INFO [application.Master] - Launch
+2015-06-24 16:09:48,792 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:09:48,819 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:09:48,820 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:10:15,726 INFO [application.Master] - Launch
+2015-06-24 16:10:19,075 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:10:19,102 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:10:19,103 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:10:22,352 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 16:13:23,891 INFO [application.Master] - Launch
+2015-06-24 16:16:30,804 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:16:30,831 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:16:30,833 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:18:33,004 INFO [application.Master] - Launch
+2015-06-24 16:18:36,480 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:18:36,510 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:18:36,511 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:19:47,240 INFO [application.Master] - Launch
+2015-06-24 16:19:49,650 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:19:49,676 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:19:49,677 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:20:30,885 INFO [application.Master] - Launch
+2015-06-24 16:20:33,521 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:20:33,547 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:20:33,548 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:21:00,320 INFO [application.Master] - Launch
+2015-06-24 16:21:03,347 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:21:03,379 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:21:03,381 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:23:36,985 INFO [application.Master] - Launch
+2015-06-24 16:23:39,537 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:23:39,580 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:23:39,581 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:24:33,197 INFO [application.Master] - Launch
+2015-06-24 16:24:35,603 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:24:35,632 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:24:35,633 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:32:41,374 INFO [application.Master] - Launch
+2015-06-24 16:32:44,518 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:32:44,555 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:32:44,555 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:36:49,886 INFO [application.Master] - Launch
+2015-06-24 16:36:52,911 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:36:52,949 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:36:52,950 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:38:41,161 INFO [application.Master] - Launch
+2015-06-24 16:38:43,917 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:38:43,958 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:38:43,959 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:40:47,011 INFO [application.Master] - Launch
+2015-06-24 16:40:49,409 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:40:49,450 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:40:49,451 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:57:45,666 INFO [application.Master] - Launch
+2015-06-24 16:57:50,066 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:57:50,106 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:57:50,107 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 16:58:47,380 INFO [application.Master] - Launch
+2015-06-24 16:58:50,538 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 16:58:50,569 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 16:58:50,577 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:00:54,573 INFO [application.Master] - Launch
+2015-06-24 17:00:57,223 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:00:57,263 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:00:57,264 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:01:39,164 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:03:57,445 INFO [application.Master] - Launch
+2015-06-24 17:04:00,731 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:04:00,761 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:04:00,763 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:04:22,200 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:04:54,815 INFO [application.Master] - Launch
+2015-06-24 17:04:57,795 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:04:57,826 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:04:57,827 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:05:06,631 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:06:04,473 INFO [application.Master] - Launch
+2015-06-24 17:06:07,058 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:06:07,088 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:06:07,089 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:07:10,311 INFO [application.Master] - Launch
+2015-06-24 17:07:16,930 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:07:16,955 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:07:16,956 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:08:05,116 INFO [application.Master] - Launch
+2015-06-24 17:08:07,709 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:08:07,737 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:08:07,738 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:08:27,954 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:10:47,691 INFO [application.Master] - Launch
+2015-06-24 17:10:50,598 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:10:50,631 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:10:50,632 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:24:53,068 INFO [application.Master] - Launch
+2015-06-24 17:24:55,587 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:24:55,631 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:24:55,632 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:25:08,228 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:26:05,971 INFO [application.Master] - Launch
+2015-06-24 17:26:08,079 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:26:08,109 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:26:08,110 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:26:16,969 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:27:29,871 INFO [application.Master] - Launch
+2015-06-24 17:27:32,817 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:27:32,853 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:27:32,854 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:27:40,350 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:29:27,537 INFO [application.Master] - Launch
+2015-06-24 17:29:32,374 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:30:07,650 INFO [application.Master] - Launch
+2015-06-24 17:30:10,488 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:30:10,516 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:30:10,517 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:30:18,341 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:31:16,055 INFO [application.Master] - Launch
+2015-06-24 17:31:19,481 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:31:19,509 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:31:19,510 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:31:22,541 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:34:06,464 INFO [application.Master] - Launch
+2015-06-24 17:34:09,341 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:34:09,373 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:34:09,374 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:34:15,439 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:34:27,902 INFO [application.Master] - Launch
+2015-06-24 17:34:30,760 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:34:30,787 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:34:30,788 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:34:34,243 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:35:51,051 INFO [application.Master] - Launch
+2015-06-24 17:35:53,683 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:35:53,712 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:35:53,713 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:36:20,423 INFO [application.Master] - Launch
+2015-06-24 17:36:23,241 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:36:23,277 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:36:23,278 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:36:28,434 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:36:57,543 INFO [application.Master] - Launch
+2015-06-24 17:36:59,871 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:36:59,898 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:36:59,899 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:37:33,285 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:37:58,233 INFO [application.Master] - Launch
+2015-06-24 17:38:01,135 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:38:01,167 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:38:01,168 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:38:20,366 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:39:28,105 INFO [application.Master] - Launch
+2015-06-24 17:39:30,936 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:39:30,966 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:39:30,967 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:39:38,512 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 17:40:14,175 INFO [application.Master] - Launch
+2015-06-24 17:40:16,809 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:40:16,837 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:40:16,838 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:40:51,170 INFO [application.Master] - Launch
+2015-06-24 17:40:53,941 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:40:53,976 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:40:53,977 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:41:22,990 INFO [application.Master] - Launch
+2015-06-24 17:41:25,994 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:41:26,022 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:41:26,023 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:42:28,987 INFO [application.Master] - Launch
+2015-06-24 17:42:31,822 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:42:31,852 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:42:31,853 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:43:58,533 INFO [application.Master] - Launch
+2015-06-24 17:44:00,968 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:44:01,003 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:44:01,004 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:45:39,738 INFO [application.Master] - Launch
+2015-06-24 17:45:42,693 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:45:42,724 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:45:42,725 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 17:46:47,000 INFO [application.Master] - Launch
+2015-06-24 17:46:49,850 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 17:46:49,876 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 17:46:49,877 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:00:23,566 INFO [application.Master] - Launch
+2015-06-24 18:00:26,457 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:00:26,485 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:00:26,486 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:00:47,028 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 18:01:50,102 INFO [application.Master] - Launch
+2015-06-24 18:01:56,031 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:01:56,062 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:01:56,063 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:02:49,094 INFO [application.Master] - Launch
+2015-06-24 18:02:53,166 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:02:53,197 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:02:53,198 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:06:30,007 INFO [application.Master] - Launch
+2015-06-24 18:06:32,434 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:06:32,543 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:06:32,546 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:07:14,293 INFO [application.Master] - Launch
+2015-06-24 18:07:17,167 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:07:17,211 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:07:17,212 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:11:48,548 INFO [application.Master] - Launch
+2015-06-24 18:11:51,126 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:11:51,157 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:11:51,158 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:12:50,273 INFO [application.Master] - Launch
+2015-06-24 18:13:40,818 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:13:40,852 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:13:40,853 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:13:48,775 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-06-24 18:14:56,188 INFO [application.Master] - Launch
+2015-06-24 18:14:58,848 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:14:58,876 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:14:58,877 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:16:12,233 INFO [application.Master] - Launch
+2015-06-24 18:16:14,683 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:16:14,714 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:16:14,715 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:18:16,501 INFO [application.Master] - Launch
+2015-06-24 18:18:19,084 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:18:19,115 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:18:19,116 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:19:27,209 INFO [application.Master] - Launch
+2015-06-24 18:19:30,008 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:19:30,036 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:19:30,037 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:20:16,013 INFO [application.Master] - Launch
+2015-06-24 18:20:18,760 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:20:18,795 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:20:18,795 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:21:26,873 INFO [application.Master] - Launch
+2015-06-24 18:21:30,107 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:21:30,139 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:21:30,141 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:22:08,680 INFO [application.Master] - Launch
+2015-06-24 18:22:14,835 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:22:14,876 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:22:14,877 INFO [application.FXMLController] - Bottom Chart initialization
+2015-06-24 18:22:59,334 INFO [application.Master] - Launch
+2015-06-24 18:23:01,847 INFO [views.Console] - Enter Operator ID : 
+2015-06-24 18:23:01,875 INFO [application.FXMLController] - Top Chart initialization
+2015-06-24 18:23:01,876 INFO [application.FXMLController] - Bottom Chart initialization

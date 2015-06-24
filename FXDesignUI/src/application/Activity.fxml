@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
-<?import javafx.scene.canvas.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import views.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXMLController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXMLController">
    <children>
       <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -33,9 +34,9 @@
             </MenuBar>
          </top>
          <bottom>
-            <Label fx:id="actiontarget" textFill="#28f026" BorderPane.alignment="CENTER">
+            <Label fx:id="actiontarget" textAlignment="RIGHT" textFill="#1879c7" BorderPane.alignment="CENTER">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="12.0" />
                </font></Label>
          </bottom>
          <center>
@@ -52,28 +53,8 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0">
                            <children>
-                              <GridPane alignment="CENTER" gridLinesVisible="true" nodeOrientation="LEFT_TO_RIGHT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <GridPane alignment="CENTER" gridLinesVisible="true" hgap="20.0" nodeOrientation="LEFT_TO_RIGHT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <Pane fx:id="chartTop" GridPane.rowIndex="0">
-                                       <children>
-                                          <ResizableCanvas fx:id="cTopL1" />
-                                          <ResizableCanvas fx:id="cTopL2" />
-                                          <ResizableCanvas fx:id="cTopL3" />
-                                       </children>
-                                       <GridPane.margin>
-                                          <Insets left="10.0" right="10.0" />
-                                       </GridPane.margin>
-                                    </Pane>
-                                    <Pane fx:id="chartBottom" GridPane.rowIndex="1">
-                                       <children>
-                                          <ResizableCanvas fx:id="cBtmL1" />
-                                          <ResizableCanvas fx:id="cBtmL2" />
-                                          <ResizableCanvas fx:id="cBtmL3" />
-                                       </children>
-                                       <GridPane.margin>
-                                          <Insets left="10.0" right="10.0" />
-                                       </GridPane.margin>
-                                    </Pane>
                                     <GridPane GridPane.rowIndex="2">
                                       <columnConstraints>
                                         <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="50.0" />
@@ -84,6 +65,30 @@
                                         <RowConstraints minHeight="50.0" percentHeight="100.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
+                                          <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                             <children>
+                                                <VBox>
+                                                   <children>
+                                                      <TextField fx:id="textTime" text="Date">
+                                                         <VBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </VBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="12.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <TextField fx:id="textDate" text="Time">
+                                                         <VBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </VBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="12.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </Pane>
                                           <ScrollPane GridPane.columnIndex="2">
                                             <content>
                                               <AnchorPane minHeight="0.0" minWidth="0.0">
@@ -95,12 +100,12 @@
                                                                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                </HBox.margin>
                                                             </Button>
-                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" text="Histroy">
+                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" text="Log">
                                                                <HBox.margin>
                                                                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                </HBox.margin>
                                                             </Button>
-                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" text="Information">
+                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" text="Info">
                                                                <HBox.margin>
                                                                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                </HBox.margin>
@@ -131,28 +136,46 @@
                                                 <TextField fx:id="consoleInput" promptText="Enter here" />
                                              </children>
                                           </VBox>
-                                          <VBox GridPane.columnIndex="1">
-                                             <children>
-                                                <TextField fx:id="textTime" text="Date">
-                                                   <VBox.margin>
-                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                   </VBox.margin>
-                                                   <font>
-                                                      <Font name="System Bold Italic" size="12.0" />
-                                                   </font>
-                                                </TextField>
-                                                <TextField fx:id="textDate" text="Time">
-                                                   <VBox.margin>
-                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                   </VBox.margin>
-                                                   <font>
-                                                      <Font name="System Bold Italic" size="12.0" />
-                                                   </font>
-                                                </TextField>
-                                             </children>
-                                          </VBox>
                                        </children>
                                     </GridPane>
+                                    <ScrollPane fx:id="chartTopScroll" fitToHeight="true" fitToWidth="true">
+                                       <content>
+                                          <AnchorPane>
+                                             <children>
+                                                <Pane fx:id="chartTop" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <ResizableCanvas fx:id="cTopL1" />
+                                                      <ResizableCanvas fx:id="cTopL2" />
+                                                      <ResizableCanvas fx:id="cTopL3" />
+                                                   </children>
+                                                </Pane>
+                                                <Slider fx:id="sliderZoomTop" blockIncrement="1.0" layoutX="963.0" majorTickUnit="2.0" max="10.0" minWidth="20.0" minorTickCount="1" orientation="VERTICAL" prefWidth="30.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="950.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="chatBottomScroll" fitToHeight="true" fitToWidth="true" GridPane.rowIndex="1">
+                                       <content>
+                                          <AnchorPane>
+                                             <children>
+                                                <Pane fx:id="chartBottom" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <ResizableCanvas fx:id="cBtmL1" />
+                                                      <ResizableCanvas fx:id="cBtmL2" />
+                                                      <ResizableCanvas fx:id="cBtmL3" />
+                                                   </children>
+                                                </Pane>
+                                                <Slider fx:id="sliderZoomBottom" blockIncrement="1.0" majorTickUnit="2.0" max="10.0" minWidth="20.0" minorTickCount="1" orientation="VERTICAL" prefWidth="30.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="950.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </ScrollPane>
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
@@ -181,19 +204,19 @@
                                     <Button layoutX="166.0" layoutY="163.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="RADAR SETUP" />
                                     <Button layoutX="19.0" layoutY="127.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="POWER" />
                                     <Button layoutX="19.0" layoutY="163.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="TX RADIATE" />
-                                    <Separator layoutY="102.0" prefHeight="2.0" prefWidth="300.0" />
-                                    <Separator layoutY="203.0" prefHeight="2.0" prefWidth="300.0" />
-                                    <Separator layoutY="318.0" prefHeight="2.0" prefWidth="300.0" />
+                                    <Separator layoutY="102.0" minWidth="300.0" prefHeight="3.0" />
+                                    <Separator layoutY="203.0" minWidth="300.0" prefHeight="3.0" />
+                                    <Separator layoutY="318.0" minWidth="300.0" prefHeight="3.0" />
                                     <Button layoutX="19.0" layoutY="278.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="ROUTE SELECT" />
                                     <Button layoutX="19.0" layoutY="242.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="MASTER SLAVE" />
                                     <Button layoutX="166.0" layoutY="278.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="SYSTEM SETUP" />
                                     <Button layoutX="166.0" layoutY="242.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="SYSTEM TEST" />
-                                    <Separator layoutY="470.0" prefHeight="2.0" prefWidth="300.0" />
+                                    <Separator layoutY="470.0" minWidth="300.0" prefHeight="3.0" />
                                     <Button layoutX="17.0" layoutY="388.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="LABEL" />
                                     <Button layoutX="17.0" layoutY="352.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="RAW" />
                                     <Button layoutX="166.0" layoutY="388.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="HISTORY" />
                                     <Button layoutX="166.0" layoutY="352.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="PLOT" />
-                                    <Separator layoutY="583.0" prefHeight="2.0" prefWidth="300.0" />
+                                    <Separator layoutY="583.0" minWidth="300.0" prefHeight="3.0" />
                                     <Button fx:id="btn_display20NM" layoutX="19.0" layoutY="543.0" mnemonicParsing="false" onAction="#handle20NMButtonAction" prefHeight="30.0" prefWidth="120.0" text="20 NM" />
                                     <Button fx:id="btn_display5NM" layoutX="19.0" layoutY="507.0" mnemonicParsing="false" onAction="#handle5NMButtonAction" prefHeight="30.0" prefWidth="120.0" text="5 NM" />
                                     <Button fx:id="btn_display40NM" layoutX="166.0" layoutY="543.0" mnemonicParsing="false" onAction="#handle40NMButtonAction" prefHeight="30.0" prefWidth="120.0" text="40 NM" />

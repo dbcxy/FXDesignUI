@@ -36,7 +36,7 @@ public class Master extends Application {
 	}
 	
 	private static void loadLoggerSettings() {
-		PropertyConfigurator.configure("res/log4j.properties");
+		PropertyConfigurator.configure("src/assets/log4j.properties");
 		logger.info("Launch");
 	}
 	

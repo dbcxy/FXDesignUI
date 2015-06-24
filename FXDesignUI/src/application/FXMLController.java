@@ -5,6 +5,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.function.Consumer;
 
 import model.DataObserver;
@@ -23,18 +25,30 @@ import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Bounds;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.ZoomEvent;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 
@@ -56,6 +70,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML private Button btn_display20NM;
 	@FXML private Button btn_display40NM;
 	
+	@FXML private ScrollPane chartTopScroll;
+	@FXML private ScrollPane chartBottomScroll;
 	@FXML private Pane chartTop;
 	@FXML private Pane chartBottom;
 	
@@ -67,6 +83,9 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML ResizableCanvas cBtmL2;
 	@FXML ResizableCanvas cBtmL3;
 	
+	@FXML Slider sliderZoomTop;
+	@FXML Slider sliderZoomBottom;
+	
 
 	//1Nautical Miles = 18.5KMs
 	//Graph Scale Since WIDTH_OFF = 880px
@@ -76,30 +95,23 @@ public class FXMLController implements Initializable,ILayoutParam{
 	double HEIGHT_OFF;
 	double WIDTH_OFF;
 	boolean isClose = false;
+	private double pressedX, pressedY;
+	
+	ElevationChart mElevationChart;
+	AzimuthChart mAzimuthChart;
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {		
 		initCanvasLayout();
-		initSystem();
+		actiontarget.setText("Start the System....");
 	}
 	
 	@FXML 
     protected void onStartAction(ActionEvent event) {
-        actiontarget.setText("Starting System....");
-		initSystem();
+		initSystem();		
+		initTopChart();
+		initBottomChart();
 		actiontarget.setText("System Loaded!");
-		
-        logger.info("Top Chart initialization");
-		setNMparameter(10);
-        drawGraphTop(cTopL1);
-        updateObjects(cTopL2);
-        cTopL2.toFront();
-
-        logger.info("Bottom Chart initialization");
-        drawGraphBottom(cBtmL1);
-        updateObjects(cBtmL2);
-        cBtmL2.toFront();
-        
 
         //TESTING
 //        long startTime = System.currentTimeMillis();
@@ -112,8 +124,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 //        long endTime = System.currentTimeMillis();
 //        System.out.println("TotalTime: "+(endTime - startTime));  
     }
-	
-    @FXML 
+
+	@FXML 
     protected void handleSubmitButtonAction(ActionEvent event) {
         actiontarget.setText("Button Clicked");
     }
@@ -176,12 +188,112 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
     
     private void initSystem() {
-    	
+    	recoverLayoutChanges();
     	initTimeDate();
     	initConsole();
     }
     
-    private void initTimeDate() {
+    private void recoverLayoutChanges() {
+		cTopL1.setScaledDimension(false);
+		cTopL2.setScaledDimension(false);
+		cTopL3.setScaledDimension(false);
+		
+		cBtmL1.setScaledDimension(false);
+		cBtmL2.setScaledDimension(false);
+		cBtmL3.setScaledDimension(false);
+    }
+    
+    private void initTopChart() {
+		setNMparameter(10);
+        drawGraphTop(cTopL1);
+        updateObjects(cTopL2);
+        initZoomSlider(sliderZoomTop, chartTop, chartTopScroll, cTopL1, cTopL2, cTopL3);
+    	logger.info("Top Chart initialization");
+	}
+    
+    private void initBottomChart() {
+        drawGraphBottom(cBtmL1);
+        updateObjects(cBtmL2);
+        initZoomSlider(sliderZoomBottom, chartBottom, chartBottomScroll);
+        logger.info("Bottom Chart initialization");
+    }
+    
+    private void initZoomSlider(final Slider slider, final Pane pane, final ScrollPane scrollPane,
+    		ResizableCanvas...canvas) {
+    	slider.valueProperty().addListener(new ChangeListener<Number>() {
+
+			@Override
+			public void changed(ObservableValue<? extends Number> observable,
+					Number oldValue, Number newValue) {
+				
+				pane.setScaleX(newValue.doubleValue());
+				pane.setScaleY(newValue.doubleValue());
+				
+				pane.setOnMousePressed(new EventHandler<MouseEvent>() {
+					
+					@Override
+				    public void handle(MouseEvent event) {
+				          pressedX = event.getX();
+				          pressedY = event.getY();
+				        }
+				});
+				
+				pane.setOnMouseDragged(new EventHandler<MouseEvent>() {
+
+					@Override
+					public void handle(MouseEvent event) {
+						pane.setTranslateX(pane.getTranslateX() + event.getX() - pressedX);
+		                pane.setTranslateY(pane.getTranslateY() + event.getY() - pressedY);
+		                event.consume();
+						
+					}
+				});
+				
+				if(newValue.intValue()==1) {
+					pane.setScaleX(1.0);
+					pane.setScaleY(1.0);
+					pane.setTranslateX(0.0);
+					pane.setTranslateY(0.0);
+					pane.setTranslateZ(0.0);
+				}
+				
+				scrollPane.setPrefWidth(pane.getWidth()*pane.getScaleX());
+	    		scrollPane.setPrefHeight(pane.getHeight()*pane.getScaleY());
+	    		pane.resize(scrollPane.getPrefWidth(),
+	    				scrollPane.getPrefHeight());
+	    		
+	    		System.out.println("Pane: "+pane.getWidth()+","+pane.getHeight());
+//	    		for(int i=0;i<canvas.length;i++){
+//	    			canvas[i].setScaledWidth(scrollPane.getPrefWidth());
+//	    			canvas[i].setScaledHeight(scrollPane.getPrefHeight());
+//	    		}
+	    		
+	    		new Timer().schedule(new TimerTask() {
+
+	    			        @Override
+	    			        public void run() {
+	    						Platform.runLater(new Runnable() { 
+	    						      
+	    					    	@Override 
+	    					    	public void run() {			    		
+	    					    		for(int i=0;i<canvas.length;i++){
+	    					    			pane.getChildren().remove(i);
+	    					    			pane.getChildren().add(new ResizableCanvas());
+	    					    		}
+	    					    		
+//	    								mElevationChart.invalidate();
+//	    								mAzimuthChart.invalidate();
+//	    								updateObjects(cTopL2);
+//	    								updateObjects(cBtmL2);
+	    					    	}
+	    					    });
+	    			        }
+	    			    }, 2000);
+			}
+		});		
+	}
+
+	private void initTimeDate() {
     	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
     	DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
 		
@@ -265,7 +377,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 	}
 	
     private void drawGraphTop(ResizableCanvas canvas) {    	
-    	ElevationChart mElevationChart = new ElevationChart(canvas);
+    	mElevationChart = ElevationChart.getInstance();
+    	mElevationChart.init(canvas);
     	mElevationChart.drawBackground();
     	mElevationChart.drawElevationLine(20);
     	mElevationChart.drawLandingStrip(NM, 6.5);
@@ -274,14 +387,15 @@ public class FXMLController implements Initializable,ILayoutParam{
 
     }
     
-    private void updateObjects(Canvas canvas) {
+    private void updateObjects(ResizableCanvas canvas) {
     	Track mTrack1 = new Track();
     	Track mTrack2 = new Track();
+    	Track mTrack3 = new Track();
     	Plot mPlot1 = new Plot();
     	Plot mPlot2 = new Plot();
     	GraphicsContext gc = canvas.getGraphicsContext2D();
     	
-    	final double WIDTH_OFF = canvas.getWidth()-OFFSET;
+    	final double WIDTH_OFF = canvas.getScaledWidth()-OFFSET;
     	
     	//update shape
         DoubleProperty x  = new SimpleDoubleProperty();
@@ -289,7 +403,7 @@ public class FXMLController implements Initializable,ILayoutParam{
         AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-            	canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+            	canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getScaledWidth(), canvas.getScaledHeight());
             	mTrack1.setXY(x.doubleValue(), y.doubleValue());
             	mTrack1.setText("AA10", "3200/100");
             	mTrack1.draw(gc);
@@ -297,6 +411,10 @@ public class FXMLController implements Initializable,ILayoutParam{
             	mTrack2.setXY(x.doubleValue()-50, y.doubleValue()+50);
             	mTrack2.setText("AA11", "32/10");
             	mTrack2.draw(gc);
+            	
+            	mTrack3.setXY( 50, 50);
+            	mTrack3.setText("AB", "3/10");
+            	mTrack3.draw(canvas.getGraphicsContext2D());
             	
             	mPlot1.setXY(x.doubleValue()-50, y.doubleValue()+50);
             	mPlot1.setTitle("PLOT2");
@@ -330,7 +448,8 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
     
 	private void drawGraphBottom(ResizableCanvas canvas) {
-		AzimuthChart mAzimuthChart = new AzimuthChart(canvas);
+		mAzimuthChart = AzimuthChart.getInstance();
+		mAzimuthChart.init(canvas);
 		mAzimuthChart.drawBackground();
 		mAzimuthChart.drawAzimuthLine(10.5);
 		mAzimuthChart.drawLandingStrip(NM);
