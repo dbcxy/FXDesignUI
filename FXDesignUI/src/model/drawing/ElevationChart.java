@@ -3,6 +3,7 @@ package model.drawing;
 import utils.Constance;
 import utils.ModelDrawing;
 import views.ResizableCanvas;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
 import javafx.scene.paint.Color;
@@ -19,7 +20,7 @@ public class ElevationChart implements ILayoutParam{
 	int dist;
 	int deltaDist;
 	
-	private ResizableCanvas mCanvas;
+	private Canvas mCanvas;
 	private GraphicsContext gc;
 	
 	private static ElevationChart instance;
@@ -32,15 +33,16 @@ public class ElevationChart implements ILayoutParam{
         return instance;
     }
 	
-	public void init(ResizableCanvas canvas) {
+	public void init(Canvas canvas) {
 		mCanvas = canvas;
     	gc = canvas.getGraphicsContext2D(); 
     	initBounds();
 	}
 	
 	private void initBounds() {
-		actualWidth = mCanvas.getScaledWidth();
-    	actualHeight = mCanvas.getScaledHeight();
+		actualWidth = mCanvas.getWidth();
+    	actualHeight = mCanvas.getHeight();
+    	System.out.println("Draw: "+actualWidth+","+actualHeight);
     	HEIGHT_OFF = actualHeight-TEXT_OFFSET;
     	WIDTH_OFF = actualWidth-OFFSET;
 	}

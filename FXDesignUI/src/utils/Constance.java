@@ -20,10 +20,13 @@ public class Constance {
 	public static String HEIGHT = null;
 	public static String EL_ANGLE = null;
 
-	public static long DISPLAY_HEIGHT = 10000;//7000ft
+	public static long DISPLAY_HEIGHT 		= 10000;//10000ft or ~3.05Km (max)
+	public static long EACH_ZOOM_LEVEL 		= 1000;//1000ft or ~305m (each)
 	
-	public static boolean TCPIP 			= true;
-	public static boolean UDPIP				= false;
+	
+	public static boolean IS_CLOSE			= false;
+	public static boolean TCPIP 			= false;
+	public static boolean UDPIP				= true;
 	public static boolean IS_CONNECTED		= false;
 	
 	public static int MY_TIMEOUT 			= 60*1000;

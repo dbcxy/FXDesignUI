@@ -149,7 +149,7 @@
                                                       <ResizableCanvas fx:id="cTopL3" />
                                                    </children>
                                                 </Pane>
-                                                <Slider fx:id="sliderZoomTop" blockIncrement="1.0" layoutX="963.0" majorTickUnit="2.0" max="10.0" minWidth="20.0" minorTickCount="1" orientation="VERTICAL" prefWidth="30.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="950.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />
+                                                <Slider fx:id="sliderZoomTop" blockIncrement="1.0" layoutX="963.0" majorTickUnit="2.0" max="10.0" minWidth="20.0" minorTickCount="1" orientation="VERTICAL" prefWidth="30.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="950.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />
                                              </children>
                                           </AnchorPane>
                                        </content>
@@ -168,7 +168,7 @@
                                                       <ResizableCanvas fx:id="cBtmL3" />
                                                    </children>
                                                 </Pane>
-                                                <Slider fx:id="sliderZoomBottom" blockIncrement="1.0" majorTickUnit="2.0" max="10.0" minWidth="20.0" minorTickCount="1" orientation="VERTICAL" prefWidth="30.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="950.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />
+                                                <Slider fx:id="sliderZoomBottom" blockIncrement="1.0" majorTickUnit="2.0" max="10.0" minWidth="20.0" minorTickCount="1" orientation="VERTICAL" prefWidth="30.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="950.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />
                                              </children>
                                           </AnchorPane>
                                        </content>

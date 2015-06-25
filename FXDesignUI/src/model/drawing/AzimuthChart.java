@@ -19,7 +19,7 @@ public class AzimuthChart implements ILayoutParam {
 	int dist;
 	int deltaDist;
 	
-	private ResizableCanvas mCanvas;
+	private Canvas mCanvas;
 	private GraphicsContext gc;
 	
 	private static AzimuthChart instance;
@@ -32,11 +32,11 @@ public class AzimuthChart implements ILayoutParam {
         return instance;
     }
 	
-	public void init(ResizableCanvas canvas) {
+	public void init(Canvas canvas) {
 		mCanvas = canvas;
     	gc = canvas.getGraphicsContext2D();    	
-    	actualWidth = mCanvas.getScaledWidth();
-    	actualHeight = mCanvas.getScaledHeight();
+    	actualWidth = mCanvas.getWidth();
+    	actualHeight = mCanvas.getHeight();
     	HEIGHT_OFF = actualHeight-TEXT_OFFSET;
     	WIDTH_OFF = actualWidth-OFFSET;
 	}

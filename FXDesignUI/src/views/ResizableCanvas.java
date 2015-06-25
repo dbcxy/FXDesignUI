@@ -15,6 +15,10 @@ public class ResizableCanvas extends Canvas {
         widthProperty().addListener(evt -> draw());
         heightProperty().addListener(evt -> draw());
     }
+    
+    public void clear() {
+    	getGraphicsContext2D().clearRect(0, 0, getWidth(), getHeight());
+    }
 
     private void draw() {
     	double width = getWidth();

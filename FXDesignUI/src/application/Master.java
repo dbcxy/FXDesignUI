@@ -22,7 +22,6 @@ public class Master extends Application {
 	
 	IControlManager mICManager;
 	FXMLController mFXMLController;
-	Thread mTask;
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -52,28 +51,23 @@ public class Master extends Application {
 	        primaryStage.setMaximized(true);
 	        primaryStage.setResizable(false);
 	        primaryStage.setScene(scene);
-	        primaryStage.show();	        
-	        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-	            
-	        	public void handle(WindowEvent we) {
-	        		
-	            }
-	        });	        
+	        primaryStage.show();   
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	private void startNetworkTask() {
-		mTask = new Thread(new TaskObserver(new IControlManager() {
-			
-			@Override
-			public void manageData(DataObserver mDataObserver) {
-				mFXMLController.refreshCanvas(mDataObserver);
-				logger.info("Setting Data Observer");
-			}
-		}));
-		mTask.start();
-	}
+//	private void startNetworkTask() {
+//		mTask = new TaskObserver(new IControlManager() {
+//			
+//			@Override
+//			public void manageData(DataObserver mDataObserver) {
+//				mFXMLController.refreshCanvas(mDataObserver);
+//				logger.info("Setting Data Observer");
+//			}
+//		});
+//		tTask = new Thread(mTask);
+//		tTask.start();
+//	}
 }

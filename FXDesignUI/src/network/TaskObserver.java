@@ -19,7 +19,7 @@ import org.apache.log4j.Logger;
 import application.Master;
 import utils.Constance;
 
-public class TaskObserver implements Runnable{
+public class TaskObserver extends Thread{
 
 	static final Logger logger = Logger.getLogger(TaskObserver.class);
 	
@@ -54,12 +54,9 @@ public class TaskObserver implements Runnable{
 		//Init Read Write heads
 		initStreamHead();
 		
-		//Connection Status
-		notifyStatus();
-		
 		// Now loop forever, waiting to receive packets and printing them.
-		while (Constance.IS_CONNECTED && isDataReady()) {
-					
+		while (isDataReady()) {
+			logger.info("Network Looper");	
 			//Get Data
 			parseData();
 					
@@ -82,7 +79,7 @@ public class TaskObserver implements Runnable{
 //				m_ssocket.setSoTimeout(Constance.MY_TIMEOUT);
 				logger.info("TCP socket created at IP:"+mSocket.getInetAddress()+" PORT: "+mSocket.getPort());
 			} else if (Constance.UDPIP) {				
-				mDatagramSocket = new DatagramSocket(Constance.PORT_NO,serverAddr);
+				mDatagramSocket = new DatagramSocket(Constance.PORT_NO);
 				logger.info("UDP socket created at IP:"+mDatagramSocket.getLocalAddress()+" PORT: "+mDatagramSocket.getLocalPort());
 			}
 	    	
@@ -107,27 +104,27 @@ public class TaskObserver implements Runnable{
 			byte[] mUDPSocketbuffer = new byte[Constance.DGRAM_LEN];
 			mDatagramInPacket = new DatagramPacket(mUDPSocketbuffer, mUDPSocketbuffer.length);
 			mDatagramOutPacket = new DatagramPacket(mUDPSocketbuffer, mUDPSocketbuffer.length);
-			logger.info("UDP socket input/output stream init: "+mSocket);
+			logger.info("UDP socket input/output stream init: "+mDatagramSocket);
 		}		
 	}
 
 	private void notifyStatus() {		
 		//Connection Status
-		if(mSocket.isConnected() && Constance.TCPIP)
+		if(mSocket!=null && mSocket.isConnected() && Constance.TCPIP)
 			Constance.IS_CONNECTED = true;
-		else if(mDatagramSocket.isConnected() && Constance.UDPIP)
+		else if(mDatagramSocket!=null && mDatagramSocket.isConnected() && Constance.UDPIP)
 			Constance.IS_CONNECTED = true;
 	}
 	
 	private boolean isDataReady() {
 		if(Constance.TCPIP) {
 			try {
-				return (mServerSocketInPacket.readLine()!=null);
+				return ((mServerSocketInPacket.readLine()!=null) && !Constance.IS_CLOSE);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		} else if(Constance.UDPIP) {
-			return true;
+			return (true && !Constance.IS_CLOSE);
 		}
 		return false;
 	}
@@ -150,6 +147,10 @@ public class TaskObserver implements Runnable{
 					logger.error("UDP socket close failed",e);
 				}
 		}
+	}
+	
+	public void InterruptableUDPThread(DatagramSocket socket){
+	      this.mDatagramSocket = socket;
 	}
 	
 	private void sendData() {

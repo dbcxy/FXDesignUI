@@ -1,5 +1,7 @@
 package application;
 
+import java.net.DatagramSocket;
+import java.net.SocketException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -15,6 +17,8 @@ import model.drawable.Track;
 import model.drawing.AzimuthChart;
 import model.drawing.ElevationChart;
 import model.drawing.ILayoutParam;
+import network.IControlManager;
+import network.TaskObserver;
 
 import org.apache.log4j.Logger;
 
@@ -29,27 +33,20 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Bounds;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
-import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.input.ZoomEvent;
-import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.Node;
 import javafx.stage.Stage;
 
 public class FXMLController implements Initializable,ILayoutParam{
@@ -94,9 +91,9 @@ public class FXMLController implements Initializable,ILayoutParam{
 	int ADJUST;
 	double HEIGHT_OFF;
 	double WIDTH_OFF;
-	boolean isClose = false;
 	private double pressedX, pressedY;
 	
+	TaskObserver tTask;
 	ElevationChart mElevationChart;
 	AzimuthChart mAzimuthChart;
 	
@@ -108,9 +105,11 @@ public class FXMLController implements Initializable,ILayoutParam{
 	
 	@FXML 
     protected void onStartAction(ActionEvent event) {
+		
 		initSystem();		
 		initTopChart();
 		initBottomChart();
+		startNetworkTask();
 		actiontarget.setText("System Loaded!");
 
         //TESTING
@@ -161,20 +160,43 @@ public class FXMLController implements Initializable,ILayoutParam{
     @FXML
     protected void menuCloseStage() {
     	Stage stage = (Stage) fxMenuBar.getScene().getWindow();
-    	isClose = true;
+    	Constance.IS_CLOSE = true;
+    	if(Constance.IS_CONNECTED) {
+	    	if(Constance.UDPIP)
+				try {
+					tTask.InterruptableUDPThread(new DatagramSocket());
+				} catch (SocketException e) {
+					e.printStackTrace();
+				}
+	    	tTask.closeActiveConnection();
+	    	tTask.interrupt();
+    	}
     	stage.close();
     	logger.info("APPLICATION CLOSED");
     }
     
+    private void startNetworkTask() {
+		tTask = new TaskObserver(new IControlManager() {
+			
+			@Override
+			public void manageData(DataObserver mDataObserver) {
+				refreshCanvas(mDataObserver);
+				logger.info("Setting Data Observer");
+			}
+		});
+		tTask.start();
+	}
+    
     private void initCanvasLayout() {
+    	
     	cTopL1.widthProperty().bind(chartTop.widthProperty());
 		cTopL1.heightProperty().bind(chartTop.heightProperty());
 		
 		cTopL2.widthProperty().bind(chartTop.widthProperty());
 		cTopL2.heightProperty().bind(chartTop.heightProperty());
 		
-//		cTopL3.widthProperty().bind(chartTop.widthProperty());
-//		cTopL3.heightProperty().bind(chartTop.heightProperty());
+		cTopL3.widthProperty().bind(chartTop.widthProperty());
+		cTopL3.heightProperty().bind(chartTop.heightProperty());
 		
 		cBtmL1.widthProperty().bind(chartBottom.widthProperty());
 		cBtmL1.heightProperty().bind(chartBottom.heightProperty());
@@ -182,52 +204,56 @@ public class FXMLController implements Initializable,ILayoutParam{
 		cBtmL2.widthProperty().bind(chartBottom.widthProperty());
 		cBtmL2.heightProperty().bind(chartBottom.heightProperty());
 		
-//		cBtmL3.widthProperty().bind(chartBottom.widthProperty());
-//		cBtmL3.heightProperty().bind(chartBottom.heightProperty());
+		cBtmL3.widthProperty().bind(chartBottom.widthProperty());
+		cBtmL3.heightProperty().bind(chartBottom.heightProperty());
       
     }
     
     private void initSystem() {
-    	recoverLayoutChanges();
+//    	recoverLayoutChanges();
     	initTimeDate();
     	initConsole();
     }
     
-    private void recoverLayoutChanges() {
-		cTopL1.setScaledDimension(false);
-		cTopL2.setScaledDimension(false);
-		cTopL3.setScaledDimension(false);
-		
-		cBtmL1.setScaledDimension(false);
-		cBtmL2.setScaledDimension(false);
-		cBtmL3.setScaledDimension(false);
-    }
+//    private void recoverLayoutChanges() {
+//		cTopL1.setScaledDimension(false);
+//		cTopL2.setScaledDimension(false);
+//		cTopL3.setScaledDimension(false);
+//		
+//		cBtmL1.setScaledDimension(false);
+//		cBtmL2.setScaledDimension(false);
+//		cBtmL3.setScaledDimension(false);
+//    }
     
     private void initTopChart() {
 		setNMparameter(10);
         drawGraphTop(cTopL1);
-        updateObjects(cTopL2);
-        initZoomSlider(sliderZoomTop, chartTop, chartTopScroll, cTopL1, cTopL2, cTopL3);
+//        updateObjects(cTopL2);
+        initZoomSlider(sliderZoomTop, chartTop, chartTopScroll);
+        cTopL3.clear();
+        cTopL2.clear();
     	logger.info("Top Chart initialization");
 	}
     
     private void initBottomChart() {
         drawGraphBottom(cBtmL1);
-        updateObjects(cBtmL2);
+//        updateObjects(cBtmL2);
         initZoomSlider(sliderZoomBottom, chartBottom, chartBottomScroll);
+        cBtmL3.clear();
+        cBtmL2.clear();
         logger.info("Bottom Chart initialization");
     }
     
     private void initZoomSlider(final Slider slider, final Pane pane, final ScrollPane scrollPane,
-    		ResizableCanvas...canvas) {
+    		Canvas...canvas) {
     	slider.valueProperty().addListener(new ChangeListener<Number>() {
 
 			@Override
 			public void changed(ObservableValue<? extends Number> observable,
 					Number oldValue, Number newValue) {
 				
-				pane.setScaleX(newValue.doubleValue());
-				pane.setScaleY(newValue.doubleValue());
+				pane.setScaleX(newValue.doubleValue()/2);
+				pane.setScaleY(newValue.doubleValue()/2);
 				
 				pane.setOnMousePressed(new EventHandler<MouseEvent>() {
 					
@@ -245,7 +271,6 @@ public class FXMLController implements Initializable,ILayoutParam{
 						pane.setTranslateX(pane.getTranslateX() + event.getX() - pressedX);
 		                pane.setTranslateY(pane.getTranslateY() + event.getY() - pressedY);
 		                event.consume();
-						
 					}
 				});
 				
@@ -257,38 +282,51 @@ public class FXMLController implements Initializable,ILayoutParam{
 					pane.setTranslateZ(0.0);
 				}
 				
-				scrollPane.setPrefWidth(pane.getWidth()*pane.getScaleX());
-	    		scrollPane.setPrefHeight(pane.getHeight()*pane.getScaleY());
-	    		pane.resize(scrollPane.getPrefWidth(),
-	    				scrollPane.getPrefHeight());
-	    		
+//				scrollPane.setPrefWidth(pane.getWidth()*pane.getScaleX());
+//	    		scrollPane.setPrefHeight(pane.getHeight()*pane.getScaleY());
+//	    		pane.resize(scrollPane.getPrefWidth(),
+//	    				scrollPane.getPrefHeight());    		
 	    		System.out.println("Pane: "+pane.getWidth()+","+pane.getHeight());
+
+	    		
 //	    		for(int i=0;i<canvas.length;i++){
-//	    			canvas[i].setScaledWidth(scrollPane.getPrefWidth());
-//	    			canvas[i].setScaledHeight(scrollPane.getPrefHeight());
+//	    			canvas[i].setWidth(pane.getWidth());
+//	    			canvas[i].setHeight(pane.getHeight());
 //	    		}
 	    		
-	    		new Timer().schedule(new TimerTask() {
-
-	    			        @Override
-	    			        public void run() {
-	    						Platform.runLater(new Runnable() { 
-	    						      
-	    					    	@Override 
-	    					    	public void run() {			    		
-	    					    		for(int i=0;i<canvas.length;i++){
-	    					    			pane.getChildren().remove(i);
-	    					    			pane.getChildren().add(new ResizableCanvas());
-	    					    		}
-	    					    		
-//	    								mElevationChart.invalidate();
-//	    								mAzimuthChart.invalidate();
-//	    								updateObjects(cTopL2);
-//	    								updateObjects(cBtmL2);
-	    					    	}
-	    					    });
-	    			        }
-	    			    }, 2000);
+	    		Platform.runLater(new Runnable() { 
+				      
+			    	@Override 
+			    	public void run() {	
+//			    		drawGraphTop(cTopL1);
+//			    		updateObjects(cTopL2);
+			    	}
+	    		});
+	    		
+//	    		new Timer().schedule(new TimerTask() {
+//
+//	    			        @Override
+//	    			        public void run() {
+//	    						Platform.runLater(new Runnable() { 
+//	    						      
+//	    					    	@Override 
+//	    					    	public void run() {	
+//	    					    		
+////	    					    		drawGraphTop(cTopL1);
+//	    					    		
+////	    					    		for(int i=0;i<canvas.length;i++){
+////	    					    			pane.getChildren().remove(i);
+////	    					    			pane.getChildren().add(new ResizableCanvas());
+////	    					    		}
+//	    					    		
+////	    								mElevationChart.invalidate();
+////	    								mAzimuthChart.invalidate();
+////	    								updateObjects(cTopL2);
+////	    								updateObjects(cBtmL2);
+//	    					    	}
+//	    					    });
+//	    			        }
+//	    			    }, 2000);
 			}
 		});		
 	}
@@ -304,7 +342,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 
 			@Override
 			protected Void call() throws Exception {
-				while(!isClose) {
+				while(!Constance.IS_CLOSE) {
 					Date date = new Date();
 					updateTitle(dateFormat.format(date));
 					updateMessage(timeFormat.format(date));
@@ -376,7 +414,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 		ADJUST = NM + index;
 	}
 	
-    private void drawGraphTop(ResizableCanvas canvas) {    	
+    private void drawGraphTop(Canvas canvas) {    	
     	mElevationChart = ElevationChart.getInstance();
     	mElevationChart.init(canvas);
     	mElevationChart.drawBackground();
@@ -387,7 +425,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 
     }
     
-    private void updateObjects(ResizableCanvas canvas) {
+    private void updateObjects(Canvas canvas) {
     	Track mTrack1 = new Track();
     	Track mTrack2 = new Track();
     	Track mTrack3 = new Track();
@@ -395,7 +433,7 @@ public class FXMLController implements Initializable,ILayoutParam{
     	Plot mPlot2 = new Plot();
     	GraphicsContext gc = canvas.getGraphicsContext2D();
     	
-    	final double WIDTH_OFF = canvas.getScaledWidth()-OFFSET;
+    	final double WIDTH_OFF = canvas.getWidth()-OFFSET;
     	
     	//update shape
         DoubleProperty x  = new SimpleDoubleProperty();
@@ -403,7 +441,7 @@ public class FXMLController implements Initializable,ILayoutParam{
         AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-            	canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getScaledWidth(), canvas.getScaledHeight());
+            	canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
             	mTrack1.setXY(x.doubleValue(), y.doubleValue());
             	mTrack1.setText("AA10", "3200/100");
             	mTrack1.draw(gc);
@@ -447,7 +485,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 		mThread.start();
     }
     
-	private void drawGraphBottom(ResizableCanvas canvas) {
+	private void drawGraphBottom(Canvas canvas) {
 		mAzimuthChart = AzimuthChart.getInstance();
 		mAzimuthChart.init(canvas);
 		mAzimuthChart.drawBackground();
@@ -458,11 +496,17 @@ public class FXMLController implements Initializable,ILayoutParam{
 	}
 	
 	public void refreshCanvas(DataObserver dataObserver) {
-		GraphicsContext gc = cTopL2.getGraphicsContext2D();
-		gc.clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
-		dataObserver.getTrackDataList().draw(gc);
-		dataObserver.getPlotDataList().draw(gc);
-    	logger.info("Canvas Objects Redrawn");
+		Platform.runLater(new Runnable() { 
+		      
+	    	@Override 
+	    	public void run() {	
+	    		GraphicsContext gc = cTopL2.getGraphicsContext2D();
+	    		gc.clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
+	    		dataObserver.getTrackDataList().draw(gc);
+	    		dataObserver.getPlotDataList().draw(gc);
+	        	logger.info("Canvas Objects Redrawn");
+	    	}
+		});
 	}
 
 	@Override

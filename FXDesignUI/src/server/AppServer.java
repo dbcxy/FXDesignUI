@@ -10,7 +10,7 @@ public class AppServer {
 	public static final int SERVERPORT 		= 30401;
 	public static final int DELAY			= 10000;
 		
-	private static boolean TCPIP = true;
+	private static boolean TCPIP = false;
 	
 	public static void main(String[] args) {
 		loadLoggerSettings();
@@ -27,7 +27,7 @@ public class AppServer {
 	}
 	
 	private static void loadLoggerSettings() {
-		PropertyConfigurator.configure("res/log4j.properties");
+		PropertyConfigurator.configure("src/assets/log4j.properties");
 		logger.info("AppServer Started");
 	}
 }
