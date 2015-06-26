@@ -1,5 +1,6 @@
 package utils;
 
+import java.awt.Graphics2D;
 import java.util.Objects;
 
 import javafx.application.Platform;
@@ -11,6 +12,11 @@ public class ModelDrawing {
 	public static void drawLineAtAngle(GraphicsContext gc, double x1,double y1,double length,double angle) {
 		angle = angle * Math.PI / 180; 
 	    gc.strokeLine(x1,y1,x1 + length * Math.cos(angle),y1 + length * Math.sin(angle));
+	}
+	
+	public static void drawLineAtAngle(Graphics2D g2d, int x1,int y1,int length,double angle) {
+		angle = angle * Math.PI / 180; 
+	    g2d.drawLine(x1,y1,(int)(x1 + length * Math.cos(angle)),(int)(y1 + length * Math.sin(angle)));
 	}
 	
 	public static Point getPointOfLineAtAngle(GraphicsContext gc, double x1,double y1,double length,double angle) {

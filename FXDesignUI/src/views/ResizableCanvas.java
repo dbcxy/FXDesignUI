@@ -34,7 +34,6 @@ public class ResizableCanvas extends Canvas {
         gc.setStroke(Color.RED);
         gc.strokeLine(0, 0, width, height);
         gc.strokeLine(0, height, width, 0);
-        System.out.println("ScaledCanvas: "+scaledWidth+","+scaledHeight);
     }
 
     @Override

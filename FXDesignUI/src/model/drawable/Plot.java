@@ -6,7 +6,7 @@ import javafx.scene.effect.Light.Point;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import model.OverlayItem;
-import model.drawing.ILayoutParam;
+import model.graph.ILayoutParam;
 import utils.ModelDrawing;
 
 public class Plot extends OverlayItem implements ILayoutParam{

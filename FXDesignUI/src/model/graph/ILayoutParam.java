@@ -1,4 +1,4 @@
-package model.drawing;
+package model.graph;
 
 import javafx.scene.canvas.GraphicsContext;
 

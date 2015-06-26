@@ -1,7 +1,7 @@
 package model.drawable;
 
 import model.OverlayItem;
-import model.drawing.ILayoutParam;
+import model.graph.ILayoutParam;
 import utils.ModelDrawing;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;

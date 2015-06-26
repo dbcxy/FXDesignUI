@@ -138,44 +138,46 @@
                                           </VBox>
                                        </children>
                                     </GridPane>
-                                    <ScrollPane fx:id="chartTopScroll" fitToHeight="true" fitToWidth="true">
-                                       <content>
-                                          <AnchorPane>
-                                             <children>
-                                                <Pane fx:id="chartTop" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane>
+                                       <children>
+                                          <ScrollPane fx:id="chartTopScroll" fitToHeight="true" fitToWidth="true" pannable="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <AnchorPane>
                                                    <children>
-                                                      <ResizableCanvas fx:id="cTopL1" />
-                                                      <ResizableCanvas fx:id="cTopL2" />
-                                                      <ResizableCanvas fx:id="cTopL3" />
+                                                      <Pane fx:id="chartTop" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <ResizableCanvas fx:id="cTopL1" />
+                                                            <ResizableCanvas fx:id="cTopL2" />
+                                                            <ResizableCanvas fx:id="cTopL3" />
+                                                         </children>
+                                                      </Pane>
                                                    </children>
-                                                </Pane>
-                                                <Slider fx:id="sliderZoomTop" blockIncrement="1.0" layoutX="963.0" majorTickUnit="2.0" max="10.0" minWidth="20.0" minorTickCount="1" orientation="VERTICAL" prefWidth="30.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="950.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />
-                                             </children>
-                                          </AnchorPane>
-                                       </content>
-                                       <GridPane.margin>
-                                          <Insets left="5.0" right="5.0" />
-                                       </GridPane.margin>
-                                    </ScrollPane>
-                                    <ScrollPane fx:id="chatBottomScroll" fitToHeight="true" fitToWidth="true" GridPane.rowIndex="1">
-                                       <content>
-                                          <AnchorPane>
-                                             <children>
-                                                <Pane fx:id="chartBottom" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                          <Slider fx:id="sliderZoomTop" blockIncrement="1.0" majorTickUnit="2.0" max="10.0" minWidth="20.0" minorTickCount="1" orientation="VERTICAL" prefWidth="30.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="950.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane GridPane.rowIndex="1">
+                                       <children>
+                                          <ScrollPane fx:id="chatBottomScroll" fitToHeight="true" fitToWidth="true" pannable="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <AnchorPane>
                                                    <children>
-                                                      <ResizableCanvas fx:id="cBtmL1" />
-                                                      <ResizableCanvas fx:id="cBtmL2" />
-                                                      <ResizableCanvas fx:id="cBtmL3" />
+                                                      <Pane fx:id="chartBottom" maxHeight="-Infinity" maxWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <ResizableCanvas fx:id="cBtmL1" />
+                                                            <ResizableCanvas fx:id="cBtmL2" />
+                                                            <ResizableCanvas fx:id="cBtmL3" />
+                                                         </children>
+                                                      </Pane>
                                                    </children>
-                                                </Pane>
-                                                <Slider fx:id="sliderZoomBottom" blockIncrement="1.0" majorTickUnit="2.0" max="10.0" minWidth="20.0" minorTickCount="1" orientation="VERTICAL" prefWidth="30.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="950.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />
-                                             </children>
-                                          </AnchorPane>
-                                       </content>
-                                       <GridPane.margin>
-                                          <Insets left="5.0" right="5.0" />
-                                       </GridPane.margin>
-                                    </ScrollPane>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                          <Slider fx:id="sliderZoomBottom" blockIncrement="1.0" majorTickUnit="2.0" max="10.0" minWidth="20.0" minorTickCount="1" orientation="VERTICAL" prefWidth="30.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="950.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0" />
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />

@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import javafx.scene.canvas.GraphicsContext;
 import model.ItemizedOverlay;
 import model.OverlayItem;
-import model.drawing.ILayoutParam;
+import model.graph.ILayoutParam;
 
 public class SketchItemizedOverlay extends ItemizedOverlay<OverlayItem> implements ILayoutParam{
 
