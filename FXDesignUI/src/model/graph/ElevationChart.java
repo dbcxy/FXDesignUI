@@ -3,8 +3,11 @@ package model.graph;
 import java.awt.BasicStroke;
 import java.awt.Graphics2D;
 import java.awt.Paint;
+import java.awt.geom.AffineTransform;
+import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 
+import model.GraphChart;
 import utils.Constance;
 import utils.ModelDrawing;
 import views.ResizableCanvas;
@@ -17,67 +20,17 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
-public class ElevationChart implements ILayoutParam{
+public class ElevationChart extends GraphChart{
 	
-	double actualWidth;
-	double actualHeight;
-	double HEIGHT_OFF;
-	double WIDTH_OFF;
 	double elevationAngle;
 	double distAngle;
-	int dist;
-	int deltaDist;
+	double dist;
+	double deltaDist;
 	
-	private Canvas mCanvas;
-	private GraphicsContext gc;
-	
-	private BufferedImage bufferedImage;
-	private Graphics2D g2d;
-	
-	private static ElevationChart instance;
+	public ElevationChart(Canvas canvas) {
+		super(canvas);
+	}
 
-    static {
-        instance = new ElevationChart();
-    }
-    
-    public static ElevationChart getInstance() {
-        return instance;
-    }
-	
-	public void init(Canvas canvas) {
-		mCanvas = canvas;
-    	gc = canvas.getGraphicsContext2D(); 
-    	initBounds();
-	}
-	
-	private void initBounds() {
-		actualWidth = mCanvas.getWidth();
-    	actualHeight = mCanvas.getHeight();
-    	HEIGHT_OFF = actualHeight-TEXT_OFFSET;
-    	WIDTH_OFF = actualWidth-OFFSET;
-    	
-    	bufferedImage = new BufferedImage((int) (actualWidth), 
-				 (int) actualHeight, BufferedImage.TYPE_INT_RGB);
-		g2d = bufferedImage.createGraphics();
-	}
-	
-	public void setScaleCanvas(double d) {
-		mCanvas.setScaleX(d);
-		mCanvas.setScaleY(d);
-	}
-	
-	public void drawBackgroundOnImage() {
-		g2d.clearRect(0, 0, (int)actualWidth, (int)actualHeight);
-    	g2d.setColor(java.awt.Color.BLACK);
-        g2d.fillRect(0,0,(int)actualWidth, (int)actualHeight);
-	}
-	
-	public void drawBackground() {
-    	gc.clearRect(0, 0, actualWidth, actualHeight);
-    	gc.setFill(Color.BLACK);
-        gc.fillRect(0,0,actualWidth, actualHeight);
-	}
-	
 	public void drawElevationLineOnImage(double elAngle) {
 		this.elevationAngle = elAngle;
         g2d.setColor(java.awt.Color.CYAN);
@@ -94,7 +47,7 @@ public class ElevationChart implements ILayoutParam{
         ModelDrawing.drawLineAtAngle(gc, OFFSET, HEIGHT_OFF,WIDTH_OFF+2*OFFSET, -elevationAngle);//cross line at 20 degrees
 	}
 	
-	public void drawLandingStripOnImage(int dist, double dAngle) {
+	public void drawLandingStripOnImage(double dist, double dAngle) {
 		this.distAngle = dAngle;
         g2d.setColor(java.awt.Color.LIGHT_GRAY);
         ModelDrawing.drawLineAtAngle(g2d, OFFSET+dist, (int)HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(distAngle-1.5));//below center line
@@ -102,14 +55,14 @@ public class ElevationChart implements ILayoutParam{
         g2d.setColor(java.awt.Color.RED);
         ModelDrawing.drawLineAtAngle(g2d, OFFSET+dist, (int)HEIGHT_OFF, OFFSET+OFFSET*dist, -distAngle);//center red line
         g2d.setColor(java.awt.Color.CYAN);
-        g2d.setStroke(new BasicStroke(1));
-//        gc.setLineDashes(OFFSET/2);
-        ModelDrawing.drawLineAtAngle(g2d, OFFSET+dist, (int)HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(distAngle-3.5));//imaginary below line
-        ModelDrawing.drawLineAtAngle(g2d, OFFSET+dist, (int)HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(distAngle+3.5));//imaginary above line
-//        gc.setLineDashes(0);
+        g2d.setStroke(new BasicStroke((float) 0.5));
+        Point p1 = ModelDrawing.getNextPointAtAngle(OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(distAngle-3.5));//Point below
+        ModelDrawing.drawDashedLine(g2d, OFFSET+dist, HEIGHT_OFF, p1.getX(), p1.getY());
+        Point p2 = ModelDrawing.getNextPointAtAngle(OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(distAngle+3.5));//Point above
+        ModelDrawing.drawDashedLine(g2d, OFFSET+dist, HEIGHT_OFF, p2.getX(), p2.getY());
 	}
 	
-	public void drawLandingStrip(int dist, double dAngle) {
+	public void drawLandingStrip(double dist, double dAngle) {
 		this.distAngle = dAngle;
         gc.setStroke(Color.AQUAMARINE);
         ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF, OFFSET+(OFFSET-1)*dist, -(distAngle-1.5));//below center line
@@ -124,22 +77,22 @@ public class ElevationChart implements ILayoutParam{
 //        gc.setLineDashes(0);
 	}
 	
-	public void drawDistanceGridOnImage(int distance, int deltaDistance) {
+	public void drawDistanceGridOnImage(double distance, double deltaDistance) {
 		this.dist = distance;
 		this.deltaDist = deltaDistance;
         g2d.setFont(new java.awt.Font("Sans Serif",java.awt.Font.PLAIN, 16));
-        g2d.setStroke(new BasicStroke((float) 1.5));       
+        g2d.setStroke(new BasicStroke((float) 1.5));   
         Point p = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF, deltaDist, -elevationAngle);
         for(int i=0;i<(WIDTH_OFF/dist)-1;i++){
         	if(i==0) {
         		//write text
         		g2d.setColor(java.awt.Color.YELLOW);
-        		g2d.drawString(" TD ", OFFSET+(i+1)*dist, (int) (HEIGHT_OFF+HGAP));
+        		g2d.drawString(" TD ", (int) (OFFSET+(i+1)*dist), (int) (HEIGHT_OFF+HGAP));
         		
         		//dotted red line
         		g2d.setColor(java.awt.Color.RED);
 //        		gc.setLineDashes(OFFSET/2);
-        		g2d.drawLine(OFFSET+dist+2*OFFSET,(int)HEIGHT_OFF,(int)p.getX()+2*OFFSET,(int)p.getY()-OFFSET/2);
+        		g2d.drawLine((int) (OFFSET+dist+2*OFFSET),(int)HEIGHT_OFF,(int)p.getX()+2*OFFSET,(int)p.getY()-OFFSET/2);
 //        		gc.setLineDashes(0);
         		
         		//reset color
@@ -147,17 +100,17 @@ public class ElevationChart implements ILayoutParam{
         	} else if((i%5)==0) {
         		//write text NM
         		g2d.setColor(java.awt.Color.YELLOW);
-        		g2d.drawString(i+"NM", OFFSET+(i+1)*dist, (int) (HEIGHT_OFF+HGAP));
+        		g2d.drawString(i+"NM", (int) (OFFSET+(i+1)*dist), (int) (HEIGHT_OFF+HGAP));
         	} else
         		g2d.setColor(java.awt.Color.GREEN);
 
         	//draw green lines
-            g2d.drawLine(OFFSET+(i+1)*dist,(int)HEIGHT_OFF,(int)p.getX(),(int)p.getY());
+            g2d.drawLine((int) (OFFSET+(i+1)*dist),(int)HEIGHT_OFF,(int)p.getX(),(int)p.getY());
             p = ModelDrawing.getNextPointAtAngle(p.getX(), p.getY(), deltaDist, -elevationAngle);
         }
 	}
 	
-	public void drawDistanceGrid(int distance, int deltaDistance) {
+	public void drawDistanceGrid(double distance, double deltaDistance) {
 		this.dist = distance;
 		this.deltaDist = deltaDistance;
         gc.setFont(new Font("Sans Serif", 16));
@@ -303,36 +256,6 @@ public class ElevationChart implements ILayoutParam{
         gc.strokeText(Constance.NULL, 2.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count=0;		
 	}
-
-	public void invalidate() {
-		initBounds();
-		drawBackground();
-		drawElevationLine(elevationAngle);
-		drawDistanceGrid(dist, deltaDist);
-		drawLandingStrip(dist, distAngle);
-		drawText();
-		System.out.println("Invalidate");
-	}
 	
-	public void invalidateImage() {
-		initBounds();
-		drawBackgroundOnImage();
-		drawElevationLineOnImage(elevationAngle);
-		drawDistanceGridOnImage(dist, deltaDist);
-		drawLandingStripOnImage(dist, distAngle);
-		drawTextOnImage();
-		System.out.println("Invalidate Image");
-	}
-	
-	public Image getImage() {
-		WritableImage wr = null;
-		Image img = SwingFXUtils.toFXImage(bufferedImage, wr);  
-		return img;
-	}
-	
-	@Override
-	public void draw(GraphicsContext gc) {
-		
-	}
 	
 }

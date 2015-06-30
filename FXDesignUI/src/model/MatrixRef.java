@@ -1,5 +1,7 @@
 package model;
 
+import utils.Constance;
+
 public class MatrixRef {
 	
 	private double startX;
@@ -18,27 +20,18 @@ public class MatrixRef {
 	
 	}
 	
-	public MatrixRef(double sY, double eY) {
-		this.startY = sY;
-		this.endY = eY;
-	}
-	
 	public MatrixRef(double sX,double sY, double eX, double eY) {
 		this.startX = sX;
 		this.startY = sY;
 		this.endX = eX;
 		this.endY = eY;
-	}
-	
-	private void reCalibrateScale() {
+		
 		zoomStartX = startX;
 		zoomStartY = startY;
 		zoomEndX = endX;
 		zoomEndY = endY;
-		
-		
 	}
-	
+		
 	public boolean checkPointInZoomedRegion(double X, double Y) {
 		if((zoomStartX <= X) && (X <= zoomEndX))
 			if((zoomStartY <= Y) && (Y <= zoomEndY))
@@ -48,7 +41,6 @@ public class MatrixRef {
 	
 	public void setZoomlevel(int Scale) {
 		zoomLevel = Scale;
-		reCalibrateScale();
 	}
 
 	public double getOriginalStartX() {

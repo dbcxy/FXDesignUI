@@ -95,27 +95,27 @@
                                                    <children>
                                                       <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <children>
-                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" text="Key">
+                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" style="-fx-background-image: url(&quot;assets/img/key.png&quot;); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;">
                                                                <HBox.margin>
                                                                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                </HBox.margin>
                                                             </Button>
-                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" text="Log">
+                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" style="-fx-background-image: url(&quot;assets/img/logging.png&quot;); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;">
                                                                <HBox.margin>
                                                                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                </HBox.margin>
                                                             </Button>
-                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" text="Info">
+                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" style="-fx-background-image: url(&quot;assets/img/info.png&quot;); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;">
                                                                <HBox.margin>
                                                                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                </HBox.margin>
                                                             </Button>
-                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" text="Help">
+                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" style="-fx-background-image: url(&quot;assets/img/question.png&quot;); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;">
                                                                <HBox.margin>
                                                                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                </HBox.margin>
                                                             </Button>
-                                                            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#onStartAction" text="Start">
+                                                            <Button fx:id="btn_startDisplay" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#onStartAction" style="-fx-background-image: url(&quot;assets/img/start.png&quot;); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;">
                                                                <HBox.margin>
                                                                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                </HBox.margin>
@@ -164,7 +164,7 @@
                                              <content>
                                                 <AnchorPane>
                                                    <children>
-                                                      <Pane fx:id="chartBottom" maxHeight="-Infinity" maxWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <Pane fx:id="chartBottom" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <children>
                                                             <ResizableCanvas fx:id="cBtmL1" />
                                                             <ResizableCanvas fx:id="cBtmL2" />

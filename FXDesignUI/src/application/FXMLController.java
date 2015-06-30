@@ -66,6 +66,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML private TextArea consoleOutput;
 	@FXML private TextField consoleInput;
 	
+	@FXML private Button btn_startDisplay;
 	@FXML private Button btn_display5NM;
 	@FXML private Button btn_display10NM;
 	@FXML private Button btn_display20NM;
@@ -93,10 +94,9 @@ public class FXMLController implements Initializable,ILayoutParam{
 	final int PX = 15;// Assuming 40NM in so many pixels
 	int NM;
 	int ADJUST;
-	double HEIGHT_OFF;
-	double WIDTH_OFF;
 	private double originalSizeX, originalSizeY;
 	private double pressedX, pressedY;
+	private boolean isAppRunning = false;
 	
 	TaskObserver tTask;
 	ElevationChart mElevationChart;
@@ -111,11 +111,26 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML 
     protected void onStartAction(ActionEvent event) {
 		
-		initSystem();		
-		initTopChart();
-		initBottomChart();
-//		startNetworkTask();
-		actiontarget.setText("System Loaded!");
+		if(!isAppRunning) {
+			initSystem();		
+			initTopChart();
+			initBottomChart();
+//			startNetworkTask();
+			isAppRunning = true;
+			btn_startDisplay.setStyle("-fx-background-image: url(\"assets/img/stop.png\"); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;");
+			actiontarget.setText("System Loaded!");
+		} else {
+			cTopL1.draw();
+			cTopL2.draw();
+			cTopL3.draw();
+			cBtmL1.draw();
+			cBtmL2.draw();
+			cBtmL3.draw();
+//			stopNetworkTask();
+			isAppRunning = false;
+			btn_startDisplay.setStyle("-fx-background-image: url(\"assets/img/start.png\"); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;");
+			actiontarget.setText("Start System....");
+		}
 
         //TESTING
 //        long startTime = System.currentTimeMillis();
@@ -238,7 +253,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 		originalSizeY = chartTop.getHeight();
         drawGraphTop(cTopL1);
 //        updateObjects(cTopL2);
-        initZoomSlider(sliderZoomTop, chartTop, chartTopScroll, cTopL1, cTopL2, cTopL3);
+        initZoomSlider(sliderZoomTop, chartTop, chartTopScroll, "top");
         cTopL2.clear();
         cTopL3.clear();
     	logger.info("Top Chart initialization");
@@ -247,14 +262,14 @@ public class FXMLController implements Initializable,ILayoutParam{
     private void initBottomChart() {
         drawGraphBottom(cBtmL1);
 //        updateObjects(cBtmL2);
-        initZoomSlider(sliderZoomBottom, chartBottom, chartBottomScroll);
+        initZoomSlider(sliderZoomBottom, chartBottom, chartBottomScroll, "down");
         cBtmL3.clear();
         cBtmL2.clear();
         logger.info("Bottom Chart initialization");
     }
     
     private void initZoomSlider(final Slider slider, final Pane pane, final ScrollPane scrollPane,
-    		Canvas...canvas) {
+    		String val) {
     	slider.valueProperty().addListener(new ChangeListener<Number>() {
 
 			@Override
@@ -294,34 +309,37 @@ public class FXMLController implements Initializable,ILayoutParam{
 					pane.setTranslateZ(0.0);
 				}
 //	    		System.out.println("Pane: "+pane.getWidth()+","+pane.getHeight());
-	    		
-	    		Platform.runLater(new Runnable() { 
-				      
-			    	@Override 
-			    	public void run() {	
-			    		cTopL3.clear();
-			    		cTopL2.clear();			    		
-			    		cTopL1.clear();
-			    		cTopL1.getGraphicsContext2D().drawImage(mElevationChart.getImage(), 0, 0);
-//			    		updateObjects(cTopL2);
-			    	}
-	    		});
-	    		
-//	    		new Timer().schedule(new TimerTask() {
-//
-//	    			        @Override
-//	    			        public void run() {
-//	    						Platform.runLater(new Runnable() { 
-//	    						      
-//	    					    	@Override 
-//	    					    	public void run() {	
-//	    					    		cTopL3.clear();
-//	    					    		cTopL2.clear();
-//	    					    		drawGraphTop(cTopL1);
-//	    					    	}
-//	    					    });
-//	    			        }
-//	    		}, 2000);
+	    	
+	    		new Timer().schedule(new TimerTask() {
+
+	    			        @Override
+	    			        public void run() {
+	    						Platform.runLater(new Runnable() { 
+	    						      
+	    					    	@Override 
+	    					    	public void run() {	
+	    					    		switch (val) {
+										case "top":
+		    					    		cTopL3.clear();
+		    					    		cTopL2.clear();
+//		    					    		drawGraphTop(cTopL1);
+		    					    		mElevationChart.drawScaledImage(cTopL1, newValue.doubleValue()/2);
+											break;
+											
+										case "down":
+											cBtmL3.clear();
+		    					    		cBtmL2.clear();
+//		    					    		drawGraphBottom(cBtmL1);
+		    					    		mAzimuthChart.drawScaledImage(cBtmL1, newValue.doubleValue()/2);
+											break;
+
+										default:
+											break;
+										}
+	    					    	}
+	    					    });
+	    			        }
+	    		}, 1000);
 			}
 		});		
 	}
@@ -410,8 +428,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	}
 	
     private void drawGraphTop(Canvas canvas) {    	
-    	mElevationChart = ElevationChart.getInstance();
-    	mElevationChart.init(canvas);   	
+    	mElevationChart = new ElevationChart(canvas);   	
     	
 //    	mElevationChart.drawBackground();
 //    	mElevationChart.drawElevationLine(20);
@@ -491,13 +508,23 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
     
 	private void drawGraphBottom(Canvas canvas) {
-		mAzimuthChart = AzimuthChart.getInstance();
-		mAzimuthChart.init(canvas);
-		mAzimuthChart.drawBackground();
-		mAzimuthChart.drawAzimuthLine(10.5);
-		mAzimuthChart.drawLandingStrip(NM);
-		mAzimuthChart.drawDistanceGrid(NM, ADJUST);
-		mAzimuthChart.drawText();
+		mAzimuthChart = new AzimuthChart(canvas);
+		
+//		mAzimuthChart.drawBackground();
+//		mAzimuthChart.drawAzimuthLine(10.5);
+//		mAzimuthChart.drawLandingStrip(NM);
+//		mAzimuthChart.drawDistanceGrid(NM, ADJUST);
+//		mAzimuthChart.drawText();
+		    	
+    	GraphicsContext gc = canvas.getGraphicsContext2D();
+    	gc.save();
+    	mAzimuthChart.drawBackgroundOnImage();
+    	mAzimuthChart.drawAzimuthLineOnImage(10.5);
+    	mAzimuthChart.drawLandingStripOnImage(NM);
+    	mAzimuthChart.drawDistanceGridOnImage(NM, ADJUST);
+    	mAzimuthChart.drawTextOnImage();
+    	gc.drawImage(mAzimuthChart.getImage(), 0, 0);
+    	gc.restore();
 	}
 	
 	public void refreshCanvas(DataObserver dataObserver) {

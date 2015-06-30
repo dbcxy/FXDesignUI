@@ -1,5 +1,8 @@
 package model.graph;
 
+import java.awt.BasicStroke;
+
+import model.GraphChart;
 import utils.Constance;
 import utils.ModelDrawing;
 import views.ResizableCanvas;
@@ -9,42 +12,22 @@ import javafx.scene.effect.Light.Point;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
-public class AzimuthChart implements ILayoutParam {
+public class AzimuthChart extends GraphChart {
 	
-	double actualWidth;
-	double actualHeight;
-	double HEIGHT_OFF;
-	double WIDTH_OFF;
 	double azimuthAngle;
-	int dist;
-	int deltaDist;
+	double dist;
+	double deltaDist;
 	
-	private Canvas mCanvas;
-	private GraphicsContext gc;
-	
-	private static AzimuthChart instance;
-
-    static {
-        instance = new AzimuthChart();
-    }
-    
-    public static AzimuthChart getInstance() {
-        return instance;
-    }
-	
-	public void init(Canvas canvas) {
-		mCanvas = canvas;
-    	gc = canvas.getGraphicsContext2D();    	
-    	actualWidth = mCanvas.getWidth();
-    	actualHeight = mCanvas.getHeight();
-    	HEIGHT_OFF = actualHeight-TEXT_OFFSET;
-    	WIDTH_OFF = actualWidth-OFFSET;
+	public AzimuthChart(Canvas canvas) {
+		super(canvas);
 	}
 	
-	public void drawBackground() {
-    	gc.clearRect(0, 0, actualWidth, actualHeight);
-    	gc.setFill(Color.BLACK);
-        gc.fillRect(0,0,actualWidth, actualHeight);
+	public void drawAzimuthLineOnImage(double azAngle) {
+		azimuthAngle = azAngle;
+        g2d.setColor(java.awt.Color.CYAN);
+        g2d.setStroke(new BasicStroke(2));
+        ModelDrawing.drawLineAtAngle(g2d, OFFSET, (int)HEIGHT_OFF/2,(int) WIDTH_OFF, -azimuthAngle);//cross line top az degrees
+        ModelDrawing.drawLineAtAngle(g2d, OFFSET, (int)HEIGHT_OFF/2,(int) WIDTH_OFF, azimuthAngle);//cross line bottom az degrees
 	}
 	
 	public void drawAzimuthLine(double azAngle) {
@@ -55,7 +38,21 @@ public class AzimuthChart implements ILayoutParam {
         ModelDrawing.drawLineAtAngle(gc, OFFSET, HEIGHT_OFF/2, WIDTH_OFF, azAngle);//cross line at bottom az degrees
 	}
 	
-	public void drawLandingStrip(int dist) {
+	public void drawLandingStripOnImage(double dist) {
+        g2d.setColor(java.awt.Color.LIGHT_GRAY);
+        g2d.drawLine((int)(OFFSET+dist),(int)(HEIGHT_OFF/2-OFFSET/2),(int)(OFFSET+OFFSET*dist),(int)(HEIGHT_OFF/2-OFFSET/2));//above center line
+        g2d.drawLine((int)(OFFSET+dist),(int)(HEIGHT_OFF/2+OFFSET/2),(int)(OFFSET+OFFSET*dist),(int)(HEIGHT_OFF/2+OFFSET/2));//below center line
+        g2d.setColor(java.awt.Color.RED);
+        g2d.drawLine((int)(OFFSET+dist),(int)(HEIGHT_OFF/2),(int)(OFFSET+(1+OFFSET)*dist),(int)(HEIGHT_OFF/2));//center line
+        g2d.setColor(java.awt.Color.CYAN);
+        g2d.setStroke(new BasicStroke((float) 0.5));
+        Point p1 = ModelDrawing.getNextPointAtAngle(OFFSET+dist, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*dist, (azimuthAngle-0.5)/2);//Point below
+        ModelDrawing.drawDashedLine(g2d, OFFSET+dist, HEIGHT_OFF/2, p1.getX(), p1.getY());
+        Point p2 = ModelDrawing.getNextPointAtAngle(OFFSET+dist, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*dist, -(azimuthAngle-0.5)/2);//Point above
+        ModelDrawing.drawDashedLine(g2d, OFFSET+dist, HEIGHT_OFF/2, p2.getX(), p2.getY());
+	}
+	
+	public void drawLandingStrip(double dist) {
         gc.setStroke(Color.AQUAMARINE);
         gc.strokeLine(OFFSET+dist,HEIGHT_OFF/2-OFFSET/2,OFFSET+OFFSET*dist,HEIGHT_OFF/2-OFFSET/2);//above center line
         gc.strokeLine(OFFSET+dist,HEIGHT_OFF/2+OFFSET/2,OFFSET+OFFSET*dist,HEIGHT_OFF/2+OFFSET/2);//below center line
@@ -69,7 +66,34 @@ public class AzimuthChart implements ILayoutParam {
 //        gc.setLineDashes(0);
 	}
 	
-	public void drawDistanceGrid(int distance, int deltaDistance) {
+	public void drawDistanceGridOnImage(double distance, double deltaDistance) {
+		this.dist = distance;
+		this.deltaDist = deltaDistance;
+		g2d.setStroke(new BasicStroke((float) 1.5));
+        Point pTop = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF/2, deltaDist, -Math.floor(azimuthAngle));
+        Point pBtm = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF/2, deltaDist, Math.floor(azimuthAngle));
+        for(int i=0;i<(WIDTH_OFF/dist)-1;i++){
+        	if(i==0) {
+        		
+        		//dotted red line
+        		g2d.setColor(java.awt.Color.RED);
+//        		gc.setLineDashes(OFFSET/2);
+        		g2d.drawLine((int)(OFFSET+dist+2*OFFSET),(int)pTop.getY(),(int)(OFFSET+dist+2*OFFSET),(int)pBtm.getY());
+//        		gc.setLineDashes(0);
+        		
+        		//reset color
+        		g2d.setColor(java.awt.Color.GRAY);
+        	} else if((i%5)==0) {
+        		g2d.setColor(java.awt.Color.YELLOW);
+        	} else
+        		g2d.setColor(java.awt.Color.GREEN);
+            g2d.drawLine((int)(OFFSET+(i+1)*dist),(int)pTop.getY(),(int)(OFFSET+(i+1)*dist),(int)pBtm.getY());
+            pBtm = ModelDrawing.getNextPointAtAngle(pBtm.getX(), pBtm.getY(), deltaDist, Math.floor(azimuthAngle));
+            pTop = ModelDrawing.getNextPointAtAngle(pTop.getX(), pTop.getY(), deltaDist, -Math.floor(azimuthAngle));
+        }
+	}
+	
+	public void drawDistanceGrid(double distance, double deltaDistance) {
 		dist = distance;
 		deltaDist = deltaDistance;
 		gc.setLineWidth(1.5);    
@@ -96,6 +120,29 @@ public class AzimuthChart implements ILayoutParam {
         }
 	}
 	
+	public void drawTextOnImage() {
+        int count = 0;
+        g2d.setFont(new java.awt.Font("Sans Serif",java.awt.Font.PLAIN, 16));
+        g2d.setColor(java.awt.Color.RED);
+        g2d.drawString("AZ Ang    : "+Constance.AZ_ANGLE, OFFSET, TEXT_OFFSET+HGAP*count);
+        count++;
+        g2d.setColor(java.awt.Color.YELLOW);
+        g2d.drawString("EL Tilt      : "+Constance.EL_TILT, OFFSET, TEXT_OFFSET+HGAP*count);
+        count++;count++;
+        
+        g2d.setFont(new java.awt.Font("Sans Serif",java.awt.Font.PLAIN, 12));
+        g2d.setColor(java.awt.Color.CYAN);
+        g2d.drawString("Approach Angle   : "+Constance.APPROACH_ANGLE, OFFSET, TEXT_OFFSET+HGAP*count);
+        count++;
+        g2d.drawString("Offset                   : "+Constance.OFFSET, OFFSET, TEXT_OFFSET+HGAP*count);
+        count = 0;
+        
+        g2d.setFont(new java.awt.Font("Sans Serif",java.awt.Font.PLAIN, 18));
+        g2d.setColor(java.awt.Color.YELLOW);
+        g2d.drawString("-", OFFSET, (int) (HEIGHT_OFF/2+HGAP+OFFSET));
+        g2d.drawString("+", OFFSET, (int) (HEIGHT_OFF/2-HGAP));
+	}
+	
 	public void drawText() {
         int count = 0;
         gc.setFont(new Font("Sans Serif", 16));
@@ -118,19 +165,6 @@ public class AzimuthChart implements ILayoutParam {
         gc.setStroke(Color.YELLOW);
         gc.strokeText("-", OFFSET, HEIGHT_OFF/2+HGAP+OFFSET);
         gc.strokeText("+", OFFSET, HEIGHT_OFF/2-HGAP);
-	}
-	
-	public void invalidate() {
-		drawBackground();
-		drawAzimuthLine(azimuthAngle);
-		drawDistanceGrid(dist, deltaDist);
-		drawLandingStrip(dist);
-		drawText();
-	}
-
-	@Override
-	public void draw(GraphicsContext gc) {
-		
 	}
 
 }

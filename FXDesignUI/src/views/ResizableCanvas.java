@@ -5,11 +5,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class ResizableCanvas extends Canvas {
-	
-	private double scaledWidth;
-	private double scaledHeight;
-	private boolean once = true;
-	 
+
     public ResizableCanvas() {
         // Redraw canvas when size changes.
         widthProperty().addListener(evt -> draw());
@@ -20,13 +16,9 @@ public class ResizableCanvas extends Canvas {
     	getGraphicsContext2D().clearRect(0, 0, getWidth(), getHeight());
     }
 
-    private void draw() {
+    public void draw() {
     	double width = getWidth();
         double height = getHeight();
-        if(once) {
-        	scaledWidth = width;
-        	scaledHeight = height;
-        }
         GraphicsContext gc = getGraphicsContext2D();
         gc.clearRect(0, 0, width, height);
         gc.setFill(Color.BLACK);
@@ -49,25 +41,5 @@ public class ResizableCanvas extends Canvas {
     @Override
     public double prefHeight(double width) {
         return getHeight();
-    }
-    
-    public void setScaledDimension(boolean is) {
-    	this.once = is;
-    }
-    
-    public void setScaledWidth(double sWidth) {
-    	this.scaledWidth = sWidth;
-    }
-    
-    public void setScaledHeight(double sHeight) {
-    	this.scaledHeight = sHeight;
-    }
-    
-    public double getScaledWidth() {
-    	return this.scaledWidth;
-    }
-    
-    public double getScaledHeight() {
-    	return this.scaledHeight;
     }
 }
