@@ -1,80 +1,182 @@
 package model;
 
 import utils.Constance;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.effect.Light.Point;
+import model.graph.ILayoutParam;
 
-public class MatrixRef {
+public class MatrixRef implements ILayoutParam{
 	
-	private double startX;
-	private double startY;
-	private double endX;
-	private double endY;
+	private double actualXdimen;
+	private double actualYdimen;
 	
-	private double zoomStartX;
-	private double zoomStartY;
-	private double zoomEndX;
-	private double zoomEndY;
+	private double drawableXArea;
+	private double drawableYArea;
 	
+	private double maxElevation;
+	private double minElevation;
+	
+	private double maxRange;
+	private double minRange;
+	
+	private double maxAzimuth;
+	private double minAzimuth;
+	
+	private double touchDown;
 	private int zoomLevel;
 	
-	public MatrixRef() {
+	private static MatrixRef instance = null;
 	
+	protected MatrixRef() {
+		// Exists only to defeat instantiation.
 	}
 	
-	public MatrixRef(double sX,double sY, double eX, double eY) {
-		this.startX = sX;
-		this.startY = sY;
-		this.endX = eX;
-		this.endY = eY;
+	public static MatrixRef getInstance() {
+	      if(instance == null) {
+	         instance = new MatrixRef();
+	      }
+	      return instance;
+	}
+	
+	public void setActualXY(double acutalX, double actualY) {
+		actualXdimen = acutalX;
+		actualYdimen = actualY;
 		
-		zoomStartX = startX;
-		zoomStartY = startY;
-		zoomEndX = endX;
-		zoomEndY = endY;
+		drawableXArea = actualXdimen - OFFSET;
+		drawableYArea = actualYdimen - TEXT_OFFSET;
 	}
+	
+	public void setElevationVal(double max, double min) {
+		maxElevation = max;
+		minElevation = min;
+	}
+	
+	public void setAzimuthVal(double max, double min) {
+		maxAzimuth = max;
+		minAzimuth = min;
+	}
+	
+	public void setRangeVal(double max, double min) {
+		maxRange = max+Constance.RANGE_DISP;//ading 1NM or 1KM more
+		minRange = min;
+	}
+	
+	public void setTouchDown(double td) {
+		touchDown = td;
+	}
+	
+	public Point toElevationPixels(double el, double r) {
+		Point p = new Point();
+		double x = OFFSET + ((r*drawableXArea)/maxRange);
+		double y = drawableYArea - ((el*drawableYArea)/maxElevation);				
+		p.setX(x);
+		p.setY(y);
+		return p;
+	}
+	
+	public Point toAzimuthPixels(double az, double r) {
+		Point p = new Point();
+		double x = ((r*drawableXArea)/maxRange);
+		double y;
+		if((0 < az) && (az < maxAzimuth))
+			y = drawableYArea/2 - ((az*(drawableYArea/2))/maxAzimuth);
+		else if((minAzimuth <= az) && (az < 0))
+			y = drawableYArea/2 + ((az*(drawableYArea/2))/minAzimuth);
+		else
+			y = drawableYArea/2;
+		p.setX(x);
+		p.setY(y);
+		return p;
+	}
+	
+	
+	@Override
+	public void draw(GraphicsContext gc) {
 		
-	public boolean checkPointInZoomedRegion(double X, double Y) {
-		if((zoomStartX <= X) && (X <= zoomEndX))
-			if((zoomStartY <= Y) && (Y <= zoomEndY))
-				return true;
-		return false;
-	}
-	
-	public void setZoomlevel(int Scale) {
-		zoomLevel = Scale;
 	}
 
-	public double getOriginalStartX() {
-		return startX;
+	public double getActualXdimen() {
+		return actualXdimen;
 	}
 
-	public void setStartX(double startX) {
-		this.startX = startX;
+	public void setActualXdimen(double actualXdimen) {
+		this.actualXdimen = actualXdimen;
 	}
 
-	public double getOriginalStartY() {
-		return startY;
+	public double getActualYdimen() {
+		return actualYdimen;
 	}
 
-	public void setStartY(double startY) {
-		this.startY = startY;
+	public void setActualYdimen(double actualYdimen) {
+		this.actualYdimen = actualYdimen;
 	}
 
-	public double getOriginalEndX() {
-		return endX;
+	public double getDrawableXArea() {
+		return drawableXArea;
 	}
 
-	public void setEndX(double endX) {
-		this.endX = endX;
+	public void setDrawableXArea(double drawableXArea) {
+		this.drawableXArea = drawableXArea;
 	}
 
-	public double getOriginalEndY() {
-		return endY;
+	public double getDrawableYArea() {
+		return drawableYArea;
 	}
 
-	public void setEndY(double endY) {
-		this.endY = endY;
+	public void setDrawableYArea(double drawableYArea) {
+		this.drawableYArea = drawableYArea;
 	}
-	
-	
+
+	public double getMaxElevation() {
+		return maxElevation;
+	}
+
+	public void setMaxElevation(double maxElevation) {
+		this.maxElevation = maxElevation;
+	}
+
+	public double getMinElevation() {
+		return minElevation;
+	}
+
+	public void setMinElevation(double minElevation) {
+		this.minElevation = minElevation;
+	}
+
+	public double getMaxRange() {
+		return maxRange;
+	}
+
+	public void setMaxRange(double maxRange) {
+		this.maxRange = maxRange+Constance.RANGE_DISP;
+	}
+
+	public double getMinRange() {
+		return minRange;
+	}
+
+	public void setMinRange(double minRange) {
+		this.minRange = minRange;
+	}
+
+	public double getMaxAzimuth() {
+		return maxAzimuth;
+	}
+
+	public void setMaxAzimuth(double maxAzimuth) {
+		this.maxAzimuth = maxAzimuth;
+	}
+
+	public double getMinAzimuth() {
+		return minAzimuth;
+	}
+
+	public void setMinAzimuth(double minAzimuth) {
+		this.minAzimuth = minAzimuth;
+	}
+
+	public double getTouchDown() {
+		return touchDown;
+	}
 
 }

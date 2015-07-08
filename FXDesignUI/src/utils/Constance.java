@@ -19,9 +19,19 @@ public class Constance {
 	public static String DISTANCE = null;
 	public static String HEIGHT = null;
 	public static String EL_ANGLE = null;
+	
+	public static String UNITS = "NM";
 
-	public static long DISPLAY_HEIGHT 		= 10000;//10000ft or ~3.05Km (max)
-	public static long EACH_ZOOM_LEVEL 		= 1000;//1000ft or ~305m (each)
+	public static long ELEVATION_MAX		= 10000;//MKS or FPS
+	public static long ELEVATION_DISP		= 1000;//ft/Km or NM
+	public static long ELEVATION_MIN		= 0;//ft or mts
+	public static long AZIMUTH_MAX			= 5000;//ft or mts
+	public static long AZIMUTH_DISP			= 1000;//ft/Km or NM
+	public static long AZIMUTH_MIN			= -5000;//ft or mts
+	public static long RANGE_MAX			= 10;//km or NM
+	public static long RANGE_DISP			= 1;//km or NM
+	public static long RANGE_MIN			= 0;//km or NM
+	public static long TOUCH_DOWN			= 1;//km or NM
 	
 	
 	public static boolean IS_CLOSE			= false;
@@ -39,30 +49,4 @@ public class Constance {
 	public static final String CURSOR 		= " > ";
 	public static final String CURSOR_DUB	= " >> ";
 	
-	
-//  gc.fillOval(10, 60, 30, 30);
-//  gc.strokeOval(60, 60, 30, 30);
-//  gc.fillRoundRect(110, 60, 30, 30, 10, 10);
-//  gc.strokeRoundRect(160, 60, 30, 30, 10, 10);
-//  gc.fillArc(10, 110, 30, 30, 45, 240, ArcType.OPEN);
-//  gc.fillArc(60, 110, 30, 30, 45, 240, ArcType.CHORD);
-//  gc.fillArc(110, 110, 30, 30, 45, 240, ArcType.ROUND);
-//  gc.strokeArc(10, 160, 30, 30, 45, 240, ArcType.OPEN);
-//  gc.strokeArc(60, 160, 30, 30, 45, 240, ArcType.CHORD);
-//  gc.strokeArc(110, 160, 30, 30, 45, 240, ArcType.ROUND);
-//  gc.fillPolygon(new double[]{10, 40, 10, 40},
-//                 new double[]{210, 210, 240, 240}, 4);
-//  gc.strokePolygon(new double[]{60, 90, 60, 90},
-//                   new double[]{210, 210, 240, 240}, 4);
-//  gc.strokePolyline(new double[]{110, 140, 110, 140},
-//                    new double[]{210, 210, 240, 240}, 4);
-	
-//	
-//	private Point calcIntersectionPoint(double x1, double y1, double x2, double y2){
-//		Point point = new Point();
-//		double s = Math.tan(-20);
-//		point.setX(x2+s*(y1-y2));
-//		point.setY(y2+s*(x2-x1));
-//		return point;
-//	}
 }

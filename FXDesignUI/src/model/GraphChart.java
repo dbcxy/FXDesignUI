@@ -17,8 +17,8 @@ public class GraphChart implements ILayoutParam{
 	
 	protected double actualWidth;
 	protected double actualHeight;
-	protected double HEIGHT_OFF;
-	protected double WIDTH_OFF;
+	protected static double HEIGHT_OFF;
+	protected static double WIDTH_OFF;
 	
 	Canvas mCanvas;
 	protected GraphicsContext gc;

@@ -1,14 +1,19 @@
 package model.graph;
 
 import java.awt.BasicStroke;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
 
 import model.GraphChart;
 import utils.Constance;
 import utils.ModelDrawing;
 import views.ResizableCanvas;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
+import javafx.scene.image.Image;
+import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
@@ -120,8 +125,17 @@ public class AzimuthChart extends GraphChart {
         }
 	}
 	
-	public void drawTextOnImage() {
+	public static Image getImage(BufferedImage bufferedImage) {
+		WritableImage wr = null;
+		Image img = SwingFXUtils.toFXImage(bufferedImage, wr);  
+		return img;
+	}
+	
+	public static BufferedImage drawTextOnImage(Canvas canvas) {
         int count = 0;
+        BufferedImage bufferedImage = new BufferedImage((int) (canvas.getWidth()), 
+				 (int) canvas.getHeight(), BufferedImage.TYPE_INT_ARGB);
+		Graphics2D g2d = bufferedImage.createGraphics();
         g2d.setFont(new java.awt.Font("Sans Serif",java.awt.Font.PLAIN, 16));
         g2d.setColor(java.awt.Color.RED);
         g2d.drawString("AZ Ang    : "+Constance.AZ_ANGLE, OFFSET, TEXT_OFFSET+HGAP*count);
@@ -141,6 +155,8 @@ public class AzimuthChart extends GraphChart {
         g2d.setColor(java.awt.Color.YELLOW);
         g2d.drawString("-", OFFSET, (int) (HEIGHT_OFF/2+HGAP+OFFSET));
         g2d.drawString("+", OFFSET, (int) (HEIGHT_OFF/2-HGAP));
+        
+        return bufferedImage;
 	}
 	
 	public void drawText() {
