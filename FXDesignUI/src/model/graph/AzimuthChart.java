@@ -1,19 +1,12 @@
 package model.graph;
 
-import java.awt.BasicStroke;
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
-
 import model.GraphChart;
+import model.MatrixRef;
 import utils.Constance;
 import utils.ModelDrawing;
-import views.ResizableCanvas;
-import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
-import javafx.scene.image.Image;
-import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
@@ -21,146 +14,115 @@ public class AzimuthChart extends GraphChart {
 	
 	double azimuthAngle;
 	double dist;
-	double deltaDist;
+	double midAzimuth;
+	
+	MatrixRef matrixRef = MatrixRef.getInstance();
+	Point startPoint;
+	Point endPoint;
 	
 	public AzimuthChart(Canvas canvas) {
 		super(canvas);
-	}
-	
-	public void drawAzimuthLineOnImage(double azAngle) {
-		azimuthAngle = azAngle;
-        g2d.setColor(java.awt.Color.CYAN);
-        g2d.setStroke(new BasicStroke(2));
-        ModelDrawing.drawLineAtAngle(g2d, OFFSET, (int)HEIGHT_OFF/2,(int) WIDTH_OFF, -azimuthAngle);//cross line top az degrees
-        ModelDrawing.drawLineAtAngle(g2d, OFFSET, (int)HEIGHT_OFF/2,(int) WIDTH_OFF, azimuthAngle);//cross line bottom az degrees
+		midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
+		
 	}
 	
 	public void drawAzimuthLine(double azAngle) {
-		azimuthAngle = azAngle;
+		this.azimuthAngle = azAngle;
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(2);
-        ModelDrawing.drawLineAtAngle(gc, OFFSET, HEIGHT_OFF/2, WIDTH_OFF, -azAngle);//cross line at top az degrees
-        ModelDrawing.drawLineAtAngle(gc, OFFSET, HEIGHT_OFF/2, WIDTH_OFF, azAngle);//cross line at bottom az degrees
+        startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getMinRange());
+        endPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getMaxRange()); 
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY(),endPoint.getX(), -azimuthAngle);//cross line at top az degrees
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY(),endPoint.getX(), azimuthAngle);//cross line at bottom az degrees
 	}
-	
-	public void drawLandingStripOnImage(double dist) {
-        g2d.setColor(java.awt.Color.LIGHT_GRAY);
-        g2d.drawLine((int)(OFFSET+dist),(int)(HEIGHT_OFF/2-OFFSET/2),(int)(OFFSET+OFFSET*dist),(int)(HEIGHT_OFF/2-OFFSET/2));//above center line
-        g2d.drawLine((int)(OFFSET+dist),(int)(HEIGHT_OFF/2+OFFSET/2),(int)(OFFSET+OFFSET*dist),(int)(HEIGHT_OFF/2+OFFSET/2));//below center line
-        g2d.setColor(java.awt.Color.RED);
-        g2d.drawLine((int)(OFFSET+dist),(int)(HEIGHT_OFF/2),(int)(OFFSET+(1+OFFSET)*dist),(int)(HEIGHT_OFF/2));//center line
-        g2d.setColor(java.awt.Color.CYAN);
-        g2d.setStroke(new BasicStroke((float) 0.5));
-        Point p1 = ModelDrawing.getNextPointAtAngle(OFFSET+dist, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*dist, (azimuthAngle-0.5)/2);//Point below
-        ModelDrawing.drawDashedLine(g2d, OFFSET+dist, HEIGHT_OFF/2, p1.getX(), p1.getY());
-        Point p2 = ModelDrawing.getNextPointAtAngle(OFFSET+dist, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*dist, -(azimuthAngle-0.5)/2);//Point above
-        ModelDrawing.drawDashedLine(g2d, OFFSET+dist, HEIGHT_OFF/2, p2.getX(), p2.getY());
-	}
-	
-	public void drawLandingStrip(double dist) {
-        gc.setStroke(Color.AQUAMARINE);
-        gc.strokeLine(OFFSET+dist,HEIGHT_OFF/2-OFFSET/2,OFFSET+OFFSET*dist,HEIGHT_OFF/2-OFFSET/2);//above center line
-        gc.strokeLine(OFFSET+dist,HEIGHT_OFF/2+OFFSET/2,OFFSET+OFFSET*dist,HEIGHT_OFF/2+OFFSET/2);//below center line
-        gc.setStroke(Color.RED);
-        gc.strokeLine(OFFSET+dist,HEIGHT_OFF/2,OFFSET+(1+OFFSET)*dist,HEIGHT_OFF/2);//center line
+
+	public void drawLandingStrip(double centerDist, double offsetInAzimuth) {
+		this.dist = centerDist;
+        Point offset = new Point(offsetInAzimuth,offsetInAzimuth,offsetInAzimuth, null);
+		
+        startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
+        endPoint = matrixRef.toAzimuthPixels(midAzimuth, dist-Constance.RANGE_DISP);
+        
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(1);
 //        gc.setLineDashes(OFFSET/2);
-        ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*dist, (azimuthAngle-0.5)/2);//imaginary below line
-        ModelDrawing.drawLineAtAngle(gc, OFFSET+dist, HEIGHT_OFF/2, OFFSET+(OFFSET-1)*dist, -(azimuthAngle-0.5)/2);//imaginary above line
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), (azimuthAngle-0.5)/2);//imaginary below line
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(azimuthAngle-0.5)/2);//imaginary above line
 //        gc.setLineDashes(0);
+        
+        endPoint = matrixRef.toAzimuthPixels(midAzimuth, dist);
+        gc.setStroke(Color.AQUAMARINE);
+        gc.strokeLine(startPoint.getX(), startPoint.getY()-offset.getY(), endPoint.getX(),endPoint.getY()-offset.getY());//above center line
+        gc.strokeLine(startPoint.getX(), startPoint.getY()+offset.getY(), endPoint.getX(),endPoint.getY()+offset.getY());//below center line
+        
+        endPoint = matrixRef.toAzimuthPixels(midAzimuth, dist+Constance.RANGE_DISP);
+        gc.setStroke(Color.RED);
+        gc.strokeLine(startPoint.getX(), startPoint.getY(), endPoint.getX(),endPoint.getY());//center line
+
 	}
 	
-	public void drawDistanceGridOnImage(double distance, double deltaDistance) {
-		this.dist = distance;
-		this.deltaDist = deltaDistance;
-		g2d.setStroke(new BasicStroke((float) 1.5));
-        Point pTop = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF/2, deltaDist, -Math.floor(azimuthAngle));
-        Point pBtm = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF/2, deltaDist, Math.floor(azimuthAngle));
-        for(int i=0;i<(WIDTH_OFF/dist)-1;i++){
-        	if(i==0) {
-        		
-        		//dotted red line
-        		g2d.setColor(java.awt.Color.RED);
-//        		gc.setLineDashes(OFFSET/2);
-        		g2d.drawLine((int)(OFFSET+dist+2*OFFSET),(int)pTop.getY(),(int)(OFFSET+dist+2*OFFSET),(int)pBtm.getY());
-//        		gc.setLineDashes(0);
-        		
-        		//reset color
-        		g2d.setColor(java.awt.Color.GRAY);
-        	} else if((i%5)==0) {
-        		g2d.setColor(java.awt.Color.YELLOW);
-        	} else
-        		g2d.setColor(java.awt.Color.GREEN);
-            g2d.drawLine((int)(OFFSET+(i+1)*dist),(int)pTop.getY(),(int)(OFFSET+(i+1)*dist),(int)pBtm.getY());
-            pBtm = ModelDrawing.getNextPointAtAngle(pBtm.getX(), pBtm.getY(), deltaDist, Math.floor(azimuthAngle));
-            pTop = ModelDrawing.getNextPointAtAngle(pTop.getX(), pTop.getY(), deltaDist, -Math.floor(azimuthAngle));
-        }
+	public void drawRedDistanceLine(double offsetInRange) {
+		double range = matrixRef.toRangePixels(offsetInRange);
+		
+		startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
+        
+		//dotted red line
+		gc.setStroke(Color.RED);
+		gc.setLineWidth(1.5); 
+		gc.setLineDashes(OFFSET/2);
+
+        endPoint = matrixRef.toAzimuthPixels(Constance.AZIMUTH_DISP, matrixRef.getTouchDown());
+		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),endPoint.getX()+range,endPoint.getY());
+		
+        endPoint = matrixRef.toAzimuthPixels(-Constance.AZIMUTH_DISP, matrixRef.getTouchDown());
+		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),endPoint.getX()+range,endPoint.getY());
+		gc.setLineDashes(0);
 	}
-	
-	public void drawDistanceGrid(double distance, double deltaDistance) {
-		dist = distance;
-		deltaDist = deltaDistance;
-		gc.setLineWidth(1.5);    
-        Point pTop = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF/2, deltaDist, -Math.floor(azimuthAngle));
-        Point pBtm = ModelDrawing.getNextPointAtAngle(OFFSET, HEIGHT_OFF/2, deltaDist, Math.floor(azimuthAngle));
-        for(int i=0;i<(WIDTH_OFF/dist)-1;i++){
-        	if(i==0) {
+
+	public void drawDistanceGrid() {
+		Point endTop = null;
+		Point endBttm = null;
+		startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
+		
+		//TD Line
+		gc.setLineWidth(1);
+
+		//remaining Lines		
+        for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
+        	
+        	startPoint = matrixRef.toAzimuthPixels(midAzimuth, i);
+        	if((i*Constance.AZIMUTH_DISP) < matrixRef.getMaxAzimuth()) {
+        		endTop = matrixRef.toAzimuthPixels((i)*Constance.AZIMUTH_DISP, i);
+        		endBttm = matrixRef.toAzimuthPixels((-i)*Constance.AZIMUTH_DISP, i);
+        	} else {
+        		endTop.setX(startPoint.getX());
+        		endTop.setY(matrixRef.toAzimuthPixels(matrixRef.getMaxAzimuth()));
         		
-        		//dotted red line
-        		gc.setStroke(Color.RED);
-//        		gc.setLineDashes(OFFSET/2);
-        		gc.strokeLine(OFFSET+dist+2*OFFSET,pTop.getY(),OFFSET+dist+2*OFFSET,pBtm.getY());
-//        		gc.setLineDashes(0);
-        		
-        		//reset color
-        		gc.setStroke(Color.CHARTREUSE);
-        	} else if((i%5)==0) {
+        		endBttm.setX(startPoint.getX());
+        		endBttm.setY(matrixRef.toAzimuthPixels(matrixRef.getMinAzimuth()));
+        	}
+            
+        	if((i%5)==0) {
         		gc.setStroke(Color.YELLOW);
-        	} else
+        		gc.strokeLine(startPoint.getX(),startPoint.getY(),endTop.getX(),endTop.getY());
+        		gc.strokeLine(startPoint.getX(),startPoint.getY(),endBttm.getX(),endBttm.getY());
+        	} else if (i==1) {
+                //draw TD
+        		gc.setStroke(Color.YELLOW);
+        		gc.strokeLine(startPoint.getX(),startPoint.getY(),endTop.getX(),endTop.getY());
+        		gc.strokeLine(startPoint.getX(),startPoint.getY(),endBttm.getX(),endBttm.getY());
+//        		gc.strokeText(" TD ", startPoint.getX()-OFFSET, startPoint.getY()+HGAP);
+        	} else {
         		gc.setStroke(Color.GREEN);
-            gc.strokeLine(OFFSET+(i+1)*dist,pTop.getY(),OFFSET+(i+1)*dist,pBtm.getY());
-            pBtm = ModelDrawing.getNextPointAtAngle(pBtm.getX(), pBtm.getY(), deltaDist, Math.floor(azimuthAngle));
-            pTop = ModelDrawing.getNextPointAtAngle(pTop.getX(), pTop.getY(), deltaDist, -Math.floor(azimuthAngle));
+        		gc.strokeLine(startPoint.getX(),startPoint.getY(),endTop.getX(),endTop.getY());
+        		gc.strokeLine(startPoint.getX(),startPoint.getY(),endBttm.getX(),endBttm.getY());
+        	}
         }
 	}
-	
-	public static Image getImage(BufferedImage bufferedImage) {
-		WritableImage wr = null;
-		Image img = SwingFXUtils.toFXImage(bufferedImage, wr);  
-		return img;
-	}
-	
-	public static BufferedImage drawTextOnImage(Canvas canvas) {
-        int count = 0;
-        BufferedImage bufferedImage = new BufferedImage((int) (canvas.getWidth()), 
-				 (int) canvas.getHeight(), BufferedImage.TYPE_INT_ARGB);
-		Graphics2D g2d = bufferedImage.createGraphics();
-        g2d.setFont(new java.awt.Font("Sans Serif",java.awt.Font.PLAIN, 16));
-        g2d.setColor(java.awt.Color.RED);
-        g2d.drawString("AZ Ang    : "+Constance.AZ_ANGLE, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;
-        g2d.setColor(java.awt.Color.YELLOW);
-        g2d.drawString("EL Tilt      : "+Constance.EL_TILT, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;count++;
-        
-        g2d.setFont(new java.awt.Font("Sans Serif",java.awt.Font.PLAIN, 12));
-        g2d.setColor(java.awt.Color.CYAN);
-        g2d.drawString("Approach Angle   : "+Constance.APPROACH_ANGLE, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;
-        g2d.drawString("Offset                   : "+Constance.OFFSET, OFFSET, TEXT_OFFSET+HGAP*count);
-        count = 0;
-        
-        g2d.setFont(new java.awt.Font("Sans Serif",java.awt.Font.PLAIN, 18));
-        g2d.setColor(java.awt.Color.YELLOW);
-        g2d.drawString("-", OFFSET, (int) (HEIGHT_OFF/2+HGAP+OFFSET));
-        g2d.drawString("+", OFFSET, (int) (HEIGHT_OFF/2-HGAP));
-        
-        return bufferedImage;
-	}
-	
-	public void drawText() {
-        int count = 0;
+
+	public static void drawText(Canvas canvas) {
+		int count = 0;
+		GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setFont(new Font("Sans Serif", 16));
         gc.setStroke(Color.RED);
         gc.strokeText("AZ Ang    : "+Constance.AZ_ANGLE, OFFSET, TEXT_OFFSET+HGAP*count);

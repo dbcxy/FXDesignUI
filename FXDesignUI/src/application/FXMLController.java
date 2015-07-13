@@ -93,13 +93,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	
 	@FXML Slider sliderZoomTop;
 	@FXML Slider sliderZoomBottom;
-	
 
-	//1Nautical Miles = 18.5KMs
-	//Graph Scale Since WIDTH_OFF = 880px
-	final int PX = 15;// Assuming 40NM in so many pixels
-	int NM;
-	int ADJUST;
 	private double originalSizeX, originalSizeY;
 	private double pressedX, pressedY;
 	private boolean isAppRunning = false;
@@ -120,7 +114,7 @@ public class FXMLController implements Initializable,ILayoutParam{
     protected void onStartAction(ActionEvent event) {
 		
 		if(!isAppRunning) {
-			initSystem();		
+			initSystem();
 			initTopChart();
 			initBottomChart();
 //			startNetworkTask();
@@ -160,29 +154,29 @@ public class FXMLController implements Initializable,ILayoutParam{
     @FXML 
     protected void handle5NMButtonAction(ActionEvent event) {
         actiontarget.setText("Display Scale set to 5NM");
-		setNMparameter(5);
-		invalidate();
+//		setNMparameter(5);
+//		invalidate();
     }
     
     @FXML 
     protected void handle10NMButtonAction(ActionEvent event) {
         actiontarget.setText("Display Scale set to 10NM");
-        setNMparameter(10);
-		invalidate();
+//        setNMparameter(10);
+//		invalidate();
     }
     
     @FXML 
     protected void handle20NMButtonAction(ActionEvent event) {
         actiontarget.setText("Display Scale set to 20NM");
-        setNMparameter(20);
-		invalidate();
+//        setNMparameter(20);
+//		invalidate();
     }
     
     @FXML 
     protected void handle40NMButtonAction(ActionEvent event) {
         actiontarget.setText("Display Scale set to 40NM");
-        setNMparameter(40);
-		invalidate();
+//        setNMparameter(40);
+//		invalidate();
     }
     
     @FXML
@@ -216,8 +210,6 @@ public class FXMLController implements Initializable,ILayoutParam{
 	}
     
     private void initCanvasLayout() {
-    	sliderZoomTop.toFront();
-    	sliderZoomBottom.toFront();
     	
     	cTopL0.widthProperty().bind(chartTop.widthProperty());
 		cTopL0.heightProperty().bind(chartTop.heightProperty());
@@ -255,26 +247,29 @@ public class FXMLController implements Initializable,ILayoutParam{
 		setNMparameter(10);
 		originalSizeX = chartTop.getWidth();
 		originalSizeY = chartTop.getHeight();
+
+		cTopL3.clear();
+		cTopL2.clear();
+		cTopL1.clear();
+		cTopL0.clear();
 		drawTextTop(cTopL0);
-        drawGraphTop(cTopL1);
-        updateObjects(cTopL2);
+		drawGraphTop(cTopL1);
+//        updateObjects(cTopL2);
         initPan(chartTop);
         initZoomSlider(sliderZoomTop, chartTop, chartTopScroll, "top");
-//        cTopL0.clear();
-//        cTopL1.clear();
-//        cTopL2.clear();
-        cTopL3.clear();
     	logger.info("Top Chart initialization");
 	}
 
 	private void initBottomChart() {
-    	drawTextBottom(cBtmL0);
-        drawGraphBottom(cBtmL1);
+		cBtmL3.clear();
+		cBtmL2.clear();
+		cBtmL1.clear();
+		cBtmL0.clear();
+		drawTextBottom(cBtmL0);
+		drawGraphBottom(cBtmL1);
 //        updateObjects(cBtmL2);
         initPan(chartBottom);
         initZoomSlider(sliderZoomBottom, chartBottom, chartBottomScroll, "down");
-        cBtmL3.clear();
-        cBtmL2.clear();
         logger.info("Bottom Chart initialization");
     }
 	
@@ -307,11 +302,11 @@ public class FXMLController implements Initializable,ILayoutParam{
 			public void changed(ObservableValue<? extends Number> observable,
 					Number oldValue, Number newValue) {
 				
-				pane.setPrefWidth(originalSizeX*newValue.doubleValue()/2); 
-	    		pane.setPrefHeight(originalSizeY*newValue.doubleValue()/2);
+//				pane.setPrefWidth(originalSizeX*newValue.doubleValue()/2); 
+//	    		pane.setPrefHeight(originalSizeY*newValue.doubleValue()/2);
 				
-//				pane.setScaleX(newValue.doubleValue()/2);
-//				pane.setScaleY(newValue.doubleValue()/2);				
+				pane.setScaleX(newValue.doubleValue()/2);
+				pane.setScaleY(newValue.doubleValue()/2);
 				
 				if(newValue.intValue()==2) {
 					pane.setScaleX(1.0);
@@ -339,7 +334,6 @@ public class FXMLController implements Initializable,ILayoutParam{
 											
 		    					    		drawTextTop(cTopL0);
 		    					    		drawGraphTop(cTopL1);
-//		    					    		mElevationChart.drawScaledImage(cTopL1, newValue.doubleValue()/2);
 											break;
 											
 										case "down":
@@ -348,8 +342,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 		    					    		cBtmL1.clear();
 		    					    		cBtmL0.clear();
 		    					    		drawTextBottom(cBtmL0);
-//		    					    		drawGraphBottom(cBtmL1);
-		    					    		mAzimuthChart.drawScaledImage(cBtmL1, newValue.doubleValue()/2);
+		    					    		drawGraphBottom(cBtmL1);
 											break;
 
 										default:
@@ -464,39 +457,19 @@ public class FXMLController implements Initializable,ILayoutParam{
 		default:
 			break;
 		}
-		
-		NM = PX * index; 
-		ADJUST = NM + index;
 	}
 	
     private void drawGraphTop(Canvas canvas) {    	
-    	mElevationChart = new ElevationChart(canvas); 
-    	
+    	mElevationChart = new ElevationChart(canvas);    	
     	mElevationChart.drawElevationLine(20);
-    	mElevationChart.drawLandingStrip(10, 10);//till 10NM
+    	mElevationChart.drawLandingStrip(9, 10);//till 9NM drawing shows till 10NM
+    	mElevationChart.drawRedDistanceLine(0.2);//200mts range offset from TD
     	mElevationChart.drawDistanceGrid();
     	
-//    	mElevationChart.drawElevationLine(20);
-//    	mElevationChart.drawLandingStrip(NM, 6.5);
-//    	mElevationChart.drawDistanceGrid(NM, ADJUST);
-    	
-//    	GraphicsContext gc = canvas.getGraphicsContext2D();
-//    	gc.save();
-//    	mElevationChart.drawElevationLineOnImage(20);
-//    	mElevationChart.drawLandingStripOnImage(NM, 6.5);
-//    	mElevationChart.drawDistanceGridOnImage(NM, ADJUST);
-//    	gc.drawImage(mElevationChart.getImage(), 0, 0);
-//    	gc.restore();
     }
     
     private void drawTextTop(Canvas canvas) {
     	ElevationChart.drawText(canvas);
-    	
-//    	GraphicsContext gc = canvas.getGraphicsContext2D();
-//    	gc.save();
-//    	BufferedImage bImage = ElevationChart.drawTextOnImage(canvas);
-//    	gc.drawImage(ElevationChart.getImage(bImage), 0, 0);
-//    	gc.restore();
     }
     
     private void updateObjects(Canvas canvas) {
@@ -564,31 +537,15 @@ public class FXMLController implements Initializable,ILayoutParam{
     
 	private void drawGraphBottom(Canvas canvas) {
 		mAzimuthChart = new AzimuthChart(canvas);
-		
-//		mAzimuthChart.drawBackground();
-//		mAzimuthChart.drawAzimuthLine(10.5);
-//		mAzimuthChart.drawLandingStrip(NM);
-//		mAzimuthChart.drawDistanceGrid(NM, ADJUST);
-//		mAzimuthChart.drawText();
-		    	
-    	GraphicsContext gc = canvas.getGraphicsContext2D();
-    	gc.save();
-//    	mAzimuthChart.drawBackgroundOnImage();
-    	mAzimuthChart.drawAzimuthLineOnImage(10.5);
-    	mAzimuthChart.drawLandingStripOnImage(NM);
-    	mAzimuthChart.drawDistanceGridOnImage(NM, ADJUST);
-    	gc.drawImage(mAzimuthChart.getImage(), 0, 0);
-    	gc.restore();
+		mAzimuthChart.drawAzimuthLine(10);
+		mAzimuthChart.drawLandingStrip(9,5);//till NM, and offset of 100ft / as of now 5px
+		mAzimuthChart.drawRedDistanceLine(0.2);//200mts range offset from TD
+		mAzimuthChart.drawDistanceGrid();
+
 	}
 	
 	private void drawTextBottom(Canvas canvas) {
-//    	AzimuthChart.drawText(canvas);
-    	
-    	GraphicsContext gc = canvas.getGraphicsContext2D();
-    	gc.save();
-    	BufferedImage bImage = AzimuthChart.drawTextOnImage(canvas);
-    	gc.drawImage(AzimuthChart.getImage(bImage), 0, 0);
-    	gc.restore();
+    	AzimuthChart.drawText(canvas);
     }
 	
 	public void refreshCanvas(DataObserver dataObserver) {

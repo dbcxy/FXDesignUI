@@ -57,7 +57,7 @@ public class MatrixRef implements ILayoutParam{
 	}
 	
 	public void setRangeVal(double max, double min) {
-		maxRange = max+Constance.RANGE_DISP;//ading 1NM or 1KM more
+		maxRange = max;
 		minRange = min;
 	}
 	
@@ -65,28 +65,45 @@ public class MatrixRef implements ILayoutParam{
 		touchDown = td;
 	}
 	
+	public double toRangePixels(double r) {
+		return (OFFSET + ((r*drawableXArea)/maxRange));
+	}
+	
 	public Point toElevationPixels(double el, double r) {
 		Point p = new Point();
 		double x = OFFSET + ((r*drawableXArea)/maxRange);
-		double y = drawableYArea - ((el*drawableYArea)/maxElevation);				
+		double y = toElevationPixels(el);			
 		p.setX(x);
 		p.setY(y);
 		return p;
 	}
 	
+	public double toElevationPixels(double el) {
+		return  drawableYArea - ((el*drawableYArea)/maxElevation);
+	}
+	
 	public Point toAzimuthPixels(double az, double r) {
 		Point p = new Point();
-		double x = ((r*drawableXArea)/maxRange);
+		double x = OFFSET + ((r*drawableXArea)/maxRange);
+		double y = toAzimuthPixels(az);
+		p.setX(x);
+		p.setY(y);
+		return p;
+	}
+	
+	public double toAzimuthPixels(double az) {
 		double y;
 		if((0 < az) && (az < maxAzimuth))
 			y = drawableYArea/2 - ((az*(drawableYArea/2))/maxAzimuth);
 		else if((minAzimuth <= az) && (az < 0))
 			y = drawableYArea/2 + ((az*(drawableYArea/2))/minAzimuth);
+		else if(az==maxAzimuth)
+			y = 0;
+		else if(az==minAzimuth)
+			y = drawableYArea;
 		else
 			y = drawableYArea/2;
-		p.setX(x);
-		p.setY(y);
-		return p;
+		return y;
 	}
 	
 	

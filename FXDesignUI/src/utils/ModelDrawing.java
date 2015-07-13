@@ -13,13 +13,11 @@ import javafx.scene.effect.Light.Point;
 public class ModelDrawing {
 
 	public static void drawLineAtAngle(GraphicsContext gc, double x1,double y1,double length,double angle) {
-		angle = angle * Math.PI / 180; 
-	    gc.strokeLine(x1,y1,x1 + length * Math.cos(angle),y1 + length * Math.sin(angle));
+	    gc.strokeLine(x1,y1,x1 + length * Math.cos(Math.toRadians(angle)),y1 + length * Math.sin(Math.toRadians(angle)));
 	}
 	
 	public static void drawLineAtAngle(Graphics2D g2d, double x1,double y1,double length,double angle) {
-		angle = angle * Math.PI / 180; 
-	    g2d.drawLine((int)x1,(int)y1,(int)(x1 + length * Math.cos(angle)),(int)(y1 + length * Math.sin(angle)));
+	    g2d.drawLine((int)x1,(int)y1,(int)(x1 + length * Math.cos(Math.toRadians(angle))),(int)(y1 + length * Math.sin(Math.toRadians(angle))));
 	}
 	
 	public static void drawDashedLine(Graphics g, double x1, double y1, double x2, double y2) {
@@ -36,19 +34,23 @@ public class ModelDrawing {
 	}
 	
 	public static Point getPointOfLineAtAngle(GraphicsContext gc, double x1,double y1,double length,double angle) {
-		angle = angle * Math.PI / 180; 
-		double x2 = x1 + length * Math.cos(angle);
-		double y2 = y1 + length * Math.sin(angle);
+		double x2 = x1 + length * Math.cos(Math.toRadians(angle));
+		double y2 = y1 + length * Math.sin(Math.toRadians(angle));
 	    gc.strokeLine(x1,y1,x2,y2);
 	    return new Point(x2,y2,0,null);
 	}
 	
 	public static Point getNextPointAtAngle(double x1, double y1, double len, double angle){
-		angle = angle * Math.PI / 180;
 		Point point = new Point();
-		point.setX(x1+len*Math.cos(angle));
-		point.setY(y1+len*Math.sin(angle));
+		point.setX(x1+len*Math.cos(Math.toRadians(angle)));
+		point.setY(y1+len*Math.sin(Math.toRadians(angle)));
 		return point;
+	}
+	
+	public static double getChartRangeHeigth(double distAngle, int range) {
+		double elev = range * Math.tan(Math.toRadians(distAngle));
+		System.out.println("R: "+range+", elev: "+elev);
+		return elev;
 	}
 	
 	public static void runSafe(final Runnable runnable) {

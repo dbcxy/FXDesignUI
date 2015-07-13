@@ -20,20 +20,20 @@ public class Constance {
 	public static String HEIGHT = null;
 	public static String EL_ANGLE = null;
 	
-	public static String UNITS = "NM";
+	public static final String RANGE_UNITS_NM = "NM";
+	public static final String RANGE_UNITS_KM = "KM";
 
 	public static long ELEVATION_MAX		= 10000;//MKS or FPS
 	public static long ELEVATION_DISP		= 1000;//ft/Km or NM
 	public static long ELEVATION_MIN		= 0;//ft or mts
 	public static long AZIMUTH_MAX			= 5000;//ft or mts
-	public static long AZIMUTH_DISP			= 1000;//ft/Km or NM
+	public static long AZIMUTH_DISP			= 600;//ft/Km or NM
 	public static long AZIMUTH_MIN			= -5000;//ft or mts
-	public static long RANGE_MAX			= 10;//km or NM
+	public static long RANGE_MAX			= 40;//km or NM , Doesn't matter whether KM or NM only number matters
 	public static long RANGE_DISP			= 1;//km or NM
 	public static long RANGE_MIN			= 0;//km or NM
 	public static long TOUCH_DOWN			= 1;//km or NM
-	
-	
+		
 	public static boolean IS_CLOSE			= false;
 	public static boolean TCPIP 			= false;
 	public static boolean UDPIP				= true;
