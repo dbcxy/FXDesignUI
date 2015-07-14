@@ -69,14 +69,14 @@ public class AzimuthChart extends GraphChart {
 		//dotted red line
 		gc.setStroke(Color.RED);
 		gc.setLineWidth(1.5); 
-		gc.setLineDashes(OFFSET/2);
+//		gc.setLineDashes(OFFSET/2);
 
         endPoint = matrixRef.toAzimuthPixels(Constance.AZIMUTH_DISP, matrixRef.getTouchDown());
 		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),endPoint.getX()+range,endPoint.getY());
 		
         endPoint = matrixRef.toAzimuthPixels(-Constance.AZIMUTH_DISP, matrixRef.getTouchDown());
 		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),endPoint.getX()+range,endPoint.getY());
-		gc.setLineDashes(0);
+//		gc.setLineDashes(0);
 	}
 
 	public void drawDistanceGrid() {

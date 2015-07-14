@@ -49258,3 +49258,37 @@ java.lang.NullPointerException
 2015-07-13 19:02:09,943 INFO [application.FXMLController] - Top Chart initialization
 2015-07-13 19:02:09,944 INFO [application.FXMLController] - Bottom Chart initialization
 2015-07-13 19:02:50,755 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-14 10:40:31,747 INFO [application.Master] - Launch
+2015-07-14 10:40:51,280 INFO [views.Console] - Enter Operator ID : 
+2015-07-14 10:40:51,933 INFO [application.FXMLController] - Top Chart initialization
+2015-07-14 10:40:51,942 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-14 10:41:05,986 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-14 11:56:46,450 INFO [application.Master] - Launch
+2015-07-14 11:57:05,327 INFO [application.Master] - Launch
+2015-07-14 11:57:26,865 INFO [application.Master] - Launch
+2015-07-14 11:58:02,560 INFO [application.Master] - Launch
+2015-07-14 11:59:01,154 INFO [application.Master] - Launch
+2015-07-14 11:59:16,994 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-14 11:59:21,156 INFO [application.Master] - Launch
+2015-07-14 11:59:37,799 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-14 12:02:00,597 INFO [application.Master] - Launch
+2015-07-14 12:02:10,669 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-14 12:03:13,673 INFO [application.Master] - Launch
+2015-07-14 12:03:18,808 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-14 12:03:31,225 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-14 12:03:41,920 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-14 12:12:31,874 INFO [application.Master] - Launch
+2015-07-14 12:12:42,610 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-14 12:13:01,176 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-14 12:13:59,846 INFO [application.Master] - Launch
+2015-07-14 12:14:04,973 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-14 12:14:12,752 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-14 12:16:19,022 INFO [application.Master] - Launch
+2015-07-14 12:16:27,139 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-14 12:16:39,187 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-14 12:43:28,770 INFO [application.Master] - Launch
+2015-07-14 12:43:40,864 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-14 12:43:57,715 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-14 13:18:13,193 INFO [application.Master] - Launch
+2015-07-14 13:18:24,040 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-14 13:18:52,043 INFO [application.FXMLController] - APPLICATION CLOSED

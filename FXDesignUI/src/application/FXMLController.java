@@ -1,6 +1,6 @@
 package application;
 
-import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.net.DatagramSocket;
 import java.net.SocketException;
 import java.net.URL;
@@ -39,8 +39,11 @@ import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Bounds;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.SubScene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -55,7 +58,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class FXMLController implements Initializable,ILayoutParam{
 	
@@ -195,6 +200,30 @@ public class FXMLController implements Initializable,ILayoutParam{
     	}
     	stage.close();
     	logger.info("APPLICATION CLOSED");
+    }
+    
+    @FXML
+    protected void menuSettings() {    	
+    	final Stage dialog = new Stage();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        FXMLLoader fxmlLoader = new FXMLLoader();
+		try {
+			fxmlLoader.load(getClass().getResourceAsStream("Settings.fxml"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Parent root = (Parent) fxmlLoader.getRoot();
+        Scene dialogSettings = new Scene(root);
+        dialog.setScene(dialogSettings);
+        dialog.setResizable(false);
+        dialog.initStyle(StageStyle.UNDECORATED);
+        dialog.centerOnScreen();
+        dialog.show();
+    }
+    
+    @FXML void menuPreferences() {
+    	
+    	
     }
     
     private void startNetworkTask() {
