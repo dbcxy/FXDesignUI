@@ -221,9 +221,23 @@ public class FXMLController implements Initializable,ILayoutParam{
         dialog.show();
     }
     
-    @FXML void menuPreferences() {
-    	
-    	
+    @FXML 
+    protected void menuPreferences() {
+    	final Stage dialog = new Stage();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        FXMLLoader fxmlLoader = new FXMLLoader();
+		try {
+			fxmlLoader.load(getClass().getResourceAsStream("Preferences.fxml"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Parent root = (Parent) fxmlLoader.getRoot();
+        Scene dialogPreferences = new Scene(root);
+        dialog.setScene(dialogPreferences);
+        dialog.setResizable(false);
+        dialog.initStyle(StageStyle.UNDECORATED);
+        dialog.centerOnScreen();
+        dialog.show();    	
     }
     
     private void startNetworkTask() {
