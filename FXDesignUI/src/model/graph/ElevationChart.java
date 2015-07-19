@@ -31,7 +31,7 @@ public class ElevationChart extends GraphChart{
         startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
         endPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getMaxRange());        		
         gc.strokeLine(startPoint.getX(),startPoint.getY(),endPoint.getX(),endPoint.getY());//flat line     
-//        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -elevationAngle);//cross line at 20 degrees
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -elevationAngle);//cross line at 20 degrees
 	}
 	
 	public void drawRedDistanceLine(double offsetInRange) {
@@ -61,15 +61,15 @@ public class ElevationChart extends GraphChart{
 //            endPoint = matrixRef.toElevationPixels(ModelDrawing.getElevationHeigth(distAngle, i), i);
             
             //completing top angle line by joining
-        	Point prevPoint = matrixRef.toElevationPixels((i-1)*Constance.ELEVATION_DISP, (i-1));
-            gc.setStroke(Color.CYAN);
-            gc.strokeLine(prevPoint.getX(),prevPoint.getY(),endPoint.getX(),endPoint.getY());
+//        	Point prevPoint = matrixRef.toElevationPixels((i-1)*Constance.ELEVATION_DISP, (i-1));
+//            gc.setStroke(Color.CYAN);
+//            gc.strokeLine(prevPoint.getX(),prevPoint.getY(),endPoint.getX(),endPoint.getY());
             
 
             if((i%5)==0) {
-        		//write text NM
+        		//write text Range
         		gc.setStroke(Color.YELLOW);
-        		gc.strokeText(i+Constance.RANGE_UNITS_KM, startPoint.getX()-OFFSET, startPoint.getY()+HGAP);
+        		gc.strokeText(i+Constance.UNITS.LENGTH, startPoint.getX()-OFFSET, startPoint.getY()+HGAP);
         		gc.strokeLine(startPoint.getX(),startPoint.getY(),endPoint.getX(),endPoint.getY());
         	} else if (i==1) {
                 //write text TD
@@ -139,7 +139,7 @@ public class ElevationChart extends GraphChart{
         count++;
         gc.strokeText("Route      : "+Constance.ROUTE, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count++;
-        gc.strokeText("RWY        : "+Constance.RWY, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
+        gc.strokeText("RWY        : "+Constance.PREF.SEL_RUNWAY, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count++;
         gc.strokeText("Scale       : "+Constance.SCALE, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count++;

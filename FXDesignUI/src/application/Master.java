@@ -1,7 +1,5 @@
 package application;
 
-import network.IControlManager;
-
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -16,13 +14,11 @@ public class Master extends Application {
 	
 	private static final Logger logger = Logger.getLogger(Master.class);
 	
-	IControlManager mICManager;
 	FXMLController mFXMLController;
 	
 	@Override
 	public void start(Stage primaryStage) {
 		initStage(primaryStage);
-//		startNetworkTask();
 	}
 	
 	public static void main(String[] args) {
@@ -53,17 +49,4 @@ public class Master extends Application {
 			e.printStackTrace();
 		}
 	}
-	
-//	private void startNetworkTask() {
-//		mTask = new TaskObserver(new IControlManager() {
-//			
-//			@Override
-//			public void manageData(DataObserver mDataObserver) {
-//				mFXMLController.refreshCanvas(mDataObserver);
-//				logger.info("Setting Data Observer");
-//			}
-//		});
-//		tTask = new Thread(mTask);
-//		tTask.start();
-//	}
 }

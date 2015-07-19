@@ -1,5 +1,7 @@
 package model;
 
+import org.apache.log4j.Logger;
+
 import utils.Constance;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
@@ -7,6 +9,7 @@ import model.graph.ILayoutParam;
 
 public class MatrixRef implements ILayoutParam{
 	
+	private static final Logger logger = Logger.getLogger(MatrixRef.class);
 	private double actualXdimen;
 	private double actualYdimen;
 	
@@ -34,6 +37,7 @@ public class MatrixRef implements ILayoutParam{
 	public static MatrixRef getInstance() {
 	      if(instance == null) {
 	         instance = new MatrixRef();
+	         logger.info("Matrix Ref Instantiated");
 	      }
 	      return instance;
 	}
@@ -66,7 +70,7 @@ public class MatrixRef implements ILayoutParam{
 	}
 	
 	public double toRangePixels(double r) {
-		return (OFFSET + ((r*drawableXArea)/maxRange));
+		return (((r*drawableXArea)/maxRange));
 	}
 	
 	public Point toElevationPixels(double el, double r) {

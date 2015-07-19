@@ -66,7 +66,7 @@
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <HBox>
+                                    <HBox fx:id="MaximumElevation">
                                        <children>
                                           <Label minWidth="300.0" text="Maximum Elevation">
                                              <HBox.margin>
@@ -90,7 +90,7 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="MaximumAzimuth">
                                        <children>
                                           <Label minWidth="300.0" text="Maximum Azimuth">
                                              <HBox.margin>
@@ -122,7 +122,7 @@
                                           <Font name="Arial Bold" size="12.0" />
                                        </font>
                                     </Label>
-                                    <HBox>
+                                    <HBox fx:id="ElevationUSL">
                                        <children>
                                           <Label minWidth="300.0" text="Elevation Upper Scan Limit Angle">
                                              <HBox.margin>
@@ -146,7 +146,7 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="ElevationGlideAngle">
                                        <children>
                                           <Label minWidth="300.0" text="Glide Path Angle">
                                              <HBox.margin>
@@ -170,7 +170,79 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="ElevationGlideMaxDist">
+                                       <children>
+                                          <Label minWidth="300.0" text="Glide Path Maximum Distance">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="50.0" text="degrees">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="50.0" text="(default)">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="ElevationGlideFlatStartDist">
+                                       <children>
+                                          <Label minWidth="300.0" text="Glide Path Flattening Start Distance">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="50.0" text="degrees">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="50.0" text="(default)">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="ElevationLSL">
+                                       <children>
+                                          <Label minWidth="300.0" text="Elevation Lower Scan Limit Angle">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="50.0" text="degrees">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="50.0" text="(default)">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="ElevationUAL">
                                        <children>
                                           <Label minWidth="300.0" text="Upper Approach Limit Angle">
                                              <HBox.margin>
@@ -194,7 +266,7 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="ElevationLAL">
                                        <children>
                                           <Label minWidth="300.0" text="Lower Approach Limit Angle">
                                              <HBox.margin>
@@ -218,7 +290,7 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="ElevationUSaL">
                                        <children>
                                           <Label minWidth="300.0" text="Upper Safety Limit Angle">
                                              <HBox.margin>
@@ -242,7 +314,7 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="ElevationLSaL">
                                        <children>
                                           <Label minWidth="300.0" text="Lower Safety Limit Angle">
                                              <HBox.margin>
@@ -266,7 +338,7 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="ElevationDH">
                                        <children>
                                           <Label minWidth="300.0" text="Decision Height">
                                              <HBox.margin>
@@ -298,7 +370,7 @@
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <HBox>
+                                    <HBox fx:id="AzimuthLSL">
                                        <children>
                                           <Label minWidth="300.0" text="Azimuth Left Scan Limit Angle">
                                              <HBox.margin>
@@ -322,7 +394,7 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="AzimuthRSL">
                                        <children>
                                           <Label minWidth="300.0" text="Azimuth Right Scan Limit Angle">
                                              <HBox.margin>
@@ -346,7 +418,7 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="AzimuthRCLO">
                                        <children>
                                           <Label minWidth="300.0" text="Runaway Center Line Offset From Radar">
                                              <HBox.margin>
@@ -370,9 +442,9 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="AzimuthLAL">
                                        <children>
-                                          <Label minWidth="300.0" text="Left Appraoch Limit Angle">
+                                          <Label minWidth="300.0" text="Left Approach Limit Angle">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                                              </HBox.margin>
@@ -394,9 +466,9 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="AzimuthRAL">
                                        <children>
-                                          <Label minWidth="300.0" text="Right Appraoch Limit Angle">
+                                          <Label minWidth="300.0" text="Right Approach Limit Angle">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                                              </HBox.margin>
@@ -418,9 +490,9 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="AzimuthLSaL">
                                        <children>
-                                          <Label minWidth="300.0" text="Left Safety Limit Angle">
+                                          <Label minWidth="300.0" text="Left Safety Limit ">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                                              </HBox.margin>
@@ -442,9 +514,9 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
+                                    <HBox fx:id="AzimuthRSaL">
                                        <children>
-                                          <Label minWidth="300.0" text="Right Safety Limit Angle">
+                                          <Label minWidth="300.0" text="Right Safety Limit ">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                                              </HBox.margin>

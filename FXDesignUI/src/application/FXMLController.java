@@ -25,6 +25,7 @@ import network.TaskObserver;
 import org.apache.log4j.Logger;
 
 import utils.Constance;
+import utils.ModelDrawing;
 import views.Console;
 import views.ResizableCanvas;
 import javafx.animation.AnimationTimer;
@@ -47,7 +48,10 @@ import javafx.scene.Scene;
 import javafx.scene.SubScene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.ScrollPane;
@@ -98,7 +102,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	
 	@FXML Slider sliderZoomTop;
 	@FXML Slider sliderZoomBottom;
-
+	
 	private double originalSizeX, originalSizeY;
 	private double pressedX, pressedY;
 	private boolean isAppRunning = false;
@@ -118,37 +122,33 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML 
     protected void onStartAction(ActionEvent event) {
 		
-		if(!isAppRunning) {
-			initSystem();
-			initTopChart();
-			initBottomChart();
-//			startNetworkTask();
-			isAppRunning = true;
-			btn_startDisplay.setStyle("-fx-background-image: url(\"assets/img/stop.png\"); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;");
-			actiontarget.setText("System Loaded!");
+		if(!Constance.IS_CONFIG_SET) {
+			Alert alert = new Alert(AlertType.INFORMATION, "Do you like to configure display settings for the radar now " + "?", ButtonType.YES, ButtonType.NO);
+			alert.setTitle("Alert");
+			alert.showAndWait();
+			if (alert.getResult() == ButtonType.YES) {
+				menuSettings();
+				actiontarget.setTextFill(Color.RED);
+				actiontarget.setText("Please set the Configuration Parameters for Display!");
+				actiontarget.setTextFill(Color.AQUAMARINE);
+			} else {
+				startShowingDisplay();
+			}
+		} else if(!Constance.IS_PREF_SET) {
+			Alert alert = new Alert(AlertType.INFORMATION, "Choose your preference for display settings. Do you want to change now ? ", ButtonType.YES, ButtonType.NO);
+			alert.setTitle("Alert");
+			alert.showAndWait();
+			if (alert.getResult() == ButtonType.YES) {
+				menuPreferences();
+				actiontarget.setTextFill(Color.RED);
+				actiontarget.setText("Please set the Preference accordingly!");
+				actiontarget.setTextFill(Color.AQUAMARINE);
+			} else {
+				startShowingDisplay();
+			}
 		} else {
-			cTopL1.draw();
-			cTopL2.draw();
-			cTopL3.draw();
-			cBtmL1.draw();
-			cBtmL2.draw();
-			cBtmL3.draw();
-//			stopNetworkTask();
-			isAppRunning = false;
-			btn_startDisplay.setStyle("-fx-background-image: url(\"assets/img/start.png\"); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;");
-			actiontarget.setText("Start System....");
+			startShowingDisplay();
 		}
-
-        //TESTING
-//        long startTime = System.currentTimeMillis();
-//        //drawing all pixel with Rect size 1x1
-//        Test.gcDrawEveryPixelRect(cBtmL1);//470ms-528ms 
-//        Test.g2dImgDrawEveryPixelRect(cBtmL1);//about 201ms 
-//        //drawing/filling single Rect size 100x100
-//        Test.gcDrawSingleRect(cBtmL1);//about 5ms 
-//        Test.g2dImgDrawSingleRect(cBtmL1);//about 51ms 
-//        long endTime = System.currentTimeMillis();
-//        System.out.println("TotalTime: "+(endTime - startTime));  
     }
 
 	@FXML 
@@ -159,29 +159,29 @@ public class FXMLController implements Initializable,ILayoutParam{
     @FXML 
     protected void handle5NMButtonAction(ActionEvent event) {
         actiontarget.setText("Display Scale set to 5NM");
-//		setNMparameter(5);
-//		invalidate();
+		setNMparameter(5);
+		invalidate();
     }
     
     @FXML 
     protected void handle10NMButtonAction(ActionEvent event) {
         actiontarget.setText("Display Scale set to 10NM");
-//        setNMparameter(10);
-//		invalidate();
+        setNMparameter(10);
+		invalidate();
     }
     
     @FXML 
     protected void handle20NMButtonAction(ActionEvent event) {
         actiontarget.setText("Display Scale set to 20NM");
-//        setNMparameter(20);
-//		invalidate();
+        setNMparameter(20);
+		invalidate();
     }
     
     @FXML 
     protected void handle40NMButtonAction(ActionEvent event) {
         actiontarget.setText("Display Scale set to 40NM");
-//        setNMparameter(40);
-//		invalidate();
+        setNMparameter(40);
+		invalidate();
     }
     
     @FXML
@@ -238,6 +238,30 @@ public class FXMLController implements Initializable,ILayoutParam{
         dialog.initStyle(StageStyle.UNDECORATED);
         dialog.centerOnScreen();
         dialog.show();    	
+    }
+    
+    private void startShowingDisplay() {
+    	
+		if(!isAppRunning) {
+			initSystem();
+			initTopChart();
+			initBottomChart();
+//			startNetworkTask();
+			isAppRunning = true;
+			btn_startDisplay.setStyle("-fx-background-image: url(\"assets/img/stop.png\"); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;");
+			actiontarget.setText("System Loaded!");
+		} else {
+			cTopL1.draw();
+			cTopL2.draw();
+			cTopL3.draw();
+			cBtmL1.draw();
+			cBtmL2.draw();
+			cBtmL3.draw();
+//			stopNetworkTask();
+			isAppRunning = false;
+			btn_startDisplay.setStyle("-fx-background-image: url(\"assets/img/start.png\"); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;");
+			actiontarget.setText("Start System....");
+		} 
     }
     
     private void startNetworkTask() {
@@ -463,50 +487,47 @@ public class FXMLController implements Initializable,ILayoutParam{
 		cBtmL2.clear();
 		cBtmL1.clear();
 		cBtmL0.clear();
+		drawTextBottom(cBtmL0);
 		drawGraphBottom(cBtmL1);
 	}
 	
 	private void setNMparameter(int valNM) {
-		int index = 1;
 		btn_display5NM.setDefaultButton(false);
 		btn_display10NM.setDefaultButton(false);
 		btn_display20NM.setDefaultButton(false);
 		btn_display40NM.setDefaultButton(false);
 		switch (valNM) {
 		case 40:
-			index = 1;
+			Constance.SCALE = " 40 "+Constance.UNITS.LENGTH;
 			matrixRef.setMaxRange(40);
 			btn_display40NM.setDefaultButton(true);
 			break;
 			
 		case 20:
-			index = 2;
+			Constance.SCALE = " 20 "+Constance.UNITS.LENGTH;
 			matrixRef.setMaxRange(20);
 			btn_display20NM.setDefaultButton(true);
 			break;
 			
 		case 10:
-			index = 4;
+			Constance.SCALE = " 10 "+Constance.UNITS.LENGTH;
 			matrixRef.setMaxRange(10);
 			btn_display10NM.setDefaultButton(true);
 			break;
 			
 		case 5:
-			index = 8;
+			Constance.SCALE = " 5 "+Constance.UNITS.LENGTH;
 			matrixRef.setMaxRange(5);
 			btn_display5NM.setDefaultButton(true);
-			break;
-
-		default:
 			break;
 		}
 	}
 	
     private void drawGraphTop(Canvas canvas) {    	
     	mElevationChart = new ElevationChart(canvas);    	
-    	mElevationChart.drawElevationLine(20);
-    	mElevationChart.drawLandingStrip(9, 10);//till 9NM drawing shows till 10NM
-    	mElevationChart.drawRedDistanceLine(0.2);//200mts range offset from TD
+    	mElevationChart.drawElevationLine(Constance.ELEVATION.USL_ANGLE);
+    	mElevationChart.drawLandingStrip(9, Constance.ELEVATION.GLIDE_ANGLE);//till 9NM drawing shows till 10NM, with 10degrees angle
+//    	mElevationChart.drawRedDistanceLine(Constance.ELEVATION_DH);//200mts range offset from TD
     	mElevationChart.drawDistanceGrid();
     	
     }
@@ -580,8 +601,8 @@ public class FXMLController implements Initializable,ILayoutParam{
     
 	private void drawGraphBottom(Canvas canvas) {
 		mAzimuthChart = new AzimuthChart(canvas);
-		mAzimuthChart.drawAzimuthLine(10);
-		mAzimuthChart.drawLandingStrip(9,5);//till NM, and offset of 100ft / as of now 5px
+		mAzimuthChart.drawAzimuthLine(Constance.AZIMUTH.LSL_ANGLE,Constance.AZIMUTH.RSL_ANGLE);
+		mAzimuthChart.drawLandingStrip(9,matrixRef.toRangePixels(Constance.AZIMUTH.LSaL/1000));//till NM, and offset of 100ft / as of now 5px
 		mAzimuthChart.drawRedDistanceLine(0.2);//200mts range offset from TD
 		mAzimuthChart.drawDistanceGrid();
 
@@ -609,5 +630,5 @@ public class FXMLController implements Initializable,ILayoutParam{
 	public void draw(GraphicsContext gc) {
 		
 	}
-	
+
 }

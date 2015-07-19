@@ -13,6 +13,21 @@ import javafx.scene.paint.Color;
 
 public class Test {
 	
+	public void runTest() {
+
+        //TESTING
+//        long startTime = System.currentTimeMillis();
+//        //drawing all pixel with Rect size 1x1
+//        Test.gcDrawEveryPixelRect(cBtmL1);//470ms-528ms 
+//        Test.g2dImgDrawEveryPixelRect(cBtmL1);//about 201ms 
+//        //drawing/filling single Rect size 100x100
+//        Test.gcDrawSingleRect(cBtmL1);//about 5ms 
+//        Test.g2dImgDrawSingleRect(cBtmL1);//about 51ms 
+//        long endTime = System.currentTimeMillis();
+//        System.out.println("TotalTime: "+(endTime - startTime)); 
+	}
+	
+	
 	public static void gcDrawSingleRect(Canvas canvas) {
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 

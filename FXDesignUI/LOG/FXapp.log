@@ -49319,3 +49319,860 @@ java.lang.NullPointerException
 2015-07-15 22:37:51,039 INFO [application.SettingsController] - Preferences Dialog Opened
 2015-07-15 22:38:18,716 INFO [application.SettingsController] - Settings Dialog Opened
 2015-07-15 22:38:34,045 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-16 21:41:29,552 INFO [application.Master] - Launch
+2015-07-16 21:41:36,339 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-16 21:41:40,202 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-16 21:41:42,607 INFO [views.Console] - Enter Operator ID : 
+2015-07-16 21:41:42,947 INFO [application.FXMLController] - Top Chart initialization
+2015-07-16 21:41:42,949 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-16 21:41:52,269 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 15:29:57,326 INFO [application.Master] - Launch
+2015-07-19 15:30:08,015 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 15:30:09,281 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 15:30:09,284 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 15:30:13,813 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 15:52:58,828 INFO [application.Master] - Launch
+2015-07-19 15:53:02,759 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 15:53:02,977 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 15:53:02,978 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 15:53:17,398 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 15:57:48,832 INFO [application.Master] - Launch
+2015-07-19 15:58:20,127 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 15:58:20,368 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 15:58:20,370 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 16:00:13,458 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 16:12:33,735 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 16:13:19,940 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 16:15:40,871 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 16:17:01,496 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 16:18:26,980 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 16:19:59,242 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 16:21:51,347 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 16:27:00,954 INFO [application.Master] - Launch
+2015-07-19 16:27:13,400 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 16:31:19,226 INFO [application.Master] - Launch
+2015-07-19 16:35:19,844 INFO [application.Master] - Launch
+2015-07-19 16:36:48,508 INFO [application.Master] - Launch
+2015-07-19 16:36:57,056 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 16:37:40,212 INFO [application.Master] - Launch
+2015-07-19 16:37:54,509 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 16:38:29,871 INFO [application.Master] - Launch
+2015-07-19 16:40:39,096 INFO [application.Master] - Launch
+2015-07-19 16:41:06,023 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 16:42:10,845 INFO [application.Master] - Launch
+2015-07-19 16:42:19,192 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 16:43:27,604 INFO [application.Master] - Launch
+2015-07-19 16:44:09,226 INFO [application.Master] - Launch
+2015-07-19 16:44:16,088 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 16:44:20,941 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 16:44:33,676 INFO [application.Master] - Launch
+2015-07-19 16:58:35,868 INFO [application.Master] - Launch
+2015-07-19 16:58:40,233 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 16:58:49,969 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 17:00:32,022 INFO [application.Master] - Launch
+2015-07-19 17:00:36,639 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:01:07,541 INFO [application.Master] - Launch
+2015-07-19 17:01:11,136 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:01:33,676 INFO [application.Master] - Launch
+2015-07-19 17:01:37,320 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:02:12,786 INFO [application.Master] - Launch
+2015-07-19 17:02:16,177 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:03:06,036 INFO [application.Master] - Launch
+2015-07-19 17:03:10,719 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:03:32,514 INFO [application.Master] - Launch
+2015-07-19 17:03:36,143 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:04:09,666 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 17:04:33,519 INFO [application.Master] - Launch
+2015-07-19 17:04:37,045 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:04:37,046 INFO [application.SettingsController] - 4
+2015-07-19 17:04:42,457 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 17:06:30,160 INFO [application.Master] - Launch
+2015-07-19 17:06:33,929 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:10:44,954 INFO [application.Master] - Launch
+2015-07-19 17:10:48,605 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:14:26,066 INFO [application.Master] - Launch
+2015-07-19 17:14:30,085 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:14:51,407 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 17:21:56,247 INFO [application.Master] - Launch
+2015-07-19 17:21:59,678 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:23:15,841 INFO [application.Master] - Launch
+2015-07-19 17:23:27,759 INFO [application.Master] - Launch
+2015-07-19 17:23:31,441 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:27:30,992 INFO [application.Master] - Launch
+2015-07-19 17:27:37,032 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:36:02,185 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 17:36:15,972 INFO [application.Master] - Launch
+2015-07-19 17:36:19,662 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:36:24,812 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 17:36:25,008 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 17:36:25,010 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 17:36:35,440 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 17:37:13,633 INFO [application.Master] - Launch
+2015-07-19 17:37:17,513 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:37:19,025 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 17:37:19,249 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 17:37:19,250 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 17:37:28,093 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 17:40:52,052 INFO [application.Master] - Launch
+2015-07-19 17:40:56,498 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:40:57,897 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 17:40:58,101 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 17:40:58,103 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 17:41:56,571 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 17:42:55,534 INFO [application.Master] - Launch
+2015-07-19 17:42:59,943 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:43:01,261 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 17:43:01,461 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 17:43:01,463 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 17:44:07,753 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 17:49:23,584 INFO [application.Master] - Launch
+2015-07-19 17:49:27,803 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:49:29,828 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 17:49:30,028 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 17:49:30,030 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 17:49:51,851 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 17:52:11,162 INFO [application.Master] - Launch
+2015-07-19 17:52:14,982 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 17:52:16,635 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 17:52:16,842 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 17:52:16,844 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 17:52:37,040 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 17:59:37,977 INFO [application.Master] - Launch
+2015-07-19 17:59:41,466 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 18:10:32,168 INFO [application.Master] - Launch
+2015-07-19 18:10:35,876 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 18:10:37,266 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 18:10:37,470 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 18:10:37,472 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 18:10:40,681 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 18:13:38,484 INFO [application.Master] - Launch
+2015-07-19 18:13:42,385 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 18:13:43,858 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 18:13:44,055 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 18:13:44,056 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 18:13:57,661 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 18:18:40,952 INFO [application.Master] - Launch
+2015-07-19 18:18:44,802 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 18:19:01,719 INFO [application.Master] - Launch
+2015-07-19 18:19:05,238 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 18:19:22,318 INFO [application.Master] - Launch
+2015-07-19 18:19:26,205 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 18:21:14,495 INFO [application.Master] - Launch
+2015-07-19 18:21:18,334 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 18:21:20,562 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 18:21:20,792 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 18:21:20,794 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 18:21:54,763 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 20:25:05,708 INFO [application.Master] - Launch
+2015-07-19 20:25:09,367 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 20:25:11,993 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 20:25:12,608 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 20:25:12,610 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 20:25:23,358 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 20:25:52,398 INFO [application.Master] - Launch
+2015-07-19 20:25:58,213 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 20:28:46,993 INFO [application.Master] - Launch
+2015-07-19 20:28:50,819 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 20:28:51,032 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 20:28:51,033 INFO [application.FXMLController] - 9537.272727272728
+2015-07-19 20:28:51,034 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 20:28:58,238 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 20:29:41,189 INFO [application.Master] - Launch
+2015-07-19 20:29:45,085 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 20:29:48,332 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 20:29:48,602 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 20:29:48,604 INFO [application.FXMLController] - 9537.272727272728
+2015-07-19 20:29:48,606 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 20:29:53,524 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 20:30:53,243 INFO [application.Master] - Launch
+2015-07-19 20:30:56,627 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 20:30:56,861 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 20:30:56,863 INFO [application.FXMLController] - 19.52727272727273
+2015-07-19 20:30:56,863 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 20:31:18,800 INFO [application.Master] - Launch
+2015-07-19 20:31:22,287 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 20:31:22,529 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 20:31:22,531 INFO [application.FXMLController] - 14.763636363636365
+2015-07-19 20:31:22,532 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 20:31:36,276 INFO [application.Master] - Launch
+2015-07-19 20:31:39,988 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 20:31:40,204 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 20:31:40,205 INFO [application.FXMLController] - 10.952727272727273
+2015-07-19 20:31:40,206 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 20:32:07,112 INFO [application.Master] - Launch
+2015-07-19 20:32:10,417 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 20:32:10,651 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 20:32:10,653 INFO [application.FXMLController] - 0.9527272727272728
+2015-07-19 20:32:10,653 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 20:32:29,989 INFO [application.Master] - Launch
+2015-07-19 20:32:33,546 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 20:32:33,773 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 20:32:33,775 INFO [application.FXMLController] - 4.763636363636365
+2015-07-19 20:32:33,775 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 20:33:02,983 INFO [application.Master] - Launch
+2015-07-19 20:33:07,172 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 20:33:07,320 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 20:33:07,322 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 20:33:11,563 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 20:33:28,839 INFO [application.Master] - Launch
+2015-07-19 20:33:37,481 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 20:33:47,395 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 20:35:17,547 INFO [application.Master] - Launch
+2015-07-19 20:35:21,532 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 20:54:04,677 INFO [application.Master] - Launch
+2015-07-19 20:54:08,387 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 20:54:35,564 INFO [application.Master] - Launch
+2015-07-19 20:54:39,531 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 20:56:22,182 INFO [application.Master] - Launch
+2015-07-19 20:56:26,080 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 20:56:51,922 INFO [application.Master] - Launch
+2015-07-19 20:56:55,792 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 20:59:12,995 INFO [application.Master] - Launch
+2015-07-19 20:59:16,728 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 20:59:20,608 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 20:59:20,819 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 20:59:20,820 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 20:59:23,895 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 20:59:23,896 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 20:59:23,896 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 20:59:27,613 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 20:59:55,391 INFO [application.Master] - Launch
+2015-07-19 20:59:58,829 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 21:00:15,961 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 21:00:16,077 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 21:00:16,079 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 21:00:23,050 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 22:05:30,834 INFO [application.Master] - Launch
+2015-07-19 22:05:35,600 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 22:05:35,729 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:05:37,198 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,199 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,199 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,199 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,199 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,200 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,200 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,200 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,200 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,200 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,200 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,201 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,201 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,201 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,201 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,201 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,202 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,202 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,202 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:37,203 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:05:37,210 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:05:41,041 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:05:48,957 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,958 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,958 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,959 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,959 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,959 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,959 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,960 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,960 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,960 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,960 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,960 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,960 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,961 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,961 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,961 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,961 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,961 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:05:48,962 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:06:02,288 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:11:09,948 INFO [application.Master] - Launch
+2015-07-19 22:11:14,030 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 22:11:14,160 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:11:15,757 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,758 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,758 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,758 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,759 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,759 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,759 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,759 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,759 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,759 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,760 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,760 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,760 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,760 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,761 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,761 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,761 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,761 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,761 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:15,762 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:11:15,767 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:11:20,121 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:11:28,717 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,718 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,718 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,718 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,718 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,718 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,718 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,719 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,719 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,719 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,719 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,719 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,719 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,720 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,720 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,720 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,720 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,720 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:28,720 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:11:34,999 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:11:37,781 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 22:19:03,116 INFO [application.Master] - Launch
+2015-07-19 22:19:06,656 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 22:19:06,793 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:19:08,142 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:19:08,142 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:19:08,147 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:19:10,585 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:19:15,396 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:19:18,214 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:19:20,382 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:19:21,991 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 22:21:43,024 INFO [application.Master] - Launch
+2015-07-19 22:21:49,852 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 22:21:49,992 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:21:49,992 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,992 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,992 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,992 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,993 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,994 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,994 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,994 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,994 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,994 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,994 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,994 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,994 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,995 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,995 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,995 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,995 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,995 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,995 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,996 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,996 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,996 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,996 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,996 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,996 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,997 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,997 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:49,997 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:21:55,719 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:21:55,720 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:21:55,728 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:22:07,182 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:22:12,328 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:22:17,762 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:22:21,082 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:23:05,700 INFO [application.Master] - Launch
+2015-07-19 22:23:09,376 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 22:23:09,495 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:23:09,495 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,495 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,496 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,496 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,496 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,496 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,496 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,496 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,496 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,496 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,496 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,497 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,497 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,497 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,497 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,497 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,497 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,497 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,497 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,497 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,498 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,498 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,498 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,498 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,498 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,499 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,499 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,499 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,499 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,499 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,499 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,500 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,500 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,500 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,500 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,500 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,500 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,501 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,501 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:09,501 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:23:10,742 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:23:10,742 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:23:10,745 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:23:14,705 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:23:16,222 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:23:16,223 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:23:16,223 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:23:16,223 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:23:16,223 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:23:16,224 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:23:16,224 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:23:16,224 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:23:16,224 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 22:23:16,228 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:23:20,044 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 22:23:20,045 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-19 22:23:20,124 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 22:23:20,125 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 22:23:25,055 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,056 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,057 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,058 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,058 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,058 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,058 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,058 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,058 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,058 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,058 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,059 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,059 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,059 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,060 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,060 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,061 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,061 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,062 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,062 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,062 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,063 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,063 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,064 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,064 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,065 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,065 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,066 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,066 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:23:25,067 INFO [model.AppConfig] - Size: 38
+2015-07-19 22:25:48,309 INFO [application.Master] - Launch
+2015-07-19 22:25:51,660 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 22:25:51,795 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:25:51,795 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,795 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,795 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,795 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,795 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,795 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,796 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,796 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,796 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,796 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,796 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,796 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,796 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,796 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,796 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,796 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,796 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,796 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,797 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,797 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,797 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,797 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,797 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,797 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,797 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,797 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,797 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,798 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,798 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,798 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,798 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,798 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,798 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,798 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,798 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,799 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,799 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,799 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,799 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:51,799 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:52,695 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:25:52,696 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:25:52,700 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:25:54,468 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:25:55,415 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:25:55,416 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:25:55,416 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:25:55,416 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:25:55,416 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:25:55,417 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:25:55,417 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:25:55,417 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:25:55,417 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 22:25:55,424 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:25:56,307 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 22:25:56,308 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-19 22:25:56,388 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 22:25:56,389 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 22:25:59,028 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:25:59,028 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,028 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,028 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,028 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,028 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,028 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,028 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,028 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,028 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,028 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,028 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,028 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,029 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,029 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,029 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,029 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,029 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,029 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,029 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,029 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,029 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,030 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,030 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,031 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,031 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,032 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,033 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,033 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,034 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,035 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,035 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,036 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,036 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,037 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,037 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,038 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,041 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,041 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,042 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:25:59,043 INFO [model.AppConfig] - Size: 19
+2015-07-19 22:28:43,781 INFO [application.Master] - Launch
+2015-07-19 22:28:47,181 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 22:28:47,315 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:28:47,316 INFO [application.SettingsController] - Val: 10000.0
+2015-07-19 22:28:47,316 INFO [application.SettingsController] - Val: 5000.0
+2015-07-19 22:28:47,316 INFO [application.SettingsController] - Val: 20.0
+2015-07-19 22:28:47,316 INFO [application.SettingsController] - Val: 10.0
+2015-07-19 22:28:47,316 INFO [application.SettingsController] - Val: 20.0
+2015-07-19 22:28:47,316 INFO [application.SettingsController] - Val: 10.0
+2015-07-19 22:28:47,317 INFO [application.SettingsController] - Val: 0.0
+2015-07-19 22:28:47,317 INFO [application.SettingsController] - Val: 20.0
+2015-07-19 22:28:47,317 INFO [application.SettingsController] - Val: 20.0
+2015-07-19 22:28:47,317 INFO [application.SettingsController] - Val: 20.0
+2015-07-19 22:28:47,317 INFO [application.SettingsController] - Val: 0.0
+2015-07-19 22:28:47,317 INFO [application.SettingsController] - Val: 200.0
+2015-07-19 22:28:47,317 INFO [application.SettingsController] - Val: 10.0
+2015-07-19 22:28:47,318 INFO [application.SettingsController] - Val: 10.0
+2015-07-19 22:28:47,318 INFO [application.SettingsController] - Val: 200.0
+2015-07-19 22:28:47,318 INFO [application.SettingsController] - Val: 4.75
+2015-07-19 22:28:47,318 INFO [application.SettingsController] - Val: -4.75
+2015-07-19 22:28:47,318 INFO [application.SettingsController] - Val: 50.0
+2015-07-19 22:28:47,318 INFO [application.SettingsController] - Val: 50.0
+2015-07-19 22:28:48,623 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:28:48,623 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:28:48,627 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:28:50,971 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:28:52,166 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:28:52,167 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 22:28:52,173 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:28:53,398 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 22:28:53,399 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-19 22:28:53,475 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 22:28:53,476 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 22:28:55,761 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:28:55,761 INFO [application.SettingsController] - Val: 10000.0
+2015-07-19 22:28:55,762 INFO [application.SettingsController] - Val: 5000.0
+2015-07-19 22:28:55,763 INFO [application.SettingsController] - Val: 20.0
+2015-07-19 22:28:55,763 INFO [application.SettingsController] - Val: 10.0
+2015-07-19 22:28:55,764 INFO [application.SettingsController] - Val: 20.0
+2015-07-19 22:28:55,765 INFO [application.SettingsController] - Val: 10.0
+2015-07-19 22:28:55,765 INFO [application.SettingsController] - Val: 0.0
+2015-07-19 22:28:55,766 INFO [application.SettingsController] - Val: 20.0
+2015-07-19 22:28:55,766 INFO [application.SettingsController] - Val: 20.0
+2015-07-19 22:28:55,767 INFO [application.SettingsController] - Val: 20.0
+2015-07-19 22:28:55,767 INFO [application.SettingsController] - Val: 0.0
+2015-07-19 22:28:55,768 INFO [application.SettingsController] - Val: 200.0
+2015-07-19 22:28:55,768 INFO [application.SettingsController] - Val: 10.0
+2015-07-19 22:28:55,769 INFO [application.SettingsController] - Val: 10.0
+2015-07-19 22:28:55,769 INFO [application.SettingsController] - Val: 200.0
+2015-07-19 22:28:55,770 INFO [application.SettingsController] - Val: 4.75
+2015-07-19 22:28:55,770 INFO [application.SettingsController] - Val: -4.75
+2015-07-19 22:28:55,771 INFO [application.SettingsController] - Val: 50.0
+2015-07-19 22:28:55,771 INFO [application.SettingsController] - Val: 50.0
+2015-07-19 22:29:00,423 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:30:40,228 INFO [application.Master] - Launch
+2015-07-19 22:30:43,583 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 22:30:43,725 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:30:44,807 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:30:44,808 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:30:44,812 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:30:46,798 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:30:47,990 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:30:47,990 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 22:30:47,995 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:30:48,687 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 22:30:48,688 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-19 22:30:48,763 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 22:30:48,765 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 22:30:50,229 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:30:56,086 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:30:56,087 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:30:56,091 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:30:57,847 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:30:59,205 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:30:59,206 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:30:59,207 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:31:00,862 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:31:02,334 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:31:02,334 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 22:31:02,338 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:31:07,528 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:31:09,206 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:31:09,207 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:31:09,214 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:31:11,137 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:31:12,270 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:31:12,271 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 22:31:12,274 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:31:13,659 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:31:14,798 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:31:14,798 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:31:14,800 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:31:17,510 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 22:40:25,568 INFO [application.Master] - Launch
+2015-07-19 22:40:29,093 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 22:40:29,245 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:40:34,448 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:40:34,449 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:40:34,453 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:40:36,822 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:40:37,991 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:40:37,992 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 22:40:37,996 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:40:39,091 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 22:40:39,092 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-19 22:40:39,178 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 22:40:39,180 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 22:40:41,463 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:40:46,886 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:40:46,887 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:40:46,890 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:40:48,670 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:40:52,118 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:40:52,119 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:40:52,120 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:41:03,896 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:41:10,934 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:41:10,935 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 22:41:10,939 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:41:18,551 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 22:50:28,871 INFO [application.Master] - Launch
+2015-07-19 22:50:32,819 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 22:50:32,951 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:50:34,167 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:50:34,168 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:50:34,173 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:50:36,684 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:51:12,686 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:51:12,687 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 22:51:12,691 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:51:13,777 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 22:51:13,778 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-19 22:51:13,860 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 22:51:13,869 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 22:51:25,448 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 22:59:33,691 INFO [application.Master] - Launch
+2015-07-19 22:59:37,750 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 22:59:37,868 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 22:59:39,039 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 22:59:39,040 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 22:59:39,044 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 22:59:40,938 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:59:41,783 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:59:41,783 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 22:59:41,788 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:59:42,813 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 22:59:42,814 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-19 22:59:42,893 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 22:59:42,894 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 22:59:49,909 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 22:59:54,335 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 22:59:54,335 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 22:59:54,339 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 22:59:59,276 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:07:40,412 INFO [application.Master] - Launch
+2015-07-19 23:07:44,275 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 23:07:44,420 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 23:07:45,376 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 23:07:45,377 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 23:07:45,382 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 23:07:47,462 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:07:53,992 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 23:07:53,992 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 23:07:53,996 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:07:54,663 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 23:07:54,664 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-19 23:07:54,743 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 23:07:54,753 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 23:07:57,037 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:07:59,751 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 23:07:59,751 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 23:07:59,753 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:08:01,526 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:08:08,812 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:09:24,669 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 23:09:35,295 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 23:09:35,295 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 23:09:35,297 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 23:09:37,253 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 23:09:40,304 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 23:09:40,304 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 23:09:40,308 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 23:09:42,654 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:09:48,127 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 23:09:48,128 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 23:09:48,132 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:09:50,452 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:09:51,635 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:09:58,318 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-19 23:10:41,648 INFO [application.Master] - Launch
+2015-07-19 23:10:44,990 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 23:10:45,126 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 23:10:46,233 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 23:10:46,233 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 23:10:46,238 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 23:10:48,063 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:10:49,368 INFO [model.AppConfig] -  1 
+2015-07-19 23:10:49,369 INFO [model.AppConfig] -  100 
+2015-07-19 23:10:49,369 INFO [model.AppConfig] -  Clear Weather 
+2015-07-19 23:10:49,369 INFO [model.AppConfig] -  Horizontal 
+2015-07-19 23:10:49,369 INFO [model.AppConfig] -  Kilometers (KM) 
+2015-07-19 23:10:49,369 INFO [model.AppConfig] -  Feet (ft) 
+2015-07-19 23:10:49,370 INFO [model.AppConfig] -  0 
+2015-07-19 23:10:49,370 INFO [model.AppConfig] -  NULL 
+2015-07-19 23:10:49,370 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 23:10:49,370 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 23:10:49,377 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:10:57,200 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 23:10:57,200 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-19 23:10:57,285 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 23:10:57,286 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 23:10:59,043 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:11:06,656 INFO [model.AppConfig] -  1 
+2015-07-19 23:11:06,656 INFO [model.AppConfig] -  100 
+2015-07-19 23:11:06,657 INFO [model.AppConfig] -  Clear Weather 
+2015-07-19 23:11:06,657 INFO [model.AppConfig] -  Horizontal 
+2015-07-19 23:11:06,657 INFO [model.AppConfig] - Nauticalmiles (NM)
+2015-07-19 23:11:06,657 INFO [model.AppConfig] -  Feet (ft) 
+2015-07-19 23:11:06,660 INFO [model.AppConfig] -  0 
+2015-07-19 23:11:06,660 INFO [model.AppConfig] -  NULL 
+2015-07-19 23:11:06,660 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 23:11:06,661 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 23:11:06,665 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:11:16,695 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:14:02,152 INFO [application.Master] - Launch
+2015-07-19 23:14:06,172 INFO [model.AppConfig] - App Config Instantiated
+2015-07-19 23:14:06,322 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-19 23:14:07,112 INFO [model.AppConfig] - Settings Data Validated
+2015-07-19 23:14:07,113 INFO [model.AppConfig] - Settings Data Saved
+2015-07-19 23:14:07,117 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-19 23:14:08,759 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:14:11,495 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 23:14:11,495 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 23:14:11,497 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:14:13,025 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:14:15,679 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 23:14:15,680 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 23:14:15,683 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:14:17,279 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:14:21,535 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 23:14:21,536 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 23:14:21,537 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:14:23,039 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:14:27,000 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 23:14:27,000 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 23:14:27,003 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:14:29,193 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:14:32,751 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 23:14:32,751 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 23:14:32,753 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:14:34,301 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-19 23:14:38,344 INFO [model.AppConfig] - Preference Data Validated
+2015-07-19 23:14:38,344 INFO [model.AppConfig] - Preference Data Saved
+2015-07-19 23:14:38,350 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-19 23:14:39,352 INFO [views.Console] - Enter Operator ID : 
+2015-07-19 23:14:39,352 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-19 23:14:39,439 INFO [application.FXMLController] - Top Chart initialization
+2015-07-19 23:14:39,447 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-19 23:14:43,856 INFO [application.FXMLController] - APPLICATION CLOSED
