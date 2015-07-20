@@ -12,6 +12,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.function.Consumer;
 
+import model.AppConfig;
 import model.DataObserver;
 import model.MatrixRef;
 import model.drawable.Plot;
@@ -106,6 +107,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	private double originalSizeX, originalSizeY;
 	private double pressedX, pressedY;
 	private boolean isAppRunning = false;
+	private boolean isDrawn = false;
 	
 	MatrixRef matrixRef;
 	
@@ -121,34 +123,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	
 	@FXML 
     protected void onStartAction(ActionEvent event) {
-		
-		if(!Constance.IS_CONFIG_SET) {
-			Alert alert = new Alert(AlertType.INFORMATION, "Do you like to configure display settings for the radar now " + "?", ButtonType.YES, ButtonType.NO);
-			alert.setTitle("Alert");
-			alert.showAndWait();
-			if (alert.getResult() == ButtonType.YES) {
-				menuSettings();
-				actiontarget.setTextFill(Color.RED);
-				actiontarget.setText("Please set the Configuration Parameters for Display!");
-				actiontarget.setTextFill(Color.AQUAMARINE);
-			} else {
-				startShowingDisplay();
-			}
-		} else if(!Constance.IS_PREF_SET) {
-			Alert alert = new Alert(AlertType.INFORMATION, "Choose your preference for display settings. Do you want to change now ? ", ButtonType.YES, ButtonType.NO);
-			alert.setTitle("Alert");
-			alert.showAndWait();
-			if (alert.getResult() == ButtonType.YES) {
-				menuPreferences();
-				actiontarget.setTextFill(Color.RED);
-				actiontarget.setText("Please set the Preference accordingly!");
-				actiontarget.setTextFill(Color.AQUAMARINE);
-			} else {
-				startShowingDisplay();
-			}
-		} else {
-			startShowingDisplay();
-		}
+		startDisplayAction();
     }
 
 	@FXML 
@@ -248,6 +223,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 			initBottomChart();
 //			startNetworkTask();
 			isAppRunning = true;
+			isDrawn = true;
 			btn_startDisplay.setStyle("-fx-background-image: url(\"assets/img/stop.png\"); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;");
 			actiontarget.setText("System Loaded!");
 		} else {
@@ -259,6 +235,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 			cBtmL3.draw();
 //			stopNetworkTask();
 			isAppRunning = false;
+			isDrawn = false;
 			btn_startDisplay.setStyle("-fx-background-image: url(\"assets/img/start.png\"); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;");
 			actiontarget.setText("Start System....");
 		} 
@@ -475,13 +452,14 @@ public class FXMLController implements Initializable,ILayoutParam{
     	matrixRef.setTouchDown(Constance.TOUCH_DOWN);
     }
 	
-	private void invalidate() {
+	public void invalidate() {
 		cTopL3.clear();
 		cTopL2.clear();
 		cTopL1.clear();
 		cTopL0.clear();
 		drawTextTop(cTopL0);
 		drawGraphTop(cTopL1);
+		logger.info("Top Chart Invalidated!");
 		
 		cBtmL3.clear();
 		cBtmL2.clear();
@@ -489,6 +467,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 		cBtmL0.clear();
 		drawTextBottom(cBtmL0);
 		drawGraphBottom(cBtmL1);
+		logger.info("Bottom Chart Invalidated!");
 	}
 	
 	private void setNMparameter(int valNM) {
@@ -498,25 +477,25 @@ public class FXMLController implements Initializable,ILayoutParam{
 		btn_display40NM.setDefaultButton(false);
 		switch (valNM) {
 		case 40:
-			Constance.SCALE = " 40 "+Constance.UNITS.LENGTH;
+			Constance.SCALE = " 40 "+Constance.UNITS.getLENGTH();
 			matrixRef.setMaxRange(40);
 			btn_display40NM.setDefaultButton(true);
 			break;
 			
 		case 20:
-			Constance.SCALE = " 20 "+Constance.UNITS.LENGTH;
+			Constance.SCALE = " 20 "+Constance.UNITS.getLENGTH();
 			matrixRef.setMaxRange(20);
 			btn_display20NM.setDefaultButton(true);
 			break;
 			
 		case 10:
-			Constance.SCALE = " 10 "+Constance.UNITS.LENGTH;
+			Constance.SCALE = " 10 "+Constance.UNITS.getLENGTH();
 			matrixRef.setMaxRange(10);
 			btn_display10NM.setDefaultButton(true);
 			break;
 			
 		case 5:
-			Constance.SCALE = " 5 "+Constance.UNITS.LENGTH;
+			Constance.SCALE = " 5 "+Constance.UNITS.getLENGTH();
 			matrixRef.setMaxRange(5);
 			btn_display5NM.setDefaultButton(true);
 			break;
@@ -524,9 +503,9 @@ public class FXMLController implements Initializable,ILayoutParam{
 	}
 	
     private void drawGraphTop(Canvas canvas) {    	
-    	mElevationChart = new ElevationChart(canvas);    	
+    	mElevationChart = new ElevationChart(canvas);
     	mElevationChart.drawElevationLine(Constance.ELEVATION.USL_ANGLE);
-    	mElevationChart.drawLandingStrip(9, Constance.ELEVATION.GLIDE_ANGLE);//till 9NM drawing shows till 10NM, with 10degrees angle
+    	mElevationChart.drawLandingStrip(Constance.ELEVATION.GLIDE_FLAT_START_DIST-Constance.RANGE_DISP, Constance.ELEVATION.GLIDE_ANGLE);//till 9NM drawing shows till 10NM, with 10degrees angle
 //    	mElevationChart.drawRedDistanceLine(Constance.ELEVATION_DH);//200mts range offset from TD
     	mElevationChart.drawDistanceGrid();
     	
@@ -602,8 +581,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 	private void drawGraphBottom(Canvas canvas) {
 		mAzimuthChart = new AzimuthChart(canvas);
 		mAzimuthChart.drawAzimuthLine(Constance.AZIMUTH.LSL_ANGLE,Constance.AZIMUTH.RSL_ANGLE);
-		mAzimuthChart.drawLandingStrip(9,matrixRef.toRangePixels(Constance.AZIMUTH.LSaL/1000));//till NM, and offset of 100ft / as of now 5px
-		mAzimuthChart.drawRedDistanceLine(0.2);//200mts range offset from TD
+		mAzimuthChart.drawLandingStrip(Constance.ELEVATION.GLIDE_FLAT_START_DIST-Constance.RANGE_DISP,matrixRef.toRangePixels(Constance.AZIMUTH.LSaL/1000));//till NM, and offset of 100ft / as of now 5px
+//		mAzimuthChart.drawRedDistanceLine(0.2);//200mts range offset from TD
 		mAzimuthChart.drawDistanceGrid();
 
 	}
@@ -629,6 +608,51 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@Override
 	public void draw(GraphicsContext gc) {
 		
+	}
+	
+	public void startDisplayAction() {
+		if(!Constance.IS_CONFIG_SET) {
+			Alert alert = new Alert(AlertType.INFORMATION, "Do you like to configure display settings for the radar now " + "?", ButtonType.YES, ButtonType.NO);
+			alert.setTitle("Alert");
+			alert.showAndWait();
+			if (alert.getResult() == ButtonType.YES) {
+				menuSettings();
+				actiontarget.setTextFill(Color.RED);
+				actiontarget.setText("Please set the Configuration Parameters for Display!");
+				actiontarget.setTextFill(Color.AQUAMARINE);
+			} else {
+				startShowingDisplay();
+			}
+		} else if(!Constance.IS_PREF_SET) {
+			Alert alert = new Alert(AlertType.INFORMATION, "Choose your preference for display settings. Do you want to change now ? ", ButtonType.YES, ButtonType.NO);
+			alert.setTitle("Alert");
+			alert.showAndWait();
+			if (alert.getResult() == ButtonType.YES) {
+				menuPreferences();
+				actiontarget.setTextFill(Color.RED);
+				actiontarget.setText("Please set the Preference accordingly!");
+				actiontarget.setTextFill(Color.AQUAMARINE);
+			} else {
+				startShowingDisplay();
+			}
+		} else {
+			startShowingDisplay();
+		}
+	}
+	
+	public boolean isAppRunning() {
+		return isAppRunning;
+	}
+	
+	public boolean isDrawn() {
+		return isDrawn;
+	}
+	
+	public void notifyChanges() {
+		if(!isAppRunning)
+			startDisplayAction();
+		else if(isDrawn)
+			invalidate();
 	}
 
 }

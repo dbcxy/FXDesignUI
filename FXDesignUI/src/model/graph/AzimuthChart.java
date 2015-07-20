@@ -1,5 +1,7 @@
 package model.graph;
 
+import org.apache.log4j.Logger;
+
 import model.GraphChart;
 import model.MatrixRef;
 import utils.Constance;
@@ -12,9 +14,9 @@ import javafx.scene.text.Font;
 
 public class AzimuthChart extends GraphChart {
 	
-	double dist;
-	double midAzimuth;
+	static final Logger logger = Logger.getLogger(AzimuthChart.class);
 	
+	double midAzimuth;	
 	MatrixRef matrixRef = MatrixRef.getInstance();
 	Point startPoint;
 	Point endPoint;
@@ -35,27 +37,26 @@ public class AzimuthChart extends GraphChart {
 	}
 
 	public void drawLandingStrip(double centerDist, double offsetInAzimuth) {
-		this.dist = centerDist;
         Point offset = new Point(offsetInAzimuth,offsetInAzimuth,offsetInAzimuth, null);
 		
         startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
-        endPoint = matrixRef.toAzimuthPixels(midAzimuth, dist-Constance.RANGE_DISP);
+        endPoint = matrixRef.toAzimuthPixels(midAzimuth, centerDist-Constance.RANGE_DISP);
         
         //dotted line
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(1);
-//        gc.setLineDashes(OFFSET/2);
+        gc.setLineDashes(OFFSET/2);
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.AZIMUTH.RAL_ANGLE));//imaginary below line
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.AZIMUTH.LAL_ANGLE));//imaginary above line
-//        gc.setLineDashes(0);
+        gc.setLineDashes(0);
         
         //solid line
-        endPoint = matrixRef.toAzimuthPixels(midAzimuth, dist);
+        endPoint = matrixRef.toAzimuthPixels(midAzimuth, centerDist);
         gc.setStroke(Color.AQUAMARINE);
         gc.strokeLine(startPoint.getX(), startPoint.getY()-offset.getY(), endPoint.getX(),endPoint.getY()-offset.getY());//above center line
         gc.strokeLine(startPoint.getX(), startPoint.getY()+offset.getY(), endPoint.getX(),endPoint.getY()+offset.getY());//below center line
         
-        endPoint = matrixRef.toAzimuthPixels(midAzimuth, dist+Constance.RANGE_DISP);
+        endPoint = matrixRef.toAzimuthPixels(midAzimuth, centerDist+Constance.RANGE_DISP);
         gc.setStroke(Color.RED);
         gc.strokeLine(startPoint.getX(), startPoint.getY(), endPoint.getX(),endPoint.getY());//center line
 
@@ -69,14 +70,14 @@ public class AzimuthChart extends GraphChart {
 		//dotted red line
 		gc.setStroke(Color.RED);
 		gc.setLineWidth(1.5); 
-//		gc.setLineDashes(OFFSET/2);
+		gc.setLineDashes(OFFSET/2);
 
         endPoint = matrixRef.toAzimuthPixels(Constance.AZIMUTH_DISP, matrixRef.getTouchDown());
 		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),endPoint.getX()+range,endPoint.getY());
 		
         endPoint = matrixRef.toAzimuthPixels(-Constance.AZIMUTH_DISP, matrixRef.getTouchDown());
 		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),endPoint.getX()+range,endPoint.getY());
-//		gc.setLineDashes(0);
+		gc.setLineDashes(0);
 	}
 
 	public void drawDistanceGrid() {

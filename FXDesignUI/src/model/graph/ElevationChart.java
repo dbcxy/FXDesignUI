@@ -1,5 +1,7 @@
 package model.graph;
 
+import org.apache.log4j.Logger;
+
 import model.GraphChart;
 import model.MatrixRef;
 import utils.Constance;
@@ -12,9 +14,7 @@ import javafx.scene.text.Font;
 
 public class ElevationChart extends GraphChart{
 	
-	double elevationAngle;
-	double distAngle;
-	double centerDist;
+	static final Logger logger = Logger.getLogger(ElevationChart.class);
 	
 	MatrixRef matrixRef = MatrixRef.getInstance();
 	Point startPoint;
@@ -25,13 +25,12 @@ public class ElevationChart extends GraphChart{
 	}
 	
 	public void drawElevationLine(double elAngle) {
-		this.elevationAngle = elAngle;
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(2);        
-        startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
-        endPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getMaxRange());        		
-        gc.strokeLine(startPoint.getX(),startPoint.getY(),endPoint.getX(),endPoint.getY());//flat line     
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -elevationAngle);//cross line at 20 degrees
+        startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getMinRange());    		
+//        gc.strokeLine(startPoint.getX(),startPoint.getY(),endPoint.getX(),endPoint.getY());//flat line
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -Constance.ELEVATION.LSL_ANGLE);//flat line
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -elAngle);//cross line at 20 degrees
 	}
 	
 	public void drawRedDistanceLine(double offsetInRange) {
@@ -43,9 +42,9 @@ public class ElevationChart extends GraphChart{
 		//dotted red line
 		gc.setStroke(Color.RED);
 		gc.setLineWidth(1.5); 
-//		gc.setLineDashes(OFFSET/2);
+		gc.setLineDashes(OFFSET/2);
 		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),endPoint.getX()+range,endPoint.getY());
-//		gc.setLineDashes(0);
+		gc.setLineDashes(0);
 	}
 	
 	public void drawDistanceGrid() {
@@ -53,12 +52,19 @@ public class ElevationChart extends GraphChart{
         gc.setFont(new Font("Sans Serif", 16));
         gc.setLineWidth(1);
 
+//        endPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getTouchDown());
+//        Point point = ModelDrawing.getNextPointAtAngle(endPoint.getX(), endPoint.getY(), Constance.ELEVATION_DISP, Constance.ELEVATION.USL_ANGLE);
 		//draw remaining lines
         for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
         	
         	startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), i);
             endPoint = matrixRef.toElevationPixels((i)*Constance.ELEVATION_DISP, i);
-//            endPoint = matrixRef.toElevationPixels(ModelDrawing.getElevationHeigth(distAngle, i), i);
+        	
+
+//        	endPoint = matrixRef.toElevationPixels(point.getX(),i);
+//        	logger.info("EP("+i+"): "+endPoint.getX()+","+endPoint.getY());
+//        	point = ModelDrawing.getNextPointAtAngle(point.getX(), point.getY(), Constance.ELEVATION_DISP, Constance.ELEVATION.USL_ANGLE);
+//        	logger.info("P("+i+"): "+point.getX()+","+point.getY());
             
             //completing top angle line by joining
 //        	Point prevPoint = matrixRef.toElevationPixels((i-1)*Constance.ELEVATION_DISP, (i-1));
@@ -69,7 +75,7 @@ public class ElevationChart extends GraphChart{
             if((i%5)==0) {
         		//write text Range
         		gc.setStroke(Color.YELLOW);
-        		gc.strokeText(i+Constance.UNITS.LENGTH, startPoint.getX()-OFFSET, startPoint.getY()+HGAP);
+        		gc.strokeText(i+Constance.UNITS.getLENGTH(), startPoint.getX()-OFFSET, startPoint.getY()+HGAP);
         		gc.strokeLine(startPoint.getX(),startPoint.getY(),endPoint.getX(),endPoint.getY());
         	} else if (i==1) {
                 //write text TD
@@ -84,25 +90,23 @@ public class ElevationChart extends GraphChart{
 	}
 	
 	public void drawLandingStrip(double centerDist, double dAngle) {
-		this.distAngle = dAngle;
-		this.centerDist = centerDist;
         gc.setStroke(Color.AQUAMARINE);
         
         startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getTouchDown());
         endPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), centerDist-Constance.RANGE_DISP);
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(distAngle-1.5));//below center line
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(distAngle+1.5));//above center line
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.ELEVATION.LAL_ANGLE));//below center line
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.ELEVATION.UAL_ANGLE));//above center line
         
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(1);
-//        gc.setLineDashes(OFFSET/2);
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(distAngle-3.5));//imaginary below line
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(distAngle+3.5));//imaginary above line
-//        gc.setLineDashes(0);
+        gc.setLineDashes(OFFSET/2);
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.ELEVATION.LSaL_ANGLE));//dotted below line
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.ELEVATION.USaL_ANGLE));//dotted above line
+        gc.setLineDashes(0);
         
         endPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), centerDist);
         gc.setStroke(Color.RED);
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -distAngle);//center red line
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -dAngle);//center red line
 	}
 		
 	public static void drawText(Canvas canvas) {

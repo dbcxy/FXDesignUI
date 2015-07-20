@@ -1,5 +1,7 @@
 package application;
 
+import model.AppConfig;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -37,6 +39,7 @@ public class Master extends Application {
 			fxmlLoader.load(getClass().getResourceAsStream("Activity.fxml"));
 			Parent root = (Parent) fxmlLoader.getRoot();
 			mFXMLController = (FXMLController) fxmlLoader.getController();
+			AppConfig.getInstance().setFxmlController(mFXMLController);
 			Scene scene = new Scene(root);
 	        
 			primaryStage.initStyle(StageStyle.UNDECORATED);

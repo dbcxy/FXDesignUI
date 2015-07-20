@@ -87,8 +87,10 @@ public class PreferencesController implements Initializable,ILayoutParam{
 	protected void okClick(ActionEvent event) {
 		saveData();
 		appConfig.savePreferenceData();
-		if(appConfig.isPreferenceSaved())
+		if(appConfig.isPreferenceSaved()) {
 			closeSettings(event);
+			AppConfig.getInstance().getFxmlController().notifyChanges();
+		}
 	}
 	
 	@FXML
@@ -106,7 +108,7 @@ public class PreferencesController implements Initializable,ILayoutParam{
 		Constance.PREF.FREQ_SEL = freqSel.getText();
 		Constance.PREF.BITE = bite.getText();
 		
-		Constance.UNITS.isKM = Constance.PREF.RANGE_UNITS.contains("km");
+		Constance.UNITS.isKM = Constance.PREF.RANGE_UNITS.contains("KM");
 		Constance.UNITS.isFPS = Constance.PREF.EL_AZ_UNITS.contains("ft");
 		
 	}

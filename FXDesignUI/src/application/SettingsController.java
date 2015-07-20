@@ -105,16 +105,16 @@ public class SettingsController implements Initializable,ILayoutParam{
 	}
 
 	private void initUnits() {
-		((Label) (MaximumElevation.getChildren().get(2))).setText(Constance.UNITS.HEIGHT);
-		((Label) (MaximumAzimuth.getChildren().get(2))).setText(Constance.UNITS.HEIGHT);
+		((Label) (MaximumElevation.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
+		((Label) (MaximumAzimuth.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
 		
-		((Label) (ElevationDH.getChildren().get(2))).setText(Constance.UNITS.HEIGHT);
-		((Label) (ElevationGlideMaxDist.getChildren().get(2))).setText(Constance.UNITS.LENGTH);
-		((Label) (ElevationGlideFlatStartDist.getChildren().get(2))).setText(Constance.UNITS.LENGTH);
+		((Label) (ElevationDH.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
+		((Label) (ElevationGlideMaxDist.getChildren().get(2))).setText(Constance.UNITS.getLENGTH());
+		((Label) (ElevationGlideFlatStartDist.getChildren().get(2))).setText(Constance.UNITS.getLENGTH());
 		
-		((Label) (AzimuthRCLO.getChildren().get(2))).setText(Constance.UNITS.HEIGHT);
-		((Label) (AzimuthLSaL.getChildren().get(2))).setText(Constance.UNITS.HEIGHT);
-		((Label) (AzimuthRSaL.getChildren().get(2))).setText(Constance.UNITS.HEIGHT);
+		((Label) (AzimuthRCLO.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
+		((Label) (AzimuthLSaL.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
+		((Label) (AzimuthRSaL.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
 		
 	}
 
@@ -123,6 +123,7 @@ public class SettingsController implements Initializable,ILayoutParam{
 		appConfig.saveSettingsData();
 		if(appConfig.isSettingSaved()) {
 			closeSettings(event);
+			AppConfig.getInstance().getFxmlController().notifyChanges();
 		}
 		
 	}
@@ -130,9 +131,7 @@ public class SettingsController implements Initializable,ILayoutParam{
 	@FXML
 	protected void cancelClick(ActionEvent event) {
 		closeSettings(event);
-	}	
-	
-	
+	}
 
 	private void closeSettings(ActionEvent event) {
 		Node  source = (Node)  event.getSource(); 

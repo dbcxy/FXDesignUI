@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import application.FXMLController;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
@@ -30,6 +31,8 @@ public class AppConfig {
 	      }
 	      return instance;
 	}
+	
+	FXMLController fxmlController;
 	
 	boolean isValidSettings = false;
 	boolean isValidPreference = false;
@@ -70,6 +73,14 @@ public class AppConfig {
 		Constance.PREF.BITE
 	};
 	
+	public FXMLController getFxmlController() {
+		return fxmlController;
+	}
+
+	public void setFxmlController(FXMLController fxmlController) {
+		this.fxmlController = fxmlController;
+	}
+
 	public void addSetting(HBox hbox) {
 		itemSettingList.add(hbox);
 	}
@@ -107,10 +118,29 @@ public class AppConfig {
 		validateSettingsData();
 		if(isValidSettings) {		
 			//get TextField to save values
-			for(int i=0;i<itemSettingList.size();i++) {
-				TextField tField = ((TextField)(itemSettingList.get(i).getChildren().get(1)));
-				itemSettingVal[i] = Double.valueOf(tField.getText());
-			}
+			int i = 0;
+			Constance.ELEVATION_MAX = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH_MAX = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			
+			Constance.ELEVATION.USL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.GLIDE_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.GLIDE_MAX_DIST = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.GLIDE_FLAT_START_DIST = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.LSL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.UAL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.LAL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.USaL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.LSaL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.DH = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			
+			Constance.AZIMUTH.LSL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH.RSL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH.RCLO = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH.LAL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH.RAL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH.LSaL = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH.RSaL = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());
+
 			
 			Constance.IS_CONFIG_SET = true;
 			logger.info("Settings Data Saved");

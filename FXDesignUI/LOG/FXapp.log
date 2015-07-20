@@ -50176,3 +50176,1415 @@ java.lang.NullPointerException
 2015-07-19 23:14:39,439 INFO [application.FXMLController] - Top Chart initialization
 2015-07-19 23:14:39,447 INFO [application.FXMLController] - Bottom Chart initialization
 2015-07-19 23:14:43,856 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 21:36:08,114 INFO [application.Master] - Launch
+2015-07-20 21:36:13,128 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 21:36:13,263 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 21:36:14,822 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 21:36:14,822 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 21:36:14,824 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 21:36:17,342 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 21:36:19,007 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 21:36:19,007 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 21:36:19,013 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 21:36:19,960 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 21:36:19,999 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 21:36:20,509 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 21:36:20,513 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 21:38:31,825 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 21:38:39,401 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 21:38:41,225 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 21:40:10,446 INFO [application.Master] - Launch
+2015-07-20 21:40:14,858 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 21:40:14,988 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 21:40:18,294 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 21:40:18,295 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 21:40:18,300 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 21:40:22,129 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 21:40:23,374 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 21:40:23,374 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 21:40:23,378 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 21:40:28,410 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 21:49:54,981 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 21:49:54,981 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 21:49:54,987 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 21:49:58,722 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 21:50:03,935 INFO [application.Master] - Launch
+2015-07-20 21:50:07,984 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 21:50:08,122 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 21:50:19,748 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 21:50:19,749 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 21:50:19,752 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 21:50:21,548 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 21:50:22,797 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 21:50:22,797 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 21:50:22,804 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 21:50:24,319 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 21:50:24,320 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 21:50:24,517 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 21:50:24,519 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 21:50:30,580 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 21:50:38,604 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 21:50:38,604 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 21:50:38,606 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 21:50:41,175 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 21:54:13,418 INFO [application.Master] - Launch
+2015-07-20 21:54:13,945 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 21:54:17,324 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 21:54:19,541 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 21:54:19,541 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 21:54:19,545 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 21:54:19,791 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:03:42,396 INFO [application.Master] - Launch
+2015-07-20 22:03:42,950 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:03:46,337 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:03:47,405 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:03:47,405 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:03:47,410 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:03:48,708 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:03:50,240 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:03:50,240 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:03:50,244 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:03:53,003 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:03:53,004 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:03:53,092 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:03:53,094 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:03:56,380 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:04:05,748 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:04:05,749 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:04:05,756 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:04:13,656 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:04:20,668 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:04:20,669 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:04:20,673 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:04:24,000 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 22:05:52,561 INFO [application.Master] - Launch
+2015-07-20 22:05:53,068 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:05:56,601 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:05:57,717 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:05:57,718 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:05:57,723 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:05:58,796 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:06:00,188 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:06:00,188 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:06:00,192 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:06:00,229 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:06:00,230 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:06:00,307 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:06:00,309 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:06:03,862 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:06:08,444 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:06:08,445 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:06:08,448 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:06:27,374 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:06:35,293 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:06:39,621 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:09:54,953 INFO [application.Master] - Launch
+2015-07-20 22:09:55,536 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:09:58,988 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:09:59,789 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:09:59,789 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:09:59,794 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:10:00,836 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:10:01,668 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:10:01,669 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:10:01,674 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:10:01,724 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:10:01,725 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:10:01,806 INFO [application.FXMLController] - GlideAngle: 10.0
+2015-07-20 22:10:01,811 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:10:01,813 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:10:11,687 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:10:18,516 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:10:18,516 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:10:18,520 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:10:18,522 INFO [application.FXMLController] - GlideAngle: 10.0
+2015-07-20 22:10:31,144 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:10:33,391 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:16:54,862 INFO [application.Master] - Launch
+2015-07-20 22:16:55,439 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:16:59,178 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:17:00,023 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:17:00,023 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:17:00,028 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:17:01,295 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:17:02,020 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:17:02,021 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:17:02,025 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:17:02,068 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:17:02,069 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:17:02,146 INFO [application.FXMLController] - GlideAngle: 10.0
+2015-07-20 22:17:02,150 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:17:02,151 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:17:04,304 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:17:08,188 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:17:08,189 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:17:08,193 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:17:08,195 INFO [application.FXMLController] - GlideAngle: 15.0
+2015-07-20 22:17:13,361 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:17:17,931 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:17:17,932 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:17:17,933 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:17:17,934 INFO [application.FXMLController] - GlideAngle: 25.0
+2015-07-20 22:17:25,915 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:17:29,356 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:17:29,357 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:17:29,361 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:17:29,363 INFO [application.FXMLController] - GlideAngle: 15.0
+2015-07-20 22:17:31,807 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:17:34,763 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:17:34,764 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:17:34,766 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:17:34,767 INFO [application.FXMLController] - GlideAngle: 10.0
+2015-07-20 22:17:37,153 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 22:18:55,436 INFO [application.Master] - Launch
+2015-07-20 22:18:56,017 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:18:58,965 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:18:59,813 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:18:59,814 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:18:59,818 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:19:00,801 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:19:01,660 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:19:01,661 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:19:01,664 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:19:01,703 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:19:01,704 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:19:01,793 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:19:01,794 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:19:07,276 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 22:19:32,577 INFO [application.Master] - Launch
+2015-07-20 22:19:33,152 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:19:37,137 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:19:38,316 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:19:38,316 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:19:38,319 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:19:39,695 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:19:41,292 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:19:41,292 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:19:41,296 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:19:41,327 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:19:41,328 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:19:41,436 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:19:41,438 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:19:44,271 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:21:19,628 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:21:19,629 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:21:19,633 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:21:27,893 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:21:42,268 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:21:42,268 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:21:42,274 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:21:52,396 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:21:56,412 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:21:56,412 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:21:56,417 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:22:08,386 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:22:14,309 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:22:14,309 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:22:14,318 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:22:28,133 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:22:31,236 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:22:31,236 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:22:31,239 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:22:41,497 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:22:44,332 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:22:44,333 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:22:44,336 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:22:47,063 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 22:26:15,858 INFO [application.Master] - Launch
+2015-07-20 22:26:16,493 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:26:19,692 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:26:20,925 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:26:20,925 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:26:20,928 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:26:21,966 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:26:23,712 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:26:23,712 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:26:23,717 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:26:23,742 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:26:23,742 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:26:23,818 INFO [model.graph.ElevationChart] - Units: KM
+2015-07-20 22:26:23,819 INFO [model.graph.ElevationChart] - Units: KM
+2015-07-20 22:26:23,821 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:26:23,822 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:26:27,298 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:26:30,484 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:26:30,485 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:26:30,488 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:26:30,489 INFO [model.graph.ElevationChart] - Units: KM
+2015-07-20 22:26:30,490 INFO [model.graph.ElevationChart] - Units: KM
+2015-07-20 22:27:25,932 INFO [application.Master] - Launch
+2015-07-20 22:27:26,605 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:27:29,998 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:27:30,877 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:27:30,878 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:27:30,882 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:27:32,454 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:27:33,389 INFO [application.SettingsController] - isKM: false
+2015-07-20 22:27:33,389 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:27:33,390 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:27:33,394 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:27:33,436 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:27:33,438 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:27:33,516 INFO [model.graph.ElevationChart] - Units: KM
+2015-07-20 22:27:33,517 INFO [model.graph.ElevationChart] - Units: KM
+2015-07-20 22:27:33,519 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:27:33,520 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:29:52,339 INFO [application.Master] - Launch
+2015-07-20 22:29:52,913 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:29:56,023 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:29:57,125 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:29:57,125 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:29:57,131 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:29:58,403 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:29:59,414 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:29:59,414 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:29:59,419 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:29:59,460 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:29:59,461 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:29:59,540 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:29:59,542 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:30:02,788 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:30:05,516 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:30:05,517 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:30:05,518 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:30:42,183 INFO [application.Master] - Launch
+2015-07-20 22:30:42,730 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:30:45,656 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:30:46,598 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:30:46,632 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:30:46,636 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:30:47,868 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:30:48,718 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:30:48,719 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:30:48,723 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:30:48,770 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:30:48,771 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:30:48,855 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:30:48,856 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:30:51,109 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:30:53,588 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:30:53,589 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:30:53,593 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:30:58,030 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 22:33:00,152 INFO [application.Master] - Launch
+2015-07-20 22:33:00,706 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:33:03,767 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:33:04,525 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:33:04,526 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:33:04,532 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:33:05,393 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:33:07,328 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:33:07,329 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:33:07,333 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:33:07,374 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:33:07,375 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:33:07,453 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:33:07,455 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:33:09,331 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:33:11,740 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:33:11,741 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:33:11,744 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:33:29,497 INFO [application.Master] - Launch
+2015-07-20 22:33:30,067 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:33:33,112 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:33:33,885 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:33:33,886 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:33:33,894 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:33:34,936 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:33:35,709 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:33:35,710 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:33:35,713 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:33:35,747 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:33:35,748 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:33:35,829 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:33:35,830 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:33:37,409 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:33:39,516 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:33:39,517 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:33:39,521 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:36:05,343 INFO [application.Master] - Launch
+2015-07-20 22:36:06,108 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:36:09,712 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:36:10,629 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:36:10,675 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:36:10,683 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:36:11,886 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:36:12,606 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:36:12,635 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:36:12,641 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:36:12,681 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:36:12,682 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:36:12,764 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:36:12,765 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:36:14,246 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:36:16,636 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:36:16,637 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:36:16,641 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:37:46,660 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 22:38:40,785 INFO [application.Master] - Launch
+2015-07-20 22:38:41,342 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:38:44,323 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:38:45,269 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:38:45,270 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:38:45,274 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:38:46,098 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:38:46,957 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:38:46,957 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:38:46,961 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:38:47,002 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:38:47,003 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:38:47,082 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:38:47,084 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:38:48,459 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:38:50,636 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:38:50,637 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:38:50,641 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:39:05,463 INFO [application.Master] - Launch
+2015-07-20 22:39:06,023 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:39:09,157 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:39:09,967 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:39:09,968 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:39:09,972 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:39:10,989 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:39:11,806 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:39:11,806 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:39:11,814 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:39:11,854 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:39:11,855 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:39:11,936 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:39:11,937 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:39:13,489 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:39:16,036 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:39:16,037 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:39:16,038 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:39:18,648 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 22:40:15,997 INFO [application.Master] - Launch
+2015-07-20 22:40:16,548 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:40:19,652 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:40:20,533 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:40:20,533 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:40:20,537 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:40:21,500 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:40:22,341 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:40:22,341 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:40:22,343 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:40:22,364 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:40:22,365 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:40:22,447 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:40:22,448 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:40:24,415 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:40:26,773 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:40:26,774 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:40:26,778 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:40:30,916 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:40:32,141 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:40:32,141 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:40:32,145 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:40:34,558 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 22:40:56,878 INFO [application.Master] - Launch
+2015-07-20 22:40:57,602 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:41:00,805 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:41:01,622 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:41:01,623 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:41:01,628 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:41:02,795 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:41:03,629 INFO [application.SettingsController] - isKM: true
+2015-07-20 22:41:03,629 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:41:03,629 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:41:03,632 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:41:03,661 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:41:03,662 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:41:03,773 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:41:03,775 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:41:05,448 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:41:07,973 INFO [application.SettingsController] - isKM: false
+2015-07-20 22:41:07,973 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:41:07,974 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:41:07,978 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:42:41,217 INFO [application.Master] - Launch
+2015-07-20 22:42:41,803 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:42:44,830 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:42:45,894 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:42:45,894 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:42:45,899 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:42:46,840 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:42:48,105 INFO [application.SettingsController] - isKM: true
+2015-07-20 22:42:48,106 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:42:48,106 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:42:48,109 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:42:48,139 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:42:48,140 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:42:48,219 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:42:48,221 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:42:50,535 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:42:53,045 INFO [application.SettingsController] - isKM: false
+2015-07-20 22:42:53,046 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:42:53,046 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:42:53,053 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:44:07,575 INFO [application.Master] - Launch
+2015-07-20 22:44:08,185 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:44:11,182 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:44:12,205 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:44:12,206 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:44:12,215 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:44:13,180 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:44:13,982 INFO [application.SettingsController] - isKM: true
+2015-07-20 22:44:13,982 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:44:13,982 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:44:13,987 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:44:14,031 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:44:14,032 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:44:14,114 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:44:14,115 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:44:15,490 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:44:17,797 INFO [application.SettingsController] - isKM: false
+2015-07-20 22:44:17,797 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:44:17,797 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:44:17,800 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:45:14,074 INFO [application.Master] - Launch
+2015-07-20 22:45:14,649 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:45:18,154 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:45:19,056 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:45:19,056 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:45:19,065 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:45:20,234 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:45:21,598 INFO [application.SettingsController] - isKM:  Kilometers (KM) 
+2015-07-20 22:45:21,630 INFO [application.SettingsController] - isKM: true
+2015-07-20 22:45:21,630 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:45:21,631 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:45:21,637 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:45:21,683 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:45:21,684 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:45:21,768 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:45:21,770 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:45:29,074 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:45:31,397 INFO [application.SettingsController] - isKM: Nauticalmiles (NM)
+2015-07-20 22:45:31,398 INFO [application.SettingsController] - isKM: false
+2015-07-20 22:45:31,398 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:45:31,398 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:45:31,402 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:47:07,423 INFO [application.Master] - Launch
+2015-07-20 22:47:07,977 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:47:10,855 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:47:11,854 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:47:11,855 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:47:11,859 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:47:12,947 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:47:13,638 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:47:13,638 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:47:13,642 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:47:13,683 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:47:13,684 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:47:13,765 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:47:13,767 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:47:15,243 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:47:17,589 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:47:17,590 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:47:17,594 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:47:17,595 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-20 22:47:17,597 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-20 22:50:39,131 INFO [application.Master] - Launch
+2015-07-20 22:50:39,668 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:50:42,938 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:50:43,871 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:50:43,872 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:50:43,876 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:50:44,806 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:50:45,742 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:50:45,742 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:50:45,752 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:50:45,791 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:50:45,792 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:50:45,871 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:50:45,873 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:50:48,120 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:50:50,357 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:50:50,357 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:50:50,359 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:50:50,360 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-20 22:50:50,361 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-20 22:50:58,363 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:51:07,613 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:51:07,613 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:51:07,617 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:51:07,618 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-20 22:51:07,619 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-20 22:51:13,227 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 22:56:14,629 INFO [application.Master] - Launch
+2015-07-20 22:56:15,254 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:56:18,400 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:56:19,406 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:56:19,407 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:56:19,412 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:56:20,520 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:56:21,374 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:56:21,375 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:56:21,379 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:56:21,419 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:56:21,420 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:56:21,500 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:56:21,501 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:56:53,814 INFO [application.Master] - Launch
+2015-07-20 22:56:54,366 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:56:57,320 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:56:58,525 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:56:58,526 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:56:58,528 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:56:59,677 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:57:00,341 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:57:00,341 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:57:00,347 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:57:00,369 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:57:00,370 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:57:00,454 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:57:00,456 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:57:16,858 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 22:57:20,652 INFO [application.Master] - Launch
+2015-07-20 22:57:21,451 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:57:24,720 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:57:25,767 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:57:25,768 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:57:25,774 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:57:27,033 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:57:27,862 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:57:27,863 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:57:27,866 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:57:27,913 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:57:27,914 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:57:27,993 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:57:27,995 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:57:35,279 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 22:57:56,469 INFO [application.Master] - Launch
+2015-07-20 22:57:57,024 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 22:58:00,030 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:58:00,790 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:58:00,791 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:58:00,795 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:58:01,930 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 22:58:02,919 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 22:58:02,919 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 22:58:02,923 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 22:58:02,962 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 22:58:02,963 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 22:58:03,045 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 22:58:03,047 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 22:58:07,620 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 22:58:13,101 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 22:58:13,102 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 22:58:13,105 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 22:58:13,108 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-20 22:58:13,134 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-20 22:58:18,870 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 23:01:34,930 INFO [application.Master] - Launch
+2015-07-20 23:01:35,506 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:01:38,538 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:01:39,951 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:01:39,952 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:01:39,957 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:01:40,937 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:01:41,679 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:01:41,680 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:01:41,688 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:01:41,723 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:01:41,724 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:01:41,804 INFO [model.graph.ElevationChart] - EP: 1044.9653480586358,627.0201433256686
+2015-07-20 23:01:41,804 INFO [model.graph.ElevationChart] - EP: 1140.238075331363,627.0201433256686
+2015-07-20 23:01:41,804 INFO [model.graph.ElevationChart] - EP: 1235.5108026040903,627.0201433256686
+2015-07-20 23:01:41,804 INFO [model.graph.ElevationChart] - EP: 1330.7835298768175,627.0201433256686
+2015-07-20 23:01:41,804 INFO [model.graph.ElevationChart] - EP: 1426.0562571495448,627.0201433256686
+2015-07-20 23:01:41,804 INFO [model.graph.ElevationChart] - EP: 1521.328984422272,627.0201433256686
+2015-07-20 23:01:41,805 INFO [model.graph.ElevationChart] - EP: 1616.6017116949993,627.0201433256686
+2015-07-20 23:01:41,805 INFO [model.graph.ElevationChart] - EP: 1711.8744389677265,627.0201433256686
+2015-07-20 23:01:41,805 INFO [model.graph.ElevationChart] - EP: 1807.1471662404538,627.0201433256686
+2015-07-20 23:01:41,805 INFO [model.graph.ElevationChart] - EP: 1902.4198935131813,627.0201433256686
+2015-07-20 23:01:41,805 INFO [model.graph.ElevationChart] - EP: 1997.6926207859083,627.0201433256686
+2015-07-20 23:01:41,807 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:01:41,809 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:02:47,598 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 23:02:51,233 INFO [application.Master] - Launch
+2015-07-20 23:02:51,845 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:02:54,831 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:02:55,694 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:02:55,695 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:02:55,703 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:02:56,624 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:02:57,470 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:02:57,471 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:02:57,475 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:02:57,515 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:02:57,516 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:02:57,593 INFO [model.graph.ElevationChart] - EP: 1090.0705938563594,643.4371102053008
+2015-07-20 23:02:57,593 INFO [model.graph.ElevationChart] - EP: 1185.3433211290867,643.4371102053008
+2015-07-20 23:02:57,593 INFO [model.graph.ElevationChart] - EP: 1280.616048401814,643.4371102053008
+2015-07-20 23:02:57,593 INFO [model.graph.ElevationChart] - EP: 1375.8887756745412,643.4371102053008
+2015-07-20 23:02:57,593 INFO [model.graph.ElevationChart] - EP: 1471.1615029472684,643.4371102053008
+2015-07-20 23:02:57,594 INFO [model.graph.ElevationChart] - EP: 1566.4342302199957,643.4371102053008
+2015-07-20 23:02:57,594 INFO [model.graph.ElevationChart] - EP: 1661.706957492723,643.4371102053008
+2015-07-20 23:02:57,594 INFO [model.graph.ElevationChart] - EP: 1756.9796847654502,643.4371102053008
+2015-07-20 23:02:57,594 INFO [model.graph.ElevationChart] - EP: 1852.2524120381777,643.4371102053008
+2015-07-20 23:02:57,594 INFO [model.graph.ElevationChart] - EP: 1947.5251393109047,643.4371102053008
+2015-07-20 23:02:57,594 INFO [model.graph.ElevationChart] - EP: 2042.7978665836322,643.4371102053008
+2015-07-20 23:02:57,596 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:02:57,598 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:03:16,474 INFO [application.Master] - Launch
+2015-07-20 23:03:17,034 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:03:20,834 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:03:22,807 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:03:22,808 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:03:22,812 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:03:24,253 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:03:24,999 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:03:24,999 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:03:25,003 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:03:25,043 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:03:25,044 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:03:25,124 INFO [model.graph.ElevationChart] - EP: 1090.0705938563594,-73.43711020530083
+2015-07-20 23:03:25,124 INFO [model.graph.ElevationChart] - EP: 1185.3433211290867,-73.43711020530083
+2015-07-20 23:03:25,124 INFO [model.graph.ElevationChart] - EP: 1280.616048401814,-73.43711020530083
+2015-07-20 23:03:25,125 INFO [model.graph.ElevationChart] - EP: 1375.8887756745412,-73.43711020530083
+2015-07-20 23:03:25,125 INFO [model.graph.ElevationChart] - EP: 1471.1615029472684,-73.43711020530083
+2015-07-20 23:03:25,125 INFO [model.graph.ElevationChart] - EP: 1566.4342302199957,-73.43711020530083
+2015-07-20 23:03:25,125 INFO [model.graph.ElevationChart] - EP: 1661.706957492723,-73.43711020530083
+2015-07-20 23:03:25,125 INFO [model.graph.ElevationChart] - EP: 1756.9796847654502,-73.43711020530083
+2015-07-20 23:03:25,125 INFO [model.graph.ElevationChart] - EP: 1852.2524120381777,-73.43711020530083
+2015-07-20 23:03:25,126 INFO [model.graph.ElevationChart] - EP: 1947.5251393109047,-73.43711020530083
+2015-07-20 23:03:25,126 INFO [model.graph.ElevationChart] - EP: 2042.7978665836322,-73.43711020530083
+2015-07-20 23:03:25,129 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:03:25,130 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:04:36,216 INFO [application.Master] - Launch
+2015-07-20 23:04:36,830 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:04:40,329 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:04:41,950 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:04:41,951 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:04:41,957 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:04:42,928 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:04:43,958 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:04:43,959 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:04:43,963 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:04:44,005 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:04:44,006 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:04:44,092 INFO [model.graph.ElevationChart] - EP: 105.27272727272727,253.93298807509376
+2015-07-20 23:04:44,092 INFO [model.graph.ElevationChart] - EP: 200.54545454545453,251.217715347821
+2015-07-20 23:04:44,093 INFO [model.graph.ElevationChart] - EP: 295.8181818181818,248.5024426205483
+2015-07-20 23:04:44,093 INFO [model.graph.ElevationChart] - EP: 391.09090909090907,245.78716989327557
+2015-07-20 23:04:44,093 INFO [model.graph.ElevationChart] - EP: 486.3636363636364,243.07189716600286
+2015-07-20 23:04:44,093 INFO [model.graph.ElevationChart] - EP: 581.6363636363636,240.35662443873014
+2015-07-20 23:04:44,093 INFO [model.graph.ElevationChart] - EP: 676.9090909090909,237.6413517114574
+2015-07-20 23:04:44,094 INFO [model.graph.ElevationChart] - EP: 772.1818181818181,234.92607898418467
+2015-07-20 23:04:44,094 INFO [model.graph.ElevationChart] - EP: 867.4545454545455,232.21080625691195
+2015-07-20 23:04:44,094 INFO [model.graph.ElevationChart] - EP: 962.7272727272727,229.4955335296392
+2015-07-20 23:04:44,094 INFO [model.graph.ElevationChart] - EP: 1058.0,226.78026080236648
+2015-07-20 23:04:44,097 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:04:44,099 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:06:02,506 INFO [application.Master] - Launch
+2015-07-20 23:06:03,062 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:06:05,925 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:06:07,047 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:06:07,048 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:06:07,057 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:06:08,163 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:06:09,015 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:06:09,015 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:06:09,019 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:06:09,054 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:06:09,055 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:06:09,136 INFO [model.graph.ElevationChart] - EP: 105.27272727272727,255.21848758032888
+2015-07-20 23:06:09,136 INFO [model.graph.ElevationChart] - EP: 200.54545454545453,252.50321485305614
+2015-07-20 23:06:09,137 INFO [model.graph.ElevationChart] - EP: 295.8181818181818,249.78794212578345
+2015-07-20 23:06:09,137 INFO [model.graph.ElevationChart] - EP: 391.09090909090907,247.0726693985107
+2015-07-20 23:06:09,137 INFO [model.graph.ElevationChart] - EP: 486.3636363636364,244.35739667123798
+2015-07-20 23:06:09,137 INFO [model.graph.ElevationChart] - EP: 581.6363636363636,241.64212394396526
+2015-07-20 23:06:09,137 INFO [model.graph.ElevationChart] - EP: 676.9090909090909,238.9268512166925
+2015-07-20 23:06:09,138 INFO [model.graph.ElevationChart] - EP: 772.1818181818181,236.2115784894198
+2015-07-20 23:06:09,138 INFO [model.graph.ElevationChart] - EP: 867.4545454545455,233.49630576214707
+2015-07-20 23:06:09,138 INFO [model.graph.ElevationChart] - EP: 962.7272727272727,230.78103303487433
+2015-07-20 23:06:09,138 INFO [model.graph.ElevationChart] - EP: 1058.0,228.06576030760164
+2015-07-20 23:06:09,141 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:06:09,143 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:07:17,972 INFO [application.Master] - Launch
+2015-07-20 23:07:18,624 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:07:21,590 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:07:22,383 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:07:22,384 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:07:22,388 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:07:23,321 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:07:24,111 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:07:24,111 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:07:24,116 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:07:24,154 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:07:24,156 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:07:24,234 INFO [model.graph.ElevationChart] - SP: 105.27272727272727,285.0
+2015-07-20 23:07:24,234 INFO [model.graph.ElevationChart] - EP: 105.27272727272727,253.93298807509376
+2015-07-20 23:07:24,234 INFO [model.graph.ElevationChart] - SP: 200.54545454545453,285.0
+2015-07-20 23:07:24,235 INFO [model.graph.ElevationChart] - EP: 200.54545454545453,251.217715347821
+2015-07-20 23:07:24,235 INFO [model.graph.ElevationChart] - SP: 295.8181818181818,285.0
+2015-07-20 23:07:24,235 INFO [model.graph.ElevationChart] - EP: 295.8181818181818,248.5024426205483
+2015-07-20 23:07:24,235 INFO [model.graph.ElevationChart] - SP: 391.09090909090907,285.0
+2015-07-20 23:07:24,235 INFO [model.graph.ElevationChart] - EP: 391.09090909090907,245.78716989327557
+2015-07-20 23:07:24,235 INFO [model.graph.ElevationChart] - SP: 486.3636363636364,285.0
+2015-07-20 23:07:24,235 INFO [model.graph.ElevationChart] - EP: 486.3636363636364,243.07189716600286
+2015-07-20 23:07:24,235 INFO [model.graph.ElevationChart] - SP: 581.6363636363636,285.0
+2015-07-20 23:07:24,236 INFO [model.graph.ElevationChart] - EP: 581.6363636363636,240.35662443873014
+2015-07-20 23:07:24,236 INFO [model.graph.ElevationChart] - SP: 676.9090909090909,285.0
+2015-07-20 23:07:24,236 INFO [model.graph.ElevationChart] - EP: 676.9090909090909,237.6413517114574
+2015-07-20 23:07:24,236 INFO [model.graph.ElevationChart] - SP: 772.1818181818181,285.0
+2015-07-20 23:07:24,236 INFO [model.graph.ElevationChart] - EP: 772.1818181818181,234.92607898418467
+2015-07-20 23:07:24,236 INFO [model.graph.ElevationChart] - SP: 867.4545454545455,285.0
+2015-07-20 23:07:24,236 INFO [model.graph.ElevationChart] - EP: 867.4545454545455,232.21080625691195
+2015-07-20 23:07:24,236 INFO [model.graph.ElevationChart] - SP: 962.7272727272727,285.0
+2015-07-20 23:07:24,236 INFO [model.graph.ElevationChart] - EP: 962.7272727272727,229.4955335296392
+2015-07-20 23:07:24,237 INFO [model.graph.ElevationChart] - SP: 1058.0,285.0
+2015-07-20 23:07:24,237 INFO [model.graph.ElevationChart] - EP: 1058.0,226.78026080236648
+2015-07-20 23:07:24,239 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:07:24,240 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:09:54,592 INFO [application.Master] - Launch
+2015-07-20 23:09:55,174 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:09:58,553 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:09:59,615 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:09:59,634 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:09:59,641 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:10:00,792 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:10:01,647 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:10:01,647 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:10:01,653 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:10:01,700 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:10:01,700 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:10:01,776 INFO [model.graph.ElevationChart] - SP: 105.27272727272727,285.0
+2015-07-20 23:10:01,777 INFO [model.graph.ElevationChart] - EP: 105.27272727272727,253.93298807509376
+2015-07-20 23:10:01,777 INFO [model.graph.ElevationChart] - SP: 200.54545454545453,285.0
+2015-07-20 23:10:01,777 INFO [model.graph.ElevationChart] - EP: 200.54545454545453,251.217715347821
+2015-07-20 23:10:01,777 INFO [model.graph.ElevationChart] - SP: 295.8181818181818,285.0
+2015-07-20 23:10:01,777 INFO [model.graph.ElevationChart] - EP: 295.8181818181818,248.5024426205483
+2015-07-20 23:10:01,777 INFO [model.graph.ElevationChart] - SP: 391.09090909090907,285.0
+2015-07-20 23:10:01,777 INFO [model.graph.ElevationChart] - EP: 391.09090909090907,245.78716989327557
+2015-07-20 23:10:01,778 INFO [model.graph.ElevationChart] - SP: 486.3636363636364,285.0
+2015-07-20 23:10:01,778 INFO [model.graph.ElevationChart] - EP: 486.3636363636364,243.07189716600286
+2015-07-20 23:10:01,778 INFO [model.graph.ElevationChart] - SP: 581.6363636363636,285.0
+2015-07-20 23:10:01,778 INFO [model.graph.ElevationChart] - EP: 581.6363636363636,240.35662443873014
+2015-07-20 23:10:01,778 INFO [model.graph.ElevationChart] - SP: 676.9090909090909,285.0
+2015-07-20 23:10:01,778 INFO [model.graph.ElevationChart] - EP: 676.9090909090909,237.6413517114574
+2015-07-20 23:10:01,778 INFO [model.graph.ElevationChart] - SP: 772.1818181818181,285.0
+2015-07-20 23:10:01,778 INFO [model.graph.ElevationChart] - EP: 772.1818181818181,234.92607898418467
+2015-07-20 23:10:01,779 INFO [model.graph.ElevationChart] - SP: 867.4545454545455,285.0
+2015-07-20 23:10:01,779 INFO [model.graph.ElevationChart] - EP: 867.4545454545455,232.21080625691195
+2015-07-20 23:10:01,779 INFO [model.graph.ElevationChart] - SP: 962.7272727272727,285.0
+2015-07-20 23:10:01,779 INFO [model.graph.ElevationChart] - EP: 962.7272727272727,229.4955335296392
+2015-07-20 23:10:01,779 INFO [model.graph.ElevationChart] - SP: 1058.0,285.0
+2015-07-20 23:10:01,779 INFO [model.graph.ElevationChart] - EP: 1058.0,226.78026080236648
+2015-07-20 23:10:01,781 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:10:01,783 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:11:08,693 INFO [application.Master] - Launch
+2015-07-20 23:11:09,352 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:11:12,804 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:11:13,791 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:11:13,792 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:11:13,800 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:11:14,801 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:11:15,567 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:11:15,567 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:11:15,571 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:11:15,617 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:11:15,618 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:11:15,695 INFO [model.graph.ElevationChart] - SP: 105.27272727272727,285.0
+2015-07-20 23:11:15,695 INFO [model.graph.ElevationChart] - EP: 105.27272727272727,253.93298807509376
+2015-07-20 23:11:15,695 INFO [model.graph.ElevationChart] - SP: 200.54545454545453,285.0
+2015-07-20 23:11:15,695 INFO [model.graph.ElevationChart] - EP: 200.54545454545453,251.217715347821
+2015-07-20 23:11:15,695 INFO [model.graph.ElevationChart] - SP: 295.8181818181818,285.0
+2015-07-20 23:11:15,695 INFO [model.graph.ElevationChart] - EP: 295.8181818181818,248.5024426205483
+2015-07-20 23:11:15,695 INFO [model.graph.ElevationChart] - SP: 391.09090909090907,285.0
+2015-07-20 23:11:15,696 INFO [model.graph.ElevationChart] - EP: 391.09090909090907,245.78716989327557
+2015-07-20 23:11:15,696 INFO [model.graph.ElevationChart] - SP: 486.3636363636364,285.0
+2015-07-20 23:11:15,696 INFO [model.graph.ElevationChart] - EP: 486.3636363636364,243.07189716600286
+2015-07-20 23:11:15,696 INFO [model.graph.ElevationChart] - SP: 581.6363636363636,285.0
+2015-07-20 23:11:15,696 INFO [model.graph.ElevationChart] - EP: 581.6363636363636,240.35662443873014
+2015-07-20 23:11:15,696 INFO [model.graph.ElevationChart] - SP: 676.9090909090909,285.0
+2015-07-20 23:11:15,696 INFO [model.graph.ElevationChart] - EP: 676.9090909090909,237.6413517114574
+2015-07-20 23:11:15,696 INFO [model.graph.ElevationChart] - SP: 772.1818181818181,285.0
+2015-07-20 23:11:15,696 INFO [model.graph.ElevationChart] - EP: 772.1818181818181,234.92607898418467
+2015-07-20 23:11:15,697 INFO [model.graph.ElevationChart] - SP: 867.4545454545455,285.0
+2015-07-20 23:11:15,697 INFO [model.graph.ElevationChart] - EP: 867.4545454545455,232.21080625691195
+2015-07-20 23:11:15,697 INFO [model.graph.ElevationChart] - SP: 962.7272727272727,285.0
+2015-07-20 23:11:15,697 INFO [model.graph.ElevationChart] - EP: 962.7272727272727,229.4955335296392
+2015-07-20 23:11:15,697 INFO [model.graph.ElevationChart] - SP: 1058.0,285.0
+2015-07-20 23:11:15,697 INFO [model.graph.ElevationChart] - EP: 1058.0,226.78026080236648
+2015-07-20 23:11:15,699 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:11:15,700 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:11:19,050 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 23:13:33,136 INFO [application.Master] - Launch
+2015-07-20 23:13:33,706 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:13:36,876 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:13:37,695 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:13:37,696 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:13:37,700 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:13:38,578 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:13:39,623 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:13:39,629 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:13:39,634 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:13:39,673 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:13:39,674 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:13:39,751 INFO [model.graph.ElevationChart] - EP: 1090.0705938563594,253.93298807509376
+2015-07-20 23:13:39,751 INFO [model.graph.ElevationChart] - EP: 1185.3433211290867,251.217715347821
+2015-07-20 23:13:39,751 INFO [model.graph.ElevationChart] - EP: 1280.616048401814,248.5024426205483
+2015-07-20 23:13:39,752 INFO [model.graph.ElevationChart] - EP: 1375.8887756745412,245.78716989327557
+2015-07-20 23:13:39,752 INFO [model.graph.ElevationChart] - EP: 1471.1615029472684,243.07189716600286
+2015-07-20 23:13:39,752 INFO [model.graph.ElevationChart] - EP: 1566.4342302199957,240.35662443873014
+2015-07-20 23:13:39,752 INFO [model.graph.ElevationChart] - EP: 1661.706957492723,237.6413517114574
+2015-07-20 23:13:39,752 INFO [model.graph.ElevationChart] - EP: 1756.9796847654502,234.92607898418467
+2015-07-20 23:13:39,753 INFO [model.graph.ElevationChart] - EP: 1852.2524120381777,232.21080625691195
+2015-07-20 23:13:39,753 INFO [model.graph.ElevationChart] - EP: 1947.5251393109047,229.4955335296392
+2015-07-20 23:13:39,753 INFO [model.graph.ElevationChart] - EP: 2042.7978665836322,226.78026080236648
+2015-07-20 23:13:39,755 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:13:39,756 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:16:16,131 INFO [application.Master] - Launch
+2015-07-20 23:16:16,772 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:16:19,866 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:16:20,768 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:16:20,768 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:16:20,772 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:16:21,777 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:16:22,799 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:16:22,799 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:16:22,806 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:16:22,849 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:16:22,849 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:16:22,926 INFO [model.graph.ElevationChart] - EP: 105.27272727272727,253.93298807509376
+2015-07-20 23:16:22,926 INFO [model.graph.ElevationChart] - EP: 200.54545454545453,251.217715347821
+2015-07-20 23:16:22,926 INFO [model.graph.ElevationChart] - EP: 295.8181818181818,248.5024426205483
+2015-07-20 23:16:22,926 INFO [model.graph.ElevationChart] - EP: 391.09090909090907,245.78716989327557
+2015-07-20 23:16:22,927 INFO [model.graph.ElevationChart] - EP: 486.3636363636364,243.07189716600286
+2015-07-20 23:16:22,927 INFO [model.graph.ElevationChart] - EP: 581.6363636363636,240.35662443873014
+2015-07-20 23:16:22,927 INFO [model.graph.ElevationChart] - EP: 676.9090909090909,237.6413517114574
+2015-07-20 23:16:22,927 INFO [model.graph.ElevationChart] - EP: 772.1818181818181,234.92607898418467
+2015-07-20 23:16:22,927 INFO [model.graph.ElevationChart] - EP: 867.4545454545455,232.21080625691195
+2015-07-20 23:16:22,928 INFO [model.graph.ElevationChart] - EP: 962.7272727272727,229.4955335296392
+2015-07-20 23:16:22,928 INFO [model.graph.ElevationChart] - EP: 1058.0,226.78026080236648
+2015-07-20 23:16:22,930 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:16:22,931 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:17:50,285 INFO [application.Master] - Launch
+2015-07-20 23:17:50,859 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:17:54,006 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:17:55,200 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:17:55,201 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:17:55,206 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:17:56,040 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:17:57,327 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:17:57,327 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:17:57,334 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:17:57,380 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:17:57,381 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:17:57,463 INFO [model.graph.ElevationChart] - EP: 105.27272727272727,253.93298807509376
+2015-07-20 23:17:57,463 INFO [model.graph.ElevationChart] - EP: 200.54545454545453,253.93298807509376
+2015-07-20 23:17:57,464 INFO [model.graph.ElevationChart] - EP: 295.8181818181818,251.217715347821
+2015-07-20 23:17:57,464 INFO [model.graph.ElevationChart] - EP: 391.09090909090907,248.5024426205483
+2015-07-20 23:17:57,464 INFO [model.graph.ElevationChart] - EP: 486.3636363636364,245.78716989327557
+2015-07-20 23:17:57,464 INFO [model.graph.ElevationChart] - EP: 581.6363636363636,243.07189716600286
+2015-07-20 23:17:57,464 INFO [model.graph.ElevationChart] - EP: 676.9090909090909,240.35662443873014
+2015-07-20 23:17:57,464 INFO [model.graph.ElevationChart] - EP: 772.1818181818181,237.6413517114574
+2015-07-20 23:17:57,465 INFO [model.graph.ElevationChart] - EP: 867.4545454545455,234.92607898418467
+2015-07-20 23:17:57,465 INFO [model.graph.ElevationChart] - EP: 962.7272727272727,232.21080625691195
+2015-07-20 23:17:57,465 INFO [model.graph.ElevationChart] - EP: 1058.0,229.4955335296392
+2015-07-20 23:17:57,467 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:17:57,469 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:19:22,276 INFO [application.Master] - Launch
+2015-07-20 23:19:22,831 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:19:25,666 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:19:26,743 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:19:26,744 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:19:26,748 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:19:27,656 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:19:28,623 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:19:28,623 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:19:28,627 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:19:28,668 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:19:28,669 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:19:28,746 INFO [model.graph.ElevationChart] - P: 1852.2524120381777,-73.43711020530083
+2015-07-20 23:19:28,747 INFO [model.graph.ElevationChart] - P: 1090.0705938563594,-126.22630394838887
+2015-07-20 23:19:28,747 INFO [model.graph.ElevationChart] - P: 1185.3433211290867,-104.50412213020707
+2015-07-20 23:19:28,747 INFO [model.graph.ElevationChart] - P: 1280.616048401814,-107.21939485747981
+2015-07-20 23:19:28,747 INFO [model.graph.ElevationChart] - P: 1375.8887756745412,-109.93466758475253
+2015-07-20 23:19:28,747 INFO [model.graph.ElevationChart] - P: 1471.1615029472684,-112.64994031202525
+2015-07-20 23:19:28,748 INFO [model.graph.ElevationChart] - P: 1566.4342302199957,-115.36521303929797
+2015-07-20 23:19:28,748 INFO [model.graph.ElevationChart] - P: 1661.706957492723,-118.08048576657069
+2015-07-20 23:19:28,748 INFO [model.graph.ElevationChart] - P: 1756.9796847654502,-120.79575849384344
+2015-07-20 23:19:28,748 INFO [model.graph.ElevationChart] - P: 1852.2524120381777,-123.51103122111616
+2015-07-20 23:19:28,748 INFO [model.graph.ElevationChart] - P: 1947.5251393109047,-126.22630394838887
+2015-07-20 23:19:28,750 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:19:28,751 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:19:57,622 INFO [application.Master] - Launch
+2015-07-20 23:19:58,157 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:20:01,095 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:20:01,935 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:20:01,936 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:20:01,941 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:20:02,772 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:20:03,544 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:20:03,544 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:20:03,549 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:20:03,591 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:20:03,592 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:20:03,669 INFO [model.graph.ElevationChart] - P: 1090.0705938563594,-73.43711020530083
+2015-07-20 23:20:03,669 INFO [model.graph.ElevationChart] - P: 1090.0705938563594,-104.50412213020707
+2015-07-20 23:20:03,670 INFO [model.graph.ElevationChart] - P: 1185.3433211290867,-104.50412213020707
+2015-07-20 23:20:03,670 INFO [model.graph.ElevationChart] - P: 1280.616048401814,-107.21939485747981
+2015-07-20 23:20:03,670 INFO [model.graph.ElevationChart] - P: 1375.8887756745412,-109.93466758475253
+2015-07-20 23:20:03,670 INFO [model.graph.ElevationChart] - P: 1471.1615029472684,-112.64994031202525
+2015-07-20 23:20:03,670 INFO [model.graph.ElevationChart] - P: 1566.4342302199957,-115.36521303929797
+2015-07-20 23:20:03,670 INFO [model.graph.ElevationChart] - P: 1661.706957492723,-118.08048576657069
+2015-07-20 23:20:03,671 INFO [model.graph.ElevationChart] - P: 1756.9796847654502,-120.79575849384344
+2015-07-20 23:20:03,671 INFO [model.graph.ElevationChart] - P: 1852.2524120381777,-123.51103122111616
+2015-07-20 23:20:03,671 INFO [model.graph.ElevationChart] - P: 1947.5251393109047,-126.22630394838887
+2015-07-20 23:20:03,673 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:20:03,674 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:22:06,000 INFO [application.Master] - Launch
+2015-07-20 23:22:06,567 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:22:09,841 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:22:10,790 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:22:10,790 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:22:10,792 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:22:11,717 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:22:12,542 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:22:12,542 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:22:12,544 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:22:12,567 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:22:12,567 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:22:12,696 INFO [model.graph.ElevationChart] - P(1): 1090.0705938563594,-73.43711020530083
+2015-07-20 23:22:12,696 INFO [model.graph.ElevationChart] - P(2): 1090.0705938563594,-104.50412213020707
+2015-07-20 23:22:12,696 INFO [model.graph.ElevationChart] - P(3): 1185.3433211290867,-104.50412213020707
+2015-07-20 23:22:12,697 INFO [model.graph.ElevationChart] - P(4): 1280.616048401814,-107.21939485747981
+2015-07-20 23:22:12,697 INFO [model.graph.ElevationChart] - P(5): 1375.8887756745412,-109.93466758475253
+2015-07-20 23:22:12,697 INFO [model.graph.ElevationChart] - P(6): 1471.1615029472684,-112.64994031202525
+2015-07-20 23:22:12,697 INFO [model.graph.ElevationChart] - P(7): 1566.4342302199957,-115.36521303929797
+2015-07-20 23:22:12,698 INFO [model.graph.ElevationChart] - P(8): 1661.706957492723,-118.08048576657069
+2015-07-20 23:22:12,698 INFO [model.graph.ElevationChart] - P(9): 1756.9796847654502,-120.79575849384344
+2015-07-20 23:22:12,698 INFO [model.graph.ElevationChart] - P(10): 1852.2524120381777,-123.51103122111616
+2015-07-20 23:22:12,698 INFO [model.graph.ElevationChart] - P(11): 1947.5251393109047,-126.22630394838887
+2015-07-20 23:22:12,701 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:22:12,703 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:23:26,700 INFO [application.Master] - Launch
+2015-07-20 23:23:27,435 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:23:30,395 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:23:31,319 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:23:31,320 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:23:31,324 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:23:32,158 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:23:32,815 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:23:32,815 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:23:32,819 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:23:32,865 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:23:32,866 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:23:32,944 INFO [model.graph.ElevationChart] - P(1): 1090.0705938563594,-73.43711020530083
+2015-07-20 23:23:32,944 INFO [model.graph.ElevationChart] - EP(1): -6986.553772286843,253.93298807509376
+2015-07-20 23:23:32,945 INFO [model.graph.ElevationChart] - P(2): -6001.755905703211,-104.50412213020707
+2015-07-20 23:23:32,945 INFO [model.graph.ElevationChart] - EP(2): -9946.392726587,456.0500433125415
+2015-07-20 23:23:32,945 INFO [model.graph.ElevationChart] - P(3): -8961.594860003368,97.61293310724068
+2015-07-20 23:23:32,945 INFO [model.graph.ElevationChart] - EP(3): 9309.850354217111,540.405453510096
+2015-07-20 23:23:32,945 INFO [model.graph.ElevationChart] - P(4): 10294.648220800744,181.96834330479516
+2015-07-20 23:23:32,945 INFO [model.graph.ElevationChart] - EP(4): 17346.620343947758,-8.397474292821187
+2015-07-20 23:23:32,945 INFO [model.graph.ElevationChart] - P(5): 18331.41821053139,-366.834584498122
+2015-07-20 23:23:32,945 INFO [model.graph.ElevationChart] - EP(5): -34939.33132309381,-237.44541900014462
+2015-07-20 23:23:32,946 INFO [model.graph.ElevationChart] - P(6): -33954.53345651017,-595.8825292054455
+2015-07-20 23:23:32,946 INFO [model.graph.ElevationChart] - EP(6): -56761.35369157335,1252.70420351054
+2015-07-20 23:23:32,946 INFO [model.graph.ElevationChart] - P(7): -55776.555824989715,894.2670933052393
+2015-07-20 23:23:32,946 INFO [model.graph.ElevationChart] - EP(7): 85209.26488944462,1874.631841012207
+2015-07-20 23:23:32,946 INFO [model.graph.ElevationChart] - P(8): 86194.06275602824,1516.1947308069061
+2015-07-20 23:23:32,946 INFO [model.graph.ElevationChart] - EP(8): 144462.0070805125,-2171.530788546805
+2015-07-20 23:23:32,946 INFO [model.graph.ElevationChart] - P(9): 145446.80494709613,-2529.967898752106
+2015-07-20 23:23:32,946 INFO [model.graph.ElevationChart] - EP(9): -241026.9416265643,-3860.2339409922397
+2015-07-20 23:23:32,947 INFO [model.graph.ElevationChart] - P(10): -240042.14375998068,-4218.671051197541
+2015-07-20 23:23:32,947 INFO [model.graph.ElevationChart] - EP(10): -401914.29651409294,7126.20109715945
+2015-07-20 23:23:32,947 INFO [model.graph.ElevationChart] - P(11): -400929.4986475093,6767.763986954149
+2015-07-20 23:23:32,947 INFO [model.graph.ElevationChart] - EP(11): 644793.332575268,11711.490711454016
+2015-07-20 23:23:32,949 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:23:32,950 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:23:52,527 INFO [application.Master] - Launch
+2015-07-20 23:23:53,093 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:23:56,394 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-20 23:23:57,599 INFO [model.AppConfig] - Settings Data Validated
+2015-07-20 23:23:57,599 INFO [model.AppConfig] - Settings Data Saved
+2015-07-20 23:23:57,603 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-20 23:23:58,597 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-20 23:23:59,391 INFO [model.AppConfig] - Preference Data Validated
+2015-07-20 23:23:59,391 INFO [model.AppConfig] - Preference Data Saved
+2015-07-20 23:23:59,395 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-20 23:23:59,432 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:23:59,433 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:23:59,514 INFO [model.graph.ElevationChart] - P(1): 1090.0705938563594,-73.43711020530083
+2015-07-20 23:23:59,514 INFO [model.graph.ElevationChart] - EP(1): 105.27272727272727,253.93298807509376
+2015-07-20 23:23:59,514 INFO [model.graph.ElevationChart] - P(2): 1090.0705938563594,-104.50412213020707
+2015-07-20 23:23:59,514 INFO [model.graph.ElevationChart] - EP(2): 200.54545454545453,253.93298807509376
+2015-07-20 23:23:59,515 INFO [model.graph.ElevationChart] - P(3): 1185.3433211290867,-104.50412213020707
+2015-07-20 23:23:59,515 INFO [model.graph.ElevationChart] - EP(3): 295.8181818181818,251.217715347821
+2015-07-20 23:23:59,515 INFO [model.graph.ElevationChart] - P(4): 1280.616048401814,-107.21939485747981
+2015-07-20 23:23:59,515 INFO [model.graph.ElevationChart] - EP(4): 391.09090909090907,248.5024426205483
+2015-07-20 23:23:59,515 INFO [model.graph.ElevationChart] - P(5): 1375.8887756745412,-109.93466758475253
+2015-07-20 23:23:59,515 INFO [model.graph.ElevationChart] - EP(5): 486.3636363636364,245.78716989327557
+2015-07-20 23:23:59,515 INFO [model.graph.ElevationChart] - P(6): 1471.1615029472684,-112.64994031202525
+2015-07-20 23:23:59,515 INFO [model.graph.ElevationChart] - EP(6): 581.6363636363636,243.07189716600286
+2015-07-20 23:23:59,516 INFO [model.graph.ElevationChart] - P(7): 1566.4342302199957,-115.36521303929797
+2015-07-20 23:23:59,516 INFO [model.graph.ElevationChart] - EP(7): 676.9090909090909,240.35662443873014
+2015-07-20 23:23:59,516 INFO [model.graph.ElevationChart] - P(8): 1661.706957492723,-118.08048576657069
+2015-07-20 23:23:59,516 INFO [model.graph.ElevationChart] - EP(8): 772.1818181818181,237.6413517114574
+2015-07-20 23:23:59,516 INFO [model.graph.ElevationChart] - P(9): 1756.9796847654502,-120.79575849384344
+2015-07-20 23:23:59,516 INFO [model.graph.ElevationChart] - EP(9): 867.4545454545455,234.92607898418467
+2015-07-20 23:23:59,516 INFO [model.graph.ElevationChart] - P(10): 1852.2524120381777,-123.51103122111616
+2015-07-20 23:23:59,516 INFO [model.graph.ElevationChart] - EP(10): 962.7272727272727,232.21080625691195
+2015-07-20 23:23:59,516 INFO [model.graph.ElevationChart] - P(11): 1947.5251393109047,-126.22630394838887
+2015-07-20 23:23:59,517 INFO [model.graph.ElevationChart] - EP(11): 1058.0,229.4955335296392
+2015-07-20 23:23:59,519 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:23:59,520 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:26:22,029 INFO [application.Master] - Launch
+2015-07-20 23:26:22,823 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:26:25,616 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:26:25,617 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:26:25,853 INFO [model.graph.ElevationChart] - P(1): 1090.0705938563594,643.4371102053008
+2015-07-20 23:26:25,853 INFO [model.graph.ElevationChart] - EP(1): 105.27272727272727,253.93298807509376
+2015-07-20 23:26:25,853 INFO [model.graph.ElevationChart] - P(2): 1090.0705938563594,612.3700982803946
+2015-07-20 23:26:25,854 INFO [model.graph.ElevationChart] - EP(2): 200.54545454545453,253.93298807509376
+2015-07-20 23:26:25,854 INFO [model.graph.ElevationChart] - P(3): 1185.3433211290867,612.3700982803946
+2015-07-20 23:26:25,854 INFO [model.graph.ElevationChart] - EP(3): 295.8181818181818,251.217715347821
+2015-07-20 23:26:25,855 INFO [model.graph.ElevationChart] - P(4): 1280.616048401814,609.6548255531218
+2015-07-20 23:26:25,855 INFO [model.graph.ElevationChart] - EP(4): 391.09090909090907,248.5024426205483
+2015-07-20 23:26:25,855 INFO [model.graph.ElevationChart] - P(5): 1375.8887756745412,606.9395528258491
+2015-07-20 23:26:25,855 INFO [model.graph.ElevationChart] - EP(5): 486.3636363636364,245.78716989327557
+2015-07-20 23:26:25,855 INFO [model.graph.ElevationChart] - P(6): 1471.1615029472684,604.2242800985764
+2015-07-20 23:26:25,855 INFO [model.graph.ElevationChart] - EP(6): 581.6363636363636,243.07189716600286
+2015-07-20 23:26:25,856 INFO [model.graph.ElevationChart] - P(7): 1566.4342302199957,601.5090073713037
+2015-07-20 23:26:25,856 INFO [model.graph.ElevationChart] - EP(7): 676.9090909090909,240.35662443873014
+2015-07-20 23:26:25,856 INFO [model.graph.ElevationChart] - P(8): 1661.706957492723,598.793734644031
+2015-07-20 23:26:25,856 INFO [model.graph.ElevationChart] - EP(8): 772.1818181818181,237.6413517114574
+2015-07-20 23:26:25,856 INFO [model.graph.ElevationChart] - P(9): 1756.9796847654502,596.0784619167582
+2015-07-20 23:26:25,856 INFO [model.graph.ElevationChart] - EP(9): 867.4545454545455,234.92607898418467
+2015-07-20 23:26:25,856 INFO [model.graph.ElevationChart] - P(10): 1852.2524120381777,593.3631891894855
+2015-07-20 23:26:25,857 INFO [model.graph.ElevationChart] - EP(10): 962.7272727272727,232.21080625691195
+2015-07-20 23:26:25,857 INFO [model.graph.ElevationChart] - P(11): 1947.5251393109047,590.6479164622128
+2015-07-20 23:26:25,857 INFO [model.graph.ElevationChart] - EP(11): 1058.0,229.4955335296392
+2015-07-20 23:26:25,859 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:26:25,861 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:26:42,056 INFO [application.Master] - Launch
+2015-07-20 23:26:42,612 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:26:44,775 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:26:44,776 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:26:44,990 INFO [model.graph.ElevationChart] - P(1): 1090.0705938563594,643.4371102053008
+2015-07-20 23:26:44,990 INFO [model.graph.ElevationChart] - P(2): 1090.0705938563594,612.3700982803946
+2015-07-20 23:26:44,990 INFO [model.graph.ElevationChart] - P(3): 1185.3433211290867,612.3700982803946
+2015-07-20 23:26:44,990 INFO [model.graph.ElevationChart] - P(4): 1280.616048401814,609.6548255531218
+2015-07-20 23:26:44,991 INFO [model.graph.ElevationChart] - P(5): 1375.8887756745412,606.9395528258491
+2015-07-20 23:26:44,991 INFO [model.graph.ElevationChart] - P(6): 1471.1615029472684,604.2242800985764
+2015-07-20 23:26:44,991 INFO [model.graph.ElevationChart] - P(7): 1566.4342302199957,601.5090073713037
+2015-07-20 23:26:44,991 INFO [model.graph.ElevationChart] - P(8): 1661.706957492723,598.793734644031
+2015-07-20 23:26:44,991 INFO [model.graph.ElevationChart] - P(9): 1756.9796847654502,596.0784619167582
+2015-07-20 23:26:44,992 INFO [model.graph.ElevationChart] - P(10): 1852.2524120381777,593.3631891894855
+2015-07-20 23:26:44,992 INFO [model.graph.ElevationChart] - P(11): 1947.5251393109047,590.6479164622128
+2015-07-20 23:26:44,994 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:26:44,996 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:27:17,631 INFO [application.Master] - Launch
+2015-07-20 23:27:18,225 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:27:20,391 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:27:20,392 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:27:20,537 INFO [model.graph.ElevationChart] - EP(1): 105.27272727272727,253.93298807509376
+2015-07-20 23:27:20,537 INFO [model.graph.ElevationChart] - EP(2): 200.54545454545453,253.93298807509376
+2015-07-20 23:27:20,537 INFO [model.graph.ElevationChart] - EP(3): 295.8181818181818,251.217715347821
+2015-07-20 23:27:20,537 INFO [model.graph.ElevationChart] - EP(4): 391.09090909090907,248.5024426205483
+2015-07-20 23:27:20,537 INFO [model.graph.ElevationChart] - EP(5): 486.3636363636364,245.78716989327557
+2015-07-20 23:27:20,538 INFO [model.graph.ElevationChart] - EP(6): 581.6363636363636,243.07189716600286
+2015-07-20 23:27:20,538 INFO [model.graph.ElevationChart] - EP(7): 676.9090909090909,240.35662443873014
+2015-07-20 23:27:20,538 INFO [model.graph.ElevationChart] - EP(8): 772.1818181818181,237.6413517114574
+2015-07-20 23:27:20,538 INFO [model.graph.ElevationChart] - EP(9): 867.4545454545455,234.92607898418467
+2015-07-20 23:27:20,538 INFO [model.graph.ElevationChart] - EP(10): 962.7272727272727,232.21080625691195
+2015-07-20 23:27:20,538 INFO [model.graph.ElevationChart] - EP(11): 1058.0,229.4955335296392
+2015-07-20 23:27:20,540 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:27:20,541 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:28:21,426 INFO [application.Master] - Launch
+2015-07-20 23:28:21,998 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:28:24,112 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:28:24,113 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:28:24,337 INFO [model.graph.ElevationChart] - EP(1): 61312.00831774138,253.93298807509376
+2015-07-20 23:28:24,338 INFO [model.graph.ElevationChart] - EP(2): 58352.16936344123,-1490.458976253263
+2015-07-20 23:28:24,338 INFO [model.graph.ElevationChart] - EP(3): -107840.81051075131,-1406.1035660557088
+2015-07-20 23:28:24,338 INFO [model.graph.ElevationChart] - EP(4): -99804.04052102071,3330.396360358779
+2015-07-20 23:28:24,338 INFO [model.graph.ElevationChart] - EP(5): 351455.2251955596,3101.348415651457
+2015-07-20 23:28:24,338 INFO [model.graph.ElevationChart] - EP(6): 329633.2028270802,-9759.540657271084
+2015-07-20 23:28:24,339 INFO [model.graph.ElevationChart] - EP(7): -895658.7743022672,-9137.61301976942
+2015-07-20 23:28:24,339 INFO [model.graph.ElevationChart] - EP(8): -836406.0321111997,25783.208328416982
+2015-07-20 23:28:24,339 INFO [model.graph.ElevationChart] - EP(9): 2490595.8563341955,24094.505175971557
+2015-07-20 23:28:24,339 INFO [model.graph.ElevationChart] - EP(10): 2329708.501446668,-70725.0486447222
+2015-07-20 23:28:24,339 INFO [model.graph.ElevationChart] - EP(11): -6704008.989833974,-66139.75903042768
+2015-07-20 23:28:24,341 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:28:24,343 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:30:14,191 INFO [application.Master] - Launch
+2015-07-20 23:30:14,771 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:30:16,847 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:30:16,848 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:30:17,058 INFO [model.graph.ElevationChart] - EP(1): 5840419.519726633,253.93298807509376 Range: 61302.00831774138
+2015-07-20 23:30:17,059 INFO [model.graph.ElevationChart] - EP(2): 5558427.590262401,-166195.02305140666 Range: 58342.16936344123
+2015-07-20 23:30:17,059 INFO [model.graph.ElevationChart] - EP(3): -1.5052808634344234E9,-158158.25306167608 Range: -1.5799703824216276E7
+2015-07-20 23:30:17,059 INFO [model.graph.ElevationChart] - EP(4): -1.4323319656922657E9,4.290076154114187E7 Range: -1.5034018828831034E7
+2015-07-20 23:30:17,059 INFO [model.graph.ElevationChart] - EP(5): 3.8940885684135675E11,4.082171795549037E7 Range: 4.087306703382561E9
+2015-07-20 23:30:17,059 INFO [model.graph.ElevationChart] - EP(6): 3.705376015827173E11,-1.1098152163045406E10 Range: 3.8892305508586736E9
+2015-07-20 23:30:17,059 INFO [model.graph.ElevationChart] - EP(7): -1.0073673156700248E14,-1.0560321388174181E10 Range: -1.0573511901117722E12
+2015-07-20 23:30:17,060 INFO [model.graph.ElevationChart] - EP(8): -9.585489940696805E13,2.870996849916504E12 Range: -1.0061105853785863E12
+2015-07-20 23:30:17,060 INFO [model.graph.ElevationChart] - EP(9): 2.60597299557386E16,2.731864633355523E12 Range: 2.7352769991710347E14
+2015-07-20 23:30:17,060 INFO [model.graph.ElevationChart] - EP(10): 2.4796841774103952E16,-7.427023037382931E14 Range: 2.602721941938391E14
+2015-07-20 23:30:17,060 INFO [model.graph.ElevationChart] - EP(11): -6.7414290165668485E18,-7.067099905617056E14 Range: -7.0759274028850512E16
+2015-07-20 23:30:17,062 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:30:17,063 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:30:37,222 INFO [application.Master] - Launch
+2015-07-20 23:30:37,803 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:30:40,090 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:30:40,091 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:30:40,296 INFO [model.graph.ElevationChart] - EP(1): 9086.89256198347,253.93298807509376 Range: 95.27272727272727
+2015-07-20 23:30:40,297 INFO [model.graph.ElevationChart] - EP(2): 18163.78512396694,-2.0431772141624265 Range: 190.54545454545453
+2015-07-20 23:30:40,297 INFO [model.graph.ElevationChart] - EP(3): 27240.677685950413,-260.73461523069125 Range: 285.8181818181818
+2015-07-20 23:30:40,297 INFO [model.graph.ElevationChart] - EP(4): 36317.57024793388,-519.4260532472202 Range: 381.09090909090907
+2015-07-20 23:30:40,297 INFO [model.graph.ElevationChart] - EP(5): 45394.46280991736,-778.1174912637491 Range: 476.3636363636364
+2015-07-20 23:30:40,297 INFO [model.graph.ElevationChart] - EP(6): 54471.35537190083,-1036.8089292802783 Range: 571.6363636363636
+2015-07-20 23:30:40,298 INFO [model.graph.ElevationChart] - EP(7): 63548.2479338843,-1295.500367296807 Range: 666.9090909090909
+2015-07-20 23:30:40,298 INFO [model.graph.ElevationChart] - EP(8): 72625.14049586776,-1554.191805313336 Range: 762.1818181818181
+2015-07-20 23:30:40,298 INFO [model.graph.ElevationChart] - EP(9): 81702.03305785124,-1812.8832433298644 Range: 857.4545454545455
+2015-07-20 23:30:40,298 INFO [model.graph.ElevationChart] - EP(10): 90778.92561983471,-2071.574681346394 Range: 952.7272727272727
+2015-07-20 23:30:40,298 INFO [model.graph.ElevationChart] - EP(11): 99855.81818181818,-2330.266119362923 Range: 1048.0
+2015-07-20 23:30:40,301 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:30:40,302 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:32:03,028 INFO [application.Master] - Launch
+2015-07-20 23:32:03,650 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:32:05,795 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:32:05,796 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:32:06,007 INFO [model.graph.ElevationChart] - EP(1): 9086.89256198347,253.93298807509376 Range: 95.27272727272727
+2015-07-20 23:32:06,007 INFO [model.graph.ElevationChart] - EP(2): 18163.78512396694,-2.0431772141624265 Range: 190.54545454545453
+2015-07-20 23:32:06,007 INFO [model.graph.ElevationChart] - EP(3): 27240.677685950413,-260.73461523069125 Range: 285.8181818181818
+2015-07-20 23:32:06,007 INFO [model.graph.ElevationChart] - EP(4): 36317.57024793388,-519.4260532472202 Range: 381.09090909090907
+2015-07-20 23:32:06,007 INFO [model.graph.ElevationChart] - EP(5): 45394.46280991736,-778.1174912637491 Range: 476.3636363636364
+2015-07-20 23:32:06,007 INFO [model.graph.ElevationChart] - EP(6): 54471.35537190083,-1036.8089292802783 Range: 571.6363636363636
+2015-07-20 23:32:06,008 INFO [model.graph.ElevationChart] - EP(7): 63548.2479338843,-1295.500367296807 Range: 666.9090909090909
+2015-07-20 23:32:06,008 INFO [model.graph.ElevationChart] - EP(8): 72625.14049586776,-1554.191805313336 Range: 762.1818181818181
+2015-07-20 23:32:06,008 INFO [model.graph.ElevationChart] - EP(9): 81702.03305785124,-1812.8832433298644 Range: 857.4545454545455
+2015-07-20 23:32:06,008 INFO [model.graph.ElevationChart] - EP(10): 90778.92561983471,-2071.574681346394 Range: 952.7272727272727
+2015-07-20 23:32:06,008 INFO [model.graph.ElevationChart] - EP(11): 99855.81818181818,-2330.266119362923 Range: 1048.0
+2015-07-20 23:32:06,010 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:32:06,012 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:34:19,701 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 23:34:23,817 INFO [application.Master] - Launch
+2015-07-20 23:34:24,431 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:34:26,692 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:34:26,692 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:34:26,923 INFO [model.graph.ElevationChart] - EP(1): 105.27272727272727,253.93298807509376
+2015-07-20 23:34:26,923 INFO [model.graph.ElevationChart] - EP(2): 200.54545454545453,225.86624887746024
+2015-07-20 23:34:26,924 INFO [model.graph.ElevationChart] - EP(3): 295.8181818181818,197.7995096798267
+2015-07-20 23:34:26,924 INFO [model.graph.ElevationChart] - EP(4): 391.09090909090907,169.73277048219322
+2015-07-20 23:34:26,924 INFO [model.graph.ElevationChart] - EP(5): 486.3636363636364,141.6660312845597
+2015-07-20 23:34:26,924 INFO [model.graph.ElevationChart] - EP(6): 581.6363636363636,113.5992920869262
+2015-07-20 23:34:26,924 INFO [model.graph.ElevationChart] - EP(7): 676.9090909090909,85.53255288929267
+2015-07-20 23:34:26,924 INFO [model.graph.ElevationChart] - EP(8): 772.1818181818181,57.46581369165918
+2015-07-20 23:34:26,924 INFO [model.graph.ElevationChart] - EP(9): 867.4545454545455,29.399074494025683
+2015-07-20 23:34:26,925 INFO [model.graph.ElevationChart] - EP(10): 962.7272727272727,1.3323352963921593
+2015-07-20 23:34:26,925 INFO [model.graph.ElevationChart] - EP(11): 1058.0,-26.73440390124142
+2015-07-20 23:34:26,926 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:34:26,928 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:34:40,385 INFO [model.graph.ElevationChart] - EP(1): 59.904761904761905,255.2259750880808
+2015-07-20 23:34:40,386 INFO [model.graph.ElevationChart] - EP(2): 109.80952380952381,227.15923589044726
+2015-07-20 23:34:40,386 INFO [model.graph.ElevationChart] - EP(3): 159.71428571428572,199.09249669281377
+2015-07-20 23:34:40,387 INFO [model.graph.ElevationChart] - EP(4): 209.61904761904762,171.02575749518024
+2015-07-20 23:34:40,387 INFO [model.graph.ElevationChart] - EP(5): 259.5238095238095,142.95901829754672
+2015-07-20 23:34:40,387 INFO [model.graph.ElevationChart] - EP(6): 309.42857142857144,114.89227909991322
+2015-07-20 23:34:40,388 INFO [model.graph.ElevationChart] - EP(7): 359.3333333333333,86.8255399022797
+2015-07-20 23:34:40,388 INFO [model.graph.ElevationChart] - EP(8): 409.23809523809524,58.758800704646205
+2015-07-20 23:34:40,388 INFO [model.graph.ElevationChart] - EP(9): 459.14285714285717,30.69206150701268
+2015-07-20 23:34:40,390 INFO [model.graph.ElevationChart] - EP(10): 509.04761904761904,2.6253223093791576
+2015-07-20 23:34:40,390 INFO [model.graph.ElevationChart] - EP(11): 558.952380952381,-25.441416888254366
+2015-07-20 23:34:40,391 INFO [model.graph.ElevationChart] - EP(12): 608.8571428571429,-53.50815608588795
+2015-07-20 23:34:40,394 INFO [model.graph.ElevationChart] - EP(13): 658.7619047619048,-81.57489528352141
+2015-07-20 23:34:40,394 INFO [model.graph.ElevationChart] - EP(14): 708.6666666666666,-109.641634481155
+2015-07-20 23:34:40,395 INFO [model.graph.ElevationChart] - EP(15): 758.5714285714286,-137.70837367878852
+2015-07-20 23:34:40,395 INFO [model.graph.ElevationChart] - EP(16): 808.4761904761905,-165.77511287642204
+2015-07-20 23:34:40,396 INFO [model.graph.ElevationChart] - EP(17): 858.3809523809524,-193.84185207405545
+2015-07-20 23:34:40,396 INFO [model.graph.ElevationChart] - EP(18): 908.2857142857143,-221.90859127168898
+2015-07-20 23:34:40,396 INFO [model.graph.ElevationChart] - EP(19): 958.1904761904761,-249.97533046932244
+2015-07-20 23:34:40,397 INFO [model.graph.ElevationChart] - EP(20): 1008.0952380952381,-278.04206966695585
+2015-07-20 23:34:40,397 INFO [model.graph.ElevationChart] - EP(21): 1058.0,-306.1088088645894
+2015-07-20 23:34:40,397 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-20 23:34:40,399 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-20 23:34:49,921 INFO [model.graph.ElevationChart] - EP(1): 35.5609756097561,255.91977299748845
+2015-07-20 23:34:49,921 INFO [model.graph.ElevationChart] - EP(2): 61.1219512195122,227.85303379985493
+2015-07-20 23:34:49,922 INFO [model.graph.ElevationChart] - EP(3): 86.6829268292683,199.7862946022214
+2015-07-20 23:34:49,922 INFO [model.graph.ElevationChart] - EP(4): 112.2439024390244,171.71955540458788
+2015-07-20 23:34:49,922 INFO [model.graph.ElevationChart] - EP(5): 137.8048780487805,143.65281620695438
+2015-07-20 23:34:49,922 INFO [model.graph.ElevationChart] - EP(6): 163.3658536585366,115.58607700932086
+2015-07-20 23:34:49,923 INFO [model.graph.ElevationChart] - EP(7): 188.9268292682927,87.51933781168736
+2015-07-20 23:34:49,923 INFO [model.graph.ElevationChart] - EP(8): 214.4878048780488,59.45259861405384
+2015-07-20 23:34:49,923 INFO [model.graph.ElevationChart] - EP(9): 240.0487804878049,31.385859416420345
+2015-07-20 23:34:49,924 INFO [model.graph.ElevationChart] - EP(10): 265.609756097561,3.319120218786793
+2015-07-20 23:34:49,924 INFO [model.graph.ElevationChart] - EP(11): 291.1707317073171,-24.74761897884673
+2015-07-20 23:34:49,924 INFO [model.graph.ElevationChart] - EP(12): 316.7317073170732,-52.814358176480255
+2015-07-20 23:34:49,925 INFO [model.graph.ElevationChart] - EP(13): 342.2926829268293,-80.88109737411378
+2015-07-20 23:34:49,925 INFO [model.graph.ElevationChart] - EP(14): 367.8536585365854,-108.94783657174736
+2015-07-20 23:34:49,925 INFO [model.graph.ElevationChart] - EP(15): 393.4146341463415,-137.01457576938083
+2015-07-20 23:34:49,926 INFO [model.graph.ElevationChart] - EP(16): 418.9756097560976,-165.08131496701435
+2015-07-20 23:34:49,926 INFO [model.graph.ElevationChart] - EP(17): 444.5365853658537,-193.14805416464787
+2015-07-20 23:34:49,926 INFO [model.graph.ElevationChart] - EP(18): 470.0975609756098,-221.2147933622814
+2015-07-20 23:34:49,927 INFO [model.graph.ElevationChart] - EP(19): 495.6585365853659,-249.2815325599148
+2015-07-20 23:34:49,927 INFO [model.graph.ElevationChart] - EP(20): 521.219512195122,-277.34827175754833
+2015-07-20 23:34:49,927 INFO [model.graph.ElevationChart] - EP(21): 546.780487804878,-305.41501095518186
+2015-07-20 23:34:49,928 INFO [model.graph.ElevationChart] - EP(22): 572.3414634146342,-333.48175015281527
+2015-07-20 23:34:49,928 INFO [model.graph.ElevationChart] - EP(23): 597.9024390243902,-361.5484893504488
+2015-07-20 23:34:49,928 INFO [model.graph.ElevationChart] - EP(24): 623.4634146341464,-389.6152285480822
+2015-07-20 23:34:49,929 INFO [model.graph.ElevationChart] - EP(25): 649.0243902439024,-417.6819677457156
+2015-07-20 23:34:49,929 INFO [model.graph.ElevationChart] - EP(26): 674.5853658536586,-445.74870694334913
+2015-07-20 23:34:49,930 INFO [model.graph.ElevationChart] - EP(27): 700.1463414634146,-473.81544614098266
+2015-07-20 23:34:49,930 INFO [model.graph.ElevationChart] - EP(28): 725.7073170731708,-501.88218533861607
+2015-07-20 23:34:49,930 INFO [model.graph.ElevationChart] - EP(29): 751.2682926829268,-529.9489245362496
+2015-07-20 23:34:49,930 INFO [model.graph.ElevationChart] - EP(30): 776.829268292683,-558.015663733883
+2015-07-20 23:34:49,931 INFO [model.graph.ElevationChart] - EP(31): 802.390243902439,-586.0824029315166
+2015-07-20 23:34:49,931 INFO [model.graph.ElevationChart] - EP(32): 827.9512195121952,-614.14914212915
+2015-07-20 23:34:49,931 INFO [model.graph.ElevationChart] - EP(33): 853.5121951219512,-642.2158813267835
+2015-07-20 23:34:49,932 INFO [model.graph.ElevationChart] - EP(34): 879.0731707317074,-670.2826205244171
+2015-07-20 23:34:49,932 INFO [model.graph.ElevationChart] - EP(35): 904.6341463414634,-698.3493597220506
+2015-07-20 23:34:49,932 INFO [model.graph.ElevationChart] - EP(36): 930.1951219512196,-726.4160989196843
+2015-07-20 23:34:49,933 INFO [model.graph.ElevationChart] - EP(37): 955.7560975609756,-754.4828381173179
+2015-07-20 23:34:49,933 INFO [model.graph.ElevationChart] - EP(38): 981.3170731707318,-782.5495773149514
+2015-07-20 23:34:49,933 INFO [model.graph.ElevationChart] - EP(39): 1006.8780487804878,-810.6163165125852
+2015-07-20 23:34:49,933 INFO [model.graph.ElevationChart] - EP(40): 1032.439024390244,-838.6830557102187
+2015-07-20 23:34:49,934 INFO [model.graph.ElevationChart] - EP(41): 1058.0,-866.7497949078522
+2015-07-20 23:34:49,934 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-20 23:34:49,936 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-20 23:34:55,706 INFO [model.graph.ElevationChart] - EP(1): 184.66666666666666,251.6702608023665
+2015-07-20 23:34:55,707 INFO [model.graph.ElevationChart] - EP(2): 359.3333333333333,223.60352160473298
+2015-07-20 23:34:55,707 INFO [model.graph.ElevationChart] - EP(3): 534.0,195.53678240709945
+2015-07-20 23:34:55,707 INFO [model.graph.ElevationChart] - EP(4): 708.6666666666666,167.47004320946593
+2015-07-20 23:34:55,707 INFO [model.graph.ElevationChart] - EP(5): 883.3333333333334,139.40330401183243
+2015-07-20 23:34:55,707 INFO [model.graph.ElevationChart] - EP(6): 1058.0,111.33656481419894
+2015-07-20 23:34:55,708 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-20 23:34:55,709 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-20 23:35:04,847 INFO [model.graph.ElevationChart] - EP(1): 105.27272727272727,253.93298807509376
+2015-07-20 23:35:04,847 INFO [model.graph.ElevationChart] - EP(2): 200.54545454545453,225.86624887746024
+2015-07-20 23:35:04,847 INFO [model.graph.ElevationChart] - EP(3): 295.8181818181818,197.7995096798267
+2015-07-20 23:35:04,849 INFO [model.graph.ElevationChart] - EP(4): 391.09090909090907,169.73277048219322
+2015-07-20 23:35:04,849 INFO [model.graph.ElevationChart] - EP(5): 486.3636363636364,141.6660312845597
+2015-07-20 23:35:04,849 INFO [model.graph.ElevationChart] - EP(6): 581.6363636363636,113.5992920869262
+2015-07-20 23:35:04,849 INFO [model.graph.ElevationChart] - EP(7): 676.9090909090909,85.53255288929267
+2015-07-20 23:35:04,849 INFO [model.graph.ElevationChart] - EP(8): 772.1818181818181,57.46581369165918
+2015-07-20 23:35:04,849 INFO [model.graph.ElevationChart] - EP(9): 867.4545454545455,29.399074494025683
+2015-07-20 23:35:04,849 INFO [model.graph.ElevationChart] - EP(10): 962.7272727272727,1.3323352963921593
+2015-07-20 23:35:04,849 INFO [model.graph.ElevationChart] - EP(11): 1058.0,-26.73440390124142
+2015-07-20 23:35:04,849 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-20 23:35:04,850 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-20 23:35:07,031 INFO [model.graph.ElevationChart] - EP(1): 59.904761904761905,255.2259750880808
+2015-07-20 23:35:07,031 INFO [model.graph.ElevationChart] - EP(2): 109.80952380952381,227.15923589044726
+2015-07-20 23:35:07,031 INFO [model.graph.ElevationChart] - EP(3): 159.71428571428572,199.09249669281377
+2015-07-20 23:35:07,031 INFO [model.graph.ElevationChart] - EP(4): 209.61904761904762,171.02575749518024
+2015-07-20 23:35:07,031 INFO [model.graph.ElevationChart] - EP(5): 259.5238095238095,142.95901829754672
+2015-07-20 23:35:07,032 INFO [model.graph.ElevationChart] - EP(6): 309.42857142857144,114.89227909991322
+2015-07-20 23:35:07,032 INFO [model.graph.ElevationChart] - EP(7): 359.3333333333333,86.8255399022797
+2015-07-20 23:35:07,033 INFO [model.graph.ElevationChart] - EP(8): 409.23809523809524,58.758800704646205
+2015-07-20 23:35:07,033 INFO [model.graph.ElevationChart] - EP(9): 459.14285714285717,30.69206150701268
+2015-07-20 23:35:07,033 INFO [model.graph.ElevationChart] - EP(10): 509.04761904761904,2.6253223093791576
+2015-07-20 23:35:07,034 INFO [model.graph.ElevationChart] - EP(11): 558.952380952381,-25.441416888254366
+2015-07-20 23:35:07,034 INFO [model.graph.ElevationChart] - EP(12): 608.8571428571429,-53.50815608588795
+2015-07-20 23:35:07,034 INFO [model.graph.ElevationChart] - EP(13): 658.7619047619048,-81.57489528352141
+2015-07-20 23:35:07,034 INFO [model.graph.ElevationChart] - EP(14): 708.6666666666666,-109.641634481155
+2015-07-20 23:35:07,034 INFO [model.graph.ElevationChart] - EP(15): 758.5714285714286,-137.70837367878852
+2015-07-20 23:35:07,034 INFO [model.graph.ElevationChart] - EP(16): 808.4761904761905,-165.77511287642204
+2015-07-20 23:35:07,034 INFO [model.graph.ElevationChart] - EP(17): 858.3809523809524,-193.84185207405545
+2015-07-20 23:35:07,035 INFO [model.graph.ElevationChart] - EP(18): 908.2857142857143,-221.90859127168898
+2015-07-20 23:35:07,035 INFO [model.graph.ElevationChart] - EP(19): 958.1904761904761,-249.97533046932244
+2015-07-20 23:35:07,035 INFO [model.graph.ElevationChart] - EP(20): 1008.0952380952381,-278.04206966695585
+2015-07-20 23:35:07,036 INFO [model.graph.ElevationChart] - EP(21): 1058.0,-306.1088088645894
+2015-07-20 23:35:07,036 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-20 23:35:07,036 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-20 23:35:48,872 INFO [application.Master] - Launch
+2015-07-20 23:35:49,455 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:35:51,338 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:35:51,339 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:35:51,534 INFO [model.graph.ElevationChart] - EP(1): 105.27272727272727,255.21848758032888
+2015-07-20 23:35:51,534 INFO [model.graph.ElevationChart] - EP(2): 200.54545454545453,228.43724788793048
+2015-07-20 23:35:51,534 INFO [model.graph.ElevationChart] - EP(3): 295.8181818181818,201.6560081955321
+2015-07-20 23:35:51,534 INFO [model.graph.ElevationChart] - EP(4): 391.09090909090907,174.87476850313374
+2015-07-20 23:35:51,534 INFO [model.graph.ElevationChart] - EP(5): 486.3636363636364,148.09352881073534
+2015-07-20 23:35:51,535 INFO [model.graph.ElevationChart] - EP(6): 581.6363636363636,121.31228911833693
+2015-07-20 23:35:51,535 INFO [model.graph.ElevationChart] - EP(7): 676.9090909090909,94.53104942593853
+2015-07-20 23:35:51,535 INFO [model.graph.ElevationChart] - EP(8): 772.1818181818181,67.74980973354013
+2015-07-20 23:35:51,535 INFO [model.graph.ElevationChart] - EP(9): 867.4545454545455,40.96857004114176
+2015-07-20 23:35:51,535 INFO [model.graph.ElevationChart] - EP(10): 962.7272727272727,14.18733034874333
+2015-07-20 23:35:51,536 INFO [model.graph.ElevationChart] - EP(11): 1058.0,-12.593909343655014
+2015-07-20 23:35:51,537 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:35:51,539 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-20 23:35:57,041 INFO [model.graph.ElevationChart] - EP(1): 184.66666666666666,252.95576030760162
+2015-07-20 23:35:57,042 INFO [model.graph.ElevationChart] - EP(2): 359.3333333333333,226.17452061520322
+2015-07-20 23:35:57,043 INFO [model.graph.ElevationChart] - EP(3): 534.0,199.39328092280482
+2015-07-20 23:35:57,043 INFO [model.graph.ElevationChart] - EP(4): 708.6666666666666,172.61204123040645
+2015-07-20 23:35:57,044 INFO [model.graph.ElevationChart] - EP(5): 883.3333333333334,145.83080153800805
+2015-07-20 23:35:57,044 INFO [model.graph.ElevationChart] - EP(6): 1058.0,119.04956184560965
+2015-07-20 23:35:57,045 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-20 23:35:57,046 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-20 23:35:58,667 INFO [model.graph.ElevationChart] - EP(1): 59.904761904761905,256.5114745933159
+2015-07-20 23:35:58,667 INFO [model.graph.ElevationChart] - EP(2): 109.80952380952381,229.7302349009175
+2015-07-20 23:35:58,668 INFO [model.graph.ElevationChart] - EP(3): 159.71428571428572,202.94899520851914
+2015-07-20 23:35:58,668 INFO [model.graph.ElevationChart] - EP(4): 209.61904761904762,176.16775551612074
+2015-07-20 23:35:58,669 INFO [model.graph.ElevationChart] - EP(5): 259.5238095238095,149.38651582372233
+2015-07-20 23:35:58,669 INFO [model.graph.ElevationChart] - EP(6): 309.42857142857144,122.60527613132393
+2015-07-20 23:35:58,670 INFO [model.graph.ElevationChart] - EP(7): 359.3333333333333,95.82403643892553
+2015-07-20 23:35:58,670 INFO [model.graph.ElevationChart] - EP(8): 409.23809523809524,69.04279674652713
+2015-07-20 23:35:58,671 INFO [model.graph.ElevationChart] - EP(9): 459.14285714285717,42.26155705412879
+2015-07-20 23:35:58,671 INFO [model.graph.ElevationChart] - EP(10): 509.04761904761904,15.480317361730386
+2015-07-20 23:35:58,672 INFO [model.graph.ElevationChart] - EP(11): 558.952380952381,-11.300922330668072
+2015-07-20 23:35:58,672 INFO [model.graph.ElevationChart] - EP(12): 608.8571428571429,-38.08216202306647
+2015-07-20 23:35:58,672 INFO [model.graph.ElevationChart] - EP(13): 658.7619047619048,-64.86340171546482
+2015-07-20 23:35:58,673 INFO [model.graph.ElevationChart] - EP(14): 708.6666666666666,-91.64464140786322
+2015-07-20 23:35:58,673 INFO [model.graph.ElevationChart] - EP(15): 758.5714285714286,-118.42588110026162
+2015-07-20 23:35:58,674 INFO [model.graph.ElevationChart] - EP(16): 808.4761904761905,-145.20712079266002
+2015-07-20 23:35:58,674 INFO [model.graph.ElevationChart] - EP(17): 858.3809523809524,-171.98836048505848
+2015-07-20 23:35:58,675 INFO [model.graph.ElevationChart] - EP(18): 908.2857142857143,-198.76960017745682
+2015-07-20 23:35:58,675 INFO [model.graph.ElevationChart] - EP(19): 958.1904761904761,-225.55083986985517
+2015-07-20 23:35:58,675 INFO [model.graph.ElevationChart] - EP(20): 1008.0952380952381,-252.3320795622535
+2015-07-20 23:35:58,676 INFO [model.graph.ElevationChart] - EP(21): 1058.0,-279.11331925465186
+2015-07-20 23:35:58,676 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-20 23:35:58,677 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-20 23:36:02,322 INFO [model.graph.ElevationChart] - EP(1): 35.5609756097561,257.2052725027236
+2015-07-20 23:36:02,322 INFO [model.graph.ElevationChart] - EP(2): 61.1219512195122,230.42403281032517
+2015-07-20 23:36:02,323 INFO [model.graph.ElevationChart] - EP(3): 86.6829268292683,203.64279311792677
+2015-07-20 23:36:02,323 INFO [model.graph.ElevationChart] - EP(4): 112.2439024390244,176.86155342552837
+2015-07-20 23:36:02,324 INFO [model.graph.ElevationChart] - EP(5): 137.8048780487805,150.08031373313
+2015-07-20 23:36:02,324 INFO [model.graph.ElevationChart] - EP(6): 163.3658536585366,123.2990740407316
+2015-07-20 23:36:02,324 INFO [model.graph.ElevationChart] - EP(7): 188.9268292682927,96.5178343483332
+2015-07-20 23:36:02,325 INFO [model.graph.ElevationChart] - EP(8): 214.4878048780488,69.73659465593482
+2015-07-20 23:36:02,325 INFO [model.graph.ElevationChart] - EP(9): 240.0487804878049,42.95535496353642
+2015-07-20 23:36:02,325 INFO [model.graph.ElevationChart] - EP(10): 265.609756097561,16.174115271137964
+2015-07-20 23:36:02,326 INFO [model.graph.ElevationChart] - EP(11): 291.1707317073171,-10.607124421260437
+2015-07-20 23:36:02,326 INFO [model.graph.ElevationChart] - EP(12): 316.7317073170732,-37.38836411365878
+2015-07-20 23:36:02,326 INFO [model.graph.ElevationChart] - EP(13): 342.2926829268293,-64.16960380605718
+2015-07-20 23:36:02,327 INFO [model.graph.ElevationChart] - EP(14): 367.8536585365854,-90.95084349845558
+2015-07-20 23:36:02,327 INFO [model.graph.ElevationChart] - EP(15): 393.4146341463415,-117.73208319085398
+2015-07-20 23:36:02,327 INFO [model.graph.ElevationChart] - EP(16): 418.9756097560976,-144.51332288325244
+2015-07-20 23:36:02,328 INFO [model.graph.ElevationChart] - EP(17): 444.5365853658537,-171.2945625756508
+2015-07-20 23:36:02,328 INFO [model.graph.ElevationChart] - EP(18): 470.0975609756098,-198.0758022680492
+2015-07-20 23:36:02,328 INFO [model.graph.ElevationChart] - EP(19): 495.6585365853659,-224.8570419604476
+2015-07-20 23:36:02,329 INFO [model.graph.ElevationChart] - EP(20): 521.219512195122,-251.63828165284588
+2015-07-20 23:36:02,329 INFO [model.graph.ElevationChart] - EP(21): 546.780487804878,-278.4195213452442
+2015-07-20 23:36:02,330 INFO [model.graph.ElevationChart] - EP(22): 572.3414634146342,-305.20076103764256
+2015-07-20 23:36:02,330 INFO [model.graph.ElevationChart] - EP(23): 597.9024390243902,-331.9820007300409
+2015-07-20 23:36:02,330 INFO [model.graph.ElevationChart] - EP(24): 623.4634146341464,-358.76324042243925
+2015-07-20 23:36:02,330 INFO [model.graph.ElevationChart] - EP(25): 649.0243902439024,-385.5444801148376
+2015-07-20 23:36:02,331 INFO [model.graph.ElevationChart] - EP(26): 674.5853658536586,-412.32571980723594
+2015-07-20 23:36:02,331 INFO [model.graph.ElevationChart] - EP(27): 700.1463414634146,-439.1069594996343
+2015-07-20 23:36:02,331 INFO [model.graph.ElevationChart] - EP(28): 725.7073170731708,-465.88819919203263
+2015-07-20 23:36:02,332 INFO [model.graph.ElevationChart] - EP(29): 751.2682926829268,-492.669438884431
+2015-07-20 23:36:02,332 INFO [model.graph.ElevationChart] - EP(30): 776.829268292683,-519.4506785768294
+2015-07-20 23:36:02,332 INFO [model.graph.ElevationChart] - EP(31): 802.390243902439,-546.2319182692278
+2015-07-20 23:36:02,333 INFO [model.graph.ElevationChart] - EP(32): 827.9512195121952,-573.013157961626
+2015-07-20 23:36:02,333 INFO [model.graph.ElevationChart] - EP(33): 853.5121951219512,-599.7943976540244
+2015-07-20 23:36:02,333 INFO [model.graph.ElevationChart] - EP(34): 879.0731707317074,-626.5756373464227
+2015-07-20 23:36:02,334 INFO [model.graph.ElevationChart] - EP(35): 904.6341463414634,-653.3568770388212
+2015-07-20 23:36:02,334 INFO [model.graph.ElevationChart] - EP(36): 930.1951219512196,-680.1381167312195
+2015-07-20 23:36:02,336 INFO [model.graph.ElevationChart] - EP(37): 955.7560975609756,-706.919356423618
+2015-07-20 23:36:02,337 INFO [model.graph.ElevationChart] - EP(38): 981.3170731707318,-733.7005961160163
+2015-07-20 23:36:02,337 INFO [model.graph.ElevationChart] - EP(39): 1006.8780487804878,-760.4818358084146
+2015-07-20 23:36:02,337 INFO [model.graph.ElevationChart] - EP(40): 1032.439024390244,-787.2630755008129
+2015-07-20 23:36:02,338 INFO [model.graph.ElevationChart] - EP(41): 1058.0,-814.0443151932113
+2015-07-20 23:36:02,338 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-20 23:36:02,340 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-20 23:37:00,480 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-20 23:37:23,584 INFO [application.Master] - Launch
+2015-07-20 23:37:24,171 INFO [model.AppConfig] - App Config Instantiated
+2015-07-20 23:37:26,756 INFO [views.Console] - Enter Operator ID : 
+2015-07-20 23:37:26,757 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-20 23:37:26,969 INFO [application.FXMLController] - Top Chart initialization
+2015-07-20 23:37:26,971 INFO [application.FXMLController] - Bottom Chart initialization

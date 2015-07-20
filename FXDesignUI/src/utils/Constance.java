@@ -23,12 +23,12 @@ public class Constance {
 	public static final class UNITS {
 		public static boolean isKM = true;
 		public static boolean isFPS = false;
-		public static String LENGTH = (isKM ? "KM":"NM");
-		public static String HEIGHT = (isFPS ? "meters":"feet");
+		public static String getLENGTH() { return(isKM ? "KM":"NM");}
+		public static String getHEIGHT() { return(isFPS ? "meters":"feet");}
 	}
 
-	public static boolean IS_CONFIG_SET = false;
-	public static boolean IS_PREF_SET = false;
+	public static boolean IS_CONFIG_SET = true;
+	public static boolean IS_PREF_SET = true;
 	
 	public static double ELEVATION_MAX		= 10000;//MKS or FPS
 	public static double ELEVATION_DISP		= 1000;//ft/Km or NM
@@ -47,10 +47,10 @@ public class Constance {
 		public static double GLIDE_FLAT_START_DIST	= 10;//KM
 		public static double USL_ANGLE				= 20;//degrees
 		public static double LSL_ANGLE				= 0;//degrees
-		public static double UAL_ANGLE				= 20;//degrees
-		public static double LAL_ANGLE				= 20;//degrees
-		public static double USaL_ANGLE				= 20;//degrees
-		public static double LSaL_ANGLE				= 0;//degrees
+		public static double UAL_ANGLE				= GLIDE_ANGLE+1.5;//degrees
+		public static double LAL_ANGLE				= GLIDE_ANGLE-1.5;//degrees
+		public static double USaL_ANGLE				= GLIDE_ANGLE+3.5;//degrees
+		public static double LSaL_ANGLE				= GLIDE_ANGLE-3.5;//degrees
 		public static double DH						= 200;//feets or meters
 	}
 	
