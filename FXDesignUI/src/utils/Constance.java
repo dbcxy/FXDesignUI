@@ -26,8 +26,8 @@ public class Constance {
 		public static String getHEIGHT() { return(isFPS ? "meters":"feet");}
 	}
 
-	public static boolean IS_CONFIG_SET = true;
-	public static boolean IS_PREF_SET = true;
+	public static boolean IS_CONFIG_SET = false;
+	public static boolean IS_PREF_SET = false;
 	
 	public static double ELEVATION_MAX		= 10000;//MKS or FPS
 	public static double ELEVATION_DISP		= 1200;//ft/Km or NM
