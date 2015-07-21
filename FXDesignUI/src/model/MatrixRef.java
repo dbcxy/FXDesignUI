@@ -88,7 +88,7 @@ public class MatrixRef implements ILayoutParam{
 	
 	public Point toAzimuthPixels(double az, double r) {
 		Point p = new Point();
-		double x = OFFSET + ((r*drawableXArea)/maxRange);
+		double x = ((r*drawableXArea)/maxRange);
 		double y = toAzimuthPixels(az);
 		p.setX(x);
 		p.setY(y);
@@ -97,16 +97,17 @@ public class MatrixRef implements ILayoutParam{
 	
 	public double toAzimuthPixels(double az) {
 		double y;
+		double addtionalYarea = drawableYArea ;
 		if((0 < az) && (az < maxAzimuth))
-			y = drawableYArea/2 - ((az*(drawableYArea/2))/maxAzimuth);
+			y = addtionalYarea/2 - ((az*(addtionalYarea/2))/maxAzimuth);
 		else if((minAzimuth <= az) && (az < 0))
-			y = drawableYArea/2 + ((az*(drawableYArea/2))/minAzimuth);
+			y = addtionalYarea/2 + ((az*(addtionalYarea/2))/minAzimuth);
 		else if(az==maxAzimuth)
 			y = 0;
 		else if(az==minAzimuth)
-			y = drawableYArea;
+			y = addtionalYarea;
 		else
-			y = drawableYArea/2;
+			y = addtionalYarea/2;
 		return y;
 	}
 	

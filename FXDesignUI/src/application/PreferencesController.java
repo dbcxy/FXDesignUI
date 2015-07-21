@@ -33,7 +33,6 @@ public class PreferencesController implements Initializable,ILayoutParam{
 	@FXML ComboBox<String> comboRangeUnits;
 	@FXML ComboBox<String> comboElAz;
 	
-	@FXML TextField runwayOffset;
 	@FXML TextField freqSel;
 	@FXML TextField bite;
 	
@@ -73,7 +72,6 @@ public class PreferencesController implements Initializable,ILayoutParam{
 
 	private void loadDefaultPreference() {
 		comboRunway.setValue(Constance.PREF.SEL_RUNWAY);
-		runwayOffset.setText(Constance.PREF.RUNWAY_OFFSET);
 		comboModes.setValue(Constance.PREF.MODE_OP);
 		comboPolarization.setValue(Constance.PREF.CHG_POL);
 		comboRangeUnits.setValue(Constance.PREF.RANGE_UNITS);	
@@ -100,7 +98,6 @@ public class PreferencesController implements Initializable,ILayoutParam{
 
 	private void saveData() {
 		Constance.PREF.SEL_RUNWAY = comboRunway.getValue();
-		Constance.PREF.RUNWAY_OFFSET = runwayOffset.getText();
 		Constance.PREF.MODE_OP = comboModes.getValue();
 		Constance.PREF.CHG_POL = comboPolarization.getValue();
 		Constance.PREF.RANGE_UNITS = comboRangeUnits.getValue();

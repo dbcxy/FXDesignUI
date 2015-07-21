@@ -24,20 +24,21 @@ public class AzimuthChart extends GraphChart {
 	public AzimuthChart(Canvas canvas) {
 		super(canvas);
 		midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
-		
 	}
 	
-	public void drawAzimuthLine(double azLAngle, double azRAngle) {
+	public void drawAzimuthLine() {
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(2);
+
+		double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
         startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getMinRange());
         endPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getMaxRange()); 
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY(),endPoint.getX(), -azLAngle);//cross line at top az degrees
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY(),endPoint.getX(), azRAngle);//cross line at bottom az degrees
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.LSL_ANGLE);//cross line at top az degrees
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY()+midAzimuthOffset,endPoint.getX(), Constance.AZIMUTH.RSL_ANGLE);//cross line at bottom az degrees
 	}
 
-	public void drawLandingStrip(double centerDist, double offsetInAzimuth) {
-        Point offset = new Point(offsetInAzimuth,offsetInAzimuth,offsetInAzimuth, null);
+	public void drawLandingStrip() {
+		double centerDist = Constance.ELEVATION.GLIDE_MAX_DIST-Constance.RANGE_DISP;
 		
         startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
         endPoint = matrixRef.toAzimuthPixels(midAzimuth, centerDist-Constance.RANGE_DISP);
@@ -46,15 +47,20 @@ public class AzimuthChart extends GraphChart {
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(1);
         gc.setLineDashes(OFFSET/2);
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.AZIMUTH.RAL_ANGLE));//imaginary below line
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.AZIMUTH.LAL_ANGLE));//imaginary above line
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.AZIMUTH.RAL_ANGLE));//dotted below line
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.AZIMUTH.LAL_ANGLE));//dotted above line
         gc.setLineDashes(0);
         
         //solid line
         endPoint = matrixRef.toAzimuthPixels(midAzimuth, centerDist);
-        gc.setStroke(Color.AQUAMARINE);
-        gc.strokeLine(startPoint.getX(), startPoint.getY()-offset.getY(), endPoint.getX(),endPoint.getY()-offset.getY());//above center line
-        gc.strokeLine(startPoint.getX(), startPoint.getY()+offset.getY(), endPoint.getX(),endPoint.getY()+offset.getY());//below center line
+        gc.setStroke(Color.CYAN);
+        gc.setLineWidth(1);
+		double offsetLeftAzimuth = matrixRef.toRangePixels(Constance.AZIMUTH.LSaL/Constance.RANGE_DISP);
+        Point offsetLeft = new Point(offsetLeftAzimuth,offsetLeftAzimuth,offsetLeftAzimuth, null);
+        gc.strokeLine(startPoint.getX(), startPoint.getY()-offsetLeft.getY(), endPoint.getX(),endPoint.getY()-offsetLeft.getY());//above center line
+		double offsetRightAzimuth = matrixRef.toRangePixels(Constance.AZIMUTH.RSaL/Constance.RANGE_DISP);
+        Point offsetRight = new Point(offsetRightAzimuth,offsetRightAzimuth,offsetRightAzimuth, null);
+        gc.strokeLine(startPoint.getX(), startPoint.getY()+offsetRight.getY(), endPoint.getX(),endPoint.getY()+offsetRight.getY());//below center line
         
         endPoint = matrixRef.toAzimuthPixels(midAzimuth, centerDist+Constance.RANGE_DISP);
         gc.setStroke(Color.RED);
@@ -62,8 +68,8 @@ public class AzimuthChart extends GraphChart {
 
 	}
 	
-	public void drawRedDistanceLine(double offsetInRange) {
-		double range = matrixRef.toRangePixels(offsetInRange);
+	public void drawRedDistanceLine() {
+		double range = matrixRef.toRangePixels(Constance.ELEVATION.DH/Constance.RANGE_DISP);
 		
 		startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
         
@@ -72,10 +78,10 @@ public class AzimuthChart extends GraphChart {
 		gc.setLineWidth(1.5); 
 		gc.setLineDashes(OFFSET/2);
 
-        endPoint = matrixRef.toAzimuthPixels(Constance.AZIMUTH_DISP, matrixRef.getTouchDown());
+        endPoint = matrixRef.toAzimuthPixels(Constance.getAZIMUTH_DISP(), matrixRef.getTouchDown());
 		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),endPoint.getX()+range,endPoint.getY());
 		
-        endPoint = matrixRef.toAzimuthPixels(-Constance.AZIMUTH_DISP, matrixRef.getTouchDown());
+        endPoint = matrixRef.toAzimuthPixels(-Constance.getAZIMUTH_DISP(), matrixRef.getTouchDown());
 		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),endPoint.getX()+range,endPoint.getY());
 		gc.setLineDashes(0);
 	}
@@ -86,13 +92,13 @@ public class AzimuthChart extends GraphChart {
 		startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
 		
 		//TD Line
-		gc.setLineWidth(2);
+		gc.setLineWidth(1);
 
 		//remaining Lines		
         for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
         	
         	startPoint = matrixRef.toAzimuthPixels(midAzimuth, i);
-        	if((i*Constance.AZIMUTH_DISP) < matrixRef.getMaxAzimuth()) {
+        	if((i*Constance.getAZIMUTH_DISP()) < matrixRef.getMaxAzimuth()) {
         		endTop = matrixRef.toAzimuthPixels((i)*Constance.getAZIMUTH_DISP(), i);
         		endBttm = matrixRef.toAzimuthPixels((-i)*Constance.getAZIMUTH_DISP(), i);
         	} else {
@@ -137,7 +143,7 @@ public class AzimuthChart extends GraphChart {
         gc.strokeText("Approach Angle   : "+Constance.APPROACH_ANGLE, OFFSET, TEXT_OFFSET+HGAP*count);
         count++;
         gc.setStroke(Color.AQUA);
-        gc.strokeText("Offset                   : "+Constance.PREF.RUNWAY_OFFSET, OFFSET, TEXT_OFFSET+HGAP*count);
+        gc.strokeText("Offset                   : "+Constance.AZIMUTH.RCLO+Constance.UNITS.getLENGTH(), OFFSET, TEXT_OFFSET+HGAP*count);
         count = 0;
         
         gc.setFont(new Font("Sans Serif", 18));

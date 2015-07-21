@@ -108,13 +108,13 @@ public class SettingsController implements Initializable,ILayoutParam{
 		((Label) (MaximumElevation.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
 		((Label) (MaximumAzimuth.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
 		
-		((Label) (ElevationDH.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
+		((Label) (ElevationDH.getChildren().get(2))).setText(Constance.UNITS.getLENGTH());
 		((Label) (ElevationGlideMaxDist.getChildren().get(2))).setText(Constance.UNITS.getLENGTH());
 		((Label) (ElevationGlideFlatStartDist.getChildren().get(2))).setText(Constance.UNITS.getLENGTH());
 		
-		((Label) (AzimuthRCLO.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
-		((Label) (AzimuthLSaL.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
-		((Label) (AzimuthRSaL.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
+		((Label) (AzimuthRCLO.getChildren().get(2))).setText(Constance.UNITS.getLENGTH());
+		((Label) (AzimuthLSaL.getChildren().get(2))).setText(Constance.UNITS.getLENGTH());
+		((Label) (AzimuthRSaL.getChildren().get(2))).setText(Constance.UNITS.getLENGTH());
 		
 	}
 

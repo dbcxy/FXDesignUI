@@ -504,9 +504,9 @@ public class FXMLController implements Initializable,ILayoutParam{
 	
     private void drawGraphTop(Canvas canvas) {    	
     	mElevationChart = new ElevationChart(canvas);
-    	mElevationChart.drawElevationLine(Constance.ELEVATION.USL_ANGLE);
-    	mElevationChart.drawLandingStrip(Constance.ELEVATION.GLIDE_FLAT_START_DIST-Constance.RANGE_DISP, Constance.ELEVATION.GLIDE_ANGLE);//till 9NM drawing shows till 10NM, with 10degrees angle
-//    	mElevationChart.drawRedDistanceLine(Constance.ELEVATION_DH);//200mts range offset from TD
+    	mElevationChart.drawElevationLine();
+    	mElevationChart.drawLandingStrip();
+    	mElevationChart.drawRedDistanceLine();
     	mElevationChart.drawDistanceGrid();
     	
     }
@@ -580,9 +580,9 @@ public class FXMLController implements Initializable,ILayoutParam{
     
 	private void drawGraphBottom(Canvas canvas) {
 		mAzimuthChart = new AzimuthChart(canvas);
-		mAzimuthChart.drawAzimuthLine(Constance.AZIMUTH.LSL_ANGLE,Constance.AZIMUTH.RSL_ANGLE);
-		mAzimuthChart.drawLandingStrip(Constance.ELEVATION.GLIDE_FLAT_START_DIST-Constance.RANGE_DISP,matrixRef.toRangePixels(Constance.AZIMUTH.LSaL/1000));//till NM, and offset of 100ft / as of now 5px
-//		mAzimuthChart.drawRedDistanceLine(0.2);//200mts range offset from TD
+		mAzimuthChart.drawAzimuthLine();
+		mAzimuthChart.drawLandingStrip();//till NM, and offset of 100ft / as of now 5px
+		mAzimuthChart.drawRedDistanceLine();//200mts range offset from TD
 		mAzimuthChart.drawDistanceGrid();
 
 	}

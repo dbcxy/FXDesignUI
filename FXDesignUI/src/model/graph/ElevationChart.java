@@ -24,23 +24,23 @@ public class ElevationChart extends GraphChart{
 		super(canvas);
 	}
 	
-	public void drawElevationLine(double elAngle) {
+	public void drawElevationLine() {
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(2);        
         startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
 //        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -Constance.ELEVATION.LSL_ANGLE);//flat line
 //        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -elAngle);//cross line at 20 degrees
-        Point pointCross = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -elAngle);//cross line at 20 degrees
+        Point pointCross = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -Constance.ELEVATION.USL_ANGLE);//cross line at 20 degrees
         Point pointFlat = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -Constance.ELEVATION.LSL_ANGLE);//flat line
         gc.strokePolyline(new double[]{pointCross.getX(), startPoint.getX(), pointFlat.getX()},
                 new double[]{pointCross.getY(), startPoint.getY(), pointFlat.getY()}, 3);
 	}
 	
-	public void drawRedDistanceLine(double offsetInRange) {
-		double range = matrixRef.toRangePixels(offsetInRange);
+	public void drawRedDistanceLine() {
+		double range = matrixRef.toRangePixels(Constance.ELEVATION.DH/Constance.RANGE_DISP);//range offset from TD
 		
 		startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getTouchDown());
-        endPoint = matrixRef.toElevationPixels(Constance.ELEVATION_DISP, matrixRef.getTouchDown());
+        endPoint = matrixRef.toElevationPixels(Constance.getELEVATION_DISP(), matrixRef.getTouchDown());
         
 		//dotted red line
 		gc.setStroke(Color.RED);
@@ -54,11 +54,6 @@ public class ElevationChart extends GraphChart{
 		
         gc.setFont(new Font("Sans Serif", 16));
         gc.setLineWidth(1);
-
-//        endPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
-//        Point point = ModelDrawing.getNextPointAtAngle(endPoint.getX(), endPoint.getY(), matrixRef.toRangePixels(matrixRef.getTouchDown()), -Constance.ELEVATION.USL_ANGLE);
-//        logger.info("P: "+point.getX()+","+point.getY());
-//        Point pointCross = ModelDrawing.getNextPointAtAngle(point.getX(), point.getY(),matrixRef.toRangePixels(1), -Constance.ELEVATION.USL_ANGLE);//cross line at 20 degrees
 		
         //draw remaining lines
         for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
@@ -66,13 +61,6 @@ public class ElevationChart extends GraphChart{
         	startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), i);
             endPoint = matrixRef.toElevationPixels((i)*Constance.getELEVATION_DISP(), i);
             
-           
-            //completing top angle line by joining
-//        	Point prevPoint = matrixRef.toElevationPixels((i-1)*Constance.ELEVATION_DISP, (i-1));
-//            gc.setStroke(Color.CYAN);
-//            gc.strokeLine(prevPoint.getX(),prevPoint.getY(),endPoint.getX(),endPoint.getY());
-            
-
             if((i%5)==0) {
         		//write text Range
         		gc.setStroke(Color.YELLOW);
@@ -87,15 +75,13 @@ public class ElevationChart extends GraphChart{
             	gc.setStroke(Color.GREEN);
             	gc.strokeLine(startPoint.getX(),startPoint.getY(),endPoint.getX(),endPoint.getY());
         	}
-            
-
-//            logger.info("PC: "+pointCross.getX()+","+pointCross.getY());
-//            pointCross = ModelDrawing.getNextPointAtAngle(pointCross.getX(), pointCross.getY(),matrixRef.toRangePixels(1), -Constance.ELEVATION.USL_ANGLE);//cross line at 20 degrees
         }
 	}
 	
-	public void drawLandingStrip(double centerDist, double dAngle) {
-        gc.setStroke(Color.AQUAMARINE);
+	public void drawLandingStrip() {
+		double centerDist = Constance.ELEVATION.GLIDE_FLAT_START_DIST-Constance.RANGE_DISP;//till 9NM drawing shows till 10NM
+        gc.setStroke(Color.CYAN);
+        gc.setLineWidth(1);
         
         startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getTouchDown());
         endPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), centerDist-Constance.RANGE_DISP);
@@ -111,7 +97,10 @@ public class ElevationChart extends GraphChart{
         
         endPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), centerDist);
         gc.setStroke(Color.RED);
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -dAngle);//center red line
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -Constance.ELEVATION.GLIDE_ANGLE);//center red line
+
+        Point point = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY(), endPoint.getX(), -Constance.ELEVATION.GLIDE_ANGLE);
+        gc.strokeLine(point.getX(),point.getY(),matrixRef.toRangePixels(Constance.ELEVATION.GLIDE_MAX_DIST),point.getY());
 	}
 		
 	public static void drawText(Canvas canvas) {

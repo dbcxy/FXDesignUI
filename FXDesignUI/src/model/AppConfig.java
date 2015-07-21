@@ -64,7 +64,6 @@ public class AppConfig {
 	
 	String[] itemPrefVal = new String[] {
 		Constance.PREF.SEL_RUNWAY,
-		Constance.PREF.RUNWAY_OFFSET,
 		Constance.PREF.MODE_OP,
 		Constance.PREF.CHG_POL,
 		Constance.PREF.RANGE_UNITS,

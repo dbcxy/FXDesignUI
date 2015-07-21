@@ -76,30 +76,6 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox>
-                                       <children>
-                                          <Label minWidth="300.0" text="Set Runway Offset to Radar">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                          <TextField fx:id="runwayOffset">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </TextField>
-                                          <Label minWidth="50.0" text="feet">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                          <Label minWidth="50.0">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                       </children>
-                                    </HBox>
                                     <Label text="Radar Parameters">
                                        <font>
                                           <Font name="Arial Bold" size="12.0" />

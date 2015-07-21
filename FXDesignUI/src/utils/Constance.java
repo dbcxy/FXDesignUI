@@ -26,14 +26,16 @@ public class Constance {
 		public static String getHEIGHT() { return(isFPS ? "meters":"feet");}
 	}
 
-	public static boolean IS_CONFIG_SET = false;
-	public static boolean IS_PREF_SET = false;
+	public static boolean IS_CONFIG_SET = true;
+	public static boolean IS_PREF_SET = true;
 	
-	public static double ELEVATION_MAX		= 10000;//MKS or FPS
-	public static double ELEVATION_DISP		= 1200;//ft/Km or NM
+	private static double DISP = 100;//ft/Km or NM
+	private static double ELEVATION_DISP;//ft/Km or NM
+	private static double AZIMUTH_DISP;//ft/Km or NM
+	
+	public static double ELEVATION_MAX		= 8000;//MKS or FPS
 	public static double ELEVATION_MIN		= 0;//ft or mts
 	public static double AZIMUTH_MAX		= 5000;//ft or mts
-	public static double AZIMUTH_DISP		= 600;//ft/Km or NM
 	public static double AZIMUTH_MIN		= -5000;//ft or mts
 	public static double RANGE_MAX			= 40;//km or NM , Doesn't matter whether KM or NM only number matters
 	public static double RANGE_DISP			= 1;//km or NM
@@ -41,31 +43,30 @@ public class Constance {
 	public static double TOUCH_DOWN			= 1;//km or NM
 	
 	public static class ELEVATION {
-		public static double GLIDE_ANGLE			= 10;//degrees
-		public static double GLIDE_MAX_DIST			= 20;//KM
-		public static double GLIDE_FLAT_START_DIST	= 10;//KM
+		public static double GLIDE_ANGLE			= 7.5;//degrees
+		public static double GLIDE_MAX_DIST			= 10;//KM
+		public static double GLIDE_FLAT_START_DIST	= 8;//KM
 		public static double USL_ANGLE				= 20;//degrees
 		public static double LSL_ANGLE				= 0;//degrees
 		public static double UAL_ANGLE				= GLIDE_ANGLE+1.5;//degrees
 		public static double LAL_ANGLE				= GLIDE_ANGLE-1.5;//degrees
 		public static double USaL_ANGLE				= GLIDE_ANGLE+3.5;//degrees
 		public static double LSaL_ANGLE				= GLIDE_ANGLE-3.5;//degrees
-		public static double DH						= 200;//feets or meters
+		public static double DH						= 0.2;//feets or meters
 	}
 	
 	public static class AZIMUTH {
 		public static double LSL_ANGLE	= 10;//degrees
 		public static double RSL_ANGLE	= 10;//degrees
-		public static double RCLO		= 200;//feets or meters
+		public static double RCLO		= 0.1;//KM
 		public static double LAL_ANGLE	= 4.75;//degrees
 		public static double RAL_ANGLE	= -4.75;//degrees
-		public static double LSaL		= 50;//feet or meter
-		public static double RSaL		= 50;//feet or meter
+		public static double LSaL		= 0.05;//KM
+		public static double RSaL		= 0.05;//KM
 	}
 
 	public static class PREF {
 		public static String SEL_RUNWAY		= " 1 ";//Number
-		public static String RUNWAY_OFFSET	= " 100 ";//feet
 		public static String MODE_OP		= " Clear Weather ";
 		public static String CHG_POL		= " Horizontal ";
 		public static String RANGE_UNITS	= " Kilometers (KM) ";
@@ -93,26 +94,26 @@ public class Constance {
 	
 	public static double getELEVATION_DISP() {
 		if(SCALE.contains("5"))
-			ELEVATION_DISP		= 2200;//ft
+			ELEVATION_DISP		= DISP+ ELEVATION_MAX/5;//ft
 		else if(SCALE.contains("10"))
-			ELEVATION_DISP		= 1200;//ft
+			ELEVATION_DISP		= DISP + ELEVATION_MAX/10;//ft
 		else if(SCALE.contains("20"))
-			ELEVATION_DISP		= 625;//ft
+			ELEVATION_DISP		= DISP + ELEVATION_MAX/20;//ft
 		else if(SCALE.contains("40"))
-			ELEVATION_DISP		= 325;//ft
+			ELEVATION_DISP		= DISP + ELEVATION_MAX/40;//ft
 		
 		return ELEVATION_DISP;
 	}
 	
 	public static double getAZIMUTH_DISP() {
 		if(SCALE.contains("5"))
-			AZIMUTH_DISP		= 1100;//ft
+			AZIMUTH_DISP		= DISP + AZIMUTH_MAX/5;
 		else if(SCALE.contains("10"))
-			AZIMUTH_DISP		= 600;//ft
+			AZIMUTH_DISP		= DISP + AZIMUTH_MAX/10;
 		else if(SCALE.contains("20"))
-			AZIMUTH_DISP		= 300;//ft
+			AZIMUTH_DISP		= DISP + AZIMUTH_MAX/20;
 		else if(SCALE.contains("40"))
-			AZIMUTH_DISP		= 150;//ft
+			AZIMUTH_DISP		= DISP + AZIMUTH_MAX/40;
 		
 		return AZIMUTH_DISP;
 	}
