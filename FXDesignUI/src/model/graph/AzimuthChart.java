@@ -86,15 +86,15 @@ public class AzimuthChart extends GraphChart {
 		startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
 		
 		//TD Line
-		gc.setLineWidth(1);
+		gc.setLineWidth(2);
 
 		//remaining Lines		
         for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
         	
         	startPoint = matrixRef.toAzimuthPixels(midAzimuth, i);
         	if((i*Constance.AZIMUTH_DISP) < matrixRef.getMaxAzimuth()) {
-        		endTop = matrixRef.toAzimuthPixels((i)*Constance.AZIMUTH_DISP, i);
-        		endBttm = matrixRef.toAzimuthPixels((-i)*Constance.AZIMUTH_DISP, i);
+        		endTop = matrixRef.toAzimuthPixels((i)*Constance.getAZIMUTH_DISP(), i);
+        		endBttm = matrixRef.toAzimuthPixels((-i)*Constance.getAZIMUTH_DISP(), i);
         	} else {
         		endTop.setX(startPoint.getX());
         		endTop.setY(matrixRef.toAzimuthPixels(matrixRef.getMaxAzimuth()));

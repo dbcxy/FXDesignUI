@@ -33,13 +33,6 @@ public class ModelDrawing {
         g2d.dispose();
 	}
 	
-	public static Point getPointOfLineAtAngle(GraphicsContext gc, double x1,double y1,double length,double angle) {
-		double x2 = x1 + length * Math.cos(Math.toRadians(angle));
-		double y2 = y1 + length * Math.sin(Math.toRadians(angle));
-	    gc.strokeLine(x1,y1,x2,y2);
-	    return new Point(x2,y2,0,null);
-	}
-	
 	public static Point getNextPointAtAngle(double x1, double y1, double len, double angle){
 		Point point = new Point();
 		point.setX(x1+len*Math.cos(Math.toRadians(angle)));

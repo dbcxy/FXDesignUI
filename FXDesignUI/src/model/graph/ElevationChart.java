@@ -19,7 +19,7 @@ public class ElevationChart extends GraphChart{
 	MatrixRef matrixRef = MatrixRef.getInstance();
 	Point startPoint;
 	Point endPoint;
-	
+		
 	public ElevationChart(Canvas canvas) {
 		super(canvas);
 	}
@@ -27,10 +27,13 @@ public class ElevationChart extends GraphChart{
 	public void drawElevationLine(double elAngle) {
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(2);        
-        startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getMinRange());    		
-//        gc.strokeLine(startPoint.getX(),startPoint.getY(),endPoint.getX(),endPoint.getY());//flat line
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -Constance.ELEVATION.LSL_ANGLE);//flat line
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -elAngle);//cross line at 20 degrees
+        startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
+//        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -Constance.ELEVATION.LSL_ANGLE);//flat line
+//        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -elAngle);//cross line at 20 degrees
+        Point pointCross = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -elAngle);//cross line at 20 degrees
+        Point pointFlat = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -Constance.ELEVATION.LSL_ANGLE);//flat line
+        gc.strokePolyline(new double[]{pointCross.getX(), startPoint.getX(), pointFlat.getX()},
+                new double[]{pointCross.getY(), startPoint.getY(), pointFlat.getY()}, 3);
 	}
 	
 	public void drawRedDistanceLine(double offsetInRange) {
@@ -52,20 +55,18 @@ public class ElevationChart extends GraphChart{
         gc.setFont(new Font("Sans Serif", 16));
         gc.setLineWidth(1);
 
-//        endPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getTouchDown());
-//        Point point = ModelDrawing.getNextPointAtAngle(endPoint.getX(), endPoint.getY(), Constance.ELEVATION_DISP, Constance.ELEVATION.USL_ANGLE);
-		//draw remaining lines
+//        endPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
+//        Point point = ModelDrawing.getNextPointAtAngle(endPoint.getX(), endPoint.getY(), matrixRef.toRangePixels(matrixRef.getTouchDown()), -Constance.ELEVATION.USL_ANGLE);
+//        logger.info("P: "+point.getX()+","+point.getY());
+//        Point pointCross = ModelDrawing.getNextPointAtAngle(point.getX(), point.getY(),matrixRef.toRangePixels(1), -Constance.ELEVATION.USL_ANGLE);//cross line at 20 degrees
+		
+        //draw remaining lines
         for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
         	
         	startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), i);
-            endPoint = matrixRef.toElevationPixels((i)*Constance.ELEVATION_DISP, i);
-        	
-
-//        	endPoint = matrixRef.toElevationPixels(point.getX(),i);
-//        	logger.info("EP("+i+"): "+endPoint.getX()+","+endPoint.getY());
-//        	point = ModelDrawing.getNextPointAtAngle(point.getX(), point.getY(), Constance.ELEVATION_DISP, Constance.ELEVATION.USL_ANGLE);
-//        	logger.info("P("+i+"): "+point.getX()+","+point.getY());
+            endPoint = matrixRef.toElevationPixels((i)*Constance.getELEVATION_DISP(), i);
             
+           
             //completing top angle line by joining
 //        	Point prevPoint = matrixRef.toElevationPixels((i-1)*Constance.ELEVATION_DISP, (i-1));
 //            gc.setStroke(Color.CYAN);
@@ -86,6 +87,10 @@ public class ElevationChart extends GraphChart{
             	gc.setStroke(Color.GREEN);
             	gc.strokeLine(startPoint.getX(),startPoint.getY(),endPoint.getX(),endPoint.getY());
         	}
+            
+
+//            logger.info("PC: "+pointCross.getX()+","+pointCross.getY());
+//            pointCross = ModelDrawing.getNextPointAtAngle(pointCross.getX(), pointCross.getY(),matrixRef.toRangePixels(1), -Constance.ELEVATION.USL_ANGLE);//cross line at 20 degrees
         }
 	}
 	

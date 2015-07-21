@@ -254,7 +254,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	}
     
     private void initCanvasLayout() {
-    	
+    	    	
     	cTopL0.widthProperty().bind(chartTop.widthProperty());
 		cTopL0.heightProperty().bind(chartTop.heightProperty());
     	

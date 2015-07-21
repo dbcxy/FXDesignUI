@@ -43,7 +43,7 @@ public class Plot extends OverlayItem implements ILayoutParam{
 	private void displayText(GraphicsContext gc) {
     	gc.setStroke(Color.CHOCOLATE);
     	ModelDrawing.drawLineAtAngle(gc, getX(), getY(), HGAP, -45);
-    	Point p = ModelDrawing.getPointOfLineAtAngle(gc, getX(), getY(), HGAP, -45);
+    	Point p = ModelDrawing.getNextPointAtAngle(getX(), getY(), HGAP, -45);
     	gc.strokeLine(p.getX(), p.getY(), p.getX()+2*TEXT_OFFSET, p.getY());
     	gc.setFont(new Font("Arial", 14));
     	gc.setStroke(Color.WHITE);

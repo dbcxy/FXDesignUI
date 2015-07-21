@@ -16,7 +16,6 @@ public class Constance {
 	public static String DISTANCE = null;
 	public static String HEIGHT = null;
 	public static String EL_ANGLE = null;
-	
 
 	public static final String NULL = "NULL";
 	
@@ -31,7 +30,7 @@ public class Constance {
 	public static boolean IS_PREF_SET = true;
 	
 	public static double ELEVATION_MAX		= 10000;//MKS or FPS
-	public static double ELEVATION_DISP		= 1000;//ft/Km or NM
+	public static double ELEVATION_DISP		= 1200;//ft/Km or NM
 	public static double ELEVATION_MIN		= 0;//ft or mts
 	public static double AZIMUTH_MAX		= 5000;//ft or mts
 	public static double AZIMUTH_DISP		= 600;//ft/Km or NM
@@ -90,5 +89,32 @@ public class Constance {
 	public static final int UPDATE_RATE 	= MILLI_SECOND;
 	public static final String CURSOR 		= " > ";
 	public static final String CURSOR_DUB	= " >> ";
+	
+	
+	public static double getELEVATION_DISP() {
+		if(SCALE.contains("5"))
+			ELEVATION_DISP		= 2200;//ft
+		else if(SCALE.contains("10"))
+			ELEVATION_DISP		= 1200;//ft
+		else if(SCALE.contains("20"))
+			ELEVATION_DISP		= 625;//ft
+		else if(SCALE.contains("40"))
+			ELEVATION_DISP		= 325;//ft
+		
+		return ELEVATION_DISP;
+	}
+	
+	public static double getAZIMUTH_DISP() {
+		if(SCALE.contains("5"))
+			AZIMUTH_DISP		= 1100;//ft
+		else if(SCALE.contains("10"))
+			AZIMUTH_DISP		= 600;//ft
+		else if(SCALE.contains("20"))
+			AZIMUTH_DISP		= 300;//ft
+		else if(SCALE.contains("40"))
+			AZIMUTH_DISP		= 150;//ft
+		
+		return AZIMUTH_DISP;
+	}
 	
 }
