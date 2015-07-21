@@ -28,11 +28,7 @@ public class Constance {
 
 	public static boolean IS_CONFIG_SET = true;
 	public static boolean IS_PREF_SET = true;
-	
-	private static double DISP = 100;//ft/Km or NM
-	private static double ELEVATION_DISP;//ft/Km or NM
-	private static double AZIMUTH_DISP;//ft/Km or NM
-	
+		
 	public static double ELEVATION_MAX		= 8000;//MKS or FPS
 	public static double ELEVATION_MIN		= 0;//ft or mts
 	public static double AZIMUTH_MAX		= 5000;//ft or mts
@@ -90,33 +86,6 @@ public class Constance {
 	public static final int UPDATE_RATE 	= MILLI_SECOND;
 	public static final String CURSOR 		= " > ";
 	public static final String CURSOR_DUB	= " >> ";
-	
-	
-	public static double getELEVATION_DISP() {
-		if(SCALE.contains("5"))
-			ELEVATION_DISP		= DISP+ ELEVATION_MAX/5;//ft
-		else if(SCALE.contains("10"))
-			ELEVATION_DISP		= DISP + ELEVATION_MAX/10;//ft
-		else if(SCALE.contains("20"))
-			ELEVATION_DISP		= DISP + ELEVATION_MAX/20;//ft
-		else if(SCALE.contains("40"))
-			ELEVATION_DISP		= DISP + ELEVATION_MAX/40;//ft
-		
-		return ELEVATION_DISP;
-	}
-	
-	public static double getAZIMUTH_DISP() {
-		if(SCALE.contains("5"))
-			AZIMUTH_DISP		= DISP + AZIMUTH_MAX/5;
-		else if(SCALE.contains("10"))
-			AZIMUTH_DISP		= DISP + AZIMUTH_MAX/10;
-		else if(SCALE.contains("20"))
-			AZIMUTH_DISP		= DISP + AZIMUTH_MAX/20;
-		else if(SCALE.contains("40"))
-			AZIMUTH_DISP		= DISP + AZIMUTH_MAX/40;
-		
-		return AZIMUTH_DISP;
-	}
 	
 	public static String getSCALE() {
 		if(SCALE.contains("5"))

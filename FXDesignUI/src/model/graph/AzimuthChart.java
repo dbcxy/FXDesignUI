@@ -1,9 +1,13 @@
 package model.graph;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
 import model.GraphChart;
 import model.MatrixRef;
+import model.graph.ElevationChart.myPoint;
 import utils.Constance;
 import utils.ModelDrawing;
 import javafx.scene.canvas.Canvas;
@@ -21,6 +25,13 @@ public class AzimuthChart extends GraphChart {
 	Point startPoint;
 	Point endPoint;
 	
+	class myPoint {
+		int X;
+		int leftY;
+		int rightY;
+	}	
+	List<myPoint> crossPoints = new ArrayList<myPoint>();
+	
 	public AzimuthChart(Canvas canvas) {
 		super(canvas);
 		midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
@@ -35,6 +46,35 @@ public class AzimuthChart extends GraphChart {
         endPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getMaxRange()); 
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.LSL_ANGLE);//cross line at top az degrees
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY()+midAzimuthOffset,endPoint.getX(), Constance.AZIMUTH.RSL_ANGLE);//cross line at bottom az degrees
+        
+        Point pointLeft = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.LSL_ANGLE);//cross line at 20 degrees
+        Point pointRight = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY()+midAzimuthOffset,endPoint.getX(), Constance.AZIMUTH.RSL_ANGLE);//flat line
+        //calculation done for finding the X,Y point for range markers
+        for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
+        	Point point = matrixRef.toAzimuthPixels(matrixRef.getMinElevation(), i);
+        	if(i==matrixRef.getTouchDown()){
+        		double range = matrixRef.toRangePixels(Constance.ELEVATION.DH/Constance.RANGE_DISP);//range offset from TD (for red line)
+        		myPoint p = new myPoint();
+            	p.X = (int) (point.getX()+range);
+            	crossPoints.add(p);
+        	}
+        	myPoint p = new myPoint();
+        	p.X = (int) point.getX();
+        	crossPoints.add(p);
+        }
+        //finding Y (L & R) co-ordinates
+        for(int i=0;i<matrixRef.getDrawableXArea();i++) {
+        	pointLeft = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY()+midAzimuthOffset,i, -Constance.AZIMUTH.LSL_ANGLE);//cross line at 20 degrees
+        	pointRight = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY()+midAzimuthOffset,i, Constance.AZIMUTH.RSL_ANGLE);//cross line at 20 degrees
+        	int raX = (int) pointLeft.getX();
+        	for(int j=0;j<crossPoints.size();j++) {
+        		if(raX == crossPoints.get(j).X){
+        			crossPoints.get(j).leftY =(int) pointLeft.getY();
+        			crossPoints.get(j).rightY =(int) pointRight.getY();
+        			break;
+        		}
+        	}
+        }
 	}
 
 	public void drawLandingStrip() {
@@ -72,42 +112,35 @@ public class AzimuthChart extends GraphChart {
 		double range = matrixRef.toRangePixels(Constance.ELEVATION.DH/Constance.RANGE_DISP);
 		
 		startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
+		myPoint ePoint = crossPoints.get(1);
         
 		//dotted red line
 		gc.setStroke(Color.RED);
 		gc.setLineWidth(1.5); 
 		gc.setLineDashes(OFFSET/2);
-
-        endPoint = matrixRef.toAzimuthPixels(Constance.getAZIMUTH_DISP(), matrixRef.getTouchDown());
-		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),endPoint.getX()+range,endPoint.getY());
 		
-        endPoint = matrixRef.toAzimuthPixels(-Constance.getAZIMUTH_DISP(), matrixRef.getTouchDown());
-		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),endPoint.getX()+range,endPoint.getY());
+		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),ePoint.X+range,ePoint.leftY);
+		gc.strokeLine(startPoint.getX()+range,startPoint.getY(),ePoint.X+range,ePoint.rightY);
+		
 		gc.setLineDashes(0);
 	}
 
 	public void drawDistanceGrid() {
-		Point endTop = null;
-		Point endBttm = null;
-		startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
 		
-		//TD Line
+		startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
 		gc.setLineWidth(1);
 
 		//remaining Lines		
         for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
         	
         	startPoint = matrixRef.toAzimuthPixels(midAzimuth, i);
-        	if((i*Constance.getAZIMUTH_DISP()) < matrixRef.getMaxAzimuth()) {
-        		endTop = matrixRef.toAzimuthPixels((i)*Constance.getAZIMUTH_DISP(), i);
-        		endBttm = matrixRef.toAzimuthPixels((-i)*Constance.getAZIMUTH_DISP(), i);
-        	} else {
-        		endTop.setX(startPoint.getX());
-        		endTop.setY(matrixRef.toAzimuthPixels(matrixRef.getMaxAzimuth()));
-        		
-        		endBttm.setX(startPoint.getX());
-        		endBttm.setY(matrixRef.toAzimuthPixels(matrixRef.getMinAzimuth()));
-        	}
+        	myPoint ePoint = crossPoints.get(i);
+        	if(ePoint.leftY==ePoint.rightY)
+        		ePoint.rightY=(int) matrixRef.getActualYdimen();
+    		Point endTop = new Point();
+        	endTop.setX(ePoint.X);endTop.setY(ePoint.leftY);
+        	Point endBttm = new Point();
+        	endBttm.setX(ePoint.X);endBttm.setY(ePoint.rightY);
             
         	if((i%5)==0) {
         		gc.setStroke(Color.YELLOW);
@@ -148,8 +181,8 @@ public class AzimuthChart extends GraphChart {
         
         gc.setFont(new Font("Sans Serif", 18));
         gc.setStroke(Color.YELLOW);
-        gc.strokeText("-", OFFSET, HEIGHT_OFF/2+HGAP+OFFSET);
-        gc.strokeText("+", OFFSET, HEIGHT_OFF/2-HGAP);
+        gc.strokeText("-", OFFSET, HEIGHT_OFF/2+HGAP+TEXT_OFFSET);
+        gc.strokeText("+", OFFSET, HEIGHT_OFF/2-OFFSET);
 	}
 
 }

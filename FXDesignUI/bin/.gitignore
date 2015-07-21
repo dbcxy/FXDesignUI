@@ -1,3 +1,7 @@
-/model/
-/utils/
 /application/
+/assets/
+/model/
+/network/
+/server/
+/utils/
+/views/
