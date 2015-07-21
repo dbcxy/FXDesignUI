@@ -58753,3 +58753,51 @@ java.lang.NullPointerException
 2015-07-21 11:36:10,297 INFO [application.FXMLController] - Top Chart Invalidated!
 2015-07-21 11:36:10,298 INFO [application.FXMLController] - Bottom Chart Invalidated!
 2015-07-21 11:36:18,748 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-21 11:43:50,296 INFO [application.Master] - Launch
+2015-07-21 11:43:50,735 INFO [model.AppConfig] - App Config Instantiated
+2015-07-21 11:43:55,703 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-21 11:43:57,403 INFO [model.AppConfig] - Settings Data Validated
+2015-07-21 11:43:57,403 INFO [model.AppConfig] - Settings Data Saved
+2015-07-21 11:43:57,408 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-21 11:43:58,788 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-21 11:44:00,361 INFO [model.AppConfig] - Preference Data Validated
+2015-07-21 11:44:00,361 INFO [model.AppConfig] - Preference Data Saved
+2015-07-21 11:44:00,365 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-21 11:44:00,388 INFO [views.Console] - Enter Operator ID : 
+2015-07-21 11:44:00,389 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-21 11:44:00,575 INFO [application.FXMLController] - Top Chart initialization
+2015-07-21 11:44:00,576 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-21 11:44:03,521 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-21 11:44:06,857 INFO [model.AppConfig] - Preference Data Validated
+2015-07-21 11:44:06,858 INFO [model.AppConfig] - Preference Data Saved
+2015-07-21 11:44:06,865 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-21 11:44:06,874 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-21 11:44:06,876 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-21 11:44:16,300 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-21 11:47:48,032 INFO [application.Master] - Launch
+2015-07-21 11:47:48,482 INFO [model.AppConfig] - App Config Instantiated
+2015-07-21 11:47:51,620 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-21 11:47:55,020 INFO [model.AppConfig] - Settings Data Validated
+2015-07-21 11:47:55,020 INFO [model.AppConfig] - Settings Data Saved
+2015-07-21 11:47:55,025 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-21 11:47:55,841 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-21 11:47:56,891 INFO [model.AppConfig] - Preference Data Validated
+2015-07-21 11:47:56,891 INFO [model.AppConfig] - Preference Data Saved
+2015-07-21 11:47:56,898 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-21 11:47:56,939 INFO [views.Console] - Enter Operator ID : 
+2015-07-21 11:47:56,940 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-21 11:47:57,001 INFO [application.FXMLController] - Top Chart initialization
+2015-07-21 11:47:57,002 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-21 11:47:59,377 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-21 11:48:01,791 INFO [model.AppConfig] - Preference Data Validated
+2015-07-21 11:48:01,792 INFO [model.AppConfig] - Preference Data Saved
+2015-07-21 11:48:01,795 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-21 11:48:01,796 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-21 11:48:01,798 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-21 11:48:09,184 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-21 11:48:11,493 INFO [model.AppConfig] - Preference Data Validated
+2015-07-21 11:48:11,494 INFO [model.AppConfig] - Preference Data Saved
+2015-07-21 11:48:11,498 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-21 11:48:11,500 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-21 11:48:11,502 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-21 11:48:16,718 INFO [application.FXMLController] - APPLICATION CLOSED

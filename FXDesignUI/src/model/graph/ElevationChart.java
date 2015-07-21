@@ -150,7 +150,7 @@ public class ElevationChart extends GraphChart{
         count++;
         gc.strokeText("RWY        : "+Constance.PREF.SEL_RUNWAY, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count++;
-        gc.strokeText("Scale       : "+Constance.SCALE, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
+        gc.strokeText("Scale       : "+Constance.getSCALE(), OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count++;
         
         gc.setFont(new Font("Sans Serif", 14));

@@ -117,4 +117,17 @@ public class Constance {
 		return AZIMUTH_DISP;
 	}
 	
+	public static String getSCALE() {
+		if(SCALE.contains("5"))
+			SCALE		= " 5 "+Constance.UNITS.getLENGTH();
+		else if(SCALE.contains("10"))
+			SCALE		= " 10 "+Constance.UNITS.getLENGTH();
+		else if(SCALE.contains("20"))
+			SCALE		= " 20 "+Constance.UNITS.getLENGTH();
+		else if(SCALE.contains("40"))
+			SCALE		= " 40 "+Constance.UNITS.getLENGTH();
+		
+		return SCALE;
+	}
+	
 }
