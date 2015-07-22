@@ -114,31 +114,31 @@ public class AppConfig {
 	
 	public void saveSettingsData() {
 		
-		validateSettingsData();
+		checkSettingsDataEmpty();
 		if(isValidSettings) {		
 			//get TextField to save values
 			int i = 0;
-			Constance.ELEVATION_MAX = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH_MAX = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION_MAX = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH_MAX = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
 			
-			Constance.ELEVATION.USL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.GLIDE_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.GLIDE_MAX_DIST = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.GLIDE_FLAT_START_DIST = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.LSL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.UAL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.LAL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.USaL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.LSaL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.DH = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.USL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.GLIDE_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.GLIDE_MAX_DIST = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.GLIDE_FLAT_START_DIST = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.LSL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.UAL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.LAL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.USaL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.LSaL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.DH = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
 			
-			Constance.AZIMUTH.LSL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH.RSL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH.RCLO = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH.LAL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH.RAL_ANGLE = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH.LSaL = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH.RSaL = itemSettingVal[i] = Double.valueOf(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());
+			Constance.AZIMUTH.LSL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH.RSL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH.RCLO = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH.LAL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH.RAL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH.LSaL = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.AZIMUTH.RSaL = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());
 
 			
 			Constance.IS_CONFIG_SET = true;
@@ -173,7 +173,7 @@ public class AppConfig {
 		
 	}
 
-	private void validateSettingsData() {
+	private void checkSettingsDataEmpty() {
 
 		for(int i=0;i<itemSettingList.size();i++) {
 			TextField tField = ((TextField)(itemSettingList.get(i).getChildren().get(1)));
@@ -191,6 +191,16 @@ public class AppConfig {
 			alert.showAndWait();
 		}
 		logger.info("Settings Data Validated");
+	}
+	
+	private double validateSettingsData(String str) {
+		double val = -1;
+		try {
+			val = Double.valueOf(str);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return val;
 	}
 	
 	
