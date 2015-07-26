@@ -45,10 +45,10 @@ public class AzimuthChart extends GraphChart {
         startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getMinRange());
         endPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getMaxRange()); 
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.LSL_ANGLE);//cross line at top az degrees
-        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY()+midAzimuthOffset,endPoint.getX(), Constance.AZIMUTH.RSL_ANGLE);//cross line at bottom az degrees
+        ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.RSL_ANGLE);//cross line at bottom az degrees
         
         Point pointLeft = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.LSL_ANGLE);//cross line at 20 degrees
-        Point pointRight = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY()+midAzimuthOffset,endPoint.getX(), Constance.AZIMUTH.RSL_ANGLE);//flat line
+        Point pointRight = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.RSL_ANGLE);//flat line
         //calculation done for finding the X,Y point for range markers
         for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
         	Point point = matrixRef.toAzimuthPixels(matrixRef.getMinElevation(), i);
@@ -65,7 +65,7 @@ public class AzimuthChart extends GraphChart {
         //finding Y (L & R) co-ordinates
         for(int i=0;i<matrixRef.getDrawableXArea();i++) {
         	pointLeft = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY()+midAzimuthOffset,i, -Constance.AZIMUTH.LSL_ANGLE);//cross line at 20 degrees
-        	pointRight = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY()+midAzimuthOffset,i, Constance.AZIMUTH.RSL_ANGLE);//cross line at 20 degrees
+        	pointRight = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY()+midAzimuthOffset,i, -Constance.AZIMUTH.RSL_ANGLE);//cross line at 20 degrees
         	int raX = (int) pointLeft.getX();
         	for(int j=0;j<crossPoints.size();j++) {
         		if(raX == crossPoints.get(j).X){

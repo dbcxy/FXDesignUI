@@ -22,6 +22,7 @@ public class Constance {
 	public static final class UNITS {
 		public static boolean isKM = true;
 		public static boolean isFPS = false;
+		public static final String DEGREES = "°";
 		public static String getLENGTH() { return(isKM ? "KM":"NM");}
 		public static String getHEIGHT() { return(isFPS ? "meters":"feet");}
 	}
@@ -53,7 +54,7 @@ public class Constance {
 	
 	public static class AZIMUTH {
 		public static double LSL_ANGLE	= 10;//degrees
-		public static double RSL_ANGLE	= 10;//degrees
+		public static double RSL_ANGLE	= -10;//degrees
 		public static double RCLO		= 0.1;//KM
 		public static double LAL_ANGLE	= 4.75;//degrees
 		public static double RAL_ANGLE	= -4.75;//degrees

@@ -54081,3 +54081,807 @@
 2015-07-21 22:20:15,485 INFO [application.FXMLController] - Top Chart Invalidated!
 2015-07-21 22:20:15,487 INFO [application.FXMLController] - Bottom Chart Invalidated!
 2015-07-21 22:20:17,978 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 18:01:12,497 INFO [application.Master] - Launch
+2015-07-26 18:01:15,823 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 18:01:29,538 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 18:01:35,663 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 18:01:38,446 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-26 18:01:41,936 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-26 18:01:53,875 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 18:16:17,292 INFO [application.Master] - Launch
+2015-07-26 18:16:17,879 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 18:16:46,867 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 18:16:46,882 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 18:16:47,213 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 18:16:47,234 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 18:17:08,029 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 18:17:19,922 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 18:17:29,487 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-26 18:17:38,491 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-26 18:20:47,676 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 18:20:47,689 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 18:20:49,126 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 18:20:49,133 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 18:20:52,298 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 18:20:52,303 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 18:23:34,388 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 18:24:28,048 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 18:24:54,014 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 18:25:08,616 INFO [model.AppConfig] - Settings Data Validated
+2015-07-26 18:25:08,617 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 18:25:08,621 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 18:25:08,625 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 18:25:08,635 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 18:26:57,415 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 18:26:57,418 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 18:27:21,177 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 18:30:24,995 INFO [application.Master] - Launch
+2015-07-26 18:30:25,713 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 18:30:28,020 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 18:30:28,021 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 18:30:28,068 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 18:30:28,076 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 18:30:37,134 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 18:31:08,735 INFO [application.Master] - Launch
+2015-07-26 18:31:09,236 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 18:31:11,326 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 18:31:11,326 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 18:31:11,369 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 18:31:11,375 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 18:31:17,731 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 18:43:33,064 INFO [application.Master] - Launch
+2015-07-26 18:43:33,704 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 18:43:56,250 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 18:44:12,747 INFO [application.Master] - Launch
+2015-07-26 18:44:13,423 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 18:46:51,378 INFO [application.Master] - Launch
+2015-07-26 18:46:52,079 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 18:47:35,406 INFO [application.Master] - Launch
+2015-07-26 18:47:36,055 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 18:50:32,705 INFO [application.Master] - Launch
+2015-07-26 18:50:33,445 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 18:52:16,480 INFO [application.Master] - Launch
+2015-07-26 18:52:17,174 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 18:52:41,935 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 18:53:09,176 INFO [application.Master] - Launch
+2015-07-26 18:53:09,902 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 18:53:30,687 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 18:55:31,155 INFO [application.Master] - Launch
+2015-07-26 18:55:31,960 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 18:55:58,828 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 19:34:56,112 INFO [application.Master] - Launch
+2015-07-26 19:34:57,275 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:35:26,646 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 19:36:18,368 INFO [application.Master] - Launch
+2015-07-26 19:36:19,584 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:36:33,915 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-26 19:36:36,501 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-26 19:36:37,352 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-26 19:36:38,501 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-26 19:36:41,878 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 19:36:43,702 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 19:36:46,415 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 19:36:49,629 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 19:36:55,133 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 19:42:04,303 INFO [application.Master] - Launch
+2015-07-26 19:42:05,492 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:42:18,842 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 19:42:18,843 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 19:42:18,886 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 19:42:18,892 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 19:42:23,538 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 19:44:26,273 INFO [application.Master] - Launch
+2015-07-26 19:44:27,176 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:44:29,835 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 19:44:29,836 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 19:44:29,888 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 19:44:29,894 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 19:44:34,068 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:44:34,070 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:44:36,020 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:44:36,024 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:44:37,230 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:44:37,234 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:44:38,098 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:44:38,109 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:44:42,570 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 19:44:44,228 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 19:44:45,323 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 19:44:46,549 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 19:44:47,475 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 19:44:48,565 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 19:44:49,429 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:44:49,431 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:44:50,332 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:44:50,335 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:44:50,852 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:44:50,853 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:44:51,362 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:44:51,363 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:44:51,947 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:44:51,949 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:44:52,347 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:44:52,349 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:44:52,899 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:44:52,901 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:44:53,379 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:44:53,381 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:45:19,575 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 19:45:56,996 INFO [application.Master] - Launch
+2015-07-26 19:45:57,866 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:46:31,641 INFO [application.Master] - Launch
+2015-07-26 19:46:32,545 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:47:14,656 INFO [application.Master] - Launch
+2015-07-26 19:47:15,541 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:47:23,488 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 19:47:23,488 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 19:47:23,537 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 19:47:23,543 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 19:47:36,333 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:47:36,336 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:47:37,792 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:47:37,805 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:47:41,061 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:47:41,066 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:47:49,387 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:47:49,388 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:48:15,311 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 19:48:44,263 INFO [application.Master] - Launch
+2015-07-26 19:48:45,198 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:48:53,043 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 19:52:26,665 INFO [application.Master] - Launch
+2015-07-26 19:52:27,558 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:52:54,510 INFO [application.Master] - Launch
+2015-07-26 19:52:55,379 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:53:03,762 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 19:53:33,766 INFO [application.Master] - Launch
+2015-07-26 19:53:34,654 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:53:47,093 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 19:53:47,093 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 19:53:47,148 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 19:53:47,156 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 19:53:48,309 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:53:48,313 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:53:55,065 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 19:54:33,483 INFO [application.Master] - Launch
+2015-07-26 19:54:34,421 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:55:05,633 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 19:55:05,634 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 19:55:05,699 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 19:55:05,708 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 19:55:15,145 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 19:56:24,517 INFO [application.Master] - Launch
+2015-07-26 19:56:25,391 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:56:27,803 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 19:56:27,804 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 19:56:27,854 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 19:56:27,861 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 19:56:29,627 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:56:29,646 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:56:32,818 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:56:32,821 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:56:40,346 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 19:57:07,199 INFO [application.Master] - Launch
+2015-07-26 19:57:08,142 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:57:11,694 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 19:57:11,694 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 19:57:11,752 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 19:57:11,760 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 19:57:19,799 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:57:19,803 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:57:31,850 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:57:31,855 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:57:32,570 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:57:32,584 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:57:33,476 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:57:33,477 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:57:34,245 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:57:34,247 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:57:34,733 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:57:34,739 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:57:35,190 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:57:35,191 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:58:26,586 INFO [application.Master] - Launch
+2015-07-26 19:58:27,475 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 19:58:29,947 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 19:58:29,948 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 19:58:29,999 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 19:58:30,006 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 19:58:31,885 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:58:31,887 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:58:32,494 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:58:32,498 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:58:32,833 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 19:58:32,838 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 19:58:36,904 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:00:31,318 INFO [application.Master] - Launch
+2015-07-26 20:00:32,154 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:00:34,694 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:00:34,695 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:00:34,754 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:00:34,766 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:00:35,559 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:00:35,562 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:00:36,351 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:00:36,356 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:00:36,699 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:00:36,704 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:01:29,126 INFO [application.Master] - Launch
+2015-07-26 20:01:29,988 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:01:32,911 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:01:32,912 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:01:32,965 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:01:33,006 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:01:33,461 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:01:33,463 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:01:33,931 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:01:33,935 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:01:34,259 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:01:34,266 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:01:35,904 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:03:51,668 INFO [application.Master] - Launch
+2015-07-26 20:03:52,515 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:03:54,805 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:03:54,806 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:03:54,866 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:03:54,874 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:03:55,408 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:03:55,410 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:03:56,053 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:03:56,073 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:03:56,318 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:03:56,324 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:03:58,049 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:07:23,943 INFO [application.Master] - Launch
+2015-07-26 20:07:24,798 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:07:27,071 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:07:27,072 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:07:27,088 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:07:27,095 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:07:28,453 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:07:28,456 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:07:29,406 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:07:29,416 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:08:19,752 INFO [application.Master] - Launch
+2015-07-26 20:08:20,595 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:08:22,789 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:08:22,790 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:08:22,809 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:08:22,814 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:08:44,030 INFO [application.Master] - Launch
+2015-07-26 20:08:44,888 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:09:06,320 INFO [application.Master] - Launch
+2015-07-26 20:09:07,173 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:10:00,182 INFO [application.Master] - Launch
+2015-07-26 20:10:01,120 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:10:30,778 INFO [application.Master] - Launch
+2015-07-26 20:10:31,660 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:10:33,693 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:10:33,694 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:10:33,709 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:10:33,714 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:10:35,173 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:10:35,175 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:10:35,589 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:10:35,592 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:10:35,883 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:10:35,896 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:10:37,490 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:11:02,165 INFO [application.Master] - Launch
+2015-07-26 20:11:03,174 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:11:05,056 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:11:05,057 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:11:05,071 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:11:05,077 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:11:28,222 INFO [application.Master] - Launch
+2015-07-26 20:11:29,106 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:11:31,143 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:11:31,144 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:11:31,157 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:11:31,163 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:11:33,605 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:11:48,089 INFO [application.Master] - Launch
+2015-07-26 20:11:49,049 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:11:51,263 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:11:51,264 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:11:51,280 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:11:51,287 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:11:52,430 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:11:52,438 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:11:53,399 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:11:53,403 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:11:53,756 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:11:53,763 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:11:55,949 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:14:10,596 INFO [application.Master] - Launch
+2015-07-26 20:14:11,475 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:14:13,697 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:14:13,699 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:14:13,751 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:14:13,760 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:14:14,952 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:14:14,956 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:14:15,608 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:14:15,611 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:14:15,924 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:14:15,929 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:15:52,814 INFO [application.Master] - Launch
+2015-07-26 20:15:53,748 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:15:57,278 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:15:57,279 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:15:57,324 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:15:57,330 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:15:58,568 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:15:58,571 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:15:59,781 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:15:59,790 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:00,684 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:00,690 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:01,823 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:01,824 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:02,824 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:02,826 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:03,845 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:03,846 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:04,692 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:04,704 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:05,736 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:05,739 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:06,205 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:06,206 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:06,736 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:06,737 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:07,133 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:07,133 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:07,801 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:07,801 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:08,287 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:08,288 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:08,687 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:08,689 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:08,984 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:16:08,990 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:16:11,498 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:17:11,095 INFO [application.Master] - Launch
+2015-07-26 20:17:11,951 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:17:14,369 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:17:14,370 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:17:14,414 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:17:14,425 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:17:15,343 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:17:15,347 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:17:28,575 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:20:04,262 INFO [application.Master] - Launch
+2015-07-26 20:20:05,117 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:20:07,214 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:20:07,215 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:20:07,277 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:20:07,287 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:20:07,881 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:20:07,892 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:20:08,597 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:20:08,602 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:20:08,930 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:20:08,937 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:20:10,893 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:21:13,569 INFO [application.Master] - Launch
+2015-07-26 20:21:14,488 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:21:16,954 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:21:16,954 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:21:17,004 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:21:17,013 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:21:18,096 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:21:18,102 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:21:19,047 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:21:19,053 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:21:19,376 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:21:19,382 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:21:21,976 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:45:23,494 INFO [application.Master] - Launch
+2015-07-26 20:45:24,495 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:45:27,227 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:45:27,228 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:45:27,295 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:45:27,303 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:45:28,488 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:45:28,491 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:45:29,548 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:45:29,554 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:45:29,990 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:45:29,998 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:45:33,462 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:48:50,068 INFO [application.Master] - Launch
+2015-07-26 20:48:50,910 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:48:53,144 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:48:53,144 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:48:53,188 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:48:53,196 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:48:54,084 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:48:54,087 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:48:55,047 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:48:55,050 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:48:56,172 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:48:56,185 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:48:56,966 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:48:56,973 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:48:57,574 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:48:57,575 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:48:57,695 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:48:57,697 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:48:59,073 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:48:59,074 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:49:00,166 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:49:00,167 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:49:02,359 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:49:02,361 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:49:08,108 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:52:00,542 INFO [application.Master] - Launch
+2015-07-26 20:52:01,596 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:52:07,110 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:52:07,111 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:52:07,153 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:52:07,160 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:52:08,384 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:52:08,386 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:52:09,511 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:52:09,516 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:52:10,273 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:52:10,279 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:52:11,726 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:52:11,727 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:52:12,287 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:52:12,288 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:52:16,793 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:53:02,004 INFO [application.Master] - Launch
+2015-07-26 20:53:02,881 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:53:05,932 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:53:05,933 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:53:05,987 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:53:05,996 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:53:31,252 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 20:54:05,019 INFO [application.Master] - Launch
+2015-07-26 20:54:05,923 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 20:56:49,600 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 20:57:08,863 INFO [model.AppConfig] - Settings Data Validated
+2015-07-26 20:57:08,863 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 20:57:08,876 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 20:57:08,926 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 20:57:08,926 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 20:57:08,988 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 20:57:08,995 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 20:57:12,630 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-26 20:57:15,383 INFO [model.AppConfig] - Preference Data Validated
+2015-07-26 20:57:15,383 INFO [model.AppConfig] - Preference Data Saved
+2015-07-26 20:57:15,387 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-26 20:57:15,397 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 20:57:15,408 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 20:57:18,385 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-26 20:57:31,434 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-26 20:57:37,297 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 21:00:22,088 INFO [application.Master] - Launch
+2015-07-26 21:00:22,994 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:02:03,763 INFO [application.Master] - Launch
+2015-07-26 21:02:04,640 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:06:40,483 INFO [application.Master] - Launch
+2015-07-26 21:06:41,369 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:06:43,773 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:06:43,773 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:06:43,818 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:06:43,826 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:06:50,179 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:06:50,182 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:06:51,531 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:06:51,534 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:06:52,427 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:06:52,430 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:06:53,045 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:06:53,050 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:06:57,117 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:07:03,583 INFO [model.AppConfig] - Settings Data Validated
+2015-07-26 21:07:03,584 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 21:07:03,593 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:07:03,598 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:07:03,615 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:07:04,959 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:07:06,715 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:07:07,587 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:07:08,907 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:07:09,856 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:07:11,131 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:07:12,016 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:07:13,187 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:07:15,012 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:07:15,017 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:07:16,824 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:07:16,826 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:07:17,896 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:07:17,897 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:07:19,124 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:07:29,720 INFO [model.AppConfig] - Settings Data Validated
+2015-07-26 21:07:29,720 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 21:07:29,724 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:07:29,726 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:07:29,728 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:07:32,254 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 21:10:20,508 INFO [application.Master] - Launch
+2015-07-26 21:10:21,376 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:10:23,746 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:10:25,421 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:10:26,294 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:10:26,295 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:10:26,342 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:10:26,349 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:10:27,695 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:10:47,172 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:10:48,963 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 21:37:21,332 INFO [application.Master] - Launch
+2015-07-26 21:37:22,184 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:37:24,897 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:37:24,898 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:37:24,944 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:37:24,952 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:37:26,494 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:37:33,601 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:38:04,615 INFO [application.Master] - Launch
+2015-07-26 21:38:05,527 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:38:07,621 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:38:07,622 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:38:07,674 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:38:07,683 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:38:08,571 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:38:14,642 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:38:40,937 INFO [application.Master] - Launch
+2015-07-26 21:38:41,837 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:38:44,002 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:38:44,003 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:38:44,063 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:38:44,071 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:38:45,247 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:38:49,561 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:43:44,982 INFO [application.Master] - Launch
+2015-07-26 21:43:46,124 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:43:49,185 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:43:49,186 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:43:49,227 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:43:49,247 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:43:50,850 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:43:55,227 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:44:15,653 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:45:13,738 INFO [application.Master] - Launch
+2015-07-26 21:45:14,900 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:45:17,933 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:45:17,934 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:45:17,991 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:45:18,000 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:45:18,975 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:45:21,458 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:46:53,974 INFO [application.Master] - Launch
+2015-07-26 21:46:54,928 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:46:57,495 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:46:57,496 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:46:57,541 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:46:57,547 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:46:58,512 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:46:59,619 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:47:03,443 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 21:47:03,451 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:47:03,458 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:47:03,462 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:47:14,962 INFO [application.Master] - Launch
+2015-07-26 21:47:15,917 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:47:18,784 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:47:18,785 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:47:18,831 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:47:18,839 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:47:20,018 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:47:37,283 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:47:45,486 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 21:47:45,492 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:47:45,498 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:47:45,506 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:51:11,156 INFO [application.Master] - Launch
+2015-07-26 21:51:12,054 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:51:14,483 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:51:14,483 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:51:14,529 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:51:14,536 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:51:15,598 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:51:17,794 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:51:37,217 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 21:51:37,220 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:51:37,231 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:51:37,235 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:52:40,928 INFO [application.Master] - Launch
+2015-07-26 21:52:41,822 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:52:44,309 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:52:44,310 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:52:44,357 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:52:44,369 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:52:45,416 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:52:46,626 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:52:53,128 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 21:52:53,134 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:52:53,142 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:52:53,155 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:53:25,947 INFO [application.Master] - Launch
+2015-07-26 21:53:26,820 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:53:29,061 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:53:29,062 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:53:29,113 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:53:29,121 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:53:30,149 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:53:38,458 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:53:48,265 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 21:53:48,271 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:53:48,282 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:53:48,289 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:54:34,498 INFO [application.Master] - Launch
+2015-07-26 21:54:35,397 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:54:37,931 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:54:37,932 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:54:37,974 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:54:37,980 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:54:41,616 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 21:55:44,781 INFO [application.Master] - Launch
+2015-07-26 21:55:45,724 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:55:48,041 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:55:48,042 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:55:48,091 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:55:48,099 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:55:51,901 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 21:56:00,101 INFO [application.Master] - Launch
+2015-07-26 21:56:01,035 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:56:03,125 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:56:03,126 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:56:03,172 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:56:03,179 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:56:04,800 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:56:04,803 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:56:05,968 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:56:05,973 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:56:06,577 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:56:06,590 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:56:07,700 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:56:07,701 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:56:10,352 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:56:11,500 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:56:15,298 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 21:56:15,303 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:56:15,305 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:56:15,308 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:56:18,169 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 21:56:34,553 INFO [application.Master] - Launch
+2015-07-26 21:56:35,451 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:56:37,599 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:56:37,600 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:56:37,643 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:56:37,648 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:56:39,493 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:56:40,458 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:56:41,719 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 21:56:41,722 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:56:41,734 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:56:41,737 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:56:45,210 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 21:56:53,806 INFO [application.Master] - Launch
+2015-07-26 21:56:54,751 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 21:56:57,252 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 21:56:57,253 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 21:56:57,312 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 21:56:57,319 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 21:56:58,781 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:56:59,811 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:56:59,812 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 21:56:59,821 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:56:59,827 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:56:59,835 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:57:01,105 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:57:01,978 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:57:01,978 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 21:57:01,982 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:57:01,984 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:57:01,986 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:57:03,663 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 21:57:07,618 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 21:57:12,125 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 21:57:12,128 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 21:57:12,130 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 21:57:12,132 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 21:57:17,428 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 22:02:03,919 INFO [application.Master] - Launch
+2015-07-26 22:02:04,751 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 22:02:07,154 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 22:02:07,154 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 22:02:07,197 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 22:02:07,205 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 22:02:08,317 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 22:02:09,372 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 22:02:09,373 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 22:02:09,383 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 22:02:09,391 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:02:09,401 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:02:11,006 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 22:02:16,971 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 22:02:23,939 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 22:02:26,323 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 22:02:28,211 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 22:02:41,619 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 22:02:47,647 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 22:02:49,264 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 22:02:57,966 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 22:02:59,405 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 22:08:35,125 INFO [application.Master] - Launch
+2015-07-26 22:08:36,039 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 22:08:38,479 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 22:08:38,481 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 22:08:38,534 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 22:08:38,542 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 22:08:39,318 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 22:08:42,963 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 22:08:44,782 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 22:08:45,822 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 22:08:51,239 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 22:08:52,355 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 22:08:53,500 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 22:08:53,500 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 22:08:53,504 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 22:08:53,513 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:08:53,521 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:08:56,769 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:08:56,774 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:08:57,828 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:08:57,837 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:08:58,361 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:08:58,376 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:08:59,516 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:08:59,517 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:09:00,006 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:09:00,009 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:09:01,558 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:09:01,559 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:09:02,084 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:09:02,086 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:09:02,589 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:09:02,591 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:09:03,580 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:09:03,581 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:09:08,399 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-26 22:09:11,836 INFO [model.AppConfig] - Preference Data Validated
+2015-07-26 22:09:11,836 INFO [model.AppConfig] - Preference Data Saved
+2015-07-26 22:09:11,840 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-26 22:09:11,841 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:09:11,844 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:09:15,259 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-26 22:09:19,371 INFO [model.AppConfig] - Preference Data Validated
+2015-07-26 22:09:19,372 INFO [model.AppConfig] - Preference Data Saved
+2015-07-26 22:09:19,374 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-26 22:09:19,375 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:09:19,376 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:09:23,092 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:09:23,093 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:09:24,499 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:09:24,500 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:09:40,302 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-26 22:09:43,460 INFO [model.AppConfig] - Preference Data Validated
+2015-07-26 22:09:43,460 INFO [model.AppConfig] - Preference Data Saved
+2015-07-26 22:09:43,465 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-26 22:09:43,467 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:09:43,473 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:09:53,003 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-26 22:11:40,318 INFO [application.Master] - Launch
+2015-07-26 22:11:41,180 INFO [model.AppConfig] - App Config Instantiated
+2015-07-26 22:11:45,960 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-26 22:11:48,196 INFO [model.AppConfig] - Settings Data Null Check
+2015-07-26 22:11:48,197 INFO [model.AppConfig] - Settings Data Saved
+2015-07-26 22:11:48,208 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-26 22:11:48,419 INFO [views.Console] - Enter Operator ID : 
+2015-07-26 22:11:48,421 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-26 22:11:48,480 INFO [application.FXMLController] - Top Chart initialization
+2015-07-26 22:11:48,487 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-26 22:11:59,574 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:11:59,580 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:12:00,723 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:12:00,737 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:12:01,639 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-26 22:12:01,645 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-26 22:12:23,690 INFO [application.FXMLController] - APPLICATION CLOSED

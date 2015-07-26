@@ -12,6 +12,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.function.Consumer;
 
+import materialdesignbutton.MaterialDesignButtonWidget;
+import materialdesignbutton.MaterialDesignButtonWidget.VAL;
 import model.AppConfig;
 import model.DataObserver;
 import model.MatrixRef;
@@ -25,6 +27,7 @@ import network.TaskObserver;
 
 import org.apache.log4j.Logger;
 
+import textpanel.TextPanelWidget;
 import utils.Constance;
 import utils.ModelDrawing;
 import views.Console;
@@ -72,6 +75,38 @@ public class FXMLController implements Initializable,ILayoutParam{
 	private static final Logger logger = Logger.getLogger(FXMLController.class);
 	
 	@FXML private MenuBar fxMenuBar;
+	@FXML private TextPanelWidget AntennaControl;
+	@FXML private MaterialDesignButtonWidget btn_antscan;
+	@FXML private MaterialDesignButtonWidget btn_rwyselect;
+	@FXML private MaterialDesignButtonWidget btn_linearpol;
+	@FXML private MaterialDesignButtonWidget btn_circularpol;
+	
+	@FXML private TextPanelWidget RadarControl;
+	@FXML private MaterialDesignButtonWidget btn_power;
+	@FXML private MaterialDesignButtonWidget btn_txstandby;
+	@FXML private MaterialDesignButtonWidget btn_txradiate;
+	@FXML private MaterialDesignButtonWidget btn_radarsetup;
+	
+	@FXML private TextPanelWidget SystemControl;
+	@FXML private MaterialDesignButtonWidget btn_masterslave;
+	@FXML private MaterialDesignButtonWidget btn_systemtest;
+	@FXML private MaterialDesignButtonWidget btn_routeselect;
+	@FXML private MaterialDesignButtonWidget btn_systemsetup;
+	
+	@FXML private TextPanelWidget DisplayControl;
+	@FXML private MaterialDesignButtonWidget btn_raw;
+	@FXML private MaterialDesignButtonWidget btn_plot;
+	@FXML private MaterialDesignButtonWidget btn_label;
+	@FXML private MaterialDesignButtonWidget btn_history;
+	@FXML private MaterialDesignButtonWidget btn_checkmarks;
+	@FXML private MaterialDesignButtonWidget btn_displaysetup;
+	
+	
+	@FXML private TextPanelWidget DisplayScale;
+	@FXML private MaterialDesignButtonWidget btn_display5;
+	@FXML private MaterialDesignButtonWidget btn_display10;
+	@FXML private MaterialDesignButtonWidget btn_display20;
+	@FXML private MaterialDesignButtonWidget btn_display40;
 	
 	@FXML private Label actiontarget;
 	
@@ -81,10 +116,6 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML private TextField consoleInput;
 	
 	@FXML private Button btn_startDisplay;
-	@FXML private Button btn_display5NM;
-	@FXML private Button btn_display10NM;
-	@FXML private Button btn_display20NM;
-	@FXML private Button btn_display40NM;
 	
 	@FXML private ScrollPane chartTopScroll;
 	@FXML private ScrollPane chartBottomScroll;
@@ -101,8 +132,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML ResizableCanvas cBtmL2;
 	@FXML ResizableCanvas cBtmL3;
 	
-	@FXML Slider sliderZoomTop;
-	@FXML Slider sliderZoomBottom;
+//	@FXML Slider sliderZoomTop;
+//	@FXML Slider sliderZoomBottom;
 	
 	private double originalSizeX, originalSizeY;
 	private double pressedX, pressedY;
@@ -132,29 +163,29 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
     
     @FXML 
-    protected void handle5NMButtonAction(ActionEvent event) {
-        actiontarget.setText("Display Scale set to 5NM");
+    protected void handle5ButtonAction(ActionEvent event) {
+        actiontarget.setText("Display Scale set to "+Constance.SCALE);
 		setNMparameter(5);
 		invalidate();
     }
     
     @FXML 
-    protected void handle10NMButtonAction(ActionEvent event) {
-        actiontarget.setText("Display Scale set to 10NM");
+    protected void handle10ButtonAction(ActionEvent event) {
+        actiontarget.setText("Display Scale set to "+Constance.SCALE);
         setNMparameter(10);
 		invalidate();
     }
     
     @FXML 
-    protected void handle20NMButtonAction(ActionEvent event) {
-        actiontarget.setText("Display Scale set to 20NM");
+    protected void handle20ButtonAction(ActionEvent event) {
+        actiontarget.setText("Display Scale set to "+Constance.SCALE);
         setNMparameter(20);
 		invalidate();
     }
     
     @FXML 
-    protected void handle40NMButtonAction(ActionEvent event) {
-        actiontarget.setText("Display Scale set to 40NM");
+    protected void handle40ButtonAction(ActionEvent event) {
+        actiontarget.setText("Display Scale set to "+Constance.SCALE);
         setNMparameter(40);
 		invalidate();
     }
@@ -178,7 +209,16 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
     
     @FXML
-    protected void menuSettings() {    	
+    protected void menuDisplaySettings(ActionEvent event) {    	
+    	displaySettings();
+    }
+    
+    @FXML 
+    protected void menuSystemPreferences(ActionEvent event) {
+    	systemPreferences();  	
+    }
+    
+    private void displaySettings() {
     	final Stage dialog = new Stage();
         dialog.initModality(Modality.APPLICATION_MODAL);
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -196,8 +236,7 @@ public class FXMLController implements Initializable,ILayoutParam{
         dialog.show();
     }
     
-    @FXML 
-    protected void menuPreferences() {
+    private void systemPreferences() {
     	final Stage dialog = new Stage();
         dialog.initModality(Modality.APPLICATION_MODAL);
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -212,7 +251,7 @@ public class FXMLController implements Initializable,ILayoutParam{
         dialog.setResizable(false);
         dialog.initStyle(StageStyle.UNDECORATED);
         dialog.centerOnScreen();
-        dialog.show();    	
+        dialog.show();  
     }
     
     private void startShowingDisplay() {
@@ -279,9 +318,16 @@ public class FXMLController implements Initializable,ILayoutParam{
 		cBtmL3.widthProperty().bind(chartBottom.widthProperty());
 		cBtmL3.heightProperty().bind(chartBottom.heightProperty());
 		
+		AntennaControl.widgetSetPanelTitle("Antenna Control");
+		RadarControl.widgetSetPanelTitle("Radar Control");
+		SystemControl.widgetSetPanelTitle("System Control");
+		DisplayControl.widgetSetPanelTitle("Display Control");
+		DisplayScale.widgetSetPanelTitle("Display Scale");
+		
     }
     
     private void initSystem() {
+    	initControls();
 		initTimeDate();
     	initConsole();
     	initMatrixRef();
@@ -299,8 +345,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 		drawTextTop(cTopL0);
 		drawGraphTop(cTopL1);
 //        updateObjects(cTopL2);
-        initPan(chartTop);
-        initZoomSlider(sliderZoomTop, chartTop, chartTopScroll, "top");
+//        initPan(chartTop);
+//        initZoomSlider(sliderZoomTop, chartTop, chartTopScroll, "top");
     	logger.info("Top Chart initialization");
 	}
 
@@ -312,8 +358,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 		drawTextBottom(cBtmL0);
 		drawGraphBottom(cBtmL1);
 //        updateObjects(cBtmL2);
-        initPan(chartBottom);
-        initZoomSlider(sliderZoomBottom, chartBottom, chartBottomScroll, "down");
+//        initPan(chartBottom);
+//        initZoomSlider(sliderZoomBottom, chartBottom, chartBottomScroll, "down");
         logger.info("Bottom Chart initialization");
     }
 	
@@ -399,6 +445,41 @@ public class FXMLController implements Initializable,ILayoutParam{
 			}
 		});		
 	}
+    
+    private void initControls() {
+    	
+    	btn_antscan.widgetSetVal(VAL.DEFAULT);
+    	btn_rwyselect.widgetSetVal(VAL.DEFAULT);
+    	btn_linearpol.widgetSetVal(VAL.DEFAULT);
+    	btn_circularpol.widgetSetVal(VAL.DEFAULT);
+    	
+    	btn_power.widgetSetVal(VAL.DEFAULT);
+    	btn_txstandby.widgetSetVal(VAL.DEFAULT);
+    	btn_txradiate.widgetSetVal(VAL.DEFAULT);
+    	btn_radarsetup.widgetSetVal(VAL.DEFAULT);
+    	
+    	btn_masterslave.widgetSetVal(VAL.DEFAULT);
+    	btn_systemtest.widgetSetVal(VAL.DEFAULT);
+    	btn_routeselect.widgetSetVal(VAL.DEFAULT);
+    	btn_systemsetup.widgetSetVal(VAL.DEFAULT);
+    	
+    	btn_raw.widgetSetVal(VAL.DEFAULT);
+    	btn_plot.widgetSetVal(VAL.DEFAULT);
+    	btn_label.widgetSetVal(VAL.DEFAULT);
+    	btn_history.widgetSetVal(VAL.DEFAULT);
+    	btn_checkmarks.widgetSetVal(VAL.DEFAULT);
+    	btn_displaysetup.widgetSetVal(VAL.DEFAULT);
+    	
+		btn_display5.setText(" 5 "+Constance.UNITS.getLENGTH());
+		btn_display10.setText(" 10 "+Constance.UNITS.getLENGTH());
+		btn_display20.setText(" 20 "+Constance.UNITS.getLENGTH());
+		btn_display40.setText(" 40 "+Constance.UNITS.getLENGTH());
+
+		btn_display5.widgetSetVal(VAL.DEFAULT);
+		btn_display10.widgetSetVal(VAL.DEFAULT);
+		btn_display20.widgetSetVal(VAL.DEFAULT);
+		btn_display40.widgetSetVal(VAL.DEFAULT);
+    }
 
 	private void initTimeDate() {
     	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -471,33 +552,46 @@ public class FXMLController implements Initializable,ILayoutParam{
 	}
 	
 	private void setNMparameter(int valNM) {
-		btn_display5NM.setDefaultButton(false);
-		btn_display10NM.setDefaultButton(false);
-		btn_display20NM.setDefaultButton(false);
-		btn_display40NM.setDefaultButton(false);
+				
 		switch (valNM) {
 		case 40:
 			Constance.SCALE = " 40 "+Constance.UNITS.getLENGTH();
 			matrixRef.setMaxRange(40);
-			btn_display40NM.setDefaultButton(true);
+			btn_display40.setText(Constance.SCALE);
+			btn_display5.widgetSetVal(VAL.DEFAULT);
+			btn_display10.widgetSetVal(VAL.DEFAULT);
+			btn_display20.widgetSetVal(VAL.DEFAULT);
+			btn_display40.widgetSetVal(VAL.GREEN);
 			break;
 			
 		case 20:
 			Constance.SCALE = " 20 "+Constance.UNITS.getLENGTH();
 			matrixRef.setMaxRange(20);
-			btn_display20NM.setDefaultButton(true);
+			btn_display20.setText(Constance.SCALE);
+			btn_display5.widgetSetVal(VAL.DEFAULT);
+			btn_display10.widgetSetVal(VAL.DEFAULT);
+			btn_display20.widgetSetVal(VAL.GREEN);
+			btn_display40.widgetSetVal(VAL.DEFAULT);
 			break;
 			
 		case 10:
 			Constance.SCALE = " 10 "+Constance.UNITS.getLENGTH();
 			matrixRef.setMaxRange(10);
-			btn_display10NM.setDefaultButton(true);
+			btn_display10.setText(Constance.SCALE);
+			btn_display5.widgetSetVal(VAL.DEFAULT);
+			btn_display10.widgetSetVal(VAL.GREEN);
+			btn_display20.widgetSetVal(VAL.DEFAULT);
+			btn_display40.widgetSetVal(VAL.DEFAULT);
 			break;
 			
 		case 5:
 			Constance.SCALE = " 5 "+Constance.UNITS.getLENGTH();
 			matrixRef.setMaxRange(5);
-			btn_display5NM.setDefaultButton(true);
+			btn_display5.setText(Constance.SCALE);
+			btn_display5.widgetSetVal(VAL.GREEN);
+			btn_display10.widgetSetVal(VAL.DEFAULT);
+			btn_display20.widgetSetVal(VAL.DEFAULT);
+			btn_display40.widgetSetVal(VAL.DEFAULT);
 			break;
 		}
 	}
@@ -616,7 +710,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 			alert.setTitle("Alert");
 			alert.showAndWait();
 			if (alert.getResult() == ButtonType.YES) {
-				menuSettings();
+				displaySettings();
 				actiontarget.setTextFill(Color.RED);
 				actiontarget.setText("Please set the Configuration Parameters for Display!");
 				actiontarget.setTextFill(Color.AQUAMARINE);
@@ -628,7 +722,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 			alert.setTitle("Alert");
 			alert.showAndWait();
 			if (alert.getResult() == ButtonType.YES) {
-				menuPreferences();
+				systemPreferences();
 				actiontarget.setTextFill(Color.RED);
 				actiontarget.setText("Please set the Preference accordingly!");
 				actiontarget.setTextFill(Color.AQUAMARINE);

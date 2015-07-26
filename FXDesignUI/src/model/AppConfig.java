@@ -114,33 +114,55 @@ public class AppConfig {
 	
 	public void saveSettingsData() {
 		
-		checkSettingsDataEmpty();
-		if(isValidSettings) {		
+		if(checkNullData()) {		
 			//get TextField to save values
 			int i = 0;
-			Constance.ELEVATION_MAX = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH_MAX = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			isValidSettings = true;
+			Constance.ELEVATION_MAX = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 12000, Constance.UNITS.getLENGTH());i++;
+			Constance.AZIMUTH_MAX = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 12000, Constance.UNITS.getLENGTH());i++;
 			
-			Constance.ELEVATION.USL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.GLIDE_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.GLIDE_MAX_DIST = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.GLIDE_FLAT_START_DIST = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.LSL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.UAL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.LAL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.USaL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.LSaL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.ELEVATION.DH = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
+			Constance.ELEVATION.USL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 30, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.GLIDE_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 10, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.GLIDE_MAX_DIST = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 40, Constance.UNITS.getLENGTH());i++;
+			Constance.ELEVATION.GLIDE_FLAT_START_DIST = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 40, Constance.UNITS.getLENGTH());i++;
+			Constance.ELEVATION.LSL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 5, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.UAL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.LAL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.USaL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.LSaL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.DH = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 1, Constance.UNITS.getHEIGHT());i++;
 			
-			Constance.AZIMUTH.LSL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH.RSL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH.RCLO = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH.LAL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH.RAL_ANGLE = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH.LSaL = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());i++;
-			Constance.AZIMUTH.RSaL = itemSettingVal[i] = validateSettingsData(((TextField)(itemSettingList.get(i).getChildren().get(1))).getText());
+			Constance.AZIMUTH.LSL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
+			Constance.AZIMUTH.RSL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), -15, 0, Constance.UNITS.DEGREES);i++;
+			Constance.AZIMUTH.RCLO = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 0.1, Constance.UNITS.getLENGTH());i++;
+			Constance.AZIMUTH.LAL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
+			Constance.AZIMUTH.RAL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), -15, 0, Constance.UNITS.DEGREES);i++;
+			Constance.AZIMUTH.LSaL = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 0.1, Constance.UNITS.getLENGTH());i++;
+			Constance.AZIMUTH.RSaL = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 0.1, Constance.UNITS.getLENGTH());
+		
+		} else
+			openErrorDialog("Value can't be empty!");
 
-			
+		if(isValidSettings) {
 			Constance.IS_CONFIG_SET = true;
 			logger.info("Settings Data Saved");
 		}
@@ -153,6 +175,12 @@ public class AppConfig {
 			Constance.IS_PREF_SET = true;
 			logger.info("Preference Data Saved");
 		}
+	}
+	
+	public void openErrorDialog(String msg) {
+		Alert alert = new Alert(AlertType.ERROR, msg, ButtonType.OK);
+		alert.setTitle("Error");
+		alert.showAndWait();
 	}
 
 	private void validatePreferenceData() {
@@ -173,35 +201,37 @@ public class AppConfig {
 		
 	}
 
-	private void checkSettingsDataEmpty() {
+	private boolean checkNullData() {
 
 		for(int i=0;i<itemSettingList.size();i++) {
 			TextField tField = ((TextField)(itemSettingList.get(i).getChildren().get(1)));
 			if(tField.getText().isEmpty()) {
 				((Label)(itemSettingList.get(i).getChildren().get(3))).setTextFill(Color.RED);
 				((Label)(itemSettingList.get(i).getChildren().get(3))).setText("*");
-				isValidSettings = false;
-				break;
-			} else
-				isValidSettings = true;
+				return false;
+			}
 		}
-		if(!isValidSettings) {
-			Alert alert = new Alert(AlertType.ERROR, "Value can't be empty " + "!", ButtonType.OK);
-			alert.setTitle("Alert");
-			alert.showAndWait();
-		}
-		logger.info("Settings Data Validated");
+		logger.info("Settings Data Null Check");
+		return true;
 	}
 	
-	private double validateSettingsData(String str) {
-		double val = -1;
+	private double validateSettingsData(double actualVAl, String str, String title, double min, double max, String unit) {
+		double val = actualVAl;
+		double check = Double.valueOf(str);
 		try {
-			val = Double.valueOf(str);
+			if((check <= max) && (check >= min)) {
+				val = check;
+			} else {
+				isValidSettings = false;
+				openErrorDialog(title+" value ranges from: "+min+" "+unit+" to "+max+" "+unit+". \nPlease make suitable corrections");
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return val;
 	}
+	
+	
 	
 	
 
