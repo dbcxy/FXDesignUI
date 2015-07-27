@@ -1,0 +1,35 @@
+@font-face {
+    src: url('../../font/Roboto/Roboto-Regular.ttf');
+}
+
+.md-anchore-pane {
+    -fx-background-color: rgba(250, 250, 250, 1);
+    -fx-background-insets: 0;
+    -fx-background-radius: 2px;
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.15), 2, 0.0, 0, 1);
+}
+
+.md-name {
+    -fx-font-family: 'Roboto';
+    -fx-text-fill: #444;
+}
+
+.md-rect-val-default {
+    -fx-fill: rgba(210, 219, 228, 1);
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.15), 1, 0.0, 0, 0.5);
+}
+
+.md-rect-val-red {
+    -fx-fill: rgba(231, 68, 35, 1);
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.15), 1, 0.0, 0, 0.5);
+}
+
+.md-rect-val-yellow {
+    -fx-fill: rgba(247, 251, 22, 1);
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.15), 1, 0.0, 0, 0.5);
+}
+
+.md-rect-val-green {
+    -fx-fill: rgba(36, 229, 81, 1);
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.15), 1, 0.0, 0, 0.5);
+}

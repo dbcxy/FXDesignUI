@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root stylesheets="@textvalue3.css" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="name" minWidth="200.0" text="Label">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Rectangle fx:id="val1" arcHeight="20.0" arcWidth="20.0" fill="#f8f8f8" height="15.0" stroke="#b9b5b5" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" width="15.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+               </HBox.margin>
+            </Rectangle>
+            <Rectangle fx:id="val2" arcHeight="20.0" arcWidth="20.0" fill="#f8f8f8" height="15.0" stroke="#b9b5b5" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" width="15.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+               </HBox.margin>
+            </Rectangle>
+            <Rectangle fx:id="val3" arcHeight="20.0" arcWidth="20.0" fill="#f8f8f8" height="15.0" stroke="#b9b5b5" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" width="15.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+               </HBox.margin>
+            </Rectangle>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</fx:root>

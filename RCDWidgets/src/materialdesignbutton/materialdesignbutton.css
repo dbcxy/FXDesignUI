@@ -1,0 +1,103 @@
+@font-face {
+    src: url('../font/Roboto/Roboto-Regular.ttf');
+}
+
+.md-button {
+    -fx-font-family: 'Roboto';
+    -fx-text-fill: #444;
+    -fx-background-color: rgba(230, 230, 230, 1);
+    -fx-background-insets: 0;
+    -fx-padding: 6 12;
+    -fx-background-radius: 2px;
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.25), 4, 0.0, 0, 1);
+}
+
+.md-button:pressed {
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.25), 8, 0.0, 0, 3);
+}
+
+.md-button:focused {
+    -fx-background-color:
+        rgba(245, 245, 245, 1),
+        rgba(230, 230, 230, 1);
+    -fx-background-insets: 0, 1;
+}
+
+.md-button:disabled {
+	-fx-opacity: 1.0;
+	-fx-border-color: rgba(210, 219, 228, 1);
+	-fx-text-fill: #000000;
+	-fx-text-inner-color: #000000;
+	-fx-font-weight: bold;
+}
+
+.md-button-val-default {
+    -fx-background-color: rgba(210, 219, 228, 1);
+    -fx-text-fill: #444;
+    -fx-background-insets: 0;
+    -fx-padding: 6 12;
+    -fx-background-radius: 2px;
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.15), 2, 0.0, 0, 4);
+}
+
+.md-button-val-default:pressed {
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.25), 8, 0.0, 0, 4);
+}
+
+.md-button-val-default:focused {
+    -fx-background-color: rgba(210, 219, 228, 1);
+    -fx-background-insets: 0, 1;
+}
+
+.md-button-val-red {
+    -fx-background-color: rgba(210, 90, 50, 1);
+    -fx-text-fill: #fff;
+    -fx-background-insets: 0;
+    -fx-padding: 6 12;
+    -fx-background-radius: 2px;
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.15), 2, 0.0, 0, 4);
+}
+
+.md-button-val-red:pressed {
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.25), 8, 0.0, 0, 4);
+}
+
+.md-button-val-red:focused {
+    -fx-background-color: rgba(210, 90, 50, 1);
+    -fx-background-insets: 0, 1;
+}
+
+.md-button-val-yellow {
+    -fx-background-color: rgba(255, 255, 157, 1);
+    -fx-text-fill: #444;
+    -fx-background-insets: 0;
+    -fx-padding: 6 12;
+    -fx-background-radius: 2px;
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.15), 2, 0.0, 0, 4);
+}
+
+.md-button-val-yellow:pressed {
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.25), 8, 0.0, 0, 4);
+}
+
+.md-button-val-yellow:focused {
+    -fx-background-color: rgba(255, 255, 157, 1);
+    -fx-background-insets: 0, 1;
+}
+
+.md-button-val-green {
+    -fx-background-color: rgba(30, 104, 35, 1);
+    -fx-text-fill: #fff;
+    -fx-background-insets: 0;
+    -fx-padding: 6 12;
+    -fx-background-radius: 2px;
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.15), 2, 0.0, 0, 4);
+}
+.md-button-val-green:pressed {
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.25), 8, 0.0, 0, 4);
+}
+
+.md-button-val-green:focused {
+    -fx-background-color: rgba(30, 104, 35, 1);
+    -fx-background-insets: 0, 1;
+}
