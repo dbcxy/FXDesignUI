@@ -75,6 +75,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	private static final Logger logger = Logger.getLogger(FXMLController.class);
 	
 	@FXML private MenuBar fxMenuBar;
+	
 	@FXML private TextPanelWidget AntennaControl;
 	@FXML private MaterialDesignButtonWidget btn_antscan;
 	@FXML private MaterialDesignButtonWidget btn_rwyselect;
@@ -99,8 +100,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML private MaterialDesignButtonWidget btn_label;
 	@FXML private MaterialDesignButtonWidget btn_history;
 	@FXML private MaterialDesignButtonWidget btn_checkmarks;
-	@FXML private MaterialDesignButtonWidget btn_displaysetup;
-	
+	@FXML private MaterialDesignButtonWidget btn_displaysetup;	
 	
 	@FXML private TextPanelWidget DisplayScale;
 	@FXML private MaterialDesignButtonWidget btn_display5;
@@ -132,11 +132,6 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML ResizableCanvas cBtmL2;
 	@FXML ResizableCanvas cBtmL3;
 	
-//	@FXML Slider sliderZoomTop;
-//	@FXML Slider sliderZoomBottom;
-	
-	private double originalSizeX, originalSizeY;
-	private double pressedX, pressedY;
 	private boolean isAppRunning = false;
 	private boolean isDrawn = false;
 	
@@ -260,7 +255,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 			initSystem();
 			initTopChart();
 			initBottomChart();
-//			startNetworkTask();
+			startNetworkTask();
 			isAppRunning = true;
 			isDrawn = true;
 			btn_startDisplay.setStyle("-fx-background-image: url(\"assets/img/stop.png\"); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;");
@@ -335,8 +330,6 @@ public class FXMLController implements Initializable,ILayoutParam{
         
     private void initTopChart() {
 		setNMparameter(10);
-		originalSizeX = chartTop.getWidth();
-		originalSizeY = chartTop.getHeight();
 
 		cTopL3.clear();
 		cTopL2.clear();
@@ -345,8 +338,6 @@ public class FXMLController implements Initializable,ILayoutParam{
 		drawTextTop(cTopL0);
 		drawGraphTop(cTopL1);
 //        updateObjects(cTopL2);
-//        initPan(chartTop);
-//        initZoomSlider(sliderZoomTop, chartTop, chartTopScroll, "top");
     	logger.info("Top Chart initialization");
 	}
 
@@ -358,95 +349,10 @@ public class FXMLController implements Initializable,ILayoutParam{
 		drawTextBottom(cBtmL0);
 		drawGraphBottom(cBtmL1);
 //        updateObjects(cBtmL2);
-//        initPan(chartBottom);
-//        initZoomSlider(sliderZoomBottom, chartBottom, chartBottomScroll, "down");
         logger.info("Bottom Chart initialization");
     }
 	
-	private void initPan(final Pane pane) {
-		pane.setOnMousePressed(new EventHandler<MouseEvent>() {
-			
-			@Override
-		    public void handle(MouseEvent event) {
-		          pressedX = event.getX();
-		          pressedY = event.getY();
-		        }
-		});
-		
-		pane.setOnMouseDragged(new EventHandler<MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				pane.setTranslateX(pane.getTranslateX() + event.getX() - pressedX);
-                pane.setTranslateY(pane.getTranslateY() + event.getY() - pressedY);
-                event.consume();
-			}
-		});
-	}
-    
-    private void initZoomSlider(final Slider slider, final Pane pane, final ScrollPane scrollPane,
-    		String val) {
-    	slider.valueProperty().addListener(new ChangeListener<Number>() {
-
-			@Override
-			public void changed(ObservableValue<? extends Number> observable,
-					Number oldValue, Number newValue) {
-				
-//				pane.setPrefWidth(originalSizeX*newValue.doubleValue()/2); 
-//	    		pane.setPrefHeight(originalSizeY*newValue.doubleValue()/2);
-				
-				pane.setScaleX(newValue.doubleValue()/2);
-				pane.setScaleY(newValue.doubleValue()/2);
-				
-				if(newValue.intValue()==2) {
-					pane.setScaleX(1.0);
-					pane.setScaleY(1.0);
-					pane.setTranslateX(0.0);
-					pane.setTranslateY(0.0);
-					pane.setTranslateZ(0.0);
-				}
-	    		System.out.println("Pane: "+pane.getWidth()+","+pane.getHeight());
-	    	
-	    		new Timer().schedule(new TimerTask() {
-
-	    			        @Override
-	    			        public void run() {
-	    						Platform.runLater(new Runnable() { 
-	    						      
-	    					    	@Override 
-	    					    	public void run() {	
-	    					    		switch (val) {
-										case "top":
-		    					    		cTopL3.clear();
-		    					    		cTopL2.clear();
-		    					    		cTopL1.clear();
-		    					    		cTopL0.clear();
-											
-		    					    		drawTextTop(cTopL0);
-		    					    		drawGraphTop(cTopL1);
-											break;
-											
-										case "down":
-											cBtmL3.clear();
-		    					    		cBtmL2.clear();
-		    					    		cBtmL1.clear();
-		    					    		cBtmL0.clear();
-		    					    		drawTextBottom(cBtmL0);
-		    					    		drawGraphBottom(cBtmL1);
-											break;
-
-										default:
-											break;
-										}
-	    					    	}
-	    					    });
-	    			        }
-	    		}, 1000);
-			}
-		});		
-	}
-    
-    private void initControls() {
+	private void initControls() {
     	
     	btn_antscan.widgetSetVal(VAL.DEFAULT);
     	btn_rwyselect.widgetSetVal(VAL.DEFAULT);

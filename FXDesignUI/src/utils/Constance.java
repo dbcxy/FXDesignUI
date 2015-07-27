@@ -75,13 +75,19 @@ public class Constance {
 	
 	public static boolean IS_CLOSE			= false;
 	public static boolean TCPIP 			= false;
-	public static boolean UDPIP				= true;
+	public static boolean UDPIP				= false;
+	public static boolean MCUDP 			= true;
 	public static boolean IS_CONNECTED		= false;
 	
 	public static int MY_TIMEOUT 			= 60*1000;
 	public static final String SERVER_IP 	= "127.0.0.1";
-	public static int PORT_NO 				= 30401;
-    public static final String GROUP_ADDR 	= "237.0.0.1";
+	public static int PORT_NO_AZ_PLOTS		= 7711;
+	public static int PORT_NO_EL_PLOTS		= 5511;
+	public static int PORT_NO_AZ_TRACKS		= 4411;
+	public static int PORT_NO_EL_TRACKS		= 6611;
+	public static int PORT_NO_VIDEO			= 12001;
+	public static int PORT_NO_WRITE			= 15001;
+    public static final String GROUP_ADDR 	= "225.225.0.1";
     public static final int DGRAM_LEN 		= 2048;
 	public static final int MILLI_SECOND 	= 1000;
 	public static final int UPDATE_RATE 	= MILLI_SECOND;

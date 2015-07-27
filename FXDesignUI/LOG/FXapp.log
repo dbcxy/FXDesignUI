@@ -54885,3 +54885,108 @@
 2015-07-26 22:12:01,639 INFO [application.FXMLController] - Top Chart Invalidated!
 2015-07-26 22:12:01,645 INFO [application.FXMLController] - Bottom Chart Invalidated!
 2015-07-26 22:12:23,690 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-27 22:54:12,478 INFO [application.Master] - Launch
+2015-07-27 22:54:13,867 INFO [model.AppConfig] - App Config Instantiated
+2015-07-27 22:54:16,619 INFO [views.Console] - Enter Operator ID : 
+2015-07-27 22:54:16,620 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-27 22:54:16,883 INFO [application.FXMLController] - Top Chart initialization
+2015-07-27 22:54:16,891 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-27 22:54:16,954 ERROR [network.TaskObserver] - Socket creation failed
+java.net.BindException: Cannot assign requested address: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(Unknown Source)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(Unknown Source)
+	at java.net.DatagramSocket.bind(Unknown Source)
+	at java.net.DatagramSocket.<init>(Unknown Source)
+	at java.net.DatagramSocket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:287)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:62)
+	at network.TaskObserver.run(TaskObserver.java:55)
+2015-07-27 22:54:16,967 INFO [network.TaskObserver] - Starting Read Az Plots Looper
+2015-07-27 22:54:16,968 INFO [network.TaskObserver] - Starting Read El Plots Looper
+2015-07-27 22:54:16,968 INFO [network.TaskObserver] - Starting Read Az Tracks Looper
+2015-07-27 22:54:16,971 INFO [network.TaskObserver] - Starting Read El Tracks Looper
+2015-07-27 22:54:16,973 INFO [network.TaskObserver] - Starting Read Video Looper
+2015-07-27 22:54:16,977 INFO [network.TaskObserver] - Network Task Ended
+2015-07-27 22:56:59,647 INFO [application.Master] - Launch
+2015-07-27 22:57:00,535 INFO [model.AppConfig] - App Config Instantiated
+2015-07-27 22:57:03,736 INFO [views.Console] - Enter Operator ID : 
+2015-07-27 22:57:03,737 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-27 22:57:03,779 INFO [application.FXMLController] - Top Chart initialization
+2015-07-27 22:57:03,788 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-27 22:57:03,821 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7711
+2015-07-27 22:57:03,821 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5511
+2015-07-27 22:57:03,821 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 4411
+2015-07-27 22:57:03,821 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6611
+2015-07-27 22:57:03,821 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-27 22:57:03,822 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 51036
+2015-07-27 22:57:03,822 INFO [network.TaskObserver] - Starting Read Az Plots Looper
+2015-07-27 22:57:03,823 INFO [network.TaskObserver] - Starting Read El Plots Looper
+2015-07-27 22:57:03,823 INFO [network.TaskObserver] - Starting Read Az Tracks Looper
+2015-07-27 22:57:03,824 INFO [network.TaskObserver] - Starting Read El Tracks Looper
+2015-07-27 22:57:03,825 INFO [network.TaskObserver] - Starting Read Video Looper
+2015-07-27 22:57:03,829 INFO [network.TaskObserver] - Network Task Ended
+2015-07-27 23:08:21,592 INFO [application.Master] - Launch
+2015-07-27 23:08:22,544 INFO [model.AppConfig] - App Config Instantiated
+2015-07-27 23:08:25,490 INFO [views.Console] - Enter Operator ID : 
+2015-07-27 23:08:25,491 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-27 23:08:25,545 INFO [application.FXMLController] - Top Chart initialization
+2015-07-27 23:08:25,552 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-27 23:08:25,588 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7711
+2015-07-27 23:08:25,589 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5511
+2015-07-27 23:08:25,589 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 4411
+2015-07-27 23:08:25,589 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6611
+2015-07-27 23:08:25,589 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-27 23:08:25,589 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 52406
+2015-07-27 23:08:25,589 INFO [network.TaskObserver] - Starting Read Az Plots Looper
+2015-07-27 23:08:25,590 INFO [network.TaskObserver] - Starting Read El Plots Looper
+2015-07-27 23:08:25,591 INFO [network.TaskObserver] - Starting Read Az Tracks Looper
+2015-07-27 23:08:25,592 INFO [network.TaskObserver] - Starting Read El Tracks Looper
+2015-07-27 23:08:25,593 INFO [network.TaskObserver] - Starting Read Video Looper
+2015-07-27 23:08:25,594 INFO [network.TaskObserver] - Starting All Threads
+2015-07-27 23:08:25,607 INFO [network.TaskObserver] - Network Task Launched
+2015-07-27 23:15:06,882 INFO [application.Master] - Launch
+2015-07-27 23:15:07,745 INFO [model.AppConfig] - App Config Instantiated
+2015-07-27 23:15:10,149 INFO [views.Console] - Enter Operator ID : 
+2015-07-27 23:15:10,151 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-27 23:15:10,199 INFO [application.FXMLController] - Top Chart initialization
+2015-07-27 23:15:10,206 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-27 23:15:20,408 INFO [application.Master] - Launch
+2015-07-27 23:15:21,298 INFO [model.AppConfig] - App Config Instantiated
+2015-07-27 23:15:23,674 INFO [views.Console] - Enter Operator ID : 
+2015-07-27 23:15:23,675 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-27 23:15:23,722 INFO [application.FXMLController] - Top Chart initialization
+2015-07-27 23:15:23,728 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-27 23:15:23,741 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7711
+2015-07-27 23:15:23,741 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5511
+2015-07-27 23:15:23,742 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 4411
+2015-07-27 23:15:23,742 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6611
+2015-07-27 23:15:23,742 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-27 23:15:23,742 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 55993
+2015-07-27 23:15:23,745 INFO [network.TaskObserver] - Starting All Threads
+2015-07-27 23:15:23,748 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-27 23:15:23,749 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-27 23:15:23,750 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-27 23:15:23,750 INFO [network.TaskObserver] - Network Task Launched
+2015-07-27 23:15:23,750 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-27 23:15:23,751 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-27 23:16:15,895 INFO [application.Master] - Launch
+2015-07-27 23:16:16,757 INFO [model.AppConfig] - App Config Instantiated
+2015-07-27 23:16:18,926 INFO [views.Console] - Enter Operator ID : 
+2015-07-27 23:16:18,927 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-27 23:16:18,968 INFO [application.FXMLController] - Top Chart initialization
+2015-07-27 23:16:18,975 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-27 23:16:18,994 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7711
+2015-07-27 23:16:18,994 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5511
+2015-07-27 23:16:18,995 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 4411
+2015-07-27 23:16:18,995 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6611
+2015-07-27 23:16:18,995 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-27 23:16:18,995 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 55996
+2015-07-27 23:16:19,000 INFO [network.TaskObserver] - Starting All Threads
+2015-07-27 23:16:19,002 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-27 23:16:19,002 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-27 23:16:19,002 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-27 23:16:19,002 INFO [network.TaskObserver] - Network Task Launched
+2015-07-27 23:16:19,003 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-27 23:16:19,003 INFO [network.TaskObserver] - Inside Read Thread Video Looper
+2015-07-27 23:16:19,002 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
