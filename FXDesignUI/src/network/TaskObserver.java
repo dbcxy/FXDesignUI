@@ -251,12 +251,12 @@ public class TaskObserver extends Thread{
 		try {
 			if(Constance.TCPIP) {
 				InetAddress serverAddr = InetAddress.getByName(Constance.SERVER_IP);
-				mSocketAzPlot = new Socket(serverAddr, Constance.PORT_NO_AZ_PLOTS);
-				mSocketElPlot = new Socket(serverAddr, Constance.PORT_NO_EL_PLOTS);
-				mSocketAzTrack = new Socket(serverAddr, Constance.PORT_NO_AZ_TRACKS);
-				mSocketElTrack = new Socket(serverAddr, Constance.PORT_NO_EL_TRACKS);
-				mSocketVideo = new Socket(serverAddr, Constance.PORT_NO_VIDEO);
-				mSocketWrite = new Socket(serverAddr, Constance.PORT_NO_WRITE);
+				mSocketAzPlot = new Socket(serverAddr, Constance.PORT_AZ_PLOTS);
+				mSocketElPlot = new Socket(serverAddr, Constance.PORT_EL_PLOTS);
+				mSocketAzTrack = new Socket(serverAddr, Constance.PORT_AZ_TRACKS);
+				mSocketElTrack = new Socket(serverAddr, Constance.PORT_EL_TRACKS);
+				mSocketVideo = new Socket(serverAddr, Constance.PORT_VIDEO);
+				mSocketWrite = new Socket(serverAddr, Constance.PORT_WRITE);
 //				m_ssocket.setSoTimeout(Constance.MY_TIMEOUT);
 				
 				logger.info("TCP (mSocketAzPlot)socket created at IP:"+mSocketAzPlot.getInetAddress()+" PORT: "+mSocketAzPlot.getPort());
@@ -266,12 +266,12 @@ public class TaskObserver extends Thread{
 				logger.info("TCP (mSocketVideo)socket created at IP:"+mSocketVideo.getInetAddress()+" PORT: "+mSocketVideo.getPort());
 				logger.info("TCP (mSocketWrite)socket created at IP:"+mSocketWrite.getInetAddress()+" PORT: "+mSocketWrite.getPort());
 			} else if (Constance.UDPIP) {				
-				mDatagramSocketAzPlot = new DatagramSocket(Constance.PORT_NO_AZ_PLOTS);
-				mDatagramSocketElPlot = new DatagramSocket(Constance.PORT_NO_EL_PLOTS);
-				mDatagramSocketAzTrack = new DatagramSocket(Constance.PORT_NO_AZ_TRACKS);
-				mDatagramSocketElTrack = new DatagramSocket(Constance.PORT_NO_EL_TRACKS);
-				mDatagramSocketVideo = new DatagramSocket(Constance.PORT_NO_VIDEO);
-				mDatagramSocketWrite = new DatagramSocket(Constance.PORT_NO_WRITE);
+				mDatagramSocketAzPlot = new DatagramSocket(Constance.PORT_AZ_PLOTS);
+				mDatagramSocketElPlot = new DatagramSocket(Constance.PORT_EL_PLOTS);
+				mDatagramSocketAzTrack = new DatagramSocket(Constance.PORT_AZ_TRACKS);
+				mDatagramSocketElTrack = new DatagramSocket(Constance.PORT_EL_TRACKS);
+				mDatagramSocketVideo = new DatagramSocket(Constance.PORT_VIDEO);
+				mDatagramSocketWrite = new DatagramSocket(Constance.PORT_WRITE);
 				
 				logger.info("UDP (mDatagramSocketAzPlot)socket created at IP:"+mDatagramSocketAzPlot.getLocalAddress()+" PORT: "+mDatagramSocketAzPlot.getLocalPort());
 				logger.info("UDP (mDatagramSocketElPlot)socket created at IP:"+mDatagramSocketElPlot.getLocalAddress()+" PORT: "+mDatagramSocketElPlot.getLocalPort());
@@ -280,11 +280,11 @@ public class TaskObserver extends Thread{
 				logger.info("UDP (mDatagramSocketVideo)socket created at IP:"+mDatagramSocketVideo.getLocalAddress()+" PORT: "+mDatagramSocketVideo.getLocalPort());
 				logger.info("UDP (mDatagramSocketWrite)socket created at IP:"+mDatagramSocketWrite.getLocalAddress()+" PORT: "+mDatagramSocketWrite.getLocalPort());
 			} else if(Constance.MCUDP) {
-				mMCSocketAzPlot = new MulticastSocket(Constance.PORT_NO_AZ_PLOTS);
-				mMCSocketElPlot = new MulticastSocket(Constance.PORT_NO_EL_PLOTS);
-				mMCSocketAzTrack = new MulticastSocket(Constance.PORT_NO_AZ_TRACKS);
-				mMCSocketElTrack = new MulticastSocket(Constance.PORT_NO_EL_TRACKS);
-				mMCSocketVideo = new MulticastSocket(Constance.PORT_NO_VIDEO);
+				mMCSocketAzPlot = new MulticastSocket(Constance.PORT_AZ_PLOTS);
+				mMCSocketElPlot = new MulticastSocket(Constance.PORT_EL_PLOTS);
+				mMCSocketAzTrack = new MulticastSocket(Constance.PORT_AZ_TRACKS);
+				mMCSocketElTrack = new MulticastSocket(Constance.PORT_EL_TRACKS);
+				mMCSocketVideo = new MulticastSocket(Constance.PORT_VIDEO);
 				mMCSocketWrite = new DatagramSocket();
 				
 				InetAddress groupAddr = InetAddress.getByName(Constance.GROUP_ADDR);
@@ -293,6 +293,12 @@ public class TaskObserver extends Thread{
 				mMCSocketAzTrack.joinGroup(groupAddr);
 				mMCSocketElTrack.joinGroup(groupAddr);
 				mMCSocketVideo.joinGroup(groupAddr);
+				
+				mMCSocketAzPlot.setInterface(InetAddress.getLocalHost());
+				mMCSocketAzTrack.setInterface(InetAddress.getLocalHost());
+				mMCSocketElPlot.setInterface(InetAddress.getLocalHost());
+				mMCSocketElTrack.setInterface(InetAddress.getLocalHost());
+				mMCSocketVideo.setInterface(InetAddress.getLocalHost());
 				
 				logger.info("MC-UDP (mMCSocketAzPlot)socket created at IP:"+mMCSocketAzPlot.getLocalAddress()+" PORT: "+mMCSocketAzPlot.getLocalPort());
 				logger.info("MC-UDP (mMCSocketElPlot)socket created at IP:"+mMCSocketElPlot.getLocalAddress()+" PORT: "+mMCSocketElPlot.getLocalPort());
@@ -391,7 +397,7 @@ public class TaskObserver extends Thread{
 				mDatagramSocketWrite.send(mDatagramOutPacket);
 			logger.info("UDP Server Data sent: "+len);
 		}	else if(Constance.MCUDP) {
-			DatagramPacket mDatagramOutPacket = new DatagramPacket(data, len, InetAddress.getByName(Constance.GROUP_ADDR), Constance.PORT_NO_WRITE);
+			DatagramPacket mDatagramOutPacket = new DatagramPacket(data, len, InetAddress.getByName(Constance.GROUP_ADDR), Constance.PORT_WRITE);
 			mDatagramOutPacket.setLength(len);
 			if (len > 0)
 				mMCSocketWrite.send(mDatagramOutPacket);
@@ -416,33 +422,23 @@ public class TaskObserver extends Thread{
 	private byte[] parseUDPData(DatagramSocket datagramSocket) throws IOException{
 
 		byte[] mUDPSocketbuffer = new byte[Constance.DGRAM_LEN];
+		int len = mUDPSocketbuffer.length;
 		DatagramPacket mDatagramInPacket = new DatagramPacket(mUDPSocketbuffer, mUDPSocketbuffer.length);
-		int len = mDatagramInPacket.getLength();
-	    byte[] udpdata = new byte[len];
 		// Wait to receive a datagram
-	    if (len > 0) {
-	    	datagramSocket.receive(mDatagramInPacket);
-			udpdata = mDatagramInPacket.getData();
-			logger.info("UDP Server Data received: "+len);
-			return udpdata;
-	    }
-	    return null;
+    	datagramSocket.receive(mDatagramInPacket);
+		logger.info("UDP Server Data received: "+len);
+		return mUDPSocketbuffer;
 	}
 	
 	private byte[] parseMCUDPData(MulticastSocket multicastSocket) throws IOException{
 
 		byte[] mMCUDPSocketbuffer = new byte[Constance.DGRAM_LEN];
-		DatagramPacket mDatagramInPacket = new DatagramPacket(mMCUDPSocketbuffer, mMCUDPSocketbuffer.length);
-		int len = mDatagramInPacket.getLength();
-	    byte[] mcudpdata = new byte[len];
+		int len = mMCUDPSocketbuffer.length;
+		DatagramPacket mDatagramInPacket = new DatagramPacket(mMCUDPSocketbuffer, len);
 		// Wait to receive a datagram
-	    if (len > 0) {
-	    	multicastSocket.receive(mDatagramInPacket);
-	    	mcudpdata = mDatagramInPacket.getData();
-			logger.info("UDP Server Data received: "+len);
-			return mcudpdata;
-	    }
-	    return null;
+    	multicastSocket.receive(mDatagramInPacket);
+		logger.info("UDP Server Data received: "+len);
+		return mMCUDPSocketbuffer;
 	}
 	
 	private void makeData(byte[] mData) {

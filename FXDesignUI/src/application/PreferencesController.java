@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -14,6 +15,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import model.AppConfig;
@@ -27,6 +31,8 @@ public class PreferencesController implements Initializable,ILayoutParam{
 	
 	private static final Logger logger = Logger.getLogger(SettingsController.class);
 	
+	@FXML AnchorPane Preference;
+	
 	@FXML ComboBox<String> comboRunway;
 	@FXML ComboBox<String> comboModes;
 	@FXML ComboBox<String> comboPolarization;
@@ -37,6 +43,8 @@ public class PreferencesController implements Initializable,ILayoutParam{
 	@FXML TextField bite;
 	
 	AppConfig appConfig = AppConfig.getInstance();
+	
+	double initialX,initialY;
 
 	@Override
 	public void draw(GraphicsContext gc) {
@@ -46,10 +54,47 @@ public class PreferencesController implements Initializable,ILayoutParam{
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
 		logger.info("Preferences Dialog Opened");
+		addDraggableNode(Preference);
 		initDialog();
-		loadDefaultPreference();
-		
-		
+		loadDefaultPreference();		
+	}	
+
+	@FXML
+	protected void okClick(ActionEvent event) {
+		saveData();
+		appConfig.savePreferenceData();
+		if(appConfig.isPreferenceSaved()) {
+			closeSettings(event);
+			AppConfig.getInstance().getFxmlController().notifyChanges();
+		}
+	}
+	
+	@FXML
+	protected void cancelClick(ActionEvent event) {
+		closeSettings(event);
+	}
+	
+	private void addDraggableNode(final Node node) {
+
+	    node.setOnMousePressed(new EventHandler<MouseEvent>() {
+	        @Override
+	        public void handle(MouseEvent me) {
+	            if (me.getButton() != MouseButton.MIDDLE) {
+	                initialX = me.getSceneX();
+	                initialY = me.getSceneY();
+	            }
+	        }
+	    });
+
+	    node.setOnMouseDragged(new EventHandler<MouseEvent>() {
+	        @Override
+	        public void handle(MouseEvent me) {
+	            if (me.getButton() != MouseButton.MIDDLE) {
+	                node.getScene().getWindow().setX(me.getScreenX() - initialX);
+	                node.getScene().getWindow().setY(me.getScreenY() - initialY);
+	            }
+	        }
+	    });
 	}
 	
 	private void initDialog() {
@@ -78,22 +123,6 @@ public class PreferencesController implements Initializable,ILayoutParam{
 		comboElAz.setValue(Constance.PREF.EL_AZ_UNITS);
 		freqSel.setText(Constance.PREF.FREQ_SEL);
 		bite.setText(Constance.PREF.BITE);
-	}
-
-
-	@FXML
-	protected void okClick(ActionEvent event) {
-		saveData();
-		appConfig.savePreferenceData();
-		if(appConfig.isPreferenceSaved()) {
-			closeSettings(event);
-			AppConfig.getInstance().getFxmlController().notifyChanges();
-		}
-	}
-	
-	@FXML
-	protected void cancelClick(ActionEvent event) {
-		closeSettings(event);
 	}
 
 	private void saveData() {

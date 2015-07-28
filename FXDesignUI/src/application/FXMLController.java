@@ -144,6 +144,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {		
 		initCanvasLayout();
+    	initControls();
 		actiontarget.setText("Start the System....");
 	}
 	
@@ -322,7 +323,6 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
     
     private void initSystem() {
-    	initControls();
 		initTimeDate();
     	initConsole();
     	initMatrixRef();
@@ -376,15 +376,15 @@ public class FXMLController implements Initializable,ILayoutParam{
     	btn_checkmarks.widgetSetVal(VAL.DEFAULT);
     	btn_displaysetup.widgetSetVal(VAL.DEFAULT);
     	
-		btn_display5.setText(" 5 "+Constance.UNITS.getLENGTH());
-		btn_display10.setText(" 10 "+Constance.UNITS.getLENGTH());
-		btn_display20.setText(" 20 "+Constance.UNITS.getLENGTH());
-		btn_display40.setText(" 40 "+Constance.UNITS.getLENGTH());
-
 		btn_display5.widgetSetVal(VAL.DEFAULT);
 		btn_display10.widgetSetVal(VAL.DEFAULT);
 		btn_display20.widgetSetVal(VAL.DEFAULT);
 		btn_display40.widgetSetVal(VAL.DEFAULT);
+		
+		btn_display5.setText(" 5 "+Constance.UNITS.getLENGTH());
+		btn_display10.setText(" 10 "+Constance.UNITS.getLENGTH());
+		btn_display20.setText(" 20 "+Constance.UNITS.getLENGTH());
+		btn_display40.setText(" 40 "+Constance.UNITS.getLENGTH());
     }
 
 	private void initTimeDate() {

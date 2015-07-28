@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -15,6 +16,9 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -29,6 +33,8 @@ public class SettingsController implements Initializable,ILayoutParam{
 	
 	private static final Logger logger = Logger.getLogger(SettingsController.class);
 
+	@FXML AnchorPane Settings;
+	
 	@FXML HBox MaximumElevation;
 	@FXML HBox MaximumAzimuth;
 	
@@ -53,6 +59,8 @@ public class SettingsController implements Initializable,ILayoutParam{
 
 	AppConfig appConfig = AppConfig.getInstance();
 	
+	double initialX,initialY;
+	
 	@Override
 	public void draw(GraphicsContext gc) {
 		
@@ -61,11 +69,57 @@ public class SettingsController implements Initializable,ILayoutParam{
 	@Override
 	public void initialize(URL url, ResourceBundle rBundle) {
 		logger.info("Settings Dialog Opened");
+		addDraggableNode(Settings);
 		loadToList();
 		initDefaultValues();
 		initUnits();
 		
 		Constance.IS_CONFIG_SET = true;
+	}
+	
+	@FXML
+	protected void okClick(ActionEvent event) {
+		appConfig.saveSettingsData();
+		if(appConfig.isSettingSaved()) {
+			closeSettings(event);
+			AppConfig.getInstance().getFxmlController().notifyChanges();
+		}
+		
+	}
+
+	@FXML
+	protected void cancelClick(ActionEvent event) {
+		closeSettings(event);
+	}
+
+	private void closeSettings(ActionEvent event) {
+		Node  source = (Node)  event.getSource(); 
+	    Stage stage  = (Stage) source.getScene().getWindow();
+	    stage.close();
+	    logger.info("Setting Dialog Closed");
+	}
+	
+	private void addDraggableNode(final Node node) {
+
+	    node.setOnMousePressed(new EventHandler<MouseEvent>() {
+	        @Override
+	        public void handle(MouseEvent me) {
+	            if (me.getButton() != MouseButton.MIDDLE) {
+	                initialX = me.getSceneX();
+	                initialY = me.getSceneY();
+	            }
+	        }
+	    });
+
+	    node.setOnMouseDragged(new EventHandler<MouseEvent>() {
+	        @Override
+	        public void handle(MouseEvent me) {
+	            if (me.getButton() != MouseButton.MIDDLE) {
+	                node.getScene().getWindow().setX(me.getScreenX() - initialX);
+	                node.getScene().getWindow().setY(me.getScreenY() - initialY);
+	            }
+	        }
+	    });
 	}
 	
 	private void loadToList() {
@@ -116,27 +170,5 @@ public class SettingsController implements Initializable,ILayoutParam{
 		((Label) (AzimuthLSaL.getChildren().get(2))).setText(Constance.UNITS.getLENGTH());
 		((Label) (AzimuthRSaL.getChildren().get(2))).setText(Constance.UNITS.getLENGTH());
 		
-	}
-
-	@FXML
-	protected void okClick(ActionEvent event) {
-		appConfig.saveSettingsData();
-		if(appConfig.isSettingSaved()) {
-			closeSettings(event);
-			AppConfig.getInstance().getFxmlController().notifyChanges();
-		}
-		
-	}
-
-	@FXML
-	protected void cancelClick(ActionEvent event) {
-		closeSettings(event);
-	}
-
-	private void closeSettings(ActionEvent event) {
-		Node  source = (Node)  event.getSource(); 
-	    Stage stage  = (Stage) source.getScene().getWindow();
-	    stage.close();
-	    logger.info("Setting Dialog Closed");
-	}
+	}	
 }
