@@ -36,8 +36,7 @@ public class Main extends Application {
 	
 	private void startNetworkTask() {
 		C2Server c2Server = new C2Server();
-//		c2Server.startTCPThreadServer();
-		c2Server.startUDPThreadServer();
+		c2Server.startMCUDPThreadServer();
 		
 	}
 		

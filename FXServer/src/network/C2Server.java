@@ -25,18 +25,9 @@ public class C2Server {
 	    return new String(hexChars);
 	}
 	
-	public void startTCPThreadServer() {
+	public void startMCUDPThreadServer() {
 		try {
-			TCPServerThread tcpServerThread = new TCPServerThread(PORT_AZ_PLOTS,PORT_AZ_TRACKS);
-			tcpServerThread.start();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public void startUDPThreadServer() {
-		try {
-			UDPServerThread udpServerThread = new UDPServerThread();
+			MCUDPServerThread udpServerThread = new MCUDPServerThread();
 			udpServerThread.start();
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -41,8 +41,8 @@ public class MaterialDesignButtonWidget extends Button {
             throw new RuntimeException(exception);
         }
 
-        getStyleClass().addAll("md-button");
-        createRippleEffect();
+//        getStyleClass().addAll("md-button");
+//        createRippleEffect();
     }
 
     @Override
@@ -141,6 +141,7 @@ public class MaterialDesignButtonWidget extends Button {
 		default:
 			break;
 		}
+    	createRippleEffect();
     }
 
 }
