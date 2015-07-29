@@ -1,4 +1,4 @@
-package messages.test;
+package messages.utils;
 
 public class Test {
 

@@ -13662,3 +13662,320 @@
 2015-07-28 23:40:46,372 INFO [application.FXMLController] - Canvas Objects Redrawn
 2015-07-28 23:40:46,369 INFO [application.FXMLController] - Setting Data Observer
 2015-07-28 23:40:46,372 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:14,751 INFO [application.Master] - Launch
+2015-07-29 09:15:16,734 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 09:15:20,428 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 09:15:20,433 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 09:15:20,672 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 09:15:20,682 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 09:15:22,090 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 09:15:22,091 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 09:15:22,091 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 09:15:22,091 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 09:15:22,091 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 09:15:22,091 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 52214
+2015-07-29 09:15:22,094 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 09:15:22,095 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 09:15:22,095 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 09:15:22,095 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 09:15:22,095 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 09:15:22,096 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 09:15:22,096 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 09:15:39,355 INFO [application.Master] - Launch
+2015-07-29 09:15:40,049 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 09:15:42,072 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 09:15:42,073 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 09:15:42,116 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 09:15:42,123 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 09:15:43,549 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 09:15:43,549 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 09:15:43,550 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 09:15:43,550 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 09:15:43,550 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 09:15:43,550 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 52220
+2015-07-29 09:15:43,553 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 09:15:43,553 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 09:15:43,553 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 09:15:43,553 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 09:15:43,554 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 09:15:43,554 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 09:15:43,554 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:43,554 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 09:15:43,554 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:43,554 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:43,554 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:43,554 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:43,557 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:43,558 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:43,557 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:43,558 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:43,558 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:43,559 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:43,559 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:43,559 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:43,559 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:43,559 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:43,560 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:43,560 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:43,560 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:43,560 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:43,560 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:44,143 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:44,143 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:44,143 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:44,143 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:44,144 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:44,144 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:44,143 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:44,143 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:44,144 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:44,144 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:44,143 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:44,144 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:44,144 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:44,145 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:44,145 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:44,145 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:44,145 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:44,145 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:44,145 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:44,146 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:45,144 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:45,144 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:45,145 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:45,145 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:45,145 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:45,145 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:45,146 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:45,146 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:45,144 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:45,147 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:45,147 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:45,148 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:45,159 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:45,159 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:45,159 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:45,159 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:45,160 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:45,160 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:45,160 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:45,160 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:46,160 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:46,160 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:46,160 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:46,160 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:46,161 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:46,161 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:46,161 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:46,161 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:46,161 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:46,162 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:46,162 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:46,162 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:46,162 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:46,163 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:46,163 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:46,163 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:46,163 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:46,163 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:46,163 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:46,163 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:47,162 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:47,162 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:47,162 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:47,163 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:47,163 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:47,163 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:47,163 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:47,163 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:47,163 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:47,164 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:47,164 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:47,165 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:47,166 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:47,166 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:47,166 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:47,166 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 09:15:47,167 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 09:15:47,168 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 09:15:47,168 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 09:15:47,168 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:42,637 INFO [application.Master] - Launch
+2015-07-29 17:24:43,620 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 17:24:46,743 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 17:24:46,743 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 17:24:46,779 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 17:24:46,785 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 17:24:48,172 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 17:24:48,172 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 17:24:48,173 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 17:24:48,173 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 17:24:48,173 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 17:24:48,173 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 59058
+2015-07-29 17:24:48,176 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 17:24:48,176 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 17:24:48,176 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 17:24:48,177 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 17:24:48,177 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 17:24:48,176 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 17:24:48,177 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 17:24:53,356 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:53,357 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:53,357 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:53,358 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:53,358 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:53,360 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:53,361 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:53,361 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:53,360 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:53,361 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:53,361 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:53,361 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:53,361 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:53,361 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:53,362 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:53,362 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:53,362 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:53,362 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:53,362 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:53,362 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:54,357 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:54,358 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:54,443 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:54,358 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:54,444 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:54,358 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:54,357 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:54,445 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:54,444 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:54,444 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:54,443 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:54,444 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:54,443 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:54,446 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:54,447 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:54,447 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:54,447 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:54,449 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:54,445 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:54,445 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:55,358 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:55,358 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:55,359 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:55,359 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:55,359 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:55,360 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:55,360 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:55,361 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:55,361 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:55,362 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:55,363 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:55,363 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:55,369 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:55,370 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:55,370 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:55,370 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:55,370 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:55,370 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:55,371 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:55,371 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:56,370 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:56,370 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:56,370 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:56,371 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:56,371 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:56,371 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:56,372 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:56,372 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:56,373 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:56,374 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:56,374 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:56,374 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:56,375 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:56,376 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:56,376 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:56,377 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:56,378 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:56,379 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:56,379 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:56,380 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:57,375 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:57,375 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:57,375 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:57,376 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:57,376 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:57,376 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:57,376 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:57,376 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:57,379 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:57,377 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:57,377 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:57,379 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:57,377 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:57,379 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:57,381 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:57,381 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:57,381 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:57,381 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:57,382 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:57,382 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:58,377 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:58,377 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:58,377 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:58,377 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:58,377 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:58,377 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:58,378 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:58,377 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:58,377 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:58,377 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:58,377 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:58,377 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:58,378 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:58,378 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:58,378 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:58,378 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:58,378 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:58,378 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:58,378 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:58,378 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:59,377 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:59,377 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:59,377 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:59,377 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:59,377 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:59,378 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:59,377 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:59,377 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:59,378 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:59,378 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:59,378 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:59,378 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:59,378 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:59,378 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:59,378 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:59,379 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:24:59,379 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:24:59,379 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:24:59,379 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:24:59,379 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:25:00,380 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:25:00,380 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:25:00,380 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:25:00,381 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:25:00,381 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:25:00,381 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:25:00,381 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:25:00,382 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:25:00,382 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:25:00,381 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:25:00,381 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:25:00,383 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:25:00,382 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:25:00,382 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 17:25:00,383 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:25:00,383 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:25:00,384 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 17:25:00,384 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 17:25:00,384 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 17:25:00,385 INFO [application.FXMLController] - Canvas Objects Redrawn
