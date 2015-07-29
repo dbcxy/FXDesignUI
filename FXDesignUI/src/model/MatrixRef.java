@@ -21,12 +21,13 @@ public class MatrixRef implements ILayoutParam{
 	
 	private double maxRange;
 	private double minRange;
+	private double visibleRange;
 	
 	private double maxAzimuth;
 	private double minAzimuth;
 	
 	private double touchDown;
-	private int zoomLevel;
+//	private int zoomLevel;
 	
 	private static MatrixRef instance = null;
 	
@@ -70,12 +71,12 @@ public class MatrixRef implements ILayoutParam{
 	}
 	
 	public double toRangePixels(double r) {
-		return (((r*drawableXArea)/maxRange));
+		return (((r*drawableXArea)/visibleRange));
 	}
 	
-	public Point toElevationPixels(double el, double r) {
+	public Point toElevationRangePixels(double el, double r) {
 		Point p = new Point();
-		double x = OFFSET + ((r*drawableXArea)/maxRange);
+		double x = toRangePixels(r);
 		double y = toElevationPixels(el);			
 		p.setX(x);
 		p.setY(y);
@@ -86,9 +87,9 @@ public class MatrixRef implements ILayoutParam{
 		return  drawableYArea - ((el*drawableYArea)/maxElevation);
 	}
 	
-	public Point toAzimuthPixels(double az, double r) {
+	public Point toAzimuthRangePixels(double az, double r) {
 		Point p = new Point();
-		double x = ((r*drawableXArea)/maxRange);
+		double x = toRangePixels(r);
 		double y = toAzimuthPixels(az);
 		p.setX(x);
 		p.setY(y);
@@ -170,7 +171,7 @@ public class MatrixRef implements ILayoutParam{
 	}
 
 	public void setMaxRange(double maxRange) {
-		this.maxRange = maxRange+Constance.RANGE_DISP;
+		this.maxRange = maxRange;
 	}
 
 	public double getMinRange() {
@@ -179,6 +180,14 @@ public class MatrixRef implements ILayoutParam{
 
 	public void setMinRange(double minRange) {
 		this.minRange = minRange;
+	}
+	
+	public double getVisibleRange() {
+		return visibleRange;
+	}
+
+	public void setVisibleRange(double visibleRange) {
+		this.visibleRange = visibleRange;
 	}
 
 	public double getMaxAzimuth() {

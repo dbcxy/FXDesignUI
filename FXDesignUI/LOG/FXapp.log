@@ -13979,3 +13979,2406 @@
 2015-07-29 17:25:00,384 INFO [network.TaskObserver] - Server Data analyzed
 2015-07-29 17:25:00,384 INFO [application.FXMLController] - Setting Data Observer
 2015-07-29 17:25:00,385 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:20:49,009 INFO [application.Master] - Launch
+2015-07-29 21:20:50,518 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 21:27:10,327 INFO [application.Master] - Launch
+2015-07-29 21:27:11,275 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 21:27:13,678 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 21:27:13,679 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 21:27:14,030 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 21:27:14,045 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 21:27:16,097 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 21:27:16,097 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 21:27:16,097 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 21:27:16,097 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 21:27:16,097 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 21:27:16,098 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 55301
+2015-07-29 21:27:16,100 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 21:27:16,100 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 21:27:16,100 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 21:27:16,101 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 21:27:16,101 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 21:27:16,101 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 21:27:16,101 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 21:27:16,101 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:16,268 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:27:16,268 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:16,269 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:16,269 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:16,269 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:16,269 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:16,270 INFO [network.TaskObserver] - Range: 3975
+2015-07-29 21:27:16,270 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:16,270 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:16,270 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:16,270 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:16,270 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:16,271 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:27:16,271 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:16,271 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:16,272 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:16,272 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:16,272 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:16,272 INFO [network.TaskObserver] - Range: 3950
+2015-07-29 21:27:16,272 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:16,272 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:16,272 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:16,273 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:16,273 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:16,273 INFO [network.TaskObserver] - Range: 3875
+2015-07-29 21:27:16,273 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:16,273 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:16,273 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:16,273 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:16,273 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:16,274 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:27:16,274 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:16,274 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:16,274 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:16,274 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:16,274 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:16,275 INFO [network.TaskObserver] - Range: 3850
+2015-07-29 21:27:16,275 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:16,275 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:16,275 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:16,275 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:16,275 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:16,276 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:27:16,276 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:16,276 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:16,277 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:16,277 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:16,281 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:16,282 INFO [network.TaskObserver] - Range: 3825
+2015-07-29 21:27:16,282 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:16,282 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:16,282 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:16,282 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:16,683 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:16,685 INFO [network.TaskObserver] - Range: 3875
+2015-07-29 21:27:16,685 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:16,685 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:16,686 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:16,689 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:16,781 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:16,783 INFO [network.TaskObserver] - Range: 3800
+2015-07-29 21:27:16,783 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:16,783 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:16,783 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:16,783 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:17,183 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:17,184 INFO [network.TaskObserver] - Range: 3850
+2015-07-29 21:27:17,185 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:17,185 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:17,185 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:17,186 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:17,281 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:17,282 INFO [network.TaskObserver] - Range: 3775
+2015-07-29 21:27:17,283 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:17,283 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:17,283 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:17,283 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:17,687 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:17,688 INFO [network.TaskObserver] - Range: 3825
+2015-07-29 21:27:17,688 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:17,689 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:17,689 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:17,690 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:17,781 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:17,782 INFO [network.TaskObserver] - Range: 3750
+2015-07-29 21:27:17,783 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:17,783 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:17,783 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:17,783 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:18,191 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:18,192 INFO [network.TaskObserver] - Range: 3800
+2015-07-29 21:27:18,193 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:18,193 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:18,193 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:18,194 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:18,691 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:18,691 INFO [network.TaskObserver] - Range: 3775
+2015-07-29 21:27:18,691 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:18,691 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:18,692 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:18,692 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:19,191 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:19,192 INFO [network.TaskObserver] - Range: 3750
+2015-07-29 21:27:19,193 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:19,193 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:19,193 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:19,193 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:19,281 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:19,283 INFO [network.TaskObserver] - Range: 3975
+2015-07-29 21:27:19,283 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:19,283 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:19,283 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:19,284 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:19,783 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:19,784 INFO [network.TaskObserver] - Range: 3950
+2015-07-29 21:27:19,785 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:19,785 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:19,785 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:19,785 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:20,285 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:20,286 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:27:20,287 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:20,289 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:20,289 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:20,290 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:20,694 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:20,694 INFO [network.TaskObserver] - Range: 3975
+2015-07-29 21:27:20,695 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:20,695 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:20,695 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:20,695 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:20,785 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:20,786 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:27:20,786 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:20,787 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:20,787 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:20,787 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:21,194 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:21,195 INFO [network.TaskObserver] - Range: 3950
+2015-07-29 21:27:21,195 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:21,196 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:21,196 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:21,196 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:21,285 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:21,286 INFO [network.TaskObserver] - Range: 3875
+2015-07-29 21:27:21,286 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:21,286 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:21,286 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:21,286 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:21,697 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:21,698 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:27:21,698 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:21,698 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:21,699 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:21,699 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:21,785 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:21,786 INFO [network.TaskObserver] - Range: 3850
+2015-07-29 21:27:21,786 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:21,786 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:21,787 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:21,787 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:22,197 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:22,198 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:27:22,198 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:22,199 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:22,199 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:22,199 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:22,285 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:22,286 INFO [network.TaskObserver] - Range: 3825
+2015-07-29 21:27:22,286 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:22,287 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:22,287 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:22,287 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:22,698 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:22,699 INFO [network.TaskObserver] - Range: 3875
+2015-07-29 21:27:22,699 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:22,699 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:22,699 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:22,700 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:22,785 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:22,786 INFO [network.TaskObserver] - Range: 3800
+2015-07-29 21:27:22,786 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:22,786 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:22,787 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:22,787 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:23,198 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:23,200 INFO [network.TaskObserver] - Range: 3850
+2015-07-29 21:27:23,200 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:23,200 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:23,201 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:23,204 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:23,285 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:23,286 INFO [network.TaskObserver] - Range: 3775
+2015-07-29 21:27:23,286 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:23,287 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:23,287 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:23,287 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:23,698 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:23,699 INFO [network.TaskObserver] - Range: 3825
+2015-07-29 21:27:23,699 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:23,699 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:23,700 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:23,700 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:23,785 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:23,786 INFO [network.TaskObserver] - Range: 3750
+2015-07-29 21:27:23,786 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:23,787 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:23,787 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:23,787 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:24,198 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:24,200 INFO [network.TaskObserver] - Range: 3800
+2015-07-29 21:27:24,200 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:24,200 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:24,200 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:24,200 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:24,698 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:24,699 INFO [network.TaskObserver] - Range: 3775
+2015-07-29 21:27:24,699 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:24,699 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:24,699 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:24,700 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:25,198 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:25,200 INFO [network.TaskObserver] - Range: 3750
+2015-07-29 21:27:25,200 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:25,200 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:25,200 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:25,201 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:25,285 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:25,286 INFO [network.TaskObserver] - Range: 3975
+2015-07-29 21:27:25,286 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:25,287 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:25,287 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:25,287 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:25,785 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:25,787 INFO [network.TaskObserver] - Range: 3950
+2015-07-29 21:27:25,787 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:25,789 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:25,789 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:25,789 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:26,285 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:26,287 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:27:26,287 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:26,287 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:26,287 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:26,287 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:26,702 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:26,703 INFO [network.TaskObserver] - Range: 3975
+2015-07-29 21:27:26,704 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:26,704 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:26,704 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:26,704 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:26,787 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:26,787 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:27:26,788 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:26,788 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:26,788 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:26,788 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:27,206 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:27,207 INFO [network.TaskObserver] - Range: 3950
+2015-07-29 21:27:27,207 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:27,207 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:27,208 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:27,208 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:27,287 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:27,287 INFO [network.TaskObserver] - Range: 3875
+2015-07-29 21:27:27,287 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:27,287 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:27,288 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:27,288 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:27,706 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:27,706 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:27:27,706 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:27,706 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:27,706 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:27,707 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:27,787 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:27,788 INFO [network.TaskObserver] - Range: 3850
+2015-07-29 21:27:27,788 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:27,788 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:27,789 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:27,789 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:28,207 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:28,208 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:27:28,208 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:28,209 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:28,209 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:28,209 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:28,287 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:28,288 INFO [network.TaskObserver] - Range: 3825
+2015-07-29 21:27:28,288 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:28,289 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:28,289 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:28,289 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:28,707 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:28,708 INFO [network.TaskObserver] - Range: 3875
+2015-07-29 21:27:28,708 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:28,708 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:28,708 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:28,708 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:28,787 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:28,788 INFO [network.TaskObserver] - Range: 3800
+2015-07-29 21:27:28,789 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:28,789 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:28,789 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:28,789 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:29,207 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:29,209 INFO [network.TaskObserver] - Range: 3850
+2015-07-29 21:27:29,209 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:29,209 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:29,209 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:29,210 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:29,287 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:29,288 INFO [network.TaskObserver] - Range: 3775
+2015-07-29 21:27:29,289 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:29,289 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:29,289 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:29,289 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:29,708 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:29,709 INFO [network.TaskObserver] - Range: 3825
+2015-07-29 21:27:29,709 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:29,709 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:29,710 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:29,710 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:29,787 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:29,788 INFO [network.TaskObserver] - Range: 3750
+2015-07-29 21:27:29,788 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:29,788 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:29,788 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:29,789 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:30,208 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:30,209 INFO [network.TaskObserver] - Range: 3800
+2015-07-29 21:27:30,210 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:30,210 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:30,210 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:30,210 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:30,708 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:30,709 INFO [network.TaskObserver] - Range: 3775
+2015-07-29 21:27:30,710 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:30,710 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:30,710 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:30,710 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:31,208 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:31,209 INFO [network.TaskObserver] - Range: 3750
+2015-07-29 21:27:31,209 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:31,209 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:31,210 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:31,210 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:31,287 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:31,288 INFO [network.TaskObserver] - Range: 3975
+2015-07-29 21:27:31,288 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:31,288 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:31,289 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:31,289 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:31,787 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:31,788 INFO [network.TaskObserver] - Range: 3950
+2015-07-29 21:27:31,788 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:31,788 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:31,789 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:31,789 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:32,287 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:32,288 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:27:32,289 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:32,289 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:32,289 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:32,290 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:32,708 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:32,710 INFO [network.TaskObserver] - Range: 3975
+2015-07-29 21:27:32,710 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:32,710 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:32,710 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:32,710 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:32,787 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:32,788 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:27:32,788 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:32,788 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:32,789 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:32,789 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:33,208 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:33,211 INFO [network.TaskObserver] - Range: 3950
+2015-07-29 21:27:33,211 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:33,211 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:33,211 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:33,212 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:33,287 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:33,288 INFO [network.TaskObserver] - Range: 3875
+2015-07-29 21:27:33,288 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:33,288 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:33,289 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:33,289 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:33,708 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:33,710 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:27:33,710 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:33,710 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:33,710 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:33,710 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:33,787 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:33,788 INFO [network.TaskObserver] - Range: 3850
+2015-07-29 21:27:33,788 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:33,788 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:33,789 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:33,789 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:34,208 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:34,208 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:27:34,208 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:34,208 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:34,208 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:34,209 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:34,287 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:34,288 INFO [network.TaskObserver] - Range: 3825
+2015-07-29 21:27:34,288 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:34,288 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:34,288 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:34,288 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:34,708 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:34,709 INFO [network.TaskObserver] - Range: 3875
+2015-07-29 21:27:34,709 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:34,709 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:34,709 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:34,709 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:34,787 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:34,788 INFO [network.TaskObserver] - Range: 3800
+2015-07-29 21:27:34,788 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:34,788 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:34,788 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:34,789 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:35,208 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:35,209 INFO [network.TaskObserver] - Range: 3850
+2015-07-29 21:27:35,209 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:35,210 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:35,210 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:35,210 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:35,287 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:35,288 INFO [network.TaskObserver] - Range: 3775
+2015-07-29 21:27:35,288 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:35,288 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:35,288 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:35,290 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:35,710 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:35,711 INFO [network.TaskObserver] - Range: 3825
+2015-07-29 21:27:35,711 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:35,711 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:35,711 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:35,711 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:35,787 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:35,788 INFO [network.TaskObserver] - Range: 3750
+2015-07-29 21:27:35,788 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:35,788 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:35,788 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:35,789 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:36,211 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:36,212 INFO [network.TaskObserver] - Range: 3800
+2015-07-29 21:27:36,212 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:36,212 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:36,212 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:36,213 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:36,711 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:36,712 INFO [network.TaskObserver] - Range: 3775
+2015-07-29 21:27:36,712 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:36,713 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:36,713 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:36,713 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:37,213 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:37,214 INFO [network.TaskObserver] - Range: 3750
+2015-07-29 21:27:37,214 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:37,214 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:37,215 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:37,215 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:37,287 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:37,288 INFO [network.TaskObserver] - Range: 3975
+2015-07-29 21:27:37,288 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:37,289 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:37,289 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:37,289 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:37,787 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:37,788 INFO [network.TaskObserver] - Range: 3950
+2015-07-29 21:27:37,788 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:37,789 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:37,789 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:37,789 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:38,287 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:38,288 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:27:38,288 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:38,288 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:38,289 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:38,289 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:38,787 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:38,788 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:27:38,788 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:38,788 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:38,789 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:38,789 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:39,287 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:39,288 INFO [network.TaskObserver] - Range: 3875
+2015-07-29 21:27:39,288 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:39,288 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:39,289 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:39,289 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:27:39,787 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:27:39,788 INFO [network.TaskObserver] - Range: 3850
+2015-07-29 21:27:39,788 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:27:39,788 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:27:39,789 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:27:39,789 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:01,076 INFO [application.Master] - Launch
+2015-07-29 21:40:02,057 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 21:40:04,274 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 21:40:04,276 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 21:40:04,343 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 21:40:04,356 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 21:40:06,333 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 21:40:06,334 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 21:40:06,334 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 21:40:06,334 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 21:40:06,334 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 21:40:06,334 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64406
+2015-07-29 21:40:06,336 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 21:40:06,337 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 21:40:06,338 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:06,458 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 21:40:06,464 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 21:40:06,465 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 21:40:06,466 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 21:40:06,466 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 21:40:06,469 INFO [network.TaskObserver] - Range: 3800
+2015-07-29 21:40:06,469 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:06,469 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:06,470 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:06,471 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:06,471 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:06,471 INFO [network.TaskObserver] - Range: 3775
+2015-07-29 21:40:06,471 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:06,472 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:06,472 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:06,472 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:06,473 INFO [network.TaskObserver] - Range: 3750
+2015-07-29 21:40:06,473 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:06,473 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:06,473 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:06,473 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:06,474 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:06,474 INFO [network.TaskObserver] - Range: 3975
+2015-07-29 21:40:06,474 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:06,474 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:06,474 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:06,475 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:06,475 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:06,706 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:06,707 INFO [network.TaskObserver] - Range: 3950
+2015-07-29 21:40:06,707 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:06,707 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:06,707 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:06,707 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:07,207 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:07,208 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:40:07,209 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:07,209 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:07,209 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:07,210 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:07,708 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:07,709 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:40:07,709 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:07,709 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:07,710 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:07,710 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:08,209 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:08,210 INFO [network.TaskObserver] - Range: 3875
+2015-07-29 21:40:08,210 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:08,210 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:08,211 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:08,211 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:08,709 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:08,711 INFO [network.TaskObserver] - Range: 3850
+2015-07-29 21:40:08,711 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:08,711 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:08,711 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:08,712 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:09,210 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:09,212 INFO [network.TaskObserver] - Range: 3825
+2015-07-29 21:40:09,212 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:09,212 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:09,212 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:09,213 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:09,711 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:09,712 INFO [network.TaskObserver] - Range: 3800
+2015-07-29 21:40:09,712 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:09,712 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:09,712 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:09,712 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:10,214 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:10,215 INFO [network.TaskObserver] - Range: 3775
+2015-07-29 21:40:10,215 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:10,215 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:10,215 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:10,216 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:10,712 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:10,714 INFO [network.TaskObserver] - Range: 3750
+2015-07-29 21:40:10,714 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:10,715 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:10,715 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:10,715 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:11,215 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:11,216 INFO [network.TaskObserver] - Range: 3975
+2015-07-29 21:40:11,216 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:11,216 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:11,217 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:11,217 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:11,715 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:11,716 INFO [network.TaskObserver] - Range: 3950
+2015-07-29 21:40:11,717 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:11,717 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:11,717 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:11,718 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:12,215 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:12,217 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:40:12,217 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:12,217 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:12,217 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:12,218 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:12,718 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:12,720 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:40:12,720 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:12,720 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:12,720 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:12,721 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:13,220 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:13,221 INFO [network.TaskObserver] - Range: 3875
+2015-07-29 21:40:13,221 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:13,221 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:13,222 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:13,222 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:13,722 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:13,724 INFO [network.TaskObserver] - Range: 3850
+2015-07-29 21:40:13,724 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:13,724 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:13,724 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:13,725 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:14,222 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:14,223 INFO [network.TaskObserver] - Range: 3825
+2015-07-29 21:40:14,223 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:14,223 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:14,224 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:14,224 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:14,723 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:14,724 INFO [network.TaskObserver] - Range: 3800
+2015-07-29 21:40:14,724 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:14,724 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:14,724 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:14,724 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:15,223 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:15,224 INFO [network.TaskObserver] - Range: 3775
+2015-07-29 21:40:15,225 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:15,225 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:15,225 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:15,225 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:15,724 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:15,724 INFO [network.TaskObserver] - Range: 3750
+2015-07-29 21:40:15,725 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:15,725 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:15,725 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:15,725 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:16,227 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:16,228 INFO [network.TaskObserver] - Range: 3975
+2015-07-29 21:40:16,229 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:16,229 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:16,229 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:16,229 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:16,728 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:16,729 INFO [network.TaskObserver] - Range: 3950
+2015-07-29 21:40:16,729 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:16,729 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:16,729 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:16,730 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:17,229 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:17,230 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:40:17,230 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:17,230 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:17,231 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:17,231 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:40:17,730 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:40:17,731 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:40:17,731 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:40:17,731 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:40:17,731 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:40:17,732 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:49:41,228 INFO [application.Master] - Launch
+2015-07-29 21:49:42,128 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 21:49:45,592 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 21:49:58,867 INFO [application.Master] - Launch
+2015-07-29 21:49:59,779 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 21:50:02,563 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 21:50:02,564 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 21:50:02,610 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 21:50:02,616 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 21:50:04,550 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 21:50:04,550 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 21:50:04,550 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 21:50:04,550 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 21:50:04,550 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 21:50:04,550 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 49965
+2015-07-29 21:50:04,553 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 21:50:04,553 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 21:50:04,553 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 21:50:04,555 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 21:50:04,556 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 21:50:04,555 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 21:50:04,555 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 21:50:22,091 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:50:22,102 INFO [network.TaskObserver] - Range: 3975
+2015-07-29 21:50:22,102 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:50:22,102 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:50:22,103 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:50:22,103 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:50:22,591 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:50:22,592 INFO [network.TaskObserver] - Range: 3950
+2015-07-29 21:50:22,592 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:50:22,592 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:50:22,595 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:50:22,596 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:50:23,091 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:50:23,092 INFO [network.TaskObserver] - Range: 3925
+2015-07-29 21:50:23,092 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:50:23,092 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:50:23,092 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:50:23,093 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:50:23,591 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:50:23,593 INFO [network.TaskObserver] - Range: 3900
+2015-07-29 21:50:23,593 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:50:23,593 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:50:23,594 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:50:23,594 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:50:24,094 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:50:24,095 INFO [network.TaskObserver] - Range: 3875
+2015-07-29 21:50:24,095 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:50:24,095 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:50:24,095 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:50:24,095 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:50:24,598 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:50:24,599 INFO [network.TaskObserver] - Range: 3850
+2015-07-29 21:50:24,599 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:50:24,599 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:50:24,599 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:50:24,600 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:50:25,097 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:50:25,098 INFO [network.TaskObserver] - Range: 3825
+2015-07-29 21:50:25,098 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:50:25,098 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:50:25,098 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:50:25,098 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:50:25,598 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:50:25,598 INFO [network.TaskObserver] - Range: 3800
+2015-07-29 21:50:25,598 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:50:25,599 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:50:25,599 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:50:25,600 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:50:26,100 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:50:26,101 INFO [network.TaskObserver] - Range: 3775
+2015-07-29 21:50:26,101 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:50:26,101 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:50:26,101 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:50:26,102 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:50:26,604 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:50:26,604 INFO [network.TaskObserver] - Range: 3750
+2015-07-29 21:50:26,605 INFO [network.TaskObserver] - Az: 1745
+2015-07-29 21:50:26,605 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:50:26,605 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:50:26,605 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:50:27,112 INFO [network.TaskObserver] - UDP Server Data received: 2048
+2015-07-29 21:50:27,114 INFO [network.TaskObserver] - X: 690
+2015-07-29 21:50:27,115 INFO [network.TaskObserver] - Y: 3914
+2015-07-29 21:50:27,115 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 21:50:27,115 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 21:50:27,115 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 21:59:11,733 INFO [application.Master] - Launch
+2015-07-29 21:59:12,617 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 21:59:14,953 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 21:59:14,953 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 21:59:15,004 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 21:59:15,010 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 21:59:17,000 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 21:59:17,000 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 21:59:17,000 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 21:59:17,000 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 21:59:17,000 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 21:59:17,000 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 50000
+2015-07-29 21:59:17,003 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 21:59:17,003 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 21:59:17,003 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 21:59:17,004 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 21:59:17,004 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 21:59:17,004 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 21:59:17,004 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 22:02:27,684 INFO [application.Master] - Launch
+2015-07-29 22:02:28,710 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 22:02:31,374 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 22:02:31,375 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 22:02:31,419 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 22:02:31,426 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 22:02:33,400 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 22:02:33,400 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 22:02:33,401 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 22:02:33,401 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 22:02:33,401 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 22:02:33,402 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 55900
+2015-07-29 22:02:33,406 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 22:02:33,406 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 22:02:33,406 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 22:02:33,406 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 22:02:33,407 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 22:02:33,406 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 22:02:33,406 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 22:04:00,529 INFO [application.Master] - Launch
+2015-07-29 22:04:01,618 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 22:04:04,369 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 22:04:04,370 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 22:04:04,421 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 22:04:04,428 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 22:04:06,467 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 22:04:06,467 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 22:04:06,467 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 22:04:06,467 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 22:04:06,467 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 22:04:06,467 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 55908
+2015-07-29 22:04:06,470 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 22:04:06,470 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 22:04:06,470 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 22:04:06,471 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 22:04:06,471 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 22:04:06,471 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 22:04:06,470 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 22:04:17,277 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:04:17,279 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:04:17,905 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:04:17,909 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:04:18,575 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:04:18,578 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:04:18,583 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:04:18,588 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:05:25,551 INFO [application.Master] - Launch
+2015-07-29 22:05:26,462 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 22:05:29,666 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 22:05:29,667 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 22:05:29,734 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 22:05:29,741 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 22:05:31,706 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 22:05:31,706 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 22:05:31,706 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 22:05:31,707 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 22:05:31,707 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 22:05:31,707 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 55911
+2015-07-29 22:05:31,709 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 22:05:31,710 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 22:05:31,710 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 22:05:31,710 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 22:05:31,711 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 22:05:31,711 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 22:05:31,711 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 22:32:26,364 INFO [application.Master] - Launch
+2015-07-29 22:32:27,296 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 22:32:32,048 INFO [application.SettingsController] - Preferences Dialog Opened
+2015-07-29 22:32:34,544 INFO [application.SettingsController] - Preference Dialog Closed
+2015-07-29 22:32:35,646 INFO [application.SettingsController] - Settings Dialog Opened
+2015-07-29 22:32:52,152 INFO [application.SettingsController] - Setting Dialog Closed
+2015-07-29 22:32:54,641 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 22:34:30,751 INFO [application.Master] - Launch
+2015-07-29 22:34:31,662 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 22:34:34,115 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 22:34:34,116 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 22:34:34,158 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 22:34:34,166 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 22:34:36,148 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 22:34:36,148 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 22:34:36,149 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 22:34:36,149 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 22:34:36,149 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 22:34:36,149 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 53136
+2015-07-29 22:34:36,151 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 22:34:36,152 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 22:34:36,152 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 22:34:36,153 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 22:34:36,153 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 22:34:36,153 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 22:34:36,153 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 22:35:01,146 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:353)
+	at application.FXMLController.menuCloseStage(FXMLController.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.control.MenuItem.fire(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$341(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer$$Lambda$311/1425191326.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/246230045.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-07-29 22:35:01,157 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 22:35:32,300 INFO [application.Master] - Launch
+2015-07-29 22:35:33,196 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 22:35:35,487 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 22:35:35,488 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 22:35:35,536 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 22:35:35,550 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 22:35:37,443 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 22:35:37,443 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 22:35:37,443 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 22:35:37,444 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 22:35:37,444 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 22:35:37,444 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 53139
+2015-07-29 22:35:37,558 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 22:35:37,560 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 22:35:37,560 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 22:35:37,560 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 22:35:37,561 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 22:35:37,561 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 22:35:37,561 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 22:35:41,752 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:353)
+	at application.FXMLController.menuCloseStage(FXMLController.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.control.MenuItem.fire(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$341(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer$$Lambda$309/2137954110.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/648164965.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-07-29 22:35:41,766 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 22:51:32,421 INFO [application.Master] - Launch
+2015-07-29 22:51:33,360 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 22:51:35,707 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 22:51:35,708 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 22:51:35,756 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 22:51:35,767 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 22:51:37,822 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 22:51:37,822 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 22:51:37,822 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 22:51:37,822 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 22:51:37,823 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 22:51:37,823 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64308
+2015-07-29 22:51:37,825 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 22:51:37,825 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 22:51:37,825 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 22:51:37,826 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 22:51:37,826 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 22:51:37,827 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 22:51:37,827 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 22:51:41,578 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:51:41,596 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:51:43,769 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:51:43,771 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:51:43,898 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:51:43,901 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:51:45,407 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:51:45,410 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:54:44,323 INFO [application.Master] - Launch
+2015-07-29 22:54:45,260 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 22:54:47,360 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 22:54:47,361 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 22:54:47,410 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 22:54:47,420 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 22:54:49,532 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 22:54:49,532 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 22:54:49,532 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 22:54:49,532 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 22:54:49,532 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 22:54:49,533 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64313
+2015-07-29 22:54:49,535 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 22:54:49,536 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 22:54:49,536 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 22:54:49,536 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 22:54:49,536 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 22:54:49,536 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 22:54:49,536 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 22:54:54,091 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:353)
+	at application.FXMLController.menuCloseStage(FXMLController.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.control.MenuItem.fire(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$341(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer$$Lambda$309/2003481943.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/246230045.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-07-29 22:54:54,104 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 22:55:57,262 INFO [application.Master] - Launch
+2015-07-29 22:55:58,256 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 22:56:00,441 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 22:56:00,442 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 22:56:00,493 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 22:56:00,501 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 22:56:01,789 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:01,798 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:02,825 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 22:56:02,825 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 22:56:02,826 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 22:56:02,826 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 22:56:02,826 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 22:56:02,826 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64318
+2015-07-29 22:56:02,828 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 22:56:02,829 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 22:56:02,829 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 22:56:02,829 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 22:56:02,829 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 22:56:02,830 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 22:56:02,830 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 22:56:06,579 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:06,581 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:11,293 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:11,299 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:14,049 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:14,055 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:14,128 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:14,156 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:16,714 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:16,731 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:20,969 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:20,973 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:24,673 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:24,675 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:26,137 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:26,138 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:27,908 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:27,909 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:33,722 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:33,724 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:36,613 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:36,614 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:46,241 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:56:46,242 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:56:49,716 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:353)
+	at application.FXMLController.menuCloseStage(FXMLController.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.control.MenuItem.fire(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$341(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer$$Lambda$309/1145059848.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/1571776329.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-07-29 22:56:49,728 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 22:57:18,180 INFO [application.Master] - Launch
+2015-07-29 22:57:19,062 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 22:57:21,656 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 22:57:21,656 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 22:57:21,697 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 22:57:21,704 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 22:57:23,752 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 22:57:23,752 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 22:57:23,752 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 22:57:23,752 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 22:57:23,752 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 22:57:23,753 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64321
+2015-07-29 22:57:23,755 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 22:57:23,755 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 22:57:23,756 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 22:57:23,756 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 22:57:23,756 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 22:57:23,756 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 22:57:23,756 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 22:57:25,938 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 22:57:25,945 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 22:57:28,208 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:353)
+	at application.FXMLController.menuCloseStage(FXMLController.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.control.MenuItem.fire(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$341(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer$$Lambda$309/537065511.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/246230045.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-07-29 22:57:28,216 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 22:59:43,201 INFO [application.Master] - Launch
+2015-07-29 22:59:44,125 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 22:59:46,474 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 22:59:46,475 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 22:59:46,518 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 22:59:46,525 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 22:59:48,650 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 22:59:48,651 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 22:59:48,651 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 22:59:48,651 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 22:59:48,651 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 22:59:48,651 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64326
+2015-07-29 22:59:48,653 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 22:59:48,654 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 22:59:48,654 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 22:59:48,654 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 22:59:48,654 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 22:59:48,654 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 22:59:48,654 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:01:56,537 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:353)
+	at application.FXMLController.menuCloseStage(FXMLController.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.control.MenuItem.fire(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$341(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer$$Lambda$310/1120582336.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/648164965.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-07-29 23:01:56,549 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 23:02:11,082 INFO [application.Master] - Launch
+2015-07-29 23:02:12,006 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:02:14,693 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:02:14,694 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:02:14,749 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:02:14,755 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:02:16,606 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:02:16,606 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:02:16,606 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:02:16,606 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:02:16,606 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:02:16,606 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64339
+2015-07-29 23:02:16,609 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:02:16,609 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:02:16,609 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:02:16,609 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:02:16,610 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:02:16,610 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:02:16,610 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:02:54,017 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 23:02:54,019 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 23:02:54,094 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 23:02:54,097 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 23:02:56,054 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 23:02:56,059 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 23:02:59,928 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 23:02:59,931 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 23:03:00,076 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 23:03:00,079 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 23:03:03,492 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-07-29 23:03:03,495 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-07-29 23:03:07,917 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:353)
+	at application.FXMLController.menuCloseStage(FXMLController.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.control.MenuItem.fire(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$341(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer$$Lambda$310/1603765855.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/912939273.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-07-29 23:03:07,932 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 23:05:03,754 INFO [application.Master] - Launch
+2015-07-29 23:05:04,644 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:05:07,174 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:05:07,175 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:05:07,229 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:05:07,237 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:05:09,275 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:05:09,275 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:05:09,275 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:05:09,275 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:05:09,275 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:05:09,276 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64364
+2015-07-29 23:05:09,278 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:05:09,279 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:05:09,279 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:05:09,279 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:05:09,279 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:05:09,280 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:05:09,281 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:05:09,281 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:05:09,419 INFO [network.TaskObserver] - X: 690
+2015-07-29 23:05:09,420 INFO [network.TaskObserver] - Y: 3914
+2015-07-29 23:05:09,420 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:05:09,421 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:05:09,422 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:05:46,964 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-07-29 23:05:46,969 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 23:07:12,698 INFO [application.Master] - Launch
+2015-07-29 23:07:13,615 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:07:15,714 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:07:15,714 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:07:15,785 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:07:15,795 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:07:18,316 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:07:18,316 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:07:18,316 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:07:18,316 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:07:18,316 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:07:18,317 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64372
+2015-07-29 23:07:18,320 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:07:18,321 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:07:18,321 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:07:18,321 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:07:18,322 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:07:18,322 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:07:18,323 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:07:18,342 INFO [model.DataObserver] - Range: 3900
+2015-07-29 23:07:18,343 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:07:18,344 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:07:18,344 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:07:18,346 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:07:18,346 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:07:18,346 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:07:18,347 INFO [model.DataObserver] - Range: 3875
+2015-07-29 23:07:18,347 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:07:18,347 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:07:18,347 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:07:18,348 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:07:18,348 INFO [model.DataObserver] - Range: 3850
+2015-07-29 23:07:18,349 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:07:18,349 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:07:18,349 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:07:18,350 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:07:18,350 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:07:18,350 INFO [model.DataObserver] - Range: 3825
+2015-07-29 23:07:18,351 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:07:18,352 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:07:18,353 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:07:18,353 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:07:18,353 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:07:18,354 INFO [model.DataObserver] - Range: 3800
+2015-07-29 23:07:18,354 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:07:18,355 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:07:18,355 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:07:18,356 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:07:18,358 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:07:18,558 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:07:18,559 INFO [model.DataObserver] - Range: 3775
+2015-07-29 23:07:18,559 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:07:18,559 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:07:18,560 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:07:18,561 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:07:19,058 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:07:19,061 INFO [model.DataObserver] - Range: 3750
+2015-07-29 23:07:19,061 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:07:19,061 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:07:19,061 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:07:19,062 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:07:19,564 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:07:19,567 INFO [network.TaskObserver] - X: 690
+2015-07-29 23:07:19,567 INFO [network.TaskObserver] - Y: 3914
+2015-07-29 23:07:19,567 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:07:19,568 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:07:19,569 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:09:16,681 INFO [application.Master] - Launch
+2015-07-29 23:09:17,589 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:09:19,885 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:09:19,885 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:09:19,953 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:09:19,960 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:09:22,191 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:09:22,191 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:09:22,191 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:09:22,191 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:09:22,191 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:09:22,192 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64392
+2015-07-29 23:09:22,196 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:09:22,197 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:09:22,198 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:09:22,198 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:09:22,199 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:09:22,200 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:09:22,200 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:09:24,958 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:09:24,978 INFO [model.DataObserver] - Range: 3975
+2015-07-29 23:09:24,978 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:09:24,978 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:09:24,979 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:09:24,980 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:09:25,460 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:09:25,461 INFO [model.DataObserver] - Range: 3950
+2015-07-29 23:09:25,462 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:09:25,462 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:09:25,462 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:09:25,464 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:09:25,961 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:09:25,963 INFO [model.DataObserver] - Range: 3925
+2015-07-29 23:09:25,963 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:09:25,963 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:09:25,964 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:09:25,965 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:09:26,462 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:09:26,463 INFO [model.DataObserver] - Range: 3900
+2015-07-29 23:09:26,464 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:09:26,464 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:09:26,464 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:09:26,467 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:09:26,963 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:09:26,967 INFO [model.DataObserver] - Range: 3875
+2015-07-29 23:09:26,967 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:09:26,968 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:09:26,968 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:09:26,970 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:09:27,466 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:09:27,468 INFO [model.DataObserver] - Range: 3850
+2015-07-29 23:09:27,468 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:09:27,469 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:09:27,469 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:09:27,471 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:09:27,967 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:09:28,005 INFO [model.DataObserver] - Range: 3825
+2015-07-29 23:09:28,006 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:09:28,006 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:09:28,007 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:09:28,009 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:09:28,468 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:09:28,469 INFO [model.DataObserver] - Range: 3800
+2015-07-29 23:09:28,469 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:09:28,470 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:09:28,470 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:09:28,481 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:09:28,969 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:09:28,971 INFO [model.DataObserver] - Range: 3775
+2015-07-29 23:09:28,971 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:09:28,971 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:09:28,972 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:09:28,974 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:09:29,470 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:09:29,471 INFO [model.DataObserver] - Range: 3750
+2015-07-29 23:09:29,471 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:09:29,472 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:09:29,472 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:09:29,474 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:09:29,979 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:09:30,013 INFO [network.TaskObserver] - X: 690
+2015-07-29 23:09:30,014 INFO [network.TaskObserver] - Y: 3914
+2015-07-29 23:09:30,014 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:09:30,014 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:09:30,024 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:12:34,071 INFO [application.Master] - Launch
+2015-07-29 23:12:34,982 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:12:37,173 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:12:37,174 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:12:37,231 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:12:37,239 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:12:39,230 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:12:39,230 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:12:39,230 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:12:39,230 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:12:39,230 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:12:39,230 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64402
+2015-07-29 23:12:39,232 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:12:39,233 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:12:39,233 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:12:39,233 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:12:39,233 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:12:39,233 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:12:39,233 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:13:13,286 INFO [application.Master] - Launch
+2015-07-29 23:13:14,384 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:13:16,981 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:13:16,982 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:13:17,041 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:13:17,049 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:13:19,318 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:13:19,318 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:13:19,318 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:13:19,318 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:13:19,318 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:13:19,318 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64403
+2015-07-29 23:13:19,321 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:13:19,321 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:13:19,322 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:13:19,322 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:13:19,322 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:13:19,322 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:13:19,321 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:14:43,986 INFO [application.Master] - Launch
+2015-07-29 23:14:44,974 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:14:47,402 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:14:47,403 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:14:47,443 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:14:47,447 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:14:49,429 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:14:49,430 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:14:49,430 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:14:49,430 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:14:49,430 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:14:49,430 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64416
+2015-07-29 23:14:49,435 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:14:49,436 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:14:49,436 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:14:49,437 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:14:49,438 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:14:49,438 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:14:49,438 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:15:07,723 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:353)
+	at application.FXMLController.menuCloseStage(FXMLController.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.control.MenuItem.fire(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$341(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer$$Lambda$312/699134332.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/648164965.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-07-29 23:15:07,735 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 23:15:35,978 INFO [application.Master] - Launch
+2015-07-29 23:15:36,911 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:15:39,024 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:15:39,024 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:15:39,066 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:15:39,071 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:15:40,950 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:15:40,950 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:15:40,950 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:15:40,950 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:15:40,950 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:15:40,950 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 64424
+2015-07-29 23:15:40,953 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:15:40,953 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:15:40,953 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:15:40,954 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:15:40,955 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:15:40,955 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:15:40,955 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:15:58,291 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:353)
+	at application.FXMLController.menuCloseStage(FXMLController.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.control.MenuItem.fire(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$341(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer$$Lambda$312/383349500.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/648164965.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-07-29 23:15:58,304 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 23:18:03,733 INFO [application.Master] - Launch
+2015-07-29 23:18:04,573 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:18:06,730 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:18:06,732 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:18:06,781 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:18:06,787 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:18:08,783 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:18:08,783 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:18:08,783 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:18:08,783 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:18:08,783 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:18:08,783 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 60785
+2015-07-29 23:18:08,785 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:18:08,786 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:18:08,786 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:18:08,786 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:18:08,786 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:18:08,786 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:18:08,787 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:18:27,384 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:353)
+	at application.FXMLController.menuCloseStage(FXMLController.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.control.MenuItem.fire(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$341(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer$$Lambda$310/1698946313.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/246230045.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-07-29 23:18:27,390 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 23:19:55,078 INFO [application.Master] - Launch
+2015-07-29 23:19:55,966 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:20:00,179 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:20:00,180 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:20:00,237 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:20:00,243 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:20:02,217 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:20:02,218 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:20:02,218 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:20:02,218 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:20:02,218 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:20:02,218 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 60793
+2015-07-29 23:20:02,220 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:20:02,221 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:20:02,221 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:20:02,221 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:20:02,222 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:20:02,222 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:20:02,222 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:20:26,663 INFO [application.Master] - Launch
+2015-07-29 23:20:27,521 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:20:30,032 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:20:30,033 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:20:30,084 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:20:30,092 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:20:32,104 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:20:32,104 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:20:32,104 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:20:32,104 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:20:32,104 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:20:32,105 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 60799
+2015-07-29 23:20:32,108 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:20:32,108 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:20:32,109 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:20:32,109 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:20:32,109 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:20:32,109 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:20:32,109 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:20:47,540 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:20:47,584 INFO [model.DataObserver] - Range: 3975
+2015-07-29 23:20:47,584 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:20:47,584 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:20:47,585 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:20:47,586 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:20:48,086 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:20:48,088 INFO [model.DataObserver] - Range: 3950
+2015-07-29 23:20:48,088 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:20:48,088 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:20:48,088 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:20:48,089 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:20:48,587 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:20:48,588 INFO [model.DataObserver] - Range: 3925
+2015-07-29 23:20:48,589 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:20:48,589 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:20:48,590 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:20:48,591 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:20:49,088 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:20:49,090 INFO [model.DataObserver] - Range: 3900
+2015-07-29 23:20:49,090 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:20:49,090 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:20:49,090 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:20:49,092 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:20:49,589 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:20:49,590 INFO [model.DataObserver] - Range: 3875
+2015-07-29 23:20:49,591 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:20:49,591 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:20:49,591 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:20:49,593 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:20:50,090 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:20:50,092 INFO [model.DataObserver] - Range: 3850
+2015-07-29 23:20:50,092 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:20:50,092 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:20:50,093 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:20:50,095 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:20:50,596 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:20:50,597 INFO [model.DataObserver] - Range: 3825
+2015-07-29 23:20:50,597 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:20:50,598 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:20:50,598 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:20:50,600 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:20:51,101 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:20:51,102 INFO [model.DataObserver] - Range: 3800
+2015-07-29 23:20:51,102 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:20:51,102 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:20:51,102 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:20:51,103 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:20:51,604 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:20:51,606 INFO [model.DataObserver] - Range: 3775
+2015-07-29 23:20:51,606 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:20:51,606 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:20:51,606 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:20:51,616 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:20:52,104 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:20:52,105 INFO [model.DataObserver] - Range: 3750
+2015-07-29 23:20:52,106 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:20:52,106 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:20:52,106 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:20:52,109 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:20:52,610 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:20:52,615 INFO [network.TaskObserver] - X: 690
+2015-07-29 23:20:52,616 INFO [network.TaskObserver] - Y: 3914
+2015-07-29 23:20:52,616 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:20:52,616 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:20:52,619 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:21:00,432 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 23:22:27,208 INFO [application.Master] - Launch
+2015-07-29 23:22:28,213 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:22:30,436 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:22:30,437 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:22:30,485 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:22:30,492 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:22:32,399 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:22:32,399 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:22:32,399 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:22:32,399 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:22:32,399 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:22:32,399 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 60812
+2015-07-29 23:22:32,402 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:22:32,402 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:22:32,402 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:22:32,402 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:22:32,403 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:22:32,521 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:22:32,521 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:22:51,149 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:353)
+	at application.FXMLController.menuCloseStage(FXMLController.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.control.MenuItem.fire(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$341(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer$$Lambda$310/2081961098.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/763001823.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-07-29 23:22:51,167 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 23:23:06,785 INFO [application.Master] - Launch
+2015-07-29 23:23:07,676 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:23:10,110 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:23:10,111 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:23:10,171 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:23:10,179 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:23:12,223 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:23:12,224 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:23:12,224 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:23:12,224 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:23:12,224 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:23:12,224 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 60813
+2015-07-29 23:23:12,226 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:23:12,227 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:23:12,227 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:23:12,227 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:23:12,227 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:23:12,227 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:23:12,227 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:23:45,979 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:353)
+	at application.FXMLController.menuCloseStage(FXMLController.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.control.MenuItem.fire(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.doSelect(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer.lambda$createChildren$341(Unknown Source)
+	at com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer$$Lambda$310/1001496191.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/290175400.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-07-29 23:23:45,987 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 23:24:09,714 INFO [application.Master] - Launch
+2015-07-29 23:24:10,614 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:24:12,995 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:24:12,996 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:24:13,065 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:24:13,072 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:24:15,111 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:24:15,111 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:24:15,111 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:24:15,111 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:24:15,111 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:24:15,111 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 60826
+2015-07-29 23:24:15,114 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:24:15,116 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:24:15,116 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:24:15,117 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:24:15,117 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:24:15,117 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:24:15,117 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:24:28,782 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 23:25:39,200 INFO [application.Master] - Launch
+2015-07-29 23:25:40,121 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:25:42,403 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:25:42,404 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:25:42,458 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:25:42,466 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:25:44,470 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:25:44,470 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:25:44,470 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:25:44,470 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:25:44,470 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:25:44,471 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 60839
+2015-07-29 23:25:44,473 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:25:44,473 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:25:44,473 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:25:44,474 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:25:44,474 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:25:44,474 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:25:44,474 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:25:56,287 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-07-29 23:27:58,786 INFO [application.Master] - Launch
+2015-07-29 23:27:59,852 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:28:02,144 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:28:02,145 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:28:02,193 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:28:02,200 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:28:04,265 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:28:04,265 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:28:04,265 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:28:04,265 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:28:04,265 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:28:04,266 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 60851
+2015-07-29 23:28:04,268 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:28:04,269 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:28:04,269 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:28:04,269 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:28:04,269 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:28:04,269 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:28:04,270 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:31:53,578 INFO [application.Master] - Launch
+2015-07-29 23:31:54,444 INFO [model.AppConfig] - App Config Instantiated
+2015-07-29 23:31:56,553 INFO [views.Console] - Enter Operator ID : 
+2015-07-29 23:31:56,554 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-07-29 23:31:56,611 INFO [application.FXMLController] - Top Chart initialization
+2015-07-29 23:31:56,619 INFO [application.FXMLController] - Bottom Chart initialization
+2015-07-29 23:31:58,574 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-07-29 23:31:58,574 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-07-29 23:31:58,575 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-07-29 23:31:58,575 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-07-29 23:31:58,575 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-07-29 23:31:58,575 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 60866
+2015-07-29 23:31:58,577 INFO [network.TaskObserver] - Starting All Threads
+2015-07-29 23:31:58,578 INFO [network.TaskObserver] - Starting Read Thread Az Plots Looper
+2015-07-29 23:31:58,578 INFO [network.TaskObserver] - Starting Read Thread El Plots Looper
+2015-07-29 23:31:58,578 INFO [network.TaskObserver] - Network Task Launched
+2015-07-29 23:31:58,578 INFO [network.TaskObserver] - Starting Read Thread Video Looper
+2015-07-29 23:31:58,579 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:31:58,579 INFO [network.TaskObserver] - Starting Read Thread Az Tracks Looper
+2015-07-29 23:31:58,720 INFO [network.TaskObserver] - Starting Read Thread El Tracks Looper
+2015-07-29 23:31:58,732 INFO [model.DataObserver] - Range: 3925
+2015-07-29 23:31:58,732 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:31:58,733 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:31:58,734 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:31:58,734 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:31:58,734 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:31:58,735 INFO [model.DataObserver] - Range: 3900
+2015-07-29 23:31:58,735 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:31:58,735 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:31:58,735 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:31:58,736 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:31:58,736 INFO [model.DataObserver] - Range: 3875
+2015-07-29 23:31:58,737 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:31:58,737 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:31:58,737 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:31:58,737 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:31:58,738 INFO [model.DataObserver] - Range: 3850
+2015-07-29 23:31:58,738 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:31:58,739 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:31:58,739 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:31:58,739 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:31:58,739 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:31:58,740 INFO [model.DataObserver] - Range: 3825
+2015-07-29 23:31:58,740 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:31:58,741 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:31:58,741 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:31:58,743 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:31:58,744 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:31:58,746 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:31:59,166 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:31:59,167 INFO [model.DataObserver] - Range: 3800
+2015-07-29 23:31:59,167 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:31:59,168 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:31:59,168 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:31:59,171 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:31:59,667 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:31:59,669 INFO [model.DataObserver] - Range: 3775
+2015-07-29 23:31:59,670 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:31:59,670 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:31:59,670 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:31:59,673 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:32:00,168 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:32:00,169 INFO [model.DataObserver] - Range: 3750
+2015-07-29 23:32:00,170 INFO [model.DataObserver] - Az: 1745
+2015-07-29 23:32:00,170 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:32:00,170 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:32:00,173 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:32:00,706 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-07-29 23:32:00,709 INFO [network.TaskObserver] - X: 690
+2015-07-29 23:32:00,709 INFO [network.TaskObserver] - Y: 3914
+2015-07-29 23:32:00,709 INFO [network.TaskObserver] - Server Data analyzed
+2015-07-29 23:32:00,709 INFO [application.FXMLController] - Setting Data Observer
+2015-07-29 23:32:00,711 INFO [application.FXMLController] - Canvas Objects Redrawn
+2015-07-29 23:32:25,237 INFO [application.FXMLController] - APPLICATION CLOSED

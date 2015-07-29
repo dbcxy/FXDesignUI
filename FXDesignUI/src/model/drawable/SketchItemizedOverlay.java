@@ -27,13 +27,11 @@ public class SketchItemizedOverlay extends ItemizedOverlay<OverlayItem> implemen
 		for(int i=0;i<size();i++) {
 			switch (mType) {
 			case TRACK:
-				Track track = (Track) getItem(i);
-				track.draw(gc);
+				((Track) getItem(i)).draw(gc);
 				break;
 				
 			case PLOT:
-				Plot plot = (Plot) getItem(i);
-				plot.draw(gc);
+				((Plot) getItem(i)).draw(gc);
 				break;
 				
 			case VIDEO:

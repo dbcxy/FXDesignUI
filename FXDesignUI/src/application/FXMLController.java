@@ -197,8 +197,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 				} catch (SocketException e) {
 					e.printStackTrace();
 				}
-	    	tTask.closeActiveConnection();
-	    	tTask.interrupt();
+//	    	tTask.closeActiveConnection();
+//	    	tTask.interrupt();
     	}
     	stage.close();
     	logger.info("APPLICATION CLOSED");
@@ -462,7 +462,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 		switch (valNM) {
 		case 40:
 			Constance.SCALE = " 40 "+Constance.UNITS.getLENGTH();
-			matrixRef.setMaxRange(40);
+			matrixRef.setVisibleRange(40);
 			btn_display40.setText(Constance.SCALE);
 			btn_display5.widgetSetVal(VAL.DEFAULT);
 			btn_display10.widgetSetVal(VAL.DEFAULT);
@@ -472,7 +472,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 			
 		case 20:
 			Constance.SCALE = " 20 "+Constance.UNITS.getLENGTH();
-			matrixRef.setMaxRange(20);
+			matrixRef.setVisibleRange(20);
 			btn_display20.setText(Constance.SCALE);
 			btn_display5.widgetSetVal(VAL.DEFAULT);
 			btn_display10.widgetSetVal(VAL.DEFAULT);
@@ -482,7 +482,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 			
 		case 10:
 			Constance.SCALE = " 10 "+Constance.UNITS.getLENGTH();
-			matrixRef.setMaxRange(10);
+			matrixRef.setVisibleRange(10);
 			btn_display10.setText(Constance.SCALE);
 			btn_display5.widgetSetVal(VAL.DEFAULT);
 			btn_display10.widgetSetVal(VAL.GREEN);
@@ -492,7 +492,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 			
 		case 5:
 			Constance.SCALE = " 5 "+Constance.UNITS.getLENGTH();
-			matrixRef.setMaxRange(5);
+			matrixRef.setVisibleRange(5);
 			btn_display5.setText(Constance.SCALE);
 			btn_display5.widgetSetVal(VAL.GREEN);
 			btn_display10.widgetSetVal(VAL.DEFAULT);
@@ -507,76 +507,75 @@ public class FXMLController implements Initializable,ILayoutParam{
     	mElevationChart.drawElevationLine();
     	mElevationChart.drawLandingStrip();
     	mElevationChart.drawRedDistanceLine();
-    	mElevationChart.drawDistanceGrid();
-    	
+    	mElevationChart.drawDistanceGrid();    	
     }
     
     private void drawTextTop(Canvas canvas) {
     	ElevationChart.drawText(canvas);
     }
     
-    private void updateObjects(Canvas canvas) {
-    	Track mTrack1 = new Track();
-    	Track mTrack2 = new Track();
-    	Track mTrack3 = new Track();
-    	Plot mPlot1 = new Plot();
-    	Plot mPlot2 = new Plot();
-    	GraphicsContext gc = canvas.getGraphicsContext2D();
-    	
-    	final double WIDTH_OFF = canvas.getWidth()-OFFSET;
-    	
-    	//update shape
-        DoubleProperty x  = new SimpleDoubleProperty();
-        DoubleProperty y  = new SimpleDoubleProperty();
-        AnimationTimer timer = new AnimationTimer() {
-            @Override
-            public void handle(long now) {
-            	canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
-            	mTrack1.setXY(x.doubleValue(), y.doubleValue());
-            	mTrack1.setText("AA10", "3200/100");
-//            	mTrack1.draw(gc);
-            	mTrack1.drawOnImage(canvas);
-            	
-            	mTrack2.setXY(x.doubleValue()-50, y.doubleValue()+50);
-            	mTrack2.setText("AA11", "32/10");
-//            	mTrack2.draw(gc);
-//            	mTrack2.drawOnImage(canvas);
-            	
-            	mTrack3.setXY( 350, 150);
-            	mTrack3.setText("ABC", "300/10");
-//            	mTrack3.draw(gc);
-//            	mTrack3.drawOnImage(canvas);
-            	
-            	mPlot1.setXY(x.doubleValue()-50, y.doubleValue()+50);
-            	mPlot1.setTitle("PLOT2");
-            	mPlot1.draw(gc);
-            	
-            	mPlot2.setXY(x.doubleValue()-30, y.doubleValue()+30);
-            	mPlot2.setTitle("PLOT2");
-            	mPlot2.draw(gc);
-            	
-            }
-        };
-        timer.start();
-        
-        Runnable mTask = new Runnable() {
-			        	
-			@Override
-			public void run() {
-				for(int i=0;i<WIDTH_OFF/2;i++){
-	                x.setValue(WIDTH_OFF-i);
-	                y.setValue(OFFSET+i);
-	                try {
-						Thread.sleep(50);//Update or refresh rate
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-        		}
-			}
-		};
-		Thread mThread = new Thread(mTask);
-		mThread.start();
-    }
+//    private void updateObjects(Canvas canvas) {
+//    	Track mTrack1 = new Track();
+//    	Track mTrack2 = new Track();
+//    	Track mTrack3 = new Track();
+//    	Plot mPlot1 = new Plot();
+//    	Plot mPlot2 = new Plot();
+//    	GraphicsContext gc = canvas.getGraphicsContext2D();
+//    	
+//    	final double WIDTH_OFF = canvas.getWidth()-OFFSET;
+//    	
+//    	//update shape
+//        DoubleProperty x  = new SimpleDoubleProperty();
+//        DoubleProperty y  = new SimpleDoubleProperty();
+//        AnimationTimer timer = new AnimationTimer() {
+//            @Override
+//            public void handle(long now) {
+//            	canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+//            	mTrack1.setXY(x.doubleValue(), y.doubleValue());
+//            	mTrack1.setText("AA10", "3200/100");
+////            	mTrack1.draw(gc);
+//            	mTrack1.drawOnImage(canvas);
+//            	
+//            	mTrack2.setXY(x.doubleValue()-50, y.doubleValue()+50);
+//            	mTrack2.setText("AA11", "32/10");
+////            	mTrack2.draw(gc);
+////            	mTrack2.drawOnImage(canvas);
+//            	
+//            	mTrack3.setXY( 350, 150);
+//            	mTrack3.setText("ABC", "300/10");
+////            	mTrack3.draw(gc);
+////            	mTrack3.drawOnImage(canvas);
+//            	
+//            	mPlot1.setXY(x.doubleValue()-50, y.doubleValue()+50);
+//            	mPlot1.setTitle("PLOT2");
+//            	mPlot1.draw(gc);
+//            	
+//            	mPlot2.setXY(x.doubleValue()-30, y.doubleValue()+30);
+//            	mPlot2.setTitle("PLOT2");
+//            	mPlot2.draw(gc);
+//            	
+//            }
+//        };
+//        timer.start();
+//        
+//        Runnable mTask = new Runnable() {
+//			        	
+//			@Override
+//			public void run() {
+//				for(int i=0;i<WIDTH_OFF/2;i++){
+//	                x.setValue(WIDTH_OFF-i);
+//	                y.setValue(OFFSET+i);
+//	                try {
+//						Thread.sleep(50);//Update or refresh rate
+//					} catch (InterruptedException e) {
+//						e.printStackTrace();
+//					}
+//        		}
+//			}
+//		};
+//		Thread mThread = new Thread(mTask);
+//		mThread.start();
+//    }
     
 	private void drawGraphBottom(Canvas canvas) {
 		mAzimuthChart = new AzimuthChart(canvas);
@@ -596,8 +595,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 		      
 	    	@Override 
 	    	public void run() {	
-	    		GraphicsContext gc = cTopL2.getGraphicsContext2D();
-	    		gc.clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
+	    		GraphicsContext gc = cBtmL2.getGraphicsContext2D();
+	    		gc.clearRect(0, 0, cBtmL2.getWidth(), cBtmL2.getHeight());
 	    		dataObserver.getTrackDataList().draw(gc);
 	    		dataObserver.getPlotDataList().draw(gc);
 	        	logger.info("Canvas Objects Redrawn");

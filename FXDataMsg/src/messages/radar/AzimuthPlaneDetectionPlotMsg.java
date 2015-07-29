@@ -1,9 +1,14 @@
 package messages.radar;
 
+import java.io.Serializable;
 import java.nio.ByteBuffer;
 
-public class AzimuthPlaneDetectionPlotMsg {
+public class AzimuthPlaneDetectionPlotMsg implements Serializable{
 
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 //	final static int MSG_SIZE = 40;//Allocating
 //	ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
 //	

@@ -37,15 +37,15 @@ public class ElevationChart extends GraphChart{
 	public void drawElevationLine() {
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(2);        
-        startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
+        startPoint = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
         Point pointCross = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -Constance.ELEVATION.USL_ANGLE);//cross line at 20 degrees
         Point pointFlat = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY(),matrixRef.getDrawableXArea(), -Constance.ELEVATION.LSL_ANGLE);//flat line
         gc.strokePolyline(new double[]{pointCross.getX(), startPoint.getX(), pointFlat.getX()},
                 new double[]{pointCross.getY(), startPoint.getY(), pointFlat.getY()}, 3);
         
         //calculation done for finding the X,Y point for range markers
-        for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
-        	Point point = matrixRef.toElevationPixels(matrixRef.getMinElevation(), i);
+        for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getVisibleRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
+        	Point point = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), i);
         	if(i==matrixRef.getTouchDown()){
         		double range = matrixRef.toRangePixels(Constance.ELEVATION.DH/Constance.RANGE_DISP);//range offset from TD (for red line)
         		myPoint p = new myPoint();
@@ -73,7 +73,7 @@ public class ElevationChart extends GraphChart{
 	public void drawRedDistanceLine() {
 		double range = matrixRef.toRangePixels(Constance.ELEVATION.DH/Constance.RANGE_DISP);//range offset from TD
 		
-		startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getTouchDown());
+		startPoint = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), matrixRef.getTouchDown());
 		endPoint.setX(crossPoints.get(1).X);
     	endPoint.setY(crossPoints.get(1).Y);
         
@@ -91,9 +91,9 @@ public class ElevationChart extends GraphChart{
         gc.setLineWidth(1);
 		
         //draw remaining lines
-        for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
+        for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getVisibleRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
         	
-        	startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), i);        	
+        	startPoint = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), i);        	
         	endPoint.setX(crossPoints.get(i).X);
         	endPoint.setY(crossPoints.get(i).Y);
             
@@ -119,8 +119,8 @@ public class ElevationChart extends GraphChart{
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(1);
         
-        startPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), matrixRef.getTouchDown());
-        endPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), centerDist-Constance.RANGE_DISP);
+        startPoint = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), matrixRef.getTouchDown());
+        endPoint = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), centerDist-Constance.RANGE_DISP);
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.ELEVATION.LAL_ANGLE));//below center line
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.ELEVATION.UAL_ANGLE));//above center line
         
@@ -131,7 +131,7 @@ public class ElevationChart extends GraphChart{
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -(Constance.ELEVATION.USaL_ANGLE));//dotted above line
         gc.setLineDashes(0);
         
-        endPoint = matrixRef.toElevationPixels(matrixRef.getMinElevation(), centerDist);
+        endPoint = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), centerDist);
         gc.setStroke(Color.RED);
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(), startPoint.getY(), endPoint.getX(), -Constance.ELEVATION.GLIDE_ANGLE);//center red line
 

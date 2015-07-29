@@ -4,6 +4,7 @@ import java.awt.BasicStroke;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
+import model.MatrixRef;
 import model.OverlayItem;
 import model.graph.ILayoutParam;
 import utils.ModelDrawing;
@@ -25,12 +26,11 @@ public class Track extends OverlayItem implements ILayoutParam{
 	private double azimuth;
 	private double range;
 	
-	public Track() {
-		this(null,null);
-	}
+	private boolean isVisibleX = false;
+	private boolean isVisibleY = false;
 	
-	public Track(final Double x, final Double y) {
-		super(x, y);
+	public Track() {
+		super(null,null);
 	}
 
 	public boolean isTextShown() {
@@ -41,17 +41,6 @@ public class Track extends OverlayItem implements ILayoutParam{
 		super.setTitle(name);
 		trackNumber = number;
 	}
-	
-	public void setElevationRange(double el, double r) {
-		elevation = el;
-		range = r;
-	}
-	
-	public void setAzimuthRange(double az, double r) {
-		azimuth = az;
-		range = r;
-	}
-	
 	
 	public double getElevation() {
 		return elevation;
@@ -76,25 +65,31 @@ public class Track extends OverlayItem implements ILayoutParam{
 	public void setRange(double range) {
 		this.range = range;
 	}
-
-	public void setXY(double x, double y) {
-		super.setX(x);
-		super.setY(y);
-	}
-	
-	
-	
 	
 	@Override
 	public double getX() {
-		double x = 350;
+		double x = super.getX();
+		if((x/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+			isVisibleX = true;
+			x = MatrixRef.getInstance().toRangePixels(x/1000);
+		}
 		return x;
 	}
 
 	@Override
 	public double getY() {
-
-		return 100;
+		double y = super.getY();
+//		if(y > 0) {
+//			if(y <= MatrixRef.getInstance().getVisibleRange()) {
+//				isVisibleY = true;
+//				y = MatrixRef.getInstance().toElevationPixels(y);
+//			}
+//		}
+		if(y > 0) {
+				isVisibleY = true;
+				y = MatrixRef.getInstance().toAzimuthPixels(y);
+		}
+		return y;
 	}
 
 	public void showText(boolean show) {		
@@ -115,16 +110,18 @@ public class Track extends OverlayItem implements ILayoutParam{
 
 	@Override
 	public void draw(GraphicsContext gc) {
-		gc.setFill(Color.BISQUE);
-    	gc.fillOval(getX()-OFFSET, getY()-OFFSET, HGAP, HGAP);
-    	gc.setStroke(Color.WHITE);
-    	gc.setLineWidth(2);
-    	gc.strokeOval(getX()-OFFSET, getY()-OFFSET, HGAP, HGAP);
-    	gc.strokeLine(getX(),getY()+HGAP,getX(),getY()-HGAP);
-    	gc.strokeLine(getX()+HGAP, getY(), getX()-HGAP, getY());
-    	
-    	if(isTextShown)
-			displayText(gc);
+		if(isVisibleX && isVisibleY) {
+			gc.setFill(Color.BISQUE);
+	    	gc.fillOval(getX()-OFFSET, getY()-OFFSET, HGAP, HGAP);
+	    	gc.setStroke(Color.WHITE);
+	    	gc.setLineWidth(2);
+	    	gc.strokeOval(getX()-OFFSET, getY()-OFFSET, HGAP, HGAP);
+	    	gc.strokeLine(getX(),getY()+HGAP,getX(),getY()-HGAP);
+	    	gc.strokeLine(getX()+HGAP, getY(), getX()-HGAP, getY());
+	    	
+	    	if(isTextShown)
+				displayText(gc);
+		}
 	}
 
 	public void drawOnImage(Canvas canvas) {

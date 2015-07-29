@@ -42,16 +42,16 @@ public class AzimuthChart extends GraphChart {
         gc.setLineWidth(2);
 
 		double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
-        startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getMinRange());
-        endPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getMaxRange()); 
+        startPoint = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getMinRange());
+        endPoint = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getVisibleRange()); 
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.LSL_ANGLE);//cross line at top az degrees
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.RSL_ANGLE);//cross line at bottom az degrees
         
         Point pointLeft = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.LSL_ANGLE);//cross line at 20 degrees
         Point pointRight = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.RSL_ANGLE);//flat line
         //calculation done for finding the X,Y point for range markers
-        for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
-        	Point point = matrixRef.toAzimuthPixels(matrixRef.getMinElevation(), i);
+        for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getVisibleRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
+        	Point point = matrixRef.toAzimuthRangePixels(matrixRef.getMinElevation(), i);
         	if(i==matrixRef.getTouchDown()){
         		double range = matrixRef.toRangePixels(Constance.ELEVATION.DH/Constance.RANGE_DISP);//range offset from TD (for red line)
         		myPoint p = new myPoint();
@@ -80,8 +80,8 @@ public class AzimuthChart extends GraphChart {
 	public void drawLandingStrip() {
 		double centerDist = Constance.ELEVATION.GLIDE_MAX_DIST-Constance.RANGE_DISP;
 		
-        startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
-        endPoint = matrixRef.toAzimuthPixels(midAzimuth, centerDist-Constance.RANGE_DISP);
+        startPoint = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getTouchDown());
+        endPoint = matrixRef.toAzimuthRangePixels(midAzimuth, centerDist-Constance.RANGE_DISP);
         
         //dotted line
         gc.setStroke(Color.CYAN);
@@ -92,7 +92,7 @@ public class AzimuthChart extends GraphChart {
         gc.setLineDashes(0);
         
         //solid line
-        endPoint = matrixRef.toAzimuthPixels(midAzimuth, centerDist);
+        endPoint = matrixRef.toAzimuthRangePixels(midAzimuth, centerDist);
         gc.setStroke(Color.CYAN);
         gc.setLineWidth(1);
 		double offsetLeftAzimuth = matrixRef.toRangePixels(Constance.AZIMUTH.LSaL/Constance.RANGE_DISP);
@@ -102,7 +102,7 @@ public class AzimuthChart extends GraphChart {
         Point offsetRight = new Point(offsetRightAzimuth,offsetRightAzimuth,offsetRightAzimuth, null);
         gc.strokeLine(startPoint.getX(), startPoint.getY()+offsetRight.getY(), endPoint.getX(),endPoint.getY()+offsetRight.getY());//below center line
         
-        endPoint = matrixRef.toAzimuthPixels(midAzimuth, centerDist+Constance.RANGE_DISP);
+        endPoint = matrixRef.toAzimuthRangePixels(midAzimuth, centerDist+Constance.RANGE_DISP);
         gc.setStroke(Color.RED);
         gc.strokeLine(startPoint.getX(), startPoint.getY(), endPoint.getX(),endPoint.getY());//center line
 
@@ -111,7 +111,7 @@ public class AzimuthChart extends GraphChart {
 	public void drawRedDistanceLine() {
 		double range = matrixRef.toRangePixels(Constance.ELEVATION.DH/Constance.RANGE_DISP);
 		
-		startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
+		startPoint = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getTouchDown());
 		myPoint ePoint = crossPoints.get(1);
         
 		//dotted red line
@@ -127,13 +127,13 @@ public class AzimuthChart extends GraphChart {
 
 	public void drawDistanceGrid() {
 		
-		startPoint = matrixRef.toAzimuthPixels(midAzimuth, matrixRef.getTouchDown());
+		startPoint = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getTouchDown());
 		gc.setLineWidth(1);
 
 		//remaining Lines		
-        for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getMaxRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
+        for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getVisibleRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
         	
-        	startPoint = matrixRef.toAzimuthPixels(midAzimuth, i);
+        	startPoint = matrixRef.toAzimuthRangePixels(midAzimuth, i);
         	myPoint ePoint = crossPoints.get(i);
         	if(ePoint.leftY==ePoint.rightY)
         		ePoint.rightY=(int) matrixRef.getActualYdimen();

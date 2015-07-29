@@ -1,8 +1,11 @@
 package messages.radar;
 
+import java.io.Serializable;
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.List;
 
-public class AzimuthPlanePlotsPerCPIMsg {
+public class AzimuthPlanePlotsPerCPIMsg implements Serializable {
 //	final static int MSG_SIZE = 8;//Word2*4
 //	ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
 //	AzimuthPlaneDetectionPlotMsg aPlotMsg = null;
@@ -41,14 +44,18 @@ public class AzimuthPlanePlotsPerCPIMsg {
 //		this.aPlotMsg = aPlotMsg;
 //	}
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private short messageClass;
 	private short messageId;
 	private short source;
 	private short plotCount;
-	private AzimuthPlaneDetectionPlotMsg azimuthPlaneDetectionPlotMsg;
+	private List<AzimuthPlaneDetectionPlotMsg> azimuthPlaneDetectionPlotMsg = new ArrayList<AzimuthPlaneDetectionPlotMsg>();
 	
 	public AzimuthPlanePlotsPerCPIMsg() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public short getMessageClass() {
@@ -83,13 +90,17 @@ public class AzimuthPlanePlotsPerCPIMsg {
 		this.plotCount = plotCount;
 	}
 
-	public AzimuthPlaneDetectionPlotMsg getAzimuthPlaneDetectionPlotMsg() {
+	public List<AzimuthPlaneDetectionPlotMsg> getAzimuthPlaneDetectionPlotMsg() {
 		return azimuthPlaneDetectionPlotMsg;
 	}
 
 	public void setAzimuthPlaneDetectionPlotMsg(
-			AzimuthPlaneDetectionPlotMsg azimuthPlaneDetectionPlotMsg) {
+			List<AzimuthPlaneDetectionPlotMsg> azimuthPlaneDetectionPlotMsg) {
 		this.azimuthPlaneDetectionPlotMsg = azimuthPlaneDetectionPlotMsg;
+	}
+	
+	public void addAzimuthPlaneDetectionPlotMsg(AzimuthPlaneDetectionPlotMsg aPlotMsg) {
+		this.azimuthPlaneDetectionPlotMsg.add(aPlotMsg);
 	}
 	
 }

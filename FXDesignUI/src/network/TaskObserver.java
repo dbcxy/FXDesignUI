@@ -11,6 +11,10 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
+import messages.radar.AzimuthPlaneDetectionPlotMsg;
+import messages.radar.AzimuthPlanePlotsPerCPIMsg;
+import messages.radar.AzimuthPlaneTrackMsg;
+import messages.utils.Serializer;
 import model.DataObserver;
 
 import org.apache.log4j.Logger;
@@ -45,9 +49,11 @@ public class TaskObserver extends Thread{
 	private DatagramSocket mMCSocketWrite = null;
 	
 	List<Thread> TaskManager = new ArrayList<Thread>();
+	DataObserver mDataObserver;
 			
 	public TaskObserver(IControlManager iControlManager) {
 		this.iCManager = iControlManager;
+		mDataObserver = new DataObserver();
 	}
 	
 	@Override
@@ -101,7 +107,7 @@ public class TaskObserver extends Thread{
 					makeData(mData);
 					
 					//write on to DB for history
-					recordData();
+					recordData(mData);
 					
 				}
 				logger.info("Ending Network Read Thread Az Plots Looper");				
@@ -135,7 +141,7 @@ public class TaskObserver extends Thread{
 					makeData(mData);
 					
 					//write on to DB for history
-					recordData();
+					recordData(mData);
 					
 				}
 				logger.info("Ending Network Read Thread El Plots Looper");				
@@ -169,7 +175,7 @@ public class TaskObserver extends Thread{
 					makeData(mData);
 					
 					//write on to DB for history
-					recordData();
+					recordData(mData);
 					
 				}
 				logger.info("Ending Network Read Thread Az Tracks Looper");				
@@ -203,7 +209,7 @@ public class TaskObserver extends Thread{
 					makeData(mData);
 					
 					//write on to DB for history
-					recordData();
+					recordData(mData);
 					
 				}
 				logger.info("Ending Network Read Thread El Tracks Looper");				
@@ -237,7 +243,7 @@ public class TaskObserver extends Thread{
 					makeData(mData);
 					
 					//write on to DB for history
-					recordData();
+					recordData(mData);
 					
 				}
 				logger.info("Ending Network Read Thread Video Looper");				
@@ -437,21 +443,40 @@ public class TaskObserver extends Thread{
 		DatagramPacket mDatagramInPacket = new DatagramPacket(mMCUDPSocketbuffer, len);
 		// Wait to receive a datagram
     	multicastSocket.receive(mDatagramInPacket);
-		logger.info("UDP Server Data received: "+len);
+		logger.info("MC-UDP Server Data received: "+len);
 		return mMCUDPSocketbuffer;
 	}
 	
 	private void makeData(byte[] mData) {
-		//separate class
-		DataObserver mDataObserver = new DataObserver();
+		//identify data
+		Object object = null;
+		try {
+			object = Serializer.deserialize(mData);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		//decode data
+		if(object instanceof AzimuthPlanePlotsPerCPIMsg) {
+			AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = (AzimuthPlanePlotsPerCPIMsg) object;
+			//add data
+			mDataObserver.addAzPlots(aPlotsPerCPIMsg);
+		} else if(object instanceof AzimuthPlaneTrackMsg) {
+			AzimuthPlaneTrackMsg aTrackMsg = (AzimuthPlaneTrackMsg) object;
+			mDataObserver.addAzTracks(aTrackMsg);
+			logger.info("X: "+aTrackMsg.getX());
+			logger.info("Y: "+aTrackMsg.getY());
+		}
 
 		logger.info("Server Data analyzed");
 		iCManager.manageData(mDataObserver);
 		
 	}
 	
-	private void recordData() {
-		//separate class
+	private void recordData(byte[] mData) {
+		//record data
 		
 	}
 }
