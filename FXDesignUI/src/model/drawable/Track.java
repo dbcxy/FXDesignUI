@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import model.MatrixRef;
 import model.OverlayItem;
 import model.graph.ILayoutParam;
+import utils.Constance;
 import utils.ModelDrawing;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.canvas.Canvas;
@@ -26,6 +27,12 @@ public class Track extends OverlayItem implements ILayoutParam{
 	private double azimuth;
 	private double range;
 	
+	private double X;
+	private double Y;
+	
+	private boolean isEl = false;
+	private boolean isAz = false;
+	
 	private boolean isVisibleX = false;
 	private boolean isVisibleY = false;
 	
@@ -42,11 +49,16 @@ public class Track extends OverlayItem implements ILayoutParam{
 		trackNumber = number;
 	}
 	
+	public String getTrackNumber() {
+		return trackNumber;
+	}
+	
 	public double getElevation() {
 		return elevation;
 	}
 
 	public void setElevation(double elevation) {
+		isEl = true;
 		this.elevation = elevation;
 	}
 
@@ -55,6 +67,7 @@ public class Track extends OverlayItem implements ILayoutParam{
 	}
 
 	public void setAzimuth(double azimuth) {
+		isAz = true;
 		this.azimuth = azimuth;
 	}
 
@@ -66,28 +79,54 @@ public class Track extends OverlayItem implements ILayoutParam{
 		this.range = range;
 	}
 	
+	public void setAz(boolean b) {
+		isAz = b;
+	}
+	
+	public void setEl(boolean b) {
+		isEl = b;
+	}
+	
+	@Override
+	public void setX(double x) {
+		this.X = x;
+	}
+	
+	@Override
+	public void setY(double y) {
+		this.Y = y;
+	}
+	
 	@Override
 	public double getX() {
-		double x = super.getX();
-		if((x/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+		double x = X;
+		double y = Y;
+		
+		range = Math.sqrt(Math.pow(x, 2)+Math.pow(y, 2));
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
 			isVisibleX = true;
-			x = MatrixRef.getInstance().toRangePixels(x/1000);
+			x = MatrixRef.getInstance().toRangePixels(range/1000);
 		}
 		return x;
 	}
 
 	@Override
 	public double getY() {
-		double y = super.getY();
-//		if(y > 0) {
-//			if(y <= MatrixRef.getInstance().getVisibleRange()) {
-//				isVisibleY = true;
-//				y = MatrixRef.getInstance().toElevationPixels(y);
-//			}
-//		}
-		if(y > 0) {
-				isVisibleY = true;
-				y = MatrixRef.getInstance().toAzimuthPixels(y);
+		double x = X;
+		double y = Y;
+		if(isEl) {
+			isVisibleY = true;
+			y = MatrixRef.getInstance().toElevationPixels(y);
+		}
+		if(isAz) {
+			isVisibleY = true;
+			azimuth = Math.atan(x/y);
+			MatrixRef matrixRef = MatrixRef.getInstance();
+			double midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
+			double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
+	        Point start = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getMinRange());
+			Point p = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY()+midAzimuthOffset, getX(), Math.toDegrees(-azimuth));
+			y = p.getY();
 		}
 		return y;
 	}

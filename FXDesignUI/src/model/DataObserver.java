@@ -13,6 +13,7 @@ import model.drawable.Video;
 public class DataObserver {
 	
 	private static final Logger logger = Logger.getLogger(DataObserver.class);
+	private static final int RING_BUFFER_LENGTH = 5;
 
 	private SketchItemizedOverlay mTrackList;
 	private SketchItemizedOverlay mPlotList;
@@ -21,6 +22,10 @@ public class DataObserver {
 	private Track track;
 	private Plot plot;
 	private Video video;
+	
+	private int mTrackIndex;
+	private int mPlotIndex;
+	private int mVideoIndex;
 	
 	public DataObserver() {
 		mTrackList = new SketchItemizedOverlay(SketchItemizedOverlay.TRACK);
@@ -43,18 +48,46 @@ public class DataObserver {
 	public void addAzPlots(AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg) {
 		for(AzimuthPlaneDetectionPlotMsg aPlotMsg : aPlotsPerCPIMsg.getAzimuthPlaneDetectionPlotMsg()) {
 			plot = new Plot();
-			plot.setAzimuth(Math.toDegrees(aPlotMsg.getAzimuth()));
+			plot.setAzimuth((aPlotMsg.getAzimuth()*0.0001));
 			plot.setRange(aPlotMsg.getRange());
-			mPlotList.addOverlayItem(plot);
+			plot.getX();
+			plot.getY();
+			if(mPlotList.size() >= RING_BUFFER_LENGTH)
+				mPlotList.setOverlayItem(mPlotIndex,plot);
+			else 
+				mPlotList.addOverlayItem(mPlotIndex,plot);
+			mPlotIndex++;
+			mPlotIndex = mPlotIndex % RING_BUFFER_LENGTH;
 		}
 	}
 	
 	public void addAzTracks(AzimuthPlaneTrackMsg aTrackMsg) {
-		track = new Track();
-		track.setY(aTrackMsg.getX());
-		track.setX(aTrackMsg.getY());
-		mTrackList.addOverlayItem(track);
 		
+		boolean trackExist = false;
+	    int trackIndex = 0;
+		for(int i=0;i<mTrackList.size();i++) {
+	    	if(String.valueOf(aTrackMsg.getTrackName()) == ((Track)mTrackList.getItem(i)).getTrackNumber()) {
+	    		trackExist = true;
+	    		trackIndex = i;
+	    		Track track = (Track)mTrackList.getItem(i);
+	    		track.setX(aTrackMsg.getX());
+				track.setY(aTrackMsg.getY());
+	    		mTrackList.setOverlayItem(trackIndex, track);
+	    		break;
+	    	}
+		}
+	    
+	    if(!trackExist) {
+	    	track = new Track();
+			track.setY(aTrackMsg.getX());
+			track.setX(aTrackMsg.getY());
+			track.setAz(true);
+			track.getX();
+			track.getY();
+			mTrackList.addOverlayItem(mTrackIndex,track);
+			mTrackIndex++;
+			mTrackIndex = mTrackIndex % RING_BUFFER_LENGTH;	
+	    }
 	}
 	
 	

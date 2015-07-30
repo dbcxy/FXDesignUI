@@ -466,8 +466,8 @@ public class TaskObserver extends Thread{
 		} else if(object instanceof AzimuthPlaneTrackMsg) {
 			AzimuthPlaneTrackMsg aTrackMsg = (AzimuthPlaneTrackMsg) object;
 			mDataObserver.addAzTracks(aTrackMsg);
-			logger.info("X: "+aTrackMsg.getX());
-			logger.info("Y: "+aTrackMsg.getY());
+//			logger.info("X: "+aTrackMsg.getX());
+//			logger.info("Y: "+aTrackMsg.getY());
 		}
 
 		logger.info("Server Data analyzed");

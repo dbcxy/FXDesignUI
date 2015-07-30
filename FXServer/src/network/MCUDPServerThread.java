@@ -16,7 +16,7 @@ public class MCUDPServerThread extends Thread{
 	
 	static final int targetSpeed = 50;//mps
 	static final int initRange = 4000;//4km
-	static final double initAz = 0.174532925;//10degrees in rad
+	static final double initAz = -0.174532925;//10degrees in rad
 	static final double scanTime = 0.5;//sec
 	static final int noOfScans = 10;
 	
@@ -168,14 +168,14 @@ public class MCUDPServerThread extends Thread{
 				
 		aTrackMsg.setMessageClass((short) 0x66);
 		aTrackMsg.setMessageId((short) 0x11);
-		aTrackMsg.setY((int) (range*Math.cos(az)));
-		aTrackMsg.setX((int) (range*Math.sin(az)));
+		aTrackMsg.setY((int) (range*Math.sin(az)));
+		aTrackMsg.setX((int) (range*Math.cos(az)));
 		aTrackMsg.setTrackStatus((short) 1);
 		aTrackMsg.setTimeStampLow(0);
 		aTrackMsg.setTimeStampHigh(0);
 		
-//		System.out.println("X: "+aTrackMsg.getX());
-//		System.out.println("Y: "+aTrackMsg.getY());
+		System.out.println("X: "+aTrackMsg.getX());
+		System.out.println("Y: "+aTrackMsg.getY());
 		
 		//Send plot data MC UDP		
 		try {

@@ -19,6 +19,9 @@ public class Plot extends OverlayItem implements ILayoutParam{
 	private double azimuth;
 	private double range;
 	
+	private boolean isAz = false;
+	private boolean isEl = false;
+	
 	private boolean isVisibleX = false;
 	private boolean isVisibleY = false;
 	
@@ -44,6 +47,7 @@ public class Plot extends OverlayItem implements ILayoutParam{
 	}
 
 	public void setElevation(double elevation) {
+		isEl = true;
 		this.elevation = elevation;
 	}
 
@@ -52,6 +56,7 @@ public class Plot extends OverlayItem implements ILayoutParam{
 	}
 
 	public void setAzimuth(double azimuth) {
+		isAz = true;
 		this.azimuth = azimuth;
 	}
 
@@ -76,13 +81,18 @@ public class Plot extends OverlayItem implements ILayoutParam{
 	@Override
 	public double getY() {
 		double y = 0.0;
-		if(elevation > 0) {
+		if(isEl) {
 			isVisibleY = true;
 			y = MatrixRef.getInstance().toElevationPixels(elevation);
 		}
-		if(azimuth > 0) {
+		if(isAz) {
 			isVisibleY = true;
-			y = MatrixRef.getInstance().toAzimuthPixels(azimuth);
+			MatrixRef matrixRef = MatrixRef.getInstance();
+			double midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
+			double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
+	        Point start = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getMinRange());
+			Point p = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY()+midAzimuthOffset, getX(), Math.toDegrees(-azimuth));
+			y = p.getY();
 		}
 		return y;
 	}

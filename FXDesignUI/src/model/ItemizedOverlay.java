@@ -16,6 +16,10 @@ public abstract class ItemizedOverlay<Item extends OverlayItem> {
     public boolean addOverlayItem(Item item) {
         return mInternalItemList.add(item);
 	}
+    
+    public void setOverlayItem(int location, Item item) {
+    	mInternalItemList.set(location, item);
+    }
 	
 	public void addOverlayItem(int location, Item item) {
 		mInternalItemList.add(location, item);

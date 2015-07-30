@@ -32,8 +32,8 @@ public class Constance {
 		
 	public static double ELEVATION_MAX		= 8000;//MKS or FPS
 	public static double ELEVATION_MIN		= 0;//ft or mts
-	public static double AZIMUTH_MAX		= 10;//degrees
-	public static double AZIMUTH_MIN		= -10;//degrees
+	public static double AZIMUTH_MAX		= 0.174532925;//rad
+	public static double AZIMUTH_MIN		= -0.174532925;//rad
 	public static double RANGE_MAX			= 40;//km or NM , Doesn't matter whether KM or NM only number matters
 	public static double RANGE_DISP			= 1;//km or NM
 	public static double RANGE_MIN			= 0;//km or NM
