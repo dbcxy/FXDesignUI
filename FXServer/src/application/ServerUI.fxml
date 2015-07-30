@@ -1,8 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import materialdesignbutton.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane fx:id="ServerUI" prefHeight="450.0" prefWidth="700.0" style="-fx-border-color: #5faaf1; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ServerUIController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Start Your Server">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <MaterialDesignButtonWidget fx:id="startBtn" minWidth="200.0" onAction="#startClick" text="START">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="300.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </MaterialDesignButtonWidget>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+         <center>
+            <VBox maxHeight="1.7976931348623157E308" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                     <content>
+                        <AnchorPane minHeight="100.0" minWidth="100.0">
+                           <children>
+                              <VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label text="Azimuth Data Generation Parameters (Only Plots &amp; Track)">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox fx:id="AzimuthLSL">
+                                       <children>
+                                          <Label minWidth="300.0" text="Target Speed">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="targetSpeed">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="50.0" text="m/s">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="50.0" text="(default : 50 m/s)">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="AzimuthRSL">
+                                       <children>
+                                          <Label minWidth="300.0" text="Initial start range for plots">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="initRange">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="50.0" text="meters">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="50.0" text="(default: 4000 meters)">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="AzimuthRCLO">
+                                       <children>
+                                          <Label minWidth="300.0" text="Initial start azimuth for plots">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="initAz">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="50.0" text="degrees">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="50.0" text="(default : 0 degrees)">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="AzimuthLAL">
+                                       <children>
+                                          <Label minWidth="300.0" text="Scan time">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="scanTime">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="50.0" text="seconds">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="50.0" text="(default : 0.5 s)">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="AzimuthRAL">
+                                       <children>
+                                          <Label minWidth="300.0" text="No of Scans">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="noOfScans">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="50.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="50.0" text="(default: 10)">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <TextArea fx:id="serverLog" prefHeight="140.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </TextArea>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="Server App">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Line endX="540.0" fill="BLACK" startX="-100.0" stroke="#9a9696" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <MaterialDesignButtonWidget onAction="#closeStage" text="X">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </MaterialDesignButtonWidget>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
 </AnchorPane>
-

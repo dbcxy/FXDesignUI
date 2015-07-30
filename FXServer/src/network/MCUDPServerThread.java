@@ -6,6 +6,8 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
 
+import config.AppConfig;
+import network.C2Server.Notifier;
 import messages.radar.AzimuthPlaneDetectionPlotMsg;
 import messages.radar.AzimuthPlanePlotsPerCPIMsg;
 import messages.radar.AzimuthPlaneTrackMsg;
@@ -13,12 +15,6 @@ import messages.utils.ObjectSizeFetcher;
 import messages.utils.Serializer;
 
 public class MCUDPServerThread extends Thread{
-	
-	static final int targetSpeed = 50;//mps
-	static final int initRange = 4000;//4km
-	static final double initAz = -0.174532925;//10degrees in rad
-	static final double scanTime = 0.5;//sec
-	static final int noOfScans = 10;
 	
 //	private DatagramSocket dSocketAzPlots;
 //	private DatagramSocket dSocketAzTracks;
@@ -31,8 +27,9 @@ public class MCUDPServerThread extends Thread{
 	private MulticastSocket datagramSocketRead;
 	InetAddress groupAddr;
 	
-	int count = 10;
-	
+	boolean pAz = true;
+	boolean tAz = true;
+		
 	public MCUDPServerThread() throws IOException {
 //		dSocketAzPlots = new DatagramSocket();
 //		dSocketAzTracks = new DatagramSocket();
@@ -48,6 +45,8 @@ public class MCUDPServerThread extends Thread{
 		datagramSocketElPlots.setInterface(InetAddress.getLocalHost());
 		datagramSocketElTracks.setInterface(InetAddress.getLocalHost());
 		datagramSocketVideo.setInterface(InetAddress.getLocalHost());
+		
+		AppConfig.getInstance().getController().notifyData("Multicast Sockets Created!");
 	}
 	
 	@Override
@@ -61,20 +60,40 @@ public class MCUDPServerThread extends Thread{
 			datagramSocketElPlots.joinGroup(groupAddr);
 			datagramSocketElTracks.joinGroup(groupAddr);
 			datagramSocketVideo.joinGroup(groupAddr);
+			
+			AppConfig.getInstance().getController().notifyData("Joined Group IP: "+groupAddr.getHostAddress());
 	    } catch(IOException e) {
 	    	System.err.println("IOException " + e);
         }
 	        
-        System.out.println("Server socket created. Sending for data...");
+		AppConfig.getInstance().getController().notifyData("Preparing: Sending for data...");
 
         try {
-			Thread.sleep(10000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
         
-        sendAzPlotData();
-        sendAzTrackData();
+        new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				pAz = true;
+		        sendAzPlotData();
+		        pAz = false;
+			}
+		}).start();
+        
+        new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				tAz = true;
+		        sendAzTrackData();	
+		        tAz = false;
+			}
+		}).start();
+        
         
 //	            String elplot = "El PLOT ! ";
 //	            DatagramPacket ep = new DatagramPacket(elplot.getBytes() , elplot.getBytes().length,groupAddr,C2Server.PORT_EL_PLOTS);
@@ -87,10 +106,28 @@ public class MCUDPServerThread extends Thread{
 //	            String video = "RAW VIDEO ! ";
 //	            DatagramPacket vid = new DatagramPacket(video.getBytes() , video.getBytes().length,groupAddr,C2Server.PORT_VIDEO);
 //	            datagramSocketAzPlots.send(vid);
-	    
-        System.out.println("Sent");
-        exitAll();
-
+        
+        new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				while(true) {
+					if(!pAz && !tAz) {
+						AppConfig.getInstance().getController().notifyData("All messages Sent");
+				        exitAll();
+				        AppConfig.getInstance().getController().notifyData("Multicast Sockets Destroyed!"+"\n");
+				        AppConfig.getInstance().getController().updateStartButton(0);
+				        break;
+					}
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}).start();
+        
 	}
 	
 	private void exitAll() {
@@ -115,14 +152,13 @@ public class MCUDPServerThread extends Thread{
 
 	private void sendAzPlotData() {
 			
-		int range = initRange;
-		double az = initAz;
+		int range = C2Server.INIT_RANGE;
+		double az = Math.toRadians(C2Server.INIT_AZ)*10000;
 		
-		for ( int i =0 ; i<noOfScans; i++) {
-
+		for ( int i =0 ; i<C2Server.NO_SCANS; i++) {
 			 // Read Data and send at each 0.5 second
 			AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = new AzimuthPlanePlotsPerCPIMsg();
-			range = (int) (range - (targetSpeed * scanTime ));
+			range = (int) (range - (C2Server.TARGET_SPEED * C2Server.SCAN_TIME ));
 			
 			aPlotsPerCPIMsg.setMessageClass((short) 0x77);
 			aPlotsPerCPIMsg.setMessageId((short) 0x11);
@@ -134,7 +170,7 @@ public class MCUDPServerThread extends Thread{
 				aPlotMsg.setRange(range);
 				
 				// scale the azimuth so that it flaot can be converted to Integer.later during display scale it down by 1000;
-				aPlotMsg.setAzimuth((int) (az*10000));
+				aPlotMsg.setAzimuth((int) (az));
 				// scale the strength that float can be converted to Integer.later during display scale it down by 1000;
 				aPlotMsg.setStrength((int) (0.1234*10000));
 				aPlotsPerCPIMsg.addAzimuthPlaneDetectionPlotMsg(aPlotMsg);				
@@ -145,26 +181,26 @@ public class MCUDPServerThread extends Thread{
 			//Send plot data MC UDP
 			try {
 				byte[] plot = Serializer.serialize(aPlotsPerCPIMsg);
-				System.out.println("Size: "+plot.length);
 	            DatagramPacket dp = new DatagramPacket(plot , plot.length,groupAddr,C2Server.PORT_AZ_PLOTS);			
 				datagramSocketAzPlots.send(dp);
+				AppConfig.getInstance().getController().notifyData("Plot Sending... "+plot.length);
 //				dSocketAzPlots.send(dp);
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
 				e.printStackTrace();
-			}				
+			}
 		}
 	}
 	
 	private void sendAzTrackData() {
-		int range = initRange;
-		double az = initAz;
+		int range = C2Server.INIT_RANGE;
+		double az = Math.toRadians(C2Server.INIT_AZ);
 		
 		// Read Data and send at each 0.5 second
 		AzimuthPlaneTrackMsg aTrackMsg = new AzimuthPlaneTrackMsg();
-		range = (int) (range - (targetSpeed * scanTime ));
+		range = (int) (range - (C2Server.TARGET_SPEED * C2Server.SCAN_TIME ));
 				
 		aTrackMsg.setMessageClass((short) 0x66);
 		aTrackMsg.setMessageId((short) 0x11);
@@ -174,15 +210,15 @@ public class MCUDPServerThread extends Thread{
 		aTrackMsg.setTimeStampLow(0);
 		aTrackMsg.setTimeStampHigh(0);
 		
-		System.out.println("X: "+aTrackMsg.getX());
-		System.out.println("Y: "+aTrackMsg.getY());
+//		System.out.println("X: "+aTrackMsg.getX());
+//		System.out.println("Y: "+aTrackMsg.getY());
 		
 		//Send plot data MC UDP		
 		try {
 			byte[] track = Serializer.serialize(aTrackMsg);
-			System.out.println("Size: "+track.length);
 	        DatagramPacket dt = new DatagramPacket(track , track.length,groupAddr,C2Server.PORT_AZ_TRACKS);
 	        datagramSocketAzTracks.send(dt);
+	        AppConfig.getInstance().getController().notifyData("Track Sending... "+track.length);
 //	        dSocketAzTracks.send(dt);
 			Thread.sleep(500);
 		} catch (InterruptedException e) {

@@ -160,7 +160,6 @@ public class SettingsController implements Initializable,ILayoutParam{
 
 	private void initUnits() {
 		((Label) (MaximumElevation.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
-		((Label) (MaximumAzimuth.getChildren().get(2))).setText(Constance.UNITS.getHEIGHT());
 		
 		((Label) (ElevationDH.getChildren().get(2))).setText(Constance.UNITS.getLENGTH());
 		((Label) (ElevationGlideMaxDist.getChildren().get(2))).setText(Constance.UNITS.getLENGTH());

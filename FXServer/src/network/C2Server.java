@@ -10,6 +10,17 @@ public class C2Server {
 	public static int PORT_EL_TRACKS	= 6600;
 	public static int PORT_VIDEO		= 12001;
 	
+	public static int TARGET_SPEED 		= 50;//mps
+	public static int INIT_RANGE 		= 4000;//4km
+	public static double INIT_AZ 		= 10;//10degrees in rad
+	public static double SCAN_TIME 		= 0.5;//sec
+	public static int NO_SCANS	 		= 10;
+	
+	public interface Notifier {
+		public void notifyData(String str);
+		public void updateStartButton(int i);
+	}
+	
 	public C2Server() {
 		
 	}
