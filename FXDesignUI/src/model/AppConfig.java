@@ -34,11 +34,12 @@ public class AppConfig {
 	
 	FXMLController fxmlController;
 	
-	boolean isValidSettings = false;
-	boolean isValidPreference = false;
+	boolean isValidDisplaySetup = false;
+	boolean isValidSystemSetup = false;
+	boolean isValidRadarSetup = false;
 	
-	List<HBox> itemSettingList = new ArrayList<HBox>();
-	double[] itemSettingVal = new double[] {
+	List<HBox> itemDisplaySetupList = new ArrayList<HBox>();
+	double[] itemDisplaySetupVal = new double[] {
 		Constance.ELEVATION_MAX,
 		Constance.AZIMUTH_MAX,
 		
@@ -62,15 +63,24 @@ public class AppConfig {
 		Constance.AZIMUTH.RSaL
 	};
 	
-	String[] itemPrefVal = new String[] {
+	String[] itemSystemSetupVal = new String[] {
 		Constance.PREF.SEL_RUNWAY,
-		Constance.PREF.MODE_OP,
-		Constance.PREF.CHG_POL,
 		Constance.PREF.RANGE_UNITS,
 		Constance.PREF.EL_AZ_UNITS,
-		Constance.PREF.FREQ_SEL,
-		Constance.PREF.BITE
+		String.valueOf(Constance.PORT_AZ_PLOTS),
+		String.valueOf(Constance.PORT_AZ_TRACKS),
+		String.valueOf(Constance.PORT_EL_PLOTS),
+		String.valueOf(Constance.PORT_EL_TRACKS),
+		String.valueOf(Constance.PORT_VIDEO),
+		String.valueOf(Constance.PORT_WRITE)
 	};
+	
+	String[] itemRadarSetupVal = new String[] {
+			Constance.PREF.MODE_OP,
+			Constance.PREF.CHG_POL,
+			Constance.PREF.FREQ_SEL,
+			Constance.PREF.BITE
+		};
 	
 	public FXMLController getFxmlController() {
 		return fxmlController;
@@ -80,100 +90,113 @@ public class AppConfig {
 		this.fxmlController = fxmlController;
 	}
 
-	public void addSetting(HBox hbox) {
-		itemSettingList.add(hbox);
+	public void addDisplaySetup(HBox hbox) {
+		itemDisplaySetupList.add(hbox);
 	}
 	
-	public int getSettingListSize() {
-		return itemSettingList.size();
+	public int getDisplaySetupListSize() {
+		return itemDisplaySetupList.size();
 	}
 	
-	public List<HBox> getSettingList() {
-		return itemSettingList;
+	public List<HBox> getDisplaySetupList() {
+		return itemDisplaySetupList;
 	}
 	
-	public double getSettingListValue(int index) {
-		return itemSettingVal[index];
+	public double getDisplaySetupListValue(int index) {
+		return itemDisplaySetupVal[index];
 	}
 	
-	public void setSettingListValue(int index, double value) {
-		itemSettingVal[index] = value;
+	public void setDisplaySetupListValue(int index, double value) {
+		itemDisplaySetupVal[index] = value;
 	}
 	
-	public void setPrefListValue(int index, String value) {
-		itemPrefVal[index] = value;
+	public void setSystemSetupListValue(int index, String value) {
+		itemSystemSetupVal[index] = value;
 	}
 	
-	public boolean isSettingSaved() {
-		return isValidSettings;
+	public boolean isDisplaySetupSaved() {
+		return isValidDisplaySetup;
 	}
 	
-	public boolean isPreferenceSaved() {
-		return isValidPreference;
+	public boolean isSystemSetupSaved() {
+		return isValidSystemSetup;
 	}
 	
-	public void saveSettingsData() {
+	public boolean isRadarSetupSaved() {
+		return isValidRadarSetup;
+	}
+	
+	public void saveDisplaySetupData() {
 		
 		if(checkNullData()) {		
 			//get TextField to save values
 			int i = 0;
-			isValidSettings = true;
-			Constance.ELEVATION_MAX = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 12000, Constance.UNITS.getLENGTH());i++;
-			Constance.AZIMUTH_MAX = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 12000, Constance.UNITS.getLENGTH());i++;
+			isValidDisplaySetup = true;
+			Constance.ELEVATION_MAX = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 12000, Constance.UNITS.getLENGTH());i++;
+			Constance.AZIMUTH_MAX = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 12000, Constance.UNITS.getLENGTH());i++;
 			
-			Constance.ELEVATION.USL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 30, Constance.UNITS.DEGREES);i++;
-			Constance.ELEVATION.GLIDE_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 10, Constance.UNITS.DEGREES);i++;
-			Constance.ELEVATION.GLIDE_MAX_DIST = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 40, Constance.UNITS.getLENGTH());i++;
-			Constance.ELEVATION.GLIDE_FLAT_START_DIST = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 40, Constance.UNITS.getLENGTH());i++;
-			Constance.ELEVATION.LSL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 5, Constance.UNITS.DEGREES);i++;
-			Constance.ELEVATION.UAL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
-			Constance.ELEVATION.LAL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
-			Constance.ELEVATION.USaL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
-			Constance.ELEVATION.LSaL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
-			Constance.ELEVATION.DH = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 1, Constance.UNITS.getHEIGHT());i++;
+			Constance.ELEVATION.USL_ANGLE = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 30, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.GLIDE_ANGLE = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 10, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.GLIDE_MAX_DIST = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 40, Constance.UNITS.getLENGTH());i++;
+			Constance.ELEVATION.GLIDE_FLAT_START_DIST = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 40, Constance.UNITS.getLENGTH());i++;
+			Constance.ELEVATION.LSL_ANGLE = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 5, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.UAL_ANGLE = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.LAL_ANGLE = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.USaL_ANGLE = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.LSaL_ANGLE = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
+			Constance.ELEVATION.DH = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 1, Constance.UNITS.getHEIGHT());i++;
 			
-			Constance.AZIMUTH.LSL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
-			Constance.AZIMUTH.RSL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), -15, 0, Constance.UNITS.DEGREES);i++;
-			Constance.AZIMUTH.RCLO = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 0.1, Constance.UNITS.getLENGTH());i++;
-			Constance.AZIMUTH.LAL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
-			Constance.AZIMUTH.RAL_ANGLE = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), -15, 0, Constance.UNITS.DEGREES);i++;
-			Constance.AZIMUTH.LSaL = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 0.1, Constance.UNITS.getLENGTH());i++;
-			Constance.AZIMUTH.RSaL = itemSettingVal[i] = validateSettingsData(itemSettingVal[i], ((TextField)(itemSettingList.get(i).getChildren().get(1))).getText(),
-					((Label)(itemSettingList.get(i).getChildren().get(0))).getText(), 0, 0.1, Constance.UNITS.getLENGTH());
+			Constance.AZIMUTH.LSL_ANGLE = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
+			Constance.AZIMUTH.RSL_ANGLE = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), -15, 0, Constance.UNITS.DEGREES);i++;
+			Constance.AZIMUTH.RCLO = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 0.1, Constance.UNITS.getLENGTH());i++;
+			Constance.AZIMUTH.LAL_ANGLE = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 15, Constance.UNITS.DEGREES);i++;
+			Constance.AZIMUTH.RAL_ANGLE = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), -15, 0, Constance.UNITS.DEGREES);i++;
+			Constance.AZIMUTH.LSaL = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 0.1, Constance.UNITS.getLENGTH());i++;
+			Constance.AZIMUTH.RSaL = itemDisplaySetupVal[i] = validateDisplaySetupData(itemDisplaySetupVal[i], ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1))).getText(),
+					((Label)(itemDisplaySetupList.get(i).getChildren().get(0))).getText(), 0, 0.1, Constance.UNITS.getLENGTH());
 		
 		} else
 			openErrorDialog("Value can't be empty!");
 
-		if(isValidSettings) {
-			Constance.IS_CONFIG_SET = true;
-			logger.info("Settings Data Saved");
+		if(isValidDisplaySetup) {
+			Constance.IS_DISPLAY_SETUP = true;
+			logger.info("DisplaySetup Data Saved");
 		}
 	}
 	
-	public void savePreferenceData() {
+	public void saveSystemSetupData() {
 		
-		validatePreferenceData();
-		if(isValidPreference) {
-			Constance.IS_PREF_SET = true;
-			logger.info("Preference Data Saved");
+		validateSystemSetupData();
+		if(isValidSystemSetup) {
+			Constance.IS_SYSTEM_SETUP = true;
+			logger.info("SystemSetup Data Saved");
+		}
+	}
+	
+	public void saveRadarSetupData() {
+		
+		validateRadarSetupData();
+		if(isValidRadarSetup) {
+			Constance.IS_RADAR_SETUP = true;
+			logger.info("RadarSetup Data Saved");
 		}
 	}
 	
@@ -182,47 +205,65 @@ public class AppConfig {
 		alert.setTitle("Error");
 		alert.showAndWait();
 	}
+	
+	private void validateRadarSetupData() {
 
-	private void validatePreferenceData() {
-
-		for(int i=0;i<itemPrefVal.length;i++) {
-			if(itemPrefVal[i].isEmpty()) {		
-				isValidPreference = false;
+		for(int i=0;i<itemRadarSetupVal.length;i++) {
+			if(itemRadarSetupVal[i].isEmpty()) {		
+				isValidRadarSetup = false;
 				break;
 			}
-			isValidPreference = true;
+			isValidRadarSetup = true;
 		}
-		if(!isValidPreference) {
+		if(!isValidRadarSetup) {
 			Alert alert = new Alert(AlertType.ERROR, "Value can't be NULL " + "!", ButtonType.OK);
 			alert.setTitle("Alert");
 			alert.showAndWait();
 		}
-		logger.info("Preference Data Validated");
+		logger.info("RadarSetup Data Validated");
+		
+	}
+
+	private void validateSystemSetupData() {
+
+		for(int i=0;i<itemSystemSetupVal.length;i++) {
+			if(itemSystemSetupVal[i].isEmpty()) {		
+				isValidSystemSetup = false;
+				break;
+			}
+			isValidSystemSetup = true;
+		}
+		if(!isValidSystemSetup) {
+			Alert alert = new Alert(AlertType.ERROR, "Value can't be NULL " + "!", ButtonType.OK);
+			alert.setTitle("Alert");
+			alert.showAndWait();
+		}
+		logger.info("SystemSetup Data Validated");
 		
 	}
 
 	private boolean checkNullData() {
 
-		for(int i=0;i<itemSettingList.size();i++) {
-			TextField tField = ((TextField)(itemSettingList.get(i).getChildren().get(1)));
+		for(int i=0;i<itemDisplaySetupList.size();i++) {
+			TextField tField = ((TextField)(itemDisplaySetupList.get(i).getChildren().get(1)));
 			if(tField.getText().isEmpty()) {
-				((Label)(itemSettingList.get(i).getChildren().get(3))).setTextFill(Color.RED);
-				((Label)(itemSettingList.get(i).getChildren().get(3))).setText("*");
+				((Label)(itemDisplaySetupList.get(i).getChildren().get(3))).setTextFill(Color.RED);
+				((Label)(itemDisplaySetupList.get(i).getChildren().get(3))).setText("*");
 				return false;
 			}
 		}
-		logger.info("Settings Data Null Check");
+		logger.info("DisplaySetup Data Null Check");
 		return true;
 	}
 	
-	private double validateSettingsData(double actualVAl, String str, String title, double min, double max, String unit) {
+	private double validateDisplaySetupData(double actualVAl, String str, String title, double min, double max, String unit) {
 		double val = actualVAl;
 		double check = Double.valueOf(str);
 		try {
 			if((check <= max) && (check >= min)) {
 				val = check;
 			} else {
-				isValidSettings = false;
+				isValidDisplaySetup = false;
 				openErrorDialog(title+" value ranges from: "+min+" "+unit+" to "+max+" "+unit+". \nPlease make suitable corrections");
 			}
 		} catch (Exception e) {

@@ -204,7 +204,7 @@
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>
                                                       </MaterialDesignButtonWidget>
-                                                      <MaterialDesignButtonWidget fx:id="btn_rwyselect" prefHeight="30.0" prefWidth="120.0" text="RWY SELECT">
+                                                      <MaterialDesignButtonWidget fx:id="btn_rwyselect" onAction="#onRunwaySetup" prefHeight="30.0" prefWidth="120.0" text="RWY SELECT">
                                                          <HBox.margin>
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>
@@ -269,7 +269,7 @@
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>
                                                       </MaterialDesignButtonWidget>
-                                                      <MaterialDesignButtonWidget fx:id="btn_radarsetup" prefHeight="30.0" prefWidth="120.0" text="RADAR SETUP">
+                                                      <MaterialDesignButtonWidget fx:id="btn_radarsetup" onAction="#onRadarSetup" prefHeight="30.0" prefWidth="120.0" text="RADAR SETUP">
                                                          <HBox.margin>
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>
@@ -317,7 +317,7 @@
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>
                                                       </MaterialDesignButtonWidget>
-                                                      <MaterialDesignButtonWidget fx:id="btn_systemsetup" onAction="#menuSystemPreferences" prefHeight="30.0" prefWidth="120.0" text="SYSTEM SETUP">
+                                                      <MaterialDesignButtonWidget fx:id="btn_systemsetup" onAction="#onSystemSetup" prefHeight="30.0" prefWidth="120.0" text="SYSTEM SETUP">
                                                          <HBox.margin>
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>
@@ -382,7 +382,7 @@
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>
                                                       </MaterialDesignButtonWidget>
-                                                      <MaterialDesignButtonWidget fx:id="btn_displaysetup" onAction="#menuDisplaySettings" prefHeight="30.0" prefWidth="120.0" text="DISPLAY SETUP">
+                                                      <MaterialDesignButtonWidget fx:id="btn_displaysetup" onAction="#onDisplaySetup" prefHeight="30.0" prefWidth="120.0" text="DISPLAY SETUP">
                                                          <HBox.margin>
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>

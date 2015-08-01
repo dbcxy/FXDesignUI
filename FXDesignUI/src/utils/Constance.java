@@ -27,8 +27,9 @@ public class Constance {
 		public static String getHEIGHT() { return(isFPS ? "meters":"feet");}
 	}
 
-	public static boolean IS_CONFIG_SET = true;
-	public static boolean IS_PREF_SET = true;
+	public static boolean IS_DISPLAY_SETUP = true;
+	public static boolean IS_SYSTEM_SETUP = true;
+	public static boolean IS_RADAR_SETUP = true;
 		
 	public static double ELEVATION_MAX		= 8000;//MKS or FPS
 	public static double ELEVATION_MIN		= 0;//ft or mts
@@ -86,7 +87,7 @@ public class Constance {
 	public static int PORT_AZ_TRACKS		= 8800;
 	public static int PORT_EL_TRACKS		= 6600;
 	public static int PORT_VIDEO			= 12001;
-	public static int PORT_WRITE			= 15001;
+	public static int PORT_WRITE			= 13001;
     public static final String GROUP_ADDR 	= "225.225.0.1";
     public static final int DGRAM_LEN 		= 2048;
 	public static final int MILLI_SECOND 	= 1000;

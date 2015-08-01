@@ -1,19 +1,26 @@
 package network;
 
+import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.net.Socket;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.List;
 
 import messages.radar.AzimuthPlaneDetectionPlotMsg;
 import messages.radar.AzimuthPlanePlotsPerCPIMsg;
 import messages.radar.AzimuthPlaneTrackMsg;
+import messages.utils.DataIdentifier;
+import messages.utils.DataManager;
+import messages.utils.IByteSum;
 import messages.utils.Serializer;
 import model.DataObserver;
 
@@ -21,7 +28,7 @@ import org.apache.log4j.Logger;
 
 import utils.Constance;
 
-public class TaskObserver extends Thread{
+public class TaskObserver extends Thread implements IByteSum{
 
 	static final Logger logger = Logger.getLogger(TaskObserver.class);
 	
@@ -50,10 +57,12 @@ public class TaskObserver extends Thread{
 	
 	List<Thread> TaskManager = new ArrayList<Thread>();
 	DataObserver mDataObserver;
+	DataManager mDataManager;
 			
 	public TaskObserver(IControlManager iControlManager) {
 		this.iCManager = iControlManager;
 		mDataObserver = new DataObserver();
+		mDataManager = new DataManager();
 	}
 	
 	@Override
@@ -371,12 +380,22 @@ public class TaskObserver extends Thread{
 	}
 	
 	public void InterruptableUDPThread(DatagramSocket socket){
-	      this.mDatagramSocketAzPlot = socket;
-	      this.mDatagramSocketElPlot = socket;
-	      this.mDatagramSocketAzTrack = socket;
-	      this.mDatagramSocketElTrack = socket;
-	      this.mDatagramSocketVideo = socket;
-	      this.mDatagramSocketWrite = socket;
+		this.mDatagramSocketAzPlot = socket;
+	    this.mDatagramSocketElPlot = socket;
+	    this.mDatagramSocketAzTrack = socket;
+	    this.mDatagramSocketElTrack = socket;
+	    this.mDatagramSocketVideo = socket;
+	    this.mDatagramSocketWrite = socket;
+	}
+	
+	public void InterruptableMCUDPThread(MulticastSocket multicastSocket) {
+		this.mMCSocketAzPlot = multicastSocket;
+		this.mMCSocketAzTrack = multicastSocket;
+		this.mMCSocketElPlot = multicastSocket;
+		this.mMCSocketElTrack = multicastSocket;
+		this.mMCSocketVideo = multicastSocket;
+		this.mMCSocketWrite = multicastSocket;
+		
 	}
 	
 	public void sendBytes(byte[] myByteArray) throws IOException {
@@ -416,10 +435,11 @@ public class TaskObserver extends Thread{
 		DataInputStream mServerSocketInPacket = new DataInputStream(socket.getInputStream());
 		int len = mServerSocketInPacket.readInt();
 	    byte[] tcpdata = new byte[len];
+	    System.out.println(len);
 		// Wait to receive a socket data
 	    if (len > 0) {
 	    	mServerSocketInPacket.readFully(tcpdata);
-			logger.info("TCP Server Data received: "+len);
+			logger.info("TCP Server Data received: "+len);			
 			return tcpdata;
 	    }
 		return null; 
@@ -448,29 +468,50 @@ public class TaskObserver extends Thread{
 	}
 	
 	private void makeData(byte[] mData) {
+//		//identify data
+//		Object object = null;
+//		try {
+//			object = Serializer.deserialize(mData);
+//		} catch (ClassNotFoundException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		//decode data
+//		if(object instanceof AzimuthPlanePlotsPerCPIMsg) {
+//			AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = (AzimuthPlanePlotsPerCPIMsg) object;
+//			//add data
+//			mDataObserver.addAzPlots(aPlotsPerCPIMsg);
+//		} else if(object instanceof AzimuthPlaneTrackMsg) {
+//			AzimuthPlaneTrackMsg aTrackMsg = (AzimuthPlaneTrackMsg) object;
+//			mDataObserver.addAzTracks(aTrackMsg);
+////			logger.info("X: "+aTrackMsg.getX());
+////			logger.info("Y: "+aTrackMsg.getY());
+//		}
+//
+//		logger.info("Server Data analyzed");
+//		iCManager.manageData(mDataObserver);
+		
 		//identify data
-		Object object = null;
-		try {
-			object = Serializer.deserialize(mData);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		String msgName = DataIdentifier.getMessageType(mData);
+		logger.info("Server Data Identified: "+msgName);
 		
 		//decode data
+		Object object = mDataManager.decodeMsg(msgName, mData);
+		logger.info("Server Data Decoded");
 		if(object instanceof AzimuthPlanePlotsPerCPIMsg) {
-			AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = (AzimuthPlanePlotsPerCPIMsg) object;
+			AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = (AzimuthPlanePlotsPerCPIMsg) object;			
+			logger.info("Server Data AzimuthPlanePlotsPerCPIMsg added");
 			//add data
 			mDataObserver.addAzPlots(aPlotsPerCPIMsg);
 		} else if(object instanceof AzimuthPlaneTrackMsg) {
 			AzimuthPlaneTrackMsg aTrackMsg = (AzimuthPlaneTrackMsg) object;
+			logger.info("Server Data AzimuthPlaneTrackMsg added");
+			//add data
 			mDataObserver.addAzTracks(aTrackMsg);
-//			logger.info("X: "+aTrackMsg.getX());
-//			logger.info("Y: "+aTrackMsg.getY());
 		}
-
-		logger.info("Server Data analyzed");
+		
 		iCManager.manageData(mDataObserver);
 		
 	}
@@ -479,4 +520,5 @@ public class TaskObserver extends Thread{
 		//record data
 		
 	}
+
 }

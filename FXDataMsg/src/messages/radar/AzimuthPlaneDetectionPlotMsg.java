@@ -2,79 +2,15 @@ package messages.radar;
 
 import java.io.Serializable;
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 
-public class AzimuthPlaneDetectionPlotMsg implements Serializable{
+import messages.utils.IByteSum;
 
-/**
-	 * 
-	 */
+public class AzimuthPlaneDetectionPlotMsg implements Serializable,IByteSum{
+
 	private static final long serialVersionUID = 1L;
-//	final static int MSG_SIZE = 40;//Allocating
-//	ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
-//	
-//	public AzimuthPlaneDetectionPlotMsg() {
-//		
-//	}
-//	
-//	public ByteBuffer getByteBuffer() {
-//		return buffer;
-//	}
-//	
-//	public void putMessageClass(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putMessageId(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putSource(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putReserved(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putRange(int val) {
-//		buffer.putInt(val);
-//	}
-//	
-//	public void putAzimuth(int val) {
-//		buffer.putInt(val);
-//	}
-//	
-//	public void putStrength(int val) {
-//	    buffer.putInt(val);
-//  }
-//	
-//	public void putReserved(int val) {
-//		buffer.putInt(val);
-//	}
-//	
-//	public void putRangeExtension(byte val) {
-//		buffer.put(val);
-//	}
-//	
-//	public void AzimuthExtension(byte val) {
-//		buffer.put(val);
-//	}
-//	
-//	public void putReserved(byte val) {
-//		buffer.put(val);
-//	}
-//	
-//	public void putDopplerExtension(byte val) {
-//		buffer.put(val);
-//	}
-//	
-//	public void putTimeStampLow(int val) {
-//		buffer.putInt(val);
-//	}
-//	
-//	public void putTimeStampHigh(int val) {
-//		buffer.putInt(val);
-//	}
+	public final static int MSG_SIZE = 40;//Allocating
+	ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
 	
 	private short messageClass;
 	private short messageId;
@@ -92,7 +28,7 @@ public class AzimuthPlaneDetectionPlotMsg implements Serializable{
 	private int timeStampHigh;
 	
 	public AzimuthPlaneDetectionPlotMsg() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public short getMessageClass() {
@@ -208,6 +144,115 @@ public class AzimuthPlaneDetectionPlotMsg implements Serializable{
 	}
 	
 	
+	/*
+	 * Byte buffer to Tx
+	 */
+	public ByteBuffer getByteBuffer() {
+
+		putMessageId(messageId);
+		putMessageClass(messageClass);
+		
+		putReserved(reserved);
+		putSource(source);
+		
+		putRange(range);
+		putAzimuth(azimuth);
+		putReserved(reservedInt);
+		putStrength(strength);
+		
+		putDopplerExtension(dopplerExtension);
+		putReserved(reservedByte);
+		putAzimuthExtension(azimuthExtension);
+		putRangeExtension(rangeExtension);
+		
+		putReserved(reservedInt);
+		putTimeStampLow(timeStampLow);
+		putTimeStampHigh(timeStampHigh);
+		
+		return buffer;
+	}
 	
+	private void putMessageClass(short val) {
+		buffer.putShort(val);
+	}
 	
+	private void putMessageId(short val) {
+		buffer.putShort(val);
+	}
+	
+	private void putSource(short val) {
+		buffer.putShort(val);
+	}
+	
+	private void putReserved(short val) {
+		buffer.putShort(val);
+	}
+	
+	private void putRange(int val) {
+		buffer.putInt(val);
+	}
+	
+	private void putAzimuth(int val) {
+		buffer.putInt(val);
+	}
+	
+	private void putStrength(int val) {
+	    buffer.putInt(val);
+	}
+	
+	private void putReserved(int val) {
+		buffer.putInt(val);
+	}
+	
+	private void putRangeExtension(byte val) {
+		buffer.put(val);
+	}
+	
+	private void putAzimuthExtension(byte val) {
+		buffer.put(val);
+	}
+	
+	private void putReserved(byte val) {
+		buffer.put(val);
+	}
+	
+	private void putDopplerExtension(byte val) {
+		buffer.put(val);
+	}
+	
+	private void putTimeStampLow(int val) {
+		buffer.putInt(val);
+	}
+	
+	private void putTimeStampHigh(int val) {
+		buffer.putInt(val);
+	}
+	
+	/*
+	 * Byte array to Rx and decode object	
+	 */
+	public void setByteBuffer(byte[] bArr) {
+		ByteBuffer bb = ByteBuffer.wrap(bArr).order(ByteOrder.LITTLE_ENDIAN);
+		
+		int index = 0;
+		messageId = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		messageClass = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		reserved = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		source = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		range = (int)bb.getInt(index);index += BYTES_PER_INT;
+		azimuth = (short)bb.getInt(index);index += BYTES_PER_INT;
+		
+		reservedInt = (int)bb.getInt(index);index += BYTES_PER_INT;
+		strength = (int)bb.getInt(index);index += BYTES_PER_INT;
+
+		dopplerExtension = (byte)bb.get(index);index += BYTES;
+		reservedByte = (byte)bb.get(index);index += BYTES;
+		azimuthExtension = (byte)bb.get(index);index += BYTES;
+		rangeExtension = (byte)bb.get(index);index += BYTES;
+		
+		reservedInt = (int)bb.getInt(index);index += BYTES_PER_INT;
+		timeStampLow = (int)bb.getInt(index);index += BYTES_PER_INT;
+		timeStampHigh = (int)bb.getInt(index);index += BYTES_PER_INT;
+		
+	}
 }

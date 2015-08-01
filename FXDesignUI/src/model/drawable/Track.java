@@ -20,7 +20,7 @@ import javafx.scene.text.Font;
 
 public class Track extends OverlayItem implements ILayoutParam{
 
-	private String trackNumber;
+	private int trackNumber;
 	private boolean isTextShown = true;
 	
 	private double elevation;
@@ -44,13 +44,12 @@ public class Track extends OverlayItem implements ILayoutParam{
 		return isTextShown;
 	}
 	
-	public void setText(String name, String number) {
-		super.setTitle(name);
+	public void setTrackNumber(int number) {
 		trackNumber = number;
 	}
 	
 	public String getTrackNumber() {
-		return trackNumber;
+		return String.valueOf(trackNumber);
 	}
 	
 	public double getElevation() {
@@ -144,7 +143,7 @@ public class Track extends OverlayItem implements ILayoutParam{
     	gc.setStroke(Color.WHITE);
     	gc.strokeText(getTitle(), p.getX()+OFFSET, p.getY()-OFFSET);
     	gc.setStroke(Color.YELLOW);
-    	gc.strokeText(trackNumber, p.getX()+OFFSET, p.getY()+HGAP);
+    	gc.strokeText(getTrackNumber(), p.getX()+OFFSET, p.getY()+HGAP);
 	}
 
 	@Override
@@ -163,43 +162,43 @@ public class Track extends OverlayItem implements ILayoutParam{
 		}
 	}
 
-	public void drawOnImage(Canvas canvas) {
-		GraphicsContext gc = canvas.getGraphicsContext2D();
-    	gc.save();
-    	
-    	
-    	BufferedImage bufferedImage = new BufferedImage((int) (canvas.getWidth()), 
-				 (int) (canvas.getHeight()), BufferedImage.TYPE_INT_ARGB);
-		Graphics2D g2d = bufferedImage.createGraphics();
-		g2d.setColor(java.awt.Color.RED);
-		g2d.fillOval((int)getX()-OFFSET, (int)getY()-OFFSET, HGAP, HGAP);
-		g2d.setColor(java.awt.Color.WHITE);
-		g2d.setStroke(new BasicStroke(2));
-		g2d.drawOval((int)getX()-OFFSET, (int)getY()-OFFSET, HGAP, HGAP);
-		g2d.drawLine((int)getX(),(int)getY()+HGAP,(int)getX(),(int)getY()-HGAP);
-		g2d.drawLine((int)getX()+HGAP, (int)getY(), (int)getX()-HGAP, (int)getY());
-    	
-    	if(isTextShown)
-			displayText(g2d);
-		
-    	WritableImage wr = null;
-		Image img = SwingFXUtils.toFXImage(bufferedImage, wr);  
-    	
-    	gc.drawImage(img, 0, 0);
-    	gc.restore();
-		
-	}
-
-	private void displayText(Graphics2D g2d) {
-		g2d.setColor(java.awt.Color.BLUE);
-    	ModelDrawing.drawLineAtAngle(g2d, getX(), getY(), HGAP, -45);
-    	Point p = ModelDrawing.getNextPointAtAngle(getX(), getY(), HGAP, -45);
-    	g2d.drawLine((int)p.getX(), (int)p.getY(), (int)p.getX()+2*TEXT_OFFSET, (int)p.getY());
-    	g2d.setFont(new java.awt.Font("Arial",java.awt.Font.PLAIN, 14));
-    	g2d.setColor(java.awt.Color.WHITE);
-    	g2d.drawString(getTitle(), (int)p.getX()+OFFSET, (int)p.getY()-OFFSET);
-    	g2d.setColor(java.awt.Color.YELLOW);
-    	g2d.drawString(trackNumber, (int)p.getX()+OFFSET, (int)p.getY()+HGAP);		
-	}
+//	public void drawOnImage(Canvas canvas) {
+//		GraphicsContext gc = canvas.getGraphicsContext2D();
+//    	gc.save();
+//    	
+//    	
+//    	BufferedImage bufferedImage = new BufferedImage((int) (canvas.getWidth()), 
+//				 (int) (canvas.getHeight()), BufferedImage.TYPE_INT_ARGB);
+//		Graphics2D g2d = bufferedImage.createGraphics();
+//		g2d.setColor(java.awt.Color.RED);
+//		g2d.fillOval((int)getX()-OFFSET, (int)getY()-OFFSET, HGAP, HGAP);
+//		g2d.setColor(java.awt.Color.WHITE);
+//		g2d.setStroke(new BasicStroke(2));
+//		g2d.drawOval((int)getX()-OFFSET, (int)getY()-OFFSET, HGAP, HGAP);
+//		g2d.drawLine((int)getX(),(int)getY()+HGAP,(int)getX(),(int)getY()-HGAP);
+//		g2d.drawLine((int)getX()+HGAP, (int)getY(), (int)getX()-HGAP, (int)getY());
+//    	
+//    	if(isTextShown)
+//			displayText(g2d);
+//		
+//    	WritableImage wr = null;
+//		Image img = SwingFXUtils.toFXImage(bufferedImage, wr);  
+//    	
+//    	gc.drawImage(img, 0, 0);
+//    	gc.restore();
+//		
+//	}
+//
+//	private void displayText(Graphics2D g2d) {
+//		g2d.setColor(java.awt.Color.BLUE);
+//    	ModelDrawing.drawLineAtAngle(g2d, getX(), getY(), HGAP, -45);
+//    	Point p = ModelDrawing.getNextPointAtAngle(getX(), getY(), HGAP, -45);
+//    	g2d.drawLine((int)p.getX(), (int)p.getY(), (int)p.getX()+2*TEXT_OFFSET, (int)p.getY());
+//    	g2d.setFont(new java.awt.Font("Arial",java.awt.Font.PLAIN, 14));
+//    	g2d.setColor(java.awt.Color.WHITE);
+//    	g2d.drawString(getTitle(), (int)p.getX()+OFFSET, (int)p.getY()-OFFSET);
+//    	g2d.setColor(java.awt.Color.YELLOW);
+//    	g2d.drawString(getTrackNumber(), (int)p.getX()+OFFSET, (int)p.getY()+HGAP);		
+//	}
 
 }

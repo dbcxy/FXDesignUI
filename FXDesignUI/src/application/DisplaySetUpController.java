@@ -29,9 +29,9 @@ import org.apache.log4j.Logger;
 
 import utils.Constance;
 
-public class SettingsController implements Initializable,ILayoutParam{
+public class DisplaySetUpController implements Initializable,ILayoutParam{
 	
-	private static final Logger logger = Logger.getLogger(SettingsController.class);
+	private static final Logger logger = Logger.getLogger(DisplaySetUpController.class);
 
 	@FXML AnchorPane Settings;
 	
@@ -74,13 +74,13 @@ public class SettingsController implements Initializable,ILayoutParam{
 		initDefaultValues();
 		initUnits();
 		
-		Constance.IS_CONFIG_SET = true;
+		Constance.IS_DISPLAY_SETUP = true;
 	}
 	
 	@FXML
 	protected void okClick(ActionEvent event) {
-		appConfig.saveSettingsData();
-		if(appConfig.isSettingSaved()) {
+		appConfig.saveDisplaySetupData();
+		if(appConfig.isDisplaySetupSaved()) {
 			closeSettings(event);
 			AppConfig.getInstance().getFxmlController().notifyChanges();
 		}
@@ -123,38 +123,38 @@ public class SettingsController implements Initializable,ILayoutParam{
 	}
 	
 	private void loadToList() {
-		appConfig.getSettingList().clear();
-		appConfig.addSetting(MaximumElevation);
-		appConfig.addSetting(MaximumAzimuth);
-		appConfig.addSetting(ElevationUSL);
-		appConfig.addSetting(ElevationGlideAngle);
-		appConfig.addSetting(ElevationGlideMaxDist);
-		appConfig.addSetting(ElevationGlideFlatStartDist);
-		appConfig.addSetting(ElevationLSL);
-		appConfig.addSetting(ElevationUAL);
-		appConfig.addSetting(ElevationLAL);
-		appConfig.addSetting(ElevationUSaL);
-		appConfig.addSetting(ElevationLSaL);
-		appConfig.addSetting(ElevationDH);
-		appConfig.addSetting(AzimuthLSL);
-		appConfig.addSetting(AzimuthRSL);
-		appConfig.addSetting(AzimuthRCLO);
-		appConfig.addSetting(AzimuthLAL);
-		appConfig.addSetting(AzimuthRAL);
-		appConfig.addSetting(AzimuthLSaL);
-		appConfig.addSetting(AzimuthRSaL);		
+		appConfig.getDisplaySetupList().clear();
+		appConfig.addDisplaySetup(MaximumElevation);
+		appConfig.addDisplaySetup(MaximumAzimuth);
+		appConfig.addDisplaySetup(ElevationUSL);
+		appConfig.addDisplaySetup(ElevationGlideAngle);
+		appConfig.addDisplaySetup(ElevationGlideMaxDist);
+		appConfig.addDisplaySetup(ElevationGlideFlatStartDist);
+		appConfig.addDisplaySetup(ElevationLSL);
+		appConfig.addDisplaySetup(ElevationUAL);
+		appConfig.addDisplaySetup(ElevationLAL);
+		appConfig.addDisplaySetup(ElevationUSaL);
+		appConfig.addDisplaySetup(ElevationLSaL);
+		appConfig.addDisplaySetup(ElevationDH);
+		appConfig.addDisplaySetup(AzimuthLSL);
+		appConfig.addDisplaySetup(AzimuthRSL);
+		appConfig.addDisplaySetup(AzimuthRCLO);
+		appConfig.addDisplaySetup(AzimuthLAL);
+		appConfig.addDisplaySetup(AzimuthRAL);
+		appConfig.addDisplaySetup(AzimuthLSaL);
+		appConfig.addDisplaySetup(AzimuthRSaL);		
 	}
 
 	private void initDefaultValues() {
 		
 		//set Default label to NOTHING
-		for(int i=0;i<appConfig.getSettingListSize();i++) {
-			((Label)(appConfig.getSettingList().get(i).getChildren().get(3))).setText("");
+		for(int i=0;i<appConfig.getDisplaySetupListSize();i++) {
+			((Label)(appConfig.getDisplaySetupList().get(i).getChildren().get(3))).setText("");
 		}
 		
 		//set TextField to their values
-		for(int i=0;i<appConfig.getSettingListSize();i++) {
-			((TextField)(appConfig.getSettingList().get(i).getChildren().get(1))).setText(String.valueOf(appConfig.getSettingListValue(i)));
+		for(int i=0;i<appConfig.getDisplaySetupListSize();i++) {
+			((TextField)(appConfig.getDisplaySetupList().get(i).getChildren().get(1))).setText(String.valueOf(appConfig.getDisplaySetupListValue(i)));
 		}
 	}
 

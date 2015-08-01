@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="Preference" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-border-color: #089fea; -fx-background-color: #deeecd; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PreferencesController">
+<AnchorPane fx:id="SystemSetup" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-border-color: #089fea; -fx-background-color: #deeecd; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SystemSetUpController">
    <children>
       <BorderPane layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <bottom>
@@ -77,61 +77,6 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <Label text="Radar Parameters">
-                                       <font>
-                                          <Font name="Arial Bold" size="12.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                    <HBox>
-                                       <children>
-                                          <Label minWidth="300.0" text="Mode of Operation">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                          <ComboBox fx:id="comboModes" prefWidth="150.0" promptText="Select" visibleRowCount="5">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                             </HBox.margin></ComboBox>
-                                          <Label minWidth="50.0">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                          <Label minWidth="50.0">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                       </children>
-                                    </HBox>
-                                    <HBox>
-                                       <children>
-                                          <Label minWidth="300.0" text="Change Polarization">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                          <ComboBox fx:id="comboPolarization" prefWidth="150.0" promptText="Select" visibleRowCount="5">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </ComboBox>
-                                          <Label minWidth="50.0">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                          <Label minWidth="50.0">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                       </children>
-                                    </HBox>
                                     <Label text="Graph Parameters">
                                        <font>
                                           <Font name="Arial Bold" size="12.0" />
@@ -166,7 +111,7 @@
                                     </HBox>
                                     <HBox>
                                        <children>
-                                          <Label minWidth="300.0" text="Azimuth / Elevation units">
+                                          <Label minWidth="300.0" text="Elevation units">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                                              </HBox.margin>
@@ -190,17 +135,56 @@
                                     </HBox>
                                     <HBox>
                                        <children>
-                                          <Label minWidth="300.0" text="Frequency Selection">
+                                          <Label text="Network Parameters">
+                                             <font>
+                                                <Font name="Arial Bold" size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="statusPort" minWidth="120.0" textFill="#4400ff">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label minWidth="300.0" text="Port No for Azimuth Plot">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <TextField fx:id="freqSel">
+                                          <TextField fx:id="portAzPlot">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </HBox.margin>
                                           </TextField>
-                                          <Label minWidth="50.0" text="Hz">
+                                          <Label minHeight="25.0" minWidth="120.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label minWidth="300.0" text="Port No for Azimuth Track">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="portAzTrack">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="50.0">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </HBox.margin>
@@ -214,12 +198,84 @@
                                     </HBox>
                                     <HBox>
                                        <children>
-                                          <Label minWidth="300.0" text="Opeartion / Calibration / BITE">
+                                          <Label minWidth="300.0" text="Port No for Elevation Plot">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <TextField fx:id="bite">
+                                          <TextField fx:id="portElPlot">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="50.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="50.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label minWidth="300.0" text="Port No for ElevationTrack">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="portElTrack">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="50.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="50.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label minWidth="300.0" text="Port No for RAW Video">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="portVideo">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minWidth="50.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="50.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label minWidth="300.0" text="Port No for Sending data to Radar">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="portSend">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </HBox.margin>
@@ -248,7 +304,7 @@
          <top>
             <VBox BorderPane.alignment="CENTER">
                <children>
-                  <Label text="Preferences">
+                  <Label text="System Setup">
                      <font>
                         <Font name="Arial Bold" size="15.0" />
                      </font>

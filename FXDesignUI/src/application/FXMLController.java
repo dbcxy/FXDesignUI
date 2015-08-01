@@ -2,23 +2,19 @@ package application;
 
 import java.io.IOException;
 import java.net.DatagramSocket;
+import java.net.MulticastSocket;
 import java.net.SocketException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.function.Consumer;
 
 import materialdesignbutton.MaterialDesignButtonWidget;
 import materialdesignbutton.MaterialDesignButtonWidget.VAL;
-import model.AppConfig;
 import model.DataObserver;
 import model.MatrixRef;
-import model.drawable.Plot;
-import model.drawable.Track;
 import model.graph.AzimuthChart;
 import model.graph.ElevationChart;
 import model.graph.ILayoutParam;
@@ -29,27 +25,16 @@ import org.apache.log4j.Logger;
 
 import textpanel.TextPanelWidget;
 import utils.Constance;
-import utils.ModelDrawing;
 import views.Console;
 import views.ResizableCanvas;
-import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
-import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Bounds;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.SubScene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
@@ -59,13 +44,10 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -190,36 +172,36 @@ public class FXMLController implements Initializable,ILayoutParam{
     protected void menuCloseStage() {
     	Stage stage = (Stage) fxMenuBar.getScene().getWindow();
     	Constance.IS_CLOSE = true;
-    	if(Constance.IS_CONNECTED) {
-	    	if(Constance.UDPIP)
-				try {
-					tTask.InterruptableUDPThread(new DatagramSocket());
-				} catch (SocketException e) {
-					e.printStackTrace();
-				}
-//	    	tTask.closeActiveConnection();
-//	    	tTask.interrupt();
-    	}
     	stage.close();
     	logger.info("APPLICATION CLOSED");
     }
     
     @FXML
-    protected void menuDisplaySettings(ActionEvent event) {    	
-    	displaySettings();
+    protected void onDisplaySetup(ActionEvent event) {    	
+    	displaySetup();
     }
     
     @FXML 
-    protected void menuSystemPreferences(ActionEvent event) {
-    	systemPreferences();  	
+    protected void onSystemSetup(ActionEvent event) {
+    	systemSetup();  	
     }
     
-    private void displaySettings() {
+    @FXML 
+    protected void onRadarSetup(ActionEvent event) {
+    	radarSetup();  	
+    }
+    
+    @FXML 
+    protected void onRunwaySetup(ActionEvent event) {
+    	runwaySetup();  	
+    }
+    
+    private void displaySetup() {
     	final Stage dialog = new Stage();
         dialog.initModality(Modality.APPLICATION_MODAL);
         FXMLLoader fxmlLoader = new FXMLLoader();
 		try {
-			fxmlLoader.load(getClass().getResourceAsStream("Settings.fxml"));
+			fxmlLoader.load(getClass().getResourceAsStream("DisplaySetUp.fxml"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -232,12 +214,48 @@ public class FXMLController implements Initializable,ILayoutParam{
         dialog.show();
     }
     
-    private void systemPreferences() {
+    private void systemSetup() {
     	final Stage dialog = new Stage();
         dialog.initModality(Modality.APPLICATION_MODAL);
         FXMLLoader fxmlLoader = new FXMLLoader();
 		try {
-			fxmlLoader.load(getClass().getResourceAsStream("Preferences.fxml"));
+			fxmlLoader.load(getClass().getResourceAsStream("SystemSetUp.fxml"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Parent root = (Parent) fxmlLoader.getRoot();
+        Scene dialogPreferences = new Scene(root);
+        dialog.setScene(dialogPreferences);
+        dialog.setResizable(false);
+        dialog.initStyle(StageStyle.UNDECORATED);
+        dialog.centerOnScreen();
+        dialog.show();  
+    }
+    
+    private void radarSetup() {
+    	final Stage dialog = new Stage();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        FXMLLoader fxmlLoader = new FXMLLoader();
+		try {
+			fxmlLoader.load(getClass().getResourceAsStream("RadarSetUp.fxml"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Parent root = (Parent) fxmlLoader.getRoot();
+        Scene dialogPreferences = new Scene(root);
+        dialog.setScene(dialogPreferences);
+        dialog.setResizable(false);
+        dialog.initStyle(StageStyle.UNDECORATED);
+        dialog.centerOnScreen();
+        dialog.show();  
+    }
+    
+    private void runwaySetup() {
+    	final Stage dialog = new Stage();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        FXMLLoader fxmlLoader = new FXMLLoader();
+		try {
+			fxmlLoader.load(getClass().getResourceAsStream("RadarSetUp.fxml"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -268,7 +286,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 			cBtmL1.draw();
 			cBtmL2.draw();
 			cBtmL3.draw();
-//			stopNetworkTask();
+			stopNetworkTask();
 			isAppRunning = false;
 			isDrawn = false;
 			btn_startDisplay.setStyle("-fx-background-image: url(\"assets/img/start.png\"); -fx-background-size: 50 50; -fx-background-repeat: no-repeat; -fx-background-position: center;");
@@ -287,6 +305,21 @@ public class FXMLController implements Initializable,ILayoutParam{
 		});
 		tTask.start();
 	}
+    
+    private void stopNetworkTask() {
+    	if(Constance.IS_CONNECTED) {
+    		Constance.IS_CONNECTED = false;
+	    	if(Constance.UDPIP) {
+				try {
+					tTask.InterruptableUDPThread(new DatagramSocket());
+				} catch (SocketException e) {
+					e.printStackTrace();
+				}
+	    	} 
+	    	tTask.closeActiveConnection();
+	    	tTask.interrupt();
+    	}
+    }
     
     private void initCanvasLayout() {
     	    	
@@ -514,69 +547,7 @@ public class FXMLController implements Initializable,ILayoutParam{
     	ElevationChart.drawText(canvas);
     }
     
-//    private void updateObjects(Canvas canvas) {
-//    	Track mTrack1 = new Track();
-//    	Track mTrack2 = new Track();
-//    	Track mTrack3 = new Track();
-//    	Plot mPlot1 = new Plot();
-//    	Plot mPlot2 = new Plot();
-//    	GraphicsContext gc = canvas.getGraphicsContext2D();
-//    	
-//    	final double WIDTH_OFF = canvas.getWidth()-OFFSET;
-//    	
-//    	//update shape
-//        DoubleProperty x  = new SimpleDoubleProperty();
-//        DoubleProperty y  = new SimpleDoubleProperty();
-//        AnimationTimer timer = new AnimationTimer() {
-//            @Override
-//            public void handle(long now) {
-//            	canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
-//            	mTrack1.setXY(x.doubleValue(), y.doubleValue());
-//            	mTrack1.setText("AA10", "3200/100");
-////            	mTrack1.draw(gc);
-//            	mTrack1.drawOnImage(canvas);
-//            	
-//            	mTrack2.setXY(x.doubleValue()-50, y.doubleValue()+50);
-//            	mTrack2.setText("AA11", "32/10");
-////            	mTrack2.draw(gc);
-////            	mTrack2.drawOnImage(canvas);
-//            	
-//            	mTrack3.setXY( 350, 150);
-//            	mTrack3.setText("ABC", "300/10");
-////            	mTrack3.draw(gc);
-////            	mTrack3.drawOnImage(canvas);
-//            	
-//            	mPlot1.setXY(x.doubleValue()-50, y.doubleValue()+50);
-//            	mPlot1.setTitle("PLOT2");
-//            	mPlot1.draw(gc);
-//            	
-//            	mPlot2.setXY(x.doubleValue()-30, y.doubleValue()+30);
-//            	mPlot2.setTitle("PLOT2");
-//            	mPlot2.draw(gc);
-//            	
-//            }
-//        };
-//        timer.start();
-//        
-//        Runnable mTask = new Runnable() {
-//			        	
-//			@Override
-//			public void run() {
-//				for(int i=0;i<WIDTH_OFF/2;i++){
-//	                x.setValue(WIDTH_OFF-i);
-//	                y.setValue(OFFSET+i);
-//	                try {
-//						Thread.sleep(50);//Update or refresh rate
-//					} catch (InterruptedException e) {
-//						e.printStackTrace();
-//					}
-//        		}
-//			}
-//		};
-//		Thread mThread = new Thread(mTask);
-//		mThread.start();
-//    }
-    
+
 	private void drawGraphBottom(Canvas canvas) {
 		mAzimuthChart = new AzimuthChart(canvas);
 		mAzimuthChart.drawAzimuthLine();
@@ -610,26 +581,38 @@ public class FXMLController implements Initializable,ILayoutParam{
 	}
 	
 	public void startDisplayAction() {
-		if(!Constance.IS_CONFIG_SET) {
-			Alert alert = new Alert(AlertType.INFORMATION, "Do you like to configure display settings for the radar now " + "?", ButtonType.YES, ButtonType.NO);
+		if(!Constance.IS_DISPLAY_SETUP) {
+			Alert alert = new Alert(AlertType.INFORMATION, "Do you like to configure Display Setup for the radar now " + "?", ButtonType.YES, ButtonType.NO);
 			alert.setTitle("Alert");
 			alert.showAndWait();
 			if (alert.getResult() == ButtonType.YES) {
-				displaySettings();
+				displaySetup();
 				actiontarget.setTextFill(Color.RED);
-				actiontarget.setText("Please set the Configuration Parameters for Display!");
+				actiontarget.setText("Please perform the Display setup accordingly!");
 				actiontarget.setTextFill(Color.AQUAMARINE);
 			} else {
 				startShowingDisplay();
 			}
-		} else if(!Constance.IS_PREF_SET) {
-			Alert alert = new Alert(AlertType.INFORMATION, "Choose your preference for display settings. Do you want to change now ? ", ButtonType.YES, ButtonType.NO);
+		} else if(!Constance.IS_SYSTEM_SETUP) {
+			Alert alert = new Alert(AlertType.INFORMATION, "Choose your System Setup. Do you want to change now ? ", ButtonType.YES, ButtonType.NO);
 			alert.setTitle("Alert");
 			alert.showAndWait();
 			if (alert.getResult() == ButtonType.YES) {
-				systemPreferences();
+				systemSetup();
 				actiontarget.setTextFill(Color.RED);
-				actiontarget.setText("Please set the Preference accordingly!");
+				actiontarget.setText("Please perform the System setup accordingly!");
+				actiontarget.setTextFill(Color.AQUAMARINE);
+			} else {
+				startShowingDisplay();
+			}
+		} else if(!Constance.IS_RADAR_SETUP) {
+			Alert alert = new Alert(AlertType.INFORMATION, "Choose your Radar Setup. Do you want to change now ? ", ButtonType.YES, ButtonType.NO);
+			alert.setTitle("Alert");
+			alert.showAndWait();
+			if (alert.getResult() == ButtonType.YES) {
+				systemSetup();
+				actiontarget.setTextFill(Color.RED);
+				actiontarget.setText("Please perform the Radar setup accordingly!");
 				actiontarget.setTextFill(Color.AQUAMARINE);
 			} else {
 				startShowingDisplay();

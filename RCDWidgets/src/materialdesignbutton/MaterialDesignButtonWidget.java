@@ -40,7 +40,7 @@ public class MaterialDesignButtonWidget extends Button {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-
+        
         getStyleClass().addAll("md-button");
         createRippleEffect();
     }

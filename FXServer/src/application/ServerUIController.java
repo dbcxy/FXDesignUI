@@ -38,6 +38,9 @@ public class ServerUIController implements Initializable, Notifier{
 	@FXML MaterialDesignButtonWidget startBtn;	
 	
 	double initialX,initialY;
+	boolean isStop = false;
+	
+	C2Server c2Server = new C2Server();
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -54,24 +57,30 @@ public class ServerUIController implements Initializable, Notifier{
 	
 	@FXML
 	protected void startClick(ActionEvent event) {
-		String ts = targetSpeed.getText();
-		String irng = initRange.getText();
-		String iaz = initAz.getText();
-		String st = scanTime.getText();
-		String nos = noOfScans.getText();
-		
-		if(ts.isEmpty() || irng.isEmpty() || iaz.isEmpty() || st.isEmpty() || nos.isEmpty()) {
-			Alert alert = new Alert(AlertType.ERROR, " Text Field Can't be empty ", ButtonType.OK);
-			alert.showAndWait();
-		} else {
-			if(validateTargetSpeed(ts) &&
-					validateRange(irng) &&
-					validateAz(iaz) &&
-					validateScanTime(st) &&
-					validateNoOfScans(nos))	{
-				startNetworkTask();
-				updateStartButton(1);
+		if(!isStop) {
+			String ts = targetSpeed.getText();
+			String irng = initRange.getText();
+			String iaz = initAz.getText();
+			String st = scanTime.getText();
+			String nos = noOfScans.getText();
+			
+			if(ts.isEmpty() || irng.isEmpty() || iaz.isEmpty() || st.isEmpty() || nos.isEmpty()) {
+				Alert alert = new Alert(AlertType.ERROR, " Text Field Can't be empty ", ButtonType.OK);
+				alert.showAndWait();
+			} else {
+				if(validateTargetSpeed(ts) &&
+						validateRange(irng) &&
+						validateAz(iaz) &&
+						validateScanTime(st) &&
+						validateNoOfScans(nos))	{
+					startNetworkTask();
+					updateStartButton(1);
+					isStop = true;
+				}
 			}
+		} else {
+			stopNetworkTask();
+			isStop = false;
 		}
 	}
 	
@@ -106,10 +115,13 @@ public class ServerUIController implements Initializable, Notifier{
 	}
 
 	private void startNetworkTask() {
-		C2Server c2Server = new C2Server();
 		c2Server.startMCUDPThreadServer();
-		
-		
+//		c2Server.startTCPThreadServer();		
+	}
+	
+	private void stopNetworkTask() {
+		c2Server.stopMCUDPThreadServer();
+//		c2Server.stopTCPThreadServer();	
 	}
 	
 	private boolean validateTargetSpeed(String ts) {

@@ -2,52 +2,19 @@ package messages.radar;
 
 import java.io.Serializable;
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class AzimuthPlanePlotsPerCPIMsg implements Serializable {
-//	final static int MSG_SIZE = 8;//Word2*4
-//	ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
-//	AzimuthPlaneDetectionPlotMsg aPlotMsg = null;
-//	
-//	public AzimuthPlanePlotsPerCPIMsg() {
-//		
-//	}
-//	
-//	public ByteBuffer getByteBuffer() {
-//		byte[] b1 = buffer.array();
-//		byte[] b2 = aPlotMsg.getByteBuffer().array();
-//		byte[] res = new byte[b1.length+b2.length];
-//		System.arraycopy(b1	, 0, res, 0, b1.length);
-//		System.arraycopy(b2, 0, res, b1.length, b2.length);
-//		ByteBuffer bb = ByteBuffer.wrap(res);
-//		return bb;
-//	}
-//	
-//	public void putMessageClass(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putMessageId(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putSource(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putPlotCount(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void setAzimuthDetectionPlotMsg(AzimuthPlaneDetectionPlotMsg aPlotMsg) {
-//		this.aPlotMsg = aPlotMsg;
-//	}
-	
-	/**
-	 * 
-	 */
+import messages.utils.IByteSum;
+
+public class AzimuthPlanePlotsPerCPIMsg implements Serializable,IByteSum {
+
 	private static final long serialVersionUID = 1L;
+	final static int MSG_SIZE = 8;//Word2*4
+	ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
+
 	private short messageClass;
 	private short messageId;
 	private short source;
@@ -62,10 +29,10 @@ public class AzimuthPlanePlotsPerCPIMsg implements Serializable {
 		return messageClass;
 	}
 
-	public void setMessageClass(short messageClass) {
-		this.messageClass = messageClass;
+	public void setMessageClass(short messageType) {
+		this.messageClass = messageType;
 	}
-
+	
 	public short getMessageId() {
 		return messageId;
 	}
@@ -102,5 +69,63 @@ public class AzimuthPlanePlotsPerCPIMsg implements Serializable {
 	public void addAzimuthPlaneDetectionPlotMsg(AzimuthPlaneDetectionPlotMsg aPlotMsg) {
 		this.azimuthPlaneDetectionPlotMsg.add(aPlotMsg);
 	}
+	
+	public byte[] getByteBuffer() {
+		putMessageId(messageId);
+		putMessageClass(messageClass);
+		putPlotCount(plotCount);
+		putSource(source);
+		byte[] b1 = buffer.array();
+		for(AzimuthPlaneDetectionPlotMsg aMsg: azimuthPlaneDetectionPlotMsg){
+
+		}
+		
+		//JUGAD
+		byte[] b2 = azimuthPlaneDetectionPlotMsg.get(azimuthPlaneDetectionPlotMsg.size()-1).getByteBuffer().array();
+		byte[] res = new byte[b1.length+b2.length];
+		System.arraycopy(b1	, 0, res, 0, b1.length);
+		System.arraycopy(b2, 0, res, b1.length, b2.length);
+		
+		return res;
+	}
+	
+	private void putMessageClass(short val) {
+		buffer.putShort(val);
+	}
+	
+	private void putMessageId(short val) {
+		buffer.putShort(val);
+	}
+	
+	private void putSource(short val) {
+		buffer.putShort(val);
+	}
+	
+	private void putPlotCount(short val) {
+		buffer.putShort(val);
+	}
+	
+	/*
+	 * Byte array to Rx and decode object	
+	 */
+	public void setByteBuffer(byte[] bArr) {
+		ByteBuffer bb = ByteBuffer.wrap(bArr).order(ByteOrder.LITTLE_ENDIAN);
+		
+		int index = 0;
+		messageId = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		messageClass = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		plotCount = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		source = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+
+		for(int i=0;i<plotCount;i++) {
+			byte [] subArray = Arrays.copyOfRange(bArr, index, index+AzimuthPlaneDetectionPlotMsg.MSG_SIZE);
+			AzimuthPlaneDetectionPlotMsg aPlotMsg = new AzimuthPlaneDetectionPlotMsg();
+			aPlotMsg.setByteBuffer(subArray);
+			addAzimuthPlaneDetectionPlotMsg(aPlotMsg);
+			index = index+AzimuthPlaneDetectionPlotMsg.MSG_SIZE; 
+		}
+		
+	}
+
 	
 }

@@ -9,6 +9,7 @@ public class C2Server {
 	public static int PORT_EL_PLOTS		= 5500;
 	public static int PORT_EL_TRACKS	= 6600;
 	public static int PORT_VIDEO		= 12001;
+	public static int PORT_WRITE		= 13001;
 	
 	public static int TARGET_SPEED 		= 50;//mps
 	public static int INIT_RANGE 		= 4000;//4km
@@ -20,6 +21,9 @@ public class C2Server {
 		public void notifyData(String str);
 		public void updateStartButton(int i);
 	}
+	
+	TCPServerThread tcpServerThread;
+	MCUDPServerThread udpServerThread;
 	
 	public C2Server() {
 		
@@ -38,12 +42,28 @@ public class C2Server {
 	
 	public void startMCUDPThreadServer() {
 		try {
-			MCUDPServerThread udpServerThread = new MCUDPServerThread();
+			udpServerThread = new MCUDPServerThread();
 			udpServerThread.start();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		
+		}		
+	}
+	
+	public void stopMCUDPThreadServer() {
+		udpServerThread.kill();
+	}
+	
+	public void startTCPThreadServer() {
+		try {
+			tcpServerThread = new TCPServerThread();
+			tcpServerThread.start();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}		
+	}
+	
+	public void stopTCPThreadServer() {
+		tcpServerThread.kill();
 	}
 
 }

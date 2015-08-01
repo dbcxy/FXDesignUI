@@ -13,7 +13,7 @@ import model.drawable.Video;
 public class DataObserver {
 	
 	private static final Logger logger = Logger.getLogger(DataObserver.class);
-	private static final int RING_BUFFER_LENGTH = 5;
+	private static final int RING_BUFFER_LENGTH = 1;
 
 	private SketchItemizedOverlay mTrackList;
 	private SketchItemizedOverlay mPlotList;
@@ -66,7 +66,7 @@ public class DataObserver {
 		boolean trackExist = false;
 	    int trackIndex = 0;
 		for(int i=0;i<mTrackList.size();i++) {
-	    	if(String.valueOf(aTrackMsg.getTrackName()) == ((Track)mTrackList.getItem(i)).getTrackNumber()) {
+	    	if(aTrackMsg.getTrackName() == Integer.parseInt(((Track)mTrackList.getItem(i)).getTrackNumber())) {
 	    		trackExist = true;
 	    		trackIndex = i;
 	    		Track track = (Track)mTrackList.getItem(i);
@@ -79,14 +79,15 @@ public class DataObserver {
 	    
 	    if(!trackExist) {
 	    	track = new Track();
-			track.setY(aTrackMsg.getX());
-			track.setX(aTrackMsg.getY());
+	    	track.setTrackNumber(aTrackMsg.getTrackName());
+			track.setY(aTrackMsg.getY());
+			track.setX(aTrackMsg.getX());
 			track.setAz(true);
 			track.getX();
 			track.getY();
 			mTrackList.addOverlayItem(mTrackIndex,track);
 			mTrackIndex++;
-			mTrackIndex = mTrackIndex % RING_BUFFER_LENGTH;	
+			mTrackIndex = mTrackIndex % RING_BUFFER_LENGTH;
 	    }
 	}
 	

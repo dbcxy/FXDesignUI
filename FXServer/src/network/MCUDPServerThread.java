@@ -5,12 +5,15 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
+import java.nio.ByteBuffer;
 
 import config.AppConfig;
 import network.C2Server.Notifier;
 import messages.radar.AzimuthPlaneDetectionPlotMsg;
 import messages.radar.AzimuthPlanePlotsPerCPIMsg;
 import messages.radar.AzimuthPlaneTrackMsg;
+import messages.utils.DataIdentifier;
+import messages.utils.DataManager;
 import messages.utils.ObjectSizeFetcher;
 import messages.utils.Serializer;
 
@@ -29,6 +32,8 @@ public class MCUDPServerThread extends Thread{
 	
 	boolean pAz = true;
 	boolean tAz = true;
+	
+	DataManager dm = new DataManager();
 		
 	public MCUDPServerThread() throws IOException {
 //		dSocketAzPlots = new DatagramSocket();
@@ -130,6 +135,11 @@ public class MCUDPServerThread extends Thread{
         
 	}
 	
+	public void kill() {
+		pAz = false;
+		tAz = false;
+	}
+	
 	private void exitAll() {
 		try {
 			datagramSocketAzPlots.leaveGroup(groupAddr);
@@ -160,13 +170,13 @@ public class MCUDPServerThread extends Thread{
 			AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = new AzimuthPlanePlotsPerCPIMsg();
 			range = (int) (range - (C2Server.TARGET_SPEED * C2Server.SCAN_TIME ));
 			
-			aPlotsPerCPIMsg.setMessageClass((short) 0x77);
-			aPlotsPerCPIMsg.setMessageId((short) 0x11);
+			aPlotsPerCPIMsg.setMessageClass((short)0x77);
+			aPlotsPerCPIMsg.setMessageId((short)0x11);
 			aPlotsPerCPIMsg.setPlotCount((short) 1);			
 			for (int j=0;j<aPlotsPerCPIMsg.getPlotCount(); j++) {
 				AzimuthPlaneDetectionPlotMsg aPlotMsg = new AzimuthPlaneDetectionPlotMsg();
 				aPlotMsg.setMessageClass((short) 0x55);
-				aPlotMsg.setMessageId((short) 0x11);
+				aPlotMsg.setMessageId((short)0x11);
 				aPlotMsg.setRange(range);
 				
 				// scale the azimuth so that it flaot can be converted to Integer.later during display scale it down by 1000;
@@ -180,7 +190,7 @@ public class MCUDPServerThread extends Thread{
 			
 			//Send plot data MC UDP
 			try {
-				byte[] plot = Serializer.serialize(aPlotsPerCPIMsg);
+				byte[] plot = aPlotsPerCPIMsg.getByteBuffer();
 	            DatagramPacket dp = new DatagramPacket(plot , plot.length,groupAddr,C2Server.PORT_AZ_PLOTS);			
 				datagramSocketAzPlots.send(dp);
 				AppConfig.getInstance().getController().notifyData("Plot Sending... "+plot.length);
@@ -198,33 +208,33 @@ public class MCUDPServerThread extends Thread{
 		int range = C2Server.INIT_RANGE;
 		double az = Math.toRadians(C2Server.INIT_AZ);
 		
-		// Read Data and send at each 0.5 second
-		AzimuthPlaneTrackMsg aTrackMsg = new AzimuthPlaneTrackMsg();
-		range = (int) (range - (C2Server.TARGET_SPEED * C2Server.SCAN_TIME ));
-				
-		aTrackMsg.setMessageClass((short) 0x66);
-		aTrackMsg.setMessageId((short) 0x11);
-		aTrackMsg.setY((int) (range*Math.sin(az)));
-		aTrackMsg.setX((int) (range*Math.cos(az)));
-		aTrackMsg.setTrackStatus((short) 1);
-		aTrackMsg.setTimeStampLow(0);
-		aTrackMsg.setTimeStampHigh(0);
-		
-//		System.out.println("X: "+aTrackMsg.getX());
-//		System.out.println("Y: "+aTrackMsg.getY());
-		
-		//Send plot data MC UDP		
-		try {
-			byte[] track = Serializer.serialize(aTrackMsg);
-	        DatagramPacket dt = new DatagramPacket(track , track.length,groupAddr,C2Server.PORT_AZ_TRACKS);
-	        datagramSocketAzTracks.send(dt);
-	        AppConfig.getInstance().getController().notifyData("Track Sending... "+track.length);
-//	        dSocketAzTracks.send(dt);
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+		for ( int i =0 ; i<C2Server.NO_SCANS; i++) {
+			// Read Data and send at each 0.5 second
+			AzimuthPlaneTrackMsg aTrackMsg = new AzimuthPlaneTrackMsg();
+			range = (int) (range - (C2Server.TARGET_SPEED * C2Server.SCAN_TIME ));
+					
+			aTrackMsg.setMessageClass((short) 0x66);
+			aTrackMsg.setMessageId((short) 0x11);
+			aTrackMsg.setY((int) (range*Math.sin(az)));
+			aTrackMsg.setX((int) (range*Math.cos(az)));
+			aTrackMsg.setTrackStatus((short) 1);
+			aTrackMsg.setTrackName((short) 3);
+			aTrackMsg.setTimeStampLow(0);
+			aTrackMsg.setTimeStampHigh(0);
+			
+			//Send plot data MC UDP		
+			try {
+				byte[] track = aTrackMsg.getByteBuffer().array();
+		        DatagramPacket dt = new DatagramPacket(track , track.length,groupAddr,C2Server.PORT_AZ_TRACKS);
+		        datagramSocketAzTracks.send(dt);
+		        AppConfig.getInstance().getController().notifyData("Track Sending... "+track.length);
+//		        dSocketAzTracks.send(dt);
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
