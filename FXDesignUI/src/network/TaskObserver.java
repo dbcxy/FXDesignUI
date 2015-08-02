@@ -1,27 +1,21 @@
 package network;
 
-import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.net.Socket;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.List;
 
-import messages.radar.AzimuthPlaneDetectionPlotMsg;
 import messages.radar.AzimuthPlanePlotsPerCPIMsg;
 import messages.radar.AzimuthPlaneTrackMsg;
 import messages.utils.DataIdentifier;
 import messages.utils.DataManager;
 import messages.utils.IByteSum;
-import messages.utils.Serializer;
 import model.DataObserver;
 
 import org.apache.log4j.Logger;
@@ -48,12 +42,13 @@ public class TaskObserver extends Thread implements IByteSum{
 	private DatagramSocket mDatagramSocketVideo = null;
 	private DatagramSocket mDatagramSocketWrite = null;
 	
+	private InetAddress groupAddr;
 	private MulticastSocket mMCSocketAzPlot = null;
 	private MulticastSocket mMCSocketElPlot = null;
 	private MulticastSocket mMCSocketAzTrack = null;
 	private MulticastSocket mMCSocketElTrack = null;
 	private MulticastSocket mMCSocketVideo = null;
-	private DatagramSocket mMCSocketWrite = null;
+	private MulticastSocket mMCSocketWrite = null;
 	
 	List<Thread> TaskManager = new ArrayList<Thread>();
 	DataObserver mDataObserver;
@@ -109,7 +104,9 @@ public class TaskObserver extends Thread implements IByteSum{
 						else if(Constance.MCUDP)
 							mData = parseMCUDPData(mMCSocketAzPlot);
 					} catch (IOException e) {
+						Constance.IS_CONNECTED = false;
 						e.printStackTrace();
+						break;
 					}
 							
 					//Make Packet Object
@@ -143,7 +140,9 @@ public class TaskObserver extends Thread implements IByteSum{
 						else if(Constance.MCUDP)
 							mData = parseMCUDPData(mMCSocketElPlot);
 					} catch (IOException e) {
+						Constance.IS_CONNECTED = false;
 						e.printStackTrace();
+						break;
 					}
 							
 					//Make Packet Object
@@ -177,7 +176,9 @@ public class TaskObserver extends Thread implements IByteSum{
 						else if(Constance.MCUDP)
 							mData = parseMCUDPData(mMCSocketAzTrack);
 					} catch (IOException e) {
+						Constance.IS_CONNECTED = false;
 						e.printStackTrace();
+						break;
 					}
 							
 					//Make Packet Object
@@ -211,7 +212,9 @@ public class TaskObserver extends Thread implements IByteSum{
 						else if(Constance.MCUDP)
 							mData = parseMCUDPData(mMCSocketElTrack);
 					} catch (IOException e) {
+						Constance.IS_CONNECTED = false;
 						e.printStackTrace();
+						break;
 					}
 							
 					//Make Packet Object
@@ -245,7 +248,9 @@ public class TaskObserver extends Thread implements IByteSum{
 						else if(Constance.MCUDP)
 							mData = parseMCUDPData(mMCSocketVideo);
 					} catch (IOException e) {
+						Constance.IS_CONNECTED = false;
 						e.printStackTrace();
+						break;
 					}
 							
 					//Make Packet Object
@@ -300,14 +305,15 @@ public class TaskObserver extends Thread implements IByteSum{
 				mMCSocketAzTrack = new MulticastSocket(Constance.PORT_AZ_TRACKS);
 				mMCSocketElTrack = new MulticastSocket(Constance.PORT_EL_TRACKS);
 				mMCSocketVideo = new MulticastSocket(Constance.PORT_VIDEO);
-				mMCSocketWrite = new DatagramSocket();
+				mMCSocketWrite = new MulticastSocket(Constance.PORT_WRITE);
 				
-				InetAddress groupAddr = InetAddress.getByName(Constance.GROUP_ADDR);
+				groupAddr = InetAddress.getByName(Constance.GROUP_ADDR);
 				mMCSocketAzPlot.joinGroup(groupAddr);
 				mMCSocketElPlot.joinGroup(groupAddr);
 				mMCSocketAzTrack.joinGroup(groupAddr);
 				mMCSocketElTrack.joinGroup(groupAddr);
 				mMCSocketVideo.joinGroup(groupAddr);
+				mMCSocketWrite.joinGroup(groupAddr);
 				
 				mMCSocketAzPlot.setInterface(InetAddress.getLocalHost());
 				mMCSocketAzTrack.setInterface(InetAddress.getLocalHost());
@@ -315,12 +321,12 @@ public class TaskObserver extends Thread implements IByteSum{
 				mMCSocketElTrack.setInterface(InetAddress.getLocalHost());
 				mMCSocketVideo.setInterface(InetAddress.getLocalHost());
 				
-				logger.info("MC-UDP (mMCSocketAzPlot)socket created at IP:"+mMCSocketAzPlot.getLocalAddress()+" PORT: "+mMCSocketAzPlot.getLocalPort());
-				logger.info("MC-UDP (mMCSocketElPlot)socket created at IP:"+mMCSocketElPlot.getLocalAddress()+" PORT: "+mMCSocketElPlot.getLocalPort());
-				logger.info("MC-UDP (mMCSocketAzTrack)socket created at IP:"+mMCSocketAzTrack.getLocalAddress()+" PORT: "+mMCSocketAzTrack.getLocalPort());
-				logger.info("MC-UDP (mMCSocketElTrack)socket created at IP:"+mMCSocketElTrack.getLocalAddress()+" PORT: "+mMCSocketElTrack.getLocalPort());
-				logger.info("MC-UDP (mMCSocketVideo)socket created at IP:"+mMCSocketVideo.getLocalAddress()+" PORT: "+mMCSocketVideo.getLocalPort());
-				logger.info("MC-UDP (mMCSocketWrite)socket created at IP:"+mMCSocketWrite.getLocalAddress()+" PORT: "+mMCSocketWrite.getLocalPort());
+				logger.info("MC-UDP (mMCSocketAzPlot)socket created at IP:"+mMCSocketAzPlot.getInterface()+" PORT: "+mMCSocketAzPlot.getLocalPort());
+				logger.info("MC-UDP (mMCSocketElPlot)socket created at IP:"+mMCSocketElPlot.getInterface()+" PORT: "+mMCSocketElPlot.getLocalPort());
+				logger.info("MC-UDP (mMCSocketAzTrack)socket created at IP:"+mMCSocketAzTrack.getInterface()+" PORT: "+mMCSocketAzTrack.getLocalPort());
+				logger.info("MC-UDP (mMCSocketElTrack)socket created at IP:"+mMCSocketElTrack.getInterface()+" PORT: "+mMCSocketElTrack.getLocalPort());
+				logger.info("MC-UDP (mMCSocketVideo)socket created at IP:"+mMCSocketVideo.getInterface()+" PORT: "+mMCSocketVideo.getLocalPort());
+				logger.info("MC-UDP (mMCSocketWrite)socket created at IP:"+mMCSocketWrite.getInterface()+" PORT: "+mMCSocketWrite.getLocalPort());
 			}
 	    	
 		} catch (IOException e) {
@@ -357,14 +363,7 @@ public class TaskObserver extends Thread implements IByteSum{
 					logger.error("UDP socket close failed",e);
 				}
 		} else if(Constance.MCUDP) {
-			try {
-				InetAddress groupAddr = InetAddress.getByName(Constance.GROUP_ADDR);
-				mMCSocketAzPlot.leaveGroup(groupAddr);
-				mMCSocketElPlot.leaveGroup(groupAddr);
-				mMCSocketAzTrack.leaveGroup(groupAddr);
-				mMCSocketElTrack.leaveGroup(groupAddr);
-				mMCSocketVideo.leaveGroup(groupAddr);
-				
+			try {				
 				mMCSocketAzPlot.close();
 				mMCSocketElPlot.close();
 				mMCSocketAzTrack.close();
@@ -386,16 +385,6 @@ public class TaskObserver extends Thread implements IByteSum{
 	    this.mDatagramSocketElTrack = socket;
 	    this.mDatagramSocketVideo = socket;
 	    this.mDatagramSocketWrite = socket;
-	}
-	
-	public void InterruptableMCUDPThread(MulticastSocket multicastSocket) {
-		this.mMCSocketAzPlot = multicastSocket;
-		this.mMCSocketAzTrack = multicastSocket;
-		this.mMCSocketElPlot = multicastSocket;
-		this.mMCSocketElTrack = multicastSocket;
-		this.mMCSocketVideo = multicastSocket;
-		this.mMCSocketWrite = multicastSocket;
-		
 	}
 	
 	public void sendBytes(byte[] myByteArray) throws IOException {

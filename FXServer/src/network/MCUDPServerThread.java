@@ -191,7 +191,9 @@ public class MCUDPServerThread extends Thread{
 			//Send plot data MC UDP
 			try {
 				byte[] plot = aPlotsPerCPIMsg.getByteBuffer();
-	            DatagramPacket dp = new DatagramPacket(plot , plot.length,groupAddr,C2Server.PORT_AZ_PLOTS);			
+	            DatagramPacket dp = new DatagramPacket(plot , plot.length,groupAddr,C2Server.PORT_AZ_PLOTS);
+	            if(datagramSocketAzPlots.isClosed())
+	            	break;
 				datagramSocketAzPlots.send(dp);
 				AppConfig.getInstance().getController().notifyData("Plot Sending... "+plot.length);
 //				dSocketAzPlots.send(dp);
@@ -226,6 +228,8 @@ public class MCUDPServerThread extends Thread{
 			try {
 				byte[] track = aTrackMsg.getByteBuffer().array();
 		        DatagramPacket dt = new DatagramPacket(track , track.length,groupAddr,C2Server.PORT_AZ_TRACKS);
+		        if(datagramSocketAzTracks.isClosed())
+		        	break;
 		        datagramSocketAzTracks.send(dt);
 		        AppConfig.getInstance().getController().notifyData("Track Sending... "+track.length);
 //		        dSocketAzTracks.send(dt);

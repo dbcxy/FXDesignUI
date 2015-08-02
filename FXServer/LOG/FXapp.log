@@ -254,3 +254,7 @@
 2015-08-01 21:18:30,572 INFO [config.AppConfig] - App Config Instantiated
 2015-08-01 21:26:44,937 INFO [application.Main] - SERVER LAUNCH
 2015-08-01 21:26:45,478 INFO [config.AppConfig] - App Config Instantiated
+2015-08-02 21:44:10,430 INFO [application.Main] - SERVER LAUNCH
+2015-08-02 21:44:11,063 INFO [config.AppConfig] - App Config Instantiated
+2015-08-02 21:45:57,216 INFO [application.Main] - SERVER LAUNCH
+2015-08-02 21:45:57,970 INFO [config.AppConfig] - App Config Instantiated

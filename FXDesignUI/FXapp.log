@@ -8,3 +8,516 @@
 2015-08-02 20:42:01,901 INFO [model.MatrixRef] - Matrix Ref Instantiated
 2015-08-02 20:42:01,942 INFO [application.FXMLController] - Top Chart initialization
 2015-08-02 20:42:01,948 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 21:36:32,071 INFO [application.Master] - Launch
+2015-08-02 21:36:33,181 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 21:36:37,297 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-02 21:37:08,023 INFO [application.Master] - Launch
+2015-08-02 21:37:09,006 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 21:37:12,910 INFO [application.DisplaySetUpController] - Radar Setup Dialog Opened
+2015-08-02 21:37:15,173 INFO [application.DisplaySetUpController] - Radar Setup Dialog Closed
+2015-08-02 21:37:16,100 INFO [application.DisplaySetUpController] - System Setup Dialog Opened
+2015-08-02 21:37:22,352 INFO [model.AppConfig] - SystemSetup Data Validated
+2015-08-02 21:37:22,370 INFO [application.DisplaySetUpController] - System Setup Dialog Closed
+2015-08-02 21:37:22,476 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 21:37:22,480 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 21:37:22,673 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 21:37:22,681 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 21:37:24,551 INFO [application.DisplaySetUpController] - System Setup Dialog Opened
+2015-08-02 21:37:24,976 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-08-02 21:37:24,976 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-08-02 21:37:24,976 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-08-02 21:37:24,976 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-08-02 21:37:24,977 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-08-02 21:37:24,977 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 49161
+2015-08-02 21:37:24,998 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 21:37:24,999 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 21:37:24,999 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 21:37:24,999 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 21:37:24,999 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 21:37:24,998 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 21:37:24,999 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 21:37:31,764 INFO [application.DisplaySetUpController] - System Setup Dialog Closed
+2015-08-02 21:37:32,611 INFO [application.DisplaySetUpController] - System Setup Dialog Opened
+2015-08-02 21:37:36,021 INFO [application.DisplaySetUpController] - System Setup Dialog Closed
+2015-08-02 21:37:37,729 INFO [application.DisplaySetUpController] - System Setup Dialog Opened
+2015-08-02 21:37:42,372 INFO [model.AppConfig] - SystemSetup Data Validated
+2015-08-02 21:37:45,523 INFO [application.DisplaySetUpController] - System Setup Dialog Closed
+2015-08-02 21:37:45,527 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 21:37:45,531 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 21:37:45,534 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 21:37:47,412 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-08-02 21:37:47,413 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-08-02 21:37:47,413 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-08-02 21:37:47,413 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-08-02 21:37:47,413 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-08-02 21:37:47,413 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 49162
+2015-08-02 21:37:47,413 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 21:37:47,414 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 21:37:47,414 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 21:37:47,415 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 21:37:47,415 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 21:37:47,414 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 21:37:47,414 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 21:37:49,120 INFO [application.DisplaySetUpController] - System Setup Dialog Opened
+2015-08-02 21:37:53,233 INFO [application.DisplaySetUpController] - System Setup Dialog Closed
+2015-08-02 21:37:55,671 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-02 21:43:08,937 INFO [application.Master] - Launch
+2015-08-02 21:43:09,933 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 21:43:13,448 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-02 21:43:31,619 INFO [application.Master] - Launch
+2015-08-02 21:43:32,909 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 21:43:35,967 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 21:43:35,968 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 21:43:36,020 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 21:43:36,027 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 21:43:38,090 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-08-02 21:43:38,090 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-08-02 21:43:38,090 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-08-02 21:43:38,090 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-08-02 21:43:38,090 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-08-02 21:43:38,090 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 49172
+2015-08-02 21:43:38,092 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 21:43:38,093 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 21:43:38,094 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 21:43:38,094 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 21:43:38,094 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 21:43:38,093 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 21:43:38,094 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 21:43:41,951 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.net.SocketException: error setting options
+	at java.net.TwoStacksPlainDatagramSocketImpl.leave(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.leave(Unknown Source)
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:356)
+	at application.FXMLController.stopNetworkTask(FXMLController.java:319)
+	at application.FXMLController.startShowingDisplay(FXMLController.java:289)
+	at application.FXMLController.startDisplayAction(FXMLController.java:621)
+	at application.FXMLController.onStartAction(FXMLController.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Node.fireEvent(Unknown Source)
+	at javafx.scene.control.Button.fire(Unknown Source)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(Unknown Source)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(Unknown Source)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/505688768.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-08-02 21:50:12,626 INFO [application.Master] - Launch
+2015-08-02 21:50:13,553 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 21:50:16,082 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 21:50:16,082 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 21:50:16,127 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 21:50:16,133 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 21:50:17,964 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-08-02 21:50:17,964 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-08-02 21:50:17,964 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-08-02 21:50:17,964 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-08-02 21:50:17,964 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-08-02 21:50:17,964 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 49161
+2015-08-02 21:50:17,967 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 21:50:17,967 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 21:50:17,968 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 21:50:17,969 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 21:50:17,969 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 21:50:17,985 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 21:50:17,985 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 21:50:25,169 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-02 21:53:44,413 INFO [application.Master] - Launch
+2015-08-02 21:53:45,338 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 21:53:47,356 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 21:53:47,357 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 21:53:47,414 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 21:53:47,421 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 21:53:49,256 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 7700
+2015-08-02 21:53:49,256 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:0.0.0.0/0.0.0.0 PORT: 5500
+2015-08-02 21:53:49,256 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 8800
+2015-08-02 21:53:49,256 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:0.0.0.0/0.0.0.0 PORT: 6600
+2015-08-02 21:53:49,256 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:0.0.0.0/0.0.0.0 PORT: 12001
+2015-08-02 21:53:49,257 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:0.0.0.0/0.0.0.0 PORT: 49169
+2015-08-02 21:53:49,259 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 21:53:49,260 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 21:53:49,260 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 21:53:49,261 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 21:53:49,261 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 21:53:49,262 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 21:53:49,262 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 21:53:56,986 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-02 21:53:56,996 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
+2015-08-02 21:54:03,973 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-02 21:55:53,689 INFO [application.Master] - Launch
+2015-08-02 21:55:54,880 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 21:55:57,338 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 21:55:57,339 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 21:55:57,401 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 21:55:57,409 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 21:55:57,425 ERROR [network.TaskObserver] - Socket creation failed
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(Unknown Source)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(Unknown Source)
+	at java.net.DatagramSocket.bind(Unknown Source)
+	at java.net.DatagramSocket.<init>(Unknown Source)
+	at java.net.DatagramSocket.<init>(Unknown Source)
+	at network.TaskObserver.createSockets(TaskObserver.java:308)
+	at network.TaskObserver.runNetworkTask(TaskObserver.java:72)
+	at network.TaskObserver.run(TaskObserver.java:65)
+2015-08-02 21:55:57,447 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 21:55:57,473 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 21:55:57,477 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 21:55:57,478 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 21:55:57,476 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 21:55:57,478 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 21:55:57,478 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 21:56:28,288 ERROR [network.TaskObserver] - MC-UDP socket close failed
+java.lang.NullPointerException
+	at java.net.MulticastSocket.leaveGroup(Unknown Source)
+	at network.TaskObserver.closeActiveConnection(TaskObserver.java:366)
+	at application.FXMLController.stopNetworkTask(FXMLController.java:319)
+	at application.FXMLController.startShowingDisplay(FXMLController.java:289)
+	at application.FXMLController.startDisplayAction(FXMLController.java:621)
+	at application.FXMLController.onStartAction(FXMLController.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Node.fireEvent(Unknown Source)
+	at javafx.scene.control.Button.fire(Unknown Source)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(Unknown Source)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(Unknown Source)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source)
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$350(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$290/1744912066.get(Unknown Source)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$145(Unknown Source)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$36/2117255219.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-08-02 21:56:56,425 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-02 21:58:59,802 INFO [application.Master] - Launch
+2015-08-02 21:59:00,744 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 21:59:02,804 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 21:59:02,805 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 21:59:02,848 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 21:59:02,856 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 21:59:05,043 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-02 21:59:05,221 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-02 21:59:05,396 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-02 21:59:05,569 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-02 21:59:05,758 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-02 21:59:05,790 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-02 21:59:05,792 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 21:59:05,793 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 21:59:05,796 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 21:59:05,796 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 21:59:05,796 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 21:59:05,797 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 21:59:05,797 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 21:59:42,427 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-02 21:59:42,429 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
+2015-08-02 21:59:42,431 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
+2015-08-02 21:59:42,431 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
+2015-08-02 21:59:42,433 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
+2015-08-02 21:59:42,438 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
+2015-08-02 21:59:56,379 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-02 22:00:40,320 INFO [application.Master] - Launch
+2015-08-02 22:00:41,267 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 22:00:43,550 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 22:00:43,551 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 22:00:43,599 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 22:00:43,605 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 22:00:45,730 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-02 22:00:45,917 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-02 22:00:46,106 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-02 22:00:46,284 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-02 22:00:46,465 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-02 22:00:46,465 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-02 22:00:46,468 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 22:00:46,469 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 22:00:46,469 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 22:00:46,470 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 22:00:46,470 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 22:00:46,470 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 22:00:46,470 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 22:00:49,522 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-02 22:00:49,524 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
+2015-08-02 22:00:49,524 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
+2015-08-02 22:00:49,525 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
+2015-08-02 22:00:49,525 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
+2015-08-02 22:00:49,526 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
+2015-08-02 22:02:01,886 INFO [application.Master] - Launch
+2015-08-02 22:02:02,787 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 22:02:05,011 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 22:02:05,012 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 22:02:05,068 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 22:02:05,076 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 22:02:07,327 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-02 22:02:07,499 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-02 22:02:07,655 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-02 22:02:07,822 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-02 22:02:07,979 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-02 22:02:07,979 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-02 22:02:07,981 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 22:02:07,982 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 22:02:07,982 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 22:02:07,983 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 22:02:07,983 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 22:02:07,984 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 22:02:07,984 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 22:02:09,805 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
+2015-08-02 22:02:09,810 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-02 22:02:09,809 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
+2015-08-02 22:02:09,809 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
+2015-08-02 22:02:09,808 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
+2015-08-02 22:02:09,807 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
+2015-08-02 22:02:16,872 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-02 22:02:44,201 INFO [application.Master] - Launch
+2015-08-02 22:02:45,149 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 22:02:47,422 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 22:02:47,423 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 22:02:47,469 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 22:02:47,475 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 22:02:49,829 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-02 22:02:50,024 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-02 22:02:50,211 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-02 22:02:50,392 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-02 22:02:50,576 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-02 22:02:50,576 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-02 22:02:50,579 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 22:02:50,579 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 22:02:50,580 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 22:02:50,580 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 22:02:50,580 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 22:02:50,581 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 22:02:50,581 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 22:02:52,363 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-02 22:02:52,364 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
+2015-08-02 22:02:52,366 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
+2015-08-02 22:02:52,366 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
+2015-08-02 22:02:52,367 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
+2015-08-02 22:02:52,367 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
+2015-08-02 22:07:33,554 INFO [application.Master] - Launch
+2015-08-02 22:07:34,452 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 22:07:36,539 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 22:07:36,540 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 22:07:36,581 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 22:07:36,589 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 22:07:38,796 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-02 22:07:38,958 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-02 22:07:39,119 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-02 22:07:39,292 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-02 22:07:39,449 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-02 22:07:39,449 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-02 22:07:39,451 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 22:07:39,452 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 22:07:39,452 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 22:07:39,453 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 22:07:39,453 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 22:07:39,453 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 22:07:39,454 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 22:07:41,144 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-02 22:07:57,584 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-02 22:08:59,240 INFO [application.Master] - Launch
+2015-08-02 22:09:00,139 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 22:09:02,540 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 22:09:02,541 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 22:09:02,599 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 22:09:02,607 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 22:09:04,762 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-02 22:09:04,951 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-02 22:09:05,119 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-02 22:09:05,300 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-02 22:09:05,507 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-02 22:09:05,508 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-02 22:09:05,510 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 22:09:05,511 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 22:09:05,511 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 22:09:05,512 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 22:09:05,513 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 22:09:05,513 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 22:09:05,513 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 22:09:07,145 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-02 22:09:28,019 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-02 22:14:30,433 INFO [application.Master] - Launch
+2015-08-02 22:14:31,346 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 22:14:33,409 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 22:14:33,409 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 22:14:33,458 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 22:14:33,465 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 22:14:35,629 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-02 22:14:35,790 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-02 22:14:35,949 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-02 22:14:36,113 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-02 22:14:36,278 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-02 22:14:36,279 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-02 22:14:36,281 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 22:14:36,281 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 22:14:36,282 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 22:14:36,282 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 22:14:36,283 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 22:14:36,283 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 22:14:36,283 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 22:14:37,939 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-02 22:14:37,941 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
+2015-08-02 22:14:37,942 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
+2015-08-02 22:14:37,948 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
+2015-08-02 22:14:37,949 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
+2015-08-02 22:14:37,949 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
+2015-08-02 22:14:57,490 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-02 22:15:41,087 INFO [application.Master] - Launch
+2015-08-02 22:15:42,039 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 22:15:44,351 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 22:15:44,352 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 22:15:44,395 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 22:15:44,401 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-02 22:15:46,666 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-02 22:15:46,843 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-02 22:15:47,017 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-02 22:15:47,195 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-02 22:15:47,389 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-02 22:15:47,390 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-02 22:15:47,393 INFO [network.TaskObserver] - Starting All Threads
+2015-08-02 22:15:47,393 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-02 22:15:47,393 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-02 22:15:47,393 INFO [network.TaskObserver] - Network Task Launched
+2015-08-02 22:15:47,394 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-02 22:15:47,394 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-02 22:15:47,394 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-02 22:15:48,942 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-02 22:15:48,946 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-08-02 22:15:48,943 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-08-02 22:15:48,952 INFO [network.TaskObserver] - Server Data Identified: null
+2015-08-02 22:15:48,956 INFO [network.TaskObserver] - Server Data Identified: null
+2015-08-02 22:15:48,959 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-08-02 22:15:48,960 INFO [network.TaskObserver] - Server Data Identified: null
+2015-08-02 22:15:48,967 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-08-02 22:15:48,967 INFO [network.TaskObserver] - Server Data Identified: null
+2015-08-02 22:15:48,968 INFO [network.TaskObserver] - MC-UDP Server Data received: 2048
+2015-08-02 22:15:48,968 INFO [network.TaskObserver] - Server Data Identified: null
+2015-08-02 22:16:36,280 INFO [application.FXMLController] - APPLICATION CLOSED

@@ -146,7 +146,9 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 		Constance.PREF.EL_AZ_UNITS = comboElAz.getValue();
 		
 		if(Utils.checkIPv4(groupIP.getText()))
-			Constance.GROUP_ADDR =groupIP.getText(); 
+			Constance.GROUP_ADDR =groupIP.getText();
+		else
+			AppConfig.getInstance().openErrorDialog("GROUP_ADDR: Invalid");
 		Constance.PORT_AZ_PLOTS = AppConfig.getInstance().validateIntegerData(Constance.PORT_AZ_PLOTS, portAzPlot.getText(), 0, 15000, "PORT_AZ_PLOTS", "");
 		Constance.PORT_AZ_TRACKS = AppConfig.getInstance().validateIntegerData(Constance.PORT_AZ_TRACKS, portAzTrack.getText(), 0, 15000, "PORT_AZ_TRACKS", "");
 		Constance.PORT_EL_PLOTS = AppConfig.getInstance().validateIntegerData(Constance.PORT_EL_PLOTS, portElPlot.getText(), 0, 15000, "PORT_EL_PLOTS", "");
@@ -163,7 +165,7 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 		Node  source = (Node)  event.getSource(); 
 	    Stage stage  = (Stage) source.getScene().getWindow();
 	    stage.close();
-	    logger.info("Preference Dialog Closed");
+	    logger.info("System Setup Dialog Closed");
 	}
 
 
