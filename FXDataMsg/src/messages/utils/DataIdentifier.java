@@ -11,6 +11,9 @@ public class DataIdentifier implements IByteSum{
 	
 	public static final String AZ_PLOT_MSG = "AzPlotMsgClass";
 	public static final String AZ_TRACK_MSG = "AzTrackMsgClass";
+	public static final String EL_PLOT_MSG = "ElPlotMsgClass";
+	public static final String EL_TRACK_MSG = "ElTrackMsgClass";
+	public static final String VIDEO_MSG = "VideoMsgClass";
 		
 	public static final Map<String, Integer> MSG_CLASS_ID;
 	static {
@@ -18,6 +21,9 @@ public class DataIdentifier implements IByteSum{
 
 		msgType.put(AZ_PLOT_MSG, 0x00770011);
 		msgType.put(AZ_TRACK_MSG, 0x00660011);
+		msgType.put(EL_PLOT_MSG, 0x00550011);
+		msgType.put(EL_TRACK_MSG, 0x00440011);
+		msgType.put(VIDEO_MSG, 0x00330011);
 		
 		MSG_CLASS_ID = Collections.unmodifiableMap(msgType);
 	}	

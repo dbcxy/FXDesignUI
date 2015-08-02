@@ -37,6 +37,7 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 	@FXML ComboBox<String> comboRangeUnits;
 	@FXML ComboBox<String> comboElAz;
 	
+	@FXML TextField groupIP;
 	@FXML TextField portAzPlot;
 	@FXML TextField portAzTrack;
 	@FXML TextField portElPlot;
@@ -65,9 +66,9 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 
 	@FXML
 	protected void okClick(ActionEvent event) {
-		saveData();
-		appConfig.saveSystemSetupData();
-		if(appConfig.isSystemSetupSaved()) {
+		appConfig.validateSystemSetupData();
+		if(appConfig.isSystemSetupValid()) {
+			saveData();
 			closeSettings(event);
 			AppConfig.getInstance().getFxmlController().notifyChanges();
 		}
@@ -111,6 +112,7 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 		comboElAz.getItems().clear();
 		comboElAz.getItems().addAll("Feet (ft)","Meters (mts)");
 		
+		groupIP.setEditable(!Constance.IS_CONNECTED);
 		portAzPlot.setEditable(!Constance.IS_CONNECTED);
 		portAzTrack.setEditable(!Constance.IS_CONNECTED);
 		portElPlot.setEditable(!Constance.IS_CONNECTED);
@@ -128,6 +130,8 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 		comboRunway.setValue(Constance.PREF.SEL_RUNWAY);
 		comboRangeUnits.setValue(Constance.PREF.RANGE_UNITS);	
 		comboElAz.setValue(Constance.PREF.EL_AZ_UNITS);
+		
+		groupIP.setText(Constance.GROUP_ADDR);
 		portAzPlot.setText(String.valueOf(Constance.PORT_AZ_PLOTS));
 		portAzTrack.setText(String.valueOf(Constance.PORT_AZ_TRACKS));
 		portElPlot.setText(String.valueOf(Constance.PORT_EL_PLOTS));
@@ -141,12 +145,14 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 		Constance.PREF.RANGE_UNITS = comboRangeUnits.getValue();
 		Constance.PREF.EL_AZ_UNITS = comboElAz.getValue();
 		
-		Constance.PORT_AZ_PLOTS = Integer.parseInt(portAzPlot.getText());
-		Constance.PORT_AZ_TRACKS = Integer.parseInt(portAzTrack.getText());
-		Constance.PORT_EL_PLOTS = Integer.parseInt(portElPlot.getText());
-		Constance.PORT_EL_TRACKS = Integer.parseInt(portElTrack.getText());
-		Constance.PORT_VIDEO = Integer.parseInt(portVideo.getText());
-		Constance.PORT_WRITE = Integer.parseInt(portSend.getText());
+		if(Utils.checkIPv4(groupIP.getText()))
+			Constance.GROUP_ADDR =groupIP.getText(); 
+		Constance.PORT_AZ_PLOTS = AppConfig.getInstance().validateIntegerData(Constance.PORT_AZ_PLOTS, portAzPlot.getText(), 0, 15000, "PORT_AZ_PLOTS", "");
+		Constance.PORT_AZ_TRACKS = AppConfig.getInstance().validateIntegerData(Constance.PORT_AZ_TRACKS, portAzTrack.getText(), 0, 15000, "PORT_AZ_TRACKS", "");
+		Constance.PORT_EL_PLOTS = AppConfig.getInstance().validateIntegerData(Constance.PORT_EL_PLOTS, portElPlot.getText(), 0, 15000, "PORT_EL_PLOTS", "");
+		Constance.PORT_EL_TRACKS = AppConfig.getInstance().validateIntegerData(Constance.PORT_EL_TRACKS, portElTrack.getText(), 0, 15000, "PORT_EL_TRACKS", "");
+		Constance.PORT_VIDEO = AppConfig.getInstance().validateIntegerData(Constance.PORT_VIDEO, portVideo.getText(), 0, 15000, "PORT_VIDEO", "");
+		Constance.PORT_WRITE = AppConfig.getInstance().validateIntegerData(Constance.PORT_WRITE, portSend.getText(), 0, 15000, "PORT_WRITE", "");
 		
 		Constance.UNITS.isKM = Constance.PREF.RANGE_UNITS.contains("KM");
 		Constance.UNITS.isFPS = Constance.PREF.EL_AZ_UNITS.contains("ft");

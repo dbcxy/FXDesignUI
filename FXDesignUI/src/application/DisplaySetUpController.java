@@ -80,7 +80,7 @@ public class DisplaySetUpController implements Initializable,ILayoutParam{
 	@FXML
 	protected void okClick(ActionEvent event) {
 		appConfig.saveDisplaySetupData();
-		if(appConfig.isDisplaySetupSaved()) {
+		if(appConfig.isDisplaySetupValid()) {
 			closeSettings(event);
 			AppConfig.getInstance().getFxmlController().notifyChanges();
 		}

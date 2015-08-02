@@ -97,7 +97,7 @@ public class TaskObserver extends Thread implements IByteSum{
 			
 			@Override
 			public void run() {
-				logger.info("Starting Read Thread Az Plots Looper");	
+				logger.info("Waiting to Read Thread Az Plots Looper");	
 				while (Constance.IS_CONNECTED) {
 					//Get Data
 					byte[] mData = null;
@@ -131,7 +131,7 @@ public class TaskObserver extends Thread implements IByteSum{
 			
 			@Override
 			public void run() {
-				logger.info("Starting Read Thread El Plots Looper");	
+				logger.info("Waiting to Read Thread El Plots Looper");	
 				while (Constance.IS_CONNECTED) {
 					//Get Data
 					byte[] mData = null;
@@ -165,7 +165,7 @@ public class TaskObserver extends Thread implements IByteSum{
 			
 			@Override
 			public void run() {
-				logger.info("Starting Read Thread Az Tracks Looper");	
+				logger.info("Waiting to Read Thread Az Tracks Looper");	
 				while (Constance.IS_CONNECTED) {
 					//Get Data
 					byte[] mData = null;
@@ -199,7 +199,7 @@ public class TaskObserver extends Thread implements IByteSum{
 			
 			@Override
 			public void run() {
-				logger.info("Starting Read Thread El Tracks Looper");	
+				logger.info("Waiting to Read Thread El Tracks Looper");	
 				while (Constance.IS_CONNECTED) {
 					//Get Data
 					byte[] mData = null;
@@ -233,7 +233,7 @@ public class TaskObserver extends Thread implements IByteSum{
 			
 			@Override
 			public void run() {
-				logger.info("Starting Read Thread Video Looper");
+				logger.info("Waiting to Read Thread Video Looper");
 				while (Constance.IS_CONNECTED) {
 					//Get Data
 					byte[] mData = null;
@@ -501,13 +501,13 @@ public class TaskObserver extends Thread implements IByteSum{
 		Object object = mDataManager.decodeMsg(msgName, mData);
 		logger.info("Server Data Decoded");
 		if(object instanceof AzimuthPlanePlotsPerCPIMsg) {
-			AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = (AzimuthPlanePlotsPerCPIMsg) object;			
-			logger.info("Server Data AzimuthPlanePlotsPerCPIMsg added");
+			AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = (AzimuthPlanePlotsPerCPIMsg) object;
+			logger.info("Server Data AzimuthPlanePlotsPerCPIMsg added: "+aPlotsPerCPIMsg.toString());
 			//add data
 			mDataObserver.addAzPlots(aPlotsPerCPIMsg);
 		} else if(object instanceof AzimuthPlaneTrackMsg) {
 			AzimuthPlaneTrackMsg aTrackMsg = (AzimuthPlaneTrackMsg) object;
-			logger.info("Server Data AzimuthPlaneTrackMsg added");
+			logger.info("Server Data AzimuthPlaneTrackMsg added: "+aTrackMsg.toString());
 			//add data
 			mDataObserver.addAzTracks(aTrackMsg);
 		}

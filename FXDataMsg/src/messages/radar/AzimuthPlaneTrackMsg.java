@@ -25,6 +25,8 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 	private int yVelocity;
 	private int xposVariance;
 	private int yposVariance;
+	private int xvelocityVariance;
+	private int yvelocityVariance;
 	private int timeStampLow;
 	private int timeStampHigh;
 	
@@ -135,6 +137,22 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 	public void setYposVariance(int yposVariance) {
 		this.yposVariance = yposVariance;
 	}
+	
+	public int getXvelocityVariance() {
+		return xvelocityVariance;
+	}
+
+	public void setXvelocityVariance(int xvelocityVariance) {
+		this.xvelocityVariance = xvelocityVariance;
+	}
+
+	public int getYvelocityVariance() {
+		return yvelocityVariance;
+	}
+
+	public void setYvelocityVariance(int yvelocityVariance) {
+		this.yvelocityVariance = yvelocityVariance;
+	}
 
 	public int getTimeStampLow() {
 		return timeStampLow;
@@ -156,91 +174,33 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 	 * Byte Buffer for Tx
 	 */
 	public ByteBuffer getByteBuffer() {
-		putMessageId(messageId);
-		putMessageClass(messageClass);
+		buffer.putShort(messageId);
+		buffer.putShort(messageClass);
 
-		putTrackName(trackName);
-		putSource(source);
+		buffer.putShort(trackName);
+		buffer.putShort(source);
 
-		putTrackStatus(trackStatus);
-		putTrackQuality(trackQuality);
+		buffer.putShort(trackStatus);
+		buffer.putShort(trackQuality);
 		
-		putReserved(reserved);
-		putX(x);
-		putY(y);
-		putReserved(reserved);
-		putXvelocity(xVelocity);
-		putYvelocity(yVelocity);
-		putReserved(reserved);
-		putXPosVariance(xposVariance);
-		putYPosVariance(yposVariance);
-		putReserved(reserved);
-		putTimeStampLow(timeStampLow);
-		putTimeStampHigh(timeStampHigh);
+		buffer.putInt(reserved);
+		buffer.putInt(x);
+		buffer.putInt(y);
+		buffer.putInt(reserved);
+		buffer.putInt(xVelocity);
+		buffer.putInt(yVelocity);
+		buffer.putInt(reserved);
+		buffer.putInt(xposVariance);
+		buffer.putInt(yposVariance);
+		buffer.putInt(reserved);
+		buffer.putInt(xvelocityVariance);
+		buffer.putInt(yvelocityVariance);
+		buffer.putInt(timeStampLow);
+		buffer.putInt(timeStampHigh);
 		
 		return buffer;
 	}
 	
-	private void putMessageClass(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putMessageId(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putSource(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putTrackName(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putTrackQuality(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putTrackStatus(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putReserved(int val) {
-		buffer.putInt(val);
-	}
-	
-	private void putX(int val) {
-		buffer.putInt(val);
-	}
-	
-	private void putY(int val) {
-		buffer.putInt(val);
-	}
-	
-	private void putXvelocity(int val) {
-		buffer.putInt(val);
-	}
-	
-	private void putYvelocity(int val) {
-		buffer.putInt(val);
-	}
-	
-	private void putXPosVariance(int val) {
-		buffer.putInt(val);
-	}
-	
-	private void putYPosVariance(int val) {
-		buffer.putInt(val);
-	}
-	
-	private void putTimeStampLow(int val) {
-		buffer.putInt(val);
-	}
-	
-	private void putTimeStampHigh(int val) {
-		buffer.putInt(val);
-	}
-
 	/*
 	 * Byte array to Rx and decode object	
 	 */
@@ -267,8 +227,20 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 		xposVariance = (int)bb.getInt(index);index += BYTES_PER_INT;
 		yposVariance = (int)bb.getInt(index);index += BYTES_PER_INT;
 		reserved = (int)bb.getInt(index);index += BYTES_PER_INT;
+		xvelocityVariance = (int)bb.getInt(index);index += BYTES_PER_INT;
+		yvelocityVariance = (int)bb.getInt(index);index += BYTES_PER_INT;
+		reserved = (int)bb.getInt(index);index += BYTES_PER_INT;
 		timeStampLow = (int)bb.getInt(index);index += BYTES_PER_INT;
 		timeStampHigh = (int)bb.getInt(index);index += BYTES_PER_INT;
 		
+	}
+	
+	@Override
+	public String toString() {
+		return "AzTrack: "
+				+"\n ID:"+messageId
+				+"\n Class:"+messageClass
+				+"\n X: "+x
+				+"\n Y :"+y;		
 	}
 }

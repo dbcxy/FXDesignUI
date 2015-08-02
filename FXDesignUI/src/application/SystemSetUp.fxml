@@ -155,6 +155,25 @@
                                     </HBox>
                                     <HBox>
                                        <children>
+                                          <Label minWidth="300.0" text="Multicast Group IP">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="groupIP">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label minHeight="25.0" minWidth="120.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
                                           <Label minWidth="300.0" text="Port No for Azimuth Plot">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />

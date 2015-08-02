@@ -316,7 +316,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 					e.printStackTrace();
 				}
 	    	} 
-	    	tTask.closeActiveConnection();
+//	    	tTask.closeActiveConnection();
 	    	tTask.interrupt();
     	}
     }

@@ -28,7 +28,6 @@ public class Main extends Application {
 	}
 	
 	private static void loadLoggerSettings() {
-		PropertyConfigurator.configure("src/assets/log4j.properties");
 		logger.info("SERVER LAUNCH");
 	}
 		

@@ -149,85 +149,29 @@ public class AzimuthPlaneDetectionPlotMsg implements Serializable,IByteSum{
 	 */
 	public ByteBuffer getByteBuffer() {
 
-		putMessageId(messageId);
-		putMessageClass(messageClass);
+		buffer.putShort(messageId);
+		buffer.putShort(messageClass);
 		
-		putReserved(reserved);
-		putSource(source);
+		buffer.putShort(reserved);
+		buffer.putShort(source);
 		
-		putRange(range);
-		putAzimuth(azimuth);
-		putReserved(reservedInt);
-		putStrength(strength);
+		buffer.putInt(range);
+		buffer.putInt(azimuth);
+		buffer.putInt(reservedInt);
+		buffer.putInt(strength);
 		
-		putDopplerExtension(dopplerExtension);
-		putReserved(reservedByte);
-		putAzimuthExtension(azimuthExtension);
-		putRangeExtension(rangeExtension);
+		buffer.put(dopplerExtension);
+		buffer.put(reservedByte);
+		buffer.put(azimuthExtension);
+		buffer.put(rangeExtension);
 		
-		putReserved(reservedInt);
-		putTimeStampLow(timeStampLow);
-		putTimeStampHigh(timeStampHigh);
+		buffer.putInt(reservedInt);
+		buffer.putInt(timeStampLow);
+		buffer.putInt(timeStampHigh);
 		
 		return buffer;
 	}
-	
-	private void putMessageClass(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putMessageId(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putSource(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putReserved(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putRange(int val) {
-		buffer.putInt(val);
-	}
-	
-	private void putAzimuth(int val) {
-		buffer.putInt(val);
-	}
-	
-	private void putStrength(int val) {
-	    buffer.putInt(val);
-	}
-	
-	private void putReserved(int val) {
-		buffer.putInt(val);
-	}
-	
-	private void putRangeExtension(byte val) {
-		buffer.put(val);
-	}
-	
-	private void putAzimuthExtension(byte val) {
-		buffer.put(val);
-	}
-	
-	private void putReserved(byte val) {
-		buffer.put(val);
-	}
-	
-	private void putDopplerExtension(byte val) {
-		buffer.put(val);
-	}
-	
-	private void putTimeStampLow(int val) {
-		buffer.putInt(val);
-	}
-	
-	private void putTimeStampHigh(int val) {
-		buffer.putInt(val);
-	}
-	
+		
 	/*
 	 * Byte array to Rx and decode object	
 	 */
@@ -254,5 +198,14 @@ public class AzimuthPlaneDetectionPlotMsg implements Serializable,IByteSum{
 		timeStampLow = (int)bb.getInt(index);index += BYTES_PER_INT;
 		timeStampHigh = (int)bb.getInt(index);index += BYTES_PER_INT;
 		
+	}
+	
+	@Override
+	public String toString() {
+		return "AzPlot: "
+				+"\n ID:"+messageId
+				+"\n Class:"+messageClass
+				+"\n Range: "+range
+				+"\n Az :"+azimuth;		
 	}
 }

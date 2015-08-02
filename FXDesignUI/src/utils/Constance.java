@@ -88,7 +88,7 @@ public class Constance {
 	public static int PORT_EL_TRACKS		= 6600;
 	public static int PORT_VIDEO			= 12001;
 	public static int PORT_WRITE			= 13001;
-    public static final String GROUP_ADDR 	= "225.225.0.1";
+    public static String GROUP_ADDR 		= "225.225.0.1";
     public static final int DGRAM_LEN 		= 2048;
 	public static final int MILLI_SECOND 	= 1000;
 	public static final int UPDATE_RATE 	= MILLI_SECOND;

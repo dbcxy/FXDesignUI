@@ -2,6 +2,9 @@ package messages.utils;
 
 import messages.radar.AzimuthPlanePlotsPerCPIMsg;
 import messages.radar.AzimuthPlaneTrackMsg;
+import messages.radar.ElevationPlanePlotsPerCPIMsg;
+import messages.radar.ElevationPlaneTrackMsg;
+import messages.radar.PlaneRAWVideoMsg;
 
 public class DataManager implements IByteSum{
 
@@ -12,6 +15,15 @@ public class DataManager implements IByteSum{
 
 		case DataIdentifier.AZ_TRACK_MSG:
 			return encodeAzTrackmsg(object);
+			
+		case DataIdentifier.EL_PLOT_MSG:
+			return encodeElPlotmsg(object);
+			
+		case DataIdentifier.EL_TRACK_MSG:
+			return encodeElTrackmsg(object);
+			
+		case DataIdentifier.VIDEO_MSG:
+			return encodeVideomsg(object);
 			
 		default:
 			break;
@@ -31,6 +43,25 @@ public class DataManager implements IByteSum{
 		return aTrackMsg.getByteBuffer().array();
 	}
 
+	private byte[] encodeElPlotmsg(Object object) {
+		ElevationPlanePlotsPerCPIMsg ePlotsPerCPIMsg = (ElevationPlanePlotsPerCPIMsg) object;
+		
+		return ePlotsPerCPIMsg.getByteBuffer();
+	}
+	
+	private byte[] encodeElTrackmsg(Object object) {
+		ElevationPlaneTrackMsg eTrackMsg = (ElevationPlaneTrackMsg) object;
+		
+		return eTrackMsg.getByteBuffer().array();
+	}
+	
+	private byte[] encodeVideomsg(Object object) {
+		PlaneRAWVideoMsg pVideoMsg = (PlaneRAWVideoMsg) object;
+		
+//		return pVideoMsg.getByteBuffer().array();
+		return null;
+	}
+	
 	public Object decodeMsg(final String type, final byte[] data) {
 		switch (type) {
 		case DataIdentifier.AZ_PLOT_MSG:

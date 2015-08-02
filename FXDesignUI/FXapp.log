@@ -1,0 +1,10 @@
+2015-08-02 20:41:50,267 INFO [application.Master] - Launch
+2015-08-02 20:41:51,248 INFO [model.AppConfig] - App Config Instantiated
+2015-08-02 20:41:54,135 INFO [application.DisplaySetUpController] - System Setup Dialog Opened
+2015-08-02 20:42:01,853 INFO [model.AppConfig] - SystemSetup Data Validated
+2015-08-02 20:42:01,853 INFO [model.AppConfig] - SystemSetup Data Saved
+2015-08-02 20:42:01,872 INFO [application.DisplaySetUpController] - Preference Dialog Closed
+2015-08-02 20:42:01,900 INFO [views.Console] - Enter Operator ID : 
+2015-08-02 20:42:01,901 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-02 20:42:01,942 INFO [application.FXMLController] - Top Chart initialization
+2015-08-02 20:42:01,948 INFO [application.FXMLController] - Bottom Chart initialization

@@ -55,7 +55,7 @@ public class RadarSetUpController implements Initializable,ILayoutParam{
 	protected void okClick(ActionEvent event) {
 		saveData();
 		appConfig.saveRadarSetupData();
-		if(appConfig.isRadarSetupSaved()) {
+		if(appConfig.isRadarSetupValid()) {
 			closeSettings(event);
 			AppConfig.getInstance().getFxmlController().notifyChanges();
 		}

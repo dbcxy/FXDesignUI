@@ -21,6 +21,8 @@ public class AzimuthPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 	private short plotCount;
 	private List<AzimuthPlaneDetectionPlotMsg> azimuthPlaneDetectionPlotMsg = new ArrayList<AzimuthPlaneDetectionPlotMsg>();
 	
+	private StringBuilder strBuilder = new StringBuilder();
+	
 	public AzimuthPlanePlotsPerCPIMsg() {
 		
 	}
@@ -71,10 +73,10 @@ public class AzimuthPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 	}
 	
 	public byte[] getByteBuffer() {
-		putMessageId(messageId);
-		putMessageClass(messageClass);
-		putPlotCount(plotCount);
-		putSource(source);
+		buffer.putShort(messageId);
+		buffer.putShort(messageClass);
+		buffer.putShort(plotCount);
+		buffer.putShort(source);
 		byte[] b1 = buffer.array();
 		for(AzimuthPlaneDetectionPlotMsg aMsg: azimuthPlaneDetectionPlotMsg){
 
@@ -87,22 +89,6 @@ public class AzimuthPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 		System.arraycopy(b2, 0, res, b1.length, b2.length);
 		
 		return res;
-	}
-	
-	private void putMessageClass(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putMessageId(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putSource(short val) {
-		buffer.putShort(val);
-	}
-	
-	private void putPlotCount(short val) {
-		buffer.putShort(val);
 	}
 	
 	/*
@@ -122,10 +108,18 @@ public class AzimuthPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 			AzimuthPlaneDetectionPlotMsg aPlotMsg = new AzimuthPlaneDetectionPlotMsg();
 			aPlotMsg.setByteBuffer(subArray);
 			addAzimuthPlaneDetectionPlotMsg(aPlotMsg);
-			index = index+AzimuthPlaneDetectionPlotMsg.MSG_SIZE; 
-		}
-		
+			index = index+AzimuthPlaneDetectionPlotMsg.MSG_SIZE;
+			strBuilder.append(aPlotMsg.toString()+"\n");
+		}		
 	}
-
+	
+	@Override
+	public String toString() {
+		return "AzPlotCPI: "
+				+"\n ID:"+messageId
+				+"\n Class:"+messageClass
+				+"\n PlotCount: "+plotCount
+				+"\n"+ strBuilder.toString();
+	}
 	
 }
