@@ -48,7 +48,7 @@ public class RadarSetUpController implements Initializable,ILayoutParam{
 		logger.info("Radar Setup Dialog Opened");
 		addDraggableNode(RadarSetup);
 		initDialog();
-		loadDefaultPreference();		
+		loadDefault();		
 	}	
 
 	@FXML
@@ -63,6 +63,8 @@ public class RadarSetUpController implements Initializable,ILayoutParam{
 	
 	@FXML
 	protected void cancelClick(ActionEvent event) {
+		loadDefault();
+		saveData();
 		closeSettings(event);
 	}
 	
@@ -98,7 +100,7 @@ public class RadarSetUpController implements Initializable,ILayoutParam{
 		
 	}
 
-	private void loadDefaultPreference() {
+	private void loadDefault() {
 		comboModes.setValue(Constance.PREF.MODE_OP);
 		comboPolarization.setValue(Constance.PREF.CHG_POL);
 		freqSel.setText(Constance.PREF.FREQ_SEL);

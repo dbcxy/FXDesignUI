@@ -13,7 +13,6 @@ public class AzimuthPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 
 	private static final long serialVersionUID = 1L;
 	final static int MSG_SIZE = 8;//Word2*4
-	ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
 
 	private short messageClass;
 	private short messageId;
@@ -73,6 +72,8 @@ public class AzimuthPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 	}
 	
 	public byte[] getByteBuffer() {
+		
+		ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
 		buffer.putShort(messageId);
 		buffer.putShort(messageClass);
 		buffer.putShort(plotCount);

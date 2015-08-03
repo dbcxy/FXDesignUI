@@ -3,6 +3,8 @@ package application;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -26,6 +28,7 @@ import model.graph.ILayoutParam;
 import org.apache.log4j.Logger;
 
 import utils.Constance;
+import utils.Utils;
 
 public class SystemSetUpController implements Initializable,ILayoutParam{
 	
@@ -36,6 +39,7 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 	@FXML ComboBox<String> comboRunway;
 	@FXML ComboBox<String> comboRangeUnits;
 	@FXML ComboBox<String> comboElAz;
+	@FXML ComboBox<String> comboLR;
 	
 	@FXML TextField groupIP;
 	@FXML TextField portAzPlot;
@@ -70,12 +74,16 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 		if(appConfig.isSystemSetupValid()) {
 			saveData();
 			closeSettings(event);
+			AppConfig.getInstance().getFxmlController().initUIComponents(Constance.PREF.LEFT_RIGHT);
 			AppConfig.getInstance().getFxmlController().notifyChanges();
 		}
 	}
 	
 	@FXML
 	protected void cancelClick(ActionEvent event) {
+		loadDefault();
+		saveData();
+		AppConfig.getInstance().getFxmlController().initUIComponents(Constance.PREF.LEFT_RIGHT);
 		closeSettings(event);
 	}
 	
@@ -112,6 +120,17 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 		comboElAz.getItems().clear();
 		comboElAz.getItems().addAll("Feet (ft)","Meters (mts)");
 		
+		comboLR.getItems().clear();
+		comboLR.getItems().addAll("Left","Right");
+		comboLR.valueProperty().addListener(new ChangeListener<String>() {
+
+			@Override
+			public void changed(ObservableValue<? extends String> observable,
+					String oldValue, String newValue) {
+				AppConfig.getInstance().getFxmlController().initUIComponents(newValue);				
+			}
+		});
+		
 		groupIP.setEditable(!Constance.IS_CONNECTED);
 		portAzPlot.setEditable(!Constance.IS_CONNECTED);
 		portAzTrack.setEditable(!Constance.IS_CONNECTED);
@@ -130,6 +149,7 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 		comboRunway.setValue(Constance.PREF.SEL_RUNWAY);
 		comboRangeUnits.setValue(Constance.PREF.RANGE_UNITS);	
 		comboElAz.setValue(Constance.PREF.EL_AZ_UNITS);
+		comboLR.setValue(Constance.PREF.LEFT_RIGHT);
 		
 		groupIP.setText(Constance.GROUP_ADDR);
 		portAzPlot.setText(String.valueOf(Constance.PORT_AZ_PLOTS));
@@ -144,6 +164,7 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 		Constance.PREF.SEL_RUNWAY = comboRunway.getValue();
 		Constance.PREF.RANGE_UNITS = comboRangeUnits.getValue();
 		Constance.PREF.EL_AZ_UNITS = comboElAz.getValue();
+		Constance.PREF.LEFT_RIGHT = comboLR.getValue();
 		
 		if(Utils.checkIPv4(groupIP.getText()))
 			Constance.GROUP_ADDR =groupIP.getText();

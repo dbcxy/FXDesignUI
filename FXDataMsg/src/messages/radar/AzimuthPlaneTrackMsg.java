@@ -10,7 +10,6 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 		
 	private static final long serialVersionUID = 1L;
 	final static int MSG_SIZE = 72;//Allocating
-	ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
 	
 	private short messageClass;
 	private short messageId;
@@ -174,6 +173,8 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 	 * Byte Buffer for Tx
 	 */
 	public ByteBuffer getByteBuffer() {
+
+		ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
 		buffer.putShort(messageId);
 		buffer.putShort(messageClass);
 

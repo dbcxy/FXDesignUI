@@ -7,13 +7,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 import messages.utils.IByteSum;
 
 public class ElevationPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 
 	private static final long serialVersionUID = 1L;
 	final static int MSG_SIZE = 8;//Word2*4
-	ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
 
 	private short messageClass;
 	private short messageId;
@@ -73,20 +74,25 @@ public class ElevationPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 	}
 	
 	public byte[] getByteBuffer() {
+
+		ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
 		buffer.putShort(messageId);
 		buffer.putShort(messageClass);
 		buffer.putShort(plotCount);
 		buffer.putShort(source);
-		byte[] b1 = buffer.array();
-		for(ElevationPlaneDetectionPlotMsg aMsg: elevationPlaneDetectionPlotMsg){
-			
-		}
+		byte[] cpiBuf = buffer.array();
+		
+//		List<Byte> plotList = Arrays.asList(ArrayUtils.toObject(cpiBuf));
+//		for(ElevationPlaneDetectionPlotMsg aMsg: elevationPlaneDetectionPlotMsg){
+//			byte[] subBuf = elevationPlaneDetectionPlotMsg.get(elevationPlaneDetectionPlotMsg.size()-1).getByteBuffer().array();
+//			plotList.addAll(Arrays.asList(ArrayUtils.toObject(subBuf)));
+//		}
 		
 		//JUGAD
-		byte[] b2 = elevationPlaneDetectionPlotMsg.get(elevationPlaneDetectionPlotMsg.size()-1).getByteBuffer().array();
-		byte[] res = new byte[b1.length+b2.length];
-		System.arraycopy(b1	, 0, res, 0, b1.length);
-		System.arraycopy(b2, 0, res, b1.length, b2.length);
+		byte[] subBuf = elevationPlaneDetectionPlotMsg.get(elevationPlaneDetectionPlotMsg.size()-1).getByteBuffer().array();
+		byte[] res = new byte[cpiBuf.length+subBuf.length];
+		System.arraycopy(cpiBuf	, 0, res, 0, cpiBuf.length);
+		System.arraycopy(subBuf, 0, res, cpiBuf.length, subBuf.length);
 		
 		return res;
 	}

@@ -22,6 +22,7 @@ import network.IControlManager;
 import network.TaskObserver;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.chainsaw.Main;
 
 import textpanel.TextPanelWidget;
 import utils.Constance;
@@ -46,6 +47,8 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Modality;
@@ -57,6 +60,10 @@ public class FXMLController implements Initializable,ILayoutParam{
 	private static final Logger logger = Logger.getLogger(FXMLController.class);
 	
 	@FXML private MenuBar fxMenuBar;
+	
+	@FXML private GridPane MainView;
+	@FXML private ScrollPane UIGraph;
+	@FXML private ScrollPane UIControls;
 	
 	@FXML private TextPanelWidget AntennaControl;
 	@FXML private MaterialDesignButtonWidget btn_antscan;
@@ -116,6 +123,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 	
 	private boolean isAppRunning = false;
 	private boolean isDrawn = false;
+	ColumnConstraints graph;
+	ColumnConstraints controls;
 	
 	MatrixRef matrixRef;
 	
@@ -322,6 +331,10 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
     
     private void initCanvasLayout() {
+    	
+		//swapping graph positions
+		graph = MainView.getColumnConstraints().get(0);
+		controls = MainView.getColumnConstraints().get(1);
     	    	
     	cTopL0.widthProperty().bind(chartTop.widthProperty());
 		cTopL0.heightProperty().bind(chartTop.heightProperty());
@@ -419,6 +432,23 @@ public class FXMLController implements Initializable,ILayoutParam{
 		btn_display20.setText(" 20 "+Constance.UNITS.getLENGTH());
 		btn_display40.setText(" 40 "+Constance.UNITS.getLENGTH());
     }
+	
+	public void initUIComponents(String str) {
+
+		MainView.getChildren().clear();		
+		if(str.contains("Left")) {
+			MainView.addColumn(0, UIGraph);
+			MainView.getColumnConstraints().set(0, graph);
+			MainView.addColumn(1, UIControls);
+			MainView.getColumnConstraints().set(1, controls);
+		} else {
+			MainView.addColumn(1, UIGraph);
+			MainView.getColumnConstraints().set(1, graph);
+			MainView.addColumn(0, UIControls);
+			MainView.getColumnConstraints().set(0, controls);
+		}
+		
+	}
 
 	private void initTimeDate() {
     	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");

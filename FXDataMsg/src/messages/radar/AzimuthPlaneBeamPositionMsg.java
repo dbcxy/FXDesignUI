@@ -1,47 +1,15 @@
 package messages.radar;
 
+import java.io.Serializable;
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 
-public class AzimuthPlaneBeamPositionMsg {
-	
-//	final static int MSG_SIZE = 16;//4*4
-//	ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
-//	
-//	public AzimuthPlaneBeamPositionMsg() {
-//
-//	}	
-//	
-//	public ByteBuffer getByteBuffer() {
-//		return buffer;
-//	}
-//	
-//	public void putMessageClass(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putMessageId(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putSource(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putAzBeamPosNo(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putScanNo(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putReserved(short val) {
-//		buffer.putShort(val);
-//	}
-//	
-//	public void putReserver(int val) {
-//		buffer.putInt(val);
-//	}
+import messages.utils.IByteSum;
+
+public class AzimuthPlaneBeamPositionMsg implements Serializable,IByteSum{
+
+	private static final long serialVersionUID = 1L;
+	final static int MSG_SIZE = 16;//4*4
 	
 	private short messageClass;
 	private short messageId;
@@ -111,6 +79,50 @@ public class AzimuthPlaneBeamPositionMsg {
 		this.reservedInt = reservedInt;
 	}
 	
+	/*
+	 * Byte buffer to Tx
+	 */
+	public ByteBuffer getByteBuffer() {
+
+		ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
+		buffer.putShort(messageId);
+		buffer.putShort(messageClass);
+		
+		buffer.putShort(azBeamPosNo);
+		buffer.putShort(source);
+		
+		buffer.putShort(reserved);
+		buffer.putShort(scanNo);
+		
+		buffer.putInt(reservedInt);
+		
+		return buffer;
+	}
+		
+	/*
+	 * Byte array to Rx and decode object	
+	 */
+	public void setByteBuffer(byte[] bArr) {
+		ByteBuffer bb = ByteBuffer.wrap(bArr).order(ByteOrder.LITTLE_ENDIAN);
+		
+		int index = 0;
+		messageId = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		messageClass = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		azBeamPosNo = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		source = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		reserved = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		scanNo = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		
+		reservedInt = (int)bb.getInt(index);index += BYTES_PER_INT;		
+	}
 	
+	@Override
+	public String toString() {
+		return "AzBeamPos: "
+				+"\n ID:"+messageId
+				+"\n Class:"+messageClass
+				+"\n AzBeamPosNo: "+azBeamPosNo
+				+"\n ScanNo :"+scanNo;		
+	}
 
 }

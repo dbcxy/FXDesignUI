@@ -69,6 +69,7 @@ public class Constance {
 		public static String CHG_POL		= " Horizontal ";
 		public static String RANGE_UNITS	= " Kilometers (KM) ";
 		public static String EL_AZ_UNITS	= " Feet (ft) ";
+		public static String LEFT_RIGHT		= " Left ";
 		public static String FREQ_SEL		= " 0 ";
 		public static String BITE			= " NULL ";
 		

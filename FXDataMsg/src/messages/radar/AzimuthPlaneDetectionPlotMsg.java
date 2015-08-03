@@ -10,7 +10,6 @@ public class AzimuthPlaneDetectionPlotMsg implements Serializable,IByteSum{
 
 	private static final long serialVersionUID = 1L;
 	public final static int MSG_SIZE = 40;//Allocating
-	ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
 	
 	private short messageClass;
 	private short messageId;
@@ -149,6 +148,7 @@ public class AzimuthPlaneDetectionPlotMsg implements Serializable,IByteSum{
 	 */
 	public ByteBuffer getByteBuffer() {
 
+		ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
 		buffer.putShort(messageId);
 		buffer.putShort(messageClass);
 		

@@ -35,7 +35,7 @@
                </font></Label>
          </bottom>
          <center>
-            <GridPane BorderPane.alignment="CENTER">
+            <GridPane fx:id="MainView" BorderPane.alignment="CENTER">
               <columnConstraints>
                 <ColumnConstraints hgrow="NEVER" minWidth="10.0" percentWidth="78.0" />
                 <ColumnConstraints hgrow="NEVER" minWidth="10.0" percentWidth="22.0" />
@@ -44,7 +44,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ScrollPane fitToHeight="true" fitToWidth="true" GridPane.vgrow="ALWAYS">
+                  <ScrollPane fx:id="UIGraph" fitToHeight="true" fitToWidth="true" GridPane.vgrow="ALWAYS">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0">
                            <children>
@@ -187,7 +187,7 @@
                         </AnchorPane>
                     </content>
                   </ScrollPane>
-                  <ScrollPane hbarPolicy="NEVER" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS">
+                  <ScrollPane fx:id="UIControls" hbarPolicy="NEVER" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0">
                            <children>
