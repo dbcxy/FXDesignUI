@@ -171,13 +171,11 @@ class TCPServerThread extends Thread {
 			AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = new AzimuthPlanePlotsPerCPIMsg();
 			range = (int) (range - (C2Server.TARGET_SPEED * C2Server.SCAN_TIME ));
 			
-			aPlotsPerCPIMsg.setMessageClass((short)0x77);
-			aPlotsPerCPIMsg.setMessageId((short)0x11);
+			aPlotsPerCPIMsg.setMessageHeader((int)0x7711);
 			aPlotsPerCPIMsg.setPlotCount((short) 1);			
 			for (int j=0;j<aPlotsPerCPIMsg.getPlotCount(); j++) {
 				AzimuthPlaneDetectionPlotMsg aPlotMsg = new AzimuthPlaneDetectionPlotMsg();
-				aPlotMsg.setMessageClass((short) 0x55);
-				aPlotMsg.setMessageId((short)0x11);
+				aPlotMsg.setMessageHeader((int) 0x5511);
 				aPlotMsg.setRange(range);
 				
 				// scale the azimuth so that it flaot can be converted to Integer.later during display scale it down by 1000;
@@ -213,8 +211,7 @@ class TCPServerThread extends Thread {
 			AzimuthPlaneTrackMsg aTrackMsg = new AzimuthPlaneTrackMsg();
 			range = (int) (range - (C2Server.TARGET_SPEED * C2Server.SCAN_TIME ));
 					
-			aTrackMsg.setMessageClass((short) 0x66);
-			aTrackMsg.setMessageId((short) 0x11);
+			aTrackMsg.setMessageHeader((int) 0x6611);
 			aTrackMsg.setY((int) (range*Math.sin(az)));
 			aTrackMsg.setX((int) (range*Math.cos(az)));
 			aTrackMsg.setTrackStatus((short) 1);

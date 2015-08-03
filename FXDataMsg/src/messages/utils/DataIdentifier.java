@@ -19,11 +19,11 @@ public class DataIdentifier implements IByteSum{
 	static {
 		Map<String, Integer> msgType = new HashMap<String, Integer>();
 
-		msgType.put(AZ_PLOT_MSG, 0x00770011);
-		msgType.put(AZ_TRACK_MSG, 0x00660011);
-		msgType.put(EL_PLOT_MSG, 0x00550011);
-		msgType.put(EL_TRACK_MSG, 0x00440011);
-		msgType.put(VIDEO_MSG, 0x00330011);
+		msgType.put(AZ_PLOT_MSG, 0x7711);
+		msgType.put(AZ_TRACK_MSG, 0x6611);
+		msgType.put(EL_PLOT_MSG, 0x5511);
+		msgType.put(EL_TRACK_MSG, 0x4411);
+		msgType.put(VIDEO_MSG, 0x3311);
 		
 		MSG_CLASS_ID = Collections.unmodifiableMap(msgType);
 	}	

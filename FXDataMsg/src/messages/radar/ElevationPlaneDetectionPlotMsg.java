@@ -11,8 +11,7 @@ public class ElevationPlaneDetectionPlotMsg implements Serializable,IByteSum{
 	private static final long serialVersionUID = 1L;
 	public final static int MSG_SIZE = 40;//Allocating
 	
-	private short messageClass;
-	private short messageId;
+	private int messageHeader;
 	private short source;
 	private short reserved;
 	private int range;
@@ -30,20 +29,12 @@ public class ElevationPlaneDetectionPlotMsg implements Serializable,IByteSum{
 		
 	}
 
-	public short getMessageClass() {
-		return messageClass;
+	public int getMessageHeader() {
+		return messageHeader;
 	}
 
-	public void setMessageClass(short messageClass) {
-		this.messageClass = messageClass;
-	}
-
-	public short getMessageId() {
-		return messageId;
-	}
-
-	public void setMessageId(short messageId) {
-		this.messageId = messageId;
+	public void setMessageHeader(int messageClass) {
+		this.messageHeader = messageClass;
 	}
 
 	public short getSource() {
@@ -149,8 +140,7 @@ public class ElevationPlaneDetectionPlotMsg implements Serializable,IByteSum{
 	public ByteBuffer getByteBuffer() {
 
 		ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
-		buffer.putShort(messageId);
-		buffer.putShort(messageClass);
+		buffer.putInt(messageHeader);
 		
 		buffer.putShort(reserved);
 		buffer.putShort(source);
@@ -179,8 +169,7 @@ public class ElevationPlaneDetectionPlotMsg implements Serializable,IByteSum{
 		ByteBuffer bb = ByteBuffer.wrap(bArr).order(ByteOrder.LITTLE_ENDIAN);
 		
 		int index = 0;
-		messageId = (short)bb.getShort(index);index += BYTES_PER_SHORT;
-		messageClass = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		messageHeader = (int)bb.getInt(index);index += BYTES_PER_INT;	
 		reserved = (short)bb.getShort(index);index += BYTES_PER_SHORT;
 		source = (short)bb.getShort(index);index += BYTES_PER_SHORT;
 		
@@ -202,8 +191,7 @@ public class ElevationPlaneDetectionPlotMsg implements Serializable,IByteSum{
 	@Override
 	public String toString() {
 		return "AzPlot: "
-				+"\n ID:"+messageId
-				+"\n Class:"+messageClass
+				+"\n Header:"+messageHeader
 				+"\n Range: "+range
 				+"\n El :"+elevation;		
 	}

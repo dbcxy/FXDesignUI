@@ -12,8 +12,7 @@ public class PlaneRAWVideoMsg implements Serializable, IByteSum{
 
 	private static final long serialVersionUID = 1L;
 	private int msgLen;
-	private short messageClass;
-	private short messageId;
+	private int messageHeader;
 	private int reservedInt;
 	private short messageCounter;
 	private short reservedShort;
@@ -44,20 +43,12 @@ public class PlaneRAWVideoMsg implements Serializable, IByteSum{
 		this.msgLen = msgLen;
 	}
 
-	public short getMessageClass() {
-		return messageClass;
+	public int getMessageHeader() {
+		return messageHeader;
 	}
 
-	public void setMessageClass(short messageClass) {
-		this.messageClass = messageClass;
-	}
-
-	public short getMessageId() {
-		return messageId;
-	}
-
-	public void setMessageId(short messageId) {
-		this.messageId = messageId;
+	public void setMessageHeader(int messageClass) {
+		this.messageHeader = messageClass;
 	}
 
 	public int getReservedInt() {
@@ -152,8 +143,7 @@ public class PlaneRAWVideoMsg implements Serializable, IByteSum{
 
 		ByteBuffer buffer = ByteBuffer.allocate(msgLen);
 		buffer.putInt(msgLen);
-		buffer.putShort(messageId);
-		buffer.putShort(messageClass);
+		buffer.putInt(messageHeader);
 		buffer.putInt(reservedInt);
 		buffer.putShort(reservedShort);
 		buffer.putShort(messageCounter);
@@ -187,8 +177,7 @@ public class PlaneRAWVideoMsg implements Serializable, IByteSum{
 		
 		int index = 0;
 		msgLen = (int)bb.getInt(index);index += BYTES_PER_INT;
-		messageId = (short)bb.getShort(index);index += BYTES_PER_SHORT;
-		messageClass = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		messageHeader = (int)bb.getInt(index);index += BYTES_PER_INT;	
 		reservedInt = (int)bb.getInt(index);index += BYTES_PER_INT;
 		
 		reservedShort = (short)bb.getShort(index);index += BYTES_PER_SHORT;
@@ -222,8 +211,7 @@ public class PlaneRAWVideoMsg implements Serializable, IByteSum{
 	public String toString() {
 		return "RAWVideo: "
 				+"\n Len:"+msgLen
-				+"\n ID:"+messageId
-				+"\n Class:"+messageClass
+				+"\n Header:"+messageHeader
 				+"\n NoRangeCells: "+noRangeCells
 				+"\n azBPN :"+azBPN
 				+"\n elBPN :"+elBPN;		

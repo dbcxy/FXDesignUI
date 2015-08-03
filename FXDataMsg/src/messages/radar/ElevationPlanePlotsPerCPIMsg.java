@@ -16,8 +16,7 @@ public class ElevationPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 	private static final long serialVersionUID = 1L;
 	final static int MSG_SIZE = 8;//Word2*4
 
-	private short messageClass;
-	private short messageId;
+	private int messageHeader;
 	private short source;
 	private short plotCount;
 	private List<ElevationPlaneDetectionPlotMsg> elevationPlaneDetectionPlotMsg = new ArrayList<ElevationPlaneDetectionPlotMsg>();
@@ -28,20 +27,12 @@ public class ElevationPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 		
 	}
 
-	public short getMessageClass() {
-		return messageClass;
+	public int getMessageHeader() {
+		return messageHeader;
 	}
 
-	public void setMessageClass(short messageType) {
-		this.messageClass = messageType;
-	}
-	
-	public short getMessageId() {
-		return messageId;
-	}
-
-	public void setMessageId(short messageId) {
-		this.messageId = messageId;
+	public void setMessageHeader(int messageClass) {
+		this.messageHeader = messageClass;
 	}
 
 	public short getSource() {
@@ -76,8 +67,7 @@ public class ElevationPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 	public byte[] getByteBuffer() {
 
 		ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
-		buffer.putShort(messageId);
-		buffer.putShort(messageClass);
+		buffer.putInt(messageHeader);
 		buffer.putShort(plotCount);
 		buffer.putShort(source);
 		byte[] cpiBuf = buffer.array();
@@ -104,8 +94,7 @@ public class ElevationPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 		ByteBuffer bb = ByteBuffer.wrap(bArr).order(ByteOrder.LITTLE_ENDIAN);
 		
 		int index = 0;
-		messageId = (short)bb.getShort(index);index += BYTES_PER_SHORT;
-		messageClass = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		messageHeader = (int)bb.getInt(index);index += BYTES_PER_INT;	
 		plotCount = (short)bb.getShort(index);index += BYTES_PER_SHORT;
 		source = (short)bb.getShort(index);index += BYTES_PER_SHORT;
 
@@ -122,8 +111,7 @@ public class ElevationPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 	@Override
 	public String toString() {
 		return "ElPlotCPI: "
-				+"\n ID:"+messageId
-				+"\n Class:"+messageClass
+				+"\n Header:"+messageHeader
 				+"\n PlotCount: "+plotCount
 				+"\n"+ strBuilder.toString();
 	}

@@ -28,6 +28,7 @@ import textpanel.TextPanelWidget;
 import utils.Constance;
 import views.Console;
 import views.ResizableCanvas;
+import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
@@ -127,6 +128,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	ColumnConstraints controls;
 	
 	MatrixRef matrixRef;
+	AnimationTimer animTimer;
 	
 	TaskObserver tTask;
 	ElevationChart mElevationChart;
@@ -179,8 +181,8 @@ public class FXMLController implements Initializable,ILayoutParam{
     
     @FXML
     protected void menuCloseStage() {
+    	cleanUp();
     	Stage stage = (Stage) fxMenuBar.getScene().getWindow();
-    	Constance.IS_CLOSE = true;
     	stage.close();
     	logger.info("APPLICATION CLOSED");
     }
@@ -330,6 +332,12 @@ public class FXMLController implements Initializable,ILayoutParam{
     	}
     }
     
+    private void cleanUp() {
+    	if(animTimer!=null)
+    		animTimer.stop();
+    	Constance.IS_CLOSE = true;
+    }
+    
     private void initCanvasLayout() {
     	
 		//swapping graph positions
@@ -372,6 +380,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 		initTimeDate();
     	initConsole();
     	initMatrixRef();
+    	initAnimTimers();
     }
         
     private void initTopChart() {
@@ -383,7 +392,6 @@ public class FXMLController implements Initializable,ILayoutParam{
 		cTopL0.clear();
 		drawTextTop(cTopL0);
 		drawGraphTop(cTopL1);
-//        updateObjects(cTopL2);
     	logger.info("Top Chart initialization");
 	}
 
@@ -394,7 +402,6 @@ public class FXMLController implements Initializable,ILayoutParam{
 		cBtmL0.clear();
 		drawTextBottom(cBtmL0);
 		drawGraphBottom(cBtmL1);
-//        updateObjects(cBtmL2);
         logger.info("Bottom Chart initialization");
     }
 	
@@ -501,6 +508,27 @@ public class FXMLController implements Initializable,ILayoutParam{
     	matrixRef.setRangeVal(Constance.RANGE_MAX, Constance.RANGE_MIN);
     	matrixRef.setTouchDown(Constance.TOUCH_DOWN);
     }
+    
+    private void initAnimTimers() {
+    	//graph refresher
+    	animTimer = new AnimationTimer() {
+			
+			@Override
+			public void handle(long now) {
+				if(Constance.IS_CONNECTED) {
+					cTopL2.getGraphicsContext2D().clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
+					cBtmL2.getGraphicsContext2D().clearRect(0, 0, cBtmL2.getWidth(), cBtmL2.getHeight());
+					
+					try {
+						Thread.sleep(500);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		};
+		animTimer.start();
+    }
 	
 	public void invalidate() {
 		cTopL3.clear();
@@ -598,8 +626,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 	    	public void run() {	
 	    		GraphicsContext gc = cBtmL2.getGraphicsContext2D();
 	    		gc.clearRect(0, 0, cBtmL2.getWidth(), cBtmL2.getHeight());
-	    		dataObserver.getTrackDataList().draw(gc);
-	    		dataObserver.getPlotDataList().draw(gc);
+	    		dataObserver.getTrack().draw(gc);
+	    		dataObserver.getPlot().draw(gc);
 	        	logger.info("Canvas Objects Redrawn");
 	    	}
 		});

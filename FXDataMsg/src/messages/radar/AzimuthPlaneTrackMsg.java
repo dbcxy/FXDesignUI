@@ -9,12 +9,10 @@ import messages.utils.IByteSum;
 public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 		
 	private static final long serialVersionUID = 1L;
-	final static int MSG_SIZE = 72;//Allocating
+	final static int MSG_SIZE = 72;//Allocating 18*4
 	
-	private short messageClass;
-	private short messageId;
-	private short source;
-	private short trackName;
+	private int messageHeader;
+	private int trackName;
 	private short trackQuality;
 	private short trackStatus;
 	private int reserved;
@@ -22,10 +20,12 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 	private int y;
 	private int xVelocity;
 	private int yVelocity;
+	
 	private int xposVariance;
 	private int yposVariance;
 	private int xvelocityVariance;
 	private int yvelocityVariance;
+
 	private int timeStampLow;
 	private int timeStampHigh;
 	
@@ -33,35 +33,19 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 		// TODO Auto-generated constructor stub
 	}
 
-	public short getMessageClass() {
-		return messageClass;
+	public int getMessageHeader() {
+		return messageHeader;
 	}
 
-	public void setMessageClass(short messageClass) {
-		this.messageClass = messageClass;
+	public void setMessageHeader(int messageClass) {
+		this.messageHeader = messageClass;
 	}
 
-	public short getMessageId() {
-		return messageId;
-	}
-
-	public void setMessageId(short messageId) {
-		this.messageId = messageId;
-	}
-
-	public short getSource() {
-		return source;
-	}
-
-	public void setSource(short source) {
-		this.source = source;
-	}
-
-	public short getTrackName() {
+	public int getTrackName() {
 		return trackName;
 	}
 
-	public void setTrackName(short trackName) {
+	public void setTrackName(int trackName) {
 		this.trackName = trackName;
 	}
 
@@ -128,13 +112,13 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 	public void setXposVariance(int xposVariance) {
 		this.xposVariance = xposVariance;
 	}
-
-	public int getYposVariance() {
-		return yposVariance;
-	}
-
+	
 	public void setYposVariance(int yposVariance) {
 		this.yposVariance = yposVariance;
+	}
+	
+	public int getYposVariance() {
+		return yposVariance;
 	}
 	
 	public int getXvelocityVariance() {
@@ -144,7 +128,7 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 	public void setXvelocityVariance(int xvelocityVariance) {
 		this.xvelocityVariance = xvelocityVariance;
 	}
-
+	
 	public int getYvelocityVariance() {
 		return yvelocityVariance;
 	}
@@ -175,11 +159,8 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 	public ByteBuffer getByteBuffer() {
 
 		ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
-		buffer.putShort(messageId);
-		buffer.putShort(messageClass);
-
-		buffer.putShort(trackName);
-		buffer.putShort(source);
+		buffer.putInt(messageHeader);
+		buffer.putInt(trackName);
 
 		buffer.putShort(trackStatus);
 		buffer.putShort(trackQuality);
@@ -187,15 +168,20 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 		buffer.putInt(reserved);
 		buffer.putInt(x);
 		buffer.putInt(y);
+		
 		buffer.putInt(reserved);
 		buffer.putInt(xVelocity);
 		buffer.putInt(yVelocity);
+		
 		buffer.putInt(reserved);
 		buffer.putInt(xposVariance);
 		buffer.putInt(yposVariance);
+		
 		buffer.putInt(reserved);
 		buffer.putInt(xvelocityVariance);
 		buffer.putInt(yvelocityVariance);
+		
+		buffer.putInt(reserved);
 		buffer.putInt(timeStampLow);
 		buffer.putInt(timeStampHigh);
 		
@@ -209,28 +195,30 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 		ByteBuffer bb = ByteBuffer.wrap(bArr).order(ByteOrder.LITTLE_ENDIAN);
 		
 		int index = 0;
-		messageId = (short)bb.getShort(index);index += BYTES_PER_SHORT;
-		messageClass = (short)bb.getShort(index);index += BYTES_PER_SHORT;
-		
-		trackName = (short)bb.getShort(index);index += BYTES_PER_SHORT;
-		source = (short)bb.getShort(index);index += BYTES_PER_SHORT;
+		messageHeader = (int)bb.getInt(index);index += BYTES_PER_INT;		
+		trackName = (int)bb.getInt(index);index += BYTES_PER_INT;
 		
 		trackStatus = (short)bb.getShort(index);index += BYTES_PER_SHORT;
 		trackQuality = (short)bb.getShort(index);index += BYTES_PER_SHORT;
 		
 		reserved = (int)bb.getInt(index);index += BYTES_PER_INT;
+		
 		x = (int)bb.getInt(index);index += BYTES_PER_INT;
-		y = (int)bb.getInt(index);index += BYTES_PER_INT;
+		y = (int)bb.getInt(index);index += BYTES_PER_INT;		
 		reserved = (int)bb.getInt(index);index += BYTES_PER_INT;
+		
 		xVelocity = (int)bb.getInt(index);index += BYTES_PER_INT;
 		yVelocity = (int)bb.getInt(index);index += BYTES_PER_INT;
 		reserved = (int)bb.getInt(index);index += BYTES_PER_INT;
+		
 		xposVariance = (int)bb.getInt(index);index += BYTES_PER_INT;
-		yposVariance = (int)bb.getInt(index);index += BYTES_PER_INT;
+		yposVariance = (int)bb.getInt(index);index += BYTES_PER_INT;		
 		reserved = (int)bb.getInt(index);index += BYTES_PER_INT;
+		
 		xvelocityVariance = (int)bb.getInt(index);index += BYTES_PER_INT;
-		yvelocityVariance = (int)bb.getInt(index);index += BYTES_PER_INT;
+		yvelocityVariance = (int)bb.getInt(index);index += BYTES_PER_INT;		
 		reserved = (int)bb.getInt(index);index += BYTES_PER_INT;
+		
 		timeStampLow = (int)bb.getInt(index);index += BYTES_PER_INT;
 		timeStampHigh = (int)bb.getInt(index);index += BYTES_PER_INT;
 		
@@ -239,8 +227,8 @@ public class AzimuthPlaneTrackMsg implements Serializable, IByteSum{
 	@Override
 	public String toString() {
 		return "AzTrack: "
-				+"\n ID:"+messageId
-				+"\n Class:"+messageClass
+				+"\n Header:"+messageHeader
+				+"\n Tname:"+trackName
 				+"\n X: "+x
 				+"\n Y :"+y;		
 	}
