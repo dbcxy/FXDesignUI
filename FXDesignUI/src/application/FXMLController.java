@@ -544,19 +544,19 @@ public class FXMLController implements Initializable,ILayoutParam{
 			
 			@Override
 			public void handle(long now) {
-				if(Constance.IS_CONNECTED && !isRefreshing && dataObserver !=null) {
+				if(Constance.IS_CONNECTED && dataObserver !=null) {
 					
 					//Plot & Tracks
 					cTopL2.getGraphicsContext2D().clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
 					cBtmL2.getGraphicsContext2D().clearRect(0, 0, cBtmL2.getWidth(), cBtmL2.getHeight());
-		    		isRefreshing = true;
+//		    		isRefreshing = true;
 		    		
 		    		GraphicsContext gc = cBtmL2.getGraphicsContext2D();
 		    		gc.clearRect(0, 0, cBtmL2.getWidth(), cBtmL2.getHeight());
 		    		dataObserver.getTrackDataList().drawTracks(gc);
 		    		dataObserver.getPlotDataList().drawPlots(gc);
 		    		dataObserver.getVideoDataList().drawVideos(cBtmL3);
-		    		isRefreshing = false;
+//		    		isRefreshing = false;
 		        	logger.info("Canvas Objects Redrawn");
 		        	
 					try {
@@ -666,7 +666,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	    	@Override 
 	    	public void run() {
 	    		dataObserver = dObserver;
-	    		
+//	    		isRefreshing = false;
 	    	}
 		});
 	}

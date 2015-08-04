@@ -104,7 +104,7 @@ public class RunwaySetUpController implements Initializable,ILayoutParam{
 		
 		comboLR.getItems().clear();
 		comboLR.getItems().addAll("Left","Right");
-		comboLR.setDisable(false);
+		comboLR.setDisable(true);
 		
 		comboRunway.valueProperty().addListener(new ChangeListener<String>() {
 

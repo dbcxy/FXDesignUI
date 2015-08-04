@@ -16,15 +16,12 @@ public class Plot extends OverlayItem implements ILayoutParam{
 	private boolean isTextShown = false;
 	
 	private double elevation;
-	private double azimuth;
-	private double range;
+	private double azimuth;//radians
+	private double range;//KM
 	
 	private boolean isAz = false;
 	private boolean isEl = false;
-	
-	private boolean isVisibleX = false;
-	private boolean isVisibleY = false;
-	
+		
 	public Plot() {
 		super(null,null);
 	}
@@ -71,10 +68,7 @@ public class Plot extends OverlayItem implements ILayoutParam{
 	@Override
 	public double getX() {
 		double x = 0.0;
-		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
-			isVisibleX = true;
-			x = MatrixRef.getInstance().toRangePixels(range/1000);
-		}
+		x = MatrixRef.getInstance().toRangePixels(range/1000);
 		return x;
 	}
 
@@ -82,11 +76,9 @@ public class Plot extends OverlayItem implements ILayoutParam{
 	public double getY() {
 		double y = 0.0;
 		if(isEl) {
-			isVisibleY = true;
 			y = MatrixRef.getInstance().toElevationPixels(elevation);
 		}
 		if(isAz) {
-			isVisibleY = true;
 			MatrixRef matrixRef = MatrixRef.getInstance();
 			double midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
 			double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
@@ -100,7 +92,7 @@ public class Plot extends OverlayItem implements ILayoutParam{
 	@Override
 	public void draw(GraphicsContext gc) {
 		
-		if(isVisibleX && isVisibleY) {
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
 			gc.setFill(Color.RED);
 	    	gc.fillOval(getX()-OFFSET, getY()-OFFSET, OFFSET, OFFSET);
 	    	gc.setStroke(Color.WHITE);

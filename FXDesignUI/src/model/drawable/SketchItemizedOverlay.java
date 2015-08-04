@@ -11,31 +11,30 @@ import model.graph.ILayoutParam;
 public class SketchItemizedOverlay extends ItemizedOverlay<OverlayItem> implements ILayoutParam{
 
 	static final Logger logger = Logger.getLogger(SketchItemizedOverlay.class);
-	
-//	public static final int TRACK 	= 1;
-//	public static final int PLOT 	= 2;
-//	public static final int VIDEO 	= 3;
 		
 	public SketchItemizedOverlay() {
 		
 	}
 	
 	public void drawTracks(GraphicsContext gc) {
-		for(int i=0;i<size();i++)
-			((Track) getItem(i)).draw(gc);
+		for(int i=0;i<size();i++){
+//			((Track) getItem(i)).draw(gc);
+			((Track) getOverlayItemList().remove()).draw(gc);
+		}
 	}
 	
 	public void drawPlots(GraphicsContext gc) {
-		for(int i=0;i<size();i++)
-			((Plot) getItem(i)).draw(gc);
+		for(int i=0;i<size();i++) {
+//			((Plot) getItem(i)).draw(gc);
+			((Plot) getOverlayItemList().remove()).draw(gc);
+		}
 	}
 	
 	public void drawVideos(Canvas canvas) {
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 		gc.save();
 		//draw points on Image
-		for(int i=0;i<size();i++)
-			((Video) getItem(i)).draw(gc);
+
 		
 		//show image
 //		gc.drawImage(img, 0, 0);

@@ -1,5 +1,8 @@
 package model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.log4j.Logger;
 
 import messages.radar.AzimuthPlaneDetectionPlotMsg;
@@ -13,7 +16,7 @@ import model.drawable.Video;
 public class DataObserver {
 	
 	private static final Logger logger = Logger.getLogger(DataObserver.class);
-	private static final int RING_BUFFER_LENGTH = 1;
+	private static final int RING_BUFFER_LENGTH = 500;
 
 	private SketchItemizedOverlay mTrackList;
 	private SketchItemizedOverlay mPlotList;
@@ -26,6 +29,8 @@ public class DataObserver {
 	private int mTrackIndex;
 	private int mPlotIndex;
 	private int mVideoIndex;
+	
+	private Map<Integer, Integer> mapTracks = new HashMap<Integer, Integer>();
 	
 	public DataObserver() {
 		mTrackList = new SketchItemizedOverlay();
@@ -44,18 +49,6 @@ public class DataObserver {
 	public SketchItemizedOverlay getVideoDataList() {
 		return mVideoList;
 	}
-	
-//	public Track getTrack() {
-//		return track;
-//	}
-//
-//	public void setTrack(Track track) {
-//		this.track = track;
-//	}
-//
-//	public Plot getPlot() {
-//		return plot;
-//	}
 
 	public void setPlot(Plot plot) {
 		this.plot = plot;
@@ -76,9 +69,9 @@ public class DataObserver {
 			plot.setRange(aPlotMsg.getRange());
 			plot.getX();
 			plot.getY();
-			if(mPlotList.size() >= RING_BUFFER_LENGTH)
-				mPlotList.setOverlayItem(mPlotIndex,plot);
-			else 
+//			if(mPlotList.size() >= RING_BUFFER_LENGTH)
+//				mPlotList.setOverlayItem(mPlotIndex,plot);
+//			else 
 				mPlotList.addOverlayItem(mPlotIndex,plot);
 			mPlotIndex++;
 			mPlotIndex = mPlotIndex % RING_BUFFER_LENGTH;
@@ -87,25 +80,15 @@ public class DataObserver {
 
 	public void addAzTracks(AzimuthPlaneTrackMsg aTrackMsg) {
 		
-		boolean trackExist = false;
-	    int trackIndex = 0;
-		for(int i=0;i<mTrackList.size();i++) {
-	    	if(aTrackMsg.getTrackName() == Integer.parseInt(((Track)mTrackList.getItem(i)).getTrackNumber())) {
-	    		trackExist = true;
-	    		trackIndex = i;
-	    		Track track = (Track)mTrackList.getItem(i);
-	    		track.setX(aTrackMsg.getX());
-				track.setY(aTrackMsg.getY());
-				double x = track.getX();
-				double y = track.getY();
-//				logger.info("Track X: "+x);
-//				logger.info("Track Y: "+y);
-	    		mTrackList.setOverlayItem(trackIndex, track);
-	    		break;
-	    	}
-		}
-	    
-	    if(!trackExist) {
+//		if(mapTracks.containsKey(aTrackMsg.getTrackName())) {
+//			int trackIndex = mapTracks.get(aTrackMsg.getTrackName());
+//			Track track = (Track)mTrackList.getItem(trackIndex);
+//    		track.setX(aTrackMsg.getX());
+//			track.setY(aTrackMsg.getY());
+//			double x = track.getX();
+//			double y = track.getY();
+//    		mTrackList.setOverlayItem(trackIndex, track);	    
+//		} else {
 	    	track = new Track();
 	    	track.setTrackNumber(aTrackMsg.getTrackName());
 			track.setY(aTrackMsg.getY());
@@ -113,13 +96,11 @@ public class DataObserver {
 			track.setAz(true);
 			double x = track.getX();
 			double y = track.getY();
-//			logger.info("Track X: "+x);
-//			logger.info("Track Y: "+y);
 			mTrackList.addOverlayItem(mTrackIndex,track);
+			mapTracks.put(aTrackMsg.getTrackName(), mTrackIndex);
 			mTrackIndex++;
 			mTrackIndex = mTrackIndex % RING_BUFFER_LENGTH;
-	    }
+//	    }
 	}
-	
 	
 }

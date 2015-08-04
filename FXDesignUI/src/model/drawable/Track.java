@@ -32,10 +32,7 @@ public class Track extends OverlayItem implements ILayoutParam{
 	
 	private boolean isEl = false;
 	private boolean isAz = false;
-	
-	private boolean isVisibleX = false;
-	private boolean isVisibleY = false;
-	
+		
 	public Track() {
 		super(null,null);
 	}
@@ -67,7 +64,8 @@ public class Track extends OverlayItem implements ILayoutParam{
 
 	public void setAzimuth(double azimuth) {
 		isAz = true;
-		this.azimuth = azimuth;
+		this.azimuth = Math.toRadians(Constance.AZIMUTH_MAX) - azimuth;
+//		this.azimuth = azimuth;
 	}
 
 	public double getRange() {
@@ -102,10 +100,7 @@ public class Track extends OverlayItem implements ILayoutParam{
 		double y = Y;
 		
 		range = Math.sqrt(Math.pow(x, 2)+Math.pow(y, 2));
-		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
-			isVisibleX = true;
-			x = MatrixRef.getInstance().toRangePixels(range/1000);
-		}
+		x = MatrixRef.getInstance().toRangePixels(range/1000);
 		return x;
 	}
 
@@ -114,12 +109,10 @@ public class Track extends OverlayItem implements ILayoutParam{
 		double x = X;
 		double y = Y;
 		if(isEl) {
-			isVisibleY = true;
 			y = MatrixRef.getInstance().toElevationPixels(y);
 		}
 		if(isAz) {
-			isVisibleY = true;
-			azimuth = Math.atan(x/y);
+			azimuth = Math.toRadians(Constance.AZIMUTH_MAX) - Math.atan(x/y);//Changing from 10->-10degrees to 0->20degrees
 			MatrixRef matrixRef = MatrixRef.getInstance();
 			double midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
 			double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
@@ -148,7 +141,8 @@ public class Track extends OverlayItem implements ILayoutParam{
 
 	@Override
 	public void draw(GraphicsContext gc) {
-		if(isVisibleX && isVisibleY) {
+		
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
 			gc.setFill(Color.BISQUE);
 	    	gc.fillOval(getX()-OFFSET, getY()-OFFSET, HGAP, HGAP);
 	    	gc.setStroke(Color.WHITE);
