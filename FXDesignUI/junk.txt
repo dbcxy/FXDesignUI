@@ -634,3 +634,10 @@ private void initPan(final Pane pane) {
         return bufferedImage;
 	}
 	
+	private void mirrorBufferedImg(BufferedIMage bufferedImage) {
+		
+            	AffineTransform tx = AffineTransform.getScaleInstance(-1, 1);
+            	tx.translate(-bufferedImage.getWidth(null), 0);
+            	AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
+            	bufferedImage = op.filter(bufferedImage, null);
+	}

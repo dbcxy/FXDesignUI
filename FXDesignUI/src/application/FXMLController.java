@@ -26,6 +26,8 @@ import org.apache.log4j.chainsaw.Main;
 
 import textpanel.TextPanelWidget;
 import utils.Constance;
+import utils.ModelDrawing;
+import utils.ModelDrawing.FLIP;
 import views.Console;
 import views.ResizableCanvas;
 import javafx.animation.AnimationTimer;
@@ -124,6 +126,9 @@ public class FXMLController implements Initializable,ILayoutParam{
 	
 	private boolean isAppRunning = false;
 	private boolean isDrawn = false;
+	private boolean isRefreshing = false;
+	private int translateTop = 0;
+	private int translateBttm = 0;
 	ColumnConstraints graph;
 	ColumnConstraints controls;
 	
@@ -131,6 +136,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	AnimationTimer animTimer;
 	
 	TaskObserver tTask;
+	DataObserver dataObserver;
 	ElevationChart mElevationChart;
 	AzimuthChart mAzimuthChart;
 		
@@ -266,7 +272,7 @@ public class FXMLController implements Initializable,ILayoutParam{
         dialog.initModality(Modality.APPLICATION_MODAL);
         FXMLLoader fxmlLoader = new FXMLLoader();
 		try {
-			fxmlLoader.load(getClass().getResourceAsStream("RadarSetUp.fxml"));
+			fxmlLoader.load(getClass().getResourceAsStream("RunwaySetUp.fxml"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -390,8 +396,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 		cTopL2.clear();
 		cTopL1.clear();
 		cTopL0.clear();
-		drawTextTop(cTopL0);
 		drawGraphTop(cTopL1);
+		drawTextTop(cTopL0, 0, 0);
     	logger.info("Top Chart initialization");
 	}
 
@@ -400,8 +406,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 		cBtmL2.clear();
 		cBtmL1.clear();
 		cBtmL0.clear();
-		drawTextBottom(cBtmL0);
 		drawGraphBottom(cBtmL1);
+		drawTextBottom(cBtmL0, 0, 0);
         logger.info("Bottom Chart initialization");
     }
 	
@@ -441,7 +447,6 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
 	
 	public void initUIComponents(String str) {
-
 		MainView.getChildren().clear();		
 		if(str.contains("Left")) {
 			MainView.addColumn(0, UIGraph);
@@ -454,7 +459,31 @@ public class FXMLController implements Initializable,ILayoutParam{
 			MainView.addColumn(0, UIControls);
 			MainView.getColumnConstraints().set(0, controls);
 		}
-		
+	}
+	
+	public void flipGraphOnRunwaySel(String str) {
+		mElevationChart.drawUnitsText();
+		if(str.contains("3") || str.contains("4")) {
+			translateTop = 650;
+			ModelDrawing.flipCanvasDrawing(cTopL1, FLIP.R2L);
+			ModelDrawing.flipCanvasDrawing(cTopL2, FLIP.R2L);
+			ModelDrawing.flipCanvasDrawing(cTopL3, FLIP.R2L);
+			
+			translateBttm = 900;
+			ModelDrawing.flipCanvasDrawing(cBtmL1, FLIP.R2L);
+			ModelDrawing.flipCanvasDrawing(cBtmL2, FLIP.R2L);
+			ModelDrawing.flipCanvasDrawing(cBtmL3, FLIP.R2L);
+		} else if(str.contains("1") || str.contains("2")) {
+			translateTop = -translateTop;
+			ModelDrawing.flipCanvasDrawing(cTopL1, FLIP.L2R);
+			ModelDrawing.flipCanvasDrawing(cTopL2, FLIP.L2R);
+			ModelDrawing.flipCanvasDrawing(cTopL3, FLIP.L2R);
+			
+			translateBttm = -translateBttm;
+			ModelDrawing.flipCanvasDrawing(cBtmL1, FLIP.L2R);
+			ModelDrawing.flipCanvasDrawing(cBtmL2, FLIP.L2R);
+			ModelDrawing.flipCanvasDrawing(cBtmL3, FLIP.L2R);
+		}
 	}
 
 	private void initTimeDate() {
@@ -515,12 +544,23 @@ public class FXMLController implements Initializable,ILayoutParam{
 			
 			@Override
 			public void handle(long now) {
-				if(Constance.IS_CONNECTED) {
+				if(Constance.IS_CONNECTED && !isRefreshing && dataObserver !=null) {
+					
+					//Plot & Tracks
 					cTopL2.getGraphicsContext2D().clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
 					cBtmL2.getGraphicsContext2D().clearRect(0, 0, cBtmL2.getWidth(), cBtmL2.getHeight());
-					
+		    		isRefreshing = true;
+		    		
+		    		GraphicsContext gc = cBtmL2.getGraphicsContext2D();
+		    		gc.clearRect(0, 0, cBtmL2.getWidth(), cBtmL2.getHeight());
+		    		dataObserver.getTrackDataList().drawTracks(gc);
+		    		dataObserver.getPlotDataList().drawPlots(gc);
+		    		dataObserver.getVideoDataList().drawVideos(cBtmL3);
+		    		isRefreshing = false;
+		        	logger.info("Canvas Objects Redrawn");
+		        	
 					try {
-						Thread.sleep(500);
+						Thread.sleep(500);//every 0.5s draw
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -535,16 +575,16 @@ public class FXMLController implements Initializable,ILayoutParam{
 		cTopL2.clear();
 		cTopL1.clear();
 		cTopL0.clear();
-		drawTextTop(cTopL0);
 		drawGraphTop(cTopL1);
+		drawTextTop(cTopL0, translateTop, 0);
 		logger.info("Top Chart Invalidated!");
 		
 		cBtmL3.clear();
 		cBtmL2.clear();
 		cBtmL1.clear();
 		cBtmL0.clear();
-		drawTextBottom(cBtmL0);
 		drawGraphBottom(cBtmL1);
+		drawTextBottom(cBtmL0, translateBttm, 0);
 		logger.info("Bottom Chart Invalidated!");
 	}
 	
@@ -598,37 +638,35 @@ public class FXMLController implements Initializable,ILayoutParam{
     	mElevationChart.drawElevationLine();
     	mElevationChart.drawLandingStrip();
     	mElevationChart.drawRedDistanceLine();
-    	mElevationChart.drawDistanceGrid();    	
+    	mElevationChart.drawDistanceGrid();
+    	mElevationChart.drawUnitsText();
     }
     
-    private void drawTextTop(Canvas canvas) {
-    	ElevationChart.drawText(canvas);
+    private void drawTextTop(Canvas canvas, int x, int y) {
+    	mElevationChart.drawText(canvas,x,y);
     }
     
 
 	private void drawGraphBottom(Canvas canvas) {
 		mAzimuthChart = new AzimuthChart(canvas);
 		mAzimuthChart.drawAzimuthLine();
-		mAzimuthChart.drawLandingStrip();//till NM, and offset of 100ft / as of now 5px
-		mAzimuthChart.drawRedDistanceLine();//200mts range offset from TD
+		mAzimuthChart.drawLandingStrip();
+		mAzimuthChart.drawRedDistanceLine();
 		mAzimuthChart.drawDistanceGrid();
 
 	}
 	
-	private void drawTextBottom(Canvas canvas) {
-    	AzimuthChart.drawText(canvas);
+	private void drawTextBottom(Canvas canvas, int x, int y) {
+    	mAzimuthChart.drawText(canvas, x, y);
     }
 	
-	public void refreshCanvas(DataObserver dataObserver) {
+	public void refreshCanvas(DataObserver dObserver) {
 		Platform.runLater(new Runnable() { 
 		      
 	    	@Override 
-	    	public void run() {	
-	    		GraphicsContext gc = cBtmL2.getGraphicsContext2D();
-	    		gc.clearRect(0, 0, cBtmL2.getWidth(), cBtmL2.getHeight());
-	    		dataObserver.getTrack().draw(gc);
-	    		dataObserver.getPlot().draw(gc);
-	        	logger.info("Canvas Objects Redrawn");
+	    	public void run() {
+	    		dataObserver = dObserver;
+	    		
 	    	}
 		});
 	}
@@ -696,3 +734,4 @@ public class FXMLController implements Initializable,ILayoutParam{
 	}
 
 }
+

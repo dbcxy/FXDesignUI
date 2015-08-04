@@ -36,10 +36,8 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 	
 	@FXML AnchorPane SystemSetup;
 	
-	@FXML ComboBox<String> comboRunway;
 	@FXML ComboBox<String> comboRangeUnits;
 	@FXML ComboBox<String> comboElAz;
-	@FXML ComboBox<String> comboLR;
 	
 	@FXML TextField groupIP;
 	@FXML TextField portAzPlot;
@@ -74,7 +72,6 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 		if(appConfig.isSystemSetupValid()) {
 			saveData();
 			closeSettings(event);
-			AppConfig.getInstance().getFxmlController().initUIComponents(Constance.PREF.LEFT_RIGHT);
 			AppConfig.getInstance().getFxmlController().notifyChanges();
 		}
 	}
@@ -111,25 +108,12 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 	}
 	
 	private void initDialog() {
-		comboRunway.getItems().clear();
-		comboRunway.getItems().addAll(" 1 "," 2 "," 3 "," 4 ");
 		
 		comboRangeUnits.getItems().clear();
 		comboRangeUnits.getItems().addAll("Kilometers (KM)","Nauticalmiles (NM)");
 		
 		comboElAz.getItems().clear();
 		comboElAz.getItems().addAll("Feet (ft)","Meters (mts)");
-		
-		comboLR.getItems().clear();
-		comboLR.getItems().addAll("Left","Right");
-		comboLR.valueProperty().addListener(new ChangeListener<String>() {
-
-			@Override
-			public void changed(ObservableValue<? extends String> observable,
-					String oldValue, String newValue) {
-				AppConfig.getInstance().getFxmlController().initUIComponents(newValue);				
-			}
-		});
 		
 		groupIP.setEditable(!Constance.IS_CONNECTED);
 		portAzPlot.setEditable(!Constance.IS_CONNECTED);
@@ -146,10 +130,8 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 	}
 
 	private void loadDefault() {
-		comboRunway.setValue(Constance.PREF.SEL_RUNWAY);
 		comboRangeUnits.setValue(Constance.PREF.RANGE_UNITS);	
 		comboElAz.setValue(Constance.PREF.EL_AZ_UNITS);
-		comboLR.setValue(Constance.PREF.LEFT_RIGHT);
 		
 		groupIP.setText(Constance.GROUP_ADDR);
 		portAzPlot.setText(String.valueOf(Constance.PORT_AZ_PLOTS));
@@ -161,10 +143,8 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 	}
 
 	private void saveData() {
-		Constance.PREF.SEL_RUNWAY = comboRunway.getValue();
 		Constance.PREF.RANGE_UNITS = comboRangeUnits.getValue();
 		Constance.PREF.EL_AZ_UNITS = comboElAz.getValue();
-		Constance.PREF.LEFT_RIGHT = comboLR.getValue();
 		
 		if(Utils.checkIPv4(groupIP.getText()))
 			Constance.GROUP_ADDR =groupIP.getText();
@@ -188,6 +168,5 @@ public class SystemSetUpController implements Initializable,ILayoutParam{
 	    stage.close();
 	    logger.info("System Setup Dialog Closed");
 	}
-
 
 }

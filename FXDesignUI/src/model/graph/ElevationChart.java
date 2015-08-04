@@ -1,5 +1,9 @@
 package model.graph;
 
+import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
+import java.awt.image.AffineTransformOp;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,9 +13,12 @@ import model.GraphChart;
 import model.MatrixRef;
 import utils.Constance;
 import utils.ModelDrawing;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
+import javafx.scene.image.Image;
+import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
@@ -87,9 +94,6 @@ public class ElevationChart extends GraphChart{
 	
 	public void drawDistanceGrid() {
 		
-        gc.setFont(new Font("Sans Serif", 16));
-        gc.setLineWidth(1);
-		
         //draw remaining lines
         for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getVisibleRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
         	
@@ -100,13 +104,11 @@ public class ElevationChart extends GraphChart{
             if((i%5)==0) {
         		//write text Range
         		gc.setStroke(Color.YELLOW);
-        		gc.strokeText(i+Constance.UNITS.getLENGTH(), startPoint.getX()-OFFSET, startPoint.getY()+HGAP);
         		gc.strokeLine(startPoint.getX(),startPoint.getY(),endPoint.getX(),endPoint.getY());
         	} else if (i==1) {
                 //write text TD
         		gc.setStroke(Color.YELLOW);
         		gc.strokeLine(startPoint.getX(),startPoint.getY(),endPoint.getX(),endPoint.getY());
-        		gc.strokeText(" TD ", startPoint.getX()-OFFSET, startPoint.getY()+HGAP);
         	} else {
             	gc.setStroke(Color.GREEN);
             	gc.strokeLine(startPoint.getX(),startPoint.getY(),endPoint.getX(),endPoint.getY());
@@ -138,10 +140,40 @@ public class ElevationChart extends GraphChart{
         Point point = ModelDrawing.getNextPointAtAngle(startPoint.getX(), startPoint.getY(), endPoint.getX(), -Constance.ELEVATION.GLIDE_ANGLE);
         gc.strokeLine(point.getX(),point.getY(),matrixRef.toRangePixels(Constance.ELEVATION.GLIDE_MAX_DIST),point.getY());
 	}
+	
+	public void drawUnitsText() {
+
+		gc.setStroke(Color.YELLOW);
+		gc.setFont(new Font("Sans Serif", 14));
+        gc.setLineWidth(1);
 		
-	public static void drawText(Canvas canvas) {
+        //draw remaining lines
+        for(int i=(int) matrixRef.getTouchDown();i<matrixRef.getVisibleRange()+Constance.RANGE_DISP;i+=Constance.RANGE_DISP){
+        	
+        	startPoint = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), i);        	
+        	endPoint.setX(crossPoints.get(i).X);
+        	endPoint.setY(crossPoints.get(i).Y);
+            
+            if((i%5)==0) {
+        		//write text Range
+        		if(Constance.PREF.SEL_RUNWAY.contains("3") || Constance.PREF.SEL_RUNWAY.contains("4"))
+	        		gc.drawImage(printMirrorImage(i+Constance.UNITS.getLENGTH()), startPoint.getX()-HGAP, startPoint.getY()+OFFSET);
+        		else
+            		gc.strokeText(i+Constance.UNITS.getLENGTH(), startPoint.getX()-OFFSET, startPoint.getY()+HGAP);
+        	} else if (i==1) {
+                //write text TD
+        		if(Constance.PREF.SEL_RUNWAY.contains("3") || Constance.PREF.SEL_RUNWAY.contains("4"))
+	        		gc.drawImage(printMirrorImage(" TD "), startPoint.getX()-HGAP, startPoint.getY()+OFFSET);
+        		else
+            		gc.strokeText(" TD ", startPoint.getX()-OFFSET, startPoint.getY()+HGAP);
+        	}
+        }
+	}
+		
+	public void drawText(Canvas canvas, int x, int y) {
 		int count = 0;
 		GraphicsContext gc = canvas.getGraphicsContext2D();
+		gc.translate(x, y);
         gc.setFont(new Font("Sans Serif", 16));
         gc.setStroke(Color.RED);
         gc.strokeText("EL Ang     : "+Constance.EL_ANGLE, OFFSET, TEXT_OFFSET+HGAP*count);
@@ -157,44 +189,51 @@ public class ElevationChart extends GraphChart{
         gc.strokeText("Safety Slope        : "+Constance.SAFETY_SLOPE, OFFSET, TEXT_OFFSET+HGAP*count);
         count++;
         gc.strokeText("Safety Height      : "+Constance.SAFETY_HEIGHT, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;count++;
-        gc.setStroke(Color.AQUA);
-        gc.strokeText("Distance          : "+Constance.DISTANCE, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText("Height            : "+Constance.HEIGHT, OFFSET, TEXT_OFFSET+HGAP*count);
-        count++;
-        
+                
         gc.setFont(new Font("Sans Serif", 14));
         gc.setStroke(Color.CADETBLUE);
         count = 0;
-        gc.strokeText("Channel   : "+Constance.CHANNEL, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
+        gc.strokeText("Channel   : "+Constance.CHANNEL, 0.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count++;
-        gc.strokeText("Control    : "+Constance.CONTROL, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
+        gc.strokeText("Control    : "+Constance.CONTROL, 0.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count++;
-        gc.strokeText("Route      : "+Constance.ROUTE, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
+        gc.strokeText("Route      : "+Constance.ROUTE, 0.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count++;
-        gc.strokeText("RWY        : "+Constance.PREF.SEL_RUNWAY, OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
+        gc.strokeText("RWY        : "+Constance.PREF.SEL_RUNWAY, 0.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count++;
-        gc.strokeText("Scale       : "+Constance.getSCALE(), OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
+        gc.strokeText("Scale       : "+Constance.getSCALE(), 0.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
+        count++;
+        gc.setFont(new Font("Sans Serif", 12));
+        gc.setStroke(Color.AQUA);
+        gc.strokeText("Distance          : "+Constance.DISTANCE, 0.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
+        count++;
+        gc.strokeText("Height            : "+Constance.HEIGHT, 0.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count++;
         
         gc.setFont(new Font("Sans Serif", 14));
         gc.setStroke(Color.GREENYELLOW);
         count = 0;
-        gc.strokeText("System Perform     : ", 2*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
+        gc.strokeText("System Perform     : "+Constance.NULL, 1.3*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count++;
-        gc.strokeText("System Setting      : ", 2*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
+        gc.strokeText("System Setting      : "+Constance.NULL, 1.3*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
         count++;
-        gc.strokeText("System Logbook    : ", 2*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.setStroke(Color.YELLOW);
-        count = 0;
-        gc.strokeText(Constance.NULL, 2.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText(Constance.NULL, 2.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count++;
-        gc.strokeText(Constance.NULL, 2.75*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
-        count=0;		
+        gc.strokeText("System Logbook    : "+Constance.NULL, 1.3*OFFSET*HGAP, TEXT_OFFSET+HGAP*count);
+        count=0;
+	}
+	
+	private Image printMirrorImage(String str) {
+    	BufferedImage bufferedImage = new BufferedImage(50,50, BufferedImage.TYPE_INT_ARGB);
+    	Graphics2D g2d = bufferedImage.createGraphics();
+    	g2d.setFont(new java.awt.Font("Sans Serif",java.awt.Font.BOLD, 14));
+    	g2d.setColor(java.awt.Color.YELLOW);
+    	g2d.drawString(str,10,10);
+    	AffineTransform tx = AffineTransform.getScaleInstance(-1, 1);
+    	tx.translate(-bufferedImage.getWidth(null), 0);
+    	AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
+    	bufferedImage = op.filter(bufferedImage, null);
+    	WritableImage wr = null;
+		Image img = SwingFXUtils.toFXImage(bufferedImage, wr);
+		return img;
 	}
 	
 }

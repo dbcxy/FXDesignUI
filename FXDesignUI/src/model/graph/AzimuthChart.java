@@ -38,12 +38,20 @@ public class AzimuthChart extends GraphChart {
 	}
 	
 	public void drawAzimuthLine() {
-        gc.setStroke(Color.CYAN);
-        gc.setLineWidth(2);
 
 		double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
         startPoint = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getMinRange());
         endPoint = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getVisibleRange()); 
+        
+        //Drawing +/-
+		gc.setFont(new Font("Sans Serif", 18));
+        gc.setStroke(Color.YELLOW);
+        gc.strokeText("-", OFFSET, startPoint.getY()+midAzimuthOffset+HGAP+TEXT_OFFSET);
+        gc.strokeText("+", OFFSET, startPoint.getY()+midAzimuthOffset-HGAP);
+
+        //Drawing Line
+        gc.setStroke(Color.CYAN);
+        gc.setLineWidth(2);
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.LSL_ANGLE);//cross line at top az degrees
         ModelDrawing.drawLineAtAngle(gc, startPoint.getX(),startPoint.getY()+midAzimuthOffset,endPoint.getX(), -Constance.AZIMUTH.RSL_ANGLE);//cross line at bottom az degrees
         
@@ -160,9 +168,10 @@ public class AzimuthChart extends GraphChart {
         }
 	}
 
-	public static void drawText(Canvas canvas) {
+	public void drawText(Canvas canvas, int x, int y) {
 		int count = 0;
 		GraphicsContext gc = canvas.getGraphicsContext2D();
+		gc.translate(x, y);
         gc.setFont(new Font("Sans Serif", 16));
         gc.setStroke(Color.RED);
         gc.strokeText("AZ Ang    : "+Constance.AZ_ANGLE, OFFSET, TEXT_OFFSET+HGAP*count);
@@ -178,11 +187,7 @@ public class AzimuthChart extends GraphChart {
         gc.setStroke(Color.AQUA);
         gc.strokeText("Offset                   : "+Constance.AZIMUTH.RCLO+Constance.UNITS.getLENGTH(), OFFSET, TEXT_OFFSET+HGAP*count);
         count = 0;
-        
-        gc.setFont(new Font("Sans Serif", 18));
-        gc.setStroke(Color.YELLOW);
-        gc.strokeText("-", OFFSET, HEIGHT_OFF/2+HGAP+TEXT_OFFSET);
-        gc.strokeText("+", OFFSET, HEIGHT_OFF/2-OFFSET);
+
 	}
 
 }

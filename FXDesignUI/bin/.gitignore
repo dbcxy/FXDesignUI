@@ -1,5 +1,6 @@
-/log4j.properties
 /application/
+/assets/
+/log4j.properties
 /model/
 /network/
 /utils/

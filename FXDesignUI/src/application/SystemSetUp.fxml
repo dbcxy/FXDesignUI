@@ -45,38 +45,6 @@
                            <children>
                               <VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <Label text="Runway Parameters">
-                                       <font>
-                                          <Font name="Arial Bold" size="12.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                    <HBox>
-                                       <children>
-                                          <Label minWidth="300.0" text="Select Runway">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                          <ComboBox fx:id="comboRunway" prefWidth="150.0" promptText="Select" visibleRowCount="5">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </ComboBox>
-                                          <Label minWidth="50.0">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                          <Label minWidth="50.0">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                       </children>
-                                    </HBox>
                                     <Label text="Graph Parameters">
                                        <font>
                                           <Font name="Arial Bold" size="12.0" />
@@ -117,30 +85,6 @@
                                              </HBox.margin>
                                           </Label>
                                           <ComboBox fx:id="comboElAz" prefWidth="150.0" promptText="Select" visibleRowCount="5">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </ComboBox>
-                                          <Label minWidth="50.0">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                          <Label minWidth="50.0">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                       </children>
-                                    </HBox>
-                                    <HBox>
-                                       <children>
-                                          <Label minWidth="300.0" text="Swap Graph Component">
-                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
-                                             </HBox.margin>
-                                          </Label>
-                                          <ComboBox fx:id="comboLR" prefWidth="150.0" promptText="Select" visibleRowCount="5">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </HBox.margin>
