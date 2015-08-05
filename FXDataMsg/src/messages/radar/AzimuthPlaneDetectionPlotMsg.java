@@ -140,6 +140,7 @@ public class AzimuthPlaneDetectionPlotMsg implements Serializable,IByteSum{
 	public ByteBuffer getByteBuffer() {
 
 		ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
+		buffer.order(ByteOrder.LITTLE_ENDIAN);
 		buffer.putInt(messageHeader);
 		
 		buffer.putShort(reserved);

@@ -30,7 +30,7 @@ public class DataIdentifier implements IByteSum{
 	
 	public static String getMessageType(final byte[] data) {
 		ByteBuffer bb = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
-		int clsid = (int)bb.getInt();
+		int clsid = (int)bb.getInt(0);
 		bb.clear();
 
 		for (Entry<String, Integer> entry : MSG_CLASS_ID.entrySet()) {

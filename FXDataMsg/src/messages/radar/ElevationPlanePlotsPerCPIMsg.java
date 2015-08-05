@@ -67,6 +67,7 @@ public class ElevationPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 	public byte[] getByteBuffer() {
 
 		ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
+		buffer.order(ByteOrder.LITTLE_ENDIAN);
 		buffer.putInt(messageHeader);
 		buffer.putShort(plotCount);
 		buffer.putShort(source);
@@ -74,7 +75,7 @@ public class ElevationPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 		
 //		List<Byte> plotList = Arrays.asList(ArrayUtils.toObject(cpiBuf));
 //		for(ElevationPlaneDetectionPlotMsg aMsg: elevationPlaneDetectionPlotMsg){
-//			byte[] subBuf = elevationPlaneDetectionPlotMsg.get(elevationPlaneDetectionPlotMsg.size()-1).getByteBuffer().array();
+//			byte[] subBuf = aMsg.getByteBuffer().array();
 //			plotList.addAll(Arrays.asList(ArrayUtils.toObject(subBuf)));
 //		}
 		

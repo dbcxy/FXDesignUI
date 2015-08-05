@@ -17,17 +17,13 @@ public class SketchItemizedOverlay extends ItemizedOverlay<OverlayItem> implemen
 	}
 	
 	public void drawTracks(GraphicsContext gc) {
-		for(int i=0;i<size();i++){
-//			((Track) getItem(i)).draw(gc);
-			((Track) getOverlayItemList().remove()).draw(gc);
-		}
+		for(int i=0;i<size();i++)
+			((Track) removeOverlayItem()).draw(gc);
 	}
 	
 	public void drawPlots(GraphicsContext gc) {
-		for(int i=0;i<size();i++) {
-//			((Plot) getItem(i)).draw(gc);
-			((Plot) getOverlayItemList().remove()).draw(gc);
-		}
+		for(int i=0;i<size();i++)
+			((Plot) removeOverlayItem()).draw(gc);
 	}
 	
 	public void drawVideos(Canvas canvas) {

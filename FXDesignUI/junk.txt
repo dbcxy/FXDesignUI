@@ -641,3 +641,30 @@ private void initPan(final Pane pane) {
             	AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
             	bufferedImage = op.filter(bufferedImage, null);
 	}
+	
+	private void makeData(byte[] data) {
+	//		//identify data
+//		Object object = null;
+//		try {
+//			object = Serializer.deserialize(mData);
+//		} catch (ClassNotFoundException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		//decode data
+//		if(object instanceof AzimuthPlanePlotsPerCPIMsg) {
+//			AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = (AzimuthPlanePlotsPerCPIMsg) object;
+//			//add data
+//			mDataObserver.addAzPlots(aPlotsPerCPIMsg);
+//		} else if(object instanceof AzimuthPlaneTrackMsg) {
+//			AzimuthPlaneTrackMsg aTrackMsg = (AzimuthPlaneTrackMsg) object;
+//			mDataObserver.addAzTracks(aTrackMsg);
+////			logger.info("X: "+aTrackMsg.getX());
+////			logger.info("Y: "+aTrackMsg.getY());
+//		}
+//
+//		logger.info("Server Data analyzed");
+//		iCManager.manageData(mDataObserver);
+}

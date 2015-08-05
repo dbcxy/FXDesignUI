@@ -32,7 +32,7 @@ public class PlaneRAWVideoMsg implements Serializable, IByteSum{
 	private List<Byte> RC = new ArrayList<Byte>();
 	
 	public PlaneRAWVideoMsg() {
-		// TODO Auto-generated constructor stub
+
 	}
 	
 	public int getMsgLen() {
@@ -142,6 +142,7 @@ public class PlaneRAWVideoMsg implements Serializable, IByteSum{
 	public ByteBuffer getByteBuffer() {
 
 		ByteBuffer buffer = ByteBuffer.allocate(msgLen);
+		buffer.order(ByteOrder.LITTLE_ENDIAN);
 		buffer.putInt(msgLen);
 		buffer.putInt(messageHeader);
 		buffer.putInt(reservedInt);

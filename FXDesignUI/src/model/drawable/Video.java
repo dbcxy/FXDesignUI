@@ -7,13 +7,9 @@ import model.graph.ILayoutParam;
 public class Video extends OverlayItem implements ILayoutParam{
 
 	public Video() {
-		this(null,null);
+		super(null,null,null);
 	}
 	
-	public Video(Double x, Double y) {
-		super(x, y);
-	}
-
 	@Override
 	public void draw(GraphicsContext gc) {
 		

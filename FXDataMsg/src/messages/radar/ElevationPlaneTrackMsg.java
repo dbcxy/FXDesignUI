@@ -165,13 +165,15 @@ public class ElevationPlaneTrackMsg implements Serializable,IByteSum {
 	public ByteBuffer getByteBuffer() {
 
 		ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
+		buffer.order(ByteOrder.LITTLE_ENDIAN);
 		buffer.putInt(messageHeader);
 		buffer.putInt(trackName);
 
 		buffer.putShort(trackStatus);
-		buffer.putShort(trackQuality);
+		buffer.putShort(trackQuality);		
 		
 		buffer.putInt(reserved);
+		
 		buffer.putInt(x);
 		buffer.putInt(reserved);
 		buffer.putInt(z);

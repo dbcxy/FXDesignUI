@@ -5,17 +5,20 @@ public abstract class OverlayItem {
 	String Title;
 	double X;
 	double Y;
+	double Z;
 	
-	public OverlayItem(final Double x, final Double y) {
-		this(null,x,y);
+	public OverlayItem(final Double x, final Double y, final Double z) {
+		this(null,x,y,z);
 	}
 	
-	public OverlayItem(final String name, final Double x, final Double y) {
+	public OverlayItem(final String name, final Double x, final Double y, final Double z) {
 		this.Title = name;
 		if(x!=null)
 			this.X = x;
 		if(y!=null)
 			this.Y = y;
+		if(z!=null)
+			this.Z = z;
 	}
 
 	public double getX() {
@@ -32,6 +35,14 @@ public abstract class OverlayItem {
 
 	public void setY(final double y) {
 		Y = y;
+	}
+	
+	public double getZ() {
+		return Z;
+	}
+
+	public void setZ(final double z) {
+		Z = z;
 	}
 
 	public String getTitle() {

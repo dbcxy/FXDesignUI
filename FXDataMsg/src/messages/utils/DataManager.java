@@ -70,10 +70,33 @@ public class DataManager implements IByteSum{
 		case DataIdentifier.AZ_TRACK_MSG:
 			return decodeAzTrackmsg(data);
 			
+		case DataIdentifier.EL_PLOT_MSG:
+			return decodeElPlotmsg(data);
+			
+		case DataIdentifier.EL_TRACK_MSG:
+			return decodeElTrackmsg(data);
+			
+		case DataIdentifier.VIDEO_MSG:
+			return decodeVideomsg(data);
+			
 		default:
 			break;
 		}
 		return null;
+	}
+	
+	private PlaneRAWVideoMsg decodeVideomsg(byte[] data) {
+		PlaneRAWVideoMsg pVideoMsg = new PlaneRAWVideoMsg();
+		//TODO
+		
+		//return pVideoMsg;
+		return null;
+	}
+
+	private ElevationPlaneTrackMsg decodeElTrackmsg(byte[] data) {
+		ElevationPlaneTrackMsg eTrackMsg = new ElevationPlaneTrackMsg();
+		eTrackMsg.setByteBuffer(data);
+		return eTrackMsg;
 	}
 
 	private AzimuthPlaneTrackMsg decodeAzTrackmsg(byte[] data) {
@@ -86,6 +109,12 @@ public class DataManager implements IByteSum{
 		AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = new AzimuthPlanePlotsPerCPIMsg();
 		aPlotsPerCPIMsg.setByteBuffer(data);
 		return aPlotsPerCPIMsg;
+	}
+	
+	private ElevationPlanePlotsPerCPIMsg decodeElPlotmsg(byte[] data) {
+		ElevationPlanePlotsPerCPIMsg ePlotsPerCPIMsg = new ElevationPlanePlotsPerCPIMsg();
+		ePlotsPerCPIMsg.setByteBuffer(data);
+		return ePlotsPerCPIMsg;
 	}
 
 }

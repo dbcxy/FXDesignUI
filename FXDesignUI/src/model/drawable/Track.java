@@ -1,20 +1,12 @@
 package model.drawable;
 
-import java.awt.BasicStroke;
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
-
 import model.MatrixRef;
 import model.OverlayItem;
 import model.graph.ILayoutParam;
 import utils.Constance;
 import utils.ModelDrawing;
-import javafx.embed.swing.SwingFXUtils;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
-import javafx.scene.image.Image;
-import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
@@ -27,14 +19,19 @@ public class Track extends OverlayItem implements ILayoutParam{
 	private double azimuth;
 	private double range;
 	
-	private double X;
-	private double Y;
-	
 	private boolean isEl = false;
 	private boolean isAz = false;
+	
+//	x = r .* cos(elevation) .* cos(azimuth)
+//	y = r .* cos(elevation) .* sin(azimuth)
+//	z = r .* sin(elevation)
+	
+//	azimuth = atan2(y,x)
+//	elevation = atan2(z,sqrt(x.^2 + y.^2))
+//	r = sqrt(x.^2 + y.^2 + z.^2)
 		
 	public Track() {
-		super(null,null);
+		super(null,null,null);
 	}
 
 	public boolean isTextShown() {
@@ -84,75 +81,70 @@ public class Track extends OverlayItem implements ILayoutParam{
 		isEl = b;
 	}
 	
-	@Override
-	public void setX(double x) {
-		this.X = x;
-	}
-	
-	@Override
-	public void setY(double y) {
-		this.Y = y;
-	}
-	
-	@Override
-	public double getX() {
-		double x = X;
-		double y = Y;
+	public void extractGraphAER() {
+		double x = getX();
+		double y = getY();
+		double z = getZ();
 		
-		range = Math.sqrt(Math.pow(x, 2)+Math.pow(y, 2));
-		x = MatrixRef.getInstance().toRangePixels(range/1000);
-		return x;
-	}
-
-	@Override
-	public double getY() {
-		double x = X;
-		double y = Y;
-		if(isEl) {
-			y = MatrixRef.getInstance().toElevationPixels(y);
-		}
+		//Range
+		range = Math.sqrt(Math.pow(x, 2)+Math.pow(y, 2)+Math.pow(z, 2));
+		setX(MatrixRef.getInstance().toRangePixels(range/1000));
+		
+		//Azimuth
 		if(isAz) {
-			azimuth = Math.toRadians(Constance.AZIMUTH_MAX) - Math.atan(x/y);//Changing from 10->-10degrees to 0->20degrees
+			azimuth = Math.toRadians(Constance.AZIMUTH_MAX) - Math.atan2(y,x);//Changing from 10->-10degrees to 0->20degrees
 			MatrixRef matrixRef = MatrixRef.getInstance();
 			double midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
 			double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
 	        Point start = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getMinRange());
 			Point p = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY()+midAzimuthOffset, getX(), Math.toDegrees(-azimuth));
-			y = p.getY();
+			setY(p.getY());
 		}
-		return y;
-	}
-
-	public void showText(boolean show) {		
-		isTextShown = show;
+		
+		//Elevation
+		if(isEl) {
+			elevation = Math.atan2(z, Math.sqrt(Math.pow(x, 2)+Math.pow(y, 2)));
+			MatrixRef matrixRef = MatrixRef.getInstance();
+	        Point start = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
+			Point p = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY(), getX(), Math.toDegrees(-elevation));
+			setZ(p.getY());
+		}
 	}
 	
-	private void displayText(GraphicsContext gc) {
-    	gc.setStroke(Color.CHOCOLATE);
-    	ModelDrawing.drawLineAtAngle(gc, getX(), getY(), HGAP, -45);
-    	Point p = ModelDrawing.getNextPointAtAngle(getX(), getY(), HGAP, -45);
-    	gc.strokeLine(p.getX(), p.getY(), p.getX()+2*TEXT_OFFSET, p.getY());
-    	gc.setFont(new Font("Arial", 14));
-    	gc.setStroke(Color.WHITE);
-    	gc.strokeText(getTitle(), p.getX()+OFFSET, p.getY()-OFFSET);
-    	gc.setStroke(Color.YELLOW);
-    	gc.strokeText(getTrackNumber(), p.getX()+OFFSET, p.getY()+HGAP);
+	public void showText(boolean show) {		
+		isTextShown = show;
 	}
 
 	@Override
 	public void draw(GraphicsContext gc) {
+		double x = getX();
+		double y = 0;
+		if(isAz) {
+			y = getY();
+		} else if(isEl) {
+			y = getZ();
+		}
 		
 		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
 			gc.setFill(Color.BISQUE);
-	    	gc.fillOval(getX()-OFFSET, getY()-OFFSET, HGAP, HGAP);
+	    	gc.fillOval(x-OFFSET, y-OFFSET, HGAP, HGAP);
 	    	gc.setStroke(Color.WHITE);
 	    	gc.setLineWidth(2);
-	    	gc.strokeOval(getX()-OFFSET, getY()-OFFSET, HGAP, HGAP);
-	    	gc.strokeLine(getX(),getY()+HGAP,getX(),getY()-HGAP);
-	    	gc.strokeLine(getX()+HGAP, getY(), getX()-HGAP, getY());
+	    	gc.strokeOval(x-OFFSET, y-OFFSET, HGAP, HGAP);
+	    	gc.strokeLine(x,y+HGAP,getX(),y-HGAP);
+	    	gc.strokeLine(x+HGAP, y, x-HGAP, y);
 	    	
-	    	if(isTextShown)
-				displayText(gc);
+	    	if(isTextShown) {
+	        	gc.setStroke(Color.CHOCOLATE);
+	        	ModelDrawing.drawLineAtAngle(gc, x, y, HGAP, -45);
+	        	Point p = ModelDrawing.getNextPointAtAngle(x, y, HGAP, -45);
+	        	gc.strokeLine(p.getX(), p.getY(), p.getX()+2*TEXT_OFFSET, p.getY());
+	        	gc.setFont(new Font("Arial", 14));
+	        	gc.setStroke(Color.WHITE);
+	        	gc.strokeText(getTitle(), p.getX()+OFFSET, p.getY()-OFFSET);
+	        	gc.setStroke(Color.YELLOW);
+	        	gc.strokeText(getTrackNumber(), p.getX()+OFFSET, p.getY()+HGAP);
+	    	}
 		}
 	}
 

@@ -23,7 +23,7 @@ public class Plot extends OverlayItem implements ILayoutParam{
 	private boolean isEl = false;
 		
 	public Plot() {
-		super(null,null);
+		super(null,null,null);
 	}
 
 	public boolean isTextShown() {
@@ -54,7 +54,8 @@ public class Plot extends OverlayItem implements ILayoutParam{
 
 	public void setAzimuth(double azimuth) {
 		isAz = true;
-		this.azimuth = azimuth;
+		this.azimuth = Math.toRadians(Constance.AZIMUTH_MAX) - azimuth;//Changing from 10->-10degrees to 0->20degrees
+//		this.azimuth = azimuth;
 	}
 
 	public double getRange() {
@@ -65,54 +66,67 @@ public class Plot extends OverlayItem implements ILayoutParam{
 		this.range = range;
 	}
 	
-	@Override
-	public double getX() {
-		double x = 0.0;
-		x = MatrixRef.getInstance().toRangePixels(range/1000);
-		return x;
+	public void setAz(boolean b) {
+		isAz = b;
 	}
-
-	@Override
-	public double getY() {
-		double y = 0.0;
-		if(isEl) {
-			y = MatrixRef.getInstance().toElevationPixels(elevation);
-		}
+	
+	public void setEl(boolean b) {
+		isEl = b;
+	}
+	
+	public void extractGraphAER() {
+		
+		//Range
+		setX(MatrixRef.getInstance().toRangePixels(range/1000));
+		
+		//Azimuth
 		if(isAz) {
 			MatrixRef matrixRef = MatrixRef.getInstance();
 			double midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
 			double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
 	        Point start = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getMinRange());
 			Point p = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY()+midAzimuthOffset, getX(), Math.toDegrees(-azimuth));
-			y = p.getY();
+			setY(p.getY());
 		}
-		return y;
+		
+		//Elevation
+		if(isEl) {
+			MatrixRef matrixRef = MatrixRef.getInstance();
+	        Point start = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
+			Point p = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY(), getX(), Math.toDegrees(-elevation));
+			setZ(p.getY());
+		}
 	}
-
+	
 	@Override
 	public void draw(GraphicsContext gc) {
+		double x = getX();
+		double y = 0;
+		if(isAz) {
+			y = getY();
+		} else if(isEl) {
+			y = getZ();
+		}
 		
 		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
 			gc.setFill(Color.RED);
-	    	gc.fillOval(getX()-OFFSET, getY()-OFFSET, OFFSET, OFFSET);
+	    	gc.fillOval(x-OFFSET, y-OFFSET, OFFSET, OFFSET);
 	    	gc.setStroke(Color.WHITE);
 	    	gc.setLineWidth(1);
-	    	gc.strokeOval(getX()-OFFSET, getY()-OFFSET, OFFSET, OFFSET);
+	    	gc.strokeOval(x-OFFSET, y-OFFSET, OFFSET, OFFSET);
 	    	
-	    	if(isTextShown)
-				displayText(gc);
+	    	if(isTextShown) {
+	    		gc.setStroke(Color.CHOCOLATE);
+	        	ModelDrawing.drawLineAtAngle(gc, x, y, HGAP, -45);
+	        	Point p = ModelDrawing.getNextPointAtAngle(x, y, HGAP, -45);
+	        	gc.strokeLine(p.getX(), p.getY(), p.getX()+2*TEXT_OFFSET, p.getY());
+	        	gc.setFont(new Font("Arial", 14));
+	        	gc.setStroke(Color.WHITE);
+	        	gc.strokeText(getTitle(), p.getX()+OFFSET, p.getY()-OFFSET);
+	        	gc.setStroke(Color.YELLOW);
+	        	gc.strokeText(plotNumber, p.getX()+OFFSET, p.getY()+HGAP);
+	    	}
 		}
 	}
-		
-	private void displayText(GraphicsContext gc) {
-    	gc.setStroke(Color.CHOCOLATE);
-    	ModelDrawing.drawLineAtAngle(gc, getX(), getY(), HGAP, -45);
-    	Point p = ModelDrawing.getNextPointAtAngle(getX(), getY(), HGAP, -45);
-    	gc.strokeLine(p.getX(), p.getY(), p.getX()+2*TEXT_OFFSET, p.getY());
-    	gc.setFont(new Font("Arial", 14));
-    	gc.setStroke(Color.WHITE);
-    	gc.strokeText(getTitle(), p.getX()+OFFSET, p.getY()-OFFSET);
-    	gc.setStroke(Color.YELLOW);
-    	gc.strokeText(plotNumber, p.getX()+OFFSET, p.getY()+HGAP);
-	}
+
 }

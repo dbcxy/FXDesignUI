@@ -31,20 +31,11 @@ public abstract class ItemizedOverlay<Item extends OverlayItem> {
 		return mInternalItemList.remove(item);
 	}
 	
-//	public Item removeOverlayItem(int position) {
-//        return mInternalItemList.remove(position);
-//	}
-    
-//   	public final Item getItem(final int position) {
-//	        return mInternalItemList.get(position);
-//	}
-   	
+	public Item removeOverlayItem() {
+        return mInternalItemList.remove();
+	}
+	
    	protected final int size() {
    		return mInternalItemList.size();
    	}
-   	
-   	public Deque<Item> getOverlayItemList() {
-   		return mInternalItemList;
-   	}
-
 }

@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 import messages.utils.IByteSum;
 
 public class AzimuthPlanePlotsPerCPIMsg implements Serializable,IByteSum {
@@ -65,19 +67,22 @@ public class AzimuthPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 	public byte[] getByteBuffer() {
 		
 		ByteBuffer buffer = ByteBuffer.allocate(MSG_SIZE);
+		buffer.order(ByteOrder.LITTLE_ENDIAN);
 		buffer.putInt(messageHeader);
 		buffer.putShort(plotCount);
 		buffer.putShort(source);
-		byte[] b1 = buffer.array();
-		for(AzimuthPlaneDetectionPlotMsg aMsg: azimuthPlaneDetectionPlotMsg){
-
-		}
+		byte[] cpiBuf = buffer.array();
 		
-		//JUGAD
-		byte[] b2 = azimuthPlaneDetectionPlotMsg.get(azimuthPlaneDetectionPlotMsg.size()-1).getByteBuffer().array();
-		byte[] res = new byte[b1.length+b2.length];
-		System.arraycopy(b1	, 0, res, 0, b1.length);
-		System.arraycopy(b2, 0, res, b1.length, b2.length);
+		List<Byte> plotList = new ArrayList<Byte>(Arrays.asList(ArrayUtils.toObject(cpiBuf)));
+		for(AzimuthPlaneDetectionPlotMsg aMsg: azimuthPlaneDetectionPlotMsg){
+			byte[] subBuf = aMsg.getByteBuffer().array();
+			List<Byte> subList = new ArrayList<Byte>(Arrays.asList(ArrayUtils.toObject(subBuf)));
+			plotList.addAll(subList);
+		}
+		Byte[] out = new Byte[plotList.size()];
+		plotList.toArray(out);
+		byte[] res = new byte[plotList.size()]; 
+		res = ArrayUtils.toPrimitive(out);
 		
 		return res;
 	}

@@ -8,11 +8,13 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.net.Socket;
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import messages.radar.AzimuthPlanePlotsPerCPIMsg;
 import messages.radar.AzimuthPlaneTrackMsg;
+import messages.radar.ElevationPlaneTrackMsg;
 import messages.utils.DataIdentifier;
 import messages.utils.DataManager;
 import messages.utils.IByteSum;
@@ -452,57 +454,39 @@ public class TaskObserver extends Thread implements IByteSum{
 		DatagramPacket mDatagramInPacket = new DatagramPacket(mMCUDPSocketbuffer, len);
 		// Wait to receive a datagram
     	multicastSocket.receive(mDatagramInPacket);
-		logger.info("MC-UDP Server Data received: "+len);
+		logger.info("MC-UDP Server Data received");
 		return mMCUDPSocketbuffer;
 	}
 	
-	private void makeData(byte[] mData) {
-//		//identify data
-//		Object object = null;
-//		try {
-//			object = Serializer.deserialize(mData);
-//		} catch (ClassNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		//decode data
-//		if(object instanceof AzimuthPlanePlotsPerCPIMsg) {
-//			AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = (AzimuthPlanePlotsPerCPIMsg) object;
-//			//add data
-//			mDataObserver.addAzPlots(aPlotsPerCPIMsg);
-//		} else if(object instanceof AzimuthPlaneTrackMsg) {
-//			AzimuthPlaneTrackMsg aTrackMsg = (AzimuthPlaneTrackMsg) object;
-//			mDataObserver.addAzTracks(aTrackMsg);
-////			logger.info("X: "+aTrackMsg.getX());
-////			logger.info("Y: "+aTrackMsg.getY());
-//		}
-//
-//		logger.info("Server Data analyzed");
-//		iCManager.manageData(mDataObserver);
-		
+	private void makeData(byte[] mData) {	
 		//identify data
-		String msgName = DataIdentifier.getMessageType(mData);
-		logger.info("Server Data Identified: "+msgName);
+		final String msgName = DataIdentifier.getMessageType(mData);
+//		logger.info("Server Data Identified: "+msgName);
 		
 		//decode data
-		Object object = mDataManager.decodeMsg(msgName, mData);
-		logger.info("Server Data Decoded");
-		if(object instanceof AzimuthPlanePlotsPerCPIMsg) {
-			AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = (AzimuthPlanePlotsPerCPIMsg) object;
-			logger.info("Server Data AzimuthPlanePlotsPerCPIMsg added: "+aPlotsPerCPIMsg.toString());
-			//add data
-			mDataObserver.addAzPlots(aPlotsPerCPIMsg);
-		} else if(object instanceof AzimuthPlaneTrackMsg) {
-			AzimuthPlaneTrackMsg aTrackMsg = (AzimuthPlaneTrackMsg) object;
-			logger.info("Server Data AzimuthPlaneTrackMsg added: "+aTrackMsg.toString());
-			//add data
-			mDataObserver.addAzTracks(aTrackMsg);
+		if(msgName != null) {
+			Object object = mDataManager.decodeMsg(msgName, mData);
+//			logger.info("Server Data Decoded");
+			if(object instanceof AzimuthPlanePlotsPerCPIMsg) {
+				AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg = (AzimuthPlanePlotsPerCPIMsg) object;
+//				logger.info("Server Data AzimuthPlanePlotsPerCPIMsg added: "+aPlotsPerCPIMsg.toString());
+				//add data
+				mDataObserver.addAzPlots(aPlotsPerCPIMsg);
+			} else if(object instanceof AzimuthPlaneTrackMsg) {
+				AzimuthPlaneTrackMsg aTrackMsg = (AzimuthPlaneTrackMsg) object;
+//				logger.info("Server Data AzimuthPlaneTrackMsg added: "+aTrackMsg.toString());
+				//add data
+				mDataObserver.addAzTracks(aTrackMsg);
+			} else if(object instanceof ElevationPlaneTrackMsg) {
+				ElevationPlaneTrackMsg eTrackMsg = (ElevationPlaneTrackMsg) object;
+				logger.info("Server Data ElevationPlaneTrackMsg added: "+eTrackMsg.toString());
+				//add data
+				mDataObserver.addElTracks(eTrackMsg);
+			}
+			
+			//notify UI
+			iCManager.manageData(mDataObserver);
 		}
-		
-		iCManager.manageData(mDataObserver);
-		
 	}
 	
 	private void recordData(byte[] mData) {

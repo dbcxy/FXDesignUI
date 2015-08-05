@@ -36,10 +36,10 @@ public class ModelDrawing {
         g2d.dispose();
 	}
 	
-	public static Point getNextPointAtAngle(double x1, double y1, double len, double angle){
+	public static Point getNextPointAtAngle(double x1, double y1, double lenPx, double angle){
 		Point point = new Point();
-		point.setX(x1+len*Math.cos(Math.toRadians(angle)));
-		point.setY(y1+len*Math.sin(Math.toRadians(angle)));
+		point.setX(x1+lenPx*Math.cos(Math.toRadians(angle)));
+		point.setY(y1+lenPx*Math.sin(Math.toRadians(angle)));
 		return point;
 	}
 	
