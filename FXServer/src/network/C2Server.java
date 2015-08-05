@@ -15,7 +15,7 @@ public class C2Server {
 	public static int INIT_RANGE 		= 40000;//4km
 	public static double INIT_AZ 		= 10;//10degrees in rad
 	public static double SCAN_TIME 		= 0.5;//sec
-	public static int NO_SCANS	 		= 1000;
+	public static int NO_SCANS	 		= 10000;
 	
 	public interface Notifier {
 		public void notifyData(String str);

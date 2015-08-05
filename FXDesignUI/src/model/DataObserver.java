@@ -120,8 +120,8 @@ public class DataObserver {
 		track.setEl(true);
 		track.extractGraphAER();
 		mElTrackList.addOverlayItem(track);
-		logger.info("ElRng: "+track.getRange());
-		logger.info("ElEl: "+track.getElevation());
+//		logger.info("ElRng: "+track.getRange());
+//		logger.info("ElEl: "+track.getElevation());
 	}
 	
 }

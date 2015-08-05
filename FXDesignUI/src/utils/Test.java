@@ -24,7 +24,7 @@ public class Test {
 //        Test.gcDrawSingleRect(cBtmL1);//about 5ms 
 //        Test.g2dImgDrawSingleRect(cBtmL1);//about 51ms 
 //        long endTime = System.currentTimeMillis();
-//        System.out.println("TotalTime: "+(endTime - startTime)); 
+//        System.out.println("TotalTime: "+(endTime - startTime));
 	}
 	
 	

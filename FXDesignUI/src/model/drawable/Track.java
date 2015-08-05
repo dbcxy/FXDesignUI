@@ -1,17 +1,28 @@
 package model.drawable;
 
+import java.awt.BasicStroke;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+
 import model.MatrixRef;
 import model.OverlayItem;
 import model.graph.ILayoutParam;
 import utils.Constance;
 import utils.ModelDrawing;
+import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
+import javafx.scene.image.Image;
+import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 public class Track extends OverlayItem implements ILayoutParam{
 
+	private static final int TRACK_SIZE = 5;
+	
+	private String Title = "";
 	private int trackNumber;
 	private boolean isTextShown = true;
 	
@@ -22,6 +33,8 @@ public class Track extends OverlayItem implements ILayoutParam{
 	private boolean isEl = false;
 	private boolean isAz = false;
 	
+//	https://en.wikipedia.org/wiki/Spherical_coordinate_system
+//	http://in.mathworks.com/help/matlab/ref/cart2sph.html
 //	x = r .* cos(elevation) .* cos(azimuth)
 //	y = r .* cos(elevation) .* sin(azimuth)
 //	z = r .* sin(elevation)
@@ -36,6 +49,10 @@ public class Track extends OverlayItem implements ILayoutParam{
 
 	public boolean isTextShown() {
 		return isTextShown;
+	}
+	
+	public void setTitle(String title) {
+		this.Title = title;
 	}
 	
 	public void setTrackNumber(int number) {
@@ -127,64 +144,57 @@ public class Track extends OverlayItem implements ILayoutParam{
 		
 		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
 			gc.setFill(Color.BISQUE);
-	    	gc.fillOval(x-OFFSET, y-OFFSET, HGAP, HGAP);
+	    	gc.fillOval(x-TRACK_SIZE, y-TRACK_SIZE, 2*TRACK_SIZE, 2*TRACK_SIZE);
 	    	gc.setStroke(Color.WHITE);
 	    	gc.setLineWidth(2);
-	    	gc.strokeOval(x-OFFSET, y-OFFSET, HGAP, HGAP);
-	    	gc.strokeLine(x,y+HGAP,getX(),y-HGAP);
-	    	gc.strokeLine(x+HGAP, y, x-HGAP, y);
+	    	gc.strokeOval(x-TRACK_SIZE, y-TRACK_SIZE, 2*TRACK_SIZE, 2*TRACK_SIZE);
+	    	gc.strokeLine(x,y+2*TRACK_SIZE,getX(),y-2*TRACK_SIZE);
+	    	gc.strokeLine(x+2*TRACK_SIZE, y, x-2*TRACK_SIZE, y);
 	    	
 	    	if(isTextShown) {
 	        	gc.setStroke(Color.CHOCOLATE);
-	        	ModelDrawing.drawLineAtAngle(gc, x, y, HGAP, -45);
-	        	Point p = ModelDrawing.getNextPointAtAngle(x, y, HGAP, -45);
-	        	gc.strokeLine(p.getX(), p.getY(), p.getX()+2*TEXT_OFFSET, p.getY());
-	        	gc.setFont(new Font("Arial", 14));
+	        	ModelDrawing.drawLineAtAngle(gc, x, y, 2*TRACK_SIZE, -45);
+	        	Point p = ModelDrawing.getNextPointAtAngle(x, y, 2*TRACK_SIZE, -45);
+	        	gc.strokeLine(p.getX(), p.getY(), p.getX()+6*TRACK_SIZE, p.getY());
+	        	gc.setFont(new Font("Arial", 2*TRACK_SIZE));
 	        	gc.setStroke(Color.WHITE);
-	        	gc.strokeText(getTitle(), p.getX()+OFFSET, p.getY()-OFFSET);
+	        	gc.strokeText(Title, p.getX()+TRACK_SIZE, p.getY()-TRACK_SIZE);
 	        	gc.setStroke(Color.YELLOW);
-	        	gc.strokeText(getTrackNumber(), p.getX()+OFFSET, p.getY()+HGAP);
+	        	gc.strokeText(getTrackNumber(), p.getX()+2*TRACK_SIZE, p.getY()+2*TRACK_SIZE);
 	    	}
 		}
 	}
 
-//	public void drawOnImage(Canvas canvas) {
-//		GraphicsContext gc = canvas.getGraphicsContext2D();
-//    	gc.save();
-//    	
-//    	
-//    	BufferedImage bufferedImage = new BufferedImage((int) (canvas.getWidth()), 
-//				 (int) (canvas.getHeight()), BufferedImage.TYPE_INT_ARGB);
-//		Graphics2D g2d = bufferedImage.createGraphics();
-//		g2d.setColor(java.awt.Color.RED);
-//		g2d.fillOval((int)getX()-OFFSET, (int)getY()-OFFSET, HGAP, HGAP);
-//		g2d.setColor(java.awt.Color.WHITE);
-//		g2d.setStroke(new BasicStroke(2));
-//		g2d.drawOval((int)getX()-OFFSET, (int)getY()-OFFSET, HGAP, HGAP);
-//		g2d.drawLine((int)getX(),(int)getY()+HGAP,(int)getX(),(int)getY()-HGAP);
-//		g2d.drawLine((int)getX()+HGAP, (int)getY(), (int)getX()-HGAP, (int)getY());
-//    	
-//    	if(isTextShown)
-//			displayText(g2d);
-//		
-//    	WritableImage wr = null;
-//		Image img = SwingFXUtils.toFXImage(bufferedImage, wr);  
-//    	
-//    	gc.drawImage(img, 0, 0);
-//    	gc.restore();
-//		
-//	}
-//
-//	private void displayText(Graphics2D g2d) {
-//		g2d.setColor(java.awt.Color.BLUE);
-//    	ModelDrawing.drawLineAtAngle(g2d, getX(), getY(), HGAP, -45);
-//    	Point p = ModelDrawing.getNextPointAtAngle(getX(), getY(), HGAP, -45);
-//    	g2d.drawLine((int)p.getX(), (int)p.getY(), (int)p.getX()+2*TEXT_OFFSET, (int)p.getY());
-//    	g2d.setFont(new java.awt.Font("Arial",java.awt.Font.PLAIN, 14));
-//    	g2d.setColor(java.awt.Color.WHITE);
-//    	g2d.drawString(getTitle(), (int)p.getX()+OFFSET, (int)p.getY()-OFFSET);
-//    	g2d.setColor(java.awt.Color.YELLOW);
-//    	g2d.drawString(getTrackNumber(), (int)p.getX()+OFFSET, (int)p.getY()+HGAP);		
-//	}
+	public void drawOnImage(BufferedImage bufferedImage) {
+
+		double x = getX();
+		double y = 0;
+		if(isAz) {
+			y = getY();
+		} else if(isEl) {
+			y = getZ();
+		}
+
+		Graphics2D g2d = bufferedImage.createGraphics();
+		g2d.setColor(java.awt.Color.RED);
+		g2d.fillOval((int)x-TRACK_SIZE, (int)y-TRACK_SIZE, 2*TRACK_SIZE, 2*TRACK_SIZE);
+		g2d.setColor(java.awt.Color.WHITE);
+		g2d.setStroke(new BasicStroke(2));
+		g2d.drawOval((int)x-TRACK_SIZE, (int)y-TRACK_SIZE, 2*TRACK_SIZE, 2*TRACK_SIZE);
+		g2d.drawLine((int)x,(int)y+2*TRACK_SIZE,(int)x,(int)y-2*TRACK_SIZE);
+		g2d.drawLine((int)x+2*TRACK_SIZE, (int)y, (int)x-2*TRACK_SIZE, (int)y);
+    	
+    	if(isTextShown) {
+    		g2d.setColor(java.awt.Color.BLUE);
+        	ModelDrawing.drawLineAtAngle(g2d, x, y, 2*TRACK_SIZE, -45);
+        	Point p = ModelDrawing.getNextPointAtAngle(x, y, 2*TRACK_SIZE, -45);
+        	g2d.drawLine((int)p.getX(), (int)p.getY(), (int)p.getX()+6*TRACK_SIZE, (int)p.getY());
+        	g2d.setFont(new java.awt.Font("Arial",java.awt.Font.PLAIN, 2*TRACK_SIZE));
+        	g2d.setColor(java.awt.Color.WHITE);
+        	g2d.drawString(Title, (int)p.getX()+TRACK_SIZE, (int)p.getY()-TRACK_SIZE);
+        	g2d.setColor(java.awt.Color.YELLOW);
+        	g2d.drawString(getTrackNumber(), (int)p.getX()+TRACK_SIZE, (int)p.getY()+2*TRACK_SIZE);	
+    	}		
+	}
 
 }

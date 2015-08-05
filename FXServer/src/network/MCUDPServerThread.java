@@ -81,25 +81,25 @@ public class MCUDPServerThread extends Thread{
 			e.printStackTrace();
 		}
         
-//        new Thread(new Runnable() {
-//			
-//			@Override
-//			public void run() {
-//				pAz = true;
-//		        sendAzPlotData();
-//		        pAz = false;
-//			}
-//		}).start();
-//        
-//        new Thread(new Runnable() {
-//			
-//			@Override
-//			public void run() {
-//				tAz = true;
-//		        sendAzTrackData();	
-//		        tAz = false;
-//			}
-//		}).start();
+        new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				pAz = true;
+		        sendAzPlotData();
+		        pAz = false;
+			}
+		}).start();
+        
+        new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				tAz = true;
+		        sendAzTrackData();	
+		        tAz = false;
+			}
+		}).start();
         
         
 //	            String elplot = "El PLOT ! ";

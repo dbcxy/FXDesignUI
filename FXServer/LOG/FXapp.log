@@ -322,3 +322,57 @@
 2015-08-05 17:13:25,131 INFO [config.AppConfig] - App Config Instantiated
 2015-08-05 17:16:09,857 INFO [application.Main] - SERVER LAUNCH
 2015-08-05 17:16:10,290 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 21:24:50,103 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 21:24:51,556 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 21:31:36,091 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 21:31:37,517 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 21:38:55,656 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 21:38:56,549 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 21:59:34,594 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 21:59:35,311 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 22:07:06,691 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 22:07:07,252 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 22:10:55,425 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 22:10:56,274 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 22:35:06,522 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 22:35:07,069 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 22:41:14,800 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 22:41:15,334 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 22:43:37,148 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 22:43:37,692 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 22:49:17,220 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 22:49:17,841 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 22:52:24,522 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 22:52:25,051 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 23:00:41,474 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 23:00:42,020 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 23:09:36,256 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 23:09:36,814 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 23:12:49,295 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 23:12:49,844 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 23:23:00,678 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 23:23:01,201 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 23:28:50,592 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 23:28:51,112 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 23:35:55,089 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 23:35:55,617 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 23:39:50,328 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 23:39:51,011 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 23:43:12,298 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 23:43:12,962 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 23:46:05,813 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 23:46:06,495 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 23:49:39,130 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 23:49:39,700 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 23:50:53,180 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 23:50:53,714 INFO [config.AppConfig] - App Config Instantiated
+2015-08-05 23:59:00,799 INFO [application.Main] - SERVER LAUNCH
+2015-08-05 23:59:01,341 INFO [config.AppConfig] - App Config Instantiated
+2015-08-06 00:00:26,181 INFO [application.Main] - SERVER LAUNCH
+2015-08-06 00:00:26,717 INFO [config.AppConfig] - App Config Instantiated
+2015-08-06 00:03:25,800 INFO [application.Main] - SERVER LAUNCH
+2015-08-06 00:03:26,386 INFO [config.AppConfig] - App Config Instantiated
+2015-08-06 00:04:50,159 INFO [application.Main] - SERVER LAUNCH
+2015-08-06 00:04:50,702 INFO [config.AppConfig] - App Config Instantiated
+2015-08-06 00:06:11,095 INFO [application.Main] - SERVER LAUNCH
+2015-08-06 00:06:11,733 INFO [config.AppConfig] - App Config Instantiated

@@ -2,17 +2,12 @@ package model;
 
 public abstract class OverlayItem {
 	
-	String Title;
 	double X;
 	double Y;
 	double Z;
 	
+
 	public OverlayItem(final Double x, final Double y, final Double z) {
-		this(null,x,y,z);
-	}
-	
-	public OverlayItem(final String name, final Double x, final Double y, final Double z) {
-		this.Title = name;
 		if(x!=null)
 			this.X = x;
 		if(y!=null)
@@ -45,11 +40,4 @@ public abstract class OverlayItem {
 		Z = z;
 	}
 
-	public String getTitle() {
-		return Title;
-	}
-
-	public void setTitle(final String title) {
-		Title = title;
-	}
 }

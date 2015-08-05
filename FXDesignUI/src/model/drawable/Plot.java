@@ -1,5 +1,9 @@
 package model.drawable;
 
+import java.awt.BasicStroke;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
 import javafx.scene.paint.Color;
@@ -12,7 +16,10 @@ import utils.ModelDrawing;
 
 public class Plot extends OverlayItem implements ILayoutParam{
 	
-	private String plotNumber;
+	private static final int PLOT_SIZE = 3;
+	
+	private String Title = "";
+	private int plotNumber;
 	private boolean isTextShown = false;
 	
 	private double elevation;
@@ -30,9 +37,16 @@ public class Plot extends OverlayItem implements ILayoutParam{
 		return isTextShown;
 	}
 	
-	public void setText(String name, String number) {
-		super.setTitle(name);
+	public void setTitle(String title) {
+		this.Title = title;
+	}
+	
+	public void setPlotNumber(int number) {
 		plotNumber = number;
+	}
+	
+	public String getPlotNumber() {
+		return String.valueOf(plotNumber);
 	}
 	
 	public void showText(boolean show) {		
@@ -110,23 +124,56 @@ public class Plot extends OverlayItem implements ILayoutParam{
 		
 		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
 			gc.setFill(Color.RED);
-	    	gc.fillOval(x-OFFSET, y-OFFSET, OFFSET, OFFSET);
+	    	gc.fillOval(x-PLOT_SIZE, y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
 	    	gc.setStroke(Color.WHITE);
 	    	gc.setLineWidth(1);
-	    	gc.strokeOval(x-OFFSET, y-OFFSET, OFFSET, OFFSET);
+	    	gc.strokeOval(x-PLOT_SIZE, y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
 	    	
 	    	if(isTextShown) {
 	    		gc.setStroke(Color.CHOCOLATE);
-	        	ModelDrawing.drawLineAtAngle(gc, x, y, HGAP, -45);
-	        	Point p = ModelDrawing.getNextPointAtAngle(x, y, HGAP, -45);
-	        	gc.strokeLine(p.getX(), p.getY(), p.getX()+2*TEXT_OFFSET, p.getY());
-	        	gc.setFont(new Font("Arial", 14));
+	        	ModelDrawing.drawLineAtAngle(gc, x, y, 2*PLOT_SIZE, -45);
+	        	Point p = ModelDrawing.getNextPointAtAngle(x, y, 2*PLOT_SIZE, -45);
+	        	gc.strokeLine(p.getX(), p.getY(), p.getX()+6*PLOT_SIZE, p.getY());
+	        	gc.setFont(new Font("Arial", 2*PLOT_SIZE));
 	        	gc.setStroke(Color.WHITE);
-	        	gc.strokeText(getTitle(), p.getX()+OFFSET, p.getY()-OFFSET);
+	        	gc.strokeText(Title, p.getX()+PLOT_SIZE, p.getY()-PLOT_SIZE);
 	        	gc.setStroke(Color.YELLOW);
-	        	gc.strokeText(plotNumber, p.getX()+OFFSET, p.getY()+HGAP);
+	        	gc.strokeText(getPlotNumber(), p.getX()+PLOT_SIZE, p.getY()+2*PLOT_SIZE);
 	    	}
 		}
+	}
+	
+	public void drawOnImage(BufferedImage bufferedImage) {
+
+		double x = getX();
+		double y = 0;
+		if(isAz) {
+			y = getY();
+		} else if(isEl) {
+			y = getZ();
+		}
+
+		Graphics2D g2d = bufferedImage.createGraphics();
+		g2d.setColor(java.awt.Color.RED);
+		g2d.fillOval((int)x-PLOT_SIZE, (int)y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
+		g2d.setColor(java.awt.Color.WHITE);
+		g2d.setStroke(new BasicStroke(1));
+		g2d.drawOval((int)x-PLOT_SIZE, (int)y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
+    	
+    	if(isTextShown) {
+    		g2d.setColor(java.awt.Color.BLUE);
+        	ModelDrawing.drawLineAtAngle(g2d, x, y, 2*PLOT_SIZE, -45);
+        	Point p = ModelDrawing.getNextPointAtAngle(x, y, 2*PLOT_SIZE, -45);
+        	g2d.drawLine((int)p.getX(), (int)p.getY(), (int)p.getX()+6*PLOT_SIZE, (int)p.getY());
+        	g2d.setFont(new java.awt.Font("Arial",java.awt.Font.PLAIN, 2*PLOT_SIZE));
+        	g2d.setColor(java.awt.Color.WHITE);
+        	g2d.drawString(Title, (int)p.getX()+PLOT_SIZE, (int)p.getY()-PLOT_SIZE);
+        	g2d.setColor(java.awt.Color.YELLOW);
+        	g2d.drawString(getPlotNumber(), (int)p.getX()+PLOT_SIZE, (int)p.getY()+2*PLOT_SIZE);	
+    	}
+		
+    	
+		
 	}
 
 }

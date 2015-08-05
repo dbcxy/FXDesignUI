@@ -9,6 +9,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.function.Consumer;
 
 import materialdesignbutton.MaterialDesignButtonWidget;
@@ -126,7 +128,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 	
 	private boolean isAppRunning = false;
 	private boolean isDrawn = false;
-	private boolean isRefreshing = false;
+	private boolean topRefresh = false;
+	private boolean bttmRefresh = false;
 	private int translateTop = 0;
 	private int translateBttm = 0;
 	ColumnConstraints graph;
@@ -542,28 +545,78 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
     
     private void initAnimTimers() {
+    	
+//    	new Timer().schedule(new TimerTask() {
+//
+//	        @Override
+//	        public void run() {
+//				Platform.runLater(new Runnable() {
+//
+//					@Override
+//					public void run() {
+//						if(Constance.IS_CONNECTED && dataObserver !=null) {
+//							//Plot & Tracks		    		
+//				    		GraphicsContext gc = cTopL2.getGraphicsContext2D();
+//				    		gc.clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
+//				    		
+//				    		dataObserver.getElTrackDataList().drawTracks(gc);
+//				    		dataObserver.getElPlotDataList().drawPlots(gc);
+//				    		dataObserver.getVideoDataList().drawVideos(cTopL2);
+//						}
+//					}
+//				});
+//	        }
+//    	},500);
+//    	
+//    	new Timer().schedule(new TimerTask() {
+//
+//	        @Override
+//	        public void run() {
+//				Platform.runLater(new Runnable() {
+//
+//					@Override
+//					public void run() {
+//						if(Constance.IS_CONNECTED && dataObserver !=null) {
+//							//Plot & Tracks		    		
+//				    		GraphicsContext gc = cTopL2.getGraphicsContext2D();
+//				    		gc.clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
+//				    		
+//				    		dataObserver.getElTrackDataList().drawTracks(gc);
+//				    		dataObserver.getElPlotDataList().drawPlots(gc);
+//				    		dataObserver.getVideoDataList().drawVideos(cTopL2);
+//						}
+//					}
+//				});
+//	        }
+//    	},500);
+    	
+    	new Timer().scheduleAtFixedRate(new TimerTask() {
+
+	        @Override
+	        public void run() {
+				topRefresh = true;
+				bttmRefresh = true;
+	        }
+    	},500,500);
+    	
     	//graph refresher
     	topAnimTimer = new AnimationTimer() {
 			
 			@Override
 			public void handle(long now) {
-				if(Constance.IS_CONNECTED && dataObserver !=null) {
-					
-					//Plot & Tracks
-					cTopL2.getGraphicsContext2D().clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
-		    		
+				if(Constance.IS_CONNECTED && dataObserver !=null && topRefresh) {
+					//Plot & Tracks		    		
 		    		GraphicsContext gc = cTopL2.getGraphicsContext2D();
 		    		gc.clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
+		    		
 		    		dataObserver.getElTrackDataList().drawTracks(gc);
 		    		dataObserver.getElPlotDataList().drawPlots(gc);
 		    		dataObserver.getVideoDataList().drawVideos(cTopL2);
-//		        	logger.info("Top Graph Objects Redrawn");
-		        	
-					try {
-						Thread.sleep(500);//every 0.5s draw
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
+		    		
+//		    		dataObserver.getElTrackDataList().drawTracksImage(cTopL2);
+//		    		dataObserver.getElPlotDataList().drawPlotsImage(cTopL2);
+		    		topRefresh = false;
+//		        	logger.info("Top Graph Objects Refreshed");
 				}
 			}
 		};
@@ -572,25 +625,19 @@ public class FXMLController implements Initializable,ILayoutParam{
 			
 			@Override
 			public void handle(long now) {
-				if(Constance.IS_CONNECTED && dataObserver !=null) {
-					
-					//Plot & Tracks
-					cBtmL2.getGraphicsContext2D().clearRect(0, 0, cBtmL2.getWidth(), cBtmL2.getHeight());
-//		    		isRefreshing = true;
-		    		
+				if(Constance.IS_CONNECTED && dataObserver !=null && bttmRefresh) {
+					//Plot & Tracks		    		
 		    		GraphicsContext gc = cBtmL2.getGraphicsContext2D();
 		    		gc.clearRect(0, 0, cBtmL2.getWidth(), cBtmL2.getHeight());
+		    		
 		    		dataObserver.getAzTrackDataList().drawTracks(gc);
 		    		dataObserver.getAzPlotDataList().drawPlots(gc);
 		    		dataObserver.getVideoDataList().drawVideos(cBtmL3);
-//		    		isRefreshing = false;
-//		        	logger.info("Bottom Graph Objects Redrawn");
-		        	
-					try {
-						Thread.sleep(500);//every 0.5s draw
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
+		    		
+//		    		dataObserver.getAzTrackDataList().drawTracksImage(cBtmL2);
+//		    		dataObserver.getAzPlotDataList().drawPlotsImage(cBtmL2);
+		    		bttmRefresh = false;
+//		        	logger.info("Bottom Graph Objects Refreshed");
 				}
 			}
 		};
@@ -691,14 +738,7 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
 	
 	public void refreshCanvas(DataObserver dObserver) {
-		Platform.runLater(new Runnable() { 
-		      
-	    	@Override 
-	    	public void run() {
-	    		dataObserver = dObserver;
-//	    		isRefreshing = false;
-	    	}
-		});
+		dataObserver = dObserver;
 	}
 
 	@Override

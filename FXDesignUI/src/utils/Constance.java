@@ -76,9 +76,9 @@ public class Constance {
 	}
 	
 	public static boolean IS_CLOSE			= false;
-	public static boolean TCPIP 			= false;
+	public static boolean TCPIP 			= true;
 	public static boolean UDPIP				= false;
-	public static boolean MCUDP 			= true;
+	public static boolean MCUDP 			= false;
 	public static boolean IS_CONNECTED		= false;
 	
 	public static int MY_TIMEOUT 			= 60*1000;

@@ -426,11 +426,10 @@ public class TaskObserver extends Thread implements IByteSum{
 		DataInputStream mServerSocketInPacket = new DataInputStream(socket.getInputStream());
 		int len = mServerSocketInPacket.readInt();
 	    byte[] tcpdata = new byte[len];
-	    System.out.println(len);
 		// Wait to receive a socket data
 	    if (len > 0) {
 	    	mServerSocketInPacket.readFully(tcpdata);
-			logger.info("TCP Server Data received: "+len);			
+//			logger.info("TCP Server Data received: "+len);
 			return tcpdata;
 	    }
 		return null; 
@@ -458,7 +457,7 @@ public class TaskObserver extends Thread implements IByteSum{
 		return mMCUDPSocketbuffer;
 	}
 	
-	private void makeData(byte[] mData) {	
+	private void makeData(byte[] mData) {
 		//identify data
 		final String msgName = DataIdentifier.getMessageType(mData);
 //		logger.info("Server Data Identified: "+msgName);
@@ -479,7 +478,7 @@ public class TaskObserver extends Thread implements IByteSum{
 				mDataObserver.addAzTracks(aTrackMsg);
 			} else if(object instanceof ElevationPlaneTrackMsg) {
 				ElevationPlaneTrackMsg eTrackMsg = (ElevationPlaneTrackMsg) object;
-				logger.info("Server Data ElevationPlaneTrackMsg added: "+eTrackMsg.toString());
+//				logger.info("Server Data ElevationPlaneTrackMsg added: "+eTrackMsg.toString());
 				//add data
 				mDataObserver.addElTracks(eTrackMsg);
 			}
