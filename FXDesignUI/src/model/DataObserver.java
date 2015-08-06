@@ -1,13 +1,18 @@
 package model;
 
+import javafx.scene.effect.Light.Point;
+
 import org.apache.log4j.Logger;
 
+import utils.Constance;
+import utils.ModelDrawing;
 import messages.radar.AzimuthPlaneDetectionPlotMsg;
 import messages.radar.AzimuthPlanePlotsPerCPIMsg;
 import messages.radar.AzimuthPlaneTrackMsg;
 import messages.radar.ElevationPlaneDetectionPlotMsg;
 import messages.radar.ElevationPlanePlotsPerCPIMsg;
 import messages.radar.ElevationPlaneTrackMsg;
+import messages.radar.PlaneRAWVideoMsg;
 import model.drawable.Plot;
 import model.drawable.SketchItemizedOverlay;
 import model.drawable.Track;
@@ -21,14 +26,16 @@ public class DataObserver {
 	private SketchItemizedOverlay mAzPlotList;
 	private SketchItemizedOverlay mElTrackList;
 	private SketchItemizedOverlay mElPlotList;
-	private SketchItemizedOverlay mVideoList;
+	private SketchItemizedOverlay mAzVideoList;
+	private SketchItemizedOverlay mElVideoList;
 	
 	public DataObserver() {
 		mAzTrackList = new SketchItemizedOverlay();
 		mAzPlotList = new SketchItemizedOverlay();
 		mElTrackList = new SketchItemizedOverlay();
 		mElPlotList = new SketchItemizedOverlay();
-		mVideoList = new SketchItemizedOverlay();
+		mAzVideoList = new SketchItemizedOverlay();
+		mElVideoList = new SketchItemizedOverlay();
 	}
 	
 	public SketchItemizedOverlay getAzTrackDataList() {
@@ -47,8 +54,12 @@ public class DataObserver {
 		return mElPlotList;
 	}
 	
-	public SketchItemizedOverlay getVideoDataList() {
-		return mVideoList;
+	public SketchItemizedOverlay getAzVideoDataList() {
+		return mAzVideoList;
+	}
+	
+	public SketchItemizedOverlay getElVideoDataList() {
+		return mElVideoList;
 	}
 	
 	public void addAzPlots(AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg) {
@@ -120,8 +131,45 @@ public class DataObserver {
 		track.setEl(true);
 		track.extractGraphAER();
 		mElTrackList.addOverlayItem(track);
-//		logger.info("ElRng: "+track.getRange());
-//		logger.info("ElEl: "+track.getElevation());
+	}
+	
+	public void addRAWVideo(PlaneRAWVideoMsg vidMsg) {
+
+		MatrixRef matrixRef = MatrixRef.getInstance();
+		if(vidMsg.getAzBPN()!=0 && vidMsg.getAzBPN()<=Constance.RAW_AZ_BEAMS){
+			double azAngle = (Constance.AZIMUTH_MAX - (vidMsg.getAzBPN()*0.5 - 0.5));//In degress
+			double midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
+			Point start = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getMinRange());
+
+			double rangeDisp = 0;
+			double disp = (matrixRef.getDrawableXArea()/vidMsg.getNoRangeCells());//In Pixels
+			for(int i=0;i<vidMsg.getNoRangeCells();i++)  {
+				Point point = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY(), rangeDisp, -azAngle);
+				Video video = new Video();
+		    	video.setVal(vidMsg.getRangeCellList(i));
+		    	video.setX(point.getX());
+		    	video.setY(point.getY());
+				mAzVideoList.addOverlayItem(video);
+				rangeDisp+=disp;
+			}
+		} 
+		
+		if(vidMsg.getElBPN()!=0 && vidMsg.getElBPN()<=Constance.RAW_EL_BEAMS) {
+			double elAngle = (vidMsg.getElBPN()*0.5 - 0.5);//In degress
+	        Point start = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
+			
+	        double rangeDisp = 0;
+	        double disp = (matrixRef.getDrawableXArea()/vidMsg.getNoRangeCells());//In Pixels
+			for(int i=0;i<vidMsg.getNoRangeCells();i++)  {
+				Point point = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY(), rangeDisp, -elAngle);
+				Video video = new Video();
+				video.setVal(vidMsg.getRangeCellList(i));
+		    	video.setX(point.getX());
+		    	video.setY(point.getY());
+				mElVideoList.addOverlayItem(video);
+				rangeDisp+=disp;
+			}
+		}
 	}
 	
 }

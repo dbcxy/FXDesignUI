@@ -14,7 +14,9 @@ import java.util.List;
 
 import messages.radar.AzimuthPlanePlotsPerCPIMsg;
 import messages.radar.AzimuthPlaneTrackMsg;
+import messages.radar.ElevationPlanePlotsPerCPIMsg;
 import messages.radar.ElevationPlaneTrackMsg;
+import messages.radar.PlaneRAWVideoMsg;
 import messages.utils.DataIdentifier;
 import messages.utils.DataManager;
 import messages.utils.IByteSum;
@@ -256,7 +258,7 @@ public class TaskObserver extends Thread implements IByteSum{
 					}
 							
 					//Make Packet Object
-					makeData(mData);
+					makeVideoData(mData);
 					
 					//write on to DB for history
 					recordData(mData);
@@ -476,11 +478,37 @@ public class TaskObserver extends Thread implements IByteSum{
 //				logger.info("Server Data AzimuthPlaneTrackMsg added: "+aTrackMsg.toString());
 				//add data
 				mDataObserver.addAzTracks(aTrackMsg);
+			} else if(object instanceof ElevationPlanePlotsPerCPIMsg) {
+				ElevationPlanePlotsPerCPIMsg ePlotsPerCPIMsg = (ElevationPlanePlotsPerCPIMsg) object;
+//				logger.info("Server Data ElevationPlanePlotsPerCPIMsg added: "+ePlotsPerCPIMsg.toString());
+				//add data
+				mDataObserver.addElPlots(ePlotsPerCPIMsg);
 			} else if(object instanceof ElevationPlaneTrackMsg) {
 				ElevationPlaneTrackMsg eTrackMsg = (ElevationPlaneTrackMsg) object;
 //				logger.info("Server Data ElevationPlaneTrackMsg added: "+eTrackMsg.toString());
 				//add data
 				mDataObserver.addElTracks(eTrackMsg);
+			}
+			
+			//notify UI
+			iCManager.manageData(mDataObserver);
+		}
+	}
+	
+	private void makeVideoData(byte[] data) {
+		//identify data
+		final String msgName = DataIdentifier.verifyVideoMessage(data);
+//		logger.info("Server Data Identified: "+msgName);
+		
+		//decode data
+		if(msgName != null) {
+			Object object = mDataManager.decodeMsg(msgName, data);
+//			logger.info("Server Data Decoded");
+			if(object instanceof PlaneRAWVideoMsg) {
+				PlaneRAWVideoMsg vidMsg = (PlaneRAWVideoMsg) object;
+//				logger.info("Server Data PlaneRAWVideoMsg added: "+vidMsg.toString());
+				//add data
+				mDataObserver.addRAWVideo(vidMsg);
 			}
 			
 			//notify UI

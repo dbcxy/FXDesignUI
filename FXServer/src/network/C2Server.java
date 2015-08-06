@@ -1,6 +1,7 @@
 package network;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class C2Server {
 	
@@ -65,5 +66,4 @@ public class C2Server {
 	public void stopTCPThreadServer() {
 		tcpServerThread.kill();
 	}
-
 }

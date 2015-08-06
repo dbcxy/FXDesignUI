@@ -40,4 +40,18 @@ public class DataIdentifier implements IByteSum{
         }
 		return null;
 	}
+
+	public static String verifyVideoMessage(final byte[] data) {
+		ByteBuffer bb = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN);
+		int msgLen = (int)bb.getInt(0);
+		int clsid = (int)bb.getInt(BYTES_PER_INT);
+		bb.clear();
+
+		for (Entry<String, Integer> entry : MSG_CLASS_ID.entrySet()) {
+            if (entry.getValue().equals(clsid)) {
+            	return (entry.getKey());
+            }
+        }		
+		return null;
+	}
 }

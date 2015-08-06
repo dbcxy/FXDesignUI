@@ -21,6 +21,21 @@ public class SketchItemizedOverlay extends ItemizedOverlay<OverlayItem> implemen
 		
 	}
 	
+	public void drawVideosImage(Canvas canvas) {
+		GraphicsContext gc = canvas.getGraphicsContext2D();
+		gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+    	BufferedImage bufferedImage = new BufferedImage((int) (canvas.getWidth()), 
+				 (int) (canvas.getHeight()), BufferedImage.TYPE_INT_ARGB);
+		
+    	for(int i=0;i<size();i++)
+			((Video) removeOverlayItem()).drawOnImage(bufferedImage);
+    	
+		WritableImage wr = null;
+		Image img = SwingFXUtils.toFXImage(bufferedImage, wr);  
+	    	
+	    gc.drawImage(img, 0, 0);
+	}
+	
 	public void drawTracksImage(Canvas canvas) {
 		GraphicsContext gc = canvas.getGraphicsContext2D();
     	gc.save();
@@ -63,15 +78,9 @@ public class SketchItemizedOverlay extends ItemizedOverlay<OverlayItem> implemen
 			((Plot) removeOverlayItem()).draw(gc);
 	}
 	
-	public void drawVideos(Canvas canvas) {
-		GraphicsContext gc = canvas.getGraphicsContext2D();
-		gc.save();
-		//draw points on Image
-
-		
-		//show image
-//		gc.drawImage(img, 0, 0);
-		gc.restore();
+	public void drawVideos(GraphicsContext gc) {
+		for(int i=0;i<size();i++)
+			((Video) removeOverlayItem()).draw(gc);
 	}
 	
 	@Override

@@ -115,13 +115,13 @@ public class ServerUIController implements Initializable, Notifier{
 	}
 
 	private void startNetworkTask() {
-//		c2Server.startMCUDPThreadServer();
-		c2Server.startTCPThreadServer();		
+		c2Server.startMCUDPThreadServer();
+//		c2Server.startTCPThreadServer();		
 	}
 	
 	private void stopNetworkTask() {
-//		c2Server.stopMCUDPThreadServer();
-		c2Server.stopTCPThreadServer();	
+		c2Server.stopMCUDPThreadServer();
+//		c2Server.stopTCPThreadServer();	
 	}
 	
 	private boolean validateTargetSpeed(String ts) {

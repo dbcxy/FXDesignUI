@@ -126,7 +126,7 @@ public class Plot extends OverlayItem implements ILayoutParam{
 			gc.setFill(Color.RED);
 	    	gc.fillOval(x-PLOT_SIZE, y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
 	    	gc.setStroke(Color.WHITE);
-	    	gc.setLineWidth(1);
+	    	gc.setLineWidth(0.5);
 	    	gc.strokeOval(x-PLOT_SIZE, y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
 	    	
 	    	if(isTextShown) {
@@ -157,7 +157,7 @@ public class Plot extends OverlayItem implements ILayoutParam{
 		g2d.setColor(java.awt.Color.RED);
 		g2d.fillOval((int)x-PLOT_SIZE, (int)y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
 		g2d.setColor(java.awt.Color.WHITE);
-		g2d.setStroke(new BasicStroke(1));
+		g2d.setStroke(new BasicStroke((float) 0.5));
 		g2d.drawOval((int)x-PLOT_SIZE, (int)y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
     	
     	if(isTextShown) {
@@ -170,10 +170,7 @@ public class Plot extends OverlayItem implements ILayoutParam{
         	g2d.drawString(Title, (int)p.getX()+PLOT_SIZE, (int)p.getY()-PLOT_SIZE);
         	g2d.setColor(java.awt.Color.YELLOW);
         	g2d.drawString(getPlotNumber(), (int)p.getX()+PLOT_SIZE, (int)p.getY()+2*PLOT_SIZE);	
-    	}
-		
-    	
-		
+    	}		
 	}
 
 }

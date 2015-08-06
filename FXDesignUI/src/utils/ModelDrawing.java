@@ -43,12 +43,6 @@ public class ModelDrawing {
 		return point;
 	}
 	
-	public static double getChartRangeHeigth(double distAngle, int range) {
-		double elev = range * Math.tan(Math.toRadians(distAngle));
-		System.out.println("R: "+range+", elev: "+elev);
-		return elev;
-	}
-	
 	public static void runSafe(final Runnable runnable) {
         Objects.requireNonNull(runnable, "runnable");
         if (Platform.isFxApplicationThread()) {

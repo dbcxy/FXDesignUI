@@ -73,18 +73,16 @@ public class ElevationPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 		buffer.putShort(source);
 		byte[] cpiBuf = buffer.array();
 		
-//		List<Byte> plotList = Arrays.asList(ArrayUtils.toObject(cpiBuf));
-//		for(ElevationPlaneDetectionPlotMsg aMsg: elevationPlaneDetectionPlotMsg){
-//			byte[] subBuf = aMsg.getByteBuffer().array();
-//			plotList.addAll(Arrays.asList(ArrayUtils.toObject(subBuf)));
-//		}
-		
-		//JUGAD
-		byte[] subBuf = elevationPlaneDetectionPlotMsg.get(elevationPlaneDetectionPlotMsg.size()-1).getByteBuffer().array();
-		byte[] res = new byte[cpiBuf.length+subBuf.length];
-		System.arraycopy(cpiBuf	, 0, res, 0, cpiBuf.length);
-		System.arraycopy(subBuf, 0, res, cpiBuf.length, subBuf.length);
-		
+		List<Byte> plotList = new ArrayList<Byte>(Arrays.asList(ArrayUtils.toObject(cpiBuf)));
+		for(ElevationPlaneDetectionPlotMsg eMsg: elevationPlaneDetectionPlotMsg){
+			byte[] subBuf = eMsg.getByteBuffer().array();
+			List<Byte> subList = new ArrayList<Byte>(Arrays.asList(ArrayUtils.toObject(subBuf)));
+			plotList.addAll(subList);
+		}
+		Byte[] out = new Byte[plotList.size()];
+		plotList.toArray(out);
+		byte[] res = new byte[plotList.size()]; 
+		res = ArrayUtils.toPrimitive(out);
 		return res;
 	}
 	

@@ -128,6 +128,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	
 	private boolean isAppRunning = false;
 	private boolean isDrawn = false;
+	private boolean vidRefresh = false;
 	private boolean topRefresh = false;
 	private boolean bttmRefresh = false;
 	private int translateTop = 0;
@@ -136,8 +137,9 @@ public class FXMLController implements Initializable,ILayoutParam{
 	ColumnConstraints controls;
 	
 	MatrixRef matrixRef;
-	AnimationTimer bttmAnimTimer;
 	AnimationTimer topAnimTimer;
+	AnimationTimer bttmAnimTimer;
+	AnimationTimer rawAnimTimer;
 	
 	TaskObserver tTask;
 	DataObserver dataObserver;
@@ -347,6 +349,8 @@ public class FXMLController implements Initializable,ILayoutParam{
     		topAnimTimer.stop();
     	if(bttmAnimTimer!=null)
     		bttmAnimTimer.stop();
+    	if(rawAnimTimer!=null)
+    		rawAnimTimer.stop();
     	Constance.IS_CLOSE = true;
     }
     
@@ -546,56 +550,13 @@ public class FXMLController implements Initializable,ILayoutParam{
     
     private void initAnimTimers() {
     	
-//    	new Timer().schedule(new TimerTask() {
-//
-//	        @Override
-//	        public void run() {
-//				Platform.runLater(new Runnable() {
-//
-//					@Override
-//					public void run() {
-//						if(Constance.IS_CONNECTED && dataObserver !=null) {
-//							//Plot & Tracks		    		
-//				    		GraphicsContext gc = cTopL2.getGraphicsContext2D();
-//				    		gc.clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
-//				    		
-//				    		dataObserver.getElTrackDataList().drawTracks(gc);
-//				    		dataObserver.getElPlotDataList().drawPlots(gc);
-//				    		dataObserver.getVideoDataList().drawVideos(cTopL2);
-//						}
-//					}
-//				});
-//	        }
-//    	},500);
-//    	
-//    	new Timer().schedule(new TimerTask() {
-//
-//	        @Override
-//	        public void run() {
-//				Platform.runLater(new Runnable() {
-//
-//					@Override
-//					public void run() {
-//						if(Constance.IS_CONNECTED && dataObserver !=null) {
-//							//Plot & Tracks		    		
-//				    		GraphicsContext gc = cTopL2.getGraphicsContext2D();
-//				    		gc.clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
-//				    		
-//				    		dataObserver.getElTrackDataList().drawTracks(gc);
-//				    		dataObserver.getElPlotDataList().drawPlots(gc);
-//				    		dataObserver.getVideoDataList().drawVideos(cTopL2);
-//						}
-//					}
-//				});
-//	        }
-//    	},500);
-    	
     	new Timer().scheduleAtFixedRate(new TimerTask() {
 
 	        @Override
 	        public void run() {
 				topRefresh = true;
 				bttmRefresh = true;
+				vidRefresh = true;
 	        }
     	},500,500);
     	
@@ -611,7 +572,6 @@ public class FXMLController implements Initializable,ILayoutParam{
 		    		
 		    		dataObserver.getElTrackDataList().drawTracks(gc);
 		    		dataObserver.getElPlotDataList().drawPlots(gc);
-		    		dataObserver.getVideoDataList().drawVideos(cTopL2);
 		    		
 //		    		dataObserver.getElTrackDataList().drawTracksImage(cTopL2);
 //		    		dataObserver.getElPlotDataList().drawPlotsImage(cTopL2);
@@ -632,7 +592,6 @@ public class FXMLController implements Initializable,ILayoutParam{
 		    		
 		    		dataObserver.getAzTrackDataList().drawTracks(gc);
 		    		dataObserver.getAzPlotDataList().drawPlots(gc);
-		    		dataObserver.getVideoDataList().drawVideos(cBtmL3);
 		    		
 //		    		dataObserver.getAzTrackDataList().drawTracksImage(cBtmL2);
 //		    		dataObserver.getAzPlotDataList().drawPlotsImage(cBtmL2);
@@ -642,9 +601,24 @@ public class FXMLController implements Initializable,ILayoutParam{
 			}
 		};
 		
+		rawAnimTimer = new AnimationTimer() {
+			
+			@Override
+			public void handle(long now) {
+				if(Constance.IS_CONNECTED && dataObserver !=null && vidRefresh) {
+					//Video
+					dataObserver.getElVideoDataList().drawVideosImage(cTopL3);		    		
+		    		dataObserver.getAzVideoDataList().drawVideosImage(cBtmL3);
+		    		vidRefresh = false;
+//		        	logger.info("Video Objects Refreshed");
+				}
+			}
+		};
+		
 		//start animation timers
 		topAnimTimer.start();
 		bttmAnimTimer.start();
+		rawAnimTimer.start();
     }
 	
 	public void invalidate() {

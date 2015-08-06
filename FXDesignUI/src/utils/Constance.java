@@ -40,6 +40,9 @@ public class Constance {
 	public static double RANGE_MIN			= 0;//km or NM
 	public static double TOUCH_DOWN			= 1;//km or NM
 	
+	public static final int RAW_AZ_BEAMS	= 41;//20degress max
+	public static final int RAW_EL_BEAMS	= 21;//10degrees max
+	
 	public static class ELEVATION {
 		public static double GLIDE_ANGLE			= 7.5;//degrees
 		public static double GLIDE_MAX_DIST			= 10;//KM
@@ -76,9 +79,9 @@ public class Constance {
 	}
 	
 	public static boolean IS_CLOSE			= false;
-	public static boolean TCPIP 			= true;
+	public static boolean TCPIP 			= false;
 	public static boolean UDPIP				= false;
-	public static boolean MCUDP 			= false;
+	public static boolean MCUDP 			= true;
 	public static boolean IS_CONNECTED		= false;
 	
 	public static int MY_TIMEOUT 			= 60*1000;

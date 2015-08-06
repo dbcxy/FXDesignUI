@@ -83,14 +83,14 @@ public class AzimuthPlanePlotsPerCPIMsg implements Serializable,IByteSum {
 		plotList.toArray(out);
 		byte[] res = new byte[plotList.size()]; 
 		res = ArrayUtils.toPrimitive(out);
-		
 		return res;
 	}
 	
 	/*
 	 * Byte array to Rx and decode object	
 	 */
-	public void setByteBuffer(byte[] bArr) {
+	public void setByteBuffer(final byte[] bArr) {
+
 		ByteBuffer bb = ByteBuffer.wrap(bArr).order(ByteOrder.LITTLE_ENDIAN);
 		
 		int index = 0;

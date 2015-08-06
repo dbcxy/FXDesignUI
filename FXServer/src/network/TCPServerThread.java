@@ -13,6 +13,8 @@ import java.nio.ByteOrder;
 import messages.radar.AzimuthPlaneDetectionPlotMsg;
 import messages.radar.AzimuthPlanePlotsPerCPIMsg;
 import messages.radar.AzimuthPlaneTrackMsg;
+import messages.radar.ElevationPlaneDetectionPlotMsg;
+import messages.radar.ElevationPlanePlotsPerCPIMsg;
 import messages.radar.ElevationPlaneTrackMsg;
 
 import org.apache.log4j.Logger;
@@ -102,9 +104,15 @@ class TCPServerThread extends Thread {
 				}).start();
 		        
 		        
-//			            String elplot = "El PLOT ! ";
-//			            DatagramPacket ep = new DatagramPacket(elplot.getBytes() , elplot.getBytes().length,groupAddr,C2Server.PORT_EL_PLOTS);
-//			            datagramSocketAzPlots.send(ep);
+		        new Thread(new Runnable() {
+					
+					@Override
+					public void run() {
+						pEl = true;
+				        sendElPlotData();	
+				        pEl = false;
+					}
+				}).start();
 
 		        new Thread(new Runnable() {
 					
@@ -125,7 +133,7 @@ class TCPServerThread extends Thread {
 					@Override
 					public void run() {
 						while(true) {
-							if(!pAz && !tAz && !tEl) {
+							if(!pAz && !tAz && !tEl && !pEl) {
 								AppConfig.getInstance().getController().notifyData("All messages Sent");
 						        exitAll();
 						        AppConfig.getInstance().getController().notifyData("TCP Sockets Destroyed!"+"\n");
@@ -150,6 +158,9 @@ class TCPServerThread extends Thread {
 	public void kill() {
 		pAz = false;
 		tAz = false;
+		pEl = false;
+		tEl = false;
+		Vid = false;
 	}
 			
 	private void exitAll() {
@@ -248,6 +259,51 @@ class TCPServerThread extends Thread {
 			    out.write(track);
 		        AppConfig.getInstance().getController().notifyData("Az Track Sending... "+track.length);
 				Thread.sleep(5);//1 Track ~ 5ms => 100Tracks ~500ms
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	private void sendElPlotData() {
+		
+		int range = C2Server.INIT_RANGE;
+		int angle = 0;
+		int el = 0;
+		
+		for ( int i =0 ; i<C2Server.NO_SCANS; i++) {
+			 // Read Data and send at each 0.5 second
+			ElevationPlanePlotsPerCPIMsg ePlotsPerCPIMsg = new ElevationPlanePlotsPerCPIMsg();			
+			ePlotsPerCPIMsg.setMessageHeader((int)0x5511);
+			ePlotsPerCPIMsg.setPlotCount((short) 50);//25plots
+			
+			el = (int)(Math.toRadians(angle++)*10000);
+			if(angle>20)
+				angle = 0;
+			
+			for (int j=0;j<ePlotsPerCPIMsg.getPlotCount(); j++) {
+				range = (int) (range - (C2Server.TARGET_SPEED * C2Server.SCAN_TIME ));
+				if(range < 0) 
+					range = C2Server.INIT_RANGE;
+				
+				ElevationPlaneDetectionPlotMsg ePlotMsg = new ElevationPlaneDetectionPlotMsg();
+				ePlotMsg.setMessageHeader((int) 0x5522);
+				ePlotMsg.setRange(range);
+				ePlotMsg.setElevation(el);
+				ePlotMsg.setStrength((int) (0.1234*10000));
+				ePlotsPerCPIMsg.addElevationPlaneDetectionPlotMsg(ePlotMsg);
+			}
+			
+			//Send plot data MC UDP
+			try {
+				byte[] plot = ePlotsPerCPIMsg.getByteBuffer();				
+				DataOutputStream out = new DataOutputStream(socketElPlot.getOutputStream());
+				out.writeInt(plot.length);
+			    out.write(plot);
+				AppConfig.getInstance().getController().notifyData("El Plot Sending... "+plot.length);
+				Thread.sleep(50);//1 plot ~ 1ms => 500 plots ~ 500ms
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			} catch (IOException e) {

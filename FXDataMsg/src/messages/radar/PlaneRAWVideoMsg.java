@@ -107,24 +107,24 @@ public class PlaneRAWVideoMsg implements Serializable, IByteSum{
 		this.noRangeCells = noRangeCells;
 	}
 
-	public byte getAzBPN() {
-		return azBPN;
+	public int getAzBPN() {
+		return (azBPN & 0xFF);
 	}
 
 	public void setAzBPN(byte azBPN) {
 		this.azBPN = azBPN;
 	}
 
-	public byte getElBPN() {
-		return elBPN;
+	public int getElBPN() {
+		return (elBPN & 0xFF);
 	}
 
 	public void setElBPN(byte elBPN) {
 		this.elBPN = elBPN;
 	}
 	
-	public List<Byte> getRangeCellList() {
-		return RC;
+	public Byte getRangeCellList(int index) {
+		return RC.get(index);
 	}
 
 	public void setRangeCellList(
@@ -163,7 +163,7 @@ public class PlaneRAWVideoMsg implements Serializable, IByteSum{
 		buffer.putShort(noRangeCells);
 		buffer.put(azBPN);
 		buffer.put(elBPN);
-		
+
 		for(int j=0;j<RC.size();j++)
 			buffer.put((byte)RC.get(j));
 		

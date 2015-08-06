@@ -58,8 +58,7 @@ public class DataManager implements IByteSum{
 	private byte[] encodeVideomsg(Object object) {
 		PlaneRAWVideoMsg pVideoMsg = (PlaneRAWVideoMsg) object;
 		
-//		return pVideoMsg.getByteBuffer().array();
-		return null;
+		return pVideoMsg.getByteBuffer().array();
 	}
 	
 	public Object decodeMsg(final String type, final byte[] data) {
@@ -87,10 +86,8 @@ public class DataManager implements IByteSum{
 	
 	private PlaneRAWVideoMsg decodeVideomsg(byte[] data) {
 		PlaneRAWVideoMsg pVideoMsg = new PlaneRAWVideoMsg();
-		//TODO
-		
-		//return pVideoMsg;
-		return null;
+		pVideoMsg.setByteBuffer(data);		
+		return pVideoMsg;
 	}
 
 	private ElevationPlaneTrackMsg decodeElTrackmsg(byte[] data) {
