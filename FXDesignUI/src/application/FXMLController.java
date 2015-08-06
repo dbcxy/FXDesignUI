@@ -116,15 +116,15 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML private Pane chartTop;
 	@FXML private Pane chartBottom;
 	
-	@FXML ResizableCanvas cTopL0;
-	@FXML ResizableCanvas cTopL1;
-	@FXML ResizableCanvas cTopL2;
-	@FXML ResizableCanvas cTopL3;
+	@FXML ResizableCanvas cTopL0;//Text
+	@FXML ResizableCanvas cTopL1;//Graph
+	@FXML ResizableCanvas cTopL2;//Video
+	@FXML ResizableCanvas cTopL3;//Plots & tracks (TopMost Layer)
 	
-	@FXML ResizableCanvas cBtmL0;
-	@FXML ResizableCanvas cBtmL1;
-	@FXML ResizableCanvas cBtmL2;
-	@FXML ResizableCanvas cBtmL3;
+	@FXML ResizableCanvas cBtmL0;//Text
+	@FXML ResizableCanvas cBtmL1;//Graph
+	@FXML ResizableCanvas cBtmL2;//Video
+	@FXML ResizableCanvas cBtmL3;//Plots & Tracks (TopMost Layer)
 	
 	private boolean isAppRunning = false;
 	private boolean isDrawn = false;
@@ -166,28 +166,28 @@ public class FXMLController implements Initializable,ILayoutParam{
     @FXML 
     protected void handle5ButtonAction(ActionEvent event) {
         actiontarget.setText("Display Scale set to "+Constance.SCALE);
-		setNMparameter(5);
+		setDisplayScale(5);
 		invalidate();
     }
     
     @FXML 
     protected void handle10ButtonAction(ActionEvent event) {
         actiontarget.setText("Display Scale set to "+Constance.SCALE);
-        setNMparameter(10);
+        setDisplayScale(10);
 		invalidate();
     }
     
     @FXML 
     protected void handle20ButtonAction(ActionEvent event) {
         actiontarget.setText("Display Scale set to "+Constance.SCALE);
-        setNMparameter(20);
+        setDisplayScale(20);
 		invalidate();
     }
     
     @FXML 
     protected void handle40ButtonAction(ActionEvent event) {
         actiontarget.setText("Display Scale set to "+Constance.SCALE);
-        setNMparameter(40);
+        setDisplayScale(40);
 		invalidate();
     }
     
@@ -304,11 +304,11 @@ public class FXMLController implements Initializable,ILayoutParam{
 			actiontarget.setText("System Loaded!");
 		} else {
 			cTopL1.draw();
-			cTopL2.draw();
 			cTopL3.draw();
+			cTopL2.draw();
 			cBtmL1.draw();
-			cBtmL2.draw();
 			cBtmL3.draw();
+			cBtmL2.draw();
 			stopNetworkTask();
 			isAppRunning = false;
 			isDrawn = false;
@@ -345,12 +345,10 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
     
     private void cleanUp() {
-    	if(topAnimTimer!=null)
-    		topAnimTimer.stop();
-    	if(bttmAnimTimer!=null)
-    		bttmAnimTimer.stop();
-    	if(rawAnimTimer!=null)
-    		rawAnimTimer.stop();
+		topAnimTimer.stop();
+		bttmAnimTimer.stop();
+		rawAnimTimer.stop();
+		logger.info("Ended Animation Timers");
     	Constance.IS_CLOSE = true;
     }
     
@@ -366,11 +364,11 @@ public class FXMLController implements Initializable,ILayoutParam{
     	cTopL1.widthProperty().bind(chartTop.widthProperty());
 		cTopL1.heightProperty().bind(chartTop.heightProperty());
 		
-		cTopL2.widthProperty().bind(chartTop.widthProperty());
-		cTopL2.heightProperty().bind(chartTop.heightProperty());
-		
 		cTopL3.widthProperty().bind(chartTop.widthProperty());
 		cTopL3.heightProperty().bind(chartTop.heightProperty());
+		
+		cTopL2.widthProperty().bind(chartTop.widthProperty());
+		cTopL2.heightProperty().bind(chartTop.heightProperty());
 		
 		cBtmL0.widthProperty().bind(chartBottom.widthProperty());
 		cBtmL0.heightProperty().bind(chartBottom.heightProperty());
@@ -378,11 +376,11 @@ public class FXMLController implements Initializable,ILayoutParam{
 		cBtmL1.widthProperty().bind(chartBottom.widthProperty());
 		cBtmL1.heightProperty().bind(chartBottom.heightProperty());
 		
-		cBtmL2.widthProperty().bind(chartBottom.widthProperty());
-		cBtmL2.heightProperty().bind(chartBottom.heightProperty());
-		
 		cBtmL3.widthProperty().bind(chartBottom.widthProperty());
 		cBtmL3.heightProperty().bind(chartBottom.heightProperty());
+		
+		cBtmL2.widthProperty().bind(chartBottom.widthProperty());
+		cBtmL2.heightProperty().bind(chartBottom.heightProperty());
 		
 		AntennaControl.widgetSetPanelTitle("Antenna Control");
 		RadarControl.widgetSetPanelTitle("Radar Control");
@@ -400,10 +398,10 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
         
     private void initTopChart() {
-		setNMparameter(10);
+		setDisplayScale(10);
 
-		cTopL3.clear();
 		cTopL2.clear();
+		cTopL3.clear();
 		cTopL1.clear();
 		cTopL0.clear();
 		drawGraphTop(cTopL1);
@@ -412,8 +410,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 	}
 
 	private void initBottomChart() {
-		cBtmL3.clear();
 		cBtmL2.clear();
+		cBtmL3.clear();
 		cBtmL1.clear();
 		cBtmL0.clear();
 		drawGraphBottom(cBtmL1);
@@ -476,23 +474,23 @@ public class FXMLController implements Initializable,ILayoutParam{
 		if(str.contains("3") || str.contains("4")) {
 			translateTop = 650;
 			ModelDrawing.flipCanvasDrawing(cTopL1, FLIP.R2L);
-			ModelDrawing.flipCanvasDrawing(cTopL2, FLIP.R2L);
 			ModelDrawing.flipCanvasDrawing(cTopL3, FLIP.R2L);
+			ModelDrawing.flipCanvasDrawing(cTopL2, FLIP.R2L);
 			
 			translateBttm = 900;
 			ModelDrawing.flipCanvasDrawing(cBtmL1, FLIP.R2L);
-			ModelDrawing.flipCanvasDrawing(cBtmL2, FLIP.R2L);
 			ModelDrawing.flipCanvasDrawing(cBtmL3, FLIP.R2L);
+			ModelDrawing.flipCanvasDrawing(cBtmL2, FLIP.R2L);
 		} else if(str.contains("1") || str.contains("2")) {
 			translateTop = -translateTop;
 			ModelDrawing.flipCanvasDrawing(cTopL1, FLIP.L2R);
-			ModelDrawing.flipCanvasDrawing(cTopL2, FLIP.L2R);
 			ModelDrawing.flipCanvasDrawing(cTopL3, FLIP.L2R);
+			ModelDrawing.flipCanvasDrawing(cTopL2, FLIP.L2R);
 			
 			translateBttm = -translateBttm;
 			ModelDrawing.flipCanvasDrawing(cBtmL1, FLIP.L2R);
-			ModelDrawing.flipCanvasDrawing(cBtmL2, FLIP.L2R);
 			ModelDrawing.flipCanvasDrawing(cBtmL3, FLIP.L2R);
+			ModelDrawing.flipCanvasDrawing(cBtmL2, FLIP.L2R);
 		}
 	}
 
@@ -567,8 +565,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 			public void handle(long now) {
 				if(Constance.IS_CONNECTED && dataObserver !=null && topRefresh) {
 					//Plot & Tracks		    		
-		    		GraphicsContext gc = cTopL2.getGraphicsContext2D();
-		    		gc.clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
+		    		GraphicsContext gc = cTopL3.getGraphicsContext2D();
+		    		gc.clearRect(0, 0, cTopL3.getWidth(), cTopL3.getHeight());
 		    		
 		    		dataObserver.getElTrackDataList().drawTracks(gc);
 		    		dataObserver.getElPlotDataList().drawPlots(gc);
@@ -587,8 +585,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 			public void handle(long now) {
 				if(Constance.IS_CONNECTED && dataObserver !=null && bttmRefresh) {
 					//Plot & Tracks		    		
-		    		GraphicsContext gc = cBtmL2.getGraphicsContext2D();
-		    		gc.clearRect(0, 0, cBtmL2.getWidth(), cBtmL2.getHeight());
+		    		GraphicsContext gc = cBtmL3.getGraphicsContext2D();
+		    		gc.clearRect(0, 0, cBtmL3.getWidth(), cBtmL3.getHeight());
 		    		
 		    		dataObserver.getAzTrackDataList().drawTracks(gc);
 		    		dataObserver.getAzPlotDataList().drawPlots(gc);
@@ -607,8 +605,8 @@ public class FXMLController implements Initializable,ILayoutParam{
 			public void handle(long now) {
 				if(Constance.IS_CONNECTED && dataObserver !=null && vidRefresh) {
 					//Video
-					dataObserver.getElVideoDataList().drawVideosImage(cTopL3);		    		
-		    		dataObserver.getAzVideoDataList().drawVideosImage(cBtmL3);
+					dataObserver.getElVideoDataList().drawVideosImage(cTopL2);		    		
+		    		dataObserver.getAzVideoDataList().drawVideosImage(cBtmL2);
 		    		vidRefresh = false;
 //		        	logger.info("Video Objects Refreshed");
 				}
@@ -622,16 +620,16 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
 	
 	public void invalidate() {
-		cTopL3.clear();
 		cTopL2.clear();
+		cTopL3.clear();
 		cTopL1.clear();
 		cTopL0.clear();
 		drawGraphTop(cTopL1);
 		drawTextTop(cTopL0, translateTop, 0);
 		logger.info("Top Chart Invalidated!");
 		
-		cBtmL3.clear();
 		cBtmL2.clear();
+		cBtmL3.clear();
 		cBtmL1.clear();
 		cBtmL0.clear();
 		drawGraphBottom(cBtmL1);
@@ -639,9 +637,9 @@ public class FXMLController implements Initializable,ILayoutParam{
 		logger.info("Bottom Chart Invalidated!");
 	}
 	
-	private void setNMparameter(int valNM) {
+	private void setDisplayScale(int val) {
 				
-		switch (valNM) {
+		switch (val) {
 		case 40:
 			Constance.SCALE = " 40 "+Constance.UNITS.getLENGTH();
 			matrixRef.setVisibleRange(40);

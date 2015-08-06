@@ -153,24 +153,26 @@ public class Plot extends OverlayItem implements ILayoutParam{
 			y = getZ();
 		}
 
-		Graphics2D g2d = bufferedImage.createGraphics();
-		g2d.setColor(java.awt.Color.RED);
-		g2d.fillOval((int)x-PLOT_SIZE, (int)y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
-		g2d.setColor(java.awt.Color.WHITE);
-		g2d.setStroke(new BasicStroke((float) 0.5));
-		g2d.drawOval((int)x-PLOT_SIZE, (int)y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
-    	
-    	if(isTextShown) {
-    		g2d.setColor(java.awt.Color.BLUE);
-        	ModelDrawing.drawLineAtAngle(g2d, x, y, 2*PLOT_SIZE, -45);
-        	Point p = ModelDrawing.getNextPointAtAngle(x, y, 2*PLOT_SIZE, -45);
-        	g2d.drawLine((int)p.getX(), (int)p.getY(), (int)p.getX()+6*PLOT_SIZE, (int)p.getY());
-        	g2d.setFont(new java.awt.Font("Arial",java.awt.Font.PLAIN, 2*PLOT_SIZE));
-        	g2d.setColor(java.awt.Color.WHITE);
-        	g2d.drawString(Title, (int)p.getX()+PLOT_SIZE, (int)p.getY()-PLOT_SIZE);
-        	g2d.setColor(java.awt.Color.YELLOW);
-        	g2d.drawString(getPlotNumber(), (int)p.getX()+PLOT_SIZE, (int)p.getY()+2*PLOT_SIZE);	
-    	}		
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+			Graphics2D g2d = bufferedImage.createGraphics();
+			g2d.setColor(java.awt.Color.RED);
+			g2d.fillOval((int)x-PLOT_SIZE, (int)y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
+			g2d.setColor(java.awt.Color.WHITE);
+			g2d.setStroke(new BasicStroke((float) 0.5));
+			g2d.drawOval((int)x-PLOT_SIZE, (int)y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
+	    	
+	    	if(isTextShown) {
+	    		g2d.setColor(java.awt.Color.BLUE);
+	        	ModelDrawing.drawLineAtAngle(g2d, x, y, 2*PLOT_SIZE, -45);
+	        	Point p = ModelDrawing.getNextPointAtAngle(x, y, 2*PLOT_SIZE, -45);
+	        	g2d.drawLine((int)p.getX(), (int)p.getY(), (int)p.getX()+6*PLOT_SIZE, (int)p.getY());
+	        	g2d.setFont(new java.awt.Font("Arial",java.awt.Font.PLAIN, 2*PLOT_SIZE));
+	        	g2d.setColor(java.awt.Color.WHITE);
+	        	g2d.drawString(Title, (int)p.getX()+PLOT_SIZE, (int)p.getY()-PLOT_SIZE);
+	        	g2d.setColor(java.awt.Color.YELLOW);
+	        	g2d.drawString(getPlotNumber(), (int)p.getX()+PLOT_SIZE, (int)p.getY()+2*PLOT_SIZE);	
+	    	}
+		}
 	}
 
 }

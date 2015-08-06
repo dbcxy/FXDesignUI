@@ -175,26 +175,28 @@ public class Track extends OverlayItem implements ILayoutParam{
 			y = getZ();
 		}
 
-		Graphics2D g2d = bufferedImage.createGraphics();
-		g2d.setColor(java.awt.Color.RED);
-		g2d.fillOval((int)x-TRACK_SIZE, (int)y-TRACK_SIZE, 2*TRACK_SIZE, 2*TRACK_SIZE);
-		g2d.setColor(java.awt.Color.WHITE);
-		g2d.setStroke(new BasicStroke(2));
-		g2d.drawOval((int)x-TRACK_SIZE, (int)y-TRACK_SIZE, 2*TRACK_SIZE, 2*TRACK_SIZE);
-		g2d.drawLine((int)x,(int)y+2*TRACK_SIZE,(int)x,(int)y-2*TRACK_SIZE);
-		g2d.drawLine((int)x+2*TRACK_SIZE, (int)y, (int)x-2*TRACK_SIZE, (int)y);
-    	
-    	if(isTextShown) {
-    		g2d.setColor(java.awt.Color.BLUE);
-        	ModelDrawing.drawLineAtAngle(g2d, x, y, 2*TRACK_SIZE, -45);
-        	Point p = ModelDrawing.getNextPointAtAngle(x, y, 2*TRACK_SIZE, -45);
-        	g2d.drawLine((int)p.getX(), (int)p.getY(), (int)p.getX()+6*TRACK_SIZE, (int)p.getY());
-        	g2d.setFont(new java.awt.Font("Arial",java.awt.Font.PLAIN, 2*TRACK_SIZE));
-        	g2d.setColor(java.awt.Color.WHITE);
-        	g2d.drawString(Title, (int)p.getX()+TRACK_SIZE, (int)p.getY()-TRACK_SIZE);
-        	g2d.setColor(java.awt.Color.YELLOW);
-        	g2d.drawString(getTrackNumber(), (int)p.getX()+TRACK_SIZE, (int)p.getY()+2*TRACK_SIZE);	
-    	}		
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+			Graphics2D g2d = bufferedImage.createGraphics();
+			g2d.setColor(java.awt.Color.RED);
+			g2d.fillOval((int)x-TRACK_SIZE, (int)y-TRACK_SIZE, 2*TRACK_SIZE, 2*TRACK_SIZE);
+			g2d.setColor(java.awt.Color.WHITE);
+			g2d.setStroke(new BasicStroke(2));
+			g2d.drawOval((int)x-TRACK_SIZE, (int)y-TRACK_SIZE, 2*TRACK_SIZE, 2*TRACK_SIZE);
+			g2d.drawLine((int)x,(int)y+2*TRACK_SIZE,(int)x,(int)y-2*TRACK_SIZE);
+			g2d.drawLine((int)x+2*TRACK_SIZE, (int)y, (int)x-2*TRACK_SIZE, (int)y);
+	    	
+	    	if(isTextShown) {
+	    		g2d.setColor(java.awt.Color.BLUE);
+	        	ModelDrawing.drawLineAtAngle(g2d, x, y, 2*TRACK_SIZE, -45);
+	        	Point p = ModelDrawing.getNextPointAtAngle(x, y, 2*TRACK_SIZE, -45);
+	        	g2d.drawLine((int)p.getX(), (int)p.getY(), (int)p.getX()+6*TRACK_SIZE, (int)p.getY());
+	        	g2d.setFont(new java.awt.Font("Arial",java.awt.Font.PLAIN, 2*TRACK_SIZE));
+	        	g2d.setColor(java.awt.Color.WHITE);
+	        	g2d.drawString(Title, (int)p.getX()+TRACK_SIZE, (int)p.getY()-TRACK_SIZE);
+	        	g2d.setColor(java.awt.Color.YELLOW);
+	        	g2d.drawString(getTrackNumber(), (int)p.getX()+TRACK_SIZE, (int)p.getY()+2*TRACK_SIZE);	
+	    	}
+		}
 	}
 
 }

@@ -139,16 +139,20 @@ public class DataObserver {
 		if(vidMsg.getAzBPN()!=0 && vidMsg.getAzBPN()<=Constance.RAW_AZ_BEAMS){
 			double azAngle = (Constance.AZIMUTH_MAX - (vidMsg.getAzBPN()*0.5 - 0.5));//In degress
 			double midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
+			double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
 			Point start = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getMinRange());
 
 			double rangeDisp = 0;
 			double disp = (matrixRef.getDrawableXArea()/vidMsg.getNoRangeCells());//In Pixels
 			for(int i=0;i<vidMsg.getNoRangeCells();i++)  {
-				Point point = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY(), rangeDisp, -azAngle);
+				Point point = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY()+midAzimuthOffset, rangeDisp, -azAngle);
 				Video video = new Video();
 		    	video.setVal(vidMsg.getRangeCellList(i));
+		    	//need to put in range & Az
+		    	
 		    	video.setX(point.getX());
 		    	video.setY(point.getY());
+		    	
 				mAzVideoList.addOverlayItem(video);
 				rangeDisp+=disp;
 			}
@@ -164,6 +168,7 @@ public class DataObserver {
 				Point point = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY(), rangeDisp, -elAngle);
 				Video video = new Video();
 				video.setVal(vidMsg.getRangeCellList(i));
+				//need to put in range & El
 		    	video.setX(point.getX());
 		    	video.setY(point.getY());
 				mElVideoList.addOverlayItem(video);

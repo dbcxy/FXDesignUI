@@ -8,6 +8,7 @@ import utils.ModelDrawing;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Light.Point;
 import javafx.scene.paint.Color;
+import model.MatrixRef;
 import model.OverlayItem;
 import model.graph.ILayoutParam;
 
@@ -28,20 +29,23 @@ public class Video extends OverlayItem implements ILayoutParam{
 	};
 	
 	private static final java.awt.Color[] COLOR_IMG = new java.awt.Color[] {
-		java.awt.Color.decode("#296614"),//DARK GREEN
-		java.awt.Color.decode("#33801A"),
-		java.awt.Color.decode("#3D991F"),
-		java.awt.Color.decode("#47B224"),
-		java.awt.Color.decode("#52CC29"),
-		java.awt.Color.decode("#5CE62E"),
-		java.awt.Color.decode("#66FF33"),
-		java.awt.Color.decode("#75FF47"),
-		java.awt.Color.decode("#85FF5C"),
-		java.awt.Color.decode("#94FF70"),//LIGHT GREEN
-		java.awt.Color.decode("#A3FF85")
+		java.awt.Color.decode("#051405"),//DARK BLACK
+		java.awt.Color.decode("#0A290A"),
+		java.awt.Color.decode("#0F3D0F"),
+		java.awt.Color.decode("#145214"),
+		java.awt.Color.decode("#1A661A"),
+		java.awt.Color.decode("#1F7A1F"),
+		java.awt.Color.decode("#248F24"),
+		java.awt.Color.decode("#29A329"),
+		java.awt.Color.decode("#2EB82E"),
+		java.awt.Color.decode("#33CC33"),//LIGHT GREEN
+		java.awt.Color.decode("#47D147")
 	};
 	
 	private int val;
+	private double range;
+	private double az;
+	private double el;
 	
 	public Video() {
 		super(null,null,null);
@@ -55,16 +59,44 @@ public class Video extends OverlayItem implements ILayoutParam{
 		this.val = (val & 0xFF);
 	}
 
+	public double getRange() {
+		return range;
+	}
+
+	public void setRange(double range) {
+		this.range = range;
+	}
+
+	public double getAz() {
+		return az;
+	}
+
+	public void setAz(double az) {
+		this.az = az;
+	}
+
+	public double getEl() {
+		return el;
+	}
+
+	public void setEl(double el) {
+		this.el = el;
+	}
+
 	@Override
 	public void draw(GraphicsContext gc) {
-		gc.setFill(COLOR[val/25]);
-		gc.fillRect(getX(), getY(), 1, 1);
+//		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+			gc.setFill(COLOR[val/25]);
+			gc.fillRect(getX(), getY(), 1, 1);
+//		}
 	}
 
 	public void drawOnImage(BufferedImage bufferedImage) {
-		Graphics2D g2d = bufferedImage.createGraphics();
-		g2d.setColor(COLOR_IMG[val/25]);
-        g2d.drawRect((int) getX(), (int) getY(), 1, 1);	
+//		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+			Graphics2D g2d = bufferedImage.createGraphics();
+			g2d.setColor(COLOR_IMG[val/25]);
+	        g2d.drawRect((int) getX(), (int) getY(), 1, 1);
+//		}
 	}
 
 }

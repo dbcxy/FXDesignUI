@@ -85,47 +85,51 @@ public class MCUDPServerThread extends Thread{
 			e.printStackTrace();
 		}
         
-//        new Thread(new Runnable() {
-//			
-//			@Override
-//			public void run() {
-//				pAz = true;
-//		        sendAzPlotData();
-//		        pAz = false;
-//			}
-//		}).start();
-//        
-//        new Thread(new Runnable() {
-//			
-//			@Override
-//			public void run() {
-//				tAz = true;
-//		        sendAzTrackData();	
-//		        tAz = false;
-//			}
-//		}).start();
-//        
-//        new Thread(new Runnable() {
-//			
-//			@Override
-//			public void run() {
-//				pEl = true;
-//		        sendElPlotData();	
-//		        pEl = false;
-//			}
-//		}).start();
-//
-//
-//        new Thread(new Runnable() {
-//			
-//			@Override
-//			public void run() {
-//				tEl = true;
-//		        sendElTrackData();	
-//		        tEl = false;
-//			}
-//		}).start();
+        AppConfig.getInstance().getController().notifyData("Sending Azimuth Plot data... ");
+        new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				pAz = true;
+		        sendAzPlotData();
+		        pAz = false;
+			}
+		}).start();
         
+        AppConfig.getInstance().getController().notifyData("Sending Azimuth Track data... ");
+        new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				tAz = true;
+		        sendAzTrackData();	
+		        tAz = false;
+			}
+		}).start();
+        
+        AppConfig.getInstance().getController().notifyData("Sending Elevation Plot data... ");
+        new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				pEl = true;
+		        sendElPlotData();	
+		        pEl = false;
+			}
+		}).start();
+
+        AppConfig.getInstance().getController().notifyData("Sending Elevation Track data... ");
+        new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				tEl = true;
+		        sendElTrackData();	
+		        tEl = false;
+			}
+		}).start();
+        
+        AppConfig.getInstance().getController().notifyData("Sending RAW Video data... ");
         new Thread(new Runnable() {
 			
 			@Override
@@ -141,7 +145,7 @@ public class MCUDPServerThread extends Thread{
 			@Override
 			public void run() {
 				while(true) {
-					if(!pAz && !tAz && !tEl && !pEl) {
+					if(!pAz && !tAz && !tEl && !pEl && !Vid) {
 						AppConfig.getInstance().getController().notifyData("All messages Sent");
 				        exitAll();
 				        AppConfig.getInstance().getController().notifyData("Multicast Sockets Destroyed!"+"\n");
@@ -222,7 +226,7 @@ public class MCUDPServerThread extends Thread{
 	            if(datagramSocketAzPlots.isClosed())
 	            	break;
 				datagramSocketAzPlots.send(dp);
-				AppConfig.getInstance().getController().notifyData("Az Plot Sending... "+plot.length);
+//				AppConfig.getInstance().getController().notifyData("Az Plot Sending... "+plot.length);
 				Thread.sleep(50);//1 plot ~ 1ms => 500 plots ~ 500ms
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -262,7 +266,7 @@ public class MCUDPServerThread extends Thread{
 		        if(datagramSocketAzTracks.isClosed())
 		        	break;
 		        datagramSocketAzTracks.send(dt);
-		        AppConfig.getInstance().getController().notifyData("Az Track Sending... "+track.length);
+//		        AppConfig.getInstance().getController().notifyData("Az Track Sending... "+track.length);
 				Thread.sleep(5);//1 Track ~ 5ms => 100Tracks ~500ms
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -308,7 +312,7 @@ public class MCUDPServerThread extends Thread{
 	            if(datagramSocketElPlots.isClosed())
 	            	break;
 				datagramSocketElPlots.send(dp);
-				AppConfig.getInstance().getController().notifyData("El Plot Sending... "+plot.length);
+//				AppConfig.getInstance().getController().notifyData("El Plot Sending... "+plot.length);
 				Thread.sleep(50);//1 plot ~ 1ms => 500 plots ~ 500ms
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -348,7 +352,7 @@ public class MCUDPServerThread extends Thread{
 		        if(datagramSocketElTracks.isClosed())
 		        	break;
 		        datagramSocketElTracks.send(dt);
-		        AppConfig.getInstance().getController().notifyData("El Track Sending... "+track.length);
+//		        AppConfig.getInstance().getController().notifyData("El Track Sending... "+track.length);
 				Thread.sleep(5);//1 Track ~ 5ms => 100Tracks ~500ms
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -388,7 +392,7 @@ public class MCUDPServerThread extends Thread{
 		        if(datagramSocketVideo.isClosed())
 		        	break;
 		        datagramSocketVideo.send(dt);
-		        AppConfig.getInstance().getController().notifyData("RAW Video Sending... "+video.length);
+//		        AppConfig.getInstance().getController().notifyData("RAW Video Sending... "+video.length);
 				Thread.sleep(10);//1K in 10ms => 50K Video ~ 500ms
 			} catch (InterruptedException e) {
 				e.printStackTrace();

@@ -9,6 +9,7 @@ import java.net.Socket;
 import java.net.SocketTimeoutException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.Random;
 
 import messages.radar.AzimuthPlaneDetectionPlotMsg;
 import messages.radar.AzimuthPlanePlotsPerCPIMsg;
@@ -16,6 +17,7 @@ import messages.radar.AzimuthPlaneTrackMsg;
 import messages.radar.ElevationPlaneDetectionPlotMsg;
 import messages.radar.ElevationPlanePlotsPerCPIMsg;
 import messages.radar.ElevationPlaneTrackMsg;
+import messages.radar.PlaneRAWVideoMsg;
 
 import org.apache.log4j.Logger;
 
@@ -124,9 +126,15 @@ class TCPServerThread extends Thread {
 					}
 				}).start();
 		        
-//			            String video = "RAW VIDEO ! ";
-//			            DatagramPacket vid = new DatagramPacket(video.getBytes() , video.getBytes().length,groupAddr,C2Server.PORT_VIDEO);
-//			            datagramSocketAzPlots.send(vid);
+		        new Thread(new Runnable() {
+					
+					@Override
+					public void run() {
+						Vid = true;
+				        sendVideoData();	
+				        Vid = false;
+					}
+				}).start();
 		        
 		        new Thread(new Runnable() {
 					
@@ -343,6 +351,45 @@ class TCPServerThread extends Thread {
 			    out.write(track);
 		        AppConfig.getInstance().getController().notifyData("El Track Sending... "+track.length);
 				Thread.sleep(5);//1 Track ~ 5ms => 100Tracks ~500ms
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	private void sendVideoData() {
+		
+		int MSG_LEN = 1128;//bytes
+		short NO_RC = 1000;
+		
+		for ( int i =0 ; i<C2Server.NO_SCANS; i++) {
+			// Read Data and send at each 0.5 second
+			PlaneRAWVideoMsg vidMsg = new PlaneRAWVideoMsg();
+			
+			vidMsg.setMsgLen(MSG_LEN);
+			vidMsg.setMessageHeader((int) 0x3311);
+			vidMsg.setMessageCounter((short) (i%1000));
+			vidMsg.setTimeStampLow(0);
+			vidMsg.setTimeStampHigh(0);
+			
+			vidMsg.setNoRangeCells(NO_RC);
+			vidMsg.setAzBPN((byte) (i%42));
+			vidMsg.setElBPN((byte) (i%22));
+			
+			Random rand = new Random();
+			for(int j=0;j<NO_RC;j++)
+				vidMsg.addRangeCell((byte) rand.nextInt(255));
+			
+			//Send plot data MC UDP		
+			try {
+				byte[] video = vidMsg.getByteBuffer().array();
+				DataOutputStream out = new DataOutputStream(socketVideo.getOutputStream());
+				out.writeInt(video.length);
+			    out.write(video);
+		        AppConfig.getInstance().getController().notifyData("RAW Video Sending... "+video.length);
+				Thread.sleep(10);//1K in 10ms => 50K Video ~ 500ms
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			} catch (IOException e) {

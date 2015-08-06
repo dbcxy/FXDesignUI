@@ -71,11 +71,11 @@ public class MatrixRef implements ILayoutParam{
 	}
 	
 	public double toRangePixels(double r) {
-		return (((r*drawableXArea)/visibleRange));
+		return ((r*drawableXArea)/visibleRange);
 	}
 	
 	public double toMaxRangePixels(double r) {
-		return (((r*drawableXArea)/maxRange));
+		return ((r*drawableXArea)/maxRange);
 	}
 	
 	public Point toElevationRangePixels(double el, double r) {
