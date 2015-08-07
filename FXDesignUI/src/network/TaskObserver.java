@@ -454,7 +454,7 @@ public class TaskObserver extends Thread implements IByteSum{
 		DatagramPacket mDatagramInPacket = new DatagramPacket(mMCUDPSocketbuffer, len);
 		// Wait to receive a datagram
     	multicastSocket.receive(mDatagramInPacket);
-		logger.info("MC-UDP Server Data received");
+//		logger.info("MC-UDP Server Data received");
 		return mMCUDPSocketbuffer;
 	}
 	

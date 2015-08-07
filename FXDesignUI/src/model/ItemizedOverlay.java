@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
+import java.util.Iterator;
 import java.util.List;
 
 import javafx.scene.canvas.Canvas;
@@ -18,13 +19,13 @@ public abstract class ItemizedOverlay<Item extends OverlayItem> {
     public boolean addOverlayItem(Item item) {
         return mInternalItemList.add(item);
 	}
-    
-//    public void setOverlayItem(int location, Item item) {
-//    	mInternalItemList.set(location, item);
-//    }
 	
 	public void addOverlayItem(int location, Item item) {
 		mInternalItemList.add(item);
+	}
+	
+	public Iterator getOverlayIterator() {
+		return mInternalItemList.iterator();
 	}
 	
 	public boolean removeOverlayItem(Item item) {
@@ -33,6 +34,10 @@ public abstract class ItemizedOverlay<Item extends OverlayItem> {
 	
 	public Item removeOverlayItem() {
         return mInternalItemList.remove();
+	}
+	
+	public void clear() {
+		mInternalItemList.clear();
 	}
 	
    	protected final int size() {

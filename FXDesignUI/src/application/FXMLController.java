@@ -16,6 +16,7 @@ import materialdesignbutton.MaterialDesignButtonWidget;
 import materialdesignbutton.MaterialDesignButtonWidget.VAL;
 import model.DataObserver;
 import model.MatrixRef;
+import model.drawable.SketchItemizedOverlay;
 import model.graph.AzimuthChart;
 import model.graph.ElevationChart;
 import model.graph.ILayoutParam;
@@ -132,6 +133,10 @@ public class FXMLController implements Initializable,ILayoutParam{
 	
 	private int translateTop = 0;
 	private int translateBttm = 0;
+	
+    int azIndex = 0;
+    int elIndex = 0;
+	
 	ColumnConstraints graph;
 	ColumnConstraints controls;
 	
@@ -569,7 +574,7 @@ public class FXMLController implements Initializable,ILayoutParam{
     	matrixRef.setRangeVal(Constance.RANGE_MAX, Constance.RANGE_MIN);
     	matrixRef.setTouchDown(Constance.TOUCH_DOWN);
     }
-    
+
     private void initAnimTimers() {
     	
     	new Timer().scheduleAtFixedRate(new TimerTask() {
@@ -581,6 +586,14 @@ public class FXMLController implements Initializable,ILayoutParam{
 				vidRefresh = true;
 	        }
     	},500,500);
+    	
+//    	new Timer().scheduleAtFixedRate(new TimerTask() {
+//
+//	        @Override
+//	        public void run() {
+//				vidRefresh = true;
+//	        }
+//    	},500,500);
     	
     	//graph refresher
     	topAnimTimer = new AnimationTimer() {
@@ -629,8 +642,23 @@ public class FXMLController implements Initializable,ILayoutParam{
 			public void handle(long now) {
 				if(Constance.IS_CONNECTED && dataObserver !=null && vidRefresh) {
 					//Video
-					dataObserver.getElVideoDataList().drawVideosImage(cTopL2);		    		
-		    		dataObserver.getAzVideoDataList().drawVideosImage(cBtmL2);
+//					dataObserver.getElVideoDataList().drawVideosImage(cTopL2);		    		
+//		    		dataObserver.getAzVideoDataList().drawVideosImage(cBtmL2);
+		    		
+					GraphicsContext tgc = cTopL2.getGraphicsContext2D();
+		    		GraphicsContext bgc = cBtmL2.getGraphicsContext2D();
+		    		
+		    		tgc.clearRect(0, 0, cTopL2.getWidth(), cTopL2.getHeight());
+		    		bgc.clearRect(0, 0, cBtmL2.getWidth(), cBtmL2.getHeight());
+		    		
+		    		dataObserver.getElVideoDataList().drawVideos(tgc);		    		
+		    		dataObserver.getAzVideoDataList().drawVideos(bgc);
+//		    		
+//		    		for(SketchItemizedOverlay elVid:dataObserver.getElVideoDataList())
+//		    			elVid.drawVideos(tgc);
+//		    		for(SketchItemizedOverlay azVid:dataObserver.getAzVideoDataList())
+//		    			azVid.drawVideos(bgc);
+		    		
 		    		vidRefresh = false;
 //		        	logger.info("Video Objects Refreshed");
 				}

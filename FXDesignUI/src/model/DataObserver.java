@@ -1,5 +1,8 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.scene.effect.Light.Point;
 
 import org.apache.log4j.Logger;
@@ -26,16 +29,31 @@ public class DataObserver {
 	private SketchItemizedOverlay mAzPlotList;
 	private SketchItemizedOverlay mElTrackList;
 	private SketchItemizedOverlay mElPlotList;
-	private SketchItemizedOverlay mAzVideoList;
-	private SketchItemizedOverlay mElVideoList;
+	
+	private SketchItemizedOverlay mAzEachBeamVideoList;
+	private SketchItemizedOverlay mElEachBeamVideoList;
+	
+	private List<SketchItemizedOverlay> mAzVideoList;
+	private List<SketchItemizedOverlay> mElVideoList;
 	
 	public DataObserver() {
 		mAzTrackList = new SketchItemizedOverlay();
 		mAzPlotList = new SketchItemizedOverlay();
 		mElTrackList = new SketchItemizedOverlay();
 		mElPlotList = new SketchItemizedOverlay();
-		mAzVideoList = new SketchItemizedOverlay();
-		mElVideoList = new SketchItemizedOverlay();
+		
+		mAzEachBeamVideoList = new SketchItemizedOverlay();
+		mElEachBeamVideoList = new SketchItemizedOverlay();
+		
+//		mAzVideoList = new ArrayList<SketchItemizedOverlay>();
+//		mElVideoList = new ArrayList<SketchItemizedOverlay>();
+//		
+//		//Init Video List
+//		for(int i=0;i<Constance.RAW_AZ_BEAMS;i++)
+//			mAzVideoList.add(i, new SketchItemizedOverlay());
+//		
+//		for(int i=0;i<Constance.RAW_EL_BEAMS;i++)
+//			mElVideoList.add(i, new SketchItemizedOverlay());
 	}
 	
 	public SketchItemizedOverlay getAzTrackDataList() {
@@ -55,12 +73,20 @@ public class DataObserver {
 	}
 	
 	public SketchItemizedOverlay getAzVideoDataList() {
-		return mAzVideoList;
+		return mAzEachBeamVideoList;
 	}
 	
 	public SketchItemizedOverlay getElVideoDataList() {
-		return mElVideoList;
+		return mElEachBeamVideoList;
 	}
+	
+//	public List<SketchItemizedOverlay> getAzVideoDataList() {
+//		return mAzVideoList;
+//	}
+//	
+//	public List<SketchItemizedOverlay> getElVideoDataList() {
+//		return mElVideoList;
+//	}
 	
 	public void addAzPlots(AzimuthPlanePlotsPerCPIMsg aPlotsPerCPIMsg) {
 		for(AzimuthPlaneDetectionPlotMsg aPlotMsg : aPlotsPerCPIMsg.getAzimuthPlaneDetectionPlotMsg()) {
@@ -99,7 +125,7 @@ public class DataObserver {
 			track.setY(aTrackMsg.getY());
 			track.setX(aTrackMsg.getX());
 			track.setAz(true);
-			track.extractGraphAER();
+//			track.extractGraphAER();
 			
 			mAzTrackList.addOverlayItem(track);
 			
@@ -129,7 +155,7 @@ public class DataObserver {
 		track.setZ(eTrackMsg.getZ());
 		track.setX(eTrackMsg.getX());
 		track.setEl(true);
-		track.extractGraphAER();
+//		track.extractGraphAER();
 		mElTrackList.addOverlayItem(track);
 	}
 	
@@ -137,12 +163,10 @@ public class DataObserver {
 
 		MatrixRef matrixRef = MatrixRef.getInstance();
 		if(vidMsg.getAzBPN()!=0 && vidMsg.getAzBPN()<=Constance.RAW_AZ_BEAMS){
-			double azAngle = (Constance.AZIMUTH_MAX - (vidMsg.getAzBPN()*0.5 - 0.5));//In degress
-			double midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
-			double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
-			Point start = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getMinRange());
 
-
+//			SketchItemizedOverlay mAzEachBeamVideoList = new SketchItemizedOverlay();
+			//(20% overlap of actual beam per angle) & 0.6degree beam width
+			double azAngle = (Constance.AZIMUTH_MAX - (vidMsg.getAzBPN()*0.6*0.8));//In degress 
 			double rangeDisp = (matrixRef.getMaxRange()/vidMsg.getNoRangeCells());//In KM
 			double range = rangeDisp;// In KM
 			for(int i=0;i<vidMsg.getNoRangeCells();i++)  {
@@ -150,21 +174,21 @@ public class DataObserver {
 		    	video.setVal(vidMsg.getRangeCellList(i));
 
 		    	//need to put in range & Az
-		    	video.setAz(azAngle);
+		    	video.setAz(true);
+		    	video.setAzimuth(azAngle);
 		    	video.setRange(range*1000);//In meters
-		    	video.setX(MatrixRef.getInstance().toRangePixels(range));
-		    	Point point = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY()+midAzimuthOffset, video.getX(), -azAngle);
-		    	video.setY(point.getY());
 		    	
-				mAzVideoList.addOverlayItem(video);
+				mAzEachBeamVideoList.addOverlayItem(video);
 				range+=rangeDisp;
 			}
+//			mAzVideoList.set(vidMsg.getAzBPN()-1, mAzEachBeamVideoList);//Current index
+//			mAzVideoList.get(vidMsg.getAzBPN()%Constance.RAW_AZ_BEAMS).clear();//Next index
 		} 
 		
 		if(vidMsg.getElBPN()!=0 && vidMsg.getElBPN()<=Constance.RAW_EL_BEAMS) {
-			double elAngle = (vidMsg.getElBPN()*0.5 - 0.5);//In degress
-	        Point start = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
 			
+//			SketchItemizedOverlay mElEachBeamVideoList = new SketchItemizedOverlay();
+			double elAngle = (vidMsg.getElBPN()*0.6*0.8);//In degrees			
 	        double rangeDisp = (matrixRef.getMaxRange()/vidMsg.getNoRangeCells());//In KM
 			double range = rangeDisp;// In KM
 			for(int i=0;i<vidMsg.getNoRangeCells();i++)  {
@@ -172,16 +196,16 @@ public class DataObserver {
 				video.setVal(vidMsg.getRangeCellList(i));
 				
 				//need to put in range & El
-				video.setAz(elAngle);
+				video.setEl(true);
+				video.setElevation(elAngle);
 		    	video.setRange(range*1000);//In Meters
-		    	video.setX(MatrixRef.getInstance().toRangePixels(range));
-		    	Point point = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY(), video.getX(), -elAngle);
-		    	video.setY(point.getY());
 		    	
-				mElVideoList.addOverlayItem(video);
+				mElEachBeamVideoList.addOverlayItem(video);
 				range+=rangeDisp;
 			}
-		}
+//			mElVideoList.set(vidMsg.getElBPN()-1, mElEachBeamVideoList);
+//			mElVideoList.get(vidMsg.getElBPN()%Constance.RAW_EL_BEAMS).clear();
+		}		
 	}
 	
 }

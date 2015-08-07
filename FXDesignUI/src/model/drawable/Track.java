@@ -93,19 +93,19 @@ public class Track extends OverlayItem implements ILayoutParam{
 		isEl = b;
 	}
 	
-	public void extractGraphAER() {
+	private void extractGraphAER() {
 		double x = getX();
 		double y = getY();
 		double z = getZ();
 		
 		//Range
+		MatrixRef matrixRef = MatrixRef.getInstance();
 		range = Math.sqrt(Math.pow(x, 2)+Math.pow(y, 2)+Math.pow(z, 2));
-		setX(MatrixRef.getInstance().toRangePixels(range/1000));
+		setX(matrixRef.toRangePixels(range/1000));
 		
 		//Azimuth
 		if(isAz) {
 			azimuth = Math.toRadians(Constance.AZIMUTH_MAX) - Math.atan2(y,x);//Changing from 10->-10degrees to 0->20degrees
-			MatrixRef matrixRef = MatrixRef.getInstance();
 			double midAzimuth = (matrixRef.getMinAzimuth()+matrixRef.getMaxAzimuth())/2;
 			double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
 	        Point start = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getMinRange());
@@ -116,7 +116,6 @@ public class Track extends OverlayItem implements ILayoutParam{
 		//Elevation
 		if(isEl) {
 			elevation = Math.atan2(z, Math.sqrt(Math.pow(x, 2)+Math.pow(y, 2)));
-			MatrixRef matrixRef = MatrixRef.getInstance();
 	        Point start = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
 			Point p = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY(), getX(), Math.toDegrees(-elevation));
 			setZ(p.getY());
@@ -124,16 +123,17 @@ public class Track extends OverlayItem implements ILayoutParam{
 	}
 
 	@Override
-	public void draw(GraphicsContext gc) {
-		double x = getX();
-		double y = 0;
-		if(isAz) {
-			y = getY();
-		} else if(isEl) {
-			y = getZ();
-		}
-		
+	public void draw(GraphicsContext gc) {	
 		if((range/1000) <= MatrixRef.getInstance().getVisibleRange() && Constance.SHOW_TRACK) {
+			extractGraphAER();
+			double x = getX();
+			double y = 0;
+			if(isAz) {
+				y = getY();
+			} else if(isEl) {
+				y = getZ();
+			}
+			
 			gc.setFill(Color.BISQUE);
 	    	gc.fillOval(x-TRACK_SIZE, y-TRACK_SIZE, 2*TRACK_SIZE, 2*TRACK_SIZE);
 	    	gc.setStroke(Color.WHITE);
@@ -157,16 +157,16 @@ public class Track extends OverlayItem implements ILayoutParam{
 	}
 
 	public void drawOnImage(BufferedImage bufferedImage) {
-
-		double x = getX();
-		double y = 0;
-		if(isAz) {
-			y = getY();
-		} else if(isEl) {
-			y = getZ();
-		}
-
 		if((range/1000) <= MatrixRef.getInstance().getVisibleRange() && Constance.SHOW_TRACK) {
+			extractGraphAER();
+			double x = getX();
+			double y = 0;
+			if(isAz) {
+				y = getY();
+			} else if(isEl) {
+				y = getZ();
+			}
+
 			Graphics2D g2d = bufferedImage.createGraphics();
 			g2d.setColor(java.awt.Color.RED);
 			g2d.fillOval((int)x-TRACK_SIZE, (int)y-TRACK_SIZE, 2*TRACK_SIZE, 2*TRACK_SIZE);

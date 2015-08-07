@@ -1,9 +1,11 @@
 package utils;
 
 import java.awt.BasicStroke;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Stroke;
+import java.awt.image.BufferedImage;
 import java.util.Objects;
 
 import javafx.application.Platform;
@@ -68,4 +70,12 @@ public class ModelDrawing {
 			canvas.getGraphicsContext2D().restore();
 		}
 	}
+	
+	public static BufferedImage overlapBufferedImage(BufferedImage baseImg,BufferedImage inImg) {
+        Graphics2D g2 = baseImg.createGraphics();
+        g2.drawImage(baseImg, null, 0, 0);
+        g2.drawImage(inImg, null, 0, 0);
+        g2.dispose();
+        return baseImg;
+    }
 }
