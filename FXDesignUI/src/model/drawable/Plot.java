@@ -20,7 +20,6 @@ public class Plot extends OverlayItem implements ILayoutParam{
 	
 	private String Title = "";
 	private int plotNumber;
-	private boolean isTextShown = false;
 	
 	private double elevation;
 	private double azimuth;//radians
@@ -33,10 +32,6 @@ public class Plot extends OverlayItem implements ILayoutParam{
 		super(null,null,null);
 	}
 
-	public boolean isTextShown() {
-		return isTextShown;
-	}
-	
 	public void setTitle(String title) {
 		this.Title = title;
 	}
@@ -47,10 +42,6 @@ public class Plot extends OverlayItem implements ILayoutParam{
 	
 	public String getPlotNumber() {
 		return String.valueOf(plotNumber);
-	}
-	
-	public void showText(boolean show) {		
-		isTextShown = show;
 	}
 	
 	public double getElevation() {
@@ -122,14 +113,14 @@ public class Plot extends OverlayItem implements ILayoutParam{
 			y = getZ();
 		}
 		
-		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange() && Constance.SHOW_PLOT) {
 			gc.setFill(Color.RED);
 	    	gc.fillOval(x-PLOT_SIZE, y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
 	    	gc.setStroke(Color.WHITE);
 	    	gc.setLineWidth(0.5);
 	    	gc.strokeOval(x-PLOT_SIZE, y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
 	    	
-	    	if(isTextShown) {
+	    	if(Constance.SHOW_PLOT_LABEL) {
 	    		gc.setStroke(Color.CHOCOLATE);
 	        	ModelDrawing.drawLineAtAngle(gc, x, y, 2*PLOT_SIZE, -45);
 	        	Point p = ModelDrawing.getNextPointAtAngle(x, y, 2*PLOT_SIZE, -45);
@@ -153,7 +144,7 @@ public class Plot extends OverlayItem implements ILayoutParam{
 			y = getZ();
 		}
 
-		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange() && Constance.SHOW_PLOT) {
 			Graphics2D g2d = bufferedImage.createGraphics();
 			g2d.setColor(java.awt.Color.RED);
 			g2d.fillOval((int)x-PLOT_SIZE, (int)y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
@@ -161,7 +152,7 @@ public class Plot extends OverlayItem implements ILayoutParam{
 			g2d.setStroke(new BasicStroke((float) 0.5));
 			g2d.drawOval((int)x-PLOT_SIZE, (int)y-PLOT_SIZE, PLOT_SIZE, PLOT_SIZE);
 	    	
-	    	if(isTextShown) {
+	    	if(Constance.SHOW_PLOT_LABEL) {
 	    		g2d.setColor(java.awt.Color.BLUE);
 	        	ModelDrawing.drawLineAtAngle(g2d, x, y, 2*PLOT_SIZE, -45);
 	        	Point p = ModelDrawing.getNextPointAtAngle(x, y, 2*PLOT_SIZE, -45);

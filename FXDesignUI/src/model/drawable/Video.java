@@ -1,12 +1,10 @@
 package model.drawable;
 
-import java.awt.BasicStroke;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-import utils.ModelDrawing;
+import utils.Constance;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.effect.Light.Point;
 import javafx.scene.paint.Color;
 import model.MatrixRef;
 import model.OverlayItem;
@@ -29,17 +27,17 @@ public class Video extends OverlayItem implements ILayoutParam{
 	};
 	
 	private static final java.awt.Color[] COLOR_IMG = new java.awt.Color[] {
-		java.awt.Color.decode("#051405"),//DARK BLACK
-		java.awt.Color.decode("#0A290A"),
-		java.awt.Color.decode("#0F3D0F"),
-		java.awt.Color.decode("#145214"),
-		java.awt.Color.decode("#1A661A"),
-		java.awt.Color.decode("#1F7A1F"),
+		java.awt.Color.decode("#1F7A1F"),//DARK BLACK
 		java.awt.Color.decode("#248F24"),
 		java.awt.Color.decode("#29A329"),
 		java.awt.Color.decode("#2EB82E"),
-		java.awt.Color.decode("#33CC33"),//LIGHT GREEN
-		java.awt.Color.decode("#47D147")
+		java.awt.Color.decode("#33CC33"),
+		java.awt.Color.decode("#47D147"),
+		java.awt.Color.decode("#5CD65C"),
+		java.awt.Color.decode("#70DB70"),
+		java.awt.Color.decode("#85E085"),
+		java.awt.Color.decode("#99E699"),//LIGHT GREEN
+		java.awt.Color.decode("#ADEBAD")
 	};
 	
 	private int val;
@@ -85,14 +83,14 @@ public class Video extends OverlayItem implements ILayoutParam{
 
 	@Override
 	public void draw(GraphicsContext gc) {
-		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange() && Constance.SHOW_RAW) {
 			gc.setFill(COLOR[val/25]);
 			gc.fillRect(getX(), getY(), 1, 1);
 		}
 	}
 
 	public void drawOnImage(BufferedImage bufferedImage) {
-		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange() && Constance.SHOW_RAW) {
 			Graphics2D g2d = bufferedImage.createGraphics();
 			g2d.setColor(COLOR_IMG[val/25]);
 	        g2d.drawRect((int) getX(), (int) getY(), 1, 1);

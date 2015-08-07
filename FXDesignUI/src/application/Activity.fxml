@@ -343,12 +343,12 @@
                                              <children>
                                                 <HBox alignment="TOP_CENTER">
                                                    <children>
-                                                      <MaterialDesignButtonWidget fx:id="btn_raw" prefHeight="30.0" prefWidth="120.0" text="RAW">
+                                                      <MaterialDesignButtonWidget fx:id="btn_raw" onAction="#showRAW" prefHeight="30.0" prefWidth="120.0" text="RAW">
                                                          <HBox.margin>
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>
                                                       </MaterialDesignButtonWidget>
-                                                      <MaterialDesignButtonWidget fx:id="btn_plot" prefHeight="30.0" prefWidth="120.0" text="PLOT">
+                                                      <MaterialDesignButtonWidget fx:id="btn_plot" onAction="#showPLOT" prefHeight="30.0" prefWidth="120.0" text="PLOT">
                                                          <HBox.margin>
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>
@@ -360,7 +360,7 @@
                                                 </HBox>
                                                 <HBox alignment="TOP_CENTER">
                                                    <children>
-                                                      <MaterialDesignButtonWidget fx:id="btn_label" prefHeight="30.0" prefWidth="120.0" text="LABEL">
+                                                      <MaterialDesignButtonWidget fx:id="btn_label" onAction="#showLABEL" prefHeight="30.0" prefWidth="120.0" text="LABEL">
                                                          <HBox.margin>
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>

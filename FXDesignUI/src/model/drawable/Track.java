@@ -24,7 +24,6 @@ public class Track extends OverlayItem implements ILayoutParam{
 	
 	private String Title = "";
 	private int trackNumber;
-	private boolean isTextShown = true;
 	
 	private double elevation;
 	private double azimuth;
@@ -45,10 +44,6 @@ public class Track extends OverlayItem implements ILayoutParam{
 		
 	public Track() {
 		super(null,null,null);
-	}
-
-	public boolean isTextShown() {
-		return isTextShown;
 	}
 	
 	public void setTitle(String title) {
@@ -127,10 +122,6 @@ public class Track extends OverlayItem implements ILayoutParam{
 			setZ(p.getY());
 		}
 	}
-	
-	public void showText(boolean show) {		
-		isTextShown = show;
-	}
 
 	@Override
 	public void draw(GraphicsContext gc) {
@@ -142,7 +133,7 @@ public class Track extends OverlayItem implements ILayoutParam{
 			y = getZ();
 		}
 		
-		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange() && Constance.SHOW_TRACK) {
 			gc.setFill(Color.BISQUE);
 	    	gc.fillOval(x-TRACK_SIZE, y-TRACK_SIZE, 2*TRACK_SIZE, 2*TRACK_SIZE);
 	    	gc.setStroke(Color.WHITE);
@@ -151,7 +142,7 @@ public class Track extends OverlayItem implements ILayoutParam{
 	    	gc.strokeLine(x,y+2*TRACK_SIZE,getX(),y-2*TRACK_SIZE);
 	    	gc.strokeLine(x+2*TRACK_SIZE, y, x-2*TRACK_SIZE, y);
 	    	
-	    	if(isTextShown) {
+	    	if(Constance.SHOW_TRACK_LABEL) {
 	        	gc.setStroke(Color.CHOCOLATE);
 	        	ModelDrawing.drawLineAtAngle(gc, x, y, 2*TRACK_SIZE, -45);
 	        	Point p = ModelDrawing.getNextPointAtAngle(x, y, 2*TRACK_SIZE, -45);
@@ -175,7 +166,7 @@ public class Track extends OverlayItem implements ILayoutParam{
 			y = getZ();
 		}
 
-		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange() && Constance.SHOW_TRACK) {
 			Graphics2D g2d = bufferedImage.createGraphics();
 			g2d.setColor(java.awt.Color.RED);
 			g2d.fillOval((int)x-TRACK_SIZE, (int)y-TRACK_SIZE, 2*TRACK_SIZE, 2*TRACK_SIZE);
@@ -185,7 +176,7 @@ public class Track extends OverlayItem implements ILayoutParam{
 			g2d.drawLine((int)x,(int)y+2*TRACK_SIZE,(int)x,(int)y-2*TRACK_SIZE);
 			g2d.drawLine((int)x+2*TRACK_SIZE, (int)y, (int)x-2*TRACK_SIZE, (int)y);
 	    	
-	    	if(isTextShown) {
+	    	if(Constance.SHOW_TRACK_LABEL) {
 	    		g2d.setColor(java.awt.Color.BLUE);
 	        	ModelDrawing.drawLineAtAngle(g2d, x, y, 2*TRACK_SIZE, -45);
 	        	Point p = ModelDrawing.getNextPointAtAngle(x, y, 2*TRACK_SIZE, -45);

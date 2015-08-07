@@ -2,7 +2,6 @@ package application;
 
 import java.io.IOException;
 import java.net.DatagramSocket;
-import java.net.MulticastSocket;
 import java.net.SocketException;
 import java.net.URL;
 import java.text.DateFormat;
@@ -24,7 +23,6 @@ import network.IControlManager;
 import network.TaskObserver;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.chainsaw.Main;
 
 import textpanel.TextPanelWidget;
 import utils.Constance;
@@ -33,7 +31,6 @@ import utils.ModelDrawing.FLIP;
 import views.Console;
 import views.ResizableCanvas;
 import javafx.animation.AnimationTimer;
-import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -126,11 +123,13 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML ResizableCanvas cBtmL2;//Video
 	@FXML ResizableCanvas cBtmL3;//Plots & Tracks (TopMost Layer)
 	
+	enum DATA { DEFAULT, RAW, PLOT, TRACK, LABEL };
 	private boolean isAppRunning = false;
 	private boolean isDrawn = false;
 	private boolean vidRefresh = false;
 	private boolean topRefresh = false;
 	private boolean bttmRefresh = false;
+	
 	private int translateTop = 0;
 	private int translateBttm = 0;
 	ColumnConstraints graph;
@@ -189,6 +188,30 @@ public class FXMLController implements Initializable,ILayoutParam{
         actiontarget.setText("Display Scale set to "+Constance.SCALE);
         setDisplayScale(40);
 		invalidate();
+    }
+    
+    @FXML
+    protected void showRAW(ActionEvent event) {
+    	Constance.SHOW_RAW = !Constance.SHOW_RAW;
+    	setDataDisplay(DATA.RAW);
+    }
+    
+    @FXML
+    protected void showPLOT(ActionEvent event) {
+    	Constance.SHOW_PLOT = !Constance.SHOW_PLOT;
+    	setDataDisplay(DATA.PLOT);
+    }
+    
+    @FXML
+    protected void showTRACK(ActionEvent event) {
+    	Constance.SHOW_TRACK = !Constance.SHOW_TRACK;
+    	setDataDisplay(DATA.TRACK);
+    }
+    
+    @FXML
+    protected void showLABEL(ActionEvent event) {
+    	Constance.SHOW_TRACK_LABEL = !Constance.SHOW_TRACK_LABEL;
+    	setDataDisplay(DATA.LABEL);
     }
     
     @FXML
@@ -395,11 +418,12 @@ public class FXMLController implements Initializable,ILayoutParam{
     	initConsole();
     	initMatrixRef();
     	initAnimTimers();
+
+		setDisplayScale(10);
+		setDataDisplay(DATA.DEFAULT);
     }
         
     private void initTopChart() {
-		setDisplayScale(10);
-
 		cTopL2.clear();
 		cTopL3.clear();
 		cTopL1.clear();
@@ -678,6 +702,45 @@ public class FXMLController implements Initializable,ILayoutParam{
 			btn_display10.widgetSetVal(VAL.DEFAULT);
 			btn_display20.widgetSetVal(VAL.DEFAULT);
 			btn_display40.widgetSetVal(VAL.DEFAULT);
+			break;
+		}
+	}
+	
+	private void setDataDisplay(DATA data) {
+		switch (data) {
+		case RAW:
+			btn_raw.widgetSetVal(VAL.DEFAULT);
+			if(Constance.SHOW_RAW)
+				btn_raw.widgetSetVal(VAL.GREEN);
+			break;
+			
+		case PLOT:
+			btn_plot.widgetSetVal(VAL.DEFAULT);
+			if(Constance.SHOW_RAW)
+				btn_plot.widgetSetVal(VAL.GREEN);
+			break;
+
+		case TRACK:
+			break;
+			
+		case LABEL:
+			btn_label.widgetSetVal(VAL.DEFAULT);
+			if(Constance.SHOW_RAW)
+				btn_label.widgetSetVal(VAL.GREEN);
+			break;
+			
+		default:
+			btn_raw.widgetSetVal(VAL.DEFAULT);
+			if(Constance.SHOW_RAW)
+				btn_raw.widgetSetVal(VAL.GREEN);
+			
+			btn_plot.widgetSetVal(VAL.DEFAULT);
+			if(Constance.SHOW_RAW)
+				btn_plot.widgetSetVal(VAL.GREEN);
+			
+			btn_label.widgetSetVal(VAL.DEFAULT);
+			if(Constance.SHOW_RAW)
+				btn_label.widgetSetVal(VAL.GREEN);
 			break;
 		}
 	}

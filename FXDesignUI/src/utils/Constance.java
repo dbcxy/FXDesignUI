@@ -27,9 +27,15 @@ public class Constance {
 		public static String getHEIGHT() { return(isFPS ? "meters":"feet");}
 	}
 
-	public static boolean IS_DISPLAY_SETUP = true;
-	public static boolean IS_SYSTEM_SETUP = true;
-	public static boolean IS_RADAR_SETUP = true;
+	public static boolean IS_DISPLAY_SETUP 	= true;
+	public static boolean IS_SYSTEM_SETUP 	= true;
+	public static boolean IS_RADAR_SETUP 	= true;
+
+	public static boolean SHOW_RAW 			= true;
+	public static boolean SHOW_PLOT 		= true;
+	public static boolean SHOW_PLOT_LABEL	= false;
+	public static boolean SHOW_TRACK 		= true;
+	public static boolean SHOW_TRACK_LABEL 	= true;
 		
 	public static double ELEVATION_MAX		= 8000;//MKS or FPS
 	public static double ELEVATION_MIN		= 0;//ft or mts
