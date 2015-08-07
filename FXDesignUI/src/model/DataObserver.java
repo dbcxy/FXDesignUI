@@ -142,19 +142,22 @@ public class DataObserver {
 			double midAzimuthOffset = matrixRef.toRangePixels(Constance.AZIMUTH.RCLO/Constance.RANGE_DISP);
 			Point start = matrixRef.toAzimuthRangePixels(midAzimuth, matrixRef.getMinRange());
 
-			double rangeDisp = 0;
-			double disp = (matrixRef.getDrawableXArea()/vidMsg.getNoRangeCells());//In Pixels
+
+			double rangeDisp = (matrixRef.getMaxRange()/vidMsg.getNoRangeCells());//In KM
+			double range = rangeDisp;// In KM
 			for(int i=0;i<vidMsg.getNoRangeCells();i++)  {
-				Point point = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY()+midAzimuthOffset, rangeDisp, -azAngle);
 				Video video = new Video();
 		    	video.setVal(vidMsg.getRangeCellList(i));
+
 		    	//need to put in range & Az
-		    	
-		    	video.setX(point.getX());
+		    	video.setAz(azAngle);
+		    	video.setRange(range*1000);//In meters
+		    	video.setX(MatrixRef.getInstance().toRangePixels(range));
+		    	Point point = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY()+midAzimuthOffset, video.getX(), -azAngle);
 		    	video.setY(point.getY());
 		    	
 				mAzVideoList.addOverlayItem(video);
-				rangeDisp+=disp;
+				range+=rangeDisp;
 			}
 		} 
 		
@@ -162,17 +165,21 @@ public class DataObserver {
 			double elAngle = (vidMsg.getElBPN()*0.5 - 0.5);//In degress
 	        Point start = matrixRef.toElevationRangePixels(matrixRef.getMinElevation(), matrixRef.getMinRange());
 			
-	        double rangeDisp = 0;
-	        double disp = (matrixRef.getDrawableXArea()/vidMsg.getNoRangeCells());//In Pixels
+	        double rangeDisp = (matrixRef.getMaxRange()/vidMsg.getNoRangeCells());//In KM
+			double range = rangeDisp;// In KM
 			for(int i=0;i<vidMsg.getNoRangeCells();i++)  {
-				Point point = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY(), rangeDisp, -elAngle);
 				Video video = new Video();
 				video.setVal(vidMsg.getRangeCellList(i));
+				
 				//need to put in range & El
-		    	video.setX(point.getX());
+				video.setAz(elAngle);
+		    	video.setRange(range*1000);//In Meters
+		    	video.setX(MatrixRef.getInstance().toRangePixels(range));
+		    	Point point = ModelDrawing.getNextPointAtAngle(start.getX(), start.getY(), video.getX(), -elAngle);
 		    	video.setY(point.getY());
+		    	
 				mElVideoList.addOverlayItem(video);
-				rangeDisp+=disp;
+				range+=rangeDisp;
 			}
 		}
 	}

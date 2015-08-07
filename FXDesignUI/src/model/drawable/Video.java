@@ -85,18 +85,18 @@ public class Video extends OverlayItem implements ILayoutParam{
 
 	@Override
 	public void draw(GraphicsContext gc) {
-//		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
 			gc.setFill(COLOR[val/25]);
 			gc.fillRect(getX(), getY(), 1, 1);
-//		}
+		}
 	}
 
 	public void drawOnImage(BufferedImage bufferedImage) {
-//		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
+		if((range/1000) <= MatrixRef.getInstance().getVisibleRange()) {
 			Graphics2D g2d = bufferedImage.createGraphics();
 			g2d.setColor(COLOR_IMG[val/25]);
 	        g2d.drawRect((int) getX(), (int) getY(), 1, 1);
-//		}
+		}
 	}
 
 }
