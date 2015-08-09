@@ -145,6 +145,7 @@
                                                             <ResizableCanvas fx:id="cTopL1" />
                                                             <ResizableCanvas fx:id="cTopL2" />
                                                             <ResizableCanvas fx:id="cTopL3" />
+                                                            <ResizableCanvas fx:id="cTopL4" />
                                                          </children>
                                                       </Pane>
                                                    </children>
@@ -165,6 +166,7 @@
                                                             <ResizableCanvas fx:id="cBtmL1" />
                                                             <ResizableCanvas fx:id="cBtmL2" />
                                                             <ResizableCanvas fx:id="cBtmL3" />
+                                                            <ResizableCanvas fx:id="cBtmL4" />
                                                          </children>
                                                       </Pane>
                                                    </children>

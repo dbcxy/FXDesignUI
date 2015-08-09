@@ -1,1022 +1,348 @@
-2015-08-07 14:27:48,488 INFO [application.Master] - Launch
-2015-08-07 14:27:49,245 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 14:27:51,803 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 14:27:51,804 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 14:27:51,850 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 14:27:51,856 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 14:27:52,612 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:27:52,619 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:27:53,761 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 14:27:53,761 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 14:27:53,761 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 14:27:53,761 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 14:27:53,761 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 14:27:53,761 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 14:27:53,764 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 14:27:53,764 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 14:27:53,765 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 14:27:53,765 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 14:27:53,765 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 14:27:53,765 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 14:27:53,765 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 14:32:18,173 INFO [application.Master] - Launch
-2015-08-07 14:32:18,914 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 14:32:22,274 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 14:32:22,275 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 14:32:22,307 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 14:32:22,311 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 14:32:22,747 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:32:22,753 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:32:24,210 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 14:32:24,210 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 14:32:24,210 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 14:32:24,210 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 14:32:24,210 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 14:32:24,210 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 14:32:24,214 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 14:32:24,215 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 14:32:24,215 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 14:32:24,216 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 14:32:24,216 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 14:32:24,216 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 14:32:24,217 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 14:34:00,513 INFO [application.Master] - Launch
-2015-08-07 14:34:01,254 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 14:34:03,869 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 14:34:03,870 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 14:34:03,897 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 14:34:03,901 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 14:34:04,666 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:34:04,673 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:34:05,425 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 14:34:05,425 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 14:34:05,425 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 14:34:05,425 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 14:34:05,425 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 14:34:05,426 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 14:34:05,428 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 14:34:05,429 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 14:34:05,429 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 14:34:05,429 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 14:34:05,429 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 14:34:05,429 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 14:34:05,430 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 14:34:21,508 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 14:34:21,509 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 14:34:21,510 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 14:34:21,523 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 14:34:21,529 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 14:34:22,862 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 14:34:22,875 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 14:35:41,175 INFO [application.Master] - Launch
-2015-08-07 14:35:41,910 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 14:35:44,985 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 14:35:44,986 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 14:35:45,034 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 14:35:45,043 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 14:35:45,578 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:35:45,584 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:35:47,113 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 14:35:47,114 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 14:35:47,114 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 14:35:47,114 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 14:35:47,114 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 14:35:47,114 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 14:35:47,117 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 14:35:47,118 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 14:35:47,118 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 14:35:47,119 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 14:35:47,118 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 14:35:47,118 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 14:35:47,118 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 14:35:58,665 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 14:35:58,666 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 14:35:58,667 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 14:35:58,667 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 14:35:58,668 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 14:35:58,668 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 14:36:00,090 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 14:36:00,100 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 14:37:48,522 INFO [application.Master] - Launch
-2015-08-07 14:37:49,295 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 14:37:55,138 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 14:37:55,139 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 14:37:55,179 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 14:37:55,184 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 14:37:55,883 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:37:55,887 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:37:56,756 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 14:37:56,756 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 14:37:56,757 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 14:37:56,757 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 14:37:56,757 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 14:37:56,757 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 14:37:56,759 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 14:37:56,760 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 14:37:56,760 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 14:37:56,760 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 14:37:56,760 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 14:37:56,760 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 14:37:56,761 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 14:38:25,296 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 14:38:25,301 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 14:38:25,303 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 14:38:25,305 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 14:38:25,310 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 14:38:25,312 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 14:38:26,734 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 14:38:26,740 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 14:39:59,404 INFO [application.Master] - Launch
-2015-08-07 14:40:00,170 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 14:40:02,900 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 14:40:02,901 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 14:40:02,947 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 14:40:02,954 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 14:40:03,809 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:40:03,814 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:40:04,560 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 14:40:04,560 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 14:40:04,560 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 14:40:04,560 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 14:40:04,560 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 14:40:04,560 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 14:40:04,563 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 14:40:04,563 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 14:40:04,564 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 14:40:04,564 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 14:40:04,564 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 14:40:04,564 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 14:40:04,564 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 14:40:18,226 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 14:40:18,228 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 14:40:18,228 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 14:40:18,229 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 14:40:25,792 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 14:40:25,820 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 14:41:30,196 INFO [application.Master] - Launch
-2015-08-07 14:41:30,914 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 14:41:33,665 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 14:41:33,666 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 14:41:33,702 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 14:41:33,706 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 14:41:34,589 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:41:34,595 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:41:35,260 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 14:41:35,260 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 14:41:35,261 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 14:41:35,261 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 14:41:35,261 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 14:41:35,261 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 14:41:35,264 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 14:41:35,264 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 14:41:35,264 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 14:41:35,265 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 14:41:35,265 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 14:41:35,265 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 14:41:35,265 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 14:42:05,390 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:42:05,391 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:42:07,222 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:42:07,226 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:42:39,488 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:42:39,489 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:42:45,482 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:42:45,486 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:42:50,011 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:42:50,013 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:46:13,576 INFO [application.Master] - Launch
-2015-08-07 14:46:14,369 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 14:46:17,621 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 14:46:17,623 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 14:46:17,656 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 14:46:17,662 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 14:46:18,483 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:46:18,490 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:46:19,209 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 14:46:19,209 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 14:46:19,209 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 14:46:19,209 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 14:46:19,209 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 14:46:19,209 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 14:46:19,212 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 14:46:19,212 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 14:46:19,213 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 14:46:19,213 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 14:46:19,213 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 14:46:19,213 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 14:46:19,213 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 14:46:58,359 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 14:46:58,361 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 14:46:58,361 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 14:46:58,364 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 14:46:58,364 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 14:46:58,366 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 14:47:08,080 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 14:47:08,098 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 14:49:35,523 INFO [application.Master] - Launch
-2015-08-07 14:49:36,324 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 14:49:39,336 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 14:49:39,338 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 14:49:39,383 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 14:49:39,389 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 14:49:39,946 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:49:39,954 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:49:40,976 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 14:49:40,976 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 14:49:40,976 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 14:49:40,976 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 14:49:40,976 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 14:49:40,976 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 14:49:40,979 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 14:49:40,980 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 14:49:40,980 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 14:49:40,980 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 14:49:40,980 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 14:49:40,980 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 14:49:40,980 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 14:49:57,691 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:49:57,692 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:50:00,220 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:50:00,222 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:50:25,989 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 14:50:25,990 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 14:50:25,991 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 14:50:25,992 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 14:50:25,992 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 14:50:25,992 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 14:50:27,842 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 14:50:27,849 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 14:56:37,924 INFO [application.Master] - Launch
-2015-08-07 14:56:38,669 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 14:56:42,339 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 14:56:42,340 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 14:56:42,371 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 14:56:42,375 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 14:56:42,854 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:56:42,860 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:56:43,936 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 14:56:43,936 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 14:56:43,936 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 14:56:43,937 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 14:56:43,937 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 14:56:43,937 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 14:56:43,940 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 14:56:43,940 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 14:56:43,940 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 14:56:43,940 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 14:56:43,941 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 14:56:43,941 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 14:56:43,941 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 14:57:17,569 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 14:57:17,570 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 14:57:17,571 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 14:57:17,572 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 14:57:17,574 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 14:57:17,574 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 14:57:19,048 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 14:57:19,068 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 14:58:10,916 INFO [application.Master] - Launch
-2015-08-07 14:58:11,644 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 14:58:16,873 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 14:58:16,873 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 14:58:16,915 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 14:58:16,920 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 14:58:17,425 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:58:17,433 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:58:18,438 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 14:58:18,438 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 14:58:18,438 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 14:58:18,438 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 14:58:18,438 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 14:58:18,438 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 14:58:18,441 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 14:58:18,442 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 14:58:18,442 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 14:58:18,442 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 14:58:18,442 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 14:58:18,442 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 14:58:18,442 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 14:59:00,456 INFO [application.Master] - Launch
-2015-08-07 14:59:01,283 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 14:59:07,311 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 14:59:07,312 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 14:59:07,359 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 14:59:07,366 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 14:59:07,899 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:59:07,906 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 14:59:08,919 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 14:59:08,919 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 14:59:08,919 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 14:59:08,919 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 14:59:08,919 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 14:59:08,919 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 14:59:08,922 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 14:59:08,923 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 14:59:08,923 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 14:59:08,923 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 14:59:08,924 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 14:59:08,924 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 14:59:08,924 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 14:59:29,518 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 14:59:29,520 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 15:24:43,766 INFO [application.Master] - Launch
-2015-08-07 15:24:44,491 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 15:24:47,339 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 15:24:47,340 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 15:24:47,375 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 15:24:47,379 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 15:24:48,441 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 15:24:48,447 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 15:24:48,910 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 15:24:48,910 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 15:24:48,910 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 15:24:48,910 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 15:24:48,910 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 15:24:48,910 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 15:24:48,913 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 15:24:48,913 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 15:24:48,913 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 15:24:48,914 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 15:24:48,914 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 15:24:48,914 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 15:24:48,914 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 15:25:15,659 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 15:25:15,660 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 15:25:15,670 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 15:25:15,665 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 15:25:15,663 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 15:25:15,662 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 15:25:17,889 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 15:25:17,912 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 15:35:47,322 INFO [application.Master] - Launch
-2015-08-07 15:35:48,057 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 15:35:51,317 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 15:35:51,318 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 15:35:51,349 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 15:35:51,353 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 15:35:52,101 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 15:35:52,113 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 15:35:52,875 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 15:35:52,876 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 15:35:52,876 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 15:35:52,876 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 15:35:52,876 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 15:35:52,876 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 15:35:52,879 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 15:35:52,879 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 15:35:52,879 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 15:35:52,880 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 15:35:52,880 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 15:35:52,880 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 15:35:52,880 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 15:36:08,111 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 15:36:08,113 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 15:36:08,115 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 15:36:08,116 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 15:36:08,122 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 15:36:08,122 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 15:36:09,980 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 15:36:09,995 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 15:36:32,808 INFO [application.Master] - Launch
-2015-08-07 15:36:33,628 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 15:36:36,425 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 15:36:36,426 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 15:36:36,459 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 15:36:36,463 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 15:36:37,504 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 15:36:37,508 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 15:36:38,143 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 15:36:38,143 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 15:36:38,143 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 15:36:38,144 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 15:36:38,144 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 15:36:38,144 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 15:36:38,147 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 15:36:38,147 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 15:36:38,147 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 15:36:38,147 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 15:36:38,147 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 15:36:38,148 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 15:36:38,148 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 15:36:51,476 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 15:36:51,479 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 15:36:51,480 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 15:36:51,480 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 15:36:51,482 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 15:36:51,483 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 15:36:52,838 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 15:36:52,852 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 15:37:47,551 INFO [application.Master] - Launch
-2015-08-07 15:37:48,339 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 15:37:53,755 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 15:37:53,756 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 15:37:53,788 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 15:37:53,793 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 15:37:54,299 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 15:37:54,306 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 15:37:55,322 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 15:37:55,322 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 15:37:55,322 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 15:37:55,323 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 15:37:55,323 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 15:37:55,323 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 15:37:55,325 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 15:37:55,326 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 15:37:55,326 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 15:37:55,326 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 15:37:55,326 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 15:37:55,327 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 15:37:55,326 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 15:38:10,341 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 15:38:10,342 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 15:38:10,343 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 15:38:10,353 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 15:38:10,354 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 15:38:10,371 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 15:38:11,753 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 15:38:11,771 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 15:40:18,706 INFO [application.Master] - Launch
-2015-08-07 15:40:19,429 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 15:40:22,320 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 15:40:22,322 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 15:40:22,360 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 15:40:22,365 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 15:40:23,682 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 15:40:23,686 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 15:40:23,753 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 15:40:23,753 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 15:40:23,753 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 15:40:23,753 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 15:40:23,753 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 15:40:23,753 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 15:40:23,758 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 15:40:23,759 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 15:40:23,760 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 15:40:23,760 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 15:40:23,761 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 15:40:23,761 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 15:40:23,763 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 15:40:38,732 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 15:40:38,734 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 15:40:38,736 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 15:40:38,738 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 15:40:38,742 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 15:40:38,755 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 15:40:40,529 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 15:40:40,534 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 16:10:13,439 INFO [application.Master] - Launch
-2015-08-07 16:10:14,166 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 16:10:18,140 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 16:10:18,141 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 16:10:18,182 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 16:10:18,186 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 16:10:18,778 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 16:10:18,788 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 16:10:19,713 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 16:10:19,713 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 16:10:19,713 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 16:10:19,713 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 16:10:19,714 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 16:10:19,714 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 16:10:19,716 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 16:10:19,717 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 16:10:19,718 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 16:10:19,718 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 16:10:19,718 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 16:10:19,718 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 16:10:19,718 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 16:10:35,268 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 16:10:35,268 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 16:10:35,269 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 16:10:35,270 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 16:10:35,270 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 16:10:35,269 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 16:10:36,747 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 16:10:36,749 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 16:12:58,346 INFO [application.Master] - Launch
-2015-08-07 16:12:59,049 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 16:13:01,534 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 16:13:01,535 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 16:13:01,689 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 16:13:01,695 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 16:13:02,288 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 16:13:02,294 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 16:13:03,302 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 16:13:03,303 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 16:13:03,303 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 16:13:03,303 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 16:13:03,303 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 16:13:03,303 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 16:13:03,306 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 16:13:03,306 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 16:13:03,306 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 16:13:03,306 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 16:13:03,307 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 16:13:03,307 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 16:13:03,307 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 16:13:18,130 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 16:13:18,157 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 16:13:18,157 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 16:13:18,158 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 16:13:18,159 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 16:13:18,160 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 16:13:19,649 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 16:13:19,668 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 16:14:48,899 INFO [application.Master] - Launch
-2015-08-07 16:14:49,630 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 16:14:54,118 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 16:14:54,119 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 16:14:54,162 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 16:14:54,168 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 16:14:54,890 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 16:14:54,896 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 16:14:55,741 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 16:14:55,741 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 16:14:55,742 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 16:14:55,742 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 16:14:55,742 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 16:14:55,742 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 16:14:55,744 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 16:14:55,745 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 16:14:55,745 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 16:14:55,746 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 16:14:55,746 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 16:14:55,745 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 16:14:55,745 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 16:15:17,135 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 16:15:17,137 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 16:22:49,376 INFO [application.Master] - Launch
-2015-08-07 16:22:50,200 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 16:22:53,066 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 16:22:53,067 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 16:22:53,196 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 16:22:53,201 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 16:22:53,797 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 16:22:53,801 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 16:22:54,699 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 16:22:54,700 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 16:22:54,765 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 16:22:54,765 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 16:22:54,765 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 16:22:54,766 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 16:22:54,766 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 16:22:54,766 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 16:22:54,770 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 16:22:54,770 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 16:22:54,771 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 16:22:54,771 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 16:22:54,771 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 16:22:54,772 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 16:22:54,772 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 16:23:13,919 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 16:23:13,924 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 16:23:32,265 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 16:23:32,266 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 16:23:32,269 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 16:23:32,272 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 16:23:32,275 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 16:23:32,275 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 16:23:38,627 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 16:23:38,648 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 17:29:32,121 INFO [application.Master] - Launch
-2015-08-07 17:29:32,909 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 17:29:35,794 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 17:29:35,795 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 17:29:35,827 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 17:29:35,831 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 17:29:37,227 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 17:29:37,227 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 17:29:37,227 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 17:29:37,227 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 17:29:37,227 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 17:29:37,227 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 17:29:37,230 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 17:29:37,231 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 17:29:37,231 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 17:29:37,231 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 17:29:37,231 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 17:29:37,231 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 17:29:37,231 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 17:29:53,857 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:29:53,862 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:30:11,106 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 17:30:11,108 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 17:30:11,109 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 17:30:11,110 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 17:30:11,112 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 17:30:11,114 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 17:30:12,712 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 17:30:12,726 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 17:34:51,408 INFO [application.Master] - Launch
-2015-08-07 17:34:52,147 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 17:34:54,937 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 17:34:54,949 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 17:34:54,983 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 17:34:54,988 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 17:34:55,699 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:34:55,705 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:34:56,551 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 17:34:56,551 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 17:34:56,551 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 17:34:56,551 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 17:34:56,551 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 17:34:56,551 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 17:34:56,554 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 17:34:56,555 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 17:34:56,555 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 17:34:56,555 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 17:34:56,556 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 17:34:56,556 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 17:34:56,556 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 17:34:56,761 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:34:56,771 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:35:09,301 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:35:09,302 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:35:11,360 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:35:11,362 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:35:29,767 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 17:35:29,769 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 17:35:29,769 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 17:35:29,769 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 17:35:29,770 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 17:35:29,774 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 17:35:32,067 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 17:35:32,087 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 17:35:54,146 INFO [application.Master] - Launch
-2015-08-07 17:35:54,876 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 17:36:01,544 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 17:36:01,545 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 17:36:01,579 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 17:36:01,583 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 17:36:02,101 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:36:02,115 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:36:03,103 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 17:36:03,104 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 17:36:03,104 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 17:36:03,104 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 17:36:03,104 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 17:36:03,104 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 17:36:03,107 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 17:36:03,108 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 17:36:03,107 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 17:36:03,108 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 17:36:03,108 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 17:36:03,108 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 17:36:03,108 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 17:36:14,367 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:36:14,368 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:36:27,090 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 17:36:27,094 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 17:36:27,095 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 17:36:27,098 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 17:36:27,099 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 17:36:27,102 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 17:36:31,223 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 17:36:31,237 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 17:37:26,559 INFO [application.Master] - Launch
-2015-08-07 17:37:27,350 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 17:37:29,800 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 17:37:29,802 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 17:37:29,838 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 17:37:29,842 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 17:37:30,589 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:37:30,595 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:37:31,382 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 17:37:31,383 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 17:37:31,383 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 17:37:31,383 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 17:37:31,383 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 17:37:31,383 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 17:37:31,386 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 17:37:31,386 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 17:37:31,386 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 17:37:31,386 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 17:37:31,386 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 17:37:31,387 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 17:37:31,387 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 17:37:46,703 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:37:46,705 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:38:00,152 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:38:00,155 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:38:24,204 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:38:24,205 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:38:26,625 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:38:26,626 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:38:33,003 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 17:38:33,006 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 17:38:33,006 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 17:38:33,007 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 17:38:33,008 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 17:38:33,015 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 17:38:35,774 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 17:38:35,797 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 17:39:14,921 INFO [application.Master] - Launch
-2015-08-07 17:39:15,692 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 17:39:20,067 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 17:39:20,068 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 17:39:20,103 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 17:39:20,107 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 17:39:20,796 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:39:20,801 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:39:21,641 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 17:39:21,641 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 17:39:21,641 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 17:39:21,641 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 17:39:21,641 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 17:39:21,642 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 17:39:21,644 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 17:39:21,645 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 17:39:21,645 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 17:39:21,645 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 17:39:21,646 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 17:39:21,645 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 17:39:21,646 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 17:39:49,345 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:39:49,346 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:40:01,521 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:40:01,523 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:40:16,545 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:40:16,546 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:40:38,753 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 17:40:38,755 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 17:40:38,756 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 17:40:38,756 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 17:40:38,758 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 17:40:38,758 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 17:40:40,466 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 17:40:40,488 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 17:42:32,659 INFO [application.Master] - Launch
-2015-08-07 17:42:33,398 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 17:44:22,762 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 17:44:22,763 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 17:44:22,808 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 17:44:22,813 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 17:44:24,189 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 17:44:24,189 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 17:44:24,189 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 17:44:24,189 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 17:44:24,190 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 17:44:24,190 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 17:44:24,192 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 17:44:24,193 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 17:44:24,193 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 17:44:24,193 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 17:44:24,193 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 17:44:24,193 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 17:44:24,193 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 17:44:24,310 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:44:24,322 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:47:25,439 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 17:47:25,440 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 17:47:25,441 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 17:47:25,442 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 17:47:25,443 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 17:47:25,444 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 17:47:26,868 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 17:47:26,880 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 17:47:26,885 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 17:47:28,209 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:47:28,215 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:47:28,270 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 17:47:28,272 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 17:47:28,272 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 17:47:28,272 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 17:47:28,272 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 17:47:28,272 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 17:47:28,272 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 17:47:28,273 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 17:47:28,273 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 17:47:28,273 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 17:47:28,273 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 17:47:28,273 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 17:47:28,274 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 17:47:41,495 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 17:47:41,496 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 17:47:41,497 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 17:47:41,498 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 17:47:41,498 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 17:47:41,498 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 17:47:43,136 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 17:47:43,142 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 17:49:06,529 INFO [application.Master] - Launch
-2015-08-07 17:49:07,251 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 17:49:11,100 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 17:49:11,102 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 17:49:11,141 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 17:49:11,146 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 17:49:11,734 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:49:11,750 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:49:12,999 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 17:49:12,999 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 17:49:12,999 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 17:49:12,999 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 17:49:12,999 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 17:49:12,999 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 17:49:13,002 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 17:49:13,003 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 17:49:13,003 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 17:49:13,003 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 17:49:13,003 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 17:49:13,003 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 17:49:13,004 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 17:49:27,090 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:49:27,092 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:49:35,127 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:49:35,132 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:49:37,990 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:49:37,992 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:49:44,705 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:49:44,706 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:49:52,375 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:49:52,376 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:49:53,704 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:49:53,705 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:50:14,996 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 17:50:14,998 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 17:50:14,999 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 17:50:15,004 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 17:50:15,005 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 17:50:15,005 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 17:50:16,824 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 17:50:16,833 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 17:55:59,862 INFO [application.Master] - Launch
-2015-08-07 17:56:00,777 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 17:56:02,884 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 17:56:02,885 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 17:56:02,921 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 17:56:02,926 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 17:56:03,923 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:56:03,931 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:56:04,599 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 17:56:04,599 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 17:56:04,599 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 17:56:04,600 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 17:56:04,600 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 17:56:04,600 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 17:56:04,602 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 17:56:04,603 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 17:56:04,603 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 17:56:04,603 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 17:56:04,603 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 17:56:04,603 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 17:56:04,603 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 17:56:18,329 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:56:18,330 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:56:23,295 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:56:23,296 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:56:25,691 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:56:25,692 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:56:27,562 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:56:27,563 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:56:31,089 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 17:56:31,090 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 17:56:31,091 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 17:56:31,092 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 17:56:31,093 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 17:56:31,093 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 17:56:32,746 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 17:56:32,757 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 17:58:29,391 INFO [application.Master] - Launch
-2015-08-07 17:58:30,134 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 17:58:32,817 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 17:58:32,819 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 17:58:32,855 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 17:58:32,860 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 17:58:33,347 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:58:33,354 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:58:34,378 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 17:58:34,378 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 17:58:34,378 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 17:58:34,378 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 17:58:34,378 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 17:58:34,378 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 17:58:34,381 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 17:58:34,382 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 17:58:34,382 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 17:58:34,382 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 17:58:34,382 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 17:58:34,382 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 17:58:34,382 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 17:58:42,339 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:58:42,341 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:58:44,173 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:58:44,174 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:58:55,061 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:58:55,062 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:59:13,911 INFO [application.DisplaySetUpController] - System Setup Dialog Opened
-2015-08-07 17:59:21,538 INFO [application.DisplaySetUpController] - System Setup Dialog Closed
-2015-08-07 17:59:22,976 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 17:59:22,977 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 17:59:22,978 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 17:59:22,979 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 17:59:22,979 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 17:59:22,980 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 17:59:24,469 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 17:59:24,481 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 17:59:49,695 INFO [application.Master] - Launch
-2015-08-07 17:59:50,552 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 17:59:53,067 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 17:59:53,068 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 17:59:53,106 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 17:59:53,111 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 17:59:53,745 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 17:59:53,751 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 17:59:54,865 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 17:59:54,865 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 17:59:54,866 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 17:59:54,866 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 17:59:54,866 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 17:59:54,866 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 17:59:54,871 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 17:59:54,872 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 17:59:54,872 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 17:59:54,873 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 17:59:54,873 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 17:59:54,874 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 17:59:54,874 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 18:00:18,909 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 18:00:18,911 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 18:00:23,404 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 18:00:23,406 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 18:00:33,163 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 18:00:33,165 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 18:00:33,166 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 18:00:33,168 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 18:00:33,170 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 18:00:33,173 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 18:00:34,651 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 18:00:34,655 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 18:20:13,525 INFO [application.Master] - Launch
-2015-08-07 18:20:14,292 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 18:20:16,813 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 18:20:16,814 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 18:20:16,847 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 18:20:16,851 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 18:20:17,461 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 18:20:17,468 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 18:20:18,361 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 18:20:18,361 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 18:20:18,361 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 18:20:18,361 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 18:20:18,361 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 18:20:18,361 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 18:20:18,364 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 18:20:18,364 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 18:20:18,365 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 18:20:18,365 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 18:20:18,365 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 18:20:18,365 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 18:20:18,365 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 18:22:19,548 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 18:22:19,551 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 18:22:21,841 INFO [application.DisplaySetUpController] - Radar Setup Dialog Opened
-2015-08-07 18:22:25,053 INFO [application.DisplaySetUpController] - Radar Setup Dialog Closed
-2015-08-07 18:22:25,749 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 18:22:25,750 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 18:22:25,752 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 18:22:25,753 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 18:22:25,755 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 18:22:25,756 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 18:22:27,276 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 18:22:27,296 INFO [application.FXMLController] - APPLICATION CLOSED
-2015-08-07 18:24:39,570 INFO [application.Master] - Launch
-2015-08-07 18:24:40,326 INFO [model.AppConfig] - App Config Instantiated
-2015-08-07 18:24:45,373 INFO [views.Console] - Enter Operator ID : 
-2015-08-07 18:24:45,374 INFO [model.MatrixRef] - Matrix Ref Instantiated
-2015-08-07 18:24:45,412 INFO [application.FXMLController] - Top Chart initialization
-2015-08-07 18:24:45,417 INFO [application.FXMLController] - Bottom Chart initialization
-2015-08-07 18:24:45,998 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 18:24:46,005 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 18:24:46,924 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/10.91.161.0 PORT: 7700
-2015-08-07 18:24:46,924 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/10.91.161.0 PORT: 5500
-2015-08-07 18:24:46,924 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/10.91.161.0 PORT: 8800
-2015-08-07 18:24:46,924 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/10.91.161.0 PORT: 6600
-2015-08-07 18:24:46,924 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/10.91.161.0 PORT: 12001
-2015-08-07 18:24:46,924 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
-2015-08-07 18:24:46,927 INFO [network.TaskObserver] - Starting All Threads
-2015-08-07 18:24:46,928 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
-2015-08-07 18:24:46,928 INFO [network.TaskObserver] - Network Task Launched
-2015-08-07 18:24:46,928 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
-2015-08-07 18:24:46,928 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
-2015-08-07 18:24:46,928 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
-2015-08-07 18:24:46,928 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
-2015-08-07 18:25:07,424 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 18:25:07,425 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 18:25:16,269 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 18:25:16,271 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 18:25:18,635 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 18:25:18,636 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 18:25:22,012 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 18:25:22,012 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 18:26:02,700 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 18:26:02,703 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 18:26:17,375 INFO [application.FXMLController] - Top Chart Invalidated!
-2015-08-07 18:26:17,376 INFO [application.FXMLController] - Bottom Chart Invalidated!
-2015-08-07 18:26:54,508 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
-2015-08-07 18:26:54,508 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
-2015-08-07 18:26:54,511 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
-2015-08-07 18:26:54,512 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
-2015-08-07 18:26:54,512 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
-2015-08-07 18:26:54,515 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
-2015-08-07 18:26:56,633 INFO [application.FXMLController] - Ended Animation Timers
-2015-08-07 18:26:56,662 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-07 22:33:09,607 INFO [application.Master] - Launch
+2015-08-07 22:33:10,558 INFO [model.AppConfig] - App Config Instantiated
+2015-08-07 22:34:24,080 INFO [views.Console] - Enter Operator ID : 
+2015-08-07 22:34:24,081 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-07 22:34:24,129 INFO [application.FXMLController] - Top Chart initialization
+2015-08-07 22:34:24,135 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-07 22:34:26,629 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-07 22:34:26,835 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-07 22:34:27,016 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-07 22:34:27,215 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-07 22:34:27,394 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-07 22:34:27,394 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-07 22:34:27,397 INFO [network.TaskObserver] - Starting All Threads
+2015-08-07 22:34:27,398 INFO [network.TaskObserver] - Network Task Launched
+2015-08-07 22:34:27,398 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-07 22:34:27,398 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-07 22:34:27,398 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-07 22:34:27,397 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-07 22:34:27,397 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-07 22:34:31,192 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-07 22:34:31,198 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-07 22:36:30,699 INFO [application.Master] - Launch
+2015-08-07 22:36:31,595 INFO [model.AppConfig] - App Config Instantiated
+2015-08-07 22:36:45,002 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-07 22:36:45,012 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-07 22:37:07,345 INFO [application.Master] - Launch
+2015-08-07 22:37:08,276 INFO [model.AppConfig] - App Config Instantiated
+2015-08-07 22:37:10,839 INFO [views.Console] - Enter Operator ID : 
+2015-08-07 22:37:10,840 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-07 22:37:10,893 INFO [application.FXMLController] - Top Chart initialization
+2015-08-07 22:37:10,901 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-07 22:37:13,329 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-07 22:37:13,496 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-07 22:37:13,663 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-07 22:37:13,832 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-07 22:37:14,008 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-07 22:37:14,008 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-07 22:37:14,011 INFO [network.TaskObserver] - Starting All Threads
+2015-08-07 22:37:14,011 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-07 22:37:14,011 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-07 22:37:14,011 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-07 22:37:14,012 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-07 22:37:14,012 INFO [network.TaskObserver] - Network Task Launched
+2015-08-07 22:37:14,012 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-07 22:38:28,539 INFO [application.DisplaySetUpController] - Radar Setup Dialog Opened
+2015-08-07 22:38:29,832 INFO [application.DisplaySetUpController] - Radar Setup Dialog Closed
+2015-08-07 22:38:30,756 INFO [application.DisplaySetUpController] - System Setup Dialog Opened
+2015-08-07 22:38:32,430 INFO [application.DisplaySetUpController] - System Setup Dialog Closed
+2015-08-07 22:38:36,010 INFO [application.DisplaySetUpController] - Settings Dialog Opened
+2015-08-07 22:39:12,413 INFO [model.AppConfig] - DisplaySetup Data Null Check
+2015-08-07 22:39:12,413 INFO [model.AppConfig] - DisplaySetup Data Saved
+2015-08-07 22:39:12,431 INFO [application.DisplaySetUpController] - Setting Dialog Closed
+2015-08-07 22:39:12,434 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-08-07 22:39:12,436 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-08-07 22:39:21,620 INFO [application.DisplaySetUpController] - Settings Dialog Opened
+2015-08-07 22:39:53,984 INFO [model.AppConfig] - DisplaySetup Data Null Check
+2015-08-07 22:39:53,985 INFO [model.AppConfig] - DisplaySetup Data Saved
+2015-08-07 22:39:54,002 INFO [application.DisplaySetUpController] - Setting Dialog Closed
+2015-08-07 22:39:54,004 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-08-07 22:39:54,007 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-08-07 22:39:57,936 INFO [application.DisplaySetUpController] - Settings Dialog Opened
+2015-08-07 22:40:03,136 INFO [model.AppConfig] - DisplaySetup Data Null Check
+2015-08-07 22:40:03,137 INFO [model.AppConfig] - DisplaySetup Data Saved
+2015-08-07 22:40:03,149 INFO [application.DisplaySetUpController] - Setting Dialog Closed
+2015-08-07 22:40:03,152 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-08-07 22:40:03,156 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-08-07 22:40:05,419 INFO [application.DisplaySetUpController] - Settings Dialog Opened
+2015-08-07 22:40:10,065 INFO [model.AppConfig] - DisplaySetup Data Null Check
+2015-08-07 22:40:10,065 INFO [model.AppConfig] - DisplaySetup Data Saved
+2015-08-07 22:40:10,082 INFO [application.DisplaySetUpController] - Setting Dialog Closed
+2015-08-07 22:40:10,085 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-08-07 22:40:10,089 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-08-07 22:40:12,604 INFO [application.DisplaySetUpController] - Settings Dialog Opened
+2015-08-07 22:40:28,397 INFO [model.AppConfig] - DisplaySetup Data Null Check
+2015-08-07 22:40:28,397 INFO [model.AppConfig] - DisplaySetup Data Saved
+2015-08-07 22:40:28,407 INFO [application.DisplaySetUpController] - Setting Dialog Closed
+2015-08-07 22:40:28,408 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-08-07 22:40:28,411 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-08-07 22:40:32,917 INFO [application.DisplaySetUpController] - Settings Dialog Opened
+2015-08-07 22:40:38,653 INFO [model.AppConfig] - DisplaySetup Data Null Check
+2015-08-07 22:40:38,653 INFO [model.AppConfig] - DisplaySetup Data Saved
+2015-08-07 22:40:38,667 INFO [application.DisplaySetUpController] - Setting Dialog Closed
+2015-08-07 22:40:38,668 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-08-07 22:40:38,672 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-08-07 22:40:42,773 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-08-07 22:40:42,774 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-08-07 22:40:44,571 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-08-07 22:40:44,573 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-08-07 22:40:49,870 INFO [application.FXMLController] - Top Chart Invalidated!
+2015-08-07 22:40:49,872 INFO [application.FXMLController] - Bottom Chart Invalidated!
+2015-08-07 22:41:44,053 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-07 22:41:44,054 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
+2015-08-07 22:41:44,054 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
+2015-08-07 22:41:44,055 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
+2015-08-07 22:41:44,056 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
+2015-08-07 22:41:44,056 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
+2015-08-07 22:41:45,681 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-07 22:41:45,685 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-07 23:00:10,277 INFO [application.Master] - Launch
+2015-08-07 23:00:11,229 INFO [model.AppConfig] - App Config Instantiated
+2015-08-07 23:00:23,197 INFO [views.Console] - Enter Operator ID : 
+2015-08-07 23:00:23,198 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-07 23:00:23,261 INFO [application.FXMLController] - Top Chart initialization
+2015-08-07 23:00:23,268 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-07 23:00:25,563 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-07 23:00:25,734 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-07 23:00:25,895 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-07 23:00:26,060 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-07 23:00:26,242 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-07 23:00:26,242 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-07 23:00:26,245 INFO [network.TaskObserver] - Starting All Threads
+2015-08-07 23:00:26,245 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-07 23:00:26,246 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-07 23:00:26,246 INFO [network.TaskObserver] - Network Task Launched
+2015-08-07 23:00:26,247 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-07 23:00:26,247 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-07 23:00:26,247 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-07 23:00:29,305 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-07 23:00:29,312 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-07 23:01:27,322 INFO [application.Master] - Launch
+2015-08-07 23:01:28,308 INFO [model.AppConfig] - App Config Instantiated
+2015-08-07 23:01:31,438 INFO [views.Console] - Enter Operator ID : 
+2015-08-07 23:01:31,438 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-07 23:01:31,492 INFO [application.FXMLController] - Top Chart initialization
+2015-08-07 23:01:31,499 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-07 23:01:33,604 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-07 23:01:33,785 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-07 23:01:33,950 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-07 23:01:34,134 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-07 23:01:34,297 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-07 23:01:34,297 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-07 23:01:34,300 INFO [network.TaskObserver] - Starting All Threads
+2015-08-07 23:01:34,301 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-07 23:01:34,301 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-07 23:01:34,301 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-07 23:01:34,301 INFO [network.TaskObserver] - Network Task Launched
+2015-08-07 23:01:34,301 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-07 23:01:34,301 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-07 23:01:38,591 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-07 23:01:38,597 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-07 23:03:24,683 INFO [application.Master] - Launch
+2015-08-07 23:03:25,616 INFO [model.AppConfig] - App Config Instantiated
+2015-08-07 23:03:27,934 INFO [views.Console] - Enter Operator ID : 
+2015-08-07 23:03:27,935 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-07 23:03:27,983 INFO [application.FXMLController] - Top Chart initialization
+2015-08-07 23:03:27,990 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-07 23:03:30,297 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-07 23:03:30,483 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-07 23:03:30,675 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-07 23:03:30,840 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-07 23:03:31,022 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-07 23:03:31,022 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-07 23:03:31,024 INFO [network.TaskObserver] - Starting All Threads
+2015-08-07 23:03:31,025 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-07 23:03:31,025 INFO [network.TaskObserver] - Network Task Launched
+2015-08-07 23:03:31,025 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-07 23:03:31,025 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-07 23:03:31,025 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-07 23:03:31,026 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-07 23:05:06,955 INFO [application.Master] - Launch
+2015-08-07 23:05:07,907 INFO [model.AppConfig] - App Config Instantiated
+2015-08-07 23:05:13,683 INFO [views.Console] - Enter Operator ID : 
+2015-08-07 23:05:13,684 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-07 23:05:13,733 INFO [application.FXMLController] - Top Chart initialization
+2015-08-07 23:05:13,741 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-07 23:05:16,385 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/169.254.95.234 PORT: 7700
+2015-08-07 23:05:16,637 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/169.254.95.234 PORT: 5500
+2015-08-07 23:05:16,923 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/169.254.95.234 PORT: 8800
+2015-08-07 23:05:17,193 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/169.254.95.234 PORT: 6600
+2015-08-07 23:05:17,490 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/169.254.95.234 PORT: 12001
+2015-08-07 23:05:17,490 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-07 23:05:17,493 INFO [network.TaskObserver] - Starting All Threads
+2015-08-07 23:05:17,493 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-07 23:05:17,494 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-07 23:05:17,494 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-07 23:05:17,494 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-07 23:05:17,493 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-07 23:05:17,494 INFO [network.TaskObserver] - Network Task Launched
+2015-08-07 23:05:38,426 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-07 23:05:38,430 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
+2015-08-07 23:05:38,431 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
+2015-08-07 23:05:38,432 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
+2015-08-07 23:05:38,433 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
+2015-08-07 23:05:38,437 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
+2015-08-07 23:05:40,533 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-07 23:05:40,540 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-07 23:06:19,720 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-07 23:06:19,722 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
+2015-08-07 23:06:19,723 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
+2015-08-07 23:06:19,724 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
+2015-08-07 23:06:19,725 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
+2015-08-07 23:06:19,726 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
+2015-08-09 17:20:19,717 INFO [application.Master] - Launch
+2015-08-09 17:20:21,619 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:20:42,762 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 17:20:42,771 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 17:21:01,867 INFO [application.Master] - Launch
+2015-08-09 17:21:02,877 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:21:13,754 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 17:21:13,768 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 17:21:38,464 INFO [application.Master] - Launch
+2015-08-09 17:21:39,756 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:21:45,956 INFO [views.Console] - Enter Operator ID : 
+2015-08-09 17:21:45,957 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-09 17:21:46,447 INFO [application.FXMLController] - Top Chart initialization
+2015-08-09 17:21:46,455 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-09 17:21:48,766 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/192.168.1.13 PORT: 7700
+2015-08-09 17:21:48,985 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/192.168.1.13 PORT: 5500
+2015-08-09 17:21:49,187 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/192.168.1.13 PORT: 8800
+2015-08-09 17:21:49,368 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/192.168.1.13 PORT: 6600
+2015-08-09 17:21:49,550 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/192.168.1.13 PORT: 12001
+2015-08-09 17:21:49,551 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-09 17:21:49,671 INFO [network.TaskObserver] - Starting All Threads
+2015-08-09 17:21:49,671 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-09 17:21:49,672 INFO [network.TaskObserver] - Network Task Launched
+2015-08-09 17:21:49,673 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-09 17:21:49,673 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-09 17:21:49,673 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-09 17:21:49,673 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-09 17:22:10,492 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-09 17:22:10,503 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
+2015-08-09 17:22:10,508 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
+2015-08-09 17:22:10,509 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
+2015-08-09 17:22:10,510 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
+2015-08-09 17:22:10,511 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
+2015-08-09 17:22:11,962 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 17:22:11,969 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 17:22:49,654 INFO [application.Master] - Launch
+2015-08-09 17:22:50,588 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:23:03,068 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 17:23:03,073 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 17:24:55,634 INFO [application.Master] - Launch
+2015-08-09 17:24:56,590 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:25:10,762 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 17:25:10,770 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 17:25:35,773 INFO [application.Master] - Launch
+2015-08-09 17:25:36,701 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:26:01,602 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 17:26:01,607 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 17:26:12,360 INFO [application.Master] - Launch
+2015-08-09 17:26:13,288 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:26:45,825 INFO [application.Master] - Launch
+2015-08-09 17:26:46,781 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:28:27,835 INFO [application.Master] - Launch
+2015-08-09 17:28:28,804 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:28:57,729 INFO [application.Master] - Launch
+2015-08-09 17:28:58,651 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:29:29,614 INFO [application.Master] - Launch
+2015-08-09 17:29:31,061 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:29:33,704 INFO [views.Console] - Enter Operator ID : 
+2015-08-09 17:29:33,705 INFO [model.MatrixRef] - Matrix Ref Instantiated
+2015-08-09 17:29:33,773 INFO [application.FXMLController] - Top Chart initialization
+2015-08-09 17:29:33,781 INFO [application.FXMLController] - Bottom Chart initialization
+2015-08-09 17:29:36,104 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzPlot)socket created at IP:/192.168.1.13 PORT: 7700
+2015-08-09 17:29:36,281 INFO [network.TaskObserver] - MC-UDP (mMCSocketElPlot)socket created at IP:/192.168.1.13 PORT: 5500
+2015-08-09 17:29:36,480 INFO [network.TaskObserver] - MC-UDP (mMCSocketAzTrack)socket created at IP:/192.168.1.13 PORT: 8800
+2015-08-09 17:29:36,659 INFO [network.TaskObserver] - MC-UDP (mMCSocketElTrack)socket created at IP:/192.168.1.13 PORT: 6600
+2015-08-09 17:29:36,887 INFO [network.TaskObserver] - MC-UDP (mMCSocketVideo)socket created at IP:/192.168.1.13 PORT: 12001
+2015-08-09 17:29:36,888 INFO [network.TaskObserver] - MC-UDP (mMCSocketWrite)socket created at IP:/0.0.0.0 PORT: 13001
+2015-08-09 17:29:36,890 INFO [network.TaskObserver] - Starting All Threads
+2015-08-09 17:29:36,890 INFO [network.TaskObserver] - Waiting to Read Thread Az Plots Looper
+2015-08-09 17:29:36,891 INFO [network.TaskObserver] - Network Task Launched
+2015-08-09 17:29:36,891 INFO [network.TaskObserver] - Waiting to Read Thread El Tracks Looper
+2015-08-09 17:29:36,890 INFO [network.TaskObserver] - Waiting to Read Thread El Plots Looper
+2015-08-09 17:29:36,892 INFO [network.TaskObserver] - Waiting to Read Thread Video Looper
+2015-08-09 17:29:36,892 INFO [network.TaskObserver] - Waiting to Read Thread Az Tracks Looper
+2015-08-09 17:33:31,942 INFO [network.TaskObserver] - Ending Network Read Thread Az Plots Looper
+2015-08-09 17:33:31,945 INFO [network.TaskObserver] - Ending Network Read Thread El Plots Looper
+2015-08-09 17:33:31,946 INFO [network.TaskObserver] - Network Task MC-UDP socket Closed/Ended
+2015-08-09 17:33:31,957 INFO [network.TaskObserver] - Ending Network Read Thread Az Tracks Looper
+2015-08-09 17:33:31,968 INFO [network.TaskObserver] - Ending Network Read Thread El Tracks Looper
+2015-08-09 17:33:31,968 INFO [network.TaskObserver] - Ending Network Read Thread Video Looper
+2015-08-09 17:33:33,285 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 17:33:33,287 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 17:33:38,118 INFO [application.Master] - Launch
+2015-08-09 17:33:39,013 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:35:03,992 INFO [application.Master] - Launch
+2015-08-09 17:35:04,946 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:35:29,187 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 17:35:29,196 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 17:36:07,437 INFO [application.Master] - Launch
+2015-08-09 17:36:08,602 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:37:22,287 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 17:37:22,289 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 17:37:25,420 INFO [application.Master] - Launch
+2015-08-09 17:37:26,335 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:39:18,844 INFO [application.Master] - Launch
+2015-08-09 17:39:19,826 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 17:39:29,418 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 17:39:29,423 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 18:06:04,447 INFO [application.Master] - Launch
+2015-08-09 18:06:05,365 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:07:21,670 INFO [application.Master] - Launch
+2015-08-09 18:07:22,653 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:09:06,304 INFO [application.Master] - Launch
+2015-08-09 18:09:07,268 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:13:29,281 INFO [application.Master] - Launch
+2015-08-09 18:13:30,501 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:14:03,250 INFO [application.Master] - Launch
+2015-08-09 18:14:04,173 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:14:19,294 INFO [application.Master] - Launch
+2015-08-09 18:14:20,195 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:15:56,405 INFO [application.Master] - Launch
+2015-08-09 18:15:57,305 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:16:30,230 INFO [application.Master] - Launch
+2015-08-09 18:16:31,433 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:16:34,530 INFO [application.DisplaySetUpController] - Radar Setup Dialog Opened
+2015-08-09 18:16:37,056 INFO [application.DisplaySetUpController] - Radar Setup Dialog Closed
+2015-08-09 18:16:39,189 INFO [application.DisplaySetUpController] - System Setup Dialog Opened
+2015-08-09 18:16:40,364 INFO [application.DisplaySetUpController] - System Setup Dialog Closed
+2015-08-09 18:16:41,716 INFO [application.DisplaySetUpController] - Runway Setup Dialog Opened
+2015-08-09 18:16:46,183 INFO [application.DisplaySetUpController] - Runway Setup Dialog Closed
+2015-08-09 18:17:07,880 INFO [application.Master] - Launch
+2015-08-09 18:17:08,805 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:17:11,631 INFO [application.DisplaySetUpController] - Zoom Dialog Opened
+2015-08-09 18:17:29,071 INFO [application.DisplaySetUpController] - Zoom Dialog Closed
+2015-08-09 18:17:31,865 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 18:17:31,869 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 18:18:10,393 INFO [application.Master] - Launch
+2015-08-09 18:18:11,326 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:18:13,442 INFO [application.DisplaySetUpController] - Zoom Dialog Opened
+2015-08-09 18:18:18,125 INFO [application.DisplaySetUpController] - Zoom Dialog Closed
+2015-08-09 18:18:19,609 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 18:18:19,614 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 18:19:22,000 INFO [application.Master] - Launch
+2015-08-09 18:19:22,890 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:19:25,104 INFO [application.DisplaySetUpController] - Zoom Dialog Opened
+2015-08-09 18:19:28,748 INFO [application.DisplaySetUpController] - Zoom Dialog Closed
+2015-08-09 18:19:36,553 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 18:19:36,562 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 18:20:04,555 INFO [application.Master] - Launch
+2015-08-09 18:20:05,492 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:20:07,818 INFO [application.DisplaySetUpController] - Zoom Dialog Opened
+2015-08-09 18:20:22,276 INFO [application.DisplaySetUpController] - Zoom Dialog Closed
+2015-08-09 18:20:26,857 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 18:20:26,870 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 18:20:49,107 INFO [application.Master] - Launch
+2015-08-09 18:20:50,082 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:20:52,758 INFO [application.DisplaySetUpController] - Zoom Dialog Opened
+2015-08-09 18:20:57,946 INFO [application.DisplaySetUpController] - Zoom Dialog Closed
+2015-08-09 18:20:59,819 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 18:20:59,826 INFO [application.FXMLController] - APPLICATION CLOSED
+2015-08-09 18:21:54,608 INFO [application.Master] - Launch
+2015-08-09 18:21:55,565 INFO [model.AppConfig] - App Config Instantiated
+2015-08-09 18:21:58,433 INFO [application.DisplaySetUpController] - Zoom Dialog Opened
+2015-08-09 18:22:06,106 INFO [application.DisplaySetUpController] - Zoom Dialog Closed
+2015-08-09 18:22:09,435 INFO [application.FXMLController] - Ended Animation Timers
+2015-08-09 18:22:09,451 INFO [application.FXMLController] - APPLICATION CLOSED

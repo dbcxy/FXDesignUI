@@ -34,9 +34,12 @@ import views.ResizableCanvas;
 import javafx.animation.AnimationTimer;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
@@ -50,10 +53,13 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -118,11 +124,13 @@ public class FXMLController implements Initializable,ILayoutParam{
 	@FXML ResizableCanvas cTopL1;//Graph
 	@FXML ResizableCanvas cTopL2;//Video
 	@FXML ResizableCanvas cTopL3;//Plots & tracks (TopMost Layer)
+	@FXML ResizableCanvas cTopL4;//Handle Input Events
 	
 	@FXML ResizableCanvas cBtmL0;//Text
 	@FXML ResizableCanvas cBtmL1;//Graph
 	@FXML ResizableCanvas cBtmL2;//Video
 	@FXML ResizableCanvas cBtmL3;//Plots & Tracks (TopMost Layer)
+	@FXML ResizableCanvas cBtmL4;//Handle Input Events
 	
 	enum DATA { DEFAULT, RAW, PLOT, TRACK, LABEL };
 	private boolean isAppRunning = false;
@@ -133,6 +141,7 @@ public class FXMLController implements Initializable,ILayoutParam{
 	
 	private int translateTop = 0;
 	private int translateBttm = 0;
+	double initialX,initialY;
 	
     int azIndex = 0;
     int elIndex = 0;
@@ -319,6 +328,24 @@ public class FXMLController implements Initializable,ILayoutParam{
         dialog.show();  
     }
     
+    private void openZoomDialog() {
+    	final Stage dialog = new Stage();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        FXMLLoader fxmlLoader = new FXMLLoader();
+		try {
+			fxmlLoader.load(getClass().getResourceAsStream("ZoomActivity.fxml"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Parent root = (Parent) fxmlLoader.getRoot();
+        Scene dialogZoom = new Scene(root);
+        dialog.setScene(dialogZoom);
+        dialog.setResizable(false);
+        dialog.initStyle(StageStyle.UNDECORATED);
+        dialog.centerOnScreen();
+        dialog.show();  
+    }
+    
     private void startShowingDisplay() {
     	
 		if(!isAppRunning) {
@@ -373,9 +400,12 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
     
     private void cleanUp() {
-		topAnimTimer.stop();
-		bttmAnimTimer.stop();
-		rawAnimTimer.stop();
+    	if(topAnimTimer!=null)
+    		topAnimTimer.stop();
+    	if(bttmAnimTimer!=null)
+    		bttmAnimTimer.stop();
+    	if(rawAnimTimer!=null)
+    		rawAnimTimer.stop();
 		logger.info("Ended Animation Timers");
     	Constance.IS_CLOSE = true;
     }
@@ -392,11 +422,14 @@ public class FXMLController implements Initializable,ILayoutParam{
     	cTopL1.widthProperty().bind(chartTop.widthProperty());
 		cTopL1.heightProperty().bind(chartTop.heightProperty());
 		
+		cTopL2.widthProperty().bind(chartTop.widthProperty());
+		cTopL2.heightProperty().bind(chartTop.heightProperty());
+		
 		cTopL3.widthProperty().bind(chartTop.widthProperty());
 		cTopL3.heightProperty().bind(chartTop.heightProperty());
 		
-		cTopL2.widthProperty().bind(chartTop.widthProperty());
-		cTopL2.heightProperty().bind(chartTop.heightProperty());
+		cTopL4.widthProperty().bind(chartTop.widthProperty());
+		cTopL4.heightProperty().bind(chartTop.heightProperty());
 		
 		cBtmL0.widthProperty().bind(chartBottom.widthProperty());
 		cBtmL0.heightProperty().bind(chartBottom.heightProperty());
@@ -404,11 +437,17 @@ public class FXMLController implements Initializable,ILayoutParam{
 		cBtmL1.widthProperty().bind(chartBottom.widthProperty());
 		cBtmL1.heightProperty().bind(chartBottom.heightProperty());
 		
+		cBtmL2.widthProperty().bind(chartBottom.widthProperty());
+		cBtmL2.heightProperty().bind(chartBottom.heightProperty());
+		
 		cBtmL3.widthProperty().bind(chartBottom.widthProperty());
 		cBtmL3.heightProperty().bind(chartBottom.heightProperty());
 		
-		cBtmL2.widthProperty().bind(chartBottom.widthProperty());
-		cBtmL2.heightProperty().bind(chartBottom.heightProperty());
+		cBtmL4.widthProperty().bind(chartBottom.widthProperty());
+		cBtmL4.heightProperty().bind(chartBottom.heightProperty());
+		
+		addDraggableZoom(cTopL4);
+		addDraggableZoom(cBtmL4);
 		
 		AntennaControl.widgetSetPanelTitle("Antenna Control");
 		RadarControl.widgetSetPanelTitle("Radar Control");
@@ -416,6 +455,42 @@ public class FXMLController implements Initializable,ILayoutParam{
 		DisplayControl.widgetSetPanelTitle("Display Control");
 		DisplayScale.widgetSetPanelTitle("Display Scale");
 		
+    }
+    
+    private void addDraggableZoom(Node node) {
+    	node.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				if (event.getButton() != MouseButton.MIDDLE) {
+	                initialX = event.getX();
+	                initialY = event.getY();
+	            }
+				
+			}
+		});
+		
+    	node.addEventHandler(MouseEvent.MOUSE_DRAGGED, new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				if (event.getButton() != MouseButton.MIDDLE) {
+					((ResizableCanvas)node).drawRect(initialX, initialY, Math.abs(event.getX() - initialX), Math.abs(event.getY() - initialY));
+	            }				
+			}
+		});
+    	
+    	node.addEventHandler(MouseEvent.MOUSE_RELEASED, new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				if (event.getButton() != MouseButton.MIDDLE) {
+					((ResizableCanvas)node).clear();
+					//Window POP UP
+					openZoomDialog();
+	            }				
+			}
+		});
     }
     
     private void initSystem() {
@@ -429,8 +504,9 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
         
     private void initTopChart() {
-		cTopL2.clear();
+    	cTopL4.clear();
 		cTopL3.clear();
+		cTopL2.clear();
 		cTopL1.clear();
 		cTopL0.clear();
 		drawGraphTop(cTopL1);
@@ -439,8 +515,9 @@ public class FXMLController implements Initializable,ILayoutParam{
 	}
 
 	private void initBottomChart() {
-		cBtmL2.clear();
+		cBtmL4.clear();
 		cBtmL3.clear();
+		cBtmL2.clear();
 		cBtmL1.clear();
 		cBtmL0.clear();
 		drawGraphBottom(cBtmL1);
@@ -672,16 +749,18 @@ public class FXMLController implements Initializable,ILayoutParam{
     }
 	
 	public void invalidate() {
-		cTopL2.clear();
+		cTopL4.clear();
 		cTopL3.clear();
+		cTopL2.clear();
 		cTopL1.clear();
 		cTopL0.clear();
 		drawGraphTop(cTopL1);
 		drawTextTop(cTopL0, translateTop, 0);
 		logger.info("Top Chart Invalidated!");
 		
-		cBtmL2.clear();
+		cBtmL4.clear();
 		cBtmL3.clear();
+		cBtmL2.clear();
 		cBtmL1.clear();
 		cBtmL0.clear();
 		drawGraphBottom(cBtmL1);

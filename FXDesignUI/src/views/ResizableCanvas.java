@@ -27,6 +27,13 @@ public class ResizableCanvas extends Canvas {
         gc.strokeLine(0, 0, width, height);
         gc.strokeLine(0, height, width, 0);
     }
+    
+    public void drawRect(double x, double y, double w, double h) {
+    	clear();
+    	getGraphicsContext2D().setStroke(Color.WHITESMOKE);
+		getGraphicsContext2D().setLineWidth(2);
+		getGraphicsContext2D().strokeRect(x, y, w, h);
+    }
 
     @Override
     public boolean isResizable() {

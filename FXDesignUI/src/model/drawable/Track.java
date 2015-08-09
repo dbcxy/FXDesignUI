@@ -128,10 +128,13 @@ public class Track extends OverlayItem implements ILayoutParam{
 			extractGraphAER();
 			double x = getX();
 			double y = 0;
+			double yText = 0;
 			if(isAz) {
 				y = getY();
+				yText = azimuth;
 			} else if(isEl) {
 				y = getZ();
+				yText = elevation;
 			}
 			
 			gc.setFill(Color.BISQUE);
@@ -149,9 +152,9 @@ public class Track extends OverlayItem implements ILayoutParam{
 	        	gc.strokeLine(p.getX(), p.getY(), p.getX()+6*TRACK_SIZE, p.getY());
 	        	gc.setFont(new Font("Arial", 2*TRACK_SIZE));
 	        	gc.setStroke(Color.WHITE);
-	        	gc.strokeText(Title, p.getX()+TRACK_SIZE, p.getY()-TRACK_SIZE);
+	        	gc.strokeText(getTrackNumber(), p.getX()+TRACK_SIZE, p.getY()-TRACK_SIZE);
 	        	gc.setStroke(Color.YELLOW);
-	        	gc.strokeText(getTrackNumber(), p.getX()+2*TRACK_SIZE, p.getY()+2*TRACK_SIZE);
+	        	gc.strokeText(range+"/"+yText, p.getX()+2*TRACK_SIZE, p.getY()+2*TRACK_SIZE);
 	    	}
 		}
 	}
@@ -161,10 +164,13 @@ public class Track extends OverlayItem implements ILayoutParam{
 			extractGraphAER();
 			double x = getX();
 			double y = 0;
+			double yText = 0;
 			if(isAz) {
 				y = getY();
+				yText = azimuth;
 			} else if(isEl) {
 				y = getZ();
+				yText = elevation;
 			}
 
 			Graphics2D g2d = bufferedImage.createGraphics();
@@ -183,9 +189,9 @@ public class Track extends OverlayItem implements ILayoutParam{
 	        	g2d.drawLine((int)p.getX(), (int)p.getY(), (int)p.getX()+6*TRACK_SIZE, (int)p.getY());
 	        	g2d.setFont(new java.awt.Font("Arial",java.awt.Font.PLAIN, 2*TRACK_SIZE));
 	        	g2d.setColor(java.awt.Color.WHITE);
-	        	g2d.drawString(Title, (int)p.getX()+TRACK_SIZE, (int)p.getY()-TRACK_SIZE);
+	        	g2d.drawString(getTrackNumber(), (int)p.getX()+TRACK_SIZE, (int)p.getY()-TRACK_SIZE);
 	        	g2d.setColor(java.awt.Color.YELLOW);
-	        	g2d.drawString(getTrackNumber(), (int)p.getX()+TRACK_SIZE, (int)p.getY()+2*TRACK_SIZE);	
+	        	g2d.drawString(range+"/"+yText, (int)p.getX()+TRACK_SIZE, (int)p.getY()+2*TRACK_SIZE);	
 	    	}
 		}
 	}
